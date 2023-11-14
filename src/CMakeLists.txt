@@ -11,6 +11,7 @@ project(CLM)
 add_executable(${PROJECT_NAME} main.cpp)
 
 add_subdirectory(dependency/raylib)
+add_subdirectory(dependency/yamlcpp)
 
 add_subdirectory(window)
 target_link_libraries(${PROJECT_NAME} PUBLIC window::lib)
