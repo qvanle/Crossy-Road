@@ -18,6 +18,7 @@ private:
 protected:
 public:
     Window();
+    Window(std::string path);
     ~Window();
 
     void run();
