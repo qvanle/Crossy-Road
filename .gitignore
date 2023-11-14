@@ -1,0 +1,4 @@
+.cache
+.cached 
+build
+src/dependency/raylib/raylib
