@@ -15,6 +15,9 @@ add_subdirectory(dependency/yamlcpp)
 
 add_subdirectory(utils)
 add_subdirectory(window)
+add_subdirectory(frame)
+
 target_link_libraries(${PROJECT_NAME} PUBLIC window::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC frame::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC utils::lib)
 
