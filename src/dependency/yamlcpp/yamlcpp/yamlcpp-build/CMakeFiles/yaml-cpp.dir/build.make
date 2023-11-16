@@ -540,45 +540,45 @@ yaml__cpp_OBJECTS = \
 # External object files for target yaml-cpp
 yaml__cpp_EXTERNAL_OBJECTS =
 
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/contrib/graphbuilder.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/contrib/graphbuilderadapter.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/binary.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/convert.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/depthguard.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/directives.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emit.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emitfromevents.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emitter.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emitterstate.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emitterutils.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/exceptions.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/exp.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/memory.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/node.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/node_data.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/nodebuilder.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/nodeevents.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/null.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/ostream_wrapper.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/parse.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/parser.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/regex_yaml.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/scanner.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/scanscalar.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/scantag.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/scantoken.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/simplekey.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/singledocparser.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/stream.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/tag.cpp.o
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/build.make
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/qvanle/projects/CrossyRoad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX static library libyaml-cpp.a"
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/contrib/graphbuilder.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/contrib/graphbuilderadapter.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/binary.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/convert.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/depthguard.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/directives.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emit.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emitfromevents.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emitter.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emitterstate.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/emitterutils.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/exceptions.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/exp.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/memory.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/node.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/node_data.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/nodebuilder.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/nodeevents.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/null.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/ostream_wrapper.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/parse.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/parser.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/regex_yaml.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/scanner.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/scanscalar.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/scantag.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/scantoken.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/simplekey.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/singledocparser.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/stream.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/src/tag.cpp.o
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/build.make
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/qvanle/projects/CrossyRoad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX static library libyaml-cppd.a"
 	cd /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build && $(CMAKE_COMMAND) -P CMakeFiles/yaml-cpp.dir/cmake_clean_target.cmake
 	cd /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/yaml-cpp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/build: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/build: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a
 .PHONY : /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/build
 
 /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/CMakeFiles/yaml-cpp.dir/clean:

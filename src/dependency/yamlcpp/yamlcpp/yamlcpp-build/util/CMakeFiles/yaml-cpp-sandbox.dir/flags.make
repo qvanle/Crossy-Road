@@ -6,5 +6,5 @@ CXX_DEFINES = -DYAML_CPP_STATIC_DEFINE
 
 CXX_INCLUDES = -I/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-src/include
 
-CXX_FLAGS =  -w -O2 -fPIC -std=gnu++17
+CXX_FLAGS =  -w -O2 -fPIC -g -std=gnu++17
 

@@ -20,8 +20,8 @@ NC='\033[0m'
 
 clear
 printf "${LightPurple}Do you want to run cmake?${NC}\n" 
-printf "Enter [${Green}r${NC}] to not run cmake with released (${Yellow}default${NC})\n"
-printf "Enter [${Green}d${NC}] to not run cmake with debug\n"
+printf "Enter [${Green}d${NC}] to not run cmake with debug (${Yellow}default${NC})\n"
+printf "Enter [${Green}r${NC}] to not run cmake with released\n"
 printf "Enter [${Green}n${NC}] to not run cmake\n"
 read -p "Enter your choice: " choice
 
@@ -31,11 +31,15 @@ if [ "$choice" = "d" ] || [ "$choice" = "D" ];
 then
     cmake -S src/ -B build/ -DCMAKE_BUILD_TYPE=Debug
     cmake_status=$?
+elif [ "$choice" = "r" ] || [ "$choice" = "R" ];
+then
+    cmake -S src/ -B build/ -DCMAKE_BUILD_TYPE=Released
+    cmake_status=$?
 elif [ "$choice" = "n" ] || [ "$choice" = "N" ];
 then
     printf ""
 else
-    cmake -S src/ -B build/ -DCMAKE_BUILD_TYPE=Released
+    cmake -S src/ -B build/ -DCMAKE_BUILD_TYPE=Debug
     cmake_status=$?
 fi 
 

@@ -92,7 +92,7 @@ yaml__cpp__parse_EXTERNAL_OBJECTS =
 
 /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/util/parse: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/util/CMakeFiles/yaml-cpp-parse.dir/parse.cpp.o
 /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/util/parse: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/util/CMakeFiles/yaml-cpp-parse.dir/build.make
-/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/util/parse: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cpp.a
+/home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/util/parse: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/libyaml-cppd.a
 /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/util/parse: /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/util/CMakeFiles/yaml-cpp-parse.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/qvanle/projects/CrossyRoad/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable parse"
 	cd /home/qvanle/projects/CrossyRoad/src/dependency/yamlcpp/yamlcpp/yamlcpp-build/util && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/yaml-cpp-parse.dir/link.txt --verbose=$(VERBOSE)

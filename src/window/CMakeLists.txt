@@ -4,6 +4,7 @@ add_library(
     ${PROJECT_NAME} SHARED 
     src/constructor.cpp
     src/destructor.cpp
+    src/running.cpp
 )
 
 add_library(window::lib ALIAS ${PROJECT_NAME})
