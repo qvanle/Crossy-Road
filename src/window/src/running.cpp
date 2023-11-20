@@ -1,3 +1,4 @@
+#include "raylib.h"
 #include <window.hpp>
 
 void Window::run()
@@ -18,8 +19,8 @@ void Window::draw()
     BeginDrawing();
     ClearBackground(WHITE);
     DrawTexture(
-            *((Texture*)texturesStorage["background"]),
-            width, height, WHITE);
+            *((Texture2D*)texturesStorage["background"]),
+            0, 0, WHITE);
     EndDrawing();
     
 }
