@@ -17,7 +17,11 @@ void Window::draw()
     // clear screen 
     BeginDrawing();
     ClearBackground(WHITE);
+    DrawTexture(
+            *((Texture*)texturesStorage["background"]),
+            width, height, WHITE);
     EndDrawing();
+    
 }
 
 void Window::getUserEvent()

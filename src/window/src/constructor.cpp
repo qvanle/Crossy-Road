@@ -20,5 +20,11 @@ Window::Window(std::string path)
     InitWindow(width, height, title.c_str());
     SetTargetFPS(60);
     status = true;
+    
+    Image img = LoadImage("assets/graphics/45908.jpg");
+    Texture2D *txtr = new Texture2D(LoadTextureFromImage(img));
+    UnloadImage(img);
+
+    texturesStorage.insert("background", txtr);
 }
 

@@ -6,7 +6,9 @@
 #include <chrono>
 #include <vector>
 
-#include "raylib.h"
+#include <raylib.h>
+
+#include <storage_raw.hpp>
 
 class Window 
 {
@@ -18,6 +20,8 @@ private:
     std::vector<std::thread> thread_pool;
     
     bool status;
+    
+    RawStorage texturesStorage;    
 
 protected:
     void draw();
