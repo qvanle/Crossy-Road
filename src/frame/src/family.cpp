@@ -1,4 +1,5 @@
 #include <frame.hpp>
+#include <algorithm>
 
 void Frame::plug(Frame* par, fRect rel)
 {
@@ -41,13 +42,16 @@ void Frame::addSubframe(Frame* subframe)
 
 void Frame::removeSubframe(Frame* subframe)
 {
-    for(auto& i : subframes)
+    int i = subframes.size() - 1;
+    while(i >= 0 && subframes.size())
     {
-        if(i == subframe)
-        {
-            i = subframes.back();
+        while(!subframes.empty() && subframes.back() == subframe)
             subframes.pop_back();
-            return ;
+        i = std::min(i, (int) subframes.size() - 1);
+        if(!subframes.empty() && subframes[i] == subframe)
+        {
+            subframes[i] = subframes.back();
+            subframes.pop_back();
         }
     }
 }

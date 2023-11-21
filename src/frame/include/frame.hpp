@@ -23,7 +23,8 @@ protected:
     void addSubframe(Frame* subframe);
     void removeSubframe(Frame* subframe);
 public:
-    Frame(Frame* par, fRect rel);
+    Frame(Frame* par, Rectangle rel);
+    Frame(Frame* self);
     Frame(Rectangle rec);
     ~Frame();
     
@@ -43,10 +44,10 @@ public:
 
     const fPoint& getCenter() const;
     
-    const int& getX() const;
-    const int& getY() const;
-    const int& getW() const;
-    const int& getH() const;
+    const float& getX() const;
+    const float& getY() const;
+    const float& getW() const;
+    const float& getH() const;
     
     operator Rectangle() const;
     operator fRect() const;

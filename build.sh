@@ -72,4 +72,4 @@ printf "${Yellow}Press enter to continue\n${NC}"
 read -p ""
 clear
 
-build/CLM
+konsole -e "zsh -c \"gdb build/CLM && local_pause\""

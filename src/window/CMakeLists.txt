@@ -16,5 +16,6 @@ target_link_libraries(${PROJECT_NAME} PUBLIC pthread)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC utils::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC storage::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)
 
 

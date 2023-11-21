@@ -18,9 +18,7 @@ void Window::draw()
     // clear screen 
     BeginDrawing();
     ClearBackground(WHITE);
-    DrawTexture(
-            *((Texture2D*)texturesStorage["background"]),
-            0, 0, WHITE);
+    img->draw();
     EndDrawing();
     
 }

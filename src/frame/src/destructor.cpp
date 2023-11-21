@@ -2,7 +2,8 @@
 
 Frame::~Frame()
 {
-    for(auto& subframe : subframes)
+    unplug();
+    for(Frame *& subframe : subframes)
     {
         delete subframe;
     }

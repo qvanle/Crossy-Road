@@ -9,19 +9,23 @@
 #include <raylib.h>
 
 #include <storage_raw.hpp>
+#include <visual.hpp>
 
 class Window 
 {
 private:
-    int width;
-    int height;
+    float width;
+    float height;
     std::string title;
     Color background;
     std::vector<std::thread> thread_pool;
     
     bool status;
+
+    Frame* root_frame;
     
     RawStorage texturesStorage;    
+    Visual* img;
 
 protected:
     void draw();

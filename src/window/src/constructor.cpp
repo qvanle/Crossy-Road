@@ -9,6 +9,8 @@ Window::Window()
 
     InitWindow(width, height, title.c_str());
     SetTargetFPS(60);
+
+    root_frame = new Frame({0, 0, width, height});
 }
 
 Window::Window(std::string path)
@@ -16,6 +18,8 @@ Window::Window(std::string path)
     YAML::Node config = YAML_FILE::readFile(path);
     width = config["width"].as<int>();
     height = config["height"].as<int>();
+    root_frame = new Frame({0, 0, width, height});
+
     title = config["title"].as<std::string>();
     InitWindow(width, height, title.c_str());
     SetTargetFPS(60);
@@ -25,5 +29,8 @@ Window::Window(std::string path)
     Texture2D* txtr = new Texture2D();
     *txtr = LoadTextureFromImage(img);
     texturesStorage.insert("background", txtr);
+    std::cout << "root: " << root_frame << "\n";
+    Frame* subframe = new Frame({root_frame, {0, 0, 1, 1}});
+    Window::img = new Visual(txtr, subframe);
 }
 

@@ -5,6 +5,7 @@ void Frame::updateFrame(bool recursive)
     
     if(parent != nullptr)
     {
+        std::cout << "Parrent: " << parent << "\n";
         frame.x = parent->getX() + relative[0] * parent->getW();
         frame.y = parent->getY() + relative[1] * parent->getH();
         frame.width = relative[2] * parent->getW();
@@ -68,22 +69,22 @@ const fPoint& Frame::getCenter() const
     return {relative[0] + relative[2] / 2, relative[1] + relative[3] / 2};
 }
 
-const int& Frame::getX() const
+const float& Frame::getX() const
 {
     return frame.x;
 }
 
-const int& Frame::getY() const
+const float& Frame::getY() const
 {
     return frame.y;
 }
 
-const int& Frame::getW() const
+const float& Frame::getW() const
 {
     return frame.width;
 }
 
-const int& Frame::getH() const
+const float& Frame::getH() const
 {
     return frame.height;
 }
