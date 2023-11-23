@@ -16,6 +16,7 @@ add_subdirectory(dependency/yamlcpp)
 add_subdirectory(utils)
 add_subdirectory(window)
 add_subdirectory(visual)
+add_subdirectory(object)
 add_subdirectory(frame)
 add_subdirectory(storage)
 

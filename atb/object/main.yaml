@@ -1,0 +1,18 @@
+"name": "main"
+"textures": 
+  - 
+    "path": "assets/graphics/blast.png"  # path to image
+    "graphics": 
+      -
+        "x": 0.05
+        "y": 0 
+        "w": 0.16
+        "h": 1
+      -
+        "x": 0.2
+        "y": 0 
+        "w": 0.16
+        "h": 1
+        "gapX": 0.02
+        "repeat": 2
+        "direction": "right"

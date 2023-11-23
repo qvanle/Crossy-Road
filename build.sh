@@ -72,4 +72,18 @@ printf "${Yellow}Press enter to continue\n${NC}"
 read -p ""
 clear
 
-konsole -e "zsh -c \"gdb build/CLM && local_pause\""
+printf "${LightPurple}Do you want to run CLM?${NC}\n"
+printf "Enter [${Green}d${NC}] to run CLM with gdb (${Yellow}default${NC})\n"
+printf "Enter [${Green}r${NC}] to run CLM without gdb\n"
+printf "Enter [${Green}n${NC}] to not run CLM\n"
+read -p "Enter your choice: " choice
+
+if [ "$choice" = "r" ] || [ "$choice" = "R" ];
+then
+    build/CLM
+elif [ "$choice" = "n" ] || [ "$choice" = "N" ];
+then
+    printf ""
+else
+    konsole -e "zsh -c \"gdb build/CLM && local_pause\""
+fi

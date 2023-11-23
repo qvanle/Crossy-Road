@@ -8,8 +8,8 @@
 
 #include <raylib.h>
 
-#include <storage_raw.hpp>
 #include <visual.hpp>
+#include <object.hpp>
 
 class Window 
 {
@@ -24,8 +24,9 @@ private:
 
     Frame* root_frame;
     
-    RawStorage texturesStorage;    
-    Visual* img;
+    Object* obj;
+    
+    std::chrono::time_point<std::chrono::system_clock> last_frame;
 
 protected:
     void draw();

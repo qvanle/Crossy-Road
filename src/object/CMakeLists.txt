@@ -1,22 +1,21 @@
-project (window)
+project (object)
 
 add_library(
     ${PROJECT_NAME} SHARED 
     src/constructor.cpp
     src/destructor.cpp
-    src/running.cpp
+    src/visible.cpp
+    src/arthmetic.cpp
 )
 
-add_library(window::lib ALIAS ${PROJECT_NAME})
+add_library(object::lib ALIAS ${PROJECT_NAME})
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include/)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC dep::raylib)
-target_link_libraries(${PROJECT_NAME} PUBLIC pthread)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC utils::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC storage::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)
-target_link_libraries(${PROJECT_NAME} PUBLIC object::lib)
 
 

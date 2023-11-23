@@ -3,6 +3,7 @@
 
 void Window::run()
 {
+    last_frame = std::chrono::system_clock::now();
     while (isRun())
     {
         draw();
@@ -17,8 +18,8 @@ void Window::draw()
 {
     // clear screen 
     BeginDrawing();
-    ClearBackground(WHITE);
-    img->draw();
+    ClearBackground(BLACK);
+    obj->draw();
     EndDrawing();
     
 }
@@ -30,7 +31,6 @@ void Window::getUserEvent()
     {
         status = false;
     }
-
     if (WindowShouldClose())
     {
         status = false;
@@ -39,7 +39,12 @@ void Window::getUserEvent()
 
 void Window::getRuntimeEvent()
 {
-    // do nothing 
+    std::chrono::duration<double> elapsed_seconds = std::chrono::system_clock::now() - last_frame;
+    if(elapsed_seconds.count() >= 1.0)
+    {
+        last_frame = std::chrono::system_clock::now();
+        obj->nextTexture();
+    }
 }
 
 void Window::update()
