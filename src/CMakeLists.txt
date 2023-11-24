@@ -19,6 +19,7 @@ add_subdirectory(visual)
 add_subdirectory(object)
 add_subdirectory(frame)
 add_subdirectory(storage)
+add_subdirectory(action)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC window::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)

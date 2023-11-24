@@ -10,7 +10,8 @@ void Window::run()
         sound_effect();
         getUserEvent();
         getRuntimeEvent();
-        update();
+        imediateActing();
+        durationActing();
     }
 }
 
@@ -45,11 +46,6 @@ void Window::getRuntimeEvent()
         last_frame = std::chrono::system_clock::now();
         obj->nextTexture();
     }
-}
-
-void Window::update()
-{
-    // do nothing
 }
 
 void Window::sound_effect()

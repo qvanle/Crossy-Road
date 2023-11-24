@@ -5,6 +5,7 @@ add_library(
     src/constructor.cpp
     src/destructor.cpp
     src/running.cpp
+    src/acting.cpp
 )
 
 add_library(window::lib ALIAS ${PROJECT_NAME})
@@ -18,5 +19,6 @@ target_link_libraries(${PROJECT_NAME} PUBLIC utils::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC storage::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC object::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC action::lib)
 
 
