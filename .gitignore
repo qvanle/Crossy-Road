@@ -1,5 +1,5 @@
 .cache
 .cached 
 build
-src/dependency
-dependency
+src/dependency/raylib/raylib 
+src/dependency/yamlcpp/yamlcpp
