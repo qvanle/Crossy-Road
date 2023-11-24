@@ -1,0 +1,28 @@
+"name": "road"
+"textures": 
+  - 
+    "path": "assets/graphics/blast.png"
+    "graphics":
+      - 
+        "x": 0
+        "y": 0
+        "w": 1
+        "h": 1
+"event": 
+  "object-in":
+    "action": "none" 
+    "sprite": [[0, 0], [0, 1], [0, 2]]
+    "duration": [100, 100, 100]
+    "loop": 1
+    "interrupt": "none"
+    "make-finish": "none"
+  "object-out": 
+    "action": "none" 
+    "sprite": [[0, 0], [0, 1], [0, 2]]
+    "duration": [100, 100, 100]
+    "loop": 1
+    "interrupt": "none"
+    "make-finish": "none"
+
+"control": 
+  

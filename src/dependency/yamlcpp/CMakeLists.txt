@@ -2,7 +2,6 @@ set(YAMLCPP_VERSION 0.8.0)
 find_package(yamlcpp ${RAYLIB_VERSION} QUIET) # QUIET or REQUIRED
 if (NOT yamlcpp_FOUND) # If there's none, fetch and build
     include(FetchContent)
-    set(FETCHCONTENT_BASE_DIR ${PROJECT_SOURCE_DIR}/dependency/yamlcpp/yamlcpp/ CACHE PATH "Missing description." FORCE)
     FetchContent_Declare(
         yamlcpp
         DOWNLOAD_EXTRACT_TIMESTAMP OFF

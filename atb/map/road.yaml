@@ -1,0 +1,12 @@
+"name": "map1"
+"chunk": 
+  - "atb/chunk/road"
+  - "atb/chunk/road"
+  - "atb/chunk/road"
+  - "atb/chunk/river"
+  - "atb/chunk/river"
+  - "atb/chunk/river"
+  - "atb/chunk/forest"
+  - "atb/chunk/forest"
+"random-generate": true
+

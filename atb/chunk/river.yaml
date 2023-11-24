@@ -1,0 +1,15 @@
+"name": "river" 
+"size": 20
+"chunk": 
+  - 
+    "name": "water"
+    "probability": 60
+  - 
+    "name": "log"
+    "probaility": 40
+    "min-length": 2
+    "max-length": 10
+"event": 
+  "runtime": 
+    -
+      
