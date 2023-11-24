@@ -1,7 +1,7 @@
 project(visual)
 
 add_library( 
-    ${PROJECT_NAME}
+    ${PROJECT_NAME} STATIC
     src/constructor.cpp
     src/destructor.cpp
     src/arthmetic.cpp

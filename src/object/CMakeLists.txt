@@ -1,7 +1,7 @@
 project (object)
 
 add_library(
-    ${PROJECT_NAME} SHARED 
+    ${PROJECT_NAME} STATIC 
     src/constructor.cpp
     src/destructor.cpp
     src/visible.cpp

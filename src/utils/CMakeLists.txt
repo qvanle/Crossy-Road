@@ -1,7 +1,7 @@
 project (utils)
 
 add_library(
-    ${PROJECT_NAME} SHARED 
+    ${PROJECT_NAME} STATIC 
     src/file.cpp
     src/constant.cpp
     )
