@@ -1,11 +1,14 @@
 "title": "Crossy Road"
 "width": 1200
-"height": 668
+"height": 680
 "clear-color": 
   "r": 255
   "g": 255 
   "b": 255 
   "a": 255
+
+"interface": "home"
+
 "control":
   -
     "key": ["alt", "f4"]

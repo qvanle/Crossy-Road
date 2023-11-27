@@ -1,0 +1,15 @@
+"name": "home"
+
+"textures": 
+  
+"button": 
+  - 
+    "name": "start"
+    "x": 
+    "y": 
+    "w": 
+    "h": 
+
+"game": 
+  "map": "all.yaml"
+  "main": "main"

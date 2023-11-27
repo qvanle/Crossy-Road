@@ -1,8 +1,13 @@
 "name": "map1"
 "chunk": 
-  - "atb/chunk/road"
-  - "atb/chunk/road"
-  - "atb/chunk/road"
+  - 
+    "chunk": "road"
+    "entity": ["car1", "car2", "motobike1"]
+    "possibility": [5, 5, 5] #percent per second
+  -
+    "chunk": "road"
+  -
+    "chunk": "road"
   - "atb/chunk/river"
   - "atb/chunk/river"
   - "atb/chunk/river"

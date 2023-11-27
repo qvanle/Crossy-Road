@@ -4,6 +4,7 @@
     "path": "assets/graphics/blast.png"  # path to image
     "graphics": 
       -
+        "resize": [1.0, 1.0]
         "x": 0.05
         "y": 0 
         "w": 0.16
