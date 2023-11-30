@@ -13,9 +13,10 @@ Frame::Frame(Frame* par, Rectangle rel)
     relative[1] = rel.y;
     relative[2] = rel.width;
     relative[3] = rel.height;
-    updateFrame();
 
     parent->addSubframe(this);
+
+    updateFrame();
 }
 
 Frame::Frame(Frame* self)
@@ -28,6 +29,7 @@ Frame::Frame(Frame* self)
     }
     parent = self->parent;
     relative = self->relative;
+    frame = self->frame;
     for(auto& i : self->subframes)
     {
         subframes.push_back(i);

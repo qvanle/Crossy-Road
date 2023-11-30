@@ -6,7 +6,7 @@ Window::Window()
     width = 1200;
     height = 668;
     title = "Crossy Road clone";
-
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
     InitWindow(width, height, title.c_str());
     SetTargetFPS(60);
 
@@ -22,13 +22,14 @@ Window::Window(std::string path)
 
     root_frame = new Frame({0, 0, width, height});
 
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
     InitWindow(width, height, title.c_str());
     SetTargetFPS(60);
     status = true;
 
-    obj = new Object(root_frame, Rectangle({0.5, 0.5, 1.0, 1.0}));
-    YAML::Node main = YAML_FILE::readFile("atb/object/main.yaml");
-    obj->setContent(&main);
+    Texture2D *txt = new Texture2D(LoadTexture("assets/graphics/45908.png"));
 
+    graphics = new Visual(txt,root_frame, {0.25, 0.25, 0.5, 0.5});
+    graphics->resize({0.5, 0.5});
 }
 

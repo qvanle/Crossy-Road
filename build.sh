@@ -37,7 +37,7 @@ then
     cmake_status=$?
 elif [ "$choice" = "n" ] || [ "$choice" = "N" ];
 then
-    printf ""
+    printf "Okay ;)\n"
 else
     cmake -S src/ -B build/ -DCMAKE_BUILD_TYPE=Debug
     cmake_status=$?
@@ -46,6 +46,9 @@ fi
 if [ "$cmake_status" -eq 0 ] && [ "$choice" != "n" ] && [ "$choice" != "N" ];
 then
   printf "${Green}Successfully cmake\n${NC}"
+elif [ "$choice" = "n" ] || [ "$choice" = "N" ];
+then
+    printf "${Green}No cmake${NC}\n"
 else
   printf "${Red}Cmake fail${NC}\n" 
   printf "Cmake return value: ${Red}$cmake_status${NC}"
@@ -85,5 +88,5 @@ elif [ "$choice" = "n" ] || [ "$choice" = "N" ];
 then
     printf ""
 else
-    konsole -e "zsh -c \"gdb build/CLM && local_pause\""
+    xfce4-terminal -e "gdb build/CLM"
 fi

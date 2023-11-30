@@ -18,7 +18,7 @@ private:
     
     fRect relative;
 protected:
-    void updateFrame(bool recursive = false);
+    virtual void updateFrame(bool recursive = false);
     bool isroot();
     void addSubframe(Frame* subframe);
     void removeSubframe(Frame* subframe);
@@ -38,6 +38,7 @@ public:
     void moveBy(fPoint rel);
 
     void resize(fPoint rel);
+    void resize(int w, int h);
 
     const Rectangle& getFrame() const;
     const fRect& getRelative() const;

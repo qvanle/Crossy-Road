@@ -11,7 +11,6 @@
 #include <raylib.h>
 
 #include <visual.hpp>
-#include <object.hpp>
 #include <action.hpp>
 
 
@@ -30,9 +29,9 @@ private:
 
     Frame* root_frame;
     
-    Object* obj;
-    
     std::chrono::time_point<std::chrono::system_clock> last_frame;
+    
+    Visual* graphics;
 
     class ActionPool 
     {

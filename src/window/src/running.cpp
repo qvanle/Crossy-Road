@@ -20,7 +20,10 @@ void Window::draw()
     // clear screen 
     BeginDrawing();
     ClearBackground(BLACK);
-    obj->draw();
+    if(graphics != nullptr)
+    {
+        graphics->draw();
+    }
     EndDrawing();
     
 }
@@ -36,6 +39,13 @@ void Window::getUserEvent()
     {
         status = false;
     }
+
+    if (IsWindowResized() && !IsWindowFullscreen())
+    {
+        int width = GetScreenWidth();
+        int height = GetScreenHeight();
+        root_frame->resize(width, height);
+    }
 }
 
 void Window::getRuntimeEvent()
@@ -44,7 +54,6 @@ void Window::getRuntimeEvent()
     if(elapsed_seconds.count() >= 1.0)
     {
         last_frame = std::chrono::system_clock::now();
-        obj->nextTexture();
     }
 }
 

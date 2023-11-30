@@ -5,7 +5,6 @@ void Frame::updateFrame(bool recursive)
     
     if(parent != nullptr)
     {
-        std::cout << "Parrent: " << parent << "\n";
         frame.x = parent->getX() + relative[0] * parent->getW();
         frame.y = parent->getY() + relative[1] * parent->getH();
         frame.width = relative[2] * parent->getW();
@@ -26,7 +25,7 @@ void Frame::moveTo(fPoint rel)
     if(parent == nullptr) return ;
     relative[0] = rel[0];
     relative[1] = rel[1];
-    updateFrame();
+    updateFrame(true);
 }
 
 void Frame::moveCenterTo(fPoint rel)
@@ -35,7 +34,7 @@ void Frame::moveCenterTo(fPoint rel)
     fPoint center = getCenter();
     relative[0] += rel[0] - center[0];
     relative[1] += rel[1] - center[1];
-    updateFrame();
+    updateFrame(true);
 }
 
 void Frame::moveBy(fPoint rel)
@@ -43,7 +42,7 @@ void Frame::moveBy(fPoint rel)
     if(parent == nullptr) return ;
     relative[0] += rel[0];
     relative[1] += rel[1];
-    updateFrame();
+    updateFrame(true);
 }
 
 void Frame::resize(fPoint rel)
@@ -51,7 +50,15 @@ void Frame::resize(fPoint rel)
     if(parent == nullptr) return ;
     relative[2] = rel[0];
     relative[3] = rel[1];
-    updateFrame();
+    updateFrame(true);
+}
+
+void Frame::resize(int w, int h)
+{
+    if(parent != nullptr) return ;
+    frame.width = w;
+    frame.height = h;
+    updateFrame(true);
 }
 
 const Rectangle& Frame::getFrame() const

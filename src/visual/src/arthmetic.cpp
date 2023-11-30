@@ -8,3 +8,29 @@ void Visual::draw()
     // draw texture 
     DrawTexture(*m_texture, rec.x, rec.y, WHITE);
 }
+
+void Visual::fitFrame()
+{
+    if(m_texture == nullptr) return ;
+    const Rectangle &rec = Frame::getFrame();
+
+    Image img = LoadImageFromTexture(*m_texture);
+    UnloadTexture(*m_texture);
+    delete m_texture;
+    
+    ImageResize(&img, rec.width, rec.height);
+    m_texture = new Texture2D(LoadTextureFromImage(img));
+}
+
+void Visual::resize(fPoint rel)
+{
+    Frame::resize(rel);
+    updateFrame(true);
+}
+
+void Visual::updateFrame(bool recursive)
+{
+    if(m_texture == nullptr) return ;
+    Frame::updateFrame(recursive);
+    fitFrame();
+}
