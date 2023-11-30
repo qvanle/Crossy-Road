@@ -1,4 +1,6 @@
 #include <window.hpp>
+#include <const/path/atb.hpp>
+
 #include <file.hpp>
 
 Window::Window()
@@ -15,6 +17,7 @@ Window::Window()
 
 Window::Window(std::string path)
 {
+    path = PATB::WINDOW_ + path;
     YAML::Node config = YAML_FILE::readFile(path);
     width = config["width"].as<int>();
     height = config["height"].as<int>();

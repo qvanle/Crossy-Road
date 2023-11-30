@@ -4,7 +4,7 @@
 
 int main()
 {
-    Window win("atb/window.yaml");
+    Window win("window.yaml");
     win.run();
     return 0;
 }
