@@ -20,6 +20,7 @@ void Visual::fitFrame()
     
     ImageResize(&img, rec.width, rec.height);
     m_texture = new Texture2D(LoadTextureFromImage(img));
+    UnloadImage(img);
 }
 
 void Visual::resize(fPoint rel)

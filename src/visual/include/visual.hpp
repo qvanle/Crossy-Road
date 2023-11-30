@@ -22,5 +22,6 @@ public:
     void draw();
 };
 using Sprite = std::vector<Visual*>;
-
+void deleteSprite(Sprite*&);
+void deleteSprites(std::vector<Sprite>*&);
 #endif // VISUAL

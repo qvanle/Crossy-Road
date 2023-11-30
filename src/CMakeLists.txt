@@ -15,7 +15,6 @@ add_subdirectory(utils)
 add_subdirectory(window)
 add_subdirectory(visual)
 add_subdirectory(frame)
-add_subdirectory(storage)
 add_subdirectory(action)
 add_subdirectory(container)
 

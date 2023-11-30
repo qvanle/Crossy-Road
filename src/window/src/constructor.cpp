@@ -29,10 +29,8 @@ Window::Window(std::string path)
     InitWindow(width, height, title.c_str());
     SetTargetFPS(60);
     status = true;
-
-    Texture2D *txt = new Texture2D(LoadTexture("assets/graphics/45908.png"));
-
-    graphics = new Visual(txt,root_frame, {0.25, 0.25, 0.5, 0.5});
-    graphics->resize({0.5, 0.5});
+    
+    container = new Container(root_frame, {0.25, 0.25, 0.5, 0.5});
+    container->linkContent("test.yaml");
 }
 

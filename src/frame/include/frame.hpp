@@ -57,6 +57,9 @@ public:
 
     const Rectangle& getFrame() const;
     const fRect& getRelative() const;
+    Frame* getParent();
+
+    void setRelative(fRect rel);
 
     const fPoint& getCenter() const;
     

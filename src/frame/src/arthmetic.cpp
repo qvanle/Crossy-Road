@@ -95,6 +95,17 @@ const fRect& Frame::getRelative() const
     return relative;
 }
 
+Frame* Frame::getParent() 
+{
+    return parent;
+}
+
+void Frame::setRelative(fRect rel)
+{
+    relative = rel;
+    updateFrame(true);
+}
+
 const fPoint& Frame::getCenter() const
 {
     static fPoint resu; 

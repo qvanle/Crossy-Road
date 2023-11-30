@@ -1,0 +1,22 @@
+"name": "main" # require
+"textures":  # require
+  - 
+    "path": "45908.png"  # require
+    "graphics":  #require
+      -
+        "x": 0
+        "y": 0 
+        "w": 50
+        "h": 50
+      -
+        "x": 50
+        "y": 0 
+        "w": 50
+        "h": 50
+        "gapX": 0  
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical" 
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1
+

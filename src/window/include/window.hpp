@@ -12,6 +12,7 @@
 
 #include <visual.hpp>
 #include <action.hpp>
+#include <container.hpp>
 
 
 class Window 
@@ -31,7 +32,7 @@ private:
     
     std::chrono::time_point<std::chrono::system_clock> last_frame;
     
-    Visual* graphics;
+    Container* container;
 
     class ActionPool 
     {
