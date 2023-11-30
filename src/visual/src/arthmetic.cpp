@@ -31,6 +31,12 @@ void Visual::resize(fPoint rel)
 void Visual::updateFrame(bool recursive)
 {
     if(m_texture == nullptr) return ;
+    float prx = getFrame().width; 
+    float pry = getFrame().height;
     Frame::updateFrame(recursive);
+
+    float rx = getFrame().width - prx;
+    float ry = getFrame().height - pry;
+    if(rx < 1e-3 && ry < 1e-3) return ;
     fitFrame();
 }

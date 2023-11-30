@@ -9,6 +9,17 @@
 
 #include <const/datatype.hpp>
 
+/**
+ * @class Frame
+ *
+ * @brief position and size of object on screen
+ * 
+ * When change position or size, it also change position and size of all subframes
+ * 
+ * a subframe is relative to its parent by percentage (0.0f to 1.0f)
+ *
+**/
+
 class Frame 
 {
 private: 
@@ -33,9 +44,13 @@ public:
     void unplug();
 
     void moveTo(fPoint rel);
+    void moveTo(int x, int y);
+
     void moveCenterTo(fPoint rel);
+    void moveCenterTo(int x, int y);
 
     void moveBy(fPoint rel);
+    void moveBy(int, int);
 
     void resize(fPoint rel);
     void resize(int w, int h);

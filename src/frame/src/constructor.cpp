@@ -1,5 +1,12 @@
 #include <frame.hpp>
 
+/** 
+ * @brief create a frame with a parent and a relative position
+ *
+ * @param par parent Frame 
+ * @param rel relative position and size in percentage (0.0f to 1.0f)
+**/ 
+
 Frame::Frame(Frame* par, Rectangle rel)
 {
     parent = nullptr;
@@ -18,7 +25,11 @@ Frame::Frame(Frame* par, Rectangle rel)
 
     updateFrame();
 }
-
+/** 
+ * @brief clone a frame
+ * 
+ * @param self Frame frame to clone
+**/ 
 Frame::Frame(Frame* self)
 {
     parent = nullptr;
@@ -35,7 +46,14 @@ Frame::Frame(Frame* self)
         subframes.push_back(i);
     }
 }
-
+/** 
+ * @brief create a frame with a position and size
+ * 
+ * This is a root frame
+ *
+ * @param rec position and size in pixel
+ *
+**/
 Frame::Frame(Rectangle rec)
 {
     parent = nullptr;

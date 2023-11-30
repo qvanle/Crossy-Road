@@ -1,6 +1,14 @@
 #include <frame.hpp>
 #include <algorithm>
 
+
+/** 
+ * @brief attach a frame to a parent by relative position
+ * 
+ * @param par parent frame 
+ * @param rel relative position and size in percentage (0.0f to 1.0f)
+ * 
+ **/
 void Frame::plug(Frame* par, fRect rel)
 {
     if(par == nullptr) 
@@ -15,6 +23,12 @@ void Frame::plug(Frame* par, fRect rel)
     parent->addSubframe(this);
 }
 
+/** 
+ * @brief attach a frame to a parent by old relative position
+ * 
+ * @param par parent frame 
+ * 
+ **/
 void Frame::plug(Frame* par)
 {
     if(par == nullptr) 
@@ -28,6 +42,10 @@ void Frame::plug(Frame* par)
     parent->addSubframe(this);
 }
 
+/** 
+ * @brief detach a frame from its parent
+ * 
+ **/
 void Frame::unplug()
 {
     if(parent == nullptr) return ;
@@ -35,11 +53,27 @@ void Frame::unplug()
     parent = nullptr;
 }
 
+/** 
+ * @brief Add a subframe to this frame 
+ * 
+ * When unplug a subframe, parent frame will call this function, so you shouldn't call it
+ *
+ * @param subframe subframe to add
+ * 
+ **/
 void Frame::addSubframe(Frame* subframe)
 {
     subframes.push_back(subframe);
 }
 
+/** 
+ * @brief Remove a subframe from this frame 
+ * 
+ * When destroy a subframe that have parent frame, this function is called, so you shouldn't call it
+ *
+ * @param subframe subframe to remove
+ * 
+ **/
 void Frame::removeSubframe(Frame* subframe)
 {
     int i = subframes.size() - 1;
@@ -56,6 +90,10 @@ void Frame::removeSubframe(Frame* subframe)
     }
 }
 
+/** 
+ * @brief return true if this frame is root
+ * 
+ **/
 bool Frame::isroot()
 {
     return parent == nullptr;

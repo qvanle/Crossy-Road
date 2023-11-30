@@ -1,10 +1,12 @@
 #include <frame.hpp>
 
+/** 
+ * @brief destroy a frame
+ * 
+ * MUST NOT DELETE ANYTHING 
+ * 
+ **/
+
 Frame::~Frame()
 {
-    unplug();
-    for(Frame *& subframe : subframes)
-    {
-        delete subframe;
-    }
 }
