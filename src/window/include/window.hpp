@@ -13,6 +13,7 @@
 #include <visual.hpp>
 #include <action.hpp>
 #include <container.hpp>
+#include <interface.hpp>
 
 
 class Window 
@@ -32,7 +33,7 @@ private:
     
     std::chrono::time_point<std::chrono::system_clock> last_frame;
     
-    Container* container;
+    Interface* interface;
 
     class ActionPool 
     {

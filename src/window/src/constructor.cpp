@@ -30,7 +30,7 @@ Window::Window(std::string path)
     SetTargetFPS(60);
     status = true;
     
-    container = new Container(root_frame, {0.25, 0.25, 0.5, 0.5});
-    container->linkContent("test.yaml");
+    interface = new Interface(root_frame, {0.25, 0.25, 0.5, 0.5});
+    interface->linkContent("test.yaml");
 }
 

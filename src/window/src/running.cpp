@@ -20,9 +20,9 @@ void Window::draw()
     // clear screen 
     BeginDrawing();
     ClearBackground(BLACK);
-    if(container != nullptr)
+    if(interface != nullptr)
     {
-        container->draw();
+        interface->draw();
     }
     EndDrawing();
     
