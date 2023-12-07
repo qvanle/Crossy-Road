@@ -1,4 +1,4 @@
-#! /usr/bin/bash 
+#! /bin/zsh 
 
 Black='\033[0;30m'
 Red='\033[0;31m'
@@ -23,7 +23,8 @@ printf "${LightPurple}Do you want to run cmake?${NC}\n"
 printf "Enter [${Green}d${NC}] to not run cmake with debug (${Yellow}default${NC})\n"
 printf "Enter [${Green}r${NC}] to not run cmake with released\n"
 printf "Enter [${Green}n${NC}] to not run cmake\n"
-read -p "Enter your choice: " choice
+printf "Enter your choice: "
+read choice
 
 clear 
 cmake_status=0
@@ -56,7 +57,8 @@ else
 fi
 
 printf "${Yellow}Press enter to continue\n${NC}"
-read -p ""
+read nullbuffer 
+
 clear
 
 make -C build
@@ -72,14 +74,15 @@ else
 fi 
 
 printf "${Yellow}Press enter to continue\n${NC}"
-read -p ""
+read nullbuffer
 clear
 
 printf "${LightPurple}Do you want to run CLM?${NC}\n"
-printf "Enter [${Green}d${NC}] to run CLM with gdb (${Yellow}default${NC})\n"
-printf "Enter [${Green}r${NC}] to run CLM without gdb\n"
+printf "Enter [${Green}d${NC}] to run CLM with lldb (${Yellow}default${NC})\n"
+printf "Enter [${Green}r${NC}] to run CLM without lldb\n"
 printf "Enter [${Green}n${NC}] to not run CLM\n"
-read -p "Enter your choice: " choice
+printf "Enter your choice: " 
+read choice
 
 if [ "$choice" = "r" ] || [ "$choice" = "R" ];
 then
@@ -88,5 +91,5 @@ elif [ "$choice" = "n" ] || [ "$choice" = "N" ];
 then
     printf ""
 else
-    xfce4-terminal -e "gdb build/CLM"
+    lldb build/CLM
 fi
