@@ -1,8 +1,7 @@
 #include "raylib.h"
 #include <window.hpp>
 
-void Window::run()
-{
+void Window::run() {
     last_frame = std::chrono::system_clock::now();
     while (isRun())
     {
@@ -10,7 +9,7 @@ void Window::run()
         sound_effect();
         getUserEvent();
         getRuntimeEvent();
-        imediateActing();
+        immediateActing();
         durationActing();
     }
 }
@@ -20,10 +19,7 @@ void Window::draw()
     // clear screen 
     BeginDrawing();
     ClearBackground(BLACK);
-    if(interface != nullptr)
-    {
-        interface->draw();
-    }
+    interface->top()->draw();
     EndDrawing();
     
 }

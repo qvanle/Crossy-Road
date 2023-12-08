@@ -30,6 +30,7 @@ public:
 
     virtual std::string linkContent(std::string);
     virtual std::string linkContentAbsolute(std::string);
+    std::string getName();
     
     void chooseSprite(int);
     void chooseImage(int);

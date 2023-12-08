@@ -6,6 +6,7 @@ add_library(
     src/destructor.cpp
     src/running.cpp
     src/acting.cpp
+    src/interface.cpp
 )
 
 add_library(window::lib ALIAS ${PROJECT_NAME})

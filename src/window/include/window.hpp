@@ -33,7 +33,25 @@ private:
     
     std::chrono::time_point<std::chrono::system_clock> last_frame;
     
-    Interface* interface;
+    class InterfacePool 
+    {
+    private: 
+        std::stack<Interface*> inf;
+        std::map<std::string, Interface*> storage;
+        void clearStack();
+    public:
+        InterfacePool();
+        ~InterfacePool();
+        void load(Interface*);
+        void unload(Interface*);
+        void clear();
+        Interface* getInterface(std::string);
+
+        void push(std::string);
+        std::string pop();
+        Interface* top();
+
+    }* interface;
 
     class ActionPool 
     {
@@ -54,6 +72,9 @@ protected:
     void sound_effect();
     void immediateActing();
     void durationActing();
+
+    void initRaylib(YAML::Node node);
+    void loadInterface(YAML::Node node);
 public:
     Window();
     Window(std::string path);

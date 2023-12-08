@@ -171,3 +171,8 @@ void Container::chooseImage(int index, int index2)
     focus[0] = index;
     focus[1] = index2;
 }
+
+std::string Container::getName()
+{
+    return name;
+}
