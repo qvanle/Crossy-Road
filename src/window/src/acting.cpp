@@ -23,9 +23,9 @@ bool Window::ActionPool::empty() const
 }
 
 
-void Window::imediateActing()
+void Window::immediateActing()
 {
-    if(imediate_pool.empty()) return ;
+    if(immediate_pool.empty()) return ;
 }
 
 void Window::durationActing()

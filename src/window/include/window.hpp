@@ -45,14 +45,14 @@ private:
         Action* front();
         Action* pop();
         bool empty() const;
-    } imediate_pool, duration_pool;
+    } immediate_pool, duration_pool;
 
 protected:
     void draw();
     void getUserEvent();
     void getRuntimeEvent();
     void sound_effect();
-    void imediateActing();
+    void immediateActing();
     void durationActing();
 public:
     Window();
