@@ -19,7 +19,9 @@ public:
 
     ~Interface();
 
-    void linkContent(std::string path);
+    std::string linkContent(std::string path);
+
+    Action* react();
 
     void draw();
 };

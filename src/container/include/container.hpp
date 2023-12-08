@@ -6,6 +6,7 @@
 
 #include <visual.hpp>
 #include <frame.hpp>
+#include <action.hpp>
 
 class Container : public Frame
 {
@@ -27,8 +28,8 @@ public:
     Container(Container*, Frame*, Rectangle);
     ~Container();
 
-    std::string linkContent(std::string);
-    std::string linkContentAbsolute(std::string);
+    virtual std::string linkContent(std::string);
+    virtual std::string linkContentAbsolute(std::string);
     
     void chooseSprite(int);
     void chooseImage(int);
@@ -40,6 +41,8 @@ public:
     void toggleVisibility();
     bool isVisible();
     int getInstanceId();
+
+    virtual Action* react() = 0;
 };
 
 #endif 
