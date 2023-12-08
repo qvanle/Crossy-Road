@@ -24,6 +24,7 @@ void Window::draw()
     {
         interface->draw();
     }
+    DrawRectangle(50, 50, 50, 50,{127, 127, 127, 255});
     EndDrawing();
     
 }
