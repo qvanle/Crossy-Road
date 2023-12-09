@@ -24,6 +24,9 @@ Window::Window(std::string path)
     loadInterface(config["interface-list"]);
     if(config["choose-interface"]) 
         interface->push(config["choose-interface"].as<std::string>());
+
+    obj = new Object(root_frame, {0, 0, 0.1, 0.1});
+    obj->linkContent("test.yaml");
 }
 
 

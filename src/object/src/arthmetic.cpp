@@ -1,21 +1,14 @@
 #include <object.hpp>
 
-std::string Object::linkContent(std::string path)
+Action* Object::react() 
 {
+    
 
-    return "";
-
-}
-
-std::string Object::linkContentAbsolute(std::string path)
-{
-
-    return "";
-
-}
-
-
-Action* Object::react()
-{
     return nullptr;
+}
+
+void Object::draw()
+{
+    Container::draw();
+    return ;
 }

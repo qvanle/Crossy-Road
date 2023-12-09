@@ -20,6 +20,7 @@ void Window::draw()
     BeginDrawing();
     ClearBackground(BLACK);
     interface->draw();
+    obj->draw();
     EndDrawing();
     
 }

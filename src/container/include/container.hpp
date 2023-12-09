@@ -20,6 +20,7 @@ private:
     bool visible;
 
 protected:
+    bool loadName(YAML::Node node);
     void loadSprites(YAML::Node node);
 public:
     Container(Frame*, Rectangle);
@@ -36,7 +37,7 @@ public:
     void chooseImage(int);
     void chooseImage(int, int);
 
-    void draw();
+    virtual void draw();
     void show();
     void hide();
     void toggleVisibility();

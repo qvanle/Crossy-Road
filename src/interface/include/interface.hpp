@@ -23,7 +23,7 @@ public:
 
     Action* react() override;
 
-    void draw();
+    void draw() override;
 };
 
 #endif 

@@ -19,6 +19,7 @@ public:
     virtual std::string linkContentAbsolute(std::string) override;
     
     virtual Action* react() override;
+    void draw() override;
 };
 
 #endif 

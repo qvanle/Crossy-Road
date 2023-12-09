@@ -13,6 +13,7 @@
 #include <visual.hpp>
 #include <action.hpp>
 #include <container.hpp>
+#include <object.hpp>
 #include <interface.hpp>
 
 
@@ -33,6 +34,8 @@ private:
     Frame* root_frame;
     
     std::chrono::time_point<std::chrono::system_clock> last_frame;
+
+    Container* obj;
     
     class InterfacePool 
     {
