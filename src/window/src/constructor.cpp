@@ -32,5 +32,8 @@ Window::Window(std::string path)
     
     interface = new Interface(root_frame, {0.02, 0.04, 0.96, 0.92});
     interface->linkContent("test.yaml");
+    std::string s = "Start";
+    button = new Button(s, 25, RED, root_frame, {0.5, 0.5, 0.5, 0.5});
+    button->show();
 }
 

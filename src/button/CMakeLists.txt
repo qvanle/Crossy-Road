@@ -9,7 +9,7 @@ add_library(
 
 target_link_libraries(${PROJECT_NAME} PUBLIC dep::raylib)
 
-add_library(buttom::lib ALIAS ${PROJECT_NAME})
+add_library(button::lib ALIAS ${PROJECT_NAME})
 
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include/)

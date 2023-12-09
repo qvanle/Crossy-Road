@@ -14,6 +14,7 @@
 #include <action.hpp>
 #include <container.hpp>
 #include <interface.hpp>
+#include <button.hpp>
 
 
 class Window 
@@ -62,6 +63,8 @@ public:
     bool isRun();
     bool isClose();
     void run();
+    // test button
+    Button* button;
 };
 
 #endif 

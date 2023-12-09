@@ -5,4 +5,3 @@ pause
 ninja -C build
 pause
 .\build\CLM
-pause

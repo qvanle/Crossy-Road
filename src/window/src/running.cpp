@@ -24,7 +24,7 @@ void Window::draw()
     {
         interface->draw();
     }
-    DrawRectangle(50, 50, 50, 50,{127, 127, 127, 255});
+    button->draw();
     EndDrawing();
     
 }
@@ -47,6 +47,10 @@ void Window::getUserEvent()
         int height = GetScreenHeight();
         root_frame->resize(width, height);
     }
+
+    // button event
+    button->handleEvents();
+    button->update();
 }
 
 void Window::getRuntimeEvent()

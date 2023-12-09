@@ -29,7 +29,7 @@ public:
 
     std::string linkContent(std::string);
     std::string linkContentAbsolute(std::string);
-    
+
     void chooseSprite(int);
     void chooseImage(int);
     void chooseImage(int, int);
