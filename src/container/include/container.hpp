@@ -26,7 +26,7 @@ public:
     Container(Container*);
     Container(Container*, Rectangle);
     Container(Container*, Frame*, Rectangle);
-    ~Container();
+    virtual ~Container();
 
     virtual std::string linkContent(std::string);
     virtual std::string linkContentAbsolute(std::string);

@@ -19,38 +19,41 @@ void Window::draw()
     // clear screen 
     BeginDrawing();
     ClearBackground(BLACK);
-    interface->top()->draw();
+    interface->draw();
     EndDrawing();
     
 }
 
 void Window::getUserEvent()
 {
-    // Esc to exit 
-    if (IsKeyPressed(KEY_ESCAPE))
+    // alt + F4 to exit 
+    if (IsKeyDown(KEY_LEFT_ALT) && IsKeyDown(KEY_F4))
     {
-        status = false;
+        immediate_pool.push(new CloseAction(this));
     }
     if (WindowShouldClose())
     {
-        status = false;
+        immediate_pool.push(new CloseAction(this));
     }
 
     if (IsWindowResized() && !IsWindowFullscreen())
     {
         int width = GetScreenWidth();
         int height = GetScreenHeight();
-        root_frame->resize(width, height);
+        immediate_pool.push(new resizeAction(this, width, height));
+    }
+    Action* action = interface->react();
+    if(action != nullptr) 
+    {
+        if(action->getRepeat() > 1) 
+            duration_pool.push(action);
+        else if(action->getRepeat() == 1) 
+            immediate_pool.push(action);
     }
 }
 
 void Window::getRuntimeEvent()
 {
-    std::chrono::duration<double> elapsed_seconds = std::chrono::system_clock::now() - last_frame;
-    if(elapsed_seconds.count() >= 1.0)
-    {
-        last_frame = std::chrono::system_clock::now();
-    }
 }
 
 void Window::sound_effect()

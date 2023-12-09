@@ -77,3 +77,20 @@ Interface* Window::InterfacePool::top()
     }
     return nullptr;
 }
+
+void Window::InterfacePool::draw()
+{
+    if(!inf.empty())
+    {
+        inf.top()->draw();
+    }
+}
+
+Action* Window::InterfacePool::react()
+{
+    if(!inf.empty())
+    {
+        return inf.top()->react();
+    }
+    return nullptr;
+}

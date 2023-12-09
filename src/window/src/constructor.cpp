@@ -32,7 +32,9 @@ void Window::initRaylib(YAML::Node config)
     width = config["width"].as<int>();
     height = config["height"].as<int>();
     title = config["title"].as<std::string>();
-
+    // enable resizeable window and vsync
+    
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
     InitWindow(width, height, title.c_str());
     SetTargetFPS(60);
     status = true;

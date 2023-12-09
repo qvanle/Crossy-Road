@@ -19,7 +19,8 @@
 class Window 
 {
 private:
-    friend class Action;
+    friend class CloseAction;
+    friend class resizeAction;
 
     float width;
     float height;
@@ -50,6 +51,9 @@ private:
         void push(std::string);
         std::string pop();
         Interface* top();
+
+        void draw();
+        Action* react();
 
     }* interface;
 
@@ -85,4 +89,28 @@ public:
     void run();
 };
 
+class CloseAction : public Action
+{
+private: 
+    Window * win;
+public: 
+    CloseAction(Window* win);
+    ~CloseAction() = default;
+    void execute();
+    void forceEnd();
+    void interrupt();
+};
+
+class resizeAction : public Action
+{
+private: 
+    float w, h;
+    Window* win;
+public: 
+    resizeAction(Window* window, float w, float h);
+    ~resizeAction() = default;
+    void execute();
+    void forceEnd();
+    void interrupt();
+};
 #endif 

@@ -5,8 +5,12 @@ class Action
 {
 private: 
     int repeat; 
+protected: 
+    void setRepeat(int);
+    void doneExecute();
+    Action(int);
 public:
-    Action() = default;
+    Action();
     virtual ~Action() = default;
     virtual void execute() = 0;
     virtual void ForceEnd();

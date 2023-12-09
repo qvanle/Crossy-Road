@@ -7,6 +7,8 @@ add_library(
     src/running.cpp
     src/acting.cpp
     src/interface.cpp
+    src/action/close.cpp
+    src/action/resize.cpp
 )
 
 add_library(window::lib ALIAS ${PROJECT_NAME})
