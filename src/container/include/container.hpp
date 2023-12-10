@@ -6,6 +6,8 @@
 
 #include <visual.hpp>
 #include <frame.hpp>
+#include <action.hpp>
+
 
 class Container : public Frame
 {
@@ -19,22 +21,24 @@ private:
     bool visible;
 
 protected:
+    bool loadName(YAML::Node node);
     void loadSprites(YAML::Node node);
 public:
     Container(Frame*, Rectangle);
     Container(Container*);
     Container(Container*, Rectangle);
     Container(Container*, Frame*, Rectangle);
-    ~Container();
+    virtual ~Container();
 
-    std::string linkContent(std::string);
-    std::string linkContentAbsolute(std::string);
-
+    virtual std::string linkContent(std::string);
+    virtual std::string linkContentAbsolute(std::string);
+    std::string getName();
+    
     void chooseSprite(int);
     void chooseImage(int);
     void chooseImage(int, int);
 
-    void draw();
+    virtual void draw();
     void show();
     void hide();
     void toggleVisibility();
@@ -46,6 +50,7 @@ public:
     void nextSprite();
     void nextImageInSprite();
     void nextImage();
+    virtual Action* react() = 0;
 };
 
 #endif 

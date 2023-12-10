@@ -6,6 +6,9 @@ add_library(
     src/destructor.cpp
     src/running.cpp
     src/acting.cpp
+    src/interface.cpp
+    src/action/close.cpp
+    src/action/resize.cpp
 )
 
 add_library(window::lib ALIAS ${PROJECT_NAME})
@@ -20,4 +23,5 @@ target_link_libraries(${PROJECT_NAME} PUBLIC action::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC container::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC interface::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC button::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC object::lib)
 

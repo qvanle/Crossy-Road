@@ -19,6 +19,7 @@ add_subdirectory(action)
 add_subdirectory(container)
 add_subdirectory(interface)
 add_subdirectory(button)
+add_subdirectory(object)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC window::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)

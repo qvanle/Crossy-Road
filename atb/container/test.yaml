@@ -2,6 +2,7 @@
 "textures":  # require
   - 
     "path": "45908.png"  # require
+    # "resize": [100, 200] in pixel
     "graphics":  #require
       -
         "x": 0

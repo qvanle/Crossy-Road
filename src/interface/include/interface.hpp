@@ -9,7 +9,7 @@
 class Interface : public Container
 {
 private: 
-
+    std::vector<Container*> containers;
 
 public: 
     Interface(Frame*, Rectangle);
@@ -19,9 +19,11 @@ public:
 
     ~Interface();
 
-    void linkContent(std::string path);
+    std::string linkContent(std::string path) override;
 
-    void draw();
+    Action* react() override;
+
+    void draw() override;
 };
 
 #endif 

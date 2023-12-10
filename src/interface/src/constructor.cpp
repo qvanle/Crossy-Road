@@ -17,7 +17,7 @@ Interface::Interface(Interface* other, Frame* frame, Rectangle rect) : Container
 {
 }
 
-void Interface::linkContent(std::string path)
+std::string Interface::linkContent(std::string path)
 {
-    Container::linkContentAbsolute(PATB::INTERFACE_ + path);
+    return Container::linkContentAbsolute(PATB::INTERFACE_ + path);
 }

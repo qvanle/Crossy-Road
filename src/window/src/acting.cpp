@@ -23,12 +23,23 @@ bool Window::ActionPool::empty() const
 }
 
 
-void Window::imediateActing()
+void Window::immediateActing()
 {
-    if(imediate_pool.empty()) return ;
+    if(immediate_pool.empty()) return ;
+    Action* action = immediate_pool.pop();
+    
+    action->execute();
+    delete action;
+
 }
 
 void Window::durationActing()
 {
     if(duration_pool.empty()) return ;
+    Action* action = duration_pool.pop();
+
+    action->execute();
+    if(action->getRepeat() > 0) 
+        duration_pool.push(action);
+    else delete action;
 }
