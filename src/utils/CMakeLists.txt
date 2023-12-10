@@ -5,6 +5,8 @@ add_library(
     src/file.cpp
     src/keystroke.cpp
     src/constant.cpp
+    src/countdown.cpp
+    src/random.cpp
     )
 
 add_library(utils::lib ALIAS ${PROJECT_NAME})
