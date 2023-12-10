@@ -76,16 +76,24 @@ void Button::setIsSuggest() {
 // Button for image
 
 void ButtonImage::draw() {
-    if (!this->isSuggest)
-        DrawTexture(texture[tmpPath], rectangle.x, rectangle.y, WHITE);
-    else
-        DrawTexture(texturePress[tmpPath], rectangle.x, rectangle.y, WHITE);
+    if(!isVisible()) return;
+    // if (!this->isHover)
+    //     {
+    //         // DrawTexture(texture[tmpPath], rectangle.x, rectangle.y, WHITE);
+    //         this->chooseImage(0,tmpPath);
+    //     }
+    // else
+    //     {
+    //         // DrawTexture(texturePress[tmpPath], rectangle.x, rectangle.y, WHITE);
+    //         this->chooseImage(1,tmpPath);
+    //     }
+        this->Container::draw();
 }
 
 void ButtonImage::handleEvents() {
     this->clicked = false;
-    if (CheckCollisionPointRec(GetMousePosition(), this->rectangle)) {
-        this->isSuggest = true;
+    if (CheckCollisionPointRec(GetMousePosition(), rectangle)) {
+        this->isHover = true;
 
         if (IsMouseButtonDown(MOUSE_LEFT_BUTTON)) {
             this->pressing = true;
@@ -99,7 +107,7 @@ void ButtonImage::handleEvents() {
     else {
         this->color = WHITE;
         this->pressing = false;
-        this->isSuggest = false;
+        this->isHover = false;
     }
 
 }
@@ -116,10 +124,10 @@ void ButtonImage::changeIndex(int newindex)
     tmpPath = newindex;
 }
 
-void ButtonImage::changePosition(Rectangle change)
-{
-    this->rectangle = change;
-}
+// void ButtonImage::changePosition(Rectangle change)
+// {
+//     this->rectangle = change;
+// }
 
 int ButtonImage::getClicked()
 {

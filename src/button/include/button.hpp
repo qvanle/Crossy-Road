@@ -7,6 +7,7 @@
 #include <container.hpp>
 
 #define TRANSPARENT Color {127, 127, 127, 0}
+#define rectangle this->getFrame()
 
 class Button : public Container {
 private:
@@ -18,7 +19,7 @@ private:
     int fontSize;
 
     Color color, colorBG;
-    Rectangle rectangle;
+    // Rectangle rectangle;
 
     bool isSuggest = false;
     bool pressing = false, clicked = false, isChosen = false;
@@ -38,7 +39,7 @@ public:
     void setBG(Color colorBG);
 };
 
-class ButtonImage 
+class ButtonImage : public Container
 {
 private:
     static constexpr int DPI = 500;
@@ -50,17 +51,17 @@ private:
     int numpath;
     int tmpPath;
 
-    Rectangle rectangle;
+    // Rectangle rectangle;
     Color color;
 
-    bool isSuggest = false;
+    bool isHover = false;
     bool pressing = false, clicked = false;
 
     std::vector <Texture> texture;
     std::vector <Texture> texturePress;
 
 public:
-    ButtonImage(std::vector <std::string> path, std::vector <std::string> pathPress, Rectangle rectangle);
+    ButtonImage(std::vector <std::string> path, std::vector <std::string> pathPress, Rectangle rec);
     void draw();
     void handleEvents();
     void update();

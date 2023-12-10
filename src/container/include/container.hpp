@@ -40,6 +40,12 @@ public:
     void toggleVisibility();
     bool isVisible();
     int getInstanceId();
+
+    int sizeSprite();
+    int SpriteSize(int);
+    void nextSprite();
+    void nextImageInSprite();
+    void nextImage();
 };
 
 #endif 

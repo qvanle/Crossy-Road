@@ -3,7 +3,7 @@ Button::Button(std::string text, int fontSize, Color color, Frame* parrent, Rect
     this->text = std::move(text);
     this->fontSize = fontSize;
     this->color = color;
-    this->rectangle = rectangle;
+    // this->rectangle = rectangle;
     this->colorBG = WHITE;
 
     // Calculate text width and height
@@ -15,14 +15,16 @@ Button::Button(std::string text, int fontSize, Color color, Frame* parrent, Rect
     float posY = rectangle.y + (rectangle.height - textHeight) / 2.0;
 
     this->positionText = {posX, posY};
+
+    
 }
 
 // Button for Image
-ButtonImage::ButtonImage(std::vector<std::string> path, std::vector <std::string> pathPress, Rectangle rectangle)
+ButtonImage::ButtonImage(std::vector<std::string> path, std::vector <std::string> pathPress, Frame* parrent, Rectangle rel) : Container(parrent, rel)
 {
     this->path = path;
     this->pathPress = pathPress;
-    this->rectangle = rectangle;
+    // this->rectangle = rectangle;
     this->numpath = path.size();
     this->tmpPath = 0;
     this->color = WHITE;

@@ -128,6 +128,19 @@ void Container::loadSprites(YAML::Node node)
 
             if(img["axis"] && img["axis"].as<std::string>() == "horizontal")
             {
+                for(float j = y; j >= 0 && j + h < 1 + 1e-2; j += dy * (gapY + h))
+                {
+                    for(float i = x; i >= 0 && i + w <= 1 + 1e-2 && repeat--; i += dx * (gapX + w))
+                    {
+                        Rectangle rect = {i * imgw, j * imgh, w * imgw, h * imgh};
+                        Image img2 = ImageFromImage(image, rect);
+                        Texture2D *txt = new Texture2D(LoadTextureFromImage(img2)); 
+                        Visual *vis = new Visual(txt, this, {0, 0, 1, 1});
+                        sprites->back().push_back(vis);
+
+                        UnloadImage(img2);
+                    }
+                }
             }else 
             {
                 for(float i = x; i >= 0 && i + w <= 1 + 1e-2; i += dx * (gapX + w))

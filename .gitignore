@@ -1,6 +1,9 @@
 .cache
 .cached 
-build
+build/
 src/dependency/raylib/raylib 
 src/dependency/yamlcpp/yamlcpp
 .vs
+.vscode
+.vscode/settings.json
+.vscode/settings.json
