@@ -43,7 +43,17 @@ void Window::getUserEvent()
         int height = GetScreenHeight();
         immediate_pool.push(new resizeAction(this, width, height));
     }
+    
     Action* action = interface->react();
+    if(action != nullptr) 
+    {
+        if(action->getRepeat() > 1) 
+            duration_pool.push(action);
+        else if(action->getRepeat() == 1) 
+            immediate_pool.push(action);
+    }
+
+    action = obj->react();
     if(action != nullptr) 
     {
         if(action->getRepeat() > 1) 

@@ -10,6 +10,11 @@ Action::Action(int repeat)
     this->repeat = repeat;
 }
 
+Action::Action(Action* action)
+{
+    repeat = action->repeat;
+}
+
 void Action::setRepeat(int repeat)
 {
     this->repeat = repeat;
@@ -29,6 +34,11 @@ void Action::ForceEnd()
 void Action::Interrupt()
 {
     repeat = 0;
+}
+
+Action* Action::clone()
+{
+    return this;
 }
 
 int Action::getRepeat() const

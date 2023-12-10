@@ -4,17 +4,21 @@
 class Action 
 {
 private: 
-    int repeat; 
+    int repeat = 1; 
 protected: 
-    void setRepeat(int);
     void doneExecute();
-    Action(int);
 public:
     Action();
+    Action(int);
+    Action(Action*);
     virtual ~Action() = default;
+    void setRepeat(int);
+
     virtual void execute() = 0;
     virtual void ForceEnd();
     virtual void Interrupt();
+    virtual Action* clone();
+
     int getRepeat() const;
     bool isInfinite() const;
     bool isFinished() const;

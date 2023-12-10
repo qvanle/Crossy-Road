@@ -11,6 +11,7 @@
 class Container : public Frame
 {
 private:
+    friend class changeImageAction;
     static int id_count;
     int instance_id;
 
@@ -46,5 +47,18 @@ public:
 
     virtual Action* react() = 0;
 };
-
+class changeImageAction : public Action
+{
+private: 
+    Container* container;
+    iPoint focus; 
+public: 
+    changeImageAction(Container*, iPoint);
+    changeImageAction(changeImageAction*);
+    ~changeImageAction();
+    void execute() override; 
+    void Interrupt() override;
+    void ForceEnd() override;
+    Action* clone() override;
+};
 #endif 

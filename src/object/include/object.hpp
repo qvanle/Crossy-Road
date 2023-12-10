@@ -2,11 +2,15 @@
 #define OBJECT_HPP
 
 #include <container.hpp>
+#include <keystroke.hpp>
 
 class Object : public Container
 {
 private: 
-
+    std::vector<KeyStroke*> strokes;
+    std::vector<std::vector<Action*> > actions;
+protected: 
+    void loadControl(YAML::Node node);
 
 public: 
     Object(Frame*, Rectangle);
