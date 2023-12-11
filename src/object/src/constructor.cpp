@@ -38,6 +38,7 @@ std::string Object::linkContentAbsolute(std::string path)
 
 void Object::loadControl(YAML::Node node)
 {
+    currentDelay = -1;
     for(auto stroke : node)
     {
         KeyStroke* k = new KeyStroke();
@@ -52,6 +53,11 @@ void Object::loadControl(YAML::Node node)
              p[0] = sprite[0].as<int>();
              p[1] = sprite[1].as<int>();
              actions.back().push_back(new changeImageAction(this, p));
+         }
+         for(auto duration : stroke["duration"])
+         {
+             // milliseconds
+             actionDelay.push_back(std::chrono::duration<double>(duration.as<int>()) / 1000.0);
          }
     }
 }
