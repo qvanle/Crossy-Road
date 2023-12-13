@@ -62,6 +62,11 @@ std::string Container::linkContentAbsolute(std::string path)
         loadSprites(node["textures"]);
     }
 
+    if(node["focus"])
+    {
+        loadFocus(node["focus"]);
+    }
+
     return name;
 }
 
@@ -171,6 +176,12 @@ void Container::loadSprites(YAML::Node node)
         }
         UnloadImage(image);
     }
+}
+
+void Container::loadFocus(YAML::Node node)
+{
+    focus[0] = node[0].as<int>();
+    focus[1] = node[1].as<int>();
 }
 
 void Container::chooseSprite(int index)

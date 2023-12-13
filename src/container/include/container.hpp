@@ -23,6 +23,7 @@ private:
 protected:
     bool loadName(YAML::Node node);
     void loadSprites(YAML::Node node);
+    void loadFocus(YAML::Node node);
 public:
     Container(Frame*, Rectangle);
     Container(Container*);

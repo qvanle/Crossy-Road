@@ -32,6 +32,8 @@ std::string Object::linkContentAbsolute(std::string path)
     if(node["control"]) loadControl(node["control"]);
 
     chooseImage(0, 0);
+    if(node["focus"]) 
+        loadFocus(node["focus"]);
 
     return "";
 }
