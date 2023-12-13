@@ -1,21 +1,25 @@
 #include <keystroke.hpp>
 #include <raylib.h>
 #include <string>
+#include <iostream>
 
 KeyStroke::KeyStroke()
 {
-    action = nullptr;
+    id = 0;
 }
 
 KeyStroke::KeyStroke(std::vector<int> k)
 {
     key = k;
-    action = nullptr;
+    id = 0;
 }
 
 KeyStroke::~KeyStroke()
 {
-    if(action) delete action;
+    for(auto &a : action)
+    {
+        delete a;
+    }
 }
 
 int KeyStroke::size()
@@ -27,9 +31,14 @@ void KeyStroke::add(unsigned char k)
 {
     key.push_back(k);
 }
-void KeyStroke::setAction(Action* a)
+void KeyStroke::setAction(std::vector<Action*> a)
 {
     action = a;
+}
+
+void KeyStroke::addAction(Action* a)
+{
+    action.push_back(a);
 }
 
 Action* KeyStroke::react()
@@ -38,10 +47,22 @@ Action* KeyStroke::react()
     {
         if(!IsKeyDown(k)) return nullptr;
     }
-
-    return action;
+    return action[id]->clone(); 
+}
+void KeyStroke::chooseAction(int i)
+{
+    id = i;
 }
 
+int KeyStroke::getCurrent(int i)
+{
+    return id;
+}
+
+void KeyStroke::nextAction()
+{
+    id = (id + 1) % action.size();
+}
 
 
 int toKey(std::string x)

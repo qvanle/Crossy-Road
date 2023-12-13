@@ -46,18 +46,20 @@ void Object::loadControl(YAML::Node node)
         {
             k->add(toKey(key.as<std::string>()));
         }
-        actions.emplace_back();
-         for(auto sprite : stroke["sprite"])
-         {
-             iPoint p;
-             p[0] = sprite[0].as<int>();
-             p[1] = sprite[1].as<int>();
-             actions.back().push_back(new changeImageAction(this, p));
-         }
-         for(auto duration : stroke["duration"])
-         {
-             // milliseconds
-             actionDelay.push_back(std::chrono::duration<double>(duration.as<int>()) / 1000.0);
-         }
+        for(auto sprite : stroke["sprite"])
+        {
+            iPoint p;
+            p[0] = sprite[0].as<int>();
+            p[1] = sprite[1].as<int>();
+            k->addAction(new changeImageAction(this, p));
+        }
+        strokes.push_back(k);
+
+        for(auto duration : stroke["duration"])
+        {
+            // milliseconds
+            actionDelay.push_back(std::chrono::duration<double>(duration.as<int>()) / 1000.0);
+        }
+
     }
 }

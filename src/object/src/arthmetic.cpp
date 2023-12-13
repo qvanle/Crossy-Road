@@ -1,19 +1,26 @@
 #include "container.hpp"
 #include <object.hpp>
-int id = 0;
 Action* Object::react() 
 {
-    if(!IsKeyDown(KEY_SPACE)) return nullptr;
     if(currentDelay != -1)
     {
         if(std::chrono::steady_clock::now() - lastAction < actionDelay[currentDelay]) 
             return nullptr;
     }
-    id %= actions[0].size();
-    currentDelay = id;
-    lastAction = std::chrono::steady_clock::now();
+    
+    for(int i = 0; i < strokes.size(); i++)
+    {
+        Action* a = strokes[i]->react();
+        if(a == nullptr) continue;
+        if(i != currentDelay) strokes[i]->chooseAction(0);
+        else strokes[i]->nextAction();
+        currentDelay = i;
+        lastAction = std::chrono::steady_clock::now();
+        return a;
+    }
 
-    return actions[0][id++]->clone();
+
+    return nullptr;
 }
 
 void Object::draw()
