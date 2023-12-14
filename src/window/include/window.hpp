@@ -48,6 +48,7 @@ private:
         std::queue<Action*> pool;
     public: 
         ActionPool() = default;
+        ~ActionPool();
         void push(Action* act);
         Action* front();
         Action* pop();
