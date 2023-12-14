@@ -26,6 +26,11 @@ void Action::doneExecute()
         repeat--;
 }
 
+bool Action::isRequest()
+{
+    return false;
+}
+
 void Action::ForceEnd()
 {
     repeat = 0;

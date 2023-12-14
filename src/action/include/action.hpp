@@ -14,6 +14,7 @@ public:
     virtual ~Action() = default;
     void setRepeat(int);
 
+    virtual bool isRequest();
     virtual void execute() = 0;
     virtual void ForceEnd();
     virtual void Interrupt();
