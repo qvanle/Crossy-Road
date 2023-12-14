@@ -2,7 +2,6 @@
 #include <window.hpp>
 
 void Window::run() {
-    last_frame = std::chrono::system_clock::now();
     while (isRun())
     {
         draw();
@@ -19,8 +18,7 @@ void Window::draw()
     // clear screen 
     BeginDrawing();
     ClearBackground(BLACK);
-    interface->draw();
-    obj->draw();
+    UI.draw();
     EndDrawing();
     
 }
@@ -44,16 +42,7 @@ void Window::getUserEvent()
         immediate_pool.push(new resizeAction(this, width, height));
     }
     
-    Action* action = interface->react();
-    if(action != nullptr) 
-    {
-        if(action->getRepeat() > 1) 
-            duration_pool.push(action);
-        else if(action->getRepeat() == 1) 
-            immediate_pool.push(action);
-    }
-
-    action = obj->react();
+    Action* action = UI.react();
     if(action != nullptr) 
     {
         if(action->getRepeat() > 1) 
@@ -74,10 +63,10 @@ void Window::sound_effect()
 
 bool Window::isRun()
 {
-    return status;
+    return Wcontent.status;
 }
 
 bool Window::isClose()
 {
-    return !status;
+    return !Wcontent.status;
 }

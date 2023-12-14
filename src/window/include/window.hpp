@@ -20,23 +20,6 @@
 class Window 
 {
 private:
-    friend class CloseAction;
-    friend class resizeAction;
-
-    float width;
-    float height;
-    std::string title;
-    Color background;
-    std::vector<std::thread> thread_pool;
-    
-    bool status;
-
-    Frame* root_frame;
-    
-    std::chrono::time_point<std::chrono::system_clock> last_frame;
-
-    Container* obj;
-    
     class InterfacePool 
     {
     private: 
@@ -58,8 +41,7 @@ private:
         void draw();
         Action* react();
 
-    }* interface;
-
+    };
     class ActionPool 
     {
     private:
@@ -70,7 +52,33 @@ private:
         Action* front();
         Action* pop();
         bool empty() const;
-    } immediate_pool, duration_pool;
+    };
+    struct WinContent 
+    {
+        float width;
+        float height;
+        Color background;
+        std::string title;
+        bool status;
+        std::vector<std::thread> thread_pool;
+    };
+    struct UI 
+    {
+        Frame* root_frame;
+        Container* obj;
+        InterfacePool* interface;
+        UI();
+        ~UI();
+        void draw();
+        Action* react();
+    };
+
+    friend class CloseAction;
+    friend class resizeAction;
+
+    WinContent Wcontent;
+    UI UI;
+    ActionPool immediate_pool, duration_pool;
 
 protected:
     void draw();

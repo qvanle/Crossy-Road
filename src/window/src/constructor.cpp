@@ -5,14 +5,14 @@
 
 Window::Window()
 {
-    width = 1200;
-    height = 668;
-    title = "Crossy Road clone";
+    Wcontent.width = 1200;
+    Wcontent.height = 668;
+    Wcontent.title = "Crossy Road clone";
     SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
-    InitWindow(width, height, title.c_str());
+    InitWindow(Wcontent.width, Wcontent.height, Wcontent.title.c_str());
     SetTargetFPS(60);
 
-    root_frame = new Frame({0, 0, width, height});
+    UI.root_frame = new Frame({0, 0, Wcontent.width, Wcontent.height});
 }
 
 Window::Window(std::string path)
@@ -23,33 +23,33 @@ Window::Window(std::string path)
     
     loadInterface(config["interface-list"]);
     if(config["choose-interface"]) 
-        interface->push(config["choose-interface"].as<std::string>());
+        UI.interface->push(config["choose-interface"].as<std::string>());
 
-    obj = new Object(root_frame, {0, 0, 0.1, 0.1});
-    obj->linkContent("test.yaml");
+    UI.obj = new Object(UI.root_frame, {0, 0, 0.1, 0.1});
+    UI.obj->linkContent("test.yaml");
 }
 
 
 void Window::initRaylib(YAML::Node config)
 {
-    width = config["width"].as<int>();
-    height = config["height"].as<int>();
-    title = config["title"].as<std::string>();
+    Wcontent.width = config["width"].as<int>();
+    Wcontent.height = config["height"].as<int>();
+    Wcontent.title = config["title"].as<std::string>();
     // enable resizeable window and vsync
     
     SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
-    InitWindow(width, height, title.c_str());
+    InitWindow(Wcontent.width, Wcontent.height, Wcontent.title.c_str());
     SetTargetFPS(60);
-    status = true;
+    Wcontent.status = true;
 
-    root_frame = new Frame({0, 0, width, height});
+    UI.root_frame = new Frame({0, 0, Wcontent.width, Wcontent.height});
 }
 
 void Window::loadInterface(YAML::Node node)
 {
     if(!node) return ;
     
-    interface = new InterfacePool();
+    UI.interface = new InterfacePool();
     for(auto i : node)
     {
         std::string path = i["file"].as<std::string>();
@@ -65,8 +65,8 @@ void Window::loadInterface(YAML::Node node)
         w = w / 100.0;
         h = h / 100.0;
 
-        Interface* inf = new Interface(root_frame, {x, y, w, h});
+        Interface* inf = new Interface(UI.root_frame, {x, y, w, h});
         inf->linkContent(path);
-        interface->load(inf);
+        UI.interface->load(inf);
     }
 }
