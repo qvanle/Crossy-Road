@@ -66,7 +66,6 @@ private:
     struct UI 
     {
         Frame* root_frame;
-        Container* obj;
         InterfacePool* interface;
         UI();
         ~UI();

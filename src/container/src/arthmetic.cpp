@@ -31,3 +31,8 @@ int Container::getInstanceId()
 {
     return instance_id;
 }
+
+Action* Container::react()
+{
+    return nullptr;
+}

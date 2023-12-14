@@ -46,7 +46,7 @@ public:
     bool isVisible();
     int getInstanceId();
 
-    virtual Action* react() = 0;
+    virtual Action* react();
 };
 class changeImageAction : public Action
 {

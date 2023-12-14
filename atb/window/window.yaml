@@ -9,8 +9,14 @@
     "y": 0,
     "w": 100, 
     "h": 100, 
+  -
+    "file": "game.yaml" 
+    "x": 0,
+    "y": 0,
+    "w": 100, 
+    "h": 100, 
 
-"choose-interface": "test"
+"choose-interface": "game"
 
 "control":
   -

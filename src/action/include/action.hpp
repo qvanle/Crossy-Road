@@ -1,6 +1,8 @@
 #ifndef ACTION_HPP
 #define ACTION_HPP
 
+#include <vector>
+
 class Action 
 {
 private: 
@@ -26,4 +28,19 @@ public:
 
 };
 
+class PacketAction : public Action
+{
+private: 
+    std::vector<Action*> actions;
+public: 
+    PacketAction();
+    PacketAction(int);
+    PacketAction(PacketAction*);
+    ~PacketAction();
+    virtual void addAction(Action*);
+    virtual void execute();
+    virtual void ForceEnd();
+    virtual void Interrupt();
+    virtual PacketAction* clone();
+};
 #endif 

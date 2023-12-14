@@ -5,11 +5,15 @@
 
 #include <frame.hpp>
 #include <container.hpp>
+#include <keystroke.hpp>
 
 class Interface : public Container
 {
 private: 
+    friend class moveObjectAction;
+
     std::vector<Container*> containers;
+    std::vector<KeyStroke*> keystrokes;
 
 protected:
     void loadObject(YAML::Node);
@@ -33,4 +37,18 @@ public:
     void draw() override;
 };
 
+class moveObjectAction : public Action
+{
+private: 
+    Container* obj; 
+    fPoint delta;
+public: 
+    moveObjectAction(Container* obj, fPoint delta);
+    ~moveObjectAction();
+
+    void execute() override;
+    void Interrupt() override;
+    void ForceEnd() override;
+    Action* clone() override;
+};
 #endif 

@@ -25,8 +25,6 @@ Window::Window(std::string path)
     if(config["choose-interface"]) 
         UI.interface->push(config["choose-interface"].as<std::string>());
 
-    UI.obj = new Object(UI.root_frame, {0, 0, 0.1, 0.1});
-    UI.obj->linkContent("test.yaml");
 }
 
 

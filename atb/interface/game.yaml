@@ -1,0 +1,44 @@
+"name": "game" # require
+"textures":  # require
+  - 
+    "path": "grass.png"  # require
+    "graphics":  #require
+      -
+        "x": 10
+        "y": 10 
+        "w": 80
+        "h": 80
+        "gapX": 0  
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1
+"object": 
+  -
+    "path": "test.yaml"
+    "x": 20
+    "y": 20
+    "w": 10
+    "h": 10
+"control": 
+  -
+    "key": ["s"]
+    "action": "move-object"
+    "args": [0, 0, 0.3] 
+  - 
+    "key": ["w"] 
+    "action": "move-object"
+    "args": [0, 0, -0.3] 
+  - 
+    "key": ["a"]
+    "action": "move-object"
+    "args": [0, -0.2, 0] 
+  - 
+    "key": ["d"]
+    "action": "move-object"
+    "args": [0, 0.2, 0] 
+# "event": 
+# "collide": 
+# "chunk": 
+
