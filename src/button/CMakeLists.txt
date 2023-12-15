@@ -5,6 +5,10 @@ add_library(
     src/constructor.cpp
     src/destructor.cpp
     src/arthmetic.cpp
+    src/action/default.cpp
+    src/action/hover.cpp
+    src/action/isClicked.cpp
+
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC dep::raylib)

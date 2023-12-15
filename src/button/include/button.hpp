@@ -11,6 +11,7 @@
 
 class Button : public Container {
 private:
+    friend class hoverAction;
     static constexpr int DPI = 500;
     static constexpr float CORNER_RADIUS = 0.3;
 
@@ -30,6 +31,7 @@ public:
     void draw();
     void handleEvents();
     void update();
+    Action* react();
 
     [[nodiscard]] bool isClicked() const;
     [[nodiscard]] bool isPressing() const;
@@ -38,6 +40,8 @@ public:
     void setIsSuggest();
     void setBG(Color colorBG);
 };
+
+
 
 class ButtonImage : public Container
 {
@@ -63,13 +67,45 @@ private:
 public:
     ButtonImage(std::vector <std::string> path, std::vector <std::string> pathPress, Rectangle rec);
     void draw();
-    void handleEvents();
-    void update();
+    Action* react();
+
     void changeIndex(int newindex);
     void changePosition(Rectangle change);
     [[nodiscard]] bool isClicked() const;
     [[nodiscard]] bool isPressing() const;
     int getClicked();
+
+    friend class hoverAction;
+    friend class isClickedAction;
+    friend class defaultAction;
 };
+
+class hoverAction : public Action 
+{
+private:
+    ButtonImage* button;
+public:
+    hoverAction(ButtonImage* button);
+    void execute() override;
+};
+
+class isClickedAction : public Action 
+{
+private:
+    ButtonImage* button;
+public:
+    isClickedAction(ButtonImage* button);
+    void execute() override;
+};
+
+class defaultAction : public Action
+{
+private:
+    ButtonImage* button;
+public:
+    defaultAction(ButtonImage* button);
+    void execute();
+};
+
 
 #endif 
