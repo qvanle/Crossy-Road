@@ -1,7 +1,7 @@
 "name": "game" # require
 "textures":  # require
   - 
-    "path": "grass.png"  # require
+    "path": "Background.png"  # require
     "graphics":  #require
       -
         "x": 10
