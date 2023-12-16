@@ -3,6 +3,7 @@
 
 #include <action.hpp>
 #include <vector>
+#include <string>
 
 int toKey(std::string);
 
