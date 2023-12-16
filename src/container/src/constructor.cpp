@@ -54,15 +54,31 @@ std::string Container::linkContent(std::string path)
 std::string Container::linkContentAbsolute(std::string path)
 {
     YAML::Node node = YAML_FILE::readFile(path);
-    if(!node["name"]) return "";   
-    name = node["name"].as<std::string>();
+    if(!loadName(node)) return "";
     
     if(node["textures"])
     {
+        
         loadSprites(node["textures"]);
     }
 
+    if(node["focus"])
+    {
+        loadFocus(node["focus"]);
+    }
+
     return name;
+}
+
+bool Container::loadName(YAML::Node node)
+{
+    if(!node["name"]) 
+    {
+        name = "";
+        return false;
+    }
+    name = node["name"].as<std::string>();
+    return true;
 }
 
 void Container::loadSprites(YAML::Node node)
@@ -78,8 +94,8 @@ void Container::loadSprites(YAML::Node node)
             
         if(sprite["resize"])
         {
-            float x = sprite["resize"][0].as<float>();
-            float y = sprite["resize"][1].as<float>();
+            int x = image.width * sprite["resize"][0].as<float>();
+            int y = image.height * sprite["resize"][1].as<float>();
             ImageResize(&image, x, y);
         }
         
@@ -95,13 +111,13 @@ void Container::loadSprites(YAML::Node node)
             int dy = 1;
 
             if(img["x"]) 
-                x = img["x"].as<int>() / 100.0;
+                x = img["x"].as<float>() / 100.0;
             else x = 0;
             if(img["y"]) 
-                y = img["y"].as<int>() / 100.0;
+                y = img["y"].as<float>() / 100.0;
             else y = 0;
             if(img["w"]) 
-                w = img["w"].as<int>() / 100.0;
+                w = img["w"].as<float>() / 100.0;
             else w = 1;
             if(img["h"]) 
                 h = img["h"].as<float>() / 100.0;
@@ -128,6 +144,19 @@ void Container::loadSprites(YAML::Node node)
 
             if(img["axis"] && img["axis"].as<std::string>() == "horizontal")
             {
+                for(float j = y; j >= 0 && j + h < 1 + 1e-2; j += dy * (gapY + h))
+                {
+                    for(float i = x; i >= 0 && i + w <= 1 + 1e-2 && repeat--; i += dx * (gapX + w))
+                    {
+                        Rectangle rect = {i * imgw, j * imgh, w * imgw, h * imgh};
+                        Image img2 = ImageFromImage(image, rect);
+                        Texture2D *txt = new Texture2D(LoadTextureFromImage(img2)); 
+                        Visual *vis = new Visual(txt, this, {0, 0, 1, 1});
+                        sprites->back().push_back(vis);
+
+                        UnloadImage(img2);
+                    }
+                }
             }else 
             {
                 for(float i = x; i >= 0 && i + w <= 1 + 1e-2; i += dx * (gapX + w))
@@ -147,6 +176,12 @@ void Container::loadSprites(YAML::Node node)
         }
         UnloadImage(image);
     }
+}
+
+void Container::loadFocus(YAML::Node node)
+{
+    focus[0] = node[0].as<int>();
+    focus[1] = node[1].as<int>();
 }
 
 void Container::chooseSprite(int index)
@@ -170,4 +205,9 @@ void Container::chooseImage(int index, int index2)
     if(index2 < 0 || index2 >= sprites->at(index).size()) return;
     focus[0] = index;
     focus[1] = index2;
+}
+
+std::string Container::getName()
+{
+    return name;
 }

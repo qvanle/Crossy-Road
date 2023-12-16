@@ -1,4 +1,4 @@
-"name": "main" # require
+"name": "test" # require
 "textures":  # require
   - 
     "path": "45908.png"  # require
