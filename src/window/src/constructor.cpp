@@ -51,7 +51,7 @@ void Window::loadInterface(YAML::Node node)
     for(auto i : node)
     {
         std::string path = i["file"].as<std::string>();
-        float x = 1, y = 1, w = 98, h = 98;
+        float x = 0, y = 0, w = 100, h = 100;
 
         //if(i["x"]) x = i["x"].as<int>();
         //if(i["y"]) y = i["y"].as<int>();
