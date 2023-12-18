@@ -36,3 +36,8 @@ Action* Container::react()
 {
     return nullptr;
 }
+
+Action* Container::runtimeEvent()
+{
+    return nullptr;
+}
