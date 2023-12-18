@@ -47,6 +47,7 @@ public:
     int getInstanceId();
 
     virtual Action* react();
+    virtual Action* runtimeEvent();
 };
 class changeImageAction : public Action
 {
