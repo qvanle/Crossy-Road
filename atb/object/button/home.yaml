@@ -1,0 +1,19 @@
+"name": "home"
+
+"textures": 
+  - 
+    "path": "button/hover_mybut.png" 
+    "graphics": 
+      - 
+        "x": 0
+        "y": 0
+        "w": 100 
+        "h": 100 
+  - 
+    "path": "button/release_mybut.png" 
+    "graphics": 
+      - 
+        "x": 0
+        "y": 0
+        "w": 100 
+        "h": 100 

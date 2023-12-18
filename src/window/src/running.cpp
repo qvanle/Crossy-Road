@@ -2,6 +2,8 @@
 #include <window.hpp>
 
 void Window::run() {
+    // last_chrismas = now() 
+    Wcontent.input_clock = std::chrono::steady_clock::now();
     while (isRun())
     {
         draw();
@@ -24,6 +26,12 @@ void Window::draw()
 
 void Window::getUserEvent()
 {
+    // do nothing if input_delay is not finish 
+    if( Wcontent.input_delay >  std::chrono::steady_clock::now() - Wcontent.input_clock)
+    {
+        return ;
+    }
+    Wcontent.input_clock = std::chrono::steady_clock::now();
     // alt + F4 to exit 
     if (IsKeyDown(KEY_LEFT_ALT) && IsKeyDown(KEY_F4))
     {

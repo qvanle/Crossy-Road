@@ -2,12 +2,6 @@
 #include <object.hpp>
 Action* Object::react() 
 {
-    if(currentDelay != -1)
-    {
-        if(std::chrono::steady_clock::now() - lastAction < actionDelay[currentDelay]) 
-            return nullptr;
-    }
-    
     for(int i = 0; i < strokes.size(); i++)
     {
         Action* a = strokes[i]->react();

@@ -25,6 +25,14 @@ Window::Window(std::string path)
     if(config["choose-interface"]) 
         UI.interface->push(config["choose-interface"].as<std::string>());
 
+    if(config["input-delay"]) 
+    {
+        double delay = config["input-delay"].as<int>() / 1000.0;
+        Wcontent.input_delay = std::chrono::duration<double>(delay);
+    }else 
+    {
+        Wcontent.input_delay = std::chrono::duration<int>(50) / 1000.0;
+    }
 }
 
 
