@@ -36,3 +36,21 @@ Action* Container::react()
 {
     return nullptr;
 }
+
+void Container::push(Container* contain)
+{
+}
+
+void Container::pop()
+{
+}
+
+Container* Container::get()
+{
+	return nullptr;
+}
+
+Action* Container::getRuntimeEvent()
+{
+	return nullptr;
+}

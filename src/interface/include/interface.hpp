@@ -35,6 +35,12 @@ public:
     Action* react() override;
 
     void draw() override;
+	
+	void push(Container* contain) override;
+	void pop() override;
+	Container* get() override;
+	
+	Action* getRuntimeEvent() override;
 };
 
 class moveObjectAction : public Action

@@ -9,3 +9,23 @@ void Interface::draw()
         child->draw();
     }
 }
+
+void Interface::push(Container* contain)
+{
+	containers.push_back(contain);
+}
+
+void Interface::pop()
+{
+	containers.pop_back();
+}
+
+Container* Interface::get()
+{
+	return nullptr;
+}
+
+Action* Interface::getRuntimeEvent()
+{
+	return nullptr;
+}

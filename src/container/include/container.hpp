@@ -47,6 +47,12 @@ public:
     int getInstanceId();
 
     virtual Action* react();
+	
+	virtual void push(Container* contain);
+	virtual void pop();
+	virtual Container* get();
+	
+	virtual Action* getRuntimeEvent();
 };
 class changeImageAction : public Action
 {
