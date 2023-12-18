@@ -17,6 +17,7 @@
     "h": 100, 
 
 "choose-interface": "game"
+"input-delay": 60
 
 "control":
   -
