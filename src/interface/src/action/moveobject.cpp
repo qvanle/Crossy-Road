@@ -13,13 +13,6 @@ void moveObjectAction::execute()
     obj->moveBy(delta);
 }
 
-void moveObjectAction::Interrupt()
-{
-}
-
-void moveObjectAction::ForceEnd()
-{
-}
 
 Action* moveObjectAction::clone()
 {

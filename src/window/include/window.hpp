@@ -78,7 +78,7 @@ private:
 
     WinContent Wcontent;
     UI UI;
-    ActionPool immediate_pool, duration_pool;
+    ActionPool immediate_pool, request_pool;
 
 protected:
     void draw();
@@ -86,7 +86,7 @@ protected:
     void getRuntimeEvent();
     void sound_effect();
     void immediateActing();
-    void durationActing();
+    void requestActing();
 
     void initRaylib(YAML::Node node);
     void loadInterface(YAML::Node node);
@@ -108,8 +108,6 @@ public:
     CloseAction(Window* win);
     ~CloseAction() = default;
     void execute();
-    void forceEnd();
-    void interrupt();
 };
 
 class resizeAction : public Action
@@ -121,7 +119,5 @@ public:
     resizeAction(Window* window, float w, float h);
     ~resizeAction() = default;
     void execute();
-    void forceEnd();
-    void interrupt();
 };
 #endif 

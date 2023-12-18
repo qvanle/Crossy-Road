@@ -9,7 +9,6 @@ void Window::run() {
         getUserEvent();
         getRuntimeEvent();
         immediateActing();
-        durationActing();
     }
 }
 
@@ -45,9 +44,7 @@ void Window::getUserEvent()
     Action* action = UI.react();
     if(action != nullptr) 
     {
-        if(action->getRepeat() > 1) 
-            duration_pool.push(action);
-        else if(action->getRepeat() == 1) 
+        if(!action->isRequest()) 
             immediate_pool.push(action);
     }
 }
