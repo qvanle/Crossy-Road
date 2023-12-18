@@ -5,18 +5,22 @@
 
 Object::Object(Frame* f, Rectangle rel) : Container(f, rel)
 {
+    waitUntil = std::chrono::steady_clock::now();
 }
 
 Object::Object(Object* other) : Container(other)
 {
+    waitUntil = std::chrono::steady_clock::now();
 }
 
 Object::Object(Object* other, Rectangle rel) : Container(other, rel)
 {
+    waitUntil = std::chrono::steady_clock::now();
 }
 
 Object::Object(Object* other, Frame* f, Rectangle rel) : Container(other, f, rel)
 {
+    waitUntil = std::chrono::steady_clock::now();
 }
 
 std::string Object::linkContent(std::string path)
@@ -40,9 +44,9 @@ std::string Object::linkContentAbsolute(std::string path)
 
 void Object::loadControl(YAML::Node node)
 {
-    currentDelay = -1;
     for(auto stroke : node)
     {
+        strokes.emplace_back();
         KeyStroke* k = new KeyStroke();
         for(auto key : stroke["key"])
         {
@@ -51,17 +55,13 @@ void Object::loadControl(YAML::Node node)
         for(auto sprite : stroke["sprite"])
         {
             iPoint p;
+            int delay = 0;
             p[0] = sprite[0].as<int>();
             p[1] = sprite[1].as<int>();
+            if(p.size() >= 3) 
+                delay = sprite[2].as<int>();
             k->addAction(new changeImageAction(this, p));
         }
-        strokes.push_back(k);
-
-        for(auto duration : stroke["duration"])
-        {
-            // milliseconds
-            actionDelay.push_back(std::chrono::duration<double>(duration.as<int>()) / 1000.0);
-        }
-
+        strokes.back().stroke = k;
     }
 }
