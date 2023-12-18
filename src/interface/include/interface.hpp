@@ -13,6 +13,7 @@ private:
     friend class moveObjectAction;
 
     std::vector<Container*> containers;
+    Container* main;
     std::vector<KeyStroke*> keystrokes;
 
 protected:
