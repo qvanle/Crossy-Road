@@ -1,6 +1,6 @@
 #include <window.hpp>
 
-CloseAction::CloseAction(Window* window) : Action(1)
+CloseAction::CloseAction(Window* window)
 {
     win = window;
 }
@@ -8,5 +8,4 @@ CloseAction::CloseAction(Window* window) : Action(1)
 void CloseAction::execute()
 {
     win->Wcontent.status = false;
-    doneExecute();
 }

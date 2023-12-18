@@ -48,8 +48,6 @@ public:
     ~moveObjectAction();
 
     void execute() override;
-    void Interrupt() override;
-    void ForceEnd() override;
     Action* clone() override;
 };
 #endif 

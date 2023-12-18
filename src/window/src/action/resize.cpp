@@ -1,6 +1,6 @@
 #include <window.hpp>
 
-resizeAction::resizeAction(Window* window, float x, float y) : Action(1)
+resizeAction::resizeAction(Window* window, float x, float y)
 {
     win = window;
     w = x;
@@ -10,7 +10,6 @@ resizeAction::resizeAction(Window* window, float x, float y) : Action(1)
 void resizeAction::execute()
 {
     win->UI.root_frame->resize(w, h);
-    doneExecute();
 }
 
 
