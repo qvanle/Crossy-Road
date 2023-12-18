@@ -17,6 +17,7 @@
 "object": 
   -
     "path": "test.yaml"
+    "main": true
     "x": 20
     "y": 20
     "w": 10
