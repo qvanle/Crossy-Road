@@ -62,6 +62,9 @@ private:
         std::string title;
         bool status;
         std::vector<std::thread> thread_pool;
+
+        std::chrono::duration<double> input_delay;
+        std::chrono::time_point<std::chrono::steady_clock> input_clock;
     };
     struct UI 
     {
