@@ -6,22 +6,18 @@
 
 Interface::Interface(Frame* frame, Rectangle rect) : Container(frame, rect)
 {
-    main = nullptr;
 }
 
 Interface::Interface(Interface* other) : Container(other)
 {
-    main = nullptr;
 }
 
 Interface::Interface(Interface* other, Rectangle rect) : Container(other, rect)
 {
-    main = nullptr;
 }
 
 Interface::Interface(Interface* other, Frame* frame, Rectangle rect) : Container(other, frame, rect)
 {
-    main = nullptr;
 }
 
 std::string Interface::linkContent(std::string path)
@@ -72,8 +68,6 @@ void Interface::loadObject(YAML::Node node)
         obj = new Object(this, rel);
         obj->linkContent(i["path"].as<std::string>());
         containers.push_back(obj);
-        if(i["main"] && i["main"].as<bool>()) 
-            main = obj;
     }
 }
 

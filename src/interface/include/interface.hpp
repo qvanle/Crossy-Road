@@ -14,7 +14,6 @@ private:
 
     std::vector<Container*> containers;
     std::vector<Interface*> nested;
-    Container* main;
     std::vector<KeyStroke*> keystrokes;
 
 protected:
