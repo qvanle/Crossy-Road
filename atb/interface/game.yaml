@@ -5,6 +5,11 @@
     "x": 0
     "y": 0
     "h": 10 
+  - 
+    "file": "test2.yaml"
+    "x": 0
+    "y": 10
+    "h": 10 
 "object": 
   -
     "path": "test.yaml"
