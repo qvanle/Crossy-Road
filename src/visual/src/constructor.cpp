@@ -3,8 +3,27 @@
 
 Visual::Visual(Texture2D* txtr, Frame* frame, Rectangle rect) : Frame(frame, rect)
 {
-    m_texture = txtr;
+    m_texture = std::shared_ptr<Texture2D>(txtr, [](Texture2D* texture){
+        UnloadTexture(*texture);
+        texture = nullptr;
+    });
     fitFrame();
 }
 
+Visual::Visual(Visual* visual) : Frame(visual)
+{
+    m_texture = visual->m_texture;
+    fitFrame();
+}
 
+Visual::Visual(Visual* visual, Rectangle rect) : Frame(visual, rect)
+{
+    m_texture = visual->m_texture;
+    fitFrame();
+}
+
+Visual::Visual(Visual* visual, Frame* frame, Rectangle rect) : Frame(frame, rect)
+{
+    m_texture = visual->m_texture;
+    fitFrame();
+}

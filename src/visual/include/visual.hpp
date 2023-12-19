@@ -1,6 +1,7 @@
 #ifndef VISUAL 
 #define VISUAL 
 
+#include <memory>
 #include <raylib.h>
 #include <yaml-cpp/yaml.h>
 
@@ -9,12 +10,16 @@
 class Visual : public Frame
 {
 private:
-    Texture2D* m_texture;
+    std::shared_ptr<Texture2D> m_texture;
+    static void deleteTexture2D(Texture2D*&);
 protected:
     void fitFrame();   
     void updateFrame(bool recursive = false) override;
 public:
     Visual(Texture2D*, Frame*, Rectangle);
+    Visual(Visual*);
+    Visual(Visual*, Rectangle);
+    Visual(Visual*, Frame*, Rectangle);
     ~Visual();
     
     void resize(fPoint);

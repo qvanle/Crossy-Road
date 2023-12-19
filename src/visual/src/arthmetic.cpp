@@ -15,11 +15,10 @@ void Visual::fitFrame()
     const Rectangle &rec = Frame::getFrame();
 
     Image img = LoadImageFromTexture(*m_texture);
-    UnloadTexture(*m_texture);
-    delete m_texture;
+    UnloadTexture(*m_texture.get());
     
     ImageResize(&img, rec.width, rec.height);
-    m_texture = new Texture2D(LoadTextureFromImage(img));
+    *m_texture.get() = LoadTextureFromImage(img);
     UnloadImage(img);
 }
 
