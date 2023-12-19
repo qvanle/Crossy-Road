@@ -10,14 +10,68 @@ Interface::Interface(Frame* frame, Rectangle rect) : Container(frame, rect)
 
 Interface::Interface(Interface* other) : Container(other)
 {
+    for(auto i : other->nested)
+    {
+        Rectangle rel;
+        rel.x = i->getRelative()[0];
+        rel.y = i->getRelative()[1];
+        rel.width = i->getRelative()[2];
+        rel.height = i->getRelative()[3];
+        nested.push_back(new Interface(i, this, rel));
+    }
+    for(auto i : other->containers)
+    {
+        Rectangle rel;
+        rel.x = i->getRelative()[0];
+        rel.y = i->getRelative()[1];
+        rel.width = i->getRelative()[2];
+        rel.height = i->getRelative()[3];
+        containers.push_back(new Container(i, this, rel));
+    }
 }
 
 Interface::Interface(Interface* other, Rectangle rect) : Container(other, rect)
 {
+    for(auto i : other->nested)
+    {
+        Rectangle rel;
+        rel.x = i->getRelative()[0];
+        rel.y = i->getRelative()[1];
+        rel.width = i->getRelative()[2];
+        rel.height = i->getRelative()[3];
+        nested.push_back(new Interface(i, this, rel));
+    }
+    for(auto i : other->containers)
+    {
+        Rectangle rel;
+        rel.x = i->getRelative()[0];
+        rel.y = i->getRelative()[1];
+        rel.width = i->getRelative()[2];
+        rel.height = i->getRelative()[3];
+        containers.push_back(new Container(i, this, rel));
+    }
 }
 
 Interface::Interface(Interface* other, Frame* frame, Rectangle rect) : Container(other, frame, rect)
 {
+    for(auto i : other->nested)
+    {
+        Rectangle rel;
+        rel.x = i->getRelative()[0];
+        rel.y = i->getRelative()[1];
+        rel.width = i->getRelative()[2];
+        rel.height = i->getRelative()[3];
+        nested.push_back(new Interface(i, this, rel));
+    }
+    for(auto i : other->containers)
+    {
+        Rectangle rel;
+        rel.x = i->getRelative()[0];
+        rel.y = i->getRelative()[1];
+        rel.width = i->getRelative()[2];
+        rel.height = i->getRelative()[3];
+        containers.push_back(new Container(i, this, rel));
+    }
 }
 
 std::string Interface::linkContent(std::string path)
@@ -89,6 +143,12 @@ void Interface::loadChunk(YAML::Node node)
         Chunk* chunk = new Chunk(this, {x, y, w, h}); 
         chunk->linkContent(path);
         nested.push_back(chunk);
+    }
+    if(nested.size() != 0) 
+    {
+        nested.push_back(new Interface(nested[0]));
+        nested.back()->moveBy({0, 0.2});
+        Rectangle rel = nested.back()->getFrame();
     }
 }
 

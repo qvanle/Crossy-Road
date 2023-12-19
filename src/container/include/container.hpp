@@ -2,7 +2,6 @@
 #define CONTAINER_HPP
 
 #include <vector>
-#include <memory>
 
 #include <visual.hpp>
 #include <frame.hpp>
@@ -15,7 +14,7 @@ private:
     static int id_count;
     int instance_id;
 
-    std::shared_ptr< std::vector<Sprite> > sprites;
+    std::vector<Sprite> sprites;
     std::string name;
     iPoint focus;
     bool visible;

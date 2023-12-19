@@ -2,9 +2,9 @@
 
 void Container::draw()
 {
-    if(!sprites) return;
+    if(sprites.empty()) return;
     if(!visible) return;
-    (*sprites)[focus[0]][focus[1]]->draw();
+    sprites[focus[0]][focus[1]]->draw();
 }
 
 void Container::show()
