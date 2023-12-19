@@ -11,6 +11,7 @@ class Visual : public Frame
 {
 private:
     std::shared_ptr<Texture2D> m_texture;
+    bool resizeable;
     static void deleteTexture2D(Texture2D*&);
 protected:
     void fitFrame();   

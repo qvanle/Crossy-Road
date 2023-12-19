@@ -12,6 +12,7 @@ void Visual::draw()
 void Visual::fitFrame()
 {
     if(m_texture == nullptr) return ;
+    if(!resizeable) return ;
     const Rectangle &rec = Frame::getFrame();
 
     Image img = LoadImageFromTexture(*m_texture);
