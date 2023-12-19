@@ -2,6 +2,7 @@
 #include <const/path/atb.hpp>
 #include <file.hpp>
 #include <object.hpp>
+#include <chunk.hpp>
 
 Interface::Interface(Frame* frame, Rectangle rect) : Container(frame, rect)
 {
@@ -82,6 +83,19 @@ void Interface::loadCollide(YAML::Node node)
 
 void Interface::loadChunk(YAML::Node node)
 {
+    for(auto i : node) 
+    {
+        float x = 0, y = 0, w = 1, h = 1;
+        std::string path = i["file"].as<std::string>();
+        if(i["x"]) x = i["x"].as<float>() / 100;
+        if(i["y"]) y = i["y"].as<float>() / 100;
+        if(i["w"]) w = i["w"].as<float>() / 100;
+        if(i["h"]) h = i["h"].as<float>() / 100;
+
+        Chunk* chunk = new Chunk(this, {x, y, w, h}); 
+        chunk->linkContent(path);
+        nested.push_back(chunk);
+    }
 }
 
 void Interface::loadControl(YAML::Node node)

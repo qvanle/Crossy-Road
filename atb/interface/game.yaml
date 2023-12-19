@@ -1,19 +1,10 @@
 "name": "game" # require
-"textures":  # require
+"chunk": 
   - 
-    "path": "Background.png"  # require
-    "graphics":  #require
-      -
-        "x": 10
-        "y": 10 
-        "w": 80
-        "h": 80
-        "gapX": 0  
-        "gapY": 0
-        "repeat": 1
-        "axis": "vertical"  # horizontal
-        "Xaxis": 1 # -1
-        "Yaxis": 1 # -1
+    "file": "test.yaml"
+    "x": 0
+    "y": 0
+    "h": 10 
 "object": 
   -
     "path": "test.yaml"
@@ -33,20 +24,20 @@
   -
     "key": ["s"]
     "action": "move-object"
-    "args": [0, 0, 0.3] 
+    "args": [0, 0, 0.5] 
   - 
     "key": ["w"] 
     "action": "move-object"
-    "args": [0, 0, -0.3] 
+    "args": [0, 0, -0.5] 
   - 
     "key": ["a"]
     "action": "move-object"
-    "args": [1, -0.2, 0] 
+    "args": [0, -0.5, 0] 
   - 
     "key": ["d"]
     "action": "move-object"
-    "args": [1, 0.2, 0] 
+    "args": [0, 0.5, 0] 
+
 # "event": 
 # "collide": 
-# "chunk": 
 
