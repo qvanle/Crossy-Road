@@ -87,11 +87,11 @@ void ButtonImage::draw() {
 
 Action* ButtonImage::react() {
     // set default
-    button->chooseImage(0, button->tmpPath);
-    button->color = WHITE;
-    button->pressing = false;
-    button->isHover = false;
-    button->clicked = false;
+    this->chooseImage(0, tmpPath);
+    this->color = WHITE;
+    this->pressing = false;
+    this->isHover = false;
+    this->clicked = false;
 
     if (CheckCollisionPointRec(GetMousePosition(), rectangle)) {
         this->isHover = true;

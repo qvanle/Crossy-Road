@@ -27,7 +27,7 @@ ButtonImage::ButtonImage(Frame* parrent, Rectangle rel) : Container(parrent, rel
 
 std::string ButtonImage::linkContent(std::string path)
 {
-    focus = {0, 0};
+    
     return linkContentAbsolute(PATB::BUTTON_ + path);
 }
 
@@ -42,5 +42,5 @@ std::string ButtonImage::linkContentAbsolute(std::string path)
         loadSprites(node["textures"]);
     }
 
-    return name;
+    return getName();
 }

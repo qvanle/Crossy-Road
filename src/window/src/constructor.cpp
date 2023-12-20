@@ -46,11 +46,11 @@ void Window::initRaylib(YAML::Node config)
     SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
     InitWindow(Wcontent.width, Wcontent.height, Wcontent.title.c_str());
     SetTargetFPS(60);
-    status = true;
-    root_frame = new Frame({0, 0, width, height});
+    Wcontent.status = true;
+    UI.root_frame = new Frame({0, 0, Wcontent.width, Wcontent.height});
     
     std::string s = "Start";
-    button = new Button(s, 25, RED, root_frame, {0.5, 0.5, 0.5, 0.5});
+    button = new Button(s, 25, RED, UI.root_frame, {0.5, 0.5, 0.5, 0.5});
     button->show();
 
     

@@ -6,6 +6,9 @@
 #include <visual.hpp>
 #include <frame.hpp>
 #include <action.hpp>
+#include <const/datatype.hpp>
+#include <const/path/atb.hpp>
+#include <file.hpp>
 
 
 class Container : public Frame
