@@ -3,7 +3,7 @@
 "textures": 
   -
     "path": "cat.png"
-    "resize": [0.5, 0.5]
+   
     "graphics": 
       - 
         "x": 0
@@ -14,7 +14,7 @@
         "axis": "horizontal" 
   -
     "path": "cat.png"
-    "resize": [0.5, 0.5]
+    
     "graphics": 
       - 
         "x": 0
@@ -25,7 +25,7 @@
         "axis": "horizontal" 
   - 
     "path": "cat.png"
-    "resize": [0.5, 0.5]
+    
     "graphics": 
       - 
         "x": 0
@@ -36,7 +36,7 @@
         "axis": "horizontal"
   - 
     "path": "cat.png"
-    "resize": [0.5, 0.5]
+    
     "graphics": 
       - 
         "x": 0

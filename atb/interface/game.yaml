@@ -16,11 +16,11 @@
         "Yaxis": 1 # -1
 "object": 
   -
-    "path": "test.yaml"
+    "path": "testQ.yaml"
     "x": 20
     "y": 20
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
 "control": 
   -
     "key": ["s"]
