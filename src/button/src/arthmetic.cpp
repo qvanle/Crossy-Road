@@ -86,22 +86,23 @@ void ButtonImage::draw() {
 }
 
 Action* ButtonImage::react() {
-    this->clicked = false;
+    // set default
+    button->chooseImage(0, button->tmpPath);
+    button->color = WHITE;
+    button->pressing = false;
+    button->isHover = false;
+    button->clicked = false;
+
     if (CheckCollisionPointRec(GetMousePosition(), rectangle)) {
         this->isHover = true;
 
         if (IsMouseButtonDown(MOUSE_LEFT_BUTTON)) {
-            this->pressing = true;
-
-        }
-        else if (this->pressing) {
-            this->pressing = false;
             this->clicked = true;
             return new isClickedAction(this);
         }
         return new hoverAction(this);
     }
-    return new defaultAction(this);
+    return nullptr;
 }
 
 
