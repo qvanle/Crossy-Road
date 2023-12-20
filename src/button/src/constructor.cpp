@@ -20,19 +20,27 @@ Button::Button(std::string text, int fontSize, Color color, Frame* parrent, Rect
 }
 
 // Button for Image
-// ButtonImage::ButtonImage(std::vector<std::string> path, std::vector <std::string> pathPress, Frame* parrent, Rectangle rel) : Container(parrent, rel)
-// {
-//     this->path = path;
-//     this->pathPress = pathPress;
-//     // this->rectangle = rectangle;
-//     this->numpath = path.size();
-//     this->tmpPath = 0;
-//     this->color = WHITE;
-//     for (int i = 0; i < numpath; i++)
-//     {
-//         Texture tmp = LoadTextureFromImage(LoadImage(path[i].c_str()));
-//         this->texture.push_back(tmp);
-//         Texture tmpPress = LoadTextureFromImage(LoadImage(pathPress[i].c_str()));
-//         this->texturePress.push_back(tmpPress);
-//     }
-// }
+ButtonImage::ButtonImage(Frame* parrent, Rectangle rel) : Container(parrent, rel)
+{
+    // this->rectangle = rectangle;
+}
+
+std::string ButtonImage::linkContent(std::string path)
+{
+    focus = {0, 0};
+    return linkContentAbsolute(PATB::BUTTON_ + path);
+}
+
+std::string ButtonImage::linkContentAbsolute(std::string path)
+{
+    YAML::Node node = YAML_FILE::readFile(path);
+    if(!loadName(node)) return "";
+    
+    if(node["textures"])
+    {
+        
+        loadSprites(node["textures"]);
+    }
+
+    return name;
+}

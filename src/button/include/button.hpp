@@ -65,8 +65,8 @@ private:
     std::vector <Texture> texturePress;
 
 public:
-    ButtonImage(std::vector <std::string> path, std::vector <std::string> pathPress, Rectangle rec);
-    void draw();
+    ButtonImage(Frame* parrent, Rectangle relative);
+    void draw() ;
     Action* react();
 
     void changeIndex(int newindex);
@@ -74,6 +74,9 @@ public:
     [[nodiscard]] bool isClicked() const;
     [[nodiscard]] bool isPressing() const;
     int getClicked();
+
+    std::string linkContent(std::string);
+    std::string linkContentAbsolute(std::string);
 
     friend class hoverAction;
     friend class isClickedAction;
