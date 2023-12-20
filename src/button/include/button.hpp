@@ -54,6 +54,10 @@ private:
 
     int numpath;
     int tmpPath;
+    int releaseID;
+    int hoverID;
+    int pressingID;
+    int clickedID;
 
     // Rectangle rectangle;
     Color color;
@@ -61,11 +65,15 @@ private:
     bool isHover = false;
     bool pressing = false, clicked = false;
 
-    std::vector <Texture> texture;
-    std::vector <Texture> texturePress;
+    std::vector <Action*> actions;
+
+protected:
+    void loadEvent(YAML::Node node);
+
 
 public:
     ButtonImage(Frame* parrent, Rectangle relative);
+    ~ButtonImage();
     void draw() ;
     Action* react();
 
@@ -81,6 +89,7 @@ public:
     friend class hoverAction;
     friend class isClickedAction;
     friend class defaultAction;
+    friend class isPressingAction;
 };
 
 class hoverAction : public Action 
@@ -107,6 +116,15 @@ private:
     ButtonImage* button;
 public:
     defaultAction(ButtonImage* button);
+    void execute();
+};
+
+class isPressingAction : public Action
+{
+private:
+    ButtonImage* button;
+public:
+    isPressingAction(ButtonImage* button);
     void execute();
 };
 

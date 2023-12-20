@@ -59,8 +59,7 @@ void Window::getUserEvent()
     }
 
     // button event
-    button->handleEvents();
-    button->update();
+
 }
 
 void Window::getRuntimeEvent()

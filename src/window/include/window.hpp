@@ -103,7 +103,7 @@ public:
     bool isClose();
     void run();
     // test button
-    Button* button;
+    ButtonImage* button;
 };
 
 class CloseAction : public Action
