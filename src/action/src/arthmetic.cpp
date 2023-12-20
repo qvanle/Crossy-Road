@@ -2,47 +2,57 @@
 
 Action::Action()
 {
-    repeat = 1;
 }
 
-Action::Action(int repeat)
+Action::Action(Action* action)
 {
-    this->repeat = repeat;
 }
 
-void Action::setRepeat(int repeat)
+
+bool Action::isRequest()
 {
-    this->repeat = repeat;
+    return false;
 }
 
-void Action::doneExecute()
+Action* Action::clone()
 {
-    if(repeat > 0)
-        repeat--;
+    return this;
 }
 
-void Action::ForceEnd()
+
+PacketAction::PacketAction() : Action()
 {
-    repeat = 0;
 }
 
-void Action::Interrupt()
+
+PacketAction::PacketAction(PacketAction* action) : Action(action)
 {
-    repeat = 0;
+    for(Action* a : action->actions)
+        actions.push_back(a->clone());
 }
 
-int Action::getRepeat() const
+PacketAction::~PacketAction()
 {
-    if(repeat == -1) return 2;
-    return repeat;
+    for(Action* a : actions)
+        delete a;
+    actions.clear();
 }
 
-bool Action::isInfinite() const
+void PacketAction::addAction(Action* action)
 {
-    return repeat == -1;
+    actions.push_back(action);
 }
 
-bool Action::isFinished() const
+void PacketAction::execute()
 {
-    return repeat == 0;
+    for(Action* a : actions)
+    {
+        a->execute();
+    }
+}
+
+
+PacketAction* PacketAction::clone()
+{
+    return new PacketAction(this);
 }

@@ -5,6 +5,15 @@ void Window::ActionPool::push(Action* action)
     pool.push(action);
 }
 
+Window::ActionPool::~ActionPool()
+{
+    while(!pool.empty())
+    {
+        delete pool.front();
+        pool.pop();
+    }
+}
+
 Action* Window::ActionPool::front()
 {
     return pool.front();
@@ -33,13 +42,7 @@ void Window::immediateActing()
 
 }
 
-void Window::durationActing()
+void Window::requestActing()
 {
-    if(duration_pool.empty()) return ;
-    Action* action = duration_pool.pop();
-
-    action->execute();
-    if(action->getRepeat() > 0) 
-        duration_pool.push(action);
-    else delete action;
+    return ;
 }

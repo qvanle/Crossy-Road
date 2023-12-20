@@ -12,14 +12,14 @@ void Visual::draw()
 void Visual::fitFrame()
 {
     if(m_texture == nullptr) return ;
+    if(!resizeable) return ;
     const Rectangle &rec = Frame::getFrame();
 
     Image img = LoadImageFromTexture(*m_texture);
-    UnloadTexture(*m_texture);
-    delete m_texture;
+    UnloadTexture(*m_texture.get());
     
     ImageResize(&img, rec.width, rec.height);
-    m_texture = new Texture2D(LoadTextureFromImage(img));
+    *m_texture.get() = LoadTextureFromImage(img);
     UnloadImage(img);
 }
 

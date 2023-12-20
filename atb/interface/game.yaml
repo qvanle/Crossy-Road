@@ -1,0 +1,48 @@
+"name": "game" # require
+"chunk": 
+  - 
+    "file": "test.yaml"
+    "x": 0
+    "y": 0
+    "h": 10 
+  - 
+    "file": "test2.yaml"
+    "x": 0
+    "y": 10
+    "h": 10 
+"object": 
+  -
+    "path": "test.yaml"
+    "main": true
+    "x": 20
+    "y": 20
+    "w": 10
+    "h": 10
+  -
+    "path": "cow.yaml"
+    "main": true
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+"control": 
+  -
+    "key": ["s"]
+    "action": "move-object"
+    "args": [0, 0, 0.5] 
+  - 
+    "key": ["w"] 
+    "action": "move-object"
+    "args": [0, 0, -0.5] 
+  - 
+    "key": ["a"]
+    "action": "move-object"
+    "args": [0, -0.5, 0] 
+  - 
+    "key": ["d"]
+    "action": "move-object"
+    "args": [0, 0.5, 0] 
+
+# "event": 
+# "collide": 
+

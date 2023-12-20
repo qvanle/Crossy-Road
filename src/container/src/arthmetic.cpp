@@ -2,9 +2,9 @@
 
 void Container::draw()
 {
-    if(!sprites) return;
+    if(sprites.empty()) return;
     if(!visible) return;
-    (*sprites)[focus[0]][focus[1]]->draw();
+    sprites[focus[0]][focus[1]]->draw();
 }
 
 void Container::show()
@@ -61,4 +61,12 @@ void Container::nextImage()
         focus[1] = 0;
         nextSprite();
     }
+Action* Container::react()
+{
+    return nullptr;
+}
+
+Action* Container::runtimeEvent()
+{
+    return nullptr;
 }

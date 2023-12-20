@@ -2,11 +2,22 @@
 #define OBJECT_HPP
 
 #include <container.hpp>
+#include <keystroke.hpp>
+#include <chrono>
 
 class Object : public Container
 {
 private: 
+    struct ObjectKeyStroke
+    {
+        KeyStroke* stroke;
+    };
+    std::vector<ObjectKeyStroke> strokes;
+    std::chrono::time_point<std::chrono::steady_clock> waitUntil;
 
+
+protected: 
+    void loadControl(YAML::Node node);
 
 public: 
     Object(Frame*, Rectangle);

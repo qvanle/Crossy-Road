@@ -1,6 +1,7 @@
 .cache
 .cached 
-build/
+.todo
+build
 src/dependency/raylib/raylib 
 src/dependency/yamlcpp/yamlcpp
 .vs

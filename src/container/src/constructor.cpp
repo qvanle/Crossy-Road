@@ -11,7 +11,6 @@ Container::Container(Frame* parent, Rectangle rect) : Frame(parent, rect)
 {
     instance_id = id_count++;
     focus = {0, 0};
-    sprites = nullptr;
     visible = true;
 }
 
@@ -20,29 +19,68 @@ Container::Container(Container* other) : Frame(other)
     instance_id = id_count++;
     focus = {0, 0};
     name = other->name;
-    sprites = other->sprites;
     visible = true;
+
+    for(auto s : other->sprites) 
+    {
+        sprites.emplace_back();
+        Rectangle rect;
+        rect.x = other->getRelative()[0];
+        rect.y = other->getRelative()[1];
+        rect.width = other->getRelative()[2];
+        rect.height = other->getRelative()[3];
+
+        for(auto v : s)
+        {
+            sprites.back().push_back(new Visual(v, this, rect));
+        }
+    }
 }
 
 Container::Container(Container* other, Rectangle rect) : Frame(other)
 {
     instance_id = id_count++;
-    sprites = nullptr;
     focus = {0, 0};
     name = other->name;
-    sprites = other->sprites;
     setRelative({rect.x, rect.y, rect.width, rect.height});
     visible = true;
+
+    for(auto s : other->sprites) 
+    {
+        sprites.emplace_back();
+        Rectangle rect;
+        rect.x = other->getRelative()[0];
+        rect.y = other->getRelative()[1];
+        rect.width = other->getRelative()[2];
+        rect.height = other->getRelative()[3];
+
+        for(auto v : s)
+        {
+            sprites.back().push_back(new Visual(v, this, rect));
+        }
+    }
 }
 
 Container::Container(Container* other, Frame* parent, Rectangle rect) : Frame(parent, rect)
 {
     instance_id = id_count++;
-    sprites = nullptr;
     focus = {0, 0};
     name = other->name;
-    sprites = other->sprites;
     visible = true;
+    for(auto s : other->sprites) 
+    {
+        sprites.emplace_back();
+        Rectangle rect;
+        rect.x = other->getRelative()[0];
+        rect.y = other->getRelative()[1];
+        rect.width = other->getRelative()[2];
+        rect.height = other->getRelative()[3];
+
+        for(auto v : s)
+        {
+            sprites.back().push_back(new Visual(v, this, rect));
+        }
+    }
 }
 
 std::string Container::linkContent(std::string path)
@@ -62,6 +100,11 @@ std::string Container::linkContentAbsolute(std::string path)
         loadSprites(node["textures"]);
     }
 
+    if(node["focus"])
+    {
+        loadFocus(node["focus"]);
+    }
+
     return name;
 }
 
@@ -78,7 +121,6 @@ bool Container::loadName(YAML::Node node)
 
 void Container::loadSprites(YAML::Node node)
 {
-    sprites = std::make_shared< std::vector<Sprite> >();
     for(auto sprite : node)
     {
         if(!sprite["path"]) continue;
@@ -94,7 +136,7 @@ void Container::loadSprites(YAML::Node node)
             ImageResize(&image, x, y);
         }
         
-        sprites->emplace_back();
+        sprites.emplace_back();
         for(auto img : sprite["graphics"]) 
         {
             float x, y, w, h;
@@ -147,7 +189,7 @@ void Container::loadSprites(YAML::Node node)
                         Image img2 = ImageFromImage(image, rect);
                         Texture2D *txt = new Texture2D(LoadTextureFromImage(img2)); 
                         Visual *vis = new Visual(txt, this, {0, 0, 1, 1});
-                        sprites->back().push_back(vis);
+                        sprites.back().push_back(vis);
 
                         UnloadImage(img2);
                     }
@@ -162,7 +204,7 @@ void Container::loadSprites(YAML::Node node)
                         Image img2 = ImageFromImage(image, rect);
                         Texture2D *txt = new Texture2D(LoadTextureFromImage(img2)); 
                         Visual *vis = new Visual(txt, this, {0, 0, 1, 1});
-                        sprites->back().push_back(vis);
+                        sprites.back().push_back(vis);
 
                         UnloadImage(img2);
                     }
@@ -173,25 +215,31 @@ void Container::loadSprites(YAML::Node node)
     }
 }
 
+void Container::loadFocus(YAML::Node node)
+{
+    focus[0] = node[0].as<int>();
+    focus[1] = node[1].as<int>();
+}
+
 void Container::chooseSprite(int index)
 {
-    if(!sprites) return;
-    if(index < 0 || index >= sprites->size()) return;
+    if(sprites.empty()) return;
+    if(index < 0 || index >= sprites.size()) return;
     focus[0] = index;
 }
 
 void Container::chooseImage(int index)
 {
-    if(!sprites) return;
-    if(index < 0 || index >= sprites->size()) return;
+    if(sprites.empty()) return;
+    if(index < 0 || index >= sprites.size()) return;
     focus[1] = index;
 }
 
 void Container::chooseImage(int index, int index2)
 {
-    if(!sprites) return;
-    if(index < 0 || index >= sprites->size()) return;
-    if(index2 < 0 || index2 >= sprites->at(index).size()) return;
+    if(sprites.empty()) return;
+    if(index < 0 || index >= sprites.size()) return;
+    if(index2 < 0 || index2 >= sprites.at(index).size()) return;
     focus[0] = index;
     focus[1] = index2;
 }

@@ -2,7 +2,8 @@
 #include <window.hpp>
 
 void Window::run() {
-    last_frame = std::chrono::system_clock::now();
+    // last_chrismas = now() 
+    Wcontent.input_clock = std::chrono::steady_clock::now();
     while (isRun())
     {
         draw();
@@ -10,7 +11,6 @@ void Window::run() {
         getUserEvent();
         getRuntimeEvent();
         immediateActing();
-        durationActing();
     }
 }
 
@@ -19,8 +19,8 @@ void Window::draw()
     // clear screen 
     BeginDrawing();
     ClearBackground(BLACK);
-    interface->draw();
-    obj->draw();
+    UI.draw();
+    // test draw button
     button->draw();
     EndDrawing();
     
@@ -28,6 +28,12 @@ void Window::draw()
 
 void Window::getUserEvent()
 {
+    // do nothing if input_delay is not finish 
+    if( Wcontent.input_delay >  std::chrono::steady_clock::now() - Wcontent.input_clock)
+    {
+        return ;
+    }
+    Wcontent.input_clock = std::chrono::steady_clock::now();
     // alt + F4 to exit 
     if (IsKeyDown(KEY_LEFT_ALT) && IsKeyDown(KEY_F4))
     {
@@ -44,12 +50,11 @@ void Window::getUserEvent()
         int height = GetScreenHeight();
         immediate_pool.push(new resizeAction(this, width, height));
     }
-    Action* action = interface->react();
+    
+    Action* action = UI.react();
     if(action != nullptr) 
     {
-        if(action->getRepeat() > 1) 
-            duration_pool.push(action);
-        else if(action->getRepeat() == 1) 
+        if(!action->isRequest()) 
             immediate_pool.push(action);
     }
 
@@ -69,10 +74,10 @@ void Window::sound_effect()
 
 bool Window::isRun()
 {
-    return status;
+    return Wcontent.status;
 }
 
 bool Window::isClose()
 {
-    return !status;
+    return !Wcontent.status;
 }

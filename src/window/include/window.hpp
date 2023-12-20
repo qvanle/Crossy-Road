@@ -21,23 +21,6 @@
 class Window 
 {
 private:
-    friend class CloseAction;
-    friend class resizeAction;
-
-    float width;
-    float height;
-    std::string title;
-    Color background;
-    std::vector<std::thread> thread_pool;
-    
-    bool status;
-
-    Frame* root_frame;
-    
-    std::chrono::time_point<std::chrono::system_clock> last_frame;
-
-    Container* obj;
-    
     class InterfacePool 
     {
     private: 
@@ -59,19 +42,47 @@ private:
         void draw();
         Action* react();
 
-    }* interface;
-
+    };
     class ActionPool 
     {
     private:
         std::queue<Action*> pool;
     public: 
         ActionPool() = default;
+        ~ActionPool();
         void push(Action* act);
         Action* front();
         Action* pop();
         bool empty() const;
-    } immediate_pool, duration_pool;
+    };
+    struct WinContent 
+    {
+        float width;
+        float height;
+        Color background;
+        std::string title;
+        bool status;
+        std::vector<std::thread> thread_pool;
+
+        std::chrono::duration<double> input_delay;
+        std::chrono::time_point<std::chrono::steady_clock> input_clock;
+    };
+    struct UI 
+    {
+        Frame* root_frame;
+        InterfacePool* interface;
+        UI();
+        ~UI();
+        void draw();
+        Action* react();
+    };
+
+    friend class CloseAction;
+    friend class resizeAction;
+
+    WinContent Wcontent;
+    UI UI;
+    ActionPool immediate_pool, request_pool;
 
 protected:
     void draw();
@@ -79,7 +90,7 @@ protected:
     void getRuntimeEvent();
     void sound_effect();
     void immediateActing();
-    void durationActing();
+    void requestActing();
 
     void initRaylib(YAML::Node node);
     void loadInterface(YAML::Node node);
@@ -103,8 +114,6 @@ public:
     CloseAction(Window* win);
     ~CloseAction() = default;
     void execute();
-    void forceEnd();
-    void interrupt();
 };
 
 class resizeAction : public Action
@@ -116,7 +125,5 @@ public:
     resizeAction(Window* window, float w, float h);
     ~resizeAction() = default;
     void execute();
-    void forceEnd();
-    void interrupt();
 };
 #endif 

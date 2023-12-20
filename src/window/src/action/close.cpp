@@ -1,12 +1,11 @@
 #include <window.hpp>
 
-CloseAction::CloseAction(Window* window) : Action(1)
+CloseAction::CloseAction(Window* window)
 {
     win = window;
 }
 
 void CloseAction::execute()
 {
-    win->status = false;
-    doneExecute();
+    win->Wcontent.status = false;
 }

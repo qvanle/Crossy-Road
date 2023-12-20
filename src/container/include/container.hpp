@@ -2,7 +2,6 @@
 #define CONTAINER_HPP
 
 #include <vector>
-#include <memory>
 
 #include <visual.hpp>
 #include <frame.hpp>
@@ -12,10 +11,11 @@
 class Container : public Frame
 {
 private:
+    friend class changeImageAction;
     static int id_count;
     int instance_id;
 
-    std::shared_ptr< std::vector<Sprite> > sprites;
+    std::vector<Sprite> sprites;
     std::string name;
     iPoint focus;
     bool visible;
@@ -23,6 +23,7 @@ private:
 protected:
     bool loadName(YAML::Node node);
     void loadSprites(YAML::Node node);
+    void loadFocus(YAML::Node node);
 public:
     Container(Frame*, Rectangle);
     Container(Container*);
@@ -50,7 +51,19 @@ public:
     void nextSprite();
     void nextImageInSprite();
     void nextImage();
-    virtual Action* react() = 0;
+    virtual Action* react();
+    virtual Action* runtimeEvent();
 };
-
+class changeImageAction : public Action
+{
+private: 
+    Container* container;
+    iPoint focus; 
+public: 
+    changeImageAction(Container*, iPoint);
+    changeImageAction(changeImageAction*);
+    ~changeImageAction();
+    void execute() override; 
+    Action* clone() override;
+};
 #endif 

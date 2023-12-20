@@ -3,10 +3,7 @@
 Window::~Window()
 {
 
-    delete interface;
-
-    delete root_frame;
-    for (auto& thread : thread_pool)
+    for (auto& thread : Wcontent.thread_pool)
         thread.join();
 
     CloseWindow();

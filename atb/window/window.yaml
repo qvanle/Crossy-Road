@@ -1,6 +1,6 @@
 "title": "Crossy Road"
 "width": 1200
-"height": 680
+"height": 668
 
 "interface-list": 
   -
@@ -9,8 +9,15 @@
     "y": 0,
     "w": 100, 
     "h": 100, 
+  -
+    "file": "game.yaml" 
+    "x": 0,
+    "y": 0,
+    "w": 100, 
+    "h": 100, 
 
-"choose-interface": "test"
+"choose-interface": "game"
+"input-delay": 60
 
 "control":
   -

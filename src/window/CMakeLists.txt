@@ -2,6 +2,7 @@ project (window)
 
 add_library(
     ${PROJECT_NAME} STATIC 
+    src/UI.cpp
     src/constructor.cpp
     src/destructor.cpp
     src/running.cpp
