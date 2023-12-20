@@ -2,14 +2,14 @@
 "chunk": 
   - 
     "file": "test.yaml"
-    "x": 0
-    "y": 0
+    "w": 100
     "h": 10 
+    "repeat": 5
   - 
     "file": "test2.yaml"
-    "x": 0
-    "y": 10
+    "w": 100 
     "h": 10 
+    "repeat": 5
 "object": 
   -
     "path": "test.yaml"

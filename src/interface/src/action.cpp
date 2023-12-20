@@ -56,15 +56,5 @@ Action* Interface::react()
         }
     }
 
-    for(auto i : nested) 
-    {
-        action = i->react();
-        if(action != nullptr) 
-        {
-            if(packet == nullptr) packet = new PacketAction();
-            packet->addAction(action);
-        }
-    }
-
     return packet;
 }

@@ -1,6 +1,8 @@
 #ifndef INTERFACE_HPP
 #define INTERFACE_HPP
 
+#include <deque>
+
 #include <raylib.h>
 
 #include <frame.hpp>
@@ -15,13 +17,14 @@ private:
     std::vector<Container*> containers;
     std::vector<Interface*> nested;
     std::vector<KeyStroke*> keystrokes;
-
+    std::deque<Interface*> chunks;
 protected:
     void loadObject(YAML::Node);
     void loadCollide(YAML::Node);
     void loadChunk(YAML::Node);
     void loadControl(YAML::Node);
     void loadEvent(YAML::Node);
+    void generateMap();
 public: 
     Interface(Frame*, Rectangle);
     Interface(Interface*);

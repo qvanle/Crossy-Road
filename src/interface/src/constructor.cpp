@@ -129,27 +129,36 @@ void Interface::loadCollide(YAML::Node node)
 {
 }
 
+void Interface::generateMap() 
+{
+   if(nested.empty()) return ;
+
+   for(int i = 0; i < 10; i++)
+   {
+
+   }
+}
+
 void Interface::loadChunk(YAML::Node node)
 {
     for(auto i : node) 
     {
         float x = 0, y = 0, w = 1, h = 1;
+        int repeat = 1;
         std::string path = i["file"].as<std::string>();
         if(i["x"]) x = i["x"].as<float>() / 100;
         if(i["y"]) y = i["y"].as<float>() / 100;
         if(i["w"]) w = i["w"].as<float>() / 100;
         if(i["h"]) h = i["h"].as<float>() / 100;
+        if(i["repeat"]) repeat = i["repeat"].as<int>();
 
         Chunk* chunk = new Chunk(this, {x, y, w, h}); 
         chunk->linkContent(path);
         nested.push_back(chunk);
+        while(--repeat > 0) 
+            nested.push_back(new Interface(nested[0]));
     }
-    if(nested.size() != 0) 
-    {
-        nested.push_back(new Interface(nested[0]));
-        nested.back()->moveBy({0, 0.2});
-        Rectangle rel = nested.back()->getFrame();
-    }
+    if(!nested.empty()) generateMap();
 }
 
 void Interface::loadControl(YAML::Node node)
