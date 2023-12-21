@@ -10,4 +10,10 @@ Interface::~Interface()
     for (auto& i : nested) 
         delete i;
     nested.clear();
+
+    for (auto& i : keystrokes) 
+        delete i;
+
+    for (auto& i : visiter) 
+        delete i;
 }

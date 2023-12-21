@@ -5,9 +5,9 @@ void Game::draw()
 
     drawNested();
 
-    for(auto& child : chunks)
+    for(auto i = chunks.rbegin(); i != chunks.rend(); ++i)
     {
-        child->draw();
+        (*i)->draw();
     }
 
     drawContainers();

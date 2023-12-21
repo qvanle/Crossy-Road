@@ -86,6 +86,7 @@ void Game::loadMap()
 
         int id = GetRandomValue(0, cache.size() - 1);
         Interface* chunk = new Interface(cache[id], this, rel);
+        chunk->addVisiter(this->getContainers(1), {0.5, 0.3, 0.25, 0.25});
         chunks.push_front(chunk);
     }
 }

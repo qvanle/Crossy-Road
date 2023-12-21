@@ -151,3 +151,27 @@ void Interface::loadControl(YAML::Node node)
         keystrokes.push_back(k);
     }
 }
+
+void Interface::addVisiter(Container* obj)
+{
+    Rectangle rel;
+    rel.x = obj->getRelative()[0];
+    rel.y = obj->getRelative()[1];
+    rel.width = obj->getRelative()[2];
+    rel.height = obj->getRelative()[3];
+
+    Container* c = new Container(obj, this, rel);
+    visiter.push_back(c);
+}
+
+void Interface::addVisiter(Container* obj, Rectangle rel)
+{
+    Container* c = new Container(obj, this, rel);
+    visiter.push_back(c);
+}
+
+Container* Interface::getContainers(int id)
+{
+    if(id < 0 || id >= containers.size()) return nullptr;
+    return containers[id];
+}
