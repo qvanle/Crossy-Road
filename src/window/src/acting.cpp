@@ -42,6 +42,15 @@ void Window::immediateActing()
 
 }
 
+void Window::userActing()
+{
+    if(immediate_user_pool.empty()) return ;
+    Action* action = immediate_user_pool.pop();
+
+    action->execute();
+    delete action;
+}
+
 void Window::requestActing()
 {
     return ;

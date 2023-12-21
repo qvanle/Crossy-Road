@@ -58,7 +58,6 @@ void Game::loadCollide(YAML::Node node)
 void Game::loadMap() 
 {
     if(cache.empty()) return ;
-
     while(!chunks.empty())
     {
         fRect rec = chunks.back()->getRelative();

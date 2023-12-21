@@ -18,6 +18,7 @@
 
 "choose-interface": "game"
 "input-delay": 60
+"runtime-delay": 30 
 
 "control":
   -

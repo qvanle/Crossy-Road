@@ -94,3 +94,12 @@ Action* Window::InterfacePool::react()
     }
     return nullptr;
 }
+
+Action* Window::InterfacePool::getRuntimeEvent()
+{
+    if(!inf.empty())
+    {
+        return inf.top()->getRuntimeEvent();
+    }
+    return nullptr;
+}

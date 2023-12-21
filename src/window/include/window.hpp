@@ -40,6 +40,7 @@ private:
 
         void draw();
         Action* react();
+        Action* getRuntimeEvent();
 
     };
     class ActionPool 
@@ -65,6 +66,8 @@ private:
 
         std::chrono::duration<double> input_delay;
         std::chrono::time_point<std::chrono::steady_clock> input_clock;
+        std::chrono::duration<double> runtime_delay;
+        std::chrono::time_point<std::chrono::steady_clock> runtime_clock;
     };
     struct UI 
     {
@@ -74,6 +77,7 @@ private:
         ~UI();
         void draw();
         Action* react();
+        Action* getRuntimeEvent();
     };
 
     friend class CloseAction;
@@ -81,7 +85,7 @@ private:
 
     WinContent Wcontent;
     UI UI;
-    ActionPool immediate_pool, request_pool;
+    ActionPool immediate_user_pool, immediate_pool, request_pool;
 
 protected:
     void draw();
@@ -89,6 +93,7 @@ protected:
     void getRuntimeEvent();
     void sound_effect();
     void immediateActing();
+    void userActing();
     void requestActing();
 
     void initRaylib(YAML::Node node);

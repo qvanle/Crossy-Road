@@ -35,6 +35,15 @@ Window::Window(std::string path)
     {
         Wcontent.input_delay = std::chrono::duration<int>(50) / 1000.0;
     }
+
+    if(config["runtime-delay"]) 
+    {
+        double delay = config["runtime-delay"].as<int>() / 1000.0;
+        Wcontent.runtime_delay = std::chrono::duration<double>(delay);
+    }else 
+    {
+        Wcontent.runtime_delay = std::chrono::duration<int>(40) / 1000.0;
+    }
 }
 
 

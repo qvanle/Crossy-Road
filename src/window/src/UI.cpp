@@ -24,3 +24,11 @@ Action* Window::UI::react()
 
     return act;
 }
+
+Action* Window::UI::getRuntimeEvent() 
+{
+    Action* act = interface->getRuntimeEvent();
+    if(act != nullptr) return act;
+
+    return act;
+}

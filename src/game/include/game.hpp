@@ -13,6 +13,7 @@
 class Game : public Interface
 {
 private: 
+    friend class moveChunksAction;
     std::deque<Interface*> chunks;
     std::vector<Interface*> cache;
 protected:
@@ -31,8 +32,21 @@ public:
     std::string linkContentAbsolute(std::string path) override;
 
     Action* react() override;
-    Action* runtimeEvent() override;
+    Action* getRuntimeEvent() override;
     void draw() override;
+
 };
 
+class moveChunksAction : public Action
+{
+private: 
+    Game* game;
+    fPoint delta;
+public:
+    moveChunksAction(Game*, fPoint);
+    ~moveChunksAction();
+
+    void execute() override;
+    Action* clone() override;
+};
 #endif 

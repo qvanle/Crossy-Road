@@ -1,19 +1,29 @@
 #include <interface.hpp>
 
-Action* Interface::runtimeEvent()
+Action* Interface::getRuntimeEvent()
 {
     PacketAction* packet = nullptr; 
         
-    Action* action = Container::runtimeEvent();
+    Action* action = Container::getRuntimeEvent();
     if(action != nullptr) 
     {
         packet = new PacketAction();
         packet->addAction(action);
     }
+    
+    for(auto i : nested)
+    {
+        action = i->getRuntimeEvent();
+        if(action != nullptr) 
+        {
+            if(packet == nullptr) packet = new PacketAction();
+            packet->addAction(action);
+        }
+    }
 
     for(auto i : containers) 
     {
-        action = i->runtimeEvent();
+        action = i->getRuntimeEvent();
         if(action != nullptr) 
         {
             if(packet == nullptr) packet = new PacketAction();
