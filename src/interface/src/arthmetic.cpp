@@ -1,14 +1,27 @@
 #include <interface.hpp>
 
-void Interface::draw()
+void Interface::drawNested()
 {
-    Container::draw();
+    for(auto& child : nested)
+    {
+        child->draw();
+    }
+}
 
-    for(auto i : chunks)
-        i->draw();
-
+void Interface::drawContainers()
+{
     for(auto& child : containers)
     {
         child->draw();
     }
+}
+
+void Interface::draw()
+{
+    Container::draw();
+
+    drawNested();
+
+    drawContainers();
+
 }

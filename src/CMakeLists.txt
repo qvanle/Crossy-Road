@@ -20,6 +20,7 @@ add_subdirectory(container)
 add_subdirectory(interface)
 add_subdirectory(chunk)
 add_subdirectory(object)
+add_subdirectory(game)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC window::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)

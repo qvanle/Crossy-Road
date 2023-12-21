@@ -17,14 +17,13 @@ private:
     std::vector<Container*> containers;
     std::vector<Interface*> nested;
     std::vector<KeyStroke*> keystrokes;
-    std::deque<Interface*> chunks;
 protected:
     void loadObject(YAML::Node);
-    void loadCollide(YAML::Node);
-    void loadChunk(YAML::Node);
     void loadControl(YAML::Node);
-    void loadEvent(YAML::Node);
-    void loadMap();
+
+    void drawNested();
+    void drawContainers();
+
 public: 
     Interface(Frame*, Rectangle);
     Interface(Interface*);

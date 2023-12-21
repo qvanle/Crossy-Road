@@ -95,17 +95,18 @@ std::string Interface::linkContentAbsolute(std::string path)
     if(node["object"]) 
         loadObject(node["object"]);
 
-    if(node["collide"])
-        loadCollide(node["collide"]);
-
-    if(node["chunk"])
-        loadChunk(node["chunk"]);
-
     if(node["control"])
         loadControl(node["control"]);
 
-    if(node["event"])
-        loadEvent(node["event"]);
+//    if(node["collide"])
+//        loadCollide(node["collide"]);
+
+//    if(node["chunk"])
+//        loadChunk(node["chunk"]);
+
+
+//    if(node["event"])
+//        loadEvent(node["event"]);
 
     return getName();
 }
@@ -126,67 +127,6 @@ void Interface::loadObject(YAML::Node node)
     }
 }
 
-void Interface::loadCollide(YAML::Node node)
-{
-}
-
-void Interface::loadMap() 
-{
-    if(nested.empty()) return ;
-
-    while(!chunks.empty())
-    {
-        fRect rec = chunks.back()->getRelative();
-        if(rec[1] > 1) chunks.pop_back();
-        else break;
-    }
-    if(chunks.empty()) 
-    {
-        int id = GetRandomValue(0, nested.size() - 1);
-        Rectangle rel;
-        rel.width = nested[id]->getRelative()[2];
-        rel.height = nested[id]->getRelative()[3];
-        rel.x = 0;
-        rel.y = (1.01 - rel.height);
-
-        Interface* chunk = new Interface(nested[id], this, rel);
-        chunks.push_front(chunk);
-    }
-    while(chunks.front()->getRelative()[1] > 0)
-    {
-        Rectangle rel;
-        rel.width = chunks.front()->getRelative()[2];
-        rel.height = chunks.front()->getRelative()[3];
-        rel.x = 0;
-        rel.y = (chunks.front()->getRelative()[1] + 0.005 - rel.height);
-
-        int id = GetRandomValue(0, nested.size() - 1);
-        Interface* chunk = new Interface(nested[id], this, rel);
-        chunks.push_front(chunk);
-    }
-}
-
-void Interface::loadChunk(YAML::Node node)
-{
-    for(auto i : node) 
-    {
-        float x = 0, y = 0, w = 1, h = 1;
-        int repeat = 1;
-        std::string path = i["file"].as<std::string>();
-        if(i["x"]) x = i["x"].as<float>() / 100;
-        if(i["y"]) y = i["y"].as<float>() / 100;
-        if(i["w"]) w = i["w"].as<float>() / 100;
-        if(i["h"]) h = i["h"].as<float>() / 100;
-        if(i["repeat"]) repeat = i["repeat"].as<int>();
-
-        Chunk* chunk = new Chunk(this, {x, y, w, h}); 
-        chunk->linkContent(path);
-        nested.push_back(chunk);
-        while(--repeat > 0) 
-            nested.push_back(new Interface(nested[0]));
-    }
-    if(!nested.empty()) loadMap();
-}
 
 void Interface::loadControl(YAML::Node node)
 {
@@ -211,9 +151,3 @@ void Interface::loadControl(YAML::Node node)
         keystrokes.push_back(k);
     }
 }
-
-void Interface::loadEvent(YAML::Node node)
-{
-}
-
-

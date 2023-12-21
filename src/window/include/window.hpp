@@ -93,6 +93,7 @@ protected:
 
     void initRaylib(YAML::Node node);
     void loadInterface(YAML::Node node);
+    void loadGame(YAML::Node node);
 public:
     Window();
     Window(std::string path);

@@ -24,4 +24,5 @@ target_link_libraries(${PROJECT_NAME} PUBLIC action::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC container::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC interface::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC object::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC game::lib)
 

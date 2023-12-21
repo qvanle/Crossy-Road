@@ -5,16 +5,16 @@
 "interface-list": 
   -
     "file": "test.yaml" 
-    "x": 0,
-    "y": 0,
-    "w": 100, 
-    "h": 100, 
-  -
-    "file": "game.yaml" 
-    "x": 0,
-    "y": 0,
-    "w": 100, 
-    "h": 100, 
+    "x": 0
+    "y": 0
+    "w": 100
+    "h": 100
+"game": 
+  "file": "game.yaml" 
+  "x": 0
+  "y": 0
+  "w": 100 
+  "h": 100 
 
 "choose-interface": "game"
 "input-delay": 60
