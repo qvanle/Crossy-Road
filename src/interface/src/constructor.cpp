@@ -1,3 +1,4 @@
+#include "raylib.h"
 #include <interface.hpp>
 #include <const/path/atb.hpp>
 #include <file.hpp>
@@ -133,9 +134,10 @@ void Interface::generateMap()
 {
    if(nested.empty()) return ;
 
-   for(int i = 0; i < 10; i++)
+   for(int i = 0; i < 11; i++)
    {
-
+        int id = GetRandomValue(0, nested.size() - 1);
+        chunks.push_back(new Interface(nested[id], this, {0, (float)((0.09) * i), 1, 0.13}));
    }
 }
 
