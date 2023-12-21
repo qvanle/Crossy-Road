@@ -86,47 +86,6 @@ public:
     std::string linkContent(std::string);
     std::string linkContentAbsolute(std::string);
 
-    friend class hoverAction;
-    friend class isClickedAction;
-    friend class defaultAction;
-    friend class isPressingAction;
 };
-
-class hoverAction : public Action 
-{
-private:
-    ButtonImage* button;
-public:
-    hoverAction(ButtonImage* button);
-    void execute() override;
-};
-
-class isClickedAction : public Action 
-{
-private:
-    ButtonImage* button;
-public:
-    isClickedAction(ButtonImage* button);
-    void execute() override;
-};
-
-class defaultAction : public Action
-{
-private:
-    ButtonImage* button;
-public:
-    defaultAction(ButtonImage* button);
-    void execute();
-};
-
-class isPressingAction : public Action
-{
-private:
-    ButtonImage* button;
-public:
-    isPressingAction(ButtonImage* button);
-    void execute();
-};
-
 
 #endif 

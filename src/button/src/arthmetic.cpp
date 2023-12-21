@@ -86,26 +86,36 @@ void ButtonImage::draw() {
 }
 
 Action* ButtonImage::react() {
-    return nullptr;
+   
     if (CheckCollisionPointRec(GetMousePosition(), rectangle)) {
-        this->isHover = true;
-        
+        this->isHover = 1;
         if (IsMouseButtonDown(MOUSE_LEFT_BUTTON)) { // click -> pressing
             this->clicked = true;
+            
             // return new isPressingAction(this);
             if(this->pressingID == -1)
                 return nullptr;
+            std::cout << "pressing with ID: "<< pressingID << std::endl;
             return actions[pressingID]->clone(); 
         }
         else if(this->clicked) { // release -> click
+            
             this->clicked = false;
             if(this->clickedID == -1)
                 return nullptr;
+            std::cout << "clicked" << std::endl;
             return actions[clickedID]->clone();
         }
         if(this->hoverID == -1)
             return nullptr;
         return actions[hoverID]->clone();
+    }
+    if (this->isHover == 1)
+    {
+        this->isHover = 0;
+        if(this->releaseID == -1)
+            return nullptr;
+        return actions[releaseID]->clone();
     }
     return nullptr;
 }

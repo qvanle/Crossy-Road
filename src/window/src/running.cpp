@@ -59,7 +59,15 @@ void Window::getUserEvent()
     }
 
     // button event
-
+    action = button->react();
+    if(action != nullptr) 
+    {
+        if(!action->isRequest()) 
+            {
+                immediate_pool.push(action);
+            
+            }
+    }
 }
 
 void Window::getRuntimeEvent()
