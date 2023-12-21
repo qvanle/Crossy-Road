@@ -1,7 +1,7 @@
 "name": "game" # require
 "chunk": 
   - 
-    "file": "test.yaml"
+    "file": "test2.yaml"
     "w": 100
     "h": 10 
     "repeat": 5

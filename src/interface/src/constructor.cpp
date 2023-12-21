@@ -84,10 +84,10 @@ std::string Interface::linkContentAbsolute(std::string path)
 {
     YAML::Node node = YAML_FILE::readFile(path);
     if(!loadName(node)) return "";
-    
+
     if(node["textures"]) 
         loadSprites(node["textures"]);
-    
+
     if(node["focus"]) 
         loadFocus(node["focus"]);
     else chooseImage(0, 0);
@@ -130,15 +130,40 @@ void Interface::loadCollide(YAML::Node node)
 {
 }
 
-void Interface::generateMap() 
+void Interface::loadMap() 
 {
-   if(nested.empty()) return ;
+    if(nested.empty()) return ;
 
-   for(int i = 0; i < 11; i++)
-   {
+    while(!chunks.empty())
+    {
+        fRect rec = chunks.back()->getRelative();
+        if(rec[1] > 1) chunks.pop_back();
+        else break;
+    }
+    if(chunks.empty()) 
+    {
         int id = GetRandomValue(0, nested.size() - 1);
-        chunks.push_back(new Interface(nested[id], this, {0, (float)((0.09) * i), 1, 0.13}));
-   }
+        Rectangle rel;
+        rel.width = nested[id]->getRelative()[2];
+        rel.height = nested[id]->getRelative()[3];
+        rel.x = 0;
+        rel.y = (1.01 - rel.height);
+
+        Interface* chunk = new Interface(nested[id], this, rel);
+        chunks.push_front(chunk);
+    }
+    while(chunks.front()->getRelative()[1] > 0)
+    {
+        Rectangle rel;
+        rel.width = chunks.front()->getRelative()[2];
+        rel.height = chunks.front()->getRelative()[3];
+        rel.x = 0;
+        rel.y = (chunks.front()->getRelative()[1] + 0.005 - rel.height);
+
+        int id = GetRandomValue(0, nested.size() - 1);
+        Interface* chunk = new Interface(nested[id], this, rel);
+        chunks.push_front(chunk);
+    }
 }
 
 void Interface::loadChunk(YAML::Node node)
@@ -160,7 +185,7 @@ void Interface::loadChunk(YAML::Node node)
         while(--repeat > 0) 
             nested.push_back(new Interface(nested[0]));
     }
-    if(!nested.empty()) generateMap();
+    if(!nested.empty()) loadMap();
 }
 
 void Interface::loadControl(YAML::Node node)
@@ -173,7 +198,7 @@ void Interface::loadControl(YAML::Node node)
             k->add(toKey(key.as<std::string>()));
         }
         std::string action = stroke["action"].as<std::string>();
-        
+
         if(action == "move-object") 
         {
             int id = stroke["args"][0].as<int>();

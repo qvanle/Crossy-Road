@@ -24,7 +24,7 @@ protected:
     void loadChunk(YAML::Node);
     void loadControl(YAML::Node);
     void loadEvent(YAML::Node);
-    void generateMap();
+    void loadMap();
 public: 
     Interface(Frame*, Rectangle);
     Interface(Interface*);
