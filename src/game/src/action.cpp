@@ -7,6 +7,11 @@ Action* Game::react()
 
 Action* Game::getRuntimeEvent()
 {
+    // if now - mapSpeedClock < 10 millisecond, return nullptr 
+
+    if(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - mapSpeedClock).count() < 20) 
+        return nullptr;
+
     PacketAction* packet = nullptr;
     
     Action* action = Interface::getRuntimeEvent();
@@ -16,8 +21,11 @@ Action* Game::getRuntimeEvent()
         packet->addAction(action);
     }
     
-    action = new moveChunksAction(this, {0, 0.002});
+    action = new moveChunksAction(this, mapSpeed);
     if(packet == nullptr) packet = new PacketAction();
     packet->addAction(action);
+
+    mapSpeedClock = std::chrono::system_clock::now();
+
     return packet;
 }

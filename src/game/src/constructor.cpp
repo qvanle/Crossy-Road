@@ -42,6 +42,9 @@ std::string Game::linkContentAbsolute(std::string path)
     if(node["chunk"])
         loadChunk(node["chunk"]);
 
+    if(node["attach-object"])
+        loadAttactObject(node["attach-object"]);
+
     if(node["control"])
         loadControl(node["control"]);
 
@@ -86,7 +89,6 @@ void Game::loadMap()
 
         int id = GetRandomValue(0, cache.size() - 1);
         Interface* chunk = new Interface(cache[id], this, rel);
-        chunk->addVisiter(this->getContainers(1), {0.5, 0.3, 0.25, 0.25});
         chunks.push_front(chunk);
     }
 }
@@ -110,9 +112,18 @@ void Game::loadChunk(YAML::Node node)
         while(--repeat > 0) 
             cache.push_back(new Interface(cache[0]));
     }
-    if(!cache.empty()) loadMap();
+}
+
+void Game::loadAttactObject(YAML::Node node) 
+{
+
 }
 
 void Game::loadEvent(YAML::Node node)
 {
+    if(node["map-speed"])
+    {
+        mapSpeed[0] = node["map-speed"][0].as<float>();
+        mapSpeed[1] = node["map-speed"][1].as<float>();
+    }
 }

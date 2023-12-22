@@ -4,10 +4,12 @@
     "file": "test.yaml"
     "w": 100
     "h": 10 
+    "probabilty": 50
   - 
     "file": "test2.yaml"
     "w": 100 
     "h": 10 
+    "probabilty": 50
 "object": 
   -
     "path": "test.yaml"
@@ -22,7 +24,14 @@
     "x": 40
     "y": 40
     "w": 10
-    "h": 10
+    "h": 10 
+"event": 
+  "map-speed": [0, 0.003] # 0.02% per 20 milisecond 
+"attach-object": 
+  - 
+    "chunk": 0 
+    "object": [1, 10] # each 1 second there is 10% to generate object 1
+    "velocity": [0.5, 1] # random in range 0.5% -> 1%
 "control": 
   -
     "key": ["s"]
@@ -41,6 +50,4 @@
     "action": "move-object"
     "args": [0, 0.5, 0] 
 
-# "event": 
-# "collide": 
 

@@ -2,6 +2,7 @@
 #define GAME_HPP
 
 #include <deque>
+#include <chrono>
 
 #include <raylib.h>
 
@@ -16,10 +17,13 @@ private:
     friend class moveChunksAction;
     std::deque<Interface*> chunks;
     std::vector<Interface*> cache;
+    fPoint mapSpeed;
+    std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
 protected:
     void loadChunk(YAML::Node);
     void loadCollide(YAML::Node);
     void loadEvent(YAML::Node);
+    void loadAttactObject(YAML::Node);
     void loadMap();
 public: 
     Game(Frame*, Rectangle);
