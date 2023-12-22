@@ -4,19 +4,21 @@
     "file": "test.yaml"
     "w": 100
     "h": 10 
+    "velocity": 0.2
     "probabilty": 50
   - 
     "file": "test2.yaml"
     "w": 100 
     "h": 10 
+    "velocity": 0.2
     "probabilty": 50
 "object": 
   -
     "path": "test.yaml"
     "main": true
-    "x": 20
-    "y": 20
-    "w": 10
+    "x": 46
+    "y": 70
+    "w": 8 
     "h": 10
   -
     "path": "cow.yaml"
@@ -31,7 +33,6 @@
   - 
     "chunk": 0 
     "object": [1, 10] # each 1 second there is 10% to generate object 1
-    "velocity": [0.5, 1] # random in range 0.5% -> 1%
 "control": 
   -
     "key": ["s"]

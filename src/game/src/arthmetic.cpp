@@ -5,7 +5,7 @@ void Game::draw()
 
     drawNested();
 
-    for(auto i = chunks.rbegin(); i != chunks.rend(); ++i)
+    for(auto i = chunks.begin(); i != chunks.end(); ++i)
     {
         (*i)->draw();
     }

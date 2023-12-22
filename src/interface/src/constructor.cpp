@@ -29,6 +29,16 @@ Interface::Interface(Interface* other) : Container(other)
         rel.height = i->getRelative()[3];
         containers.push_back(new Container(i, this, rel));
     }
+
+    for(auto i : other->visiter)
+    {
+        Rectangle rel;
+        rel.x = 1;
+        rel.y = -0.375;
+        rel.width = i->getRelative()[2];
+        rel.height = i->getRelative()[3];
+        visiter.push_back(new Container(i, this, rel));
+    }
 }
 
 Interface::Interface(Interface* other, Rectangle rect) : Container(other, rect)
@@ -51,6 +61,15 @@ Interface::Interface(Interface* other, Rectangle rect) : Container(other, rect)
         rel.height = i->getRelative()[3];
         containers.push_back(new Container(i, this, rel));
     }
+    for(auto i : other->visiter)
+    {
+        Rectangle rel;
+        rel.x = 1;
+        rel.y = -0.375;
+        rel.width = i->getRelative()[2];
+        rel.height = i->getRelative()[3];
+        visiter.push_back(new Container(i, this, rel));
+    }
 }
 
 Interface::Interface(Interface* other, Frame* frame, Rectangle rect) : Container(other, frame, rect)
@@ -72,6 +91,15 @@ Interface::Interface(Interface* other, Frame* frame, Rectangle rect) : Container
         rel.width = i->getRelative()[2];
         rel.height = i->getRelative()[3];
         containers.push_back(new Container(i, this, rel));
+    }
+    for(auto i : other->visiter)
+    {
+        Rectangle rel;
+        rel.x = 1;
+        rel.y = -0.375;
+        rel.width = i->getRelative()[2];
+        rel.height = i->getRelative()[3];
+        visiter.push_back(new Container(i, this, rel));
     }
 }
 
