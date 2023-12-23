@@ -56,7 +56,7 @@ void Chunk::generateEntity()
 {
 
     if(visiter.empty()) return;
-    float x = GetRandomValue(0, 5) / 10.0;
+    float x = GetRandomValue(-40, 10);
     
     while(x < 0.9)
     {
