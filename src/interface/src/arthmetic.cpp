@@ -16,14 +16,6 @@ void Interface::drawContainers()
     }
 }
 
-void Interface::drawVisiter()
-{
-    for(auto& child : visiter)
-    {
-        child->draw();
-    }
-}
-
 void Interface::draw()
 {
     Container::draw();
@@ -32,6 +24,5 @@ void Interface::draw()
 
     drawContainers();
 
-    drawVisiter();
 
 }

@@ -76,7 +76,7 @@ void Game::loadMap()
         rel.x = 0;
         rel.y = (1.01 - rel.height);
 
-        Interface* chunk = new Interface(cache[id], this, rel);
+        Chunk* chunk = new Chunk(cache[id], this, rel);
         chunks.push_front(chunk);
     }
     while(chunks.front()->getRelative()[1] > 0)
@@ -88,7 +88,7 @@ void Game::loadMap()
         rel.y = (chunks.front()->getRelative()[1] + 0.005 - rel.height);
 
         int id = GetRandomValue(0, cache.size() - 1);
-        Interface* chunk = new Interface(cache[id], this, rel);
+        Chunk* chunk = new Chunk(cache[id], this, rel);
         chunks.push_front(chunk);
     }
 }
@@ -110,7 +110,7 @@ void Game::loadChunk(YAML::Node node)
         chunk->linkContent(path);
         cache.push_back(chunk);
         while(--repeat > 0) 
-            cache.push_back(new Interface(cache[0]));
+            cache.push_back(new Chunk(cache[0]));
     }
 }
 

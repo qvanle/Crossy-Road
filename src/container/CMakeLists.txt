@@ -5,6 +5,7 @@ add_library(
     src/constructor.cpp
     src/destructor.cpp
     src/arthmetic.cpp
+    src/overlap.cpp
     src/action/changesprite.cpp
 )
 

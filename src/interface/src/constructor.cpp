@@ -29,16 +29,6 @@ Interface::Interface(Interface* other) : Container(other)
         rel.height = i->getRelative()[3];
         containers.push_back(new Container(i, this, rel));
     }
-
-    for(auto i : other->visiter)
-    {
-        Rectangle rel;
-        rel.x = 1;
-        rel.y = -0.375;
-        rel.width = i->getRelative()[2];
-        rel.height = i->getRelative()[3];
-        visiter.push_back(new Container(i, this, rel));
-    }
 }
 
 Interface::Interface(Interface* other, Rectangle rect) : Container(other, rect)
@@ -61,15 +51,6 @@ Interface::Interface(Interface* other, Rectangle rect) : Container(other, rect)
         rel.height = i->getRelative()[3];
         containers.push_back(new Container(i, this, rel));
     }
-    for(auto i : other->visiter)
-    {
-        Rectangle rel;
-        rel.x = 1;
-        rel.y = -0.375;
-        rel.width = i->getRelative()[2];
-        rel.height = i->getRelative()[3];
-        visiter.push_back(new Container(i, this, rel));
-    }
 }
 
 Interface::Interface(Interface* other, Frame* frame, Rectangle rect) : Container(other, frame, rect)
@@ -91,15 +72,6 @@ Interface::Interface(Interface* other, Frame* frame, Rectangle rect) : Container
         rel.width = i->getRelative()[2];
         rel.height = i->getRelative()[3];
         containers.push_back(new Container(i, this, rel));
-    }
-    for(auto i : other->visiter)
-    {
-        Rectangle rel;
-        rel.x = 1;
-        rel.y = -0.375;
-        rel.width = i->getRelative()[2];
-        rel.height = i->getRelative()[3];
-        visiter.push_back(new Container(i, this, rel));
     }
 }
 
@@ -180,23 +152,6 @@ void Interface::loadControl(YAML::Node node)
     }
 }
 
-void Interface::addVisiter(Container* obj)
-{
-    Rectangle rel;
-    rel.x = obj->getRelative()[0];
-    rel.y = obj->getRelative()[1];
-    rel.width = obj->getRelative()[2];
-    rel.height = obj->getRelative()[3];
-
-    Container* c = new Container(obj, this, rel);
-    visiter.push_back(c);
-}
-
-void Interface::addVisiter(Container* obj, Rectangle rel)
-{
-    Container* c = new Container(obj, this, rel);
-    visiter.push_back(c);
-}
 
 Container* Interface::getContainers(int id)
 {

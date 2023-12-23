@@ -13,7 +13,6 @@ private:
     friend class moveObjectAction;
 
     std::vector<Container*> containers;
-    std::vector<Container*> visiter;
     std::vector<Interface*> nested;
     std::vector<KeyStroke*> keystrokes;
 protected:
@@ -22,7 +21,6 @@ protected:
 
     void drawNested();
     void drawContainers();
-    void drawVisiter();
 
 public: 
     Interface(Frame*, Rectangle);
@@ -32,8 +30,6 @@ public:
 
     ~Interface();
 
-    void addVisiter(Container*);
-    void addVisiter(Container*, Rectangle);
     Container* getContainers(int);
 
     std::string linkContent(std::string path) override;

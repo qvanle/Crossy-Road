@@ -248,3 +248,13 @@ std::string Container::getName()
 {
     return name;
 }
+
+void Container::setProbability(int prob)
+{
+    probability = prob;
+}
+
+int Container::getProbability()
+{
+    return probability;
+}

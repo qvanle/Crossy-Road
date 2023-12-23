@@ -13,7 +13,4 @@ Interface::~Interface()
 
     for (auto& i : keystrokes) 
         delete i;
-
-    for (auto& i : visiter) 
-        delete i;
 }

@@ -10,13 +10,14 @@
 #include <container.hpp>
 #include <keystroke.hpp>
 #include <interface.hpp>
+#include <chunk.hpp>
 
 class Game : public Interface
 {
 private: 
     friend class moveChunksAction;
-    std::deque<Interface*> chunks;
-    std::vector<Interface*> cache;
+    std::deque<Chunk*> chunks;
+    std::vector<Chunk*> cache;
     fPoint mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
 protected:

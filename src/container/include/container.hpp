@@ -13,6 +13,7 @@ private:
     friend class changeImageAction;
     static int id_count;
     int instance_id;
+    int probability;
 
     std::vector<Sprite> sprites;
     std::string name;
@@ -33,10 +34,19 @@ public:
     virtual std::string linkContent(std::string);
     virtual std::string linkContentAbsolute(std::string);
     std::string getName();
+
+    void setProbability(int);
+    int getProbability();
     
     void chooseSprite(int);
     void chooseImage(int);
     void chooseImage(int, int);
+
+    bool isOverlapping(fPoint);
+    bool isOverlapping(Rectangle);
+    bool isOverlapping(Container*);
+    float OverlappingArea(Rectangle);
+    float OverlappingArea(Container*);
 
     virtual void draw();
     void show();

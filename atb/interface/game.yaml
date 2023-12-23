@@ -1,4 +1,5 @@
 "name": "game" # require
+
 "chunk": 
   - 
     "file": "test.yaml"
@@ -12,27 +13,35 @@
     "h": 10 
     "velocity": 0.2
     "probabilty": 50
+
 "object": 
   -
     "path": "test.yaml"
-    "main": true
     "x": 46
     "y": 70
     "w": 8 
     "h": 10
   -
     "path": "cow.yaml"
-    "main": true
     "x": 40
     "y": 40
     "w": 10
     "h": 10 
+
 "event": 
   "map-speed": [0, 0.003] # 0.02% per 20 milisecond 
+
+"collide": 
+  - 
+    "x": 0 
+    "y": 1
+    "action": "no-touch"
+
 "attach-object": 
   - 
     "chunk": 0 
     "object": [1, 10] # each 1 second there is 10% to generate object 1
+
 "control": 
   -
     "key": ["s"]
