@@ -18,6 +18,7 @@ Chunk::Chunk(Chunk* other) : Interface(other)
         rel.height = i->getRelative()[3];
         visiter.push_back(new Container(i, this, rel));
     }
+    velocity = other->velocity;
     generateEntity();
 }
 
@@ -32,6 +33,7 @@ Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
         rel.height = i->getRelative()[3];
         visiter.push_back(new Container(i, this, rel));
     }
+    velocity = other->velocity;
     generateEntity();
 }
 
@@ -46,6 +48,7 @@ Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, fram
         rel.height = i->getRelative()[3];
         visiter.push_back(new Container(i, this, rel));
     }
+    velocity = other->velocity;
     generateEntity();
 }
 
@@ -112,4 +115,9 @@ void Chunk::addVisiter(Container* obj, int prob, Rectangle rel)
     Container* c = new Container(obj, this, rel);
     c->setProbability(prob);
     visiter.push_back(c);
+}
+
+void Chunk::setVelocity(fPoint vel)
+{
+    velocity = vel;
 }

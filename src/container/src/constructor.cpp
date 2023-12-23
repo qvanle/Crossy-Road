@@ -244,6 +244,34 @@ void Container::chooseImage(int index, int index2)
     focus[1] = index2;
 }
 
+void Container::nextImage()
+{
+    if(sprites.empty()) return;
+    focus[1]++;
+    if(focus[1] >= sprites.at(focus[0]).size()) focus[1] = 0;
+}
+
+void Container::prevImage()
+{
+    if(sprites.empty()) return;
+    focus[1]--;
+    if(focus[1] < 0) focus[1] = sprites.at(focus[0]).size() - 1;
+}
+
+void Container::nextSprite()
+{
+    if(sprites.empty()) return;
+    focus[0]++;
+    if(focus[0] >= sprites.size()) focus[0] = 0;
+}
+
+void Container::prevSprite()
+{
+    if(sprites.empty()) return;
+    focus[0]--;
+    if(focus[0] < 0) focus[0] = sprites.size() - 1;
+}
+
 std::string Container::getName()
 {
     return name;

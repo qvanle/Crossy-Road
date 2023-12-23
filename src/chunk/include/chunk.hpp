@@ -9,15 +9,19 @@
 class Chunk : public Interface 
 {
 private: 
+    friend class moveEntityAction;
     fPoint velocity;
     std::vector<Container*> visiter;
     std::deque<Container*> Entity;
     std::chrono::time_point<std::chrono::system_clock> spawnClock;
+    std::chrono::time_point<std::chrono::system_clock> moveClock;
     constexpr static std::chrono::duration<double> spawnTime = std::chrono::duration<double>(1.0);
+    constexpr static std::chrono::duration<double> moveTime = std::chrono::duration<double>(0.1);
 
 protected:
     void drawEntity();
     Container* randomEntity();
+    void movingEntity();
 public: 
     Chunk(Frame*, Rectangle);
     Chunk(Chunk*);
@@ -31,11 +35,24 @@ public:
     void addVisiter(Container*, int, Rectangle);
     void generateEntity();
 
+    void setVelocity(fPoint);
+
     std::string linkContent(std::string path) override;
     Action* getRuntimeEvent() override;
 
     void draw() override;
 };
 
+class moveEntityAction : public Action
+{
+private: 
+    Chunk* chunk;
+public:
+    moveEntityAction(Chunk*);
+    ~moveEntityAction();
+
+    void execute() override;
+    Action* clone() override;
+};
 #endif 
 

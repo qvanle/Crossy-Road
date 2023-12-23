@@ -108,6 +108,7 @@ void Game::loadChunk(YAML::Node node)
 
         Chunk* chunk = new Chunk(this, {x, y, w, h}); 
         chunk->linkContent(path);
+        chunk->setVelocity({0.002, 0});
         cache.push_back(chunk);
         while(--repeat > 0) 
             cache.push_back(new Chunk(cache[0]));

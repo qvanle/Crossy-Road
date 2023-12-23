@@ -25,6 +25,16 @@ Action* Game::getRuntimeEvent()
     if(packet == nullptr) packet = new PacketAction();
     packet->addAction(action);
 
+    for(auto i : chunks)
+    {
+        action = i->getRuntimeEvent();
+        if(action == nullptr) 
+            continue;
+        if(packet == nullptr) 
+            packet = new PacketAction();
+        packet->addAction(action);
+    }
+
     mapSpeedClock = std::chrono::system_clock::now();
 
     return packet;

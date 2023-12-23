@@ -41,6 +41,10 @@ public:
     void chooseSprite(int);
     void chooseImage(int);
     void chooseImage(int, int);
+    void nextImage();
+    void prevImage();
+    void nextSprite();
+    void prevSprite();
 
     bool isOverlapping(fPoint);
     bool isOverlapping(Rectangle);
