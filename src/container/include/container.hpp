@@ -2,11 +2,14 @@
 #define CONTAINER_HPP
 
 #include <vector>
-#include <memory>
 
 #include <visual.hpp>
 #include <frame.hpp>
 #include <action.hpp>
+#include <const/datatype.hpp>
+#include <const/path/atb.hpp>
+#include <file.hpp>
+
 
 class Container : public Frame
 {
@@ -14,8 +17,9 @@ private:
     friend class changeImageAction;
     static int id_count;
     int instance_id;
+    int probability;
 
-    std::shared_ptr< std::vector<Sprite> > sprites;
+    std::vector<Sprite> sprites;
     std::string name;
     iPoint focus;
     bool visible;
@@ -34,10 +38,23 @@ public:
     virtual std::string linkContent(std::string);
     virtual std::string linkContentAbsolute(std::string);
     std::string getName();
+
+    void setProbability(int);
+    int getProbability();
     
     void chooseSprite(int);
     void chooseImage(int);
     void chooseImage(int, int);
+    void nextImage();
+    void prevImage();
+    void nextSprite();
+    void prevSprite();
+
+    bool isOverlapping(fPoint);
+    bool isOverlapping(Rectangle);
+    bool isOverlapping(Container*);
+    float OverlappingArea(Rectangle);
+    float OverlappingArea(Container*);
 
     virtual void draw();
     void show();
@@ -46,8 +63,8 @@ public:
     bool isVisible();
     int getInstanceId();
 
-    virtual Action* react();
-    virtual Action* runtimeEvent();
+    virtual PacketAction* react();
+    virtual PacketAction* getRuntimeEvent();
 };
 class changeImageAction : public Action
 {

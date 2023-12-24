@@ -1,6 +1,6 @@
 #include "container.hpp"
 #include <object.hpp>
-Action* Object::react() 
+PacketAction* Object::react() 
 {
     if(std::chrono::steady_clock::now() < waitUntil) 
         return nullptr;
@@ -9,7 +9,9 @@ Action* Object::react()
         Action* a = strokes[i].stroke->react();
         if(a == nullptr) continue;
         else strokes[i].stroke->nextAction();
-        return a;
+        PacketAction* packet = new PacketAction(); 
+        packet->addAction(a);
+        return packet;
     }
 
 

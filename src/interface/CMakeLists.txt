@@ -21,3 +21,6 @@ target_link_libraries(${PROJECT_NAME} PUBLIC frame::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC container::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC object::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC chunk::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC button::lib)
+

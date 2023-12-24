@@ -10,6 +10,7 @@ void Window::run() {
         sound_effect();
         getUserEvent();
         getRuntimeEvent();
+        userActing();
         immediateActing();
     }
 }
@@ -35,30 +36,51 @@ void Window::getUserEvent()
     // alt + F4 to exit 
     if (IsKeyDown(KEY_LEFT_ALT) && IsKeyDown(KEY_F4))
     {
-        immediate_pool.push(new CloseAction(this));
+        immediate_user_pool.push(new CloseAction(this));
     }
     if (WindowShouldClose())
     {
-        immediate_pool.push(new CloseAction(this));
+        immediate_user_pool.push(new CloseAction(this));
     }
 
     if (IsWindowResized() && !IsWindowFullscreen())
     {
         int width = GetScreenWidth();
         int height = GetScreenHeight();
-        immediate_pool.push(new resizeAction(this, width, height));
+        immediate_user_pool.push(new resizeAction(this, width, height));
     }
     
-    Action* action = UI.react();
+    PacketAction* action = UI.react();
     if(action != nullptr) 
     {
         if(!action->isRequest()) 
-            immediate_pool.push(action);
+            immediate_user_pool.push(action);
     }
+
+    // // button event
+    // action = button->react();
+    // if(action != nullptr) 
+    // {
+    //     if(!action->isRequest()) 
+    //         {
+    //             immediate_pool.push(action);
+            
+    //         }
+    // }
 }
 
 void Window::getRuntimeEvent()
 {
+    if( Wcontent.runtime_delay >  std::chrono::steady_clock::now() - Wcontent.runtime_clock)
+    {
+        return ;
+    }
+    Wcontent.runtime_clock = std::chrono::steady_clock::now();
+    Action* action = UI.getRuntimeEvent();
+    if(action != nullptr) 
+    {
+        immediate_pool.push(action);
+    }
 }
 
 void Window::sound_effect()

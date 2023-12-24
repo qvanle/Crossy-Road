@@ -1,3 +1,4 @@
+#include "action.hpp"
 #include <window.hpp>
 
 Window::UI::UI()
@@ -17,9 +18,17 @@ void Window::UI::draw()
     interface->draw();
 }
 
-Action* Window::UI::react()
+PacketAction* Window::UI::react()
 {
-    Action* act = interface->react();
+    PacketAction* act = interface->react();
+    if(act != nullptr) return act;
+
+    return act;
+}
+
+PacketAction* Window::UI::getRuntimeEvent() 
+{
+    PacketAction* act = interface->getRuntimeEvent();
     if(act != nullptr) return act;
 
     return act;

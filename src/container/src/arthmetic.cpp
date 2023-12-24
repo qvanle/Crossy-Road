@@ -1,10 +1,11 @@
+#include "action.hpp"
 #include <container.hpp>
 
 void Container::draw()
 {
-    if(!sprites) return;
+    if(sprites.empty()) return;
     if(!visible) return;
-    (*sprites)[focus[0]][focus[1]]->draw();
+    sprites[focus[0]][focus[1]]->draw();
 }
 
 void Container::show()
@@ -32,12 +33,12 @@ int Container::getInstanceId()
     return instance_id;
 }
 
-Action* Container::react()
+PacketAction* Container::react()
 {
     return nullptr;
 }
 
-Action* Container::runtimeEvent()
+PacketAction* Container::getRuntimeEvent()
 {
     return nullptr;
 }

@@ -15,6 +15,7 @@
 #include <container.hpp>
 #include <object.hpp>
 #include <interface.hpp>
+#include <button.hpp>
 
 
 class Window 
@@ -39,7 +40,8 @@ private:
         Interface* top();
 
         void draw();
-        Action* react();
+        PacketAction* react();
+        PacketAction* getRuntimeEvent();
 
     };
     class ActionPool 
@@ -50,6 +52,7 @@ private:
         ActionPool() = default;
         ~ActionPool();
         void push(Action* act);
+        void push(PacketAction* act);
         Action* front();
         Action* pop();
         bool empty() const;
@@ -65,6 +68,8 @@ private:
 
         std::chrono::duration<double> input_delay;
         std::chrono::time_point<std::chrono::steady_clock> input_clock;
+        std::chrono::duration<double> runtime_delay;
+        std::chrono::time_point<std::chrono::steady_clock> runtime_clock;
     };
     struct UI 
     {
@@ -73,7 +78,8 @@ private:
         UI();
         ~UI();
         void draw();
-        Action* react();
+        PacketAction* react();
+        PacketAction* getRuntimeEvent();
     };
 
     friend class CloseAction;
@@ -81,7 +87,7 @@ private:
 
     WinContent Wcontent;
     UI UI;
-    ActionPool immediate_pool, request_pool;
+    ActionPool immediate_user_pool, immediate_pool, request_pool;
 
 protected:
     void draw();
@@ -89,10 +95,12 @@ protected:
     void getRuntimeEvent();
     void sound_effect();
     void immediateActing();
+    void userActing();
     void requestActing();
 
     void initRaylib(YAML::Node node);
     void loadInterface(YAML::Node node);
+    void loadGame(YAML::Node node);
 public:
     Window();
     Window(std::string path);

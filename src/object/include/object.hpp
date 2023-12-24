@@ -1,10 +1,10 @@
 #ifndef OBJECT_HPP 
 #define OBJECT_HPP
 
+#include "action.hpp"
 #include <container.hpp>
 #include <keystroke.hpp>
 #include <chrono>
-
 class Object : public Container
 {
 private: 
@@ -29,7 +29,7 @@ public:
     virtual std::string linkContent(std::string) override;
     virtual std::string linkContentAbsolute(std::string) override;
     
-    virtual Action* react() override;
+    virtual PacketAction* react() override;
     void draw() override;
 };
 

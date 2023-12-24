@@ -1,10 +1,17 @@
 #include <visual.hpp>
 
+void Visual::deleteTexture2D(Texture2D*& texture)
+{
+    if(texture != nullptr)
+    {
+        UnloadTexture(*texture);
+        texture = nullptr;
+    }
+}
+
 Visual::~Visual()
 {
-    if(m_texture != nullptr)
-        UnloadTexture(*m_texture);
-    delete m_texture;
+    m_texture.reset();
 }
 
 void deleteSprite(Sprite sprite)
