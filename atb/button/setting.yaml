@@ -1,30 +1,31 @@
-"name": "button" 
+"name": "settings" 
 
 "textures": 
   -
-    "path": "button/release_mybut.png"
+    "path": "buttons/settings_normal.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
         "axis": "horizontal" 
   -
-    "path": "fire.png"
+    "path": "buttons/settings_hover.png"
     "resize": [0.5, 0.5]
     "graphics": 
       -
         "axis": "horizontal" 
   -
-    "path": "blast.png"
+    "path": "buttons/settings_clicked.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
-        "axis": "horizontal" 
+        "axis": "horizontal"
   -
-    "path": "45908.png"
+    "path": "buttons/settings_clicked.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
-        "axis": "horizontal" 
+        "axis": "horizontal"
+         
 "events": 
   "release":
     "sprite": [[0, 0, 70]]

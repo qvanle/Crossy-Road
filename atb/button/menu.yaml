@@ -1,30 +1,31 @@
-"name": "button" 
+"name": "menu" 
 
 "textures": 
   -
-    "path": "button/release_mybut.png"
+    "path": "buttons/menu_background.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
         "axis": "horizontal" 
   -
-    "path": "fire.png"
+    "path": "buttons/menu_background.png"
     "resize": [0.5, 0.5]
     "graphics": 
       -
         "axis": "horizontal" 
   -
-    "path": "blast.png"
+    "path": "buttons/menu_background.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
-        "axis": "horizontal" 
+        "axis": "horizontal"
   -
-    "path": "45908.png"
+    "path": "buttons/menu_background.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
-        "axis": "horizontal" 
+        "axis": "horizontal"
+         
 "events": 
   "release":
     "sprite": [[0, 0, 70]]

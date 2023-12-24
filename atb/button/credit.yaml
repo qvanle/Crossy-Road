@@ -1,30 +1,31 @@
-"name": "button" 
+"name": "credit" 
 
 "textures": 
   -
-    "path": "button/release_mybut.png"
+    "path": "buttons/credits_normal.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
         "axis": "horizontal" 
   -
-    "path": "fire.png"
+    "path": "buttons/credits_hover.png"
     "resize": [0.5, 0.5]
     "graphics": 
       -
         "axis": "horizontal" 
   -
-    "path": "blast.png"
+    "path": "buttons/credits_clicked.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
-        "axis": "horizontal" 
+        "axis": "horizontal"
   -
-    "path": "45908.png"
+    "path": "buttons/credits_clicked.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
-        "axis": "horizontal" 
+        "axis": "horizontal"
+         
 "events": 
   "release":
     "sprite": [[0, 0, 70]]
