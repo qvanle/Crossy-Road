@@ -1,7 +1,7 @@
-"name": "railway" # require
+"name": "Backgr" # require
 "textures":  # require
   - 
-    "path": "railway.png"  # require
+    "path": "Background.png"  # require
     "graphics":  #require
       -
         "x": 00
