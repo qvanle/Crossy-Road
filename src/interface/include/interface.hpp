@@ -1,6 +1,7 @@
 #ifndef INTERFACE_HPP
 #define INTERFACE_HPP
 
+#include "action.hpp"
 #include <raylib.h>
 
 #include <frame.hpp>
@@ -36,8 +37,8 @@ public:
     std::string linkContent(std::string path) override;
     std::string linkContentAbsolute(std::string path) override;
 
-    Action* react() override;
-    Action* getRuntimeEvent() override;
+    PacketAction* react() override;
+    PacketAction* getRuntimeEvent() override;
     void draw() override;
 };
 

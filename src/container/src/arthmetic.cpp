@@ -1,3 +1,4 @@
+#include "action.hpp"
 #include <container.hpp>
 
 void Container::draw()
@@ -32,12 +33,12 @@ int Container::getInstanceId()
     return instance_id;
 }
 
-Action* Container::react()
+PacketAction* Container::react()
 {
     return nullptr;
 }
 
-Action* Container::getRuntimeEvent()
+PacketAction* Container::getRuntimeEvent()
 {
     return nullptr;
 }

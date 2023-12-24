@@ -63,8 +63,8 @@ public:
     bool isVisible();
     int getInstanceId();
 
-    virtual Action* react();
-    virtual Action* getRuntimeEvent();
+    virtual PacketAction* react();
+    virtual PacketAction* getRuntimeEvent();
 };
 class changeImageAction : public Action
 {

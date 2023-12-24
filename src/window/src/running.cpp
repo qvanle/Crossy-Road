@@ -50,7 +50,7 @@ void Window::getUserEvent()
         immediate_user_pool.push(new resizeAction(this, width, height));
     }
     
-    Action* action = UI.react();
+    PacketAction* action = UI.react();
     if(action != nullptr) 
     {
         if(!action->isRequest()) 

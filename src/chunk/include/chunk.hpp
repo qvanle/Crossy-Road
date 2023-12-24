@@ -1,6 +1,7 @@
 #ifndef CHUNK_HPP
 #define CHUNK_HPP 
 
+#include "action.hpp"
 #include <chrono> 
 #include <deque>
 
@@ -38,7 +39,7 @@ public:
     void setVelocity(fPoint);
 
     std::string linkContent(std::string path) override;
-    Action* getRuntimeEvent() override;
+    PacketAction* getRuntimeEvent() override;
 
     void draw() override;
 };

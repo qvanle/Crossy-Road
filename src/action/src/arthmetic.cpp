@@ -14,6 +14,11 @@ bool Action::isRequest()
     return false;
 }
 
+bool Action::isPackage()
+{
+    return false;
+}
+
 Action* Action::clone()
 {
     return this;
@@ -38,9 +43,33 @@ PacketAction::~PacketAction()
     actions.clear();
 }
 
+bool PacketAction::isPackage() 
+{
+    return true;
+}
+
 void PacketAction::addAction(Action* action)
 {
     actions.push_back(action);
+}
+
+void PacketAction::addAction(PacketAction* action) 
+{
+    for(auto i : action->actions)
+        actions.push_back(i);
+    action->actions.clear();
+}
+
+std::vector<Action*> PacketAction::unpack()
+{
+    std::vector<Action*> unpacked;
+
+    for(Action* a : actions) 
+        unpacked.push_back(a);
+
+    actions.clear();
+
+    return unpacked;
 }
 
 void PacketAction::execute()

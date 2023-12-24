@@ -5,6 +5,13 @@ void Window::ActionPool::push(Action* action)
     pool.push(action);
 }
 
+void Window::ActionPool::push(PacketAction* action)
+{
+    std::vector<Action*> unpacked = action->unpack();
+    for(Action* a : unpacked)
+        pool.push(a);
+}
+
 Window::ActionPool::~ActionPool()
 {
     while(!pool.empty())
