@@ -35,6 +35,9 @@ protected:
     bool isroot() const;
     void addSubframe(Frame* subframe);
     void removeSubframe(Frame* subframe);
+
+    void beginUpdate();
+    void endUpdate();
 public:
     Frame(Frame* par, Rectangle rel);
     Frame(Frame* self);

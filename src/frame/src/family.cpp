@@ -109,3 +109,13 @@ bool Frame::isroot() const
     std::lock_guard<std::mutex> lock(mtx);
     return parent == nullptr;
 }
+
+void Frame::beginUpdate()
+{
+    mtx.lock();
+}
+
+void Frame::endUpdate()
+{
+    mtx.unlock();
+}
