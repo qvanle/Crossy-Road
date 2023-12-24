@@ -5,86 +5,108 @@ void Window::run() {
     // last_chrismas = now() 
     Wcontent.setInputClock2Now();
     Wcontent.setRuntimeClock2Now();
+
+    //Wcontent.thread_pool.push_back(std::thread(&Window::draw, this));
+    Wcontent.thread_pool.push_back(std::thread(&Window::getUserEvent, this));
+    Wcontent.thread_pool.push_back(std::thread(&Window::getRuntimeEvent, this));
+    //Wcontent.thread_pool.push_back(std::thread(&Window::sound_effect, this));
+    Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
+    Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
+
     while (isRun())
     {
         draw();
-        sound_effect();
-        getUserEvent();
-        getRuntimeEvent();
-        userActing();
-        immediateActing();
+        systemEvent();
+        systemActing();
+        //getUserEvent();
+        //getRuntimeEvent();
+        //sound_effect();
+        //userActing();
+        //immediateActing();
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
     }
 }
 
 void Window::draw()
 {
-    // clear screen 
-    BeginDrawing();
-    ClearBackground(BLACK);
-    UI.draw();
-    EndDrawing();
-    
+    {
+        BeginDrawing();
+        UI.draw();
+        EndDrawing();
+    }
+
+}
+
+void Window::systemEvent() 
+{
+    {
+        // alt + F4 to exit 
+        if (IsKeyDown(KEY_LEFT_ALT) && IsKeyDown(KEY_F4))
+        {
+            system_pool.push(new CloseAction(this));
+        }
+        if (WindowShouldClose())
+        {
+            system_pool.push(new CloseAction(this));
+        }
+
+        if (IsWindowResized() && !IsWindowFullscreen())
+        {
+            int width = GetScreenWidth();
+            int height = GetScreenHeight();
+            system_pool.push(new resizeAction(this, width, height));
+        }
+    }
 }
 
 void Window::getUserEvent()
 {
-    // do nothing if input_delay is not finish 
-    if(!Wcontent.isInputDelayOver())
+    while(isRun())
     {
-        return ;
-    }
-    // alt + F4 to exit 
-    if (IsKeyDown(KEY_LEFT_ALT) && IsKeyDown(KEY_F4))
-    {
-        immediate_user_pool.push(new CloseAction(this));
-    }
-    if (WindowShouldClose())
-    {
-        immediate_user_pool.push(new CloseAction(this));
-    }
+        if(!Wcontent.isInputDelayOver())
+        {
+            continue;
+        }
 
-    if (IsWindowResized() && !IsWindowFullscreen())
-    {
-        int width = GetScreenWidth();
-        int height = GetScreenHeight();
-        immediate_user_pool.push(new resizeAction(this, width, height));
-    }
-    
-    PacketAction* action = UI.react();
-    if(action != nullptr) 
-    {
-        if(!action->isRequest()) 
-            immediate_user_pool.push(action);
-    }
+        PacketAction* action = UI.react();
+        if(action != nullptr) 
+        {
+            if(!action->isRequest()) 
+                immediate_user_pool.push(action);
+        }
 
-    // // button event
-    // action = button->react();
-    // if(action != nullptr) 
-    // {
-    //     if(!action->isRequest()) 
-    //         {
-    //             immediate_pool.push(action);
-            
-    //         }
-    // }
-    //
-    Wcontent.setInputClock2Now();
+        // // button event
+        // action = button->react();
+        // if(action != nullptr) 
+        // {
+        //     if(!action->isRequest()) 
+        //         {
+        //             immediate_pool.push(action);
+
+        //         }
+        // }
+        //
+        Wcontent.setInputClock2Now();
+    }
 }
 
 void Window::getRuntimeEvent()
 {
-    if(!Wcontent.isRuntimeDelayOver())
+    while(isRun())
     {
-        return ;
-    }
-    Action* action = UI.getRuntimeEvent();
-    if(action != nullptr) 
-    {
-        immediate_pool.push(action);
-    }
-    Wcontent.setRuntimeClock2Now();
-}
 
+        if(!Wcontent.isRuntimeDelayOver())
+        {
+            continue;
+        }
+        Action* action = UI.getRuntimeEvent();
+        if(action != nullptr) 
+        {
+            immediate_pool.push(action);
+        }
+        Wcontent.setRuntimeClock2Now();
+    }
+}
 void Window::sound_effect()
 {
     // do nothing

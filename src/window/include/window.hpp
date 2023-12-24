@@ -48,6 +48,7 @@ private:
     {
     private:
         std::queue<Action*> pool;
+        std::mutex mtx;
     public: 
         ActionPool() = default;
         ~ActionPool();
@@ -55,15 +56,18 @@ private:
         void push(PacketAction* act);
         Action* front();
         Action* pop();
-        bool empty() const;
+        bool empty();
     };
     class WinContent 
     {
     private:
         bool status;
-        std::vector<std::thread> thread_pool;
         std::chrono::time_point<std::chrono::steady_clock> input_clock;
         std::chrono::time_point<std::chrono::steady_clock> runtime_clock;
+
+        std::mutex status_mtx;
+        std::mutex input_mtx;
+        std::mutex runtime_mtx;
     public: 
         std::chrono::duration<double> input_delay;
         std::chrono::duration<double> runtime_delay;
@@ -71,17 +75,19 @@ private:
         float height;
         Color background;
         std::string title;
+
+        std::vector<std::thread> thread_pool;
         
         ~WinContent();
 
         void setStatus(bool);
-        bool getStatus() const;
+        bool getStatus();
 
         void setInputClock2Now();
         void setRuntimeClock2Now();
 
-        bool isInputDelayOver() const;
-        bool isRuntimeDelayOver() const;
+        bool isInputDelayOver();
+        bool isRuntimeDelayOver();
 
     };
     class UI 
@@ -89,6 +95,30 @@ private:
     private: 
         Frame* root_frame;
         InterfacePool* interface;
+
+        std::mutex mtx;
+        int reader;
+        int writer;
+        bool noRead;
+        bool noWrite;
+    protected: 
+        bool isReadable();
+        bool isWritable();
+
+        void reading();
+        bool tryReading();
+        void endReading();
+
+        void writing();
+        bool tryWriting();
+        void endWriting();
+
+        void DenyRead();
+        void AllowRead();
+
+        void DenyWrite();
+        void AllowWrite();
+
     public: 
         UI();
         ~UI();
@@ -97,7 +127,7 @@ private:
         PacketAction* getRuntimeEvent();
 
         void setRootFrame(Frame*);
-        Frame* getRootFrame() const;
+        Frame* getRootFrame();
         void resize(float, float);
 
         void setInterfacePool(InterfacePool*);
@@ -116,16 +146,18 @@ private:
 
     WinContent Wcontent;
     UI UI;
-    ActionPool immediate_user_pool, immediate_pool, request_pool;
+    ActionPool immediate_user_pool, immediate_pool, request_pool, system_pool;
 
 protected:
     void draw();
+    void systemEvent();
     void getUserEvent();
     void getRuntimeEvent();
     void sound_effect();
     void immediateActing();
     void userActing();
     void requestActing();
+    void systemActing();
 
     void initRaylib(YAML::Node node);
     void loadInterface(YAML::Node node);
