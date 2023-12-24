@@ -2,7 +2,7 @@
 
 "textures": 
   -
-    "path": "squirrel_map_LR.png"
+    "path": "animals/squirrel_map_LR.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
@@ -27,7 +27,7 @@
         "repeat": 4
         "axis": "horizontal" 
   -
-    "path": "squirrel_map_RL.png"
+    "path": "animals/squirrel_map_RL.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 

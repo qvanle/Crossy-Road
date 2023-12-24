@@ -1,8 +1,8 @@
-"name0": "rabbit" 
+"name": "rabbit" 
 
 "textures": 
   -
-    "path": "rabbit_map_LR.png"
+    "path": "animals/rabbit_map_LR.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
@@ -10,24 +10,10 @@
         "y": 0
         "w": 20
         "h": 33.333333333333334
-        "repeat": 5
-        "axis": "horizontal" 
-      - 
-        "x": 0
-        "y": 33.333333333333334
-        "w": 20
-        "h": 33.333333333333334
-        "repeat": 5
-        "axis": "horizontal" 
-      - 
-        "x": 0
-        "y": 66.66666666666667
-        "w": 20
-        "h": 33.333333333333334
-        "repeat": 4
+        "repeat": 14
         "axis": "horizontal" 
   -
-    "path": "rabbit_map_RL.png"
+    "path": "animals/rabbit_map_RL.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
@@ -35,21 +21,7 @@
         "y": 0
         "w": 20
         "h": 33.333333333333334
-        "repeat": 5
-        "axis": "horizontal" 
-      - 
-        "x": 0
-        "y": 33.333333333333334
-        "w": 20
-        "h": 33.333333333333334
-        "repeat": 5
-        "axis": "horizontal" 
-      - 
-        "x": 0
-        "y": 66.66666666666667
-        "w": 20
-        "h": 33.333333333333334
-        "repeat": 4
+        "repeat": 14
         "axis": "horizontal" 
 
 "focus": [0, 0]

@@ -22,11 +22,29 @@
     "w": 8 
     "h": 10
   -
-    "path": "cow.yaml"
+    "path": "entity/cow.yaml"
     "x": 40
     "y": 40
     "w": 10
+    "h": 10
+  - 
+    "path": "entity/duck.yaml"
+    "x": 60
+    "y": 40
+    "w": 10
     "h": 10 
+  - 
+    "path": "entity/rabbit.yaml"
+    "x": 80
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "testQ.yaml"
+    "x": 80
+    "y": 40
+    "w": 10
+    "h": 10  
 
 "event": 
   "map-speed": [0, 0.003] # 0.02% per 20 milisecond 
@@ -40,7 +58,13 @@
 "attach-object": 
   - 
     "chunk": 0 
-    "object": [1, 10] # each 1 second there is 10% to generate object 1
+    "object": [3, 10] # each 1 second there is 10% to generate object 1
+  - 
+    "chunk": 1 
+    "object": [3, 10] # each 1 second there is 10% to generate object 1
+  - 
+    "chunk": 0 
+    "object": [3, 10] # each 1 second there is 10% to generate object 1
 
 "control": 
   -

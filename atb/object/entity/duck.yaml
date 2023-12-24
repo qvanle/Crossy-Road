@@ -2,7 +2,7 @@
 
 "textures": 
   -
-    "path": "duck_map_LR.png"
+    "path": "animals/duck_map_LR.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
@@ -13,7 +13,7 @@
         "repeat": 6
         "axis": "horizontal" 
   -
-    "path": "duck_map_RL.png"
+    "path": "animals/duck_map_RL.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
