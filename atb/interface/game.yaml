@@ -44,8 +44,14 @@
     "x": 80
     "y": 40
     "w": 10
-    "h": 10  
-
+    "h": 10
+"button":
+  - 
+    "path": "test.yaml"
+    "x": 00
+    "y": 00
+    "w": 10
+    "h": 10
 "event": 
   "map-speed": [0, 0.003] # 0.02% per 20 milisecond 
 

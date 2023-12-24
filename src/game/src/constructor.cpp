@@ -51,6 +51,8 @@ std::string Game::linkContentAbsolute(std::string path)
     if(node["event"])
         loadEvent(node["event"]);
 
+    if(node["button"])
+        loadButton(node["button"]);
     return getName();
 }
 

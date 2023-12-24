@@ -1,4 +1,4 @@
-"name": "hehe" 
+"name": "test" 
 
 "textures": 
   -
@@ -24,7 +24,7 @@
     "resize": [0.5, 0.5]
     "graphics": 
       - 
-        "axis": "horizontal" 
+        "axis": "horizontal"
 "events": 
   "release":
     "sprite": [[0, 0, 70]]

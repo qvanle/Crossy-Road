@@ -74,7 +74,7 @@ protected:
 public:
     ButtonImage(Frame* parrent, Rectangle relative);
     ~ButtonImage();
-    void draw() ;
+    void draw();
     Action* react();
 
     void changeIndex(int newindex);

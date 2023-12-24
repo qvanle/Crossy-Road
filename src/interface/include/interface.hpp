@@ -6,6 +6,7 @@
 #include <frame.hpp>
 #include <container.hpp>
 #include <keystroke.hpp>
+#include <button.hpp>
 
 class Interface : public Container
 {
@@ -18,7 +19,7 @@ private:
 protected:
     void loadObject(YAML::Node);
     void loadControl(YAML::Node);
-
+    void loadButton(YAML::Node);
     void drawNested();
     void drawContainers();
 

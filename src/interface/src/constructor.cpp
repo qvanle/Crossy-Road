@@ -98,6 +98,9 @@ std::string Interface::linkContentAbsolute(std::string path)
     if(node["control"])
         loadControl(node["control"]);
 
+    if(node["button"])
+        loadButton(node["button"]);
+
 //    if(node["collide"])
 //        loadCollide(node["collide"]);
 
@@ -152,6 +155,22 @@ void Interface::loadControl(YAML::Node node)
     }
 }
 
+void Interface::loadButton(YAML::Node node)
+{
+    for(auto i : node) 
+    {
+        Rectangle rel({0, 0, 0, 0});
+        if(i["x"]) rel.x = i["x"].as<float>() / 100; 
+        if(i["y"]) rel.y = i["y"].as<float>() / 100;
+        if(i["w"]) rel.width = i["w"].as<float>() / 100;
+        if(i["h"]) rel.height = i["h"].as<float>() / 100;
+        ButtonImage *obj;
+        obj = new ButtonImage(this, rel);
+        obj->linkContent(i["path"].as<std::string>());
+        obj->show();
+        containers.push_back(obj);
+    }
+}
 
 Container* Interface::getContainers(int id)
 {

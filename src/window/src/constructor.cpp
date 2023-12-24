@@ -44,8 +44,6 @@ Window::Window(std::string path)
     {
         Wcontent.runtime_delay = std::chrono::duration<int>(40) / 1000.0;
     }
-    button = new ButtonImage(UI.root_frame, {0.5, 0.5, 0.5, 0.5});
-    button->linkContent("test.yaml");
 }
 
 

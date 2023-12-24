@@ -72,7 +72,6 @@ void ButtonImage::loadEvent(YAML::Node node)
             if(p.size() >= 3) 
                 delay = sprite[2].as<int>();
             actions.push_back(new changeImageAction(this, p));
-            std::cout<<"hover: " << p[0]<<" "<<p[1]<<std::endl;
         }
         this->hoverID = actions.size() - 1;
     }
@@ -88,7 +87,6 @@ void ButtonImage::loadEvent(YAML::Node node)
             if(p.size() >= 3) 
                 delay = sprite[2].as<int>();
             actions.push_back(new changeImageAction(this, p));
-            std::cout<<"release: " << p[0]<<" "<<p[1]<<std::endl;
 
         }
         this->releaseID = actions.size() - 1;
@@ -105,8 +103,6 @@ void ButtonImage::loadEvent(YAML::Node node)
             if(p.size() >= 3) 
                 delay = sprite[2].as<int>();
             actions.push_back(new changeImageAction(this, p));
-                        std::cout<<"clicked: " << p[0]<<" "<<p[1]<<std::endl;
-
         }
         this->clickedID = actions.size() - 1;
     }
@@ -122,9 +118,7 @@ void ButtonImage::loadEvent(YAML::Node node)
             if(p.size() >= 3) 
                 delay = sprite[2].as<int>();
             actions.push_back(new changeImageAction(this, p));
-                        std::cout<<"pressing: " << p[0]<<" "<<p[1]<<std::endl;
         }
         this->pressingID = actions.size() - 1;
-    }
-    std::cout<<actions.size()<<std::endl;
+    }  
 }
