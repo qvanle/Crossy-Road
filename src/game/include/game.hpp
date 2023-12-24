@@ -1,6 +1,7 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 
+#include "action.hpp"
 #include <deque>
 #include <chrono>
 
@@ -36,8 +37,8 @@ public:
 
     std::string linkContentAbsolute(std::string path) override;
 
-    Action* react() override;
-    Action* getRuntimeEvent() override;
+    PacketAction* react() override;
+    PacketAction* getRuntimeEvent() override;
     void draw() override;
 
 };

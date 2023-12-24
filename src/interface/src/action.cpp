@@ -1,6 +1,7 @@
+#include "action.hpp"
 #include <interface.hpp>
 
-Action* Interface::getRuntimeEvent()
+PacketAction* Interface::getRuntimeEvent()
 {
     PacketAction* packet = nullptr; 
         
@@ -34,7 +35,7 @@ Action* Interface::getRuntimeEvent()
     return packet;
 }
 
-Action* Interface::react()
+PacketAction* Interface::react()
 {
     if(!isVisible()) return nullptr;
     PacketAction* packet = nullptr;

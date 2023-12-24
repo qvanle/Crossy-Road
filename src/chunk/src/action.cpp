@@ -1,3 +1,4 @@
+#include "action.hpp"
 #include <chunk.hpp>
 
 Container* Chunk::randomEntity() 
@@ -22,18 +23,12 @@ void Chunk::movingEntity()
     }
 }
 
-Action* Chunk::getRuntimeEvent() 
+PacketAction* Chunk::getRuntimeEvent() 
 {
-    PacketAction* packet = nullptr;
-    Action* action = Interface::getRuntimeEvent();
-    if(action != nullptr) 
-    {
-        packet = new PacketAction();
-        packet->addAction(action);
-    }
+    PacketAction* packet = Interface::getRuntimeEvent();
     if(std::chrono::system_clock::now() - moveClock >= moveTime) 
     {
-        action = new moveEntityAction(this);
+        Action* action = new moveEntityAction(this);
         if(packet == nullptr) 
         {
             packet = new PacketAction();

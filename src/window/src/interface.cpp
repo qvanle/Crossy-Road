@@ -86,7 +86,7 @@ void Window::InterfacePool::draw()
     }
 }
 
-Action* Window::InterfacePool::react()
+PacketAction* Window::InterfacePool::react()
 {
     if(!inf.empty())
     {
@@ -95,7 +95,7 @@ Action* Window::InterfacePool::react()
     return nullptr;
 }
 
-Action* Window::InterfacePool::getRuntimeEvent()
+PacketAction* Window::InterfacePool::getRuntimeEvent()
 {
     if(!inf.empty())
     {

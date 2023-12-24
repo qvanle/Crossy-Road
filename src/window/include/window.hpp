@@ -39,8 +39,8 @@ private:
         Interface* top();
 
         void draw();
-        Action* react();
-        Action* getRuntimeEvent();
+        PacketAction* react();
+        PacketAction* getRuntimeEvent();
 
     };
     class ActionPool 
@@ -51,6 +51,7 @@ private:
         ActionPool() = default;
         ~ActionPool();
         void push(Action* act);
+        void push(PacketAction* act);
         Action* front();
         Action* pop();
         bool empty() const;
@@ -76,8 +77,8 @@ private:
         UI();
         ~UI();
         void draw();
-        Action* react();
-        Action* getRuntimeEvent();
+        PacketAction* react();
+        PacketAction* getRuntimeEvent();
     };
 
     friend class CloseAction;
