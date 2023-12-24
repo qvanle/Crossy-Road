@@ -63,11 +63,6 @@ public:
     bool isVisible();
     int getInstanceId();
 
-    int sizeSprite();
-    int SpriteSize(int);
-    void nextSprite();
-    void nextImageInSprite();
-    void nextImage();
     virtual Action* react();
     virtual Action* getRuntimeEvent();
 };
