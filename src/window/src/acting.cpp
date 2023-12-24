@@ -10,8 +10,13 @@ void Window::ActionPool::push(PacketAction* action)
 {
     std::lock_guard<std::mutex> lock(mtx);
     std::vector<Action*> unpacked = action->unpack();
-    for(Action* a : unpacked)
+    delete action;
+
+    for(Action*& a : unpacked)
+    {
         pool.push(a);
+    }
+
 }
 
 Window::ActionPool::~ActionPool()

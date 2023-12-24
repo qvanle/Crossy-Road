@@ -79,17 +79,6 @@ void Window::getUserEvent()
                 immediate_user_pool.push(action);
         }
 
-        // // button event
-        // action = button->react();
-        // if(action != nullptr) 
-        // {
-        //     if(!action->isRequest()) 
-        //         {
-        //             immediate_pool.push(action);
-
-        //         }
-        // }
-        //
         Wcontent.setInputClock2Now();
     }
 }
@@ -103,7 +92,7 @@ void Window::getRuntimeEvent()
         {
             continue;
         }
-        Action* action = UI.getRuntimeEvent();
+        PacketAction* action = UI.getRuntimeEvent();
         if(action != nullptr) 
         {
             immediate_pool.push(action);

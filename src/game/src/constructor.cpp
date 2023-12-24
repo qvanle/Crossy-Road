@@ -107,10 +107,12 @@ void Game::loadChunk(YAML::Node node)
         if(i["w"]) w = i["w"].as<float>() / 100;
         if(i["h"]) h = i["h"].as<float>() / 100;
         if(i["repeat"]) repeat = i["repeat"].as<int>();
+        fPoint speed = {0.002, 0};
+        if(i["velocity"]) speed = {i["velocity"][0].as<float>(), i["velocity"][1].as<float>()};
 
         Chunk* chunk = new Chunk(this, {x, y, w, h}); 
         chunk->linkContent(path);
-        chunk->setVelocity({0.002, 0});
+        chunk->setVelocity(speed);
         cache.push_back(chunk);
         while(--repeat > 0) 
             cache.push_back(new Chunk(cache[0]));

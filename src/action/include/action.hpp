@@ -14,6 +14,7 @@ public:
     virtual bool isPackage();
     virtual void execute() = 0;
     virtual Action* clone();
+    virtual std::vector<Action*> unpack();
 };
 
 class PacketAction : public Action
@@ -27,7 +28,7 @@ public:
     bool isPackage() override;
     void addAction(Action*);
     void addAction(PacketAction*);
-    std::vector<Action*> unpack();
+    std::vector<Action*> unpack() override;
     void execute() override;
     PacketAction* clone() override;
 };

@@ -24,6 +24,11 @@ Action* Action::clone()
     return this;
 }
 
+std::vector<Action*> Action::unpack()
+{
+    return std::vector<Action*> ();
+}
+
 
 PacketAction::PacketAction() : Action()
 {
