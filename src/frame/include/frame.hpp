@@ -28,9 +28,11 @@ private:
     Frame* parent;
     
     fRect relative;
+
+    mutable std::mutex mtx;
 protected:
     virtual void updateFrame(bool recursive = false);
-    bool isroot();
+    bool isroot() const;
     void addSubframe(Frame* subframe);
     void removeSubframe(Frame* subframe);
 public:

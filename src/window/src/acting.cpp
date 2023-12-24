@@ -16,11 +16,7 @@ void Window::ActionPool::push(PacketAction* action)
 
 Window::ActionPool::~ActionPool()
 {
-    while(!pool.empty())
-    {
-        delete pool.front();
-        pool.pop();
-    }
+    while(pop() != nullptr);
 }
 
 Action* Window::ActionPool::front()
@@ -32,6 +28,7 @@ Action* Window::ActionPool::front()
 Action* Window::ActionPool::pop()
 {
     std::lock_guard<std::mutex> lock(mtx);
+    if(pool.empty()) return nullptr;
     Action* action = pool.front();
     pool.pop();
     return action;
@@ -48,9 +45,9 @@ void Window::immediateActing()
 {
     while(isRun())
     {
-        if(immediate_pool.empty()) continue;
         Action* action = immediate_pool.pop();
-
+        if(action == nullptr) continue;
+        if(!isRun()) break;
         action->execute();
         delete action;
     }
@@ -60,9 +57,9 @@ void Window::userActing()
 {
     while(isRun())
     {
-        if(immediate_user_pool.empty()) continue;
         Action* action = immediate_user_pool.pop();
-
+        if(action == nullptr) continue;
+        if(!isRun()) break;
         action->execute();
         delete action;
     }
@@ -71,8 +68,9 @@ void Window::userActing()
 void Window::systemActing()
 {
     {
-        if(system_pool.empty()) return ;
         Action* action = system_pool.pop();
+        if(action == nullptr) return;
+        if(!isRun()) return;
         action->execute();
         delete action;
     }

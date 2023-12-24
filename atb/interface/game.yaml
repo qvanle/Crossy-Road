@@ -89,12 +89,6 @@
     "w": 10
     "h": 10
   - 
-    "path": "no_sfx.yaml"
-    "x": 00
-    "y": 30
-    "w": 10
-    "h": 10
-  - 
     "path": "resume.yaml"
     "x": 00
     "y": 40
@@ -110,12 +104,6 @@
     "path": "setting.yaml"
     "x": 00
     "y": 60
-    "w": 10
-    "h": 10
-  - 
-    "path": "sfx.yaml"
-    "x": 00
-    "y": 70
     "w": 10
     "h": 10
 "event": 
