@@ -44,6 +44,8 @@ Window::Window(std::string path)
     {
         Wcontent.runtime_delay = std::chrono::duration<int>(40) / 1000.0;
     }
+    button = new ButtonImage(UI.root_frame, {0.5, 0.5, 0.5, 0.5});
+    button->linkContent("test.yaml");
 }
 
 
@@ -58,7 +60,6 @@ void Window::initRaylib(YAML::Node config)
     InitWindow(Wcontent.width, Wcontent.height, Wcontent.title.c_str());
     SetTargetFPS(60);
     Wcontent.status = true;
-
     UI.root_frame = new Frame({0, 0, Wcontent.width, Wcontent.height});
 }
 

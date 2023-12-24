@@ -21,6 +21,8 @@ void Window::draw()
     BeginDrawing();
     ClearBackground(BLACK);
     UI.draw();
+    // test draw button
+    button->draw();
     EndDrawing();
     
 }
@@ -55,6 +57,17 @@ void Window::getUserEvent()
     {
         if(!action->isRequest()) 
             immediate_user_pool.push(action);
+    }
+
+    // button event
+    action = button->react();
+    if(action != nullptr) 
+    {
+        if(!action->isRequest()) 
+            {
+                immediate_pool.push(action);
+            
+            }
     }
 }
 

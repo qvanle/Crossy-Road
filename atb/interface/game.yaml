@@ -83,5 +83,21 @@
     "key": ["d"]
     "action": "move-object"
     "args": [0, 0.5, 0] 
+  -
+    "key": ["s"]
+    "action": "move-object"
+    "args": [2, 0, 0.5] 
+  - 
+    "key": ["w"] 
+    "action": "move-object"
+    "args": [02, 0, -0.5] 
+  - 
+    "key": ["a"]
+    "action": "move-object"
+    "args": [02, -0.5, 0] 
+  - 
+    "key": ["d"]
+    "action": "move-object"
+    "args": [02, 0.5, 0] 
 
 
