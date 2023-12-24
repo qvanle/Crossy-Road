@@ -57,29 +57,58 @@ private:
         Action* pop();
         bool empty() const;
     };
-    struct WinContent 
+    class WinContent 
     {
+    private:
+        bool status;
+        std::vector<std::thread> thread_pool;
+        std::chrono::time_point<std::chrono::steady_clock> input_clock;
+        std::chrono::time_point<std::chrono::steady_clock> runtime_clock;
+    public: 
+        std::chrono::duration<double> input_delay;
+        std::chrono::duration<double> runtime_delay;
         float width;
         float height;
         Color background;
         std::string title;
-        bool status;
-        std::vector<std::thread> thread_pool;
+        
+        ~WinContent();
 
-        std::chrono::duration<double> input_delay;
-        std::chrono::time_point<std::chrono::steady_clock> input_clock;
-        std::chrono::duration<double> runtime_delay;
-        std::chrono::time_point<std::chrono::steady_clock> runtime_clock;
+        void setStatus(bool);
+        bool getStatus() const;
+
+        void setInputClock2Now();
+        void setRuntimeClock2Now();
+
+        bool isInputDelayOver() const;
+        bool isRuntimeDelayOver() const;
+
     };
-    struct UI 
+    class UI 
     {
+    private: 
         Frame* root_frame;
         InterfacePool* interface;
+    public: 
         UI();
         ~UI();
         void draw();
         PacketAction* react();
         PacketAction* getRuntimeEvent();
+
+        void setRootFrame(Frame*);
+        Frame* getRootFrame() const;
+        void resize(float, float);
+
+        void setInterfacePool(InterfacePool*);
+
+        void load(Interface*);
+        void unload(Interface*);
+        Interface* getInterface(std::string);
+
+        void push(std::string);
+        std::string pop();
+        Interface* top();
     };
 
     friend class CloseAction;

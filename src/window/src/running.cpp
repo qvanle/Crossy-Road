@@ -3,7 +3,8 @@
 
 void Window::run() {
     // last_chrismas = now() 
-    Wcontent.input_clock = std::chrono::steady_clock::now();
+    Wcontent.setInputClock2Now();
+    Wcontent.setRuntimeClock2Now();
     while (isRun())
     {
         draw();
@@ -28,11 +29,10 @@ void Window::draw()
 void Window::getUserEvent()
 {
     // do nothing if input_delay is not finish 
-    if( Wcontent.input_delay >  std::chrono::steady_clock::now() - Wcontent.input_clock)
+    if(!Wcontent.isInputDelayOver())
     {
         return ;
     }
-    Wcontent.input_clock = std::chrono::steady_clock::now();
     // alt + F4 to exit 
     if (IsKeyDown(KEY_LEFT_ALT) && IsKeyDown(KEY_F4))
     {
@@ -67,20 +67,22 @@ void Window::getUserEvent()
             
     //         }
     // }
+    //
+    Wcontent.setInputClock2Now();
 }
 
 void Window::getRuntimeEvent()
 {
-    if( Wcontent.runtime_delay >  std::chrono::steady_clock::now() - Wcontent.runtime_clock)
+    if(!Wcontent.isRuntimeDelayOver())
     {
         return ;
     }
-    Wcontent.runtime_clock = std::chrono::steady_clock::now();
     Action* action = UI.getRuntimeEvent();
     if(action != nullptr) 
     {
         immediate_pool.push(action);
     }
+    Wcontent.setRuntimeClock2Now();
 }
 
 void Window::sound_effect()
@@ -90,10 +92,10 @@ void Window::sound_effect()
 
 bool Window::isRun()
 {
-    return Wcontent.status;
+    return Wcontent.getStatus();
 }
 
 bool Window::isClose()
 {
-    return !Wcontent.status;
+    return !Wcontent.getStatus();
 }
