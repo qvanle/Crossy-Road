@@ -40,6 +40,12 @@
     "w": 10
     "h": 10
   - 
+    "path": "entity/frog.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
     "path": "testQ.yaml"
     "x": 80
     "y": 40
@@ -115,6 +121,12 @@
   - 
     "path": "sfx.yaml"
     "x": 00
+    "y": 70
+    "w": 10
+    "h": 10
+  - 
+    "path": "pause.yaml"
+    "x": 20
     "y": 70
     "w": 10
     "h": 10
