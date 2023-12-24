@@ -22,6 +22,7 @@ add_subdirectory(button)
 add_subdirectory(chunk)
 add_subdirectory(object)
 add_subdirectory(game)
+add_subdirectory(inputbox)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC window::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)
