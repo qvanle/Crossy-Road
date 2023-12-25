@@ -15,6 +15,12 @@
     "y": 15
     "w": 50
     "h": 70
+  -
+    "file": "highscore.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
 "game": 
   "file": "game.yaml" 
   "x": 0
@@ -22,7 +28,7 @@
   "w": 100 
   "h": 100 
 
-"choose-interface": "difficultylevel"
+"choose-interface": "highscore"
 "input-delay": 60
 "runtime-delay": 30 
 

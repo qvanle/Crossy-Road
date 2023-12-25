@@ -1,0 +1,24 @@
+"name": "highscore" # require
+"textures":  # require
+  - 
+    "path": "highscore_background.png"  # require
+    "graphics":  #require
+      -
+        "x": 0
+        "y": 0
+        "w": 100
+        "h": 100
+        "gapX": 0  
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1
+    
+"button":
+  - 
+    "path": "newgame.yaml" # should be exit.yaml
+    "x": 80
+    "y": 1
+    "w": 20
+    "h": 20
