@@ -34,8 +34,13 @@ std::string Game::linkContentAbsolute(std::string path)
     else chooseImage(0, 0);
 
     if(node["object"]) 
+    {
         loadObject(node["object"]);
-
+        for(int i = 0; i < getContainersSize(); i++) 
+            getContainers(i)->hide();
+        main = getContainers(0);
+        main->show();
+    }
     if(node["collide"])
         loadCollide(node["collide"]);
 

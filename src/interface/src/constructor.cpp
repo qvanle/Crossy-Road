@@ -177,3 +177,8 @@ Container* Interface::getContainers(int id)
     if(id < 0 || id >= containers.size()) return nullptr;
     return containers[id];
 }
+
+int Interface::getContainersSize()
+{
+    return containers.size();
+}

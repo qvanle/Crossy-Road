@@ -19,6 +19,7 @@ private:
     friend class moveChunksAction;
     std::deque<Chunk*> chunks;
     std::vector<Chunk*> cache;
+    Container* main;
     fPoint mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
 protected:
