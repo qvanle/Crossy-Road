@@ -39,7 +39,7 @@ public:
     void setVelocity(fPoint);
 
     std::string linkContent(std::string path) override;
-    PacketAction* getRuntimeEvent() override;
+    Action* getRuntimeEvent() override;
 
     void draw() override;
 };

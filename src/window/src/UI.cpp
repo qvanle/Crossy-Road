@@ -20,19 +20,19 @@ void Window::UI::draw()
     endReading();
 }
 
-PacketAction* Window::UI::react()
+Action* Window::UI::react()
 {
     if(!tryReading()) return nullptr;
-    PacketAction* act = interface->react();
+    Action* act = interface->react();
     endReading();
 
     return act;
 }
 
-PacketAction* Window::UI::getRuntimeEvent() 
+Action* Window::UI::getRuntimeEvent() 
 {
     if(!tryReading()) return nullptr;
-    PacketAction* act = interface->getRuntimeEvent();
+    Action* act = interface->getRuntimeEvent();
     endReading();
 
     return act;

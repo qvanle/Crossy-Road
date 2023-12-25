@@ -40,8 +40,8 @@ private:
         Interface* top();
 
         void draw();
-        PacketAction* react();
-        PacketAction* getRuntimeEvent();
+        Action* react();
+        Action* getRuntimeEvent();
 
     };
     class ActionPool 
@@ -123,8 +123,8 @@ private:
         UI();
         ~UI();
         void draw();
-        PacketAction* react();
-        PacketAction* getRuntimeEvent();
+        Action* react();
+        Action* getRuntimeEvent();
 
         void setRootFrame(Frame*);
         Frame* getRootFrame();

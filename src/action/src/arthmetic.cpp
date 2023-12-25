@@ -1,4 +1,6 @@
 #include <action.hpp>
+#include <queue>
+#include <iostream>
 
 Action::Action()
 {
@@ -26,7 +28,7 @@ Action* Action::clone()
 
 std::vector<Action*> Action::unpack()
 {
-    return std::vector<Action*> ();
+    return std::vector<Action*> ({this});
 }
 
 
@@ -68,12 +70,28 @@ void PacketAction::addAction(PacketAction* action)
 std::vector<Action*> PacketAction::unpack()
 {
     std::vector<Action*> unpacked;
+    std::queue<PacketAction*> q;
 
-    for(Action* a : actions) 
-        unpacked.push_back(a);
+    q.push(this);
 
-    actions.clear();
+    while(!q.empty()) 
+    {
+        PacketAction* p = q.front();
+        q.pop();
 
+        for(Action* a : p->actions)
+        {
+            if(a->isPackage())
+            {
+                q.push((PacketAction*)a);
+            }
+            else
+            {
+                unpacked.push_back(a);
+            }
+        }
+        p->actions.clear();
+    }
     return unpacked;
 }
 

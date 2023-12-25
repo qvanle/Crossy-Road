@@ -69,13 +69,24 @@ void Window::getUserEvent()
     {
         if(!Wcontent.isInputDelayOver())
         {
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
             continue;
         }
 
-        PacketAction* action = UI.react();
+        Action* action = UI.react();
         if(action != nullptr) 
         {
-            if(!action->isRequest()) 
+            if(action->isPackage())
+            {
+                for(auto act : action->unpack()) 
+                {
+                    if(act->isRequest()) 
+                        request_pool.push(act);
+                    else 
+                        immediate_user_pool.push(act);
+                }
+            }
+            else if(!action->isRequest()) 
                 immediate_user_pool.push(action);
         }
 
@@ -90,12 +101,24 @@ void Window::getRuntimeEvent()
 
         if(!Wcontent.isRuntimeDelayOver())
         {
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
             continue;
         }
-        PacketAction* action = UI.getRuntimeEvent();
+        Action* action = UI.getRuntimeEvent();
         if(action != nullptr) 
         {
-            immediate_pool.push(action);
+            if(action->isPackage())
+            {
+                for(auto act : action->unpack()) 
+                {
+                    if(act->isRequest()) 
+                        request_pool.push(act);
+                    else 
+                        immediate_user_pool.push(act);
+                }
+            }
+            else if (!action->isRequest())
+                immediate_pool.push(action);
         }
         Wcontent.setRuntimeClock2Now();
     }

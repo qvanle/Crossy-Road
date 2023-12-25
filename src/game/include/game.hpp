@@ -37,8 +37,8 @@ public:
 
     std::string linkContentAbsolute(std::string path) override;
 
-    PacketAction* react() override;
-    PacketAction* getRuntimeEvent() override;
+    Action* react() override;
+    Action* getRuntimeEvent() override;
     void draw() override;
 
 };

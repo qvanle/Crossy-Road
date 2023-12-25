@@ -1,10 +1,16 @@
 #include "action.hpp"
 #include <interface.hpp>
 
-PacketAction* Interface::getRuntimeEvent()
+Action* Interface::getRuntimeEvent()
 {
-    PacketAction* packet = Container::getRuntimeEvent();
-    Action* action = nullptr;
+    PacketAction* packet = nullptr; 
+    Action* action = Container::getRuntimeEvent();
+
+    if(action != nullptr) 
+    {
+        packet = new PacketAction();
+        packet->addAction(action);
+    }
     
     for(auto i : nested)
     {
@@ -29,10 +35,18 @@ PacketAction* Interface::getRuntimeEvent()
     return packet;
 }
 
-PacketAction* Interface::react()
+Action* Interface::react()
 {
     if(!isVisible()) return nullptr;
-    PacketAction* packet = Container::react();
+    PacketAction* packet = nullptr; 
+    
+    Action* action = Container::react();
+    
+    if(action != nullptr) 
+    {
+        packet = new PacketAction();
+        packet->addAction(action);
+    }
 
     for(auto i : keystrokes)
     {
