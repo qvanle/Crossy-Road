@@ -5,13 +5,13 @@
     "file": "test.yaml"
     "w": 100
     "h": 10 
-    "velocity": [0.01, 0]
+    "velocity": [0.005, 0]
     "probabilty": 50
   - 
     "file": "test2.yaml"
     "w": 100 
     "h": 10 
-    "velocity": [0.01, 0]
+    "velocity": [0.005, 0]
     "probabilty": 50
 
 "object": 
@@ -107,7 +107,7 @@
     "w": 10
     "h": 10
 "event": 
-  "map-speed": [0, 0.003] # 0.02% per 20 milisecond 
+  "map-speed": [0, 0.001] # 0.02% per 20 milisecond 
 
 "collide": 
   - 
