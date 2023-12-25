@@ -3,6 +3,7 @@
 
 PacketAction* Interface::getRuntimeEvent()
 {
+    if(!isVisible()) return nullptr;
     PacketAction* packet = nullptr; 
         
     Action* action = Container::getRuntimeEvent();
@@ -14,6 +15,7 @@ PacketAction* Interface::getRuntimeEvent()
     
     for(auto i : nested)
     {
+        if(!i->isVisible()) continue;
         action = i->getRuntimeEvent();
         if(action != nullptr) 
         {
@@ -24,6 +26,7 @@ PacketAction* Interface::getRuntimeEvent()
 
     for(auto i : containers) 
     {
+        if(!i->isVisible()) continue;
         action = i->getRuntimeEvent();
         if(action != nullptr) 
         {
@@ -59,6 +62,7 @@ PacketAction* Interface::react()
 
     for(auto i : containers) 
     {
+        if(!i->isVisible()) continue;
         action = i->react();
         if(action != nullptr) 
         {

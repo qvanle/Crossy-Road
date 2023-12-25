@@ -18,6 +18,7 @@ void Chunk::movingEntity()
 {
     for(auto i : Entity)
     {
+        if(!i->isVisible()) continue;
         i->moveBy(velocity);
         i->nextImage();
     }
@@ -25,6 +26,7 @@ void Chunk::movingEntity()
 
 PacketAction* Chunk::getRuntimeEvent() 
 {
+    if(!isVisible()) return nullptr;
     PacketAction* packet = Interface::getRuntimeEvent();
     if(std::chrono::system_clock::now() - moveClock >= moveTime) 
     {

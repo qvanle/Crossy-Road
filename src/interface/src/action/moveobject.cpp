@@ -10,6 +10,8 @@ moveObjectAction::~moveObjectAction()
 
 void moveObjectAction::execute()
 {
+    if(!obj->isVisible())
+        return;
     obj->moveBy(delta);
 }
 

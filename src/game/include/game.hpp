@@ -18,6 +18,7 @@ class Game : public Interface
 private: 
     friend class moveChunksAction;
     std::deque<Chunk*> chunks;
+    Container* main;
     std::vector<Chunk*> cache;
     fPoint mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;

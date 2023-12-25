@@ -32,6 +32,7 @@ public:
     ~Interface();
 
     Container* getContainers(int);
+    int getContainersSize();
 
     std::string linkContent(std::string path) override;
     std::string linkContentAbsolute(std::string path) override;
