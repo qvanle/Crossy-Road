@@ -81,15 +81,20 @@ void Game::loadMap()
     }
     if(chunks.empty()) 
     {
-        int id = GetRandomValue(0, cache.size() - 1);
         Rectangle rel;
-        rel.width = cache[id]->getRelative()[2];
-        rel.height = cache[id]->getRelative()[3];
+        rel.width = cache[0]->getRelative()[2];
+        rel.height = cache[0]->getRelative()[3];
         rel.x = 0;
         rel.y = (1.01 - rel.height);
 
-        Chunk* chunk = new Chunk(cache[id], this, rel);
+        Chunk* chunk = new Chunk(cache[0], this, rel);
         chunks.push_front(chunk);
+        for(int i = 0; i < 3; i++)
+        {
+            rel.y += 0.005 - rel.height;
+            chunk = new Chunk(cache[0], this, rel);
+            chunks.push_front(chunk);
+        }
     }
     while(chunks.front()->getRelative()[1] > 0)
     {
@@ -100,11 +105,9 @@ void Game::loadMap()
         rel.y = (chunks.front()->getRelative()[1] + 0.005 - rel.height);
 
         int id = GetRandomValue(0, cache.size() - 1);
-        if(initState) id = 0;
         Chunk* chunk = new Chunk(cache[id], this, rel);
         chunks.push_front(chunk);
     }
-    initState = 0;
 }
 
 void Game::loadChunk(YAML::Node node)
