@@ -113,12 +113,18 @@ void Game::loadChunk(YAML::Node node)
         if(i["w"]) w = i["w"].as<float>() / 100;
         if(i["h"]) h = i["h"].as<float>() / 100;
         if(i["repeat"]) repeat = i["repeat"].as<int>();
-        fPoint speed = {0.002, 0};
-        if(i["velocity"]) speed = {i["velocity"][0].as<float>(), i["velocity"][1].as<float>()};
-
+        fPoint direction = {1, 0};
+        float velo = 0.002;
+        if(i["velocity"]) 
+        {
+            velo = i["velocity"][0].as<float>();
+            direction = {i["velocity"][1].as<float>(), i["velocity"][2].as<float>()};
+        }
+        float angle = VECTOR2D::getAngle(direction);
+        fPoint displacement = {velo * cos(angle), velo * sin(angle)};
         Chunk* chunk = new Chunk(this, {x, y, w, h}); 
         chunk->linkContent(path);
-        chunk->setVelocity(speed);
+        chunk->setVelocity(displacement);
         cache.push_back(chunk);
         while(--repeat > 0) 
             cache.push_back(new Chunk(cache[0]));

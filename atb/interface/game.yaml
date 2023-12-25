@@ -5,13 +5,13 @@
     "file": "test.yaml"
     "w": 100
     "h": 10 
-    "velocity": [0.005, 0]
+    "velocity": [0.005, 1, 0]
     "probabilty": 50
   - 
     "file": "test2.yaml"
     "w": 100 
     "h": 10 
-    "velocity": [0.005, 0]
+    "velocity": [0.005, 1, 0]
     "probabilty": 50
 
 "object": 
