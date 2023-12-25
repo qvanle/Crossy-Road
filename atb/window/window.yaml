@@ -33,6 +33,12 @@
     "y": 15
     "w": 30
     "h": 70
+  -
+    "file": "credit.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
 "game": 
   "file": "game.yaml" 
   "x": 0
@@ -40,7 +46,7 @@
   "w": 100 
   "h": 100 
 
-"choose-interface": "pause"
+"choose-interface": "credit"
 "input-delay": 60
 "runtime-delay": 30 
 
