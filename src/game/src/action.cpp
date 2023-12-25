@@ -35,6 +35,10 @@ Action* Game::getRuntimeEvent()
         packet->addAction(act);
     }
 
+    action = new moveObjectAction(main, mapSpeed);
+    if(packet == nullptr) packet = new PacketAction();
+    packet->addAction(action);
+
     mapSpeedClock = std::chrono::system_clock::now();
 
     return packet;
