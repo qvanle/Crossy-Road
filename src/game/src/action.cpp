@@ -21,7 +21,7 @@ Action* Game::getRuntimeEvent()
         packet->addAction(action);
     }
 
-    action = new moveChunksAction(this, mapSpeed);
+    action = new moveChunksAction(this, mapDisplacement);
     if(packet == nullptr) packet = new PacketAction();
     packet->addAction(action);
 
@@ -35,7 +35,7 @@ Action* Game::getRuntimeEvent()
         packet->addAction(act);
     }
 
-    action = new moveObjectAction(main, mapSpeed);
+    action = new moveObjectAction(main, mapDisplacement);
     if(packet == nullptr) packet = new PacketAction();
     packet->addAction(action);
 

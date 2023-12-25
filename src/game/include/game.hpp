@@ -20,7 +20,9 @@ private:
     std::deque<Chunk*> chunks;
     std::vector<Chunk*> cache;
     Container* main;
-    fPoint mapSpeed;
+    fPoint mapDisplacement;
+    fPoint mapDirection;
+    float mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
 protected:
     void loadChunk(YAML::Node);
@@ -49,8 +51,11 @@ class moveChunksAction : public Action
 private: 
     Game* game;
     fPoint delta;
+    fPoint direction;
+    float speed;
 public:
     moveChunksAction(Game*, fPoint);
+    moveChunksAction(Game*, fPoint, float);
     ~moveChunksAction();
 
     void execute() override;

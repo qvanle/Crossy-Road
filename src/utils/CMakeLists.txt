@@ -8,6 +8,7 @@ add_library(
     src/countdown.cpp
     src/random.cpp
     src/request.cpp
+    src/vector.cpp
     )
 
 add_library(utils::lib ALIAS ${PROJECT_NAME})

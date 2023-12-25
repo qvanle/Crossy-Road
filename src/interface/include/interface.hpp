@@ -48,8 +48,11 @@ class moveObjectAction : public Action
 private: 
     Container* obj; 
     fPoint delta;
+    fPoint dir;
+    float speed;
 public: 
     moveObjectAction(Container* obj, fPoint delta);
+    moveObjectAction(Container* obj, fPoint dir, float speed);
     ~moveObjectAction();
 
     void execute() override;

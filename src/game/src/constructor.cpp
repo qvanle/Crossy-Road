@@ -1,6 +1,7 @@
 #include "raylib.h"
 #include <const/path/atb.hpp>
 #include <file.hpp>
+#include <vector.hpp>
 #include <object.hpp>
 #include <chunk.hpp>
 #include <game.hpp>
@@ -141,7 +142,15 @@ void Game::loadEvent(YAML::Node node)
 {
     if(node["map-speed"])
     {
-        mapSpeed[0] = node["map-speed"][0].as<float>();
-        mapSpeed[1] = node["map-speed"][1].as<float>();
+        mapSpeed = node["map-speed"].as<float>();
     }
+    if(node["map-direction"])
+    {
+        mapDirection[0] = node["map-direction"][0].as<float>();
+        mapDirection[1] = node["map-direction"][1].as<float>();
+    }
+    float angle = VECTOR2D::getAngle(mapDirection);
+    std::cout << "hehe: " << angle << std::endl;
+    mapDisplacement[0] = mapSpeed * cos(angle);
+    mapDisplacement[1] = mapSpeed * sin(angle);
 }
