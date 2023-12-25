@@ -4,11 +4,17 @@
 
 "interface-list": 
   -
-    "file": "test.yaml" 
+    "file": "start.yaml" 
     "x": 0
     "y": 0
     "w": 100
     "h": 100
+  -
+    "file": "difficultylevel.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
 "game": 
   "file": "game.yaml" 
   "x": 0
@@ -16,7 +22,7 @@
   "w": 100 
   "h": 100 
 
-"choose-interface": "game"
+"choose-interface": "difficultylevel"
 "input-delay": 60
 "runtime-delay": 30 
 
