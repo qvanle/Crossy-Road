@@ -24,6 +24,7 @@ private:
     fPoint mapDirection;
     float mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
+    bool initState;
 protected:
     void loadChunk(YAML::Node);
     void loadCollide(YAML::Node);

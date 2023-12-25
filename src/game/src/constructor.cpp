@@ -8,18 +8,22 @@
 
 Game::Game(Frame* frame, Rectangle rect) : Interface(frame, rect)
 {
+    initState = true;
 }
 
 Game::Game(Game* other) : Interface(other)
 {
+    initState = true;
 }
 
 Game::Game(Game* other, Rectangle rect) : Interface(other, rect)
 {
+    initState = true;
 }
 
 Game::Game(Game* other, Frame* frame, Rectangle rect) : Interface(other, frame, rect)
 {
+    initState = true;
 }
 
 std::string Game::linkContentAbsolute(std::string path)
@@ -96,9 +100,11 @@ void Game::loadMap()
         rel.y = (chunks.front()->getRelative()[1] + 0.005 - rel.height);
 
         int id = GetRandomValue(0, cache.size() - 1);
+        if(initState) id = 0;
         Chunk* chunk = new Chunk(cache[id], this, rel);
         chunks.push_front(chunk);
     }
+    initState = 0;
 }
 
 void Game::loadChunk(YAML::Node node)

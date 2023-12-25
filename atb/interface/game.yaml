@@ -2,17 +2,17 @@
 
 "chunk": 
   - 
-    "file": "test.yaml"
+    "file": "test2.yaml"
     "w": 100
     "h": 10 
     "velocity": [0.005, 1, 0]
-    "probabilty": 50
+    "probabilty": 20
   - 
-    "file": "test2.yaml"
+    "file": "test.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.005, 1, 0]
-    "probabilty": 50
+    "probabilty": 80
 
 "object": 
   -
@@ -118,7 +118,7 @@
 
 "attach-object": 
   - 
-    "chunk": 0 
+    "chunk": 1 
     "object": [4, 10] # each 1 second there is 10% to generate object 1
   - 
     "chunk": 1 
