@@ -1,13 +1,13 @@
-#include <button.hpp>
+#include <action.hpp>
 #include <const/request.hpp>
 changeInfRequest::changeInfRequest(std::string s) 
 {
-    interfaceName = s;
+    args.str.push_back(s);
 }
 
 changeInfRequest::changeInfRequest(changeInfRequest* other) 
 {
-    interfaceName = other->interfaceName;
+    args = other->args;
 }
 
 int changeInfRequest::isRequest() 
@@ -20,7 +20,7 @@ Action* changeInfRequest::clone()
     return new changeInfRequest(this);
 }
 
-std::string changeInfRequest::getInterfaceName() 
+ARGS& changeInfRequest::getArgs() 
 {
-    return interfaceName;
+    return args;
 }

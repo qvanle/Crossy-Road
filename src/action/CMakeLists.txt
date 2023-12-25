@@ -2,9 +2,10 @@ project (action)
 
 add_library(
     ${PROJECT_NAME} STATIC 
-    src/constructor.cpp
-    src/destructor.cpp
-    src/arthmetic.cpp
+    src/action.cpp
+    src/request.cpp
+    src/args.cpp
+    src/request/changeinf.cpp
 )
 
 add_library(action::lib ALIAS ${PROJECT_NAME})

@@ -1,7 +1,7 @@
 #include <action.hpp>
-#include <const/request.hpp>
 #include <queue>
-#include <iostream>
+
+ARGS NONE_ARGS;
 
 Action::Action()
 {
@@ -36,23 +36,9 @@ std::vector<Action*> Action::unpack()
     return std::vector<Action*> ({this});
 }
 
-
-Request::Request() : Action()
+ARGS& Action::getArgs()
 {
-}
-
-Request::Request(Request* request) : Action(request)
-{
-}
-
-int Request::isRequest()
-{
-    return 1;
-}
-
-Action* Request::clone()
-{
-    return new Request(this);
+    return NONE_ARGS;
 }
 
 PacketAction::PacketAction() : Action()

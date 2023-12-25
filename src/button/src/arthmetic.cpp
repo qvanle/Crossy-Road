@@ -27,7 +27,7 @@ PacketAction* ButtonImage::react() {
                 return nullptr;
             PacketAction* packet = new PacketAction();
             packet->addAction(actions[clickedID]->clone());
-            packet->addAction(new changeInfRequest("haha"));
+            packet->addAction(new changeInfRequest("test"));
             return packet;
         }
         if(this->hoverID == -1)

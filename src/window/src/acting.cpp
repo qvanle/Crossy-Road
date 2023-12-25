@@ -1,3 +1,4 @@
+#include <const/request.hpp>
 #include <window.hpp>
 
 void Window::ActionPool::push(Action* action)
@@ -88,9 +89,18 @@ void Window::requestActing()
         Action* action = request_pool.pop();
         if(action == nullptr) continue;
         if(!isRun()) break;
-        std::cout << "hehe\n";
         switch(action->isRequest())
         {
+            case (REQUEST::ID::NONE):
+                break;
+            case (REQUEST::ID::INVALID): 
+                break;
+            case (REQUEST::ID::CHANGE_INF): 
+                {
+                    std::string id = action->getArgs().getInterfaceName();
+                    UI.push(id);
+                    break;
+                }
             default: 
                 break;
         };
