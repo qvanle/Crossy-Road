@@ -21,6 +21,12 @@
     "y": 15
     "w": 50
     "h": 70
+  -
+    "file": "setting.yaml" 
+    "x": 37.5
+    "y": 32.5
+    "w": 25
+    "h": 35
 "game": 
   "file": "game.yaml" 
   "x": 0
@@ -28,7 +34,7 @@
   "w": 100 
   "h": 100 
 
-"choose-interface": "highscore"
+"choose-interface": "setting"
 "input-delay": 60
 "runtime-delay": 30 
 
