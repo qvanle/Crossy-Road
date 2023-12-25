@@ -83,5 +83,18 @@ void Window::systemActing()
 
 void Window::requestActing()
 {
-    return ;
+    while(isRun()) 
+    {
+        Action* action = request_pool.pop();
+        if(action == nullptr) continue;
+        if(!isRun()) break;
+        std::cout << "hehe\n";
+        switch(action->isRequest())
+        {
+            default: 
+                break;
+        };
+
+        delete action;
+    }
 }

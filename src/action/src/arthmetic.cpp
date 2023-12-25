@@ -1,4 +1,5 @@
 #include <action.hpp>
+#include <const/request.hpp>
 #include <queue>
 #include <iostream>
 
@@ -11,14 +12,18 @@ Action::Action(Action* action)
 }
 
 
-bool Action::isRequest()
+int Action::isRequest()
 {
-    return false;
+    return 0;
 }
 
 bool Action::isPackage()
 {
     return false;
+}
+
+void Action::execute()
+{
 }
 
 Action* Action::clone()
@@ -31,6 +36,24 @@ std::vector<Action*> Action::unpack()
     return std::vector<Action*> ({this});
 }
 
+
+Request::Request() : Action()
+{
+}
+
+Request::Request(Request* request) : Action(request)
+{
+}
+
+int Request::isRequest()
+{
+    return 1;
+}
+
+Action* Request::clone()
+{
+    return new Request(this);
+}
 
 PacketAction::PacketAction() : Action()
 {

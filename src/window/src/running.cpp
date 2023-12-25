@@ -12,10 +12,10 @@ void Window::run() {
     //Wcontent.thread_pool.push_back(std::thread(&Window::sound_effect, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
-    Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
+    Wcontent.thread_pool.push_back(std::thread(&Window::requestActing, this));
 
     while (isRun())
     {

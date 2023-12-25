@@ -56,4 +56,17 @@ public:
 
 };
 
+class changeInfRequest : public Request
+{
+private:
+    std::string interfaceName;;
+public: 
+    changeInfRequest(std::string s);
+    changeInfRequest(changeInfRequest*);
+    ~changeInfRequest() = default;
+    int isRequest() override;
+    Action* clone() override;
+
+    std::string getInterfaceName();
+};
 #endif 

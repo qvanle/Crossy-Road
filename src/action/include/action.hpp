@@ -10,11 +10,22 @@ public:
     Action(Action*);
     virtual ~Action() = default;
 
-    virtual bool isRequest();
+    virtual int isRequest();
     virtual bool isPackage();
-    virtual void execute() = 0;
+    virtual void execute();
     virtual Action* clone();
     virtual std::vector<Action*> unpack();
+};
+
+class Request : public Action
+{
+public: 
+    Request();
+    Request(Request*);
+    ~Request() = default;
+
+    int isRequest() override;
+    virtual Action* clone() override;
 };
 
 class PacketAction : public Action
