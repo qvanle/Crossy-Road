@@ -9,6 +9,7 @@ namespace REQUEST
         NONE,
         CHANGE_INF,
         DELAY, 
+        LOSE,
     };
 }
 
