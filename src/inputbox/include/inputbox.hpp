@@ -9,10 +9,7 @@ class InputBox : public Interface
 private:
 
     // handle constant in file yaml
-    static constexpr int MAX_LENGTH = 256;
-    static constexpr int MAX_VISIBLE = 36;
-    static constexpr int MAX_SUGGESTIONS = 10;
-    static constexpr int MAX_LENGTH_PIXEL = 600;
+    static constexpr int MAX_LENGTH = 15;
     static constexpr int  FRAMES_PER_SECOND = 30;
     Texture textureBlank;
 
@@ -26,6 +23,7 @@ private:
 
     Frame* root;
 protected:
+    void loadEvent(YAML::Node node);
 public:
     InputBox(int fontSize, Rectangle relative, Frame* root, Font* font);
 
@@ -36,8 +34,9 @@ public:
     /*void setList(std::vector<std::pair<std::string, std::string>> list);*/
     int getChoseId();
     std::string getText();
-
-    void reset();
+    PacketAction* react();
+    std::string linkContent(std::string);
+    std::string linkContentAbsolute(std::string);
 };
 
 

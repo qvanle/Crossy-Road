@@ -13,8 +13,11 @@ void InputBox::draw()
         if (letterCount < MAX_LENGTH)
         {
             // Draw blinking underscore char
-            if (((framesCounter/20)%2) == 0) DrawText("_", (int)this->getFrame().x + 8 + MeasureText(rawText.c_str(), this->fontSize), (int)this->getFrame().y + 12, this->fontSize, MAROON);
+            if (((framesCounter/20)%2) == 0) 
+            DrawText("_", (int)this->getFrame().x + 8 + MeasureText(rawText.c_str(), this->fontSize), (int)this->getFrame().y + 12, this->fontSize, MAROON);
         }
+        else
+            DrawText("You reach the MAX LENGHT of name !!!", (int)this->getFrame().x + this->fontSize * 1.1, (int)this->getFrame().y + this->fontSize * 2, this->fontSize * 0.5, RED);
     }
     //std::cout<<rawText<<std::endl; // for debug
 }
@@ -27,7 +30,7 @@ void InputBox::handle()
         if (isActivated)
         {
             // Set the window's cursor to the I-Beam
-            //SetMouseCursor(MOUSE_CURSOR_IBEAM);
+            SetMouseCursor(MOUSE_CURSOR_IBEAM);
 
             // Get char pressed (unicode character) on the queue
             int key = GetCharPressed();
@@ -42,6 +45,7 @@ void InputBox::handle()
                     rawText[letterCount + 1] = '\0'; // Add null terminator at the end of the string.
                     letterCount++;
                 }
+                
 
                 key = GetCharPressed();  // Check next character in the queue
             }
@@ -53,7 +57,7 @@ void InputBox::handle()
                 rawText[letterCount] = '\0';
             }
         }
-        //else SetMouseCursor(MOUSE_CURSOR_DEFAULT);
+        else SetMouseCursor(MOUSE_CURSOR_DEFAULT);
 
         if (isActivated) framesCounter++;
         else framesCounter = 0;
@@ -69,4 +73,132 @@ void InputBox::update()
     // std::cout<<showText<<std::endl; // for debug
 }
 
+std::string InputBox::linkContent(std::string path)
+{
+    return linkContentAbsolute(PATB::INPUTBOX_ + path);
+}
+
+std::string InputBox::linkContentAbsolute(std::string path)
+{
+    YAML::Node node = YAML_FILE::readFile(path);
+    if(!loadName(node)) return "";
     
+    if(node["textures"])
+    {
+        loadSprites(node["textures"]);
+        chooseImage(0, 0);
+    }
+    if(node["events"])
+    {
+        loadEvent(node["events"]);
+    }
+
+    return getName();
+}
+
+PacketAction* InputBox::react()
+{
+      if (CheckCollisionPointRec(GetMousePosition(), this->getFrame())) isActivated = true;
+        else isActivated = false;
+
+        if (isActivated)
+        {
+            // Set the window's cursor to the I-Beam
+            SetMouseCursor(MOUSE_CURSOR_IBEAM);
+
+            // Get char pressed (unicode character) on the queue
+            int key = GetCharPressed();
+
+            // Check if more characters have been pressed on the same frame
+            while (key > 0)
+            {
+                // NOTE: Only allow keys in range [32..125]
+                if ((key >= 32) && (key <= 125) && (letterCount < MAX_LENGTH))
+                {
+                    rawText[letterCount] = (char)key;
+                    rawText[letterCount + 1] = '\0'; // Add null terminator at the end of the string.
+                    letterCount++;
+                }
+                
+
+                key = GetCharPressed();  // Check next character in the queue
+            }
+
+            if (IsKeyPressed(KEY_BACKSPACE))
+            {
+                letterCount--;
+                if (letterCount < 0) letterCount = 0;
+                rawText[letterCount] = '\0';
+            }
+        }
+        else SetMouseCursor(MOUSE_CURSOR_DEFAULT);
+
+        if (isActivated) framesCounter++;
+        else framesCounter = 0;
+    return nullptr;
+}
+
+void InputBox::loadEvent(YAML::Node node)
+{
+    // if(node["hover"])
+    // {
+        
+    //     for(auto sprite : node["hover"]["sprite"])
+    //     {
+    //         iPoint p;
+    //         int delay = 0;
+    //         p[0] = sprite[0].as<int>();
+    //         p[1] = sprite[1].as<int>();
+    //         if(p.size() >= 3) 
+    //             delay = sprite[2].as<int>();
+    //         actions.push_back(new changeImageAction(this, p));
+    //     }
+    //     this->hoverID = actions.size() - 1;
+    // }
+
+    // if(node["release"])
+    // {
+    //     for(auto sprite : node["release"]["sprite"])
+    //     {
+    //         iPoint p;
+    //         int delay = 0;
+    //         p[0] = sprite[0].as<int>();
+    //         p[1] = sprite[1].as<int>();
+    //         if(p.size() >= 3) 
+    //             delay = sprite[2].as<int>();
+    //         actions.push_back(new changeImageAction(this, p));
+
+    //     }
+    //     this->releaseID = actions.size() - 1;
+    // }
+
+    // if(node["clicked"])
+    // {
+    //     for(auto sprite : node["clicked"]["sprite"])
+    //     {
+    //         iPoint p;
+    //         int delay = 0;
+    //         p[0] = sprite[0].as<int>();
+    //         p[1] = sprite[1].as<int>();
+    //         if(p.size() >= 3) 
+    //             delay = sprite[2].as<int>();
+    //         actions.push_back(new changeImageAction(this, p));
+    //     }
+    //     this->clickedID = actions.size() - 1;
+    // }
+
+    // if(node["pressing"])
+    // {
+    //     for(auto sprite : node["pressing"]["sprite"])
+    //     {
+    //         iPoint p;
+    //         int delay = 0;
+    //         p[0] = sprite[0].as<int>();
+    //         p[1] = sprite[1].as<int>();
+    //         if(p.size() >= 3) 
+    //             delay = sprite[2].as<int>();
+    //         actions.push_back(new changeImageAction(this, p));
+    //     }
+    //     this->pressingID = actions.size() - 1;
+    // }  
+}

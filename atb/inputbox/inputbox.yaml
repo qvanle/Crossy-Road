@@ -1,0 +1,32 @@
+"name": "inputbox" 
+
+"textures": 
+  -
+    "path": "inputbox_normal.png"
+    "resize": [0.5, 0.5]
+    "graphics": 
+      - 
+        "axis": "horizontal" 
+  -
+    "path": "inputbox_hover.png"
+    "resize": [0.5, 0.5]
+    "graphics": 
+      -
+        "axis": "horizontal" 
+  -
+    "path": "inputbox_clicked.png"
+    "resize": [0.5, 0.5]
+    "graphics": 
+      - 
+        "axis": "horizontal"
+         
+"events": 
+  "release":
+    "sprite": [[0, 0, 70]]
+  "hover":
+    "sprite": [[1, 0, 70]]
+  "clicked":
+    "sprite": [[2, 0, 70]]
+"focus": [1,0]
+  # "clicked"
+  #   "sprite": [[2, 0, 70]]
