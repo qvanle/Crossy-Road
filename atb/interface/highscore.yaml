@@ -1,7 +1,7 @@
 "name": "highscore" # require
 "textures":  # require
   - 
-    "path": "highscore_background.png"  # require
+    "path": "scoreboard_easy.png"  # require
     "graphics":  #require
       -
         "x": 0
@@ -17,8 +17,38 @@
     
 "button":
   - 
-    "path": "newgame.yaml" # should be exit.yaml
-    "x": 80
-    "y": 1
-    "w": 20
-    "h": 20
+    "path": "music.yaml" # should be exit.yaml
+    "x": 82
+    "y": 6
+    "w": 12
+    "h": 12
+  - 
+    "path": "highscore.yaml" # should be easy_score.yaml
+    "x": 7.86
+    "y": 22.5
+    "w": 18
+    "h": 12
+  - 
+    "path": "highscore.yaml" # should be normal_score.yaml
+    "x": 24.3
+    "y": 22.5
+    "w": 18
+    "h": 12
+  - 
+    "path": "highscore.yaml" # should be hard_score.yaml
+    "x": 40.74
+    "y": 22.5
+    "w": 18
+    "h": 12
+  - 
+    "path": "highscore.yaml" # should be insane_score.yaml
+    "x": 56.9
+    "y": 22.5
+    "w": 19
+    "h": 12
+  - 
+    "path": "highscore.yaml" # should be nightmare_score.yaml
+    "x": 73.7
+    "y": 22.5
+    "w": 19.5
+    "h": 12
