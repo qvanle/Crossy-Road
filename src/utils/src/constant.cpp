@@ -11,6 +11,7 @@ const std::string PATB::INTERFACE_ = "atb/interface/";
 const std::string PATB::BUTTON_ = "atb/button/";
 const std::string PATB::CONTAINER_ = "atb/container/";
 const std::string PATB::OBJECT_ = "atb/object/";
+const std::string PATB::INPUTBOX_ = "atb/inputbox/";
 const std::string PATB::MAP_ = "atb/map/";
 const std::string PATB::CHUNK_ = "atb/chunk/";
 const std::string PATB::BLOCK_ = "atb/block/";
