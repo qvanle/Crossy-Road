@@ -2,13 +2,45 @@
 #define INPUTBOX_HPP 
 
 #include <interface.hpp>
-
-class InputBox : public Interface 
+#include <string>
+#include <cstring>
+class InputBox : public Interface
 {
-private: 
+private:
+
+    // handle constant in file yaml
+    static constexpr int MAX_LENGTH = 256;
+    static constexpr int MAX_VISIBLE = 36;
+    static constexpr int MAX_SUGGESTIONS = 10;
+    static constexpr int MAX_LENGTH_PIXEL = 600;
+    static constexpr int  FRAMES_PER_SECOND = 30;
+    Texture textureBlank;
+
+    // crucial parameters
+    int fontSize, framesCounter;
+    Font* font;
+    std::string showText, rawText;
+
+    bool isActivated, isFlicked;
+    int letterCount;
+
+    Frame* root;
 protected:
-public: 
+public:
+    InputBox(int fontSize, Rectangle relative, Frame* root, Font* font);
+
+    void draw();
+    void handle();
+    void update();
+
+    /*void setList(std::vector<std::pair<std::string, std::string>> list);*/
+    int getChoseId();
+    std::string getText();
+
+    void reset();
 };
+
+
 
 #endif 
 

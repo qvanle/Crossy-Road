@@ -16,6 +16,7 @@
 #include <object.hpp>
 #include <interface.hpp>
 #include <button.hpp>
+#include <inputbox.hpp>
 
 
 class Window 
@@ -88,6 +89,8 @@ private:
     WinContent Wcontent;
     UI UI;
     ActionPool immediate_user_pool, immediate_pool, request_pool;
+    // test inputBox
+    InputBox* inputBox;
 
 protected:
     void draw();

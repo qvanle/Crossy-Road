@@ -12,6 +12,9 @@ void Window::run() {
         getRuntimeEvent();
         userActing();
         immediateActing();
+        // inputBox->InputBox::update();
+        inputBox->handle();
+       
     }
 }
 
@@ -21,6 +24,7 @@ void Window::draw()
     BeginDrawing();
     ClearBackground(BLACK);
     UI.draw();
+    inputBox->draw();
     EndDrawing();
     
 }
@@ -56,17 +60,7 @@ void Window::getUserEvent()
         if(!action->isRequest()) 
             immediate_user_pool.push(action);
     }
-
-    // // button event
-    // action = button->react();
-    // if(action != nullptr) 
-    // {
-    //     if(!action->isRequest()) 
-    //         {
-    //             immediate_pool.push(action);
-            
-    //         }
-    // }
+    
 }
 
 void Window::getRuntimeEvent()

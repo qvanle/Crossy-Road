@@ -26,4 +26,5 @@ target_link_libraries(${PROJECT_NAME} PUBLIC interface::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC button::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC object::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC game::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC inputbox::lib)
 
