@@ -1,13 +1,24 @@
 "title": "Crossy Road"
 "width": 1200
-"height": 680
-"clear-color": 
-  "r": 255
-  "g": 255 
-  "b": 255 
-  "a": 255
+"height": 668
 
-"interface": "home"
+"interface-list": 
+  -
+    "file": "test.yaml" 
+    "x": 0
+    "y": 0
+    "w": 100
+    "h": 100
+"game": 
+  "file": "game.yaml" 
+  "x": 0
+  "y": 0
+  "w": 100 
+  "h": 100 
+
+"choose-interface": "game"
+"input-delay": 60
+"runtime-delay": 30 
 
 "control":
   -
@@ -19,3 +30,4 @@
   - 
     "key": ["s"]
     "action": "setting"
+

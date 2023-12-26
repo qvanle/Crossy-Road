@@ -1,17 +1,17 @@
 #include "raylib.h"
 #include <window.hpp>
 
-void Window::run()
-{
-    last_frame = std::chrono::system_clock::now();
+void Window::run() {
+    // last_chrismas = now() 
+    Wcontent.input_clock = std::chrono::steady_clock::now();
     while (isRun())
     {
         draw();
         sound_effect();
         getUserEvent();
         getRuntimeEvent();
-        imediateActing();
-        durationActing();
+        userActing();
+        immediateActing();
     }
 }
 
@@ -20,40 +20,66 @@ void Window::draw()
     // clear screen 
     BeginDrawing();
     ClearBackground(BLACK);
-    if(interface != nullptr)
-    {
-        interface->draw();
-    }
+    UI.draw();
     EndDrawing();
     
 }
 
 void Window::getUserEvent()
 {
-    // Esc to exit 
-    if (IsKeyPressed(KEY_ESCAPE))
+    // do nothing if input_delay is not finish 
+    if( Wcontent.input_delay >  std::chrono::steady_clock::now() - Wcontent.input_clock)
     {
-        status = false;
+        return ;
+    }
+    Wcontent.input_clock = std::chrono::steady_clock::now();
+    // alt + F4 to exit 
+    if (IsKeyDown(KEY_LEFT_ALT) && IsKeyDown(KEY_F4))
+    {
+        immediate_user_pool.push(new CloseAction(this));
     }
     if (WindowShouldClose())
     {
-        status = false;
+        immediate_user_pool.push(new CloseAction(this));
     }
 
     if (IsWindowResized() && !IsWindowFullscreen())
     {
         int width = GetScreenWidth();
         int height = GetScreenHeight();
-        root_frame->resize(width, height);
+        immediate_user_pool.push(new resizeAction(this, width, height));
     }
+    
+    PacketAction* action = UI.react();
+    if(action != nullptr) 
+    {
+        if(!action->isRequest()) 
+            immediate_user_pool.push(action);
+    }
+
+    // // button event
+    // action = button->react();
+    // if(action != nullptr) 
+    // {
+    //     if(!action->isRequest()) 
+    //         {
+    //             immediate_pool.push(action);
+            
+    //         }
+    // }
 }
 
 void Window::getRuntimeEvent()
 {
-    std::chrono::duration<double> elapsed_seconds = std::chrono::system_clock::now() - last_frame;
-    if(elapsed_seconds.count() >= 1.0)
+    if( Wcontent.runtime_delay >  std::chrono::steady_clock::now() - Wcontent.runtime_clock)
     {
-        last_frame = std::chrono::system_clock::now();
+        return ;
+    }
+    Wcontent.runtime_clock = std::chrono::steady_clock::now();
+    Action* action = UI.getRuntimeEvent();
+    if(action != nullptr) 
+    {
+        immediate_pool.push(action);
     }
 }
 
@@ -64,10 +90,10 @@ void Window::sound_effect()
 
 bool Window::isRun()
 {
-    return status;
+    return Wcontent.status;
 }
 
 bool Window::isClose()
 {
-    return !status;
+    return !Wcontent.status;
 }

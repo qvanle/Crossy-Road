@@ -1,0 +1,16 @@
+"name": "testchunk2" # require
+"textures":  # require
+  - 
+    "path": "grass.png"  # require
+    "graphics":  #require
+      -
+        "x": 0
+        "y": 0 
+        "w": 100
+        "h": 100
+        "gapX": 0  
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1

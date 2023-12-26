@@ -1,4 +1,4 @@
-"name": "main" # require
+"name": "test" # require
 "textures":  # require
   - 
     "path": "45908.png"  # require
@@ -15,3 +15,18 @@
         "Xaxis": 1 # -1
         "Yaxis": 1 # -1
 
+"object": 
+  -
+    "path": "button/test.yaml"
+    "x": 40
+    "y": 40
+    "w": 20
+    "h": 20 
+    
+"button":
+  - 
+    "path": "test.yaml"
+    "x": 00
+    "y": 00
+    "w": 10
+    "h": 10

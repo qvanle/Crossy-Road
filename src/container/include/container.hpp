@@ -2,44 +2,80 @@
 #define CONTAINER_HPP
 
 #include <vector>
-#include <memory>
 
 #include <visual.hpp>
 #include <frame.hpp>
+#include <action.hpp>
+#include <const/datatype.hpp>
+#include <const/path/atb.hpp>
+#include <file.hpp>
+
 
 class Container : public Frame
 {
 private:
+    friend class changeImageAction;
     static int id_count;
     int instance_id;
+    int probability;
 
-    std::shared_ptr< std::vector<Sprite> > sprites;
+    std::vector<Sprite> sprites;
     std::string name;
     iPoint focus;
     bool visible;
 
 protected:
+    bool loadName(YAML::Node node);
     void loadSprites(YAML::Node node);
+    void loadFocus(YAML::Node node);
 public:
     Container(Frame*, Rectangle);
     Container(Container*);
     Container(Container*, Rectangle);
     Container(Container*, Frame*, Rectangle);
-    ~Container();
+    virtual ~Container();
 
-    std::string linkContent(std::string);
-    std::string linkContentAbsolute(std::string);
+    virtual std::string linkContent(std::string);
+    virtual std::string linkContentAbsolute(std::string);
+    std::string getName();
+
+    void setProbability(int);
+    int getProbability();
     
     void chooseSprite(int);
     void chooseImage(int);
     void chooseImage(int, int);
+    void nextImage();
+    void prevImage();
+    void nextSprite();
+    void prevSprite();
 
-    void draw();
+    bool isOverlapping(fPoint);
+    bool isOverlapping(Rectangle);
+    bool isOverlapping(Container*);
+    float OverlappingArea(Rectangle);
+    float OverlappingArea(Container*);
+
+    virtual void draw();
     void show();
     void hide();
     void toggleVisibility();
     bool isVisible();
     int getInstanceId();
-};
 
+    virtual PacketAction* react();
+    virtual PacketAction* getRuntimeEvent();
+};
+class changeImageAction : public Action
+{
+private: 
+    Container* container;
+    iPoint focus; 
+public: 
+    changeImageAction(Container*, iPoint);
+    changeImageAction(changeImageAction*);
+    ~changeImageAction();
+    void execute() override; 
+    Action* clone() override;
+};
 #endif 

@@ -5,6 +5,8 @@ add_library(
     src/constructor.cpp
     src/destructor.cpp
     src/arthmetic.cpp
+    src/action.cpp
+    src/action/moveobject.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC dep::raylib)
@@ -18,3 +20,7 @@ target_link_libraries(${PROJECT_NAME} PUBLIC utils::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC frame::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC container::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC object::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC chunk::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC button::lib)
+

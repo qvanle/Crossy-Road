@@ -1,0 +1,175 @@
+"name": "game" # require
+
+"chunk": 
+  - 
+    "file": "test.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": 0.2
+    "probabilty": 50
+  - 
+    "file": "test2.yaml"
+    "w": 100 
+    "h": 10 
+    "velocity": 0.2
+    "probabilty": 50
+
+"object": 
+  -
+    "path": "test.yaml"
+    "x": 46
+    "y": 70
+    "w": 8 
+    "h": 10
+  -
+    "path": "entity/cow.yaml"
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/duck.yaml"
+    "x": 60
+    "y": 40
+    "w": 10
+    "h": 10 
+  - 
+    "path": "entity/rabbit.yaml"
+    "x": 80
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "testQ.yaml"
+    "x": 80
+    "y": 40
+    "w": 10
+    "h": 10
+"button":
+  - 
+    "path": "credit.yaml"
+    "x": 00
+    "y": 00
+    "w": 10
+    "h": 10
+  - 
+    "path": "highscore.yaml"
+    "x": 20
+    "y": 00
+    "w": 10
+    "h": 10
+  - 
+    "path": "loadgame.yaml"
+    "x": 40
+    "y": 00
+    "w": 10
+    "h": 10
+  - 
+    "path": "menu.yaml"
+    "x": 60
+    "y": 00
+    "w": 10
+    "h": 10
+  - 
+    "path": "music.yaml"
+    "x": 80
+    "y": 00
+    "w": 10
+    "h": 10
+  - 
+    "path": "newgame.yaml"
+    "x": 00
+    "y": 10
+    "w": 10
+    "h": 10
+  - 
+    "path": "no_music.yaml"
+    "x": 00
+    "y": 20
+    "w": 10
+    "h": 10
+  - 
+    "path": "no_sfx.yaml"
+    "x": 00
+    "y": 30
+    "w": 10
+    "h": 10
+  - 
+    "path": "resume.yaml"
+    "x": 00
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "saveNexit.yaml"
+    "x": 00
+    "y": 50
+    "w": 10
+    "h": 10
+  - 
+    "path": "setting.yaml"
+    "x": 00
+    "y": 60
+    "w": 10
+    "h": 10
+  - 
+    "path": "sfx.yaml"
+    "x": 00
+    "y": 70
+    "w": 10
+    "h": 10
+"event": 
+  "map-speed": [0, 0.003] # 0.02% per 20 milisecond 
+
+"collide": 
+  - 
+    "x": 0 
+    "y": 1
+    "action": "no-touch"
+
+"attach-object": 
+  - 
+    "chunk": 0 
+    "object": [3, 10] # each 1 second there is 10% to generate object 1
+  - 
+    "chunk": 1 
+    "object": [3, 10] # each 1 second there is 10% to generate object 1
+  - 
+    "chunk": 0 
+    "object": [3, 10] # each 1 second there is 10% to generate object 1
+
+"control": 
+  -
+    "key": ["s"]
+    "action": "move-object"
+    "args": [0, 0, 0.5] 
+  - 
+    "key": ["w"] 
+    "action": "move-object"
+    "args": [0, 0, -0.5] 
+  - 
+    "key": ["a"]
+    "action": "move-object"
+    "args": [0, -0.5, 0] 
+  - 
+    "key": ["d"]
+    "action": "move-object"
+    "args": [0, 0.5, 0] 
+  -
+    "key": ["s"]
+    "action": "move-object"
+    "args": [2, 0, 0.5] 
+  - 
+    "key": ["w"] 
+    "action": "move-object"
+    "args": [02, 0, -0.5] 
+  - 
+    "key": ["a"]
+    "action": "move-object"
+    "args": [02, -0.5, 0] 
+  - 
+    "key": ["d"]
+    "action": "move-object"
+    "args": [02, 0.5, 0] 
+
+

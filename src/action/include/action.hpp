@@ -1,20 +1,34 @@
 #ifndef ACTION_HPP
 #define ACTION_HPP
 
+#include <vector>
+
 class Action 
 {
-private: 
-    int repeat; 
 public:
-    Action() = default;
+    Action();
+    Action(Action*);
     virtual ~Action() = default;
-    virtual void execute() = 0;
-    virtual void ForceEnd();
-    virtual void Interrupt();
-    int getRepeat() const;
-    bool isInfinite() const;
-    bool isFinished() const;
 
+    virtual bool isRequest();
+    virtual bool isPackage();
+    virtual void execute() = 0;
+    virtual Action* clone();
 };
 
+class PacketAction : public Action
+{
+private: 
+    std::vector<Action*> actions;
+public: 
+    PacketAction();
+    PacketAction(PacketAction*);
+    ~PacketAction();
+    bool isPackage() override;
+    void addAction(Action*);
+    void addAction(PacketAction*);
+    std::vector<Action*> unpack();
+    void execute() override;
+    PacketAction* clone() override;
+};
 #endif 

@@ -1,26 +1,87 @@
 #include <action.hpp>
 
-void Action::ForceEnd()
+Action::Action()
 {
-    repeat = 0;
 }
 
-void Action::Interrupt()
+Action::Action(Action* action)
 {
-    repeat = 0;
 }
 
-int Action::getRepeat() const
+
+bool Action::isRequest()
 {
-    return repeat;
+    return false;
 }
 
-bool Action::isInfinite() const
+bool Action::isPackage()
 {
-    return repeat == -1;
+    return false;
 }
 
-bool Action::isFinished() const
+Action* Action::clone()
 {
-    return repeat == 0;
+    return this;
+}
+
+
+PacketAction::PacketAction() : Action()
+{
+}
+
+
+PacketAction::PacketAction(PacketAction* action) : Action(action)
+{
+    for(Action* a : action->actions)
+        actions.push_back(a->clone());
+}
+
+PacketAction::~PacketAction()
+{
+    for(Action* a : actions)
+        delete a;
+    actions.clear();
+}
+
+bool PacketAction::isPackage() 
+{
+    return true;
+}
+
+void PacketAction::addAction(Action* action)
+{
+    actions.push_back(action);
+}
+
+void PacketAction::addAction(PacketAction* action) 
+{
+    for(auto i : action->actions)
+        actions.push_back(i);
+    action->actions.clear();
+}
+
+std::vector<Action*> PacketAction::unpack()
+{
+    std::vector<Action*> unpacked;
+
+    for(Action* a : actions) 
+        unpacked.push_back(a);
+
+    actions.clear();
+
+    return unpacked;
+}
+
+void PacketAction::execute()
+{
+    for(Action* a : actions)
+    {
+        a->execute();
+    }
+}
+
+
+PacketAction* PacketAction::clone()
+{
+    return new PacketAction(this);
 }
