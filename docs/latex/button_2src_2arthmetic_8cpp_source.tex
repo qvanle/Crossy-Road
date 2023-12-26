@@ -1,0 +1,72 @@
+\doxysection{arthmetic.\+cpp}
+\hypertarget{button_2src_2arthmetic_8cpp_source}{}\label{button_2src_2arthmetic_8cpp_source}\index{src/button/src/arthmetic.cpp@{src/button/src/arthmetic.cpp}}
+\mbox{\hyperlink{button_2src_2arthmetic_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{button_8hpp}{button.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <request.hpp>}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00005}00005\ \textcolor{comment}{//\ Button\ for\ image}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00007}\mbox{\hyperlink{class_button_image_a68e6463f48504d130cb9107c4a6168c6}{00007}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_image_a68e6463f48504d130cb9107c4a6168c6}{ButtonImage::draw}}()\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{isVisible}}())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00009}00009\ \ \ \ \ this-\/>\mbox{\hyperlink{class_container_ac8feb6b3a790483f85aad40a46327f24}{Container::draw}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00012}\mbox{\hyperlink{class_button_image_a342259372d097c3291c5945707489220}{00012}}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ \mbox{\hyperlink{class_button_image_a342259372d097c3291c5945707489220}{ButtonImage::react}}()\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00013}00013\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (CheckCollisionPointRec(GetMousePosition(),\ \mbox{\hyperlink{button_8hpp_ae9196a4aeb033ebd6f9657c25bd16ac0}{rectangle}}))\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ this-\/>isHover\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsMouseButtonDown(MOUSE\_LEFT\_BUTTON))\ \{\ \textcolor{comment}{//\ click\ -\/>\ pressing}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>clicked\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>pressingID\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(actions[pressingID]-\/>clone());}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(this-\/>clicked)\ \{\ \textcolor{comment}{//\ release\ -\/>\ click}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>clicked\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>clickedID\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(actions[clickedID]-\/>clone());}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classchange_inf_request}{changeInfRequest}}(\textcolor{stringliteral}{"{}test"{}}));}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>hoverID\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(actions[hoverID]-\/>clone());}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isHover\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00041}00041\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ this-\/>isHover\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>releaseID\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(actions[releaseID]-\/>clone());}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00054}\mbox{\hyperlink{class_button_image_a03ef3a61bb18f43bc674e17c5c976581}{00054}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_image_a03ef3a61bb18f43bc674e17c5c976581}{ButtonImage::changeIndex}}(\textcolor{keywordtype}{int}\ newindex)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00056}00056\ \ \ \ \ tmpPath\ =\ newindex;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00059}\mbox{\hyperlink{class_button_image_a35a65ba2e7792d0b02d8a44a9f329377}{00059}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_button_image_a35a65ba2e7792d0b02d8a44a9f329377}{ButtonImage::getClicked}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{return}\ tmpPath;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00064}\mbox{\hyperlink{class_button_image_a4be3314cbc7d6d91c0035c501ce0449a}{00064}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_button_image_a4be3314cbc7d6d91c0035c501ce0449a}{ButtonImage::isClicked}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>clicked;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00066}00066\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,209 @@
+\doxysection{move\+Entity\+Action Class Reference}
+\hypertarget{classmove_entity_action}{}\label{classmove_entity_action}\index{moveEntityAction@{moveEntityAction}}
+
+
+{\ttfamily \#include $<$chunk.\+hpp$>$}
+
+Inheritance diagram for move\+Entity\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmove_entity_action}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmove_entity_action_a261a4634a905aab40f23dce084d669c6}{move\+Entity\+Action}} (\mbox{\hyperlink{class_chunk}{Chunk}} \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{classmove_entity_action_a860cf6f4758a93de4cdde644161448bc}{\texorpdfstring{$\sim$}{\string~}move\+Entity\+Action}} ()
+\item 
+void \mbox{\hyperlink{classmove_entity_action_a1ef595916c4096280f303a29a2131638}{execute}} () override
+\item 
+\mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classmove_entity_action_a5b266845049ac842b564ade38a433ed5}{clone}} () override
+\item 
+virtual int \mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{is\+Request}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_action_aa52ec29adf562280bdd3942d30f94d10}{is\+Package}} ()
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_action_ad79568053a276c15c84e3ec09637bc67}{unpack}} ()
+\item 
+virtual \mbox{\hyperlink{struct_a_r_g_s}{ARGS}} \& \mbox{\hyperlink{class_action_aa8860c08894cce78bf203e26acc56e16}{get\+Args}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{chunk_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{chunk_8hpp_source}{chunk.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmove_entity_action_a261a4634a905aab40f23dce084d669c6}\label{classmove_entity_action_a261a4634a905aab40f23dce084d669c6} 
+\index{moveEntityAction@{moveEntityAction}!moveEntityAction@{moveEntityAction}}
+\index{moveEntityAction@{moveEntityAction}!moveEntityAction@{moveEntityAction}}
+\doxysubsubsection{\texorpdfstring{moveEntityAction()}{moveEntityAction()}}
+{\footnotesize\ttfamily move\+Entity\+Action\+::move\+Entity\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_chunk}{Chunk}} \texorpdfstring{$\ast$}{*}}]{chunk }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{moveentity_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{moveentity_8cpp_source}{moveentity.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ chunk(chunk) }
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmove_entity_action_a860cf6f4758a93de4cdde644161448bc}\label{classmove_entity_action_a860cf6f4758a93de4cdde644161448bc} 
+\index{moveEntityAction@{moveEntityAction}!````~moveEntityAction@{\texorpdfstring{$\sim$}{\string~}moveEntityAction}}
+\index{````~moveEntityAction@{\texorpdfstring{$\sim$}{\string~}moveEntityAction}!moveEntityAction@{moveEntityAction}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}moveEntityAction()}{\string~moveEntityAction()}}
+{\footnotesize\ttfamily move\+Entity\+Action\+::\texorpdfstring{$\sim$}{\string~}move\+Entity\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{moveentity_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{moveentity_8cpp_source}{moveentity.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmove_entity_action_a5b266845049ac842b564ade38a433ed5}\label{classmove_entity_action_a5b266845049ac842b564ade38a433ed5} 
+\index{moveEntityAction@{moveEntityAction}!clone@{clone}}
+\index{clone@{clone}!moveEntityAction@{moveEntityAction}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} move\+Entity\+Action\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_action_abfec8e53b222f91614f1d9e1ac9d750a}{Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{moveentity_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{moveentity_8cpp_source}{moveentity.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmove_entity_action_a261a4634a905aab40f23dce084d669c6}{moveEntityAction}}(chunk);}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmove_entity_action_a1ef595916c4096280f303a29a2131638}\label{classmove_entity_action_a1ef595916c4096280f303a29a2131638} 
+\index{moveEntityAction@{moveEntityAction}!execute@{execute}}
+\index{execute@{execute}!moveEntityAction@{moveEntityAction}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void move\+Entity\+Action\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{moveentity_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{moveentity_8cpp_source}{moveentity.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ chunk-\/>\mbox{\hyperlink{class_chunk_ae75de66267636fb89d3f753e09119795}{movingEntity}}();}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_aa8860c08894cce78bf203e26acc56e16}\label{class_action_aa8860c08894cce78bf203e26acc56e16} 
+\index{moveEntityAction@{moveEntityAction}!getArgs@{getArgs}}
+\index{getArgs@{getArgs}!moveEntityAction@{moveEntityAction}}
+\doxysubsubsection{\texorpdfstring{getArgs()}{getArgs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_a_r_g_s}{ARGS}} \& Action\+::get\+Args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classchange_inf_request_adbd51fe6146c100c463db8499324031f}{change\+Inf\+Request}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{action_8hpp_aec8684d39aaf84b00ed6865d4b281cd4}{NONE\_ARGS}};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_aa52ec29adf562280bdd3942d30f94d10}\label{class_action_aa52ec29adf562280bdd3942d30f94d10} 
+\index{moveEntityAction@{moveEntityAction}!isPackage@{isPackage}}
+\index{isPackage@{isPackage}!moveEntityAction@{moveEntityAction}}
+\doxysubsubsection{\texorpdfstring{isPackage()}{isPackage()}}
+{\footnotesize\ttfamily bool Action\+::is\+Package (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_packet_action_aabd2a32c3b4b3946098a406315bc4b8b}{Packet\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}\label{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d} 
+\index{moveEntityAction@{moveEntityAction}!isRequest@{isRequest}}
+\index{isRequest@{isRequest}!moveEntityAction@{moveEntityAction}}
+\doxysubsubsection{\texorpdfstring{isRequest()}{isRequest()}}
+{\footnotesize\ttfamily int Action\+::is\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_request_aa1c81e7dd0a737e8eece7f46199af34c}{Request}}, \mbox{\hyperlink{classchange_inf_request_acf1df90c90e0ffec7512ecbda9109a4c}{change\+Inf\+Request}}, and \mbox{\hyperlink{classlose_request_a62f30b392783e1623352f0ae71838579}{lose\+Request}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_ad79568053a276c15c84e3ec09637bc67}\label{class_action_ad79568053a276c15c84e3ec09637bc67} 
+\index{moveEntityAction@{moveEntityAction}!unpack@{unpack}}
+\index{unpack@{unpack}!moveEntityAction@{moveEntityAction}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} $>$ Action\+::unpack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_packet_action_ae28f68158029f77be1262900afdc0121}{Packet\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ std::vector<Action*>\ (\{\textcolor{keyword}{this}\});}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/chunk/include/\mbox{\hyperlink{chunk_8hpp}{chunk.\+hpp}}\item 
+src/chunk/src/action/\mbox{\hyperlink{moveentity_8cpp}{moveentity.\+cpp}}\end{DoxyCompactItemize}

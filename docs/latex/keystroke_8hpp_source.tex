@@ -1,0 +1,38 @@
+\doxysection{keystroke.\+hpp}
+\hypertarget{keystroke_8hpp_source}{}\label{keystroke_8hpp_source}\index{src/utils/include/keystroke.hpp@{src/utils/include/keystroke.hpp}}
+\mbox{\hyperlink{keystroke_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ KEYSTROKE\_HPP\ }}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ KEYSTROKE\_HPP\ }}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{action_8hpp}{action.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00008}00008\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{keystroke_8hpp_a7019dcdfa4139eca0425f1382ad60543}{toKey}}(std::string);}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00010}\mbox{\hyperlink{class_key_stroke}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_key_stroke}{KeyStroke}}\ }
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00012}00012\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00013}00013\ \ \ \ \ std::vector<int>\ key;}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00014}00014\ \ \ \ \ std::vector<\ Action*\ >\ action;}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00016}00016\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_key_stroke_a53becc937cb6b278bf4be89d9d92a8f3}{KeyStroke}}();}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{class_key_stroke_a53becc937cb6b278bf4be89d9d92a8f3}{KeyStroke}}(std::vector<int>);}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_key_stroke_a51938f6a5d1f4ecb7bcce1726d521b25}{\string~KeyStroke}}();}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_key_stroke_a4b91531d0023bffef86981ea0fe39907}{size}}();}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_key_stroke_afdb74080a2eafa7b541b96a695599eeb}{add}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char});}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_key_stroke_a428c831c25802f3978945e24b0288f79}{setAction}}(std::vector<Action*>);}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_key_stroke_ae9e993176bb8607cd4bb19c8831bbd14}{addAction}}(\mbox{\hyperlink{class_action}{Action}}*);}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_key_stroke_a43ec1835222f0b2b14c45c9fa92959d9}{chooseAction}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_key_stroke_a88012eafa953109b9690cf84c4037755}{getCurrent}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_key_stroke_a67317e1148b8cd263bdae1c6ca6d4168}{nextAction}}();}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{class_key_stroke_a6172c35f97fee7733550cab171968c07}{react}}();}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00030}00030\ \};}
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{keystroke_8hpp_source_l00032}00032\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

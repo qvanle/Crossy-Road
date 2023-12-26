@@ -1,0 +1,66 @@
+\doxysection{src/visual/include/visual.hpp File Reference}
+\hypertarget{visual_8hpp}{}\label{visual_8hpp}\index{src/visual/include/visual.hpp@{src/visual/include/visual.hpp}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$raylib.\+h$>$}\newline
+{\ttfamily \#include $<$yaml-\/cpp/yaml.\+h$>$}\newline
+{\ttfamily \#include $<$frame.\+hpp$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_visual}{Visual}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}} = std\+::vector$<$\mbox{\hyperlink{class_visual}{Visual}}\texorpdfstring{$\ast$}{*}$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{visual_8hpp_aa019aa1ecfa56bfc94fb50b27565d85e}{delete\+Sprite}} (\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}} \texorpdfstring{$\ast$}{*}\&)
+\item 
+void \mbox{\hyperlink{visual_8hpp_a57a2121ba160142ca7c5541cd2c21a0a}{delete\+Sprites}} (std\+::vector$<$ \mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}} $>$ \texorpdfstring{$\ast$}{*}\&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}\label{visual_8hpp_af1013d70443d0744ca4b3631b6f75627} 
+\index{visual.hpp@{visual.hpp}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!visual.hpp@{visual.hpp}}
+\doxysubsubsection{\texorpdfstring{Sprite}{Sprite}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}} = std\+::vector$<$\mbox{\hyperlink{class_visual}{Visual}}\texorpdfstring{$\ast$}{*}$>$}
+
+
+
+Definition at line \mbox{\hyperlink{visual_8hpp_source_l00030}{30}} of file \mbox{\hyperlink{visual_8hpp_source}{visual.\+hpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{visual_8hpp_aa019aa1ecfa56bfc94fb50b27565d85e}\label{visual_8hpp_aa019aa1ecfa56bfc94fb50b27565d85e} 
+\index{visual.hpp@{visual.hpp}!deleteSprite@{deleteSprite}}
+\index{deleteSprite@{deleteSprite}!visual.hpp@{visual.hpp}}
+\doxysubsubsection{\texorpdfstring{deleteSprite()}{deleteSprite()}}
+{\footnotesize\ttfamily void delete\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}} \texorpdfstring{$\ast$}{*}\&}]{ }\end{DoxyParamCaption})}
+
+\Hypertarget{visual_8hpp_a57a2121ba160142ca7c5541cd2c21a0a}\label{visual_8hpp_a57a2121ba160142ca7c5541cd2c21a0a} 
+\index{visual.hpp@{visual.hpp}!deleteSprites@{deleteSprites}}
+\index{deleteSprites@{deleteSprites}!visual.hpp@{visual.hpp}}
+\doxysubsubsection{\texorpdfstring{deleteSprites()}{deleteSprites()}}
+{\footnotesize\ttfamily void delete\+Sprites (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}} $>$ \texorpdfstring{$\ast$}{*}\&}]{sprites }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2destructor_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{visual_2src_2destructor_8cpp_source}{destructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}}\ \&\ sprite\ :\ *sprites)}
+\DoxyCodeLine{00027\ \ \ \ \ \{\ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{visual_2src_2destructor_8cpp_aad4b211f99547e29889434d16bc757b3}{deleteSprite}}(sprite);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{delete}\ sprites;}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}

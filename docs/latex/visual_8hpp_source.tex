@@ -1,0 +1,39 @@
+\doxysection{visual.\+hpp}
+\hypertarget{visual_8hpp_source}{}\label{visual_8hpp_source}\index{src/visual/include/visual.hpp@{src/visual/include/visual.hpp}}
+\mbox{\hyperlink{visual_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ VISUAL\ }}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ VISUAL\ }}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <raylib.h>}}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <yaml-\/cpp/yaml.h>}}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{frame_8hpp}{frame.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00010}\mbox{\hyperlink{class_visual}{00010}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_visual}{Visual}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_frame}{Frame}}}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00012}00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00013}00013\ \ \ \ \ std::shared\_ptr<Texture2D>\ m\_texture;}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ resizeable;}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ deleteTexture2D(Texture2D*\&);}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00016}00016\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();\ \ \ }
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_visual_a63668294defc8e0bbdb584016e1c08c6}{updateFrame}}(\textcolor{keywordtype}{bool}\ recursive\ =\ \textcolor{keyword}{false})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00019}00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{Visual}}(Texture2D*,\ \mbox{\hyperlink{class_frame}{Frame}}*,\ Rectangle);}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{Visual}}(\mbox{\hyperlink{class_visual}{Visual}}*);}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{Visual}}(\mbox{\hyperlink{class_visual}{Visual}}*,\ Rectangle);}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{Visual}}(\mbox{\hyperlink{class_visual}{Visual}}*,\ \mbox{\hyperlink{class_frame}{Frame}}*,\ Rectangle);}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{class_visual_af32360b9f765f4be89233687dd219b1e}{\string~Visual}}();}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00025}00025\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_visual_a919a0e27c37bb61635a9d0a0630a05ff}{resize}}(\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}});}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_visual_a61d31eabe8a71570191139cb9a2c182c}{draw}}();}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00029}00029\ \};}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00030}\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{00030}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}}\ =\ std::vector<Visual*>;}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00031}\mbox{\hyperlink{visual_8hpp_aa019aa1ecfa56bfc94fb50b27565d85e}{00031}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{visual_8hpp_aa019aa1ecfa56bfc94fb50b27565d85e}{deleteSprite}}(\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}}*\&);}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00032}00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{visual_8hpp_a57a2121ba160142ca7c5541cd2c21a0a}{deleteSprites}}(std::vector<Sprite>*\&);}
+\DoxyCodeLine{\Hypertarget{visual_8hpp_source_l00033}00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VISUAL}}
+
+\end{DoxyCode}

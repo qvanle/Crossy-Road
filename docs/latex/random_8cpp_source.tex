@@ -1,0 +1,99 @@
+\doxysection{random.\+cpp}
+\hypertarget{random_8cpp_source}{}\label{random_8cpp_source}\index{src/utils/src/random.cpp@{src/utils/src/random.cpp}}
+\mbox{\hyperlink{random_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{random_8hpp}{random.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00006}\mbox{\hyperlink{class_random_engine_a2e3a09657d006b486b73bd029efa3824}{00006}}\ \mbox{\hyperlink{class_random_engine_a2e3a09657d006b486b73bd029efa3824}{RandomEngine::RandomEngine}}()}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed\ =\ std::chrono::system\_clock::now().time\_since\_epoch().count();}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00009}00009\ \ \ \ \ engine.seed(seed);}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00012}\mbox{\hyperlink{class_random_engine_a2601456c5a34f4b27cdb184deed45403}{00012}}\ \mbox{\hyperlink{class_random_engine_a2e3a09657d006b486b73bd029efa3824}{RandomEngine::RandomEngine}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00014}00014\ \ \ \ \ engine.seed(seed);}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00017}\mbox{\hyperlink{class_random_engine_abd096ac40446e2744f7b2a996bea5a77}{00017}}\ \mbox{\hyperlink{class_random_engine_abd096ac40446e2744f7b2a996bea5a77}{RandomEngine::\string~RandomEngine}}()}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00021}\mbox{\hyperlink{class_random_engine_a7a689d692e59677e6e9e34b73a31e384}{00021}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_random_engine_a7a689d692e59677e6e9e34b73a31e384}{RandomEngine::randInt}}(\textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ max)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00023}00023\ \ \ \ \ std::uniform\_int\_distribution<int>\ distribution(min,\ max);}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ distribution(engine);}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00027}\mbox{\hyperlink{class_random_engine_aedd750b902239bea4ae802acc6342e4a}{00027}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_random_engine_aedd750b902239bea4ae802acc6342e4a}{RandomEngine::randDouble}}(\textcolor{keywordtype}{double}\ min,\ \textcolor{keywordtype}{double}\ max)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00029}00029\ \ \ \ \ std::uniform\_real\_distribution<double>\ distribution(min,\ max);}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{return}\ distribution(engine);}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00033}\mbox{\hyperlink{class_random_engine_a6a870b09f5b11c36bc5154dea5392a09}{00033}}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_random_engine_a6a870b09f5b11c36bc5154dea5392a09}{RandomEngine::randChar}}(\textcolor{keywordtype}{char}\ min,\ \textcolor{keywordtype}{char}\ max)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00035}00035\ \ \ \ \ std::uniform\_int\_distribution<int>\ distribution(min,\ max);}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ distribution(engine);}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00039}\mbox{\hyperlink{class_random_engine_af45c0afde44652830e998e393b02c0d8}{00039}}\ std::string\ \mbox{\hyperlink{class_random_engine_af45c0afde44652830e998e393b02c0d8}{RandomEngine::randString}}(\textcolor{keywordtype}{int}\ length,\ \textcolor{keywordtype}{char}\ min,\ \textcolor{keywordtype}{char}\ max)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00041}00041\ \ \ \ \ std::string\ str;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ length;\ i++)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ str\ +=\ \mbox{\hyperlink{class_random_engine_a6a870b09f5b11c36bc5154dea5392a09}{randChar}}(min,\ max);}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00049}\mbox{\hyperlink{class_random_engine_af225048eb92f00fa03b6baef779e6fac}{00049}}\ std::string\ \mbox{\hyperlink{class_random_engine_af225048eb92f00fa03b6baef779e6fac}{RandomEngine::randInt2String}}(\textcolor{keywordtype}{int}\ length,\ \textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ max)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00050}00050\ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00051}00051\ \ \ \ \ std::string\ str;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ length;\ i++)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00053}00053\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ str\ +=\ std::to\_string(\mbox{\hyperlink{class_random_engine_a7a689d692e59677e6e9e34b73a31e384}{randInt}}(min,\ max));}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{return}\ str;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00059}\mbox{\hyperlink{class_random_engine_a803c279fe53536a8547fba754b5f29dc}{00059}}\ std::string\ \mbox{\hyperlink{class_random_engine_af45c0afde44652830e998e393b02c0d8}{RandomEngine::randString}}(\textcolor{keywordtype}{int}\ length,\ \textcolor{keywordtype}{bool}\ haveDigit,\ \textcolor{keywordtype}{bool}\ haveLower,\ \textcolor{keywordtype}{bool}\ haveUpper,\ \textcolor{keywordtype}{bool}\ haveSpecial)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00061}00061\ \ \ \ \ std::string\ str;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00062}00062\ \ \ \ \ std::string\ digit\ =\ \textcolor{stringliteral}{"{}0123456789"{}};}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00063}00063\ \ \ \ \ std::string\ lower\ =\ \textcolor{stringliteral}{"{}abcdefghijklmnopqrstuvwxyz"{}};}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00064}00064\ \ \ \ \ std::string\ upper\ =\ \textcolor{stringliteral}{"{}ABCDEFGHIJKLMNOPQRSTUVWXYZ"{}};}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00065}00065\ \ \ \ \ std::string\ special\ =\ \textcolor{stringliteral}{"{}!@\#\$\%\string^\&*()\_+\{\}|:<>?\string~`-\/=[]\(\backslash\)\(\backslash\);',./\(\backslash\)"{}"{}};}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00066}00066\ \ \ \ \ std::string\ all\ =\ digit\ +\ lower\ +\ upper\ +\ special;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (haveDigit)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00068}00068\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ str\ +=\ digit;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{if}\ (haveLower)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00072}00072\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ str\ +=\ lower;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (haveUpper)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00076}00076\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ str\ +=\ upper;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{if}\ (haveSpecial)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00080}00080\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ str\ +=\ special;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{if}\ (str.empty())}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ str\ =\ all;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00087}00087\ \ \ \ \ std::string\ result;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ length;\ i++)}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00089}00089\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ result\ +=\ str[\mbox{\hyperlink{class_random_engine_a7a689d692e59677e6e9e34b73a31e384}{randInt}}(0,\ str.size()\ -\/\ 1)];}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{random_8cpp_source_l00093}00093\ \}}
+
+\end{DoxyCode}

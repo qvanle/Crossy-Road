@@ -9,6 +9,17 @@
 #include <keystroke.hpp>
 #include <button.hpp>
 
+/**
+ * @class Interface
+ *
+ * @brief position and size of object on screen
+ * 
+ * 
+ * 
+ * 
+ *
+**/
+
 class Interface : public Container
 {
 private: 

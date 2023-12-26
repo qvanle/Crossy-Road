@@ -10,6 +10,16 @@
 #include <const/path/atb.hpp>
 #include <file.hpp>
 
+/**
+ * @class Container
+ *
+ * @brief manages the behavior of sprites
+ * 
+ * 
+ * 
+ * 
+ *
+**/
 
 class Container : public Frame
 {

@@ -1,0 +1,33 @@
+\doxysection{file.\+cpp}
+\hypertarget{file_8cpp_source}{}\label{file_8cpp_source}\index{src/utils/src/file.cpp@{src/utils/src/file.cpp}}
+\mbox{\hyperlink{file_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{file_8hpp}{file.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00005}\mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_a920afd2555cf04b4e07375b44437df96}{00005}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_a920afd2555cf04b4e07375b44437df96}{YAML\_FILE::isFile}}(std::string\ path)}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{comment}{//\ return\ true\ if\ file\ exists}}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00008}00008\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00009}00009\ \ \ \ \ std::ifstream\ fin(path);}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{keywordflow}{return}\ fin.good();}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00011}00011\ \}}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00013}\mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{00013}}\ YAML::Node\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(std::string\ path)}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//\ return\ YAML::Node\ from\ file}}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00016}00016\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00017}00017\ \ \ \ \ YAML::Node\ node;}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ node\ =\ YAML::LoadFile(path);}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{catch}\ (YAML::BadFile\&\ e)}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{\Hypertarget{file_8cpp_source_l00027}00027\ \}}
+
+\end{DoxyCode}

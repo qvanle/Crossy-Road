@@ -1,0 +1,39 @@
+\doxysection{constructor.\+cpp}
+\hypertarget{visual_2src_2constructor_8cpp_source}{}\label{visual_2src_2constructor_8cpp_source}\index{src/visual/src/constructor.cpp@{src/visual/src/constructor.cpp}}
+\mbox{\hyperlink{visual_2src_2constructor_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{visual_8hpp}{visual.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00004}\mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{00004}}\ \mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{Visual::Visual}}(Texture2D*\ txtr,\ \mbox{\hyperlink{class_frame}{Frame}}*\ frame,\ Rectangle\ rect)\ :\ \mbox{\hyperlink{class_frame}{Frame}}(frame,\ rect)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00006}00006\ \ \ \ \ m\_texture\ =\ std::shared\_ptr<Texture2D>(txtr,\ [](Texture2D*\ texture)\{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00007}00007\ \ \ \ \ \ \ \ \ UnloadTexture(*texture);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ texture\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00009}00009\ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00010}00010\ \ \ \ \ resizeable\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00014}\mbox{\hyperlink{class_visual_a22cf889b1bc57d7d88a6d79fa78fce2c}{00014}}\ \mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{Visual::Visual}}(\mbox{\hyperlink{class_visual}{Visual}}*\ visual)\ :\ \mbox{\hyperlink{class_frame}{Frame}}(visual)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00016}00016\ \ \ \ \ resizeable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00017}00017\ \ \ \ \ m\_texture\ =\ visual-\/>m\_texture;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00021}\mbox{\hyperlink{class_visual_a57c9bf13c7a633c9330be6f4d7c9b8f0}{00021}}\ \mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{Visual::Visual}}(\mbox{\hyperlink{class_visual}{Visual}}*\ visual,\ Rectangle\ rect)\ :\ \mbox{\hyperlink{class_frame}{Frame}}(visual,\ rect)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00023}00023\ \ \ \ \ resizeable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00024}00024\ \ \ \ \ m\_texture\ =\ visual-\/>m\_texture;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00028}\mbox{\hyperlink{class_visual_ae38d3347bf1c2719cfcf0fe3a848c733}{00028}}\ \mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{Visual::Visual}}(\mbox{\hyperlink{class_visual}{Visual}}*\ visual,\ \mbox{\hyperlink{class_frame}{Frame}}*\ frame,\ Rectangle\ rect)\ :\ \mbox{\hyperlink{class_frame}{Frame}}(frame,\ rect)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00030}00030\ \ \ \ \ resizeable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00031}00031\ \ \ \ \ m\_texture\ =\ visual-\/>m\_texture;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{\Hypertarget{visual_2src_2constructor_8cpp_source_l00033}00033\ \}}
+
+\end{DoxyCode}

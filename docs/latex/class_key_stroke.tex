@@ -1,0 +1,245 @@
+\doxysection{Key\+Stroke Class Reference}
+\hypertarget{class_key_stroke}{}\label{class_key_stroke}\index{KeyStroke@{KeyStroke}}
+
+
+{\ttfamily \#include $<$keystroke.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_key_stroke_a53becc937cb6b278bf4be89d9d92a8f3}{Key\+Stroke}} ()
+\item 
+\mbox{\hyperlink{class_key_stroke_ada24a2f802b4fc3cc4e763015e9f192c}{Key\+Stroke}} (std\+::vector$<$ int $>$)
+\item 
+\mbox{\hyperlink{class_key_stroke_a51938f6a5d1f4ecb7bcce1726d521b25}{\texorpdfstring{$\sim$}{\string~}\+Key\+Stroke}} ()
+\item 
+int \mbox{\hyperlink{class_key_stroke_a4b91531d0023bffef86981ea0fe39907}{size}} ()
+\item 
+void \mbox{\hyperlink{class_key_stroke_afdb74080a2eafa7b541b96a695599eeb}{add}} (unsigned char)
+\item 
+void \mbox{\hyperlink{class_key_stroke_a428c831c25802f3978945e24b0288f79}{set\+Action}} (std\+::vector$<$ \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} $>$)
+\item 
+void \mbox{\hyperlink{class_key_stroke_ae9e993176bb8607cd4bb19c8831bbd14}{add\+Action}} (\mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*})
+\item 
+void \mbox{\hyperlink{class_key_stroke_a43ec1835222f0b2b14c45c9fa92959d9}{choose\+Action}} (int)
+\item 
+int \mbox{\hyperlink{class_key_stroke_a88012eafa953109b9690cf84c4037755}{get\+Current}} (int)
+\item 
+void \mbox{\hyperlink{class_key_stroke_a67317e1148b8cd263bdae1c6ca6d4168}{next\+Action}} ()
+\item 
+\mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_key_stroke_a6172c35f97fee7733550cab171968c07}{react}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{keystroke_8hpp_source_l00010}{10}} of file \mbox{\hyperlink{keystroke_8hpp_source}{keystroke.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_key_stroke_a53becc937cb6b278bf4be89d9d92a8f3}\label{class_key_stroke_a53becc937cb6b278bf4be89d9d92a8f3} 
+\index{KeyStroke@{KeyStroke}!KeyStroke@{KeyStroke}}
+\index{KeyStroke@{KeyStroke}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{KeyStroke()}{KeyStroke()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Key\+Stroke\+::\+Key\+Stroke (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordtype}{id}\ =\ 0;}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_key_stroke_ada24a2f802b4fc3cc4e763015e9f192c}\label{class_key_stroke_ada24a2f802b4fc3cc4e763015e9f192c} 
+\index{KeyStroke@{KeyStroke}!KeyStroke@{KeyStroke}}
+\index{KeyStroke@{KeyStroke}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{KeyStroke()}{KeyStroke()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Key\+Stroke\+::\+Key\+Stroke (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ key\ =\ k;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{id}\ =\ 0;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_key_stroke_a51938f6a5d1f4ecb7bcce1726d521b25}\label{class_key_stroke_a51938f6a5d1f4ecb7bcce1726d521b25} 
+\index{KeyStroke@{KeyStroke}!````~KeyStroke@{\texorpdfstring{$\sim$}{\string~}KeyStroke}}
+\index{````~KeyStroke@{\texorpdfstring{$\sim$}{\string~}KeyStroke}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}KeyStroke()}{\string~KeyStroke()}}
+{\footnotesize\ttfamily Key\+Stroke\+::\texorpdfstring{$\sim$}{\string~}\+Key\+Stroke (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ \&a\ :\ action)}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ a;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_key_stroke_afdb74080a2eafa7b541b96a695599eeb}\label{class_key_stroke_afdb74080a2eafa7b541b96a695599eeb} 
+\index{KeyStroke@{KeyStroke}!add@{add}}
+\index{add@{add}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Key\+Stroke\+::add (\begin{DoxyParamCaption}\item[{unsigned char}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ key.push\_back(k);}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_key_stroke_ae9e993176bb8607cd4bb19c8831bbd14}\label{class_key_stroke_ae9e993176bb8607cd4bb19c8831bbd14} 
+\index{KeyStroke@{KeyStroke}!addAction@{addAction}}
+\index{addAction@{addAction}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{addAction()}{addAction()}}
+{\footnotesize\ttfamily void Key\+Stroke\+::add\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*}}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ action.push\_back(a);}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_key_stroke_a43ec1835222f0b2b14c45c9fa92959d9}\label{class_key_stroke_a43ec1835222f0b2b14c45c9fa92959d9} 
+\index{KeyStroke@{KeyStroke}!chooseAction@{chooseAction}}
+\index{chooseAction@{chooseAction}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{chooseAction()}{chooseAction()}}
+{\footnotesize\ttfamily void Key\+Stroke\+::choose\+Action (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{id}\ =\ i;}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_key_stroke_a88012eafa953109b9690cf84c4037755}\label{class_key_stroke_a88012eafa953109b9690cf84c4037755} 
+\index{KeyStroke@{KeyStroke}!getCurrent@{getCurrent}}
+\index{getCurrent@{getCurrent}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{getCurrent()}{getCurrent()}}
+{\footnotesize\ttfamily int Key\+Stroke\+::get\+Current (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ id;}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_key_stroke_a67317e1148b8cd263bdae1c6ca6d4168}\label{class_key_stroke_a67317e1148b8cd263bdae1c6ca6d4168} 
+\index{KeyStroke@{KeyStroke}!nextAction@{nextAction}}
+\index{nextAction@{nextAction}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{nextAction()}{nextAction()}}
+{\footnotesize\ttfamily void Key\+Stroke\+::next\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{id}\ =\ (\textcolor{keywordtype}{id}\ +\ 1)\ \%\ action.size();}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_key_stroke_a6172c35f97fee7733550cab171968c07}\label{class_key_stroke_a6172c35f97fee7733550cab171968c07} 
+\index{KeyStroke@{KeyStroke}!react@{react}}
+\index{react@{react}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{react()}{react()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} Key\+Stroke\+::react (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ k\ :\ key)}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!IsKeyDown(k))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{return}\ action[id]-\/>clone();\ }
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_key_stroke_a428c831c25802f3978945e24b0288f79}\label{class_key_stroke_a428c831c25802f3978945e24b0288f79} 
+\index{KeyStroke@{KeyStroke}!setAction@{setAction}}
+\index{setAction@{setAction}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{setAction()}{setAction()}}
+{\footnotesize\ttfamily void Key\+Stroke\+::set\+Action (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} $>$}]{a }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ action\ =\ a;}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_key_stroke_a4b91531d0023bffef86981ea0fe39907}\label{class_key_stroke_a4b91531d0023bffef86981ea0fe39907} 
+\index{KeyStroke@{KeyStroke}!size@{size}}
+\index{size@{size}!KeyStroke@{KeyStroke}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Key\+Stroke\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{keystroke_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{keystroke_8cpp_source}{keystroke.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ key.size();}
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/include/\mbox{\hyperlink{keystroke_8hpp}{keystroke.\+hpp}}\item 
+src/utils/src/\mbox{\hyperlink{keystroke_8cpp}{keystroke.\+cpp}}\end{DoxyCompactItemize}
