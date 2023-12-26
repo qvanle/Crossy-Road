@@ -43,6 +43,19 @@ public:
     void draw() override;
 };
 
+class movetoObjectAction : public Action
+{
+private: 
+    Container* obj; 
+    fPoint pos;
+public: 
+    movetoObjectAction(Container* obj, fPoint pos);
+    ~movetoObjectAction();
+
+    void execute() override;
+    Action* clone() override;
+};
+
 class moveObjectAction : public Action
 {
 private: 
