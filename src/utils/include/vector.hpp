@@ -2,7 +2,7 @@
 #define MY_VECTOR_SPACE_HPP
 
 #include <const/datatype.hpp>
-
+#include <math.h>
 
 namespace VECTOR2D
 {
