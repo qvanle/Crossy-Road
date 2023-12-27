@@ -12,9 +12,6 @@ void Window::run() {
         getRuntimeEvent();
         userActing();
         immediateActing();
-        // inputBox->InputBox::update();
-        inputBox->handle();
-       
     }
 }
 
@@ -55,6 +52,13 @@ void Window::getUserEvent()
     }
     
     PacketAction* action = UI.react();
+    if(action != nullptr) 
+    {
+        if(!action->isRequest()) 
+            immediate_user_pool.push(action);
+    }
+
+    action = inputBox->react();
     if(action != nullptr) 
     {
         if(!action->isRequest()) 

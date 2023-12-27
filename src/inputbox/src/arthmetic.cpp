@@ -1,4 +1,6 @@
+#include "raylib.h"
 #include <inputbox.hpp>
+#include<thread>
 
 void InputBox::draw()
 {
@@ -14,7 +16,7 @@ void InputBox::draw()
         {
             // Draw blinking underscore char
             if (((framesCounter/20)%2) == 0) 
-            DrawText("_", (int)this->getFrame().x + 8 + MeasureText(rawText.c_str(), this->fontSize), (int)this->getFrame().y + 12, this->fontSize, MAROON);
+                DrawText("_", (int)this->getFrame().x + 8 + MeasureText(rawText.c_str(), this->fontSize), (int)this->getFrame().y + 12, this->fontSize, MAROON);
         }
         else
             DrawText("You reach the MAX LENGHT of name !!!", (int)this->getFrame().x + this->fontSize * 1.1, (int)this->getFrame().y + this->fontSize * 2, this->fontSize * 0.5, RED);
@@ -22,58 +24,40 @@ void InputBox::draw()
     //std::cout<<rawText<<std::endl; // for debug
 }
 
-void InputBox::handle()
-{
-    if (CheckCollisionPointRec(GetMousePosition(), this->getFrame())) isActivated = true;
-        else isActivated = false;
 
-        if (isActivated)
+PacketAction* InputBox::react()
+{
+    bool cur = (CheckCollisionPointRec(GetMousePosition(), this->getFrame()));
+
+    PacketAction* packet = nullptr;
+    if(cur != isActivated)
+    {
+        Action* action = new setActivateAction(this, cur);
+        packet = new PacketAction();
+        packet->addAction(action);
+    }
+    if(cur == false) return packet;
+    if(letterCount >= MAX_LENGTH) return packet;
+    char c = GetCharPressed();
+    std::string s = rawText;
+
+    if(c >= 32 && c <= 125 && s.size() < MAX_LENGTH)
+    {
+        s += (char)c;
+    }
+    c = GetCharPressed();
+    if(IsKeyDown(KEY_BACKSPACE) && !s.empty())
+        if(std::chrono::steady_clock::now() - lastBackspace > backspace_delay)
         {
-            // Set the window's cursor to the I-Beam
-            SetMouseCursor(MOUSE_CURSOR_IBEAM);
-
-            // Get char pressed (unicode character) on the queue
-            int key = GetCharPressed();
-
-            // Check if more characters have been pressed on the same frame
-            while (key > 0)
-            {
-                // NOTE: Only allow keys in range [32..125]
-                if ((key >= 32) && (key <= 125) && (letterCount < MAX_LENGTH))
-                {
-                    rawText[letterCount] = (char)key;
-                    rawText[letterCount + 1] = '\0'; // Add null terminator at the end of the string.
-                    letterCount++;
-                }
-                
-
-                key = GetCharPressed();  // Check next character in the queue
-            }
-            
-                if(IsKeyPressed(KEY_BACKSPACE))
-                {
-                    letterCount--;
-                    if (letterCount < 0) letterCount = 0;
-                    rawText[letterCount] = '\0';
-                }
-                
-
+            s.pop_back();
+            lastBackspace = std::chrono::steady_clock::now();
         }
-        else SetMouseCursor(MOUSE_CURSOR_DEFAULT);
-
-        if (isActivated) framesCounter++;
-        else framesCounter = 0;
+    Action* action = new setRawTextAction(this, s);
+    if(packet == nullptr) packet = new PacketAction();
+    packet->addAction(action);
+    return packet;
 }
 
-void InputBox::update()
-{
-    // int head = rawText.length() - MAX_VISIBLE;
-    // if(head < 0) head = 0;
-    // showText = rawText.substr(head, MAX_VISIBLE); // why it not work?
-    // if(head > 0)
-    //     showText = "..." + showText;
-    // std::cout<<showText<<std::endl; // for debug
-}
 
 std::string InputBox::linkContent(std::string path)
 {
@@ -84,10 +68,10 @@ std::string InputBox::linkContentAbsolute(std::string path)
 {
     YAML::Node node = YAML_FILE::readFile(path);
     if(!loadName(node)) return "";
-    
+
     // if(node["object"]) 
     //     loadObject(node["object"]);
-    
+
     // if(node["textures"])
     // {
     //     loadSprites(node["textures"]);
@@ -103,61 +87,19 @@ std::string InputBox::linkContentAbsolute(std::string path)
     }
     if(node["object"])
     {
-    //     this->getFrame().x = node["object"]["x"].as<float>() / 100 * this->root->getFrame().width + this->root->getFrame().x;
-    //     this->getFrame().y = node["object"]["y"].as<float>() / 100 * this->root->getFrame().height + this->root->getFrame().y;
-    //     this->getFrame().width = node["object"]["w"].as<float>() / 100 * this->root->getFrame().width;
-    //     this->getFrame().height = node["object"]["h"].as<float>() / 100 * this->root->getFrame().height;
+        //     this->getFrame().x = node["object"]["x"].as<float>() / 100 * this->root->getFrame().width + this->root->getFrame().x;
+        //     this->getFrame().y = node["object"]["y"].as<float>() / 100 * this->root->getFrame().height + this->root->getFrame().y;
+        //     this->getFrame().width = node["object"]["w"].as<float>() / 100 * this->root->getFrame().width;
+        //     this->getFrame().height = node["object"]["h"].as<float>() / 100 * this->root->getFrame().height;
     }
     return getName();
-}
-
-PacketAction* InputBox::react()
-{
-      if (CheckCollisionPointRec(GetMousePosition(), this->getFrame())) isActivated = true;
-        else isActivated = false;
-
-        if (isActivated)
-        {
-            // Set the window's cursor to the I-Beam
-            SetMouseCursor(MOUSE_CURSOR_IBEAM);
-
-            // Get char pressed (unicode character) on the queue
-            int key = GetCharPressed();
-
-            // Check if more characters have been pressed on the same frame
-            while (key > 0)
-            {
-                // NOTE: Only allow keys in range [32..125]
-                if ((key >= 32) && (key <= 125) && (letterCount < MAX_LENGTH))
-                {
-                    rawText[letterCount] = (char)key;
-                    rawText[letterCount + 1] = '\0'; // Add null terminator at the end of the string.
-                    letterCount++;
-                }
-                
-
-                key = GetCharPressed();  // Check next character in the queue
-            }
-
-            if (IsKeyPressed(KEY_BACKSPACE))
-            {
-                letterCount--;
-                if (letterCount < 0) letterCount = 0;
-                rawText[letterCount] = '\0';
-            }
-        }
-        else SetMouseCursor(MOUSE_CURSOR_DEFAULT);
-
-        if (isActivated) framesCounter++;
-        else framesCounter = 0;
-    return nullptr;
 }
 
 void InputBox::loadEvent(YAML::Node node)
 {
     // if(node["hover"])
     // {
-        
+
     //     for(auto sprite : node["hover"]["sprite"])
     //     {
     //         iPoint p;

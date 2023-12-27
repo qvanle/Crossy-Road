@@ -6,7 +6,8 @@ add_library(
     src/destructor.cpp
     src/arthmetic.cpp
     src/action.cpp
-    src/action/moveentity.cpp
+    src/action/setactivate.cpp
+    src/action/setrawtext.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC dep::raylib)

@@ -3,23 +3,28 @@
 
 #include <interface.hpp>
 #include <string>
+#include <chrono>
 #include <cstring>
 #include <fstream>
 #include <sstream>
+
+static std::chrono::duration<double> backspace_delay = std::chrono::duration<double>(50 / 1000.0);
 
 class InputBox : public Interface
 {
 private:
 
+    friend class setActivateAction;
+    friend class setRawTextAction;
     // handle constant in file yaml
     static constexpr int MAX_LENGTH = 15;
     static constexpr int  FRAMES_PER_SECOND = 30;
     Texture textureBlank;
-
     // crucial parameters
     int fontSize, framesCounter;
     Font* font;
     std::string showText, rawText;
+    std::chrono::time_point<std::chrono::steady_clock> lastBackspace;
 
     bool isActivated, isFlicked;
     int letterCount;
@@ -31,8 +36,6 @@ public:
     InputBox(int fontSize, Rectangle relative, Frame* root, Font* font);
 
     void draw();
-    void handle();
-    void update();
     void clear();
 
     /*void setList(std::vector<std::pair<std::string, std::string>> list);*/
@@ -54,6 +57,29 @@ public:
     void save(std::string path);
 };
 
+class setActivateAction : public Action 
+{
+private: 
+    InputBox* but;
+    bool b;
+public: 
+    setActivateAction(InputBox* but, bool b);
+    setActivateAction(setActivateAction* other);
+    void execute();
+    Action* clone();
+};
+
+class setRawTextAction : public Action 
+{
+private: 
+    InputBox* but;
+    std::string s;
+public:
+    setRawTextAction(InputBox* but, std::string s);
+    setRawTextAction(setRawTextAction* other);
+    void execute();
+    Action* clone();
+};
 
 #endif 
 
