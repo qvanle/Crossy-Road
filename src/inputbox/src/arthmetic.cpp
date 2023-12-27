@@ -49,13 +49,15 @@ void InputBox::handle()
 
                 key = GetCharPressed();  // Check next character in the queue
             }
+            
+                if(IsKeyPressed(KEY_BACKSPACE))
+                {
+                    letterCount--;
+                    if (letterCount < 0) letterCount = 0;
+                    rawText[letterCount] = '\0';
+                }
+                
 
-            if (IsKeyPressed(KEY_BACKSPACE))
-            {
-                letterCount--;
-                if (letterCount < 0) letterCount = 0;
-                rawText[letterCount] = '\0';
-            }
         }
         else SetMouseCursor(MOUSE_CURSOR_DEFAULT);
 
@@ -83,16 +85,29 @@ std::string InputBox::linkContentAbsolute(std::string path)
     YAML::Node node = YAML_FILE::readFile(path);
     if(!loadName(node)) return "";
     
-    if(node["textures"])
+    // if(node["object"]) 
+    //     loadObject(node["object"]);
+    
+    // if(node["textures"])
+    // {
+    //     loadSprites(node["textures"]);
+    //     chooseImage(0, 0);
+    // }
+    // if(node["events"])
+    // {
+    //     loadEvent(node["events"]);
+    // }
+    if(node["fontsize"])
     {
-        loadSprites(node["textures"]);
-        chooseImage(0, 0);
+        this->fontSize = node["fontsize"].as<int>();
     }
-    if(node["events"])
+    if(node["object"])
     {
-        loadEvent(node["events"]);
+    //     this->getFrame().x = node["object"]["x"].as<float>() / 100 * this->root->getFrame().width + this->root->getFrame().x;
+    //     this->getFrame().y = node["object"]["y"].as<float>() / 100 * this->root->getFrame().height + this->root->getFrame().y;
+    //     this->getFrame().width = node["object"]["w"].as<float>() / 100 * this->root->getFrame().width;
+    //     this->getFrame().height = node["object"]["h"].as<float>() / 100 * this->root->getFrame().height;
     }
-
     return getName();
 }
 
