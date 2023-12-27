@@ -11,6 +11,27 @@ InputBox::InputBox(int fontSize, Rectangle relative, Frame* root, Font* font) : 
 	this->isActivated = false;
 	this->isFlicked = false;
 	this->letterCount = 0;
-	// work in yaml file
-	this->textureBlank = LoadTexture("assets/graphics/45908.png");
 }	
+
+highScore::highScore(std::string path)
+{
+	std::ifstream fi;
+	fi.open(path);
+	if (fi.is_open())
+	{
+		std::string name;
+		int score;
+		std::string line;
+		while (getline(fi, line))
+		{
+			std::stringstream ss(line);
+			ss >> score;
+			char space;
+			//ss >> space;
+			getline(ss, name);
+			if(name[0] = ' ') name.erase(0, 1);
+			list.push_back(std::make_pair(score, name));
+		}
+	}
+	fi.close();
+}

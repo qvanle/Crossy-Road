@@ -4,6 +4,9 @@
 #include <interface.hpp>
 #include <string>
 #include <cstring>
+#include <fstream>
+#include <sstream>
+
 class InputBox : public Interface
 {
 private:
@@ -39,6 +42,16 @@ public:
     std::string linkContentAbsolute(std::string);
 };
 
+class highScore
+{
+private:
+    std::vector<std::pair<int, std::string>> list;
+public:
+    highScore(std::string path);
+    std::vector<std::pair<int, std::string>> getList();
+    void add(std::string name, int score);
+    void save(std::string path);
+};
 
 
 #endif 

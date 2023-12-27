@@ -217,3 +217,37 @@ void InputBox::loadEvent(YAML::Node node)
     //     this->pressingID = actions.size() - 1;
     // }  
 }
+
+
+std::vector<std::pair<int, std::string>> highScore::getList()
+{
+    return list;
+}
+
+void highScore::add(std::string name, int score)
+{
+    for(int i=0; i<list.size(); i++)
+    {
+        if(list[i].second == name)
+        {
+            if(list[i].first < score)
+            {
+                list[i].first = score;
+                // std::cout<<"Update score of "<<name<<" to "<<score<<std::endl;
+            }
+            return;
+        }
+    }
+    list.push_back(std::make_pair(score, name));
+}
+
+void highScore::save(std::string path)
+{
+    std::ofstream fo;
+    fo.open(path);
+    for(auto i : list)
+    {
+        fo<<i.first<<" "<<i.second<<std::endl;
+    }
+    fo.close();
+}
