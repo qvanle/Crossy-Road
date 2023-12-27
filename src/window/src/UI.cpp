@@ -5,6 +5,10 @@ Window::UI::UI()
 {
     root_frame = nullptr;
     interface = nullptr;
+    reader = 0;
+    writer = 0;
+    noRead = false;
+    noWrite = false;
 }
 
 Window::UI::~UI()
