@@ -33,6 +33,7 @@ public:
     void draw();
     void handle();
     void update();
+    void clear();
 
     /*void setList(std::vector<std::pair<std::string, std::string>> list);*/
     int getChoseId();

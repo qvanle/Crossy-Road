@@ -218,6 +218,17 @@ void InputBox::loadEvent(YAML::Node node)
     // }  
 }
 
+std::string InputBox::getText()
+{
+    return rawText;
+}
+
+void InputBox::clear()
+{
+    rawText = "";
+    letterCount = 0;
+}
+
 
 std::vector<std::pair<int, std::string>> highScore::getList()
 {
