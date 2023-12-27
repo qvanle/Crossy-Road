@@ -1,4 +1,5 @@
 #include "interface.hpp"
+#include <request.hpp>
 #include <game.hpp>
 
 Action* Game::react()
@@ -28,6 +29,12 @@ Action* Game::getRuntimeEvent()
 
     for(auto i : chunks)
     {
+        if(i->isEntityCollide(main)) 
+        {
+            Action* act = new loseRequest();
+            if(packet == nullptr) packet = new PacketAction();
+            packet->addAction(act);
+        }
         Action* act = i->getRuntimeEvent();
         if(act == nullptr) 
             continue;

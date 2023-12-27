@@ -6,6 +6,7 @@ add_library(
     src/request.cpp
     src/args.cpp
     src/request/changeinf.cpp
+    src/request/lose.cpp
 )
 
 add_library(action::lib ALIAS ${PROJECT_NAME})

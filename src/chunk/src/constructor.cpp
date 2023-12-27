@@ -121,3 +121,12 @@ void Chunk::setVelocity(fPoint vel)
 {
     velocity = vel;
 }
+
+bool Chunk::isEntityCollide(Container* main)
+{
+    for(auto i : Entity)
+    {
+        if(i->isCollide(main)) return true;
+    }
+    return false;
+}
