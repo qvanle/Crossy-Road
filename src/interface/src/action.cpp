@@ -1,11 +1,11 @@
 #include "action.hpp"
 #include <interface.hpp>
 
-PacketAction* Interface::getRuntimeEvent()
+Action* Interface::getRuntimeEvent()
 {
     PacketAction* packet = nullptr; 
-        
     Action* action = Container::getRuntimeEvent();
+
     if(action != nullptr) 
     {
         packet = new PacketAction();
@@ -35,12 +35,13 @@ PacketAction* Interface::getRuntimeEvent()
     return packet;
 }
 
-PacketAction* Interface::react()
+Action* Interface::react()
 {
     if(!isVisible()) return nullptr;
-    PacketAction* packet = nullptr;
-
+    PacketAction* packet = nullptr; 
+    
     Action* action = Container::react();
+    
     if(action != nullptr) 
     {
         packet = new PacketAction();
@@ -49,7 +50,7 @@ PacketAction* Interface::react()
 
     for(auto i : keystrokes)
     {
-        action = i->react();
+        Action* action = i->react();
         if(action != nullptr) 
         {
             if(packet == nullptr) packet = new PacketAction();
@@ -59,7 +60,7 @@ PacketAction* Interface::react()
 
     for(auto i : containers) 
     {
-        action = i->react();
+        Action* action = i->react();
         if(action != nullptr) 
         {
             if(packet == nullptr) packet = new PacketAction();

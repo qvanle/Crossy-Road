@@ -1,24 +1,29 @@
 #include "raylib.h"
 #include <const/path/atb.hpp>
 #include <file.hpp>
+#include <vector.hpp>
 #include <object.hpp>
 #include <chunk.hpp>
 #include <game.hpp>
 
 Game::Game(Frame* frame, Rectangle rect) : Interface(frame, rect)
 {
+    initState = true;
 }
 
 Game::Game(Game* other) : Interface(other)
 {
+    initState = true;
 }
 
 Game::Game(Game* other, Rectangle rect) : Interface(other, rect)
 {
+    initState = true;
 }
 
 Game::Game(Game* other, Frame* frame, Rectangle rect) : Interface(other, frame, rect)
 {
+    initState = true;
 }
 
 std::string Game::linkContentAbsolute(std::string path)
@@ -34,8 +39,13 @@ std::string Game::linkContentAbsolute(std::string path)
     else chooseImage(0, 0);
 
     if(node["object"]) 
+    {
         loadObject(node["object"]);
-
+        for(int i = 0; i < getContainersSize(); i++) 
+            getContainers(i)->hide();
+        main = getContainers(0);
+        main->show();
+    }
     if(node["collide"])
         loadCollide(node["collide"]);
 
@@ -71,15 +81,20 @@ void Game::loadMap()
     }
     if(chunks.empty()) 
     {
-        int id = GetRandomValue(0, cache.size() - 1);
         Rectangle rel;
-        rel.width = cache[id]->getRelative()[2];
-        rel.height = cache[id]->getRelative()[3];
+        rel.width = cache[0]->getRelative()[2];
+        rel.height = cache[0]->getRelative()[3];
         rel.x = 0;
         rel.y = (1.01 - rel.height);
 
-        Chunk* chunk = new Chunk(cache[id], this, rel);
+        Chunk* chunk = new Chunk(cache[0], this, rel);
         chunks.push_front(chunk);
+        for(int i = 0; i < 3; i++)
+        {
+            rel.y += 0.005 - rel.height;
+            chunk = new Chunk(cache[0], this, rel);
+            chunks.push_front(chunk);
+        }
     }
     while(chunks.front()->getRelative()[1] > 0)
     {
@@ -107,10 +122,18 @@ void Game::loadChunk(YAML::Node node)
         if(i["w"]) w = i["w"].as<float>() / 100;
         if(i["h"]) h = i["h"].as<float>() / 100;
         if(i["repeat"]) repeat = i["repeat"].as<int>();
-
+        fPoint direction = {1, 0};
+        float velo = 0.002;
+        if(i["velocity"]) 
+        {
+            velo = i["velocity"][0].as<float>();
+            direction = {i["velocity"][1].as<float>(), i["velocity"][2].as<float>()};
+        }
+        float angle = VECTOR2D::getAngle(direction);
+        fPoint displacement = {velo * cos(angle), velo * sin(angle)};
         Chunk* chunk = new Chunk(this, {x, y, w, h}); 
         chunk->linkContent(path);
-        chunk->setVelocity({0.002, 0});
+        chunk->setVelocity(displacement);
         cache.push_back(chunk);
         while(--repeat > 0) 
             cache.push_back(new Chunk(cache[0]));
@@ -134,7 +157,15 @@ void Game::loadEvent(YAML::Node node)
 {
     if(node["map-speed"])
     {
-        mapSpeed[0] = node["map-speed"][0].as<float>();
-        mapSpeed[1] = node["map-speed"][1].as<float>();
+        mapSpeed = node["map-speed"].as<float>();
     }
+    if(node["map-direction"])
+    {
+        mapDirection[0] = node["map-direction"][0].as<float>();
+        mapDirection[1] = node["map-direction"][1].as<float>();
+    }
+    float angle = VECTOR2D::getAngle(mapDirection);
+    std::cout << "hehe: " << angle << std::endl;
+    mapDisplacement[0] = mapSpeed * cos(angle);
+    mapDisplacement[1] = mapSpeed * sin(angle);
 }

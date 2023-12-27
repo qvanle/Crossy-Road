@@ -55,6 +55,8 @@ public:
     bool isOverlapping(Container*);
     float OverlappingArea(Rectangle);
     float OverlappingArea(Container*);
+    bool isCollide(Rectangle);
+    bool isCollide(Container*);
 
     virtual void draw();
     void show();
@@ -63,8 +65,8 @@ public:
     bool isVisible();
     int getInstanceId();
 
-    virtual PacketAction* react();
-    virtual PacketAction* getRuntimeEvent();
+    virtual Action* react();
+    virtual Action* getRuntimeEvent();
 };
 class changeImageAction : public Action
 {

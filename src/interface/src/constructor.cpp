@@ -145,9 +145,10 @@ void Interface::loadControl(YAML::Node node)
         if(action == "move-object") 
         {
             int id = stroke["args"][0].as<int>();
-            float x = stroke["args"][1].as<float>() / 100.0;
-            float y = stroke["args"][2].as<float>() / 100.0;
-            moveObjectAction* action = new moveObjectAction(containers[id], fPoint({x, y}));
+            float v = stroke["args"][1].as<float>() / 100.0;
+            float x = stroke["args"][2].as<float>();
+            float y = stroke["args"][3].as<float>();
+            moveObjectAction* action = new moveObjectAction(containers[id], fPoint({x, y}), v);
             k->addAction(action);
         }
 
@@ -176,4 +177,9 @@ Container* Interface::getContainers(int id)
 {
     if(id < 0 || id >= containers.size()) return nullptr;
     return containers[id];
+}
+
+int Interface::getContainersSize()
+{
+    return containers.size();
 }
