@@ -37,7 +37,7 @@ void Window::draw()
     {
         BeginDrawing();
         UI.draw();
-        inputBox->draw();
+        //inputBox->draw();
         EndDrawing();
     }
 }
