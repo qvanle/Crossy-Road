@@ -6,6 +6,7 @@
 #include <frame.hpp>
 #include <container.hpp>
 #include <request.hpp>
+#include <const/request.hpp>
 #define TRANSPARENT Color {127, 127, 127, 0}
 #define rectangle this->getFrame()
 
@@ -52,6 +53,16 @@ public:
     std::string linkContent(std::string);
     std::string linkContentAbsolute(std::string);
 
+};
+
+class popInfRequest : public Request
+{
+public:
+    popInfRequest();
+    popInfRequest(popInfRequest*);
+    ~popInfRequest() = default;
+    int isRequest() override;
+    Action* clone() override;
 };
 
 #endif 

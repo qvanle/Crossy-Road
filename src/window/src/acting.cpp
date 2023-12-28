@@ -101,6 +101,11 @@ void Window::requestActing()
                     UI.push(id);
                     break;
                 }
+            case (REQUEST::ID::POP_INF): 
+                {
+                    UI.pop();
+                    break;
+                }
             case (REQUEST::ID::LOSE): 
                 {
                     std::cout << "hehe\n";

@@ -8,6 +8,7 @@ namespace REQUEST
         INVALID,
         NONE,
         CHANGE_INF,
+        POP_INF,
         DELAY, 
         LOSE,
     };

@@ -77,4 +77,28 @@ void ButtonImage::loadAction(YAML::Node node)
         if(!node["str"]) return;
         request = new changeInfRequest(node["str"][0].as<std::string>());
     }
+     if(node["type"].as<std::string>() == "pop-interface")
+    {
+        request = new popInfRequest(); // TODO
+    }
+}
+
+popInfRequest::popInfRequest()
+{  
+
+}
+
+popInfRequest::popInfRequest(popInfRequest* request)
+{
+    
+}
+
+int popInfRequest::isRequest()
+{
+    return REQUEST::ID::POP_INF;
+}
+
+Action* popInfRequest::clone()
+{
+    return new popInfRequest(this);
 }
