@@ -15,6 +15,7 @@ setRawTextAction::setRawTextAction(setRawTextAction* other)
 void setRawTextAction::execute()
 {
     this->but->rawText = this->s;
+    but->letterCount = but->rawText.size();
 }
 
 Action* setRawTextAction::clone()

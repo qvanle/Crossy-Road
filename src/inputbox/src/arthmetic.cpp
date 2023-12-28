@@ -37,24 +37,41 @@ PacketAction* InputBox::react()
         packet->addAction(action);
     }
     if(cur == false) return packet;
-    if(letterCount >= MAX_LENGTH) return packet;
-    char c = GetCharPressed();
+    if(std::chrono::steady_clock::now() - lastTyping < typing_delay) 
+        return packet;
+    int c = -1;
     std::string s = rawText;
+    
 
-    if(c >= 32 && c <= 125 && s.size() < MAX_LENGTH)
+    for(int i = 32; i <= 96 && s.size() < MAX_LENGTH; i++) 
     {
-        s += (char)c;
+        if(!IsKeyDown(i)) continue; 
+        c = i;
+        if(KEY_ZERO <= c && c <= KEY_NINE) 
+            c = c;
+        else if(KEY_A <= c && c <= KEY_Z && !IsKeyDown(KEY_LEFT_SHIFT) && !IsKeyDown(KEY_RIGHT_SHIFT) && !IsKeyDown(KEY_CAPS_LOCK)) 
+            c += 32;
+        else if((c < KEY_A || c > KEY_Z) && IsKeyDown(KEY_LEFT_SHIFT) && IsKeyDown(KEY_RIGHT_SHIFT)) 
+            c += 32;
+        s += c;
+        break; 
     }
-    c = GetCharPressed();
-    if(IsKeyDown(KEY_BACKSPACE) && !s.empty())
-        if(std::chrono::steady_clock::now() - lastBackspace > backspace_delay)
-        {
-            s.pop_back();
-            lastBackspace = std::chrono::steady_clock::now();
-        }
+
+    if(IsKeyDown(KEY_BACKSPACE) && rawText.size() > 0) 
+    {
+        s.pop_back();
+        c = 0;
+    }
+
+    if(c == -1) 
+    {
+        lastTyping = std::chrono::steady_clock::now();
+        return packet;
+    }
     Action* action = new setRawTextAction(this, s);
     if(packet == nullptr) packet = new PacketAction();
     packet->addAction(action);
+    lastTyping = std::chrono::steady_clock::now();
     return packet;
 }
 
