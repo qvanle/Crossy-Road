@@ -25,6 +25,7 @@ void Chunk::movingEntity()
 
 Action* Chunk::getRuntimeEvent() 
 {
+    if(!isVisible()) return nullptr;
     PacketAction* packet = nullptr; 
     Action* action = Interface::getRuntimeEvent();
     
