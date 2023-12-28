@@ -28,7 +28,10 @@ PacketAction* ButtonImage::react() {
                 return nullptr;
             PacketAction* packet = new PacketAction();
             packet->addAction(actions[clickedID]->clone());
-            packet->addAction(new changeInfRequest("test"));
+            if(request != nullptr)
+                {
+                    std::cout << "request" << std::endl;
+                    packet->addAction(request->clone());}
             return packet;
         }
         if(this->hoverID == -1)
@@ -63,4 +66,15 @@ int ButtonImage::getClicked()
 
 bool ButtonImage::isClicked() const {
     return this->clicked;
+}
+
+void ButtonImage::loadAction(YAML::Node node)
+{
+    if(!node) return;
+    if(!node["type"]) return;
+    if(node["type"].as<std::string>() == "change-interface")
+    {
+        if(!node["str"]) return;
+        request = new changeInfRequest(node["str"][0].as<std::string>());
+    }
 }

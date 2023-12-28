@@ -6,4 +6,7 @@ ButtonImage:: ~ButtonImage()
     {
         delete action;
     }
+    
+    if(request != nullptr)
+        delete request;
 }
