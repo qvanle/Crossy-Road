@@ -15,6 +15,13 @@ struct ARGS
     std::string getInterfaceName();
 };
 extern ARGS NONE_ARGS;
+
+/**
+ * @class Action
+ *
+ * @brief manages the way an action is executed
+ * 
+**/
 class Action 
 {
 public:
@@ -30,6 +37,12 @@ public:
     virtual ARGS& getArgs();
 };
 
+/**
+ * @class PacketAction
+ *
+ * @brief organize selected actions into a package
+ * 
+**/
 class PacketAction : public Action
 {
 private: 

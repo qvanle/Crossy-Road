@@ -7,6 +7,12 @@
 
 #include <interface.hpp>
 
+/**
+ * @class Chunk
+ *
+ * @brief manages the spawning of chunks and how entities interact witht them
+ * 
+**/
 class Chunk : public Interface 
 {
 private: 

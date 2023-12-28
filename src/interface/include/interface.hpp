@@ -12,10 +12,11 @@
 /**
  * @class Interface
  *
- * @brief the entire program frame, which manages containers, all actions, subframes etc.
+ * @brief where user can interact with the game
+ * 
+ * manages containers, all actions, subframes etc.
  * 
 **/
-
 class Interface : public Container
 {
 private: 
@@ -50,6 +51,12 @@ public:
     void draw() override;
 };
 
+/**
+ * @class moveobjectAction
+ *
+ * @brief manages the features of a movement, including which object, speed, direction etc.
+ * 
+**/
 class moveObjectAction : public Action
 {
 private: 

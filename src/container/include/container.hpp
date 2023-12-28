@@ -13,7 +13,7 @@
 /**
  * @class Container
  *
- * @brief contains specific sprites and their behavior
+ * @brief contains specific entities and their behavior
  *
 **/
 class Container : public Frame
