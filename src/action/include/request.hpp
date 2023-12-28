@@ -35,6 +35,12 @@ public:
     ARGS& getArgs() override;
 };
 
+/**
+ * @class loseRequest
+ *
+ * @brief request sent when the player loses
+ * 
+**/
 class loseRequest : public Request 
 {
 public: 
