@@ -1,0 +1,48 @@
+"name": "difficultylevel" # require
+"textures":  # require
+  - 
+    "path": "menu_background.png"  # require
+    "graphics":  #require
+      -
+        "x": 00
+        "y": 00
+        "w": 100
+        "h": 100
+        "gapX": 0
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1
+    
+"button":
+  - 
+    "path": "newgame.yaml" # should be nightmare.yaml
+    "x": 40
+    "y": 25
+    "w": 20
+    "h": 20
+  - 
+    "path": "newgame.yaml" # should be insane.yaml
+    "x": 40
+    "y": 37
+    "w": 20
+    "h": 20
+  - 
+    "path": "newgame.yaml" # should be hard.yaml
+    "x": 40
+    "y": 49
+    "w": 20
+    "h": 20
+  - 
+    "path": "newgame.yaml" # should be normal.yaml
+    "x": 40
+    "y": 61
+    "w": 20
+    "h": 20
+  - 
+    "path": "newgame.yaml" # should be easy.yaml
+    "x": 40
+    "y": 73
+    "w": 20
+    "h": 20

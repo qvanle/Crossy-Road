@@ -1,0 +1,42 @@
+"name": "gameover" # require
+"textures":  # require
+  - 
+    "path": "gameover.png"  # require
+    "graphics":  #require
+      -
+        "x": 0
+        "y": 0
+        "w": 100
+        "h": 100
+        "gapX": 0  
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1
+    
+"button":
+  - 
+    "path": "music.yaml" # should be home.yaml
+    "x": 44
+    "y": 80
+    "w": 12
+    "h": 14
+  - 
+    "path": "newgame.yaml"
+    "x": 10
+    "y": 68
+    "w": 25
+    "h": 15
+  - 
+    "path": "setting.yaml"
+    "x": 38
+    "y": 68
+    "w": 25
+    "h": 15
+  - 
+    "path": "highscore.yaml" # should be hard_score.yaml
+    "x": 65
+    "y": 68
+    "w": 25
+    "h": 15
