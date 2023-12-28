@@ -9,6 +9,7 @@ void Game::draw()
     {
         (*i)->draw();
     }
+    DrawRectangleLinesEx(main->getFrame(), 5, RED);
 
     drawContainers();
 }

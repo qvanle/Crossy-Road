@@ -13,7 +13,7 @@ Chunk::Chunk(Chunk* other) : Interface(other)
     {
         Rectangle rel;
         rel.x = 1;
-        rel.y = -0.375;
+        rel.y = 0;
         rel.width = i->getRelative()[2];
         rel.height = i->getRelative()[3];
         visiter.push_back(new Container(i, this, rel));
@@ -28,7 +28,7 @@ Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
     {
         Rectangle rel;
         rel.x = 1;
-        rel.y = -0.375;
+        rel.y = 0;
         rel.width = i->getRelative()[2];
         rel.height = i->getRelative()[3];
         visiter.push_back(new Container(i, this, rel));
@@ -43,7 +43,7 @@ Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, fram
     {
         Rectangle rel;
         rel.x = 1;
-        rel.y = -0.375;
+        rel.y = 0;
         rel.width = i->getRelative()[2];
         rel.height = i->getRelative()[3];
         visiter.push_back(new Container(i, this, rel));
@@ -63,7 +63,7 @@ void Chunk::generateEntity()
         Container* c = randomEntity();
         Rectangle rel;
         rel.x = x;
-        rel.y = -0.375;
+        rel.y = 0;
         rel.width = c->getRelative()[2];
         rel.height = c->getRelative()[3];
         Container* cont = new Container(c, this, rel);
@@ -126,7 +126,11 @@ bool Chunk::isEntityCollide(Container* main)
 {
     for(auto i : Entity)
     {
-        if(i->isCollide(main)) return true;
+        if(i->isCollide(main)) 
+        {
+            throw i;
+            return true;
+        }
     }
     return false;
 }
