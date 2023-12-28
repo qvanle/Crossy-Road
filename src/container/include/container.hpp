@@ -13,20 +13,15 @@
 /**
  * @class Container
  *
- * @brief manages the behavior of sprites
- * 
- * 
- * 
- * 
+ * @brief contains specific sprites and their behavior
  *
 **/
-
 class Container : public Frame
 {
 private:
     friend class changeImageAction;
-    static int id_count;
-    int instance_id;
+    static int id_count; ///< counter of all containers created
+    int instance_id; ///< ID of the container
     int probability;
 
     std::vector<Sprite> sprites;
@@ -52,12 +47,39 @@ public:
     void setProbability(int);
     int getProbability();
     
+    /**
+     * @brief choose a specific sprite from a vector of sprites
+     */
     void chooseSprite(int);
+
+    /**
+     * @brief choose the state of the sprite
+     */
     void chooseImage(int);
+
+    /**
+     * @brief choose the state of the sprite
+     */
     void chooseImage(int, int);
+
+    /**
+     * @brief move to next state of the sprite
+     */
     void nextImage();
+
+    /**
+     * @brief move to previous state of the sprite
+     */
     void prevImage();
+
+    /**
+     * @brief move to the next sprite
+     */
     void nextSprite();
+
+    /**
+     * @brief move to the previous sprite
+     */
     void prevSprite();
 
     bool isOverlapping(fPoint);

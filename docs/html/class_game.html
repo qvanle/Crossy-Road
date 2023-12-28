@@ -109,7 +109,7 @@ Inheritance diagram for Game:</div>
   <img src="class_game.png" usemap="#Game_map" alt=""/>
   <map id="Game_map" name="Game_map">
 <area href="class_interface.html" title="position and size of object on screen" alt="Interface" shape="rect" coords="0,112,67,136"/>
-<area href="class_container.html" title="manages the behavior of sprites" alt="Container" shape="rect" coords="0,56,67,80"/>
+<area href="class_container.html" title="contains specific sprites and their behavior" alt="Container" shape="rect" coords="0,56,67,80"/>
 <area href="class_frame.html" title="position and size of object on screen" alt="Frame" shape="rect" coords="0,0,67,24"/>
   </map>
 </div></div>
@@ -149,6 +149,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a04fc266ae14009c6013f1952569f4a08" id="r_a04fc266ae14009c6013f1952569f4a08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#a04fc266ae14009c6013f1952569f4a08">chooseSprite</a> (int)</td></tr>
 <tr class="separator:a04fc266ae14009c6013f1952569f4a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac834daaf7955ebf7cd11f3c032c7141a" id="r_ac834daaf7955ebf7cd11f3c032c7141a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#ac834daaf7955ebf7cd11f3c032c7141a">chooseImage</a> (int)</td></tr>
+<tr class="memdesc:ac834daaf7955ebf7cd11f3c032c7141a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose the state of the sprite based on a single parameter.  <br /></td></tr>
 <tr class="separator:ac834daaf7955ebf7cd11f3c032c7141a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e1ea1d520bee6d8c48125546c795450" id="r_a7e1ea1d520bee6d8c48125546c795450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#a7e1ea1d520bee6d8c48125546c795450">chooseImage</a> (int, int)</td></tr>
 <tr class="separator:a7e1ea1d520bee6d8c48125546c795450"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -517,6 +518,14 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Choose the state of the sprite based on a single parameter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The state parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00231">231</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  232</span>{</div>
@@ -1506,7 +1515,7 @@ Friends</h2></td></tr>
 <div class="ttc" id="aclass_container_html_a3ebddddd7a940e4f5e3d287067103a3e"><div class="ttname"><a href="class_container.html#a3ebddddd7a940e4f5e3d287067103a3e">Container::loadName</a></div><div class="ttdeci">bool loadName(YAML::Node node)</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2constructor_8cpp_source.html#l00111">constructor.cpp:111</a></div></div>
 <div class="ttc" id="aclass_container_html_a48cdaa85884938b417513cca003f4f6c"><div class="ttname"><a href="class_container.html#a48cdaa85884938b417513cca003f4f6c">Container::show</a></div><div class="ttdeci">void show()</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2arthmetic_8cpp_source.html#l00011">arthmetic.cpp:11</a></div></div>
 <div class="ttc" id="aclass_container_html_a5f2b24b3eff15fb251043fcfd32bf537"><div class="ttname"><a href="class_container.html#a5f2b24b3eff15fb251043fcfd32bf537">Container::hide</a></div><div class="ttdeci">void hide()</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2arthmetic_8cpp_source.html#l00016">arthmetic.cpp:16</a></div></div>
-<div class="ttc" id="aclass_container_html_ac834daaf7955ebf7cd11f3c032c7141a"><div class="ttname"><a href="class_container.html#ac834daaf7955ebf7cd11f3c032c7141a">Container::chooseImage</a></div><div class="ttdeci">void chooseImage(int)</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2constructor_8cpp_source.html#l00231">constructor.cpp:231</a></div></div>
+<div class="ttc" id="aclass_container_html_ac834daaf7955ebf7cd11f3c032c7141a"><div class="ttname"><a href="class_container.html#ac834daaf7955ebf7cd11f3c032c7141a">Container::chooseImage</a></div><div class="ttdeci">void chooseImage(int)</div><div class="ttdoc">Choose the state of the sprite based on a single parameter.</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2constructor_8cpp_source.html#l00231">constructor.cpp:231</a></div></div>
 <div class="ttc" id="aclass_container_html_ae8cf3f2a9bbf12e6388c97c61c74d69b"><div class="ttname"><a href="class_container.html#ae8cf3f2a9bbf12e6388c97c61c74d69b">Container::getName</a></div><div class="ttdeci">std::string getName()</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2constructor_8cpp_source.html#l00275">constructor.cpp:275</a></div></div>
 <div class="ttc" id="aclass_game_html_a1c503228fa94eec10b9d519288916301"><div class="ttname"><a href="#a1c503228fa94eec10b9d519288916301">Game::loadChunk</a></div><div class="ttdeci">void loadChunk(YAML::Node)</div><div class="ttdef"><b>Definition</b> <a href="game_2src_2constructor_8cpp_source.html#l00113">constructor.cpp:113</a></div></div>
 <div class="ttc" id="aclass_game_html_a1eebc36977f2e365bddf9d9bf0093fd5"><div class="ttname"><a href="#a1eebc36977f2e365bddf9d9bf0093fd5">Game::loadEvent</a></div><div class="ttdeci">void loadEvent(YAML::Node)</div><div class="ttdef"><b>Definition</b> <a href="game_2src_2constructor_8cpp_source.html#l00156">constructor.cpp:156</a></div></div>
@@ -1556,7 +1565,7 @@ Friends</h2></td></tr>
 <div class="line"><span class="lineno">  152</span>        cache[id]-&gt;addVisiter(container);</div>
 <div class="line"><span class="lineno">  153</span>    }</div>
 <div class="line"><span class="lineno">  154</span>}</div>
-<div class="ttc" id="aclass_container_html"><div class="ttname"><a href="class_container.html">Container</a></div><div class="ttdoc">manages the behavior of sprites</div><div class="ttdef"><b>Definition</b> <a href="container_8hpp_source.html#l00024">container.hpp:25</a></div></div>
+<div class="ttc" id="aclass_container_html"><div class="ttname"><a href="class_container.html">Container</a></div><div class="ttdoc">contains specific sprites and their behavior</div><div class="ttdef"><b>Definition</b> <a href="container_8hpp_source.html#l00028">container.hpp:29</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

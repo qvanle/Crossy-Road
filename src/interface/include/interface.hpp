@@ -12,12 +12,8 @@
 /**
  * @class Interface
  *
- * @brief position and size of object on screen
+ * @brief the entire program frame, which manages containers, all actions, subframes etc.
  * 
- * 
- * 
- * 
- *
 **/
 
 class Interface : public Container
