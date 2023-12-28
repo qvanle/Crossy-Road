@@ -27,6 +27,8 @@ var hierarchy =
       [ "Visual", "class_visual.html", null ]
     ] ],
     [ "KeyStroke", "class_key_stroke.html", null ],
+    [ "Keystroke", "class_keystroke.html", null ],
+    [ "moveobjectAction", "classmoveobject_action.html", null ],
     [ "RandomEngine", "class_random_engine.html", null ],
     [ "Window", "class_window.html", null ]
 ];

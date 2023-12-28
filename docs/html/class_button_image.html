@@ -100,6 +100,9 @@ $(function(){initNavTree('class_button_image.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
+<p>manages the appearance and behavior of a button  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="button_8hpp_source.html">button.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ButtonImage:</div>
@@ -107,7 +110,7 @@ Inheritance diagram for ButtonImage:</div>
  <div class="center">
   <img src="class_button_image.png" usemap="#ButtonImage_map" alt=""/>
   <map id="ButtonImage_map" name="ButtonImage_map">
-<area href="class_container.html" title="contains specific sprites and their behavior" alt="Container" shape="rect" coords="0,56,80,80"/>
+<area href="class_container.html" title="contains specific entities and their behavior" alt="Container" shape="rect" coords="0,56,80,80"/>
 <area href="class_frame.html" title="position and size of object on screen" alt="Frame" shape="rect" coords="0,0,80,24"/>
   </map>
 </div></div>
@@ -143,19 +146,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab48f0dd8fad66981b1047bb4351619b4" id="r_ab48f0dd8fad66981b1047bb4351619b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#ab48f0dd8fad66981b1047bb4351619b4">getProbability</a> ()</td></tr>
 <tr class="separator:ab48f0dd8fad66981b1047bb4351619b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fc266ae14009c6013f1952569f4a08" id="r_a04fc266ae14009c6013f1952569f4a08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#a04fc266ae14009c6013f1952569f4a08">chooseSprite</a> (int)</td></tr>
+<tr class="memdesc:a04fc266ae14009c6013f1952569f4a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">choose a specific sprite from a vector of sprites  <br /></td></tr>
 <tr class="separator:a04fc266ae14009c6013f1952569f4a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac834daaf7955ebf7cd11f3c032c7141a" id="r_ac834daaf7955ebf7cd11f3c032c7141a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#ac834daaf7955ebf7cd11f3c032c7141a">chooseImage</a> (int)</td></tr>
-<tr class="memdesc:ac834daaf7955ebf7cd11f3c032c7141a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose the state of the sprite based on a single parameter.  <br /></td></tr>
+<tr class="memdesc:ac834daaf7955ebf7cd11f3c032c7141a"><td class="mdescLeft">&#160;</td><td class="mdescRight">choose the state of the sprite  <br /></td></tr>
 <tr class="separator:ac834daaf7955ebf7cd11f3c032c7141a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e1ea1d520bee6d8c48125546c795450" id="r_a7e1ea1d520bee6d8c48125546c795450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#a7e1ea1d520bee6d8c48125546c795450">chooseImage</a> (int, int)</td></tr>
+<tr class="memdesc:a7e1ea1d520bee6d8c48125546c795450"><td class="mdescLeft">&#160;</td><td class="mdescRight">choose the state of the sprite  <br /></td></tr>
 <tr class="separator:a7e1ea1d520bee6d8c48125546c795450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa70930c6166a257b6e946b14fbc125a5" id="r_aa70930c6166a257b6e946b14fbc125a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#aa70930c6166a257b6e946b14fbc125a5">nextImage</a> ()</td></tr>
+<tr class="memdesc:aa70930c6166a257b6e946b14fbc125a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">move to next state of the sprite  <br /></td></tr>
 <tr class="separator:aa70930c6166a257b6e946b14fbc125a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab929bd67689548988435cd86948cc808" id="r_ab929bd67689548988435cd86948cc808"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#ab929bd67689548988435cd86948cc808">prevImage</a> ()</td></tr>
+<tr class="memdesc:ab929bd67689548988435cd86948cc808"><td class="mdescLeft">&#160;</td><td class="mdescRight">move to previous state of the sprite  <br /></td></tr>
 <tr class="separator:ab929bd67689548988435cd86948cc808"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae74100328cf86d4d9f5ad5873fe29aab" id="r_ae74100328cf86d4d9f5ad5873fe29aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#ae74100328cf86d4d9f5ad5873fe29aab">nextSprite</a> ()</td></tr>
+<tr class="memdesc:ae74100328cf86d4d9f5ad5873fe29aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">move to the next sprite  <br /></td></tr>
 <tr class="separator:ae74100328cf86d4d9f5ad5873fe29aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c0a45f4dd53257b83a02e539db1f509" id="r_a5c0a45f4dd53257b83a02e539db1f509"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#a5c0a45f4dd53257b83a02e539db1f509">prevSprite</a> ()</td></tr>
+<tr class="memdesc:a5c0a45f4dd53257b83a02e539db1f509"><td class="mdescLeft">&#160;</td><td class="mdescRight">move to the previous sprite  <br /></td></tr>
 <tr class="separator:a5c0a45f4dd53257b83a02e539db1f509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e86a0c4bc0a072cbe7cc0725707053b" id="r_a5e86a0c4bc0a072cbe7cc0725707053b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_container.html#a5e86a0c4bc0a072cbe7cc0725707053b">isOverlapping</a> (<a class="el" href="datatype_8hpp.html#ad3e7ac08c672de3cc72ca301768aae4a">fPoint</a>)</td></tr>
 <tr class="separator:a5e86a0c4bc0a072cbe7cc0725707053b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,8 +265,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a701cffd131a90249033fc40f505f02d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="button_8hpp_source.html#l00014">14</a> of file <a class="el" href="button_8hpp_source.html">button.hpp</a>.</p>
+<div class="textblock"><p>manages the appearance and behavior of a button </p>
+
+<p class="definition">Definition at line <a class="el" href="button_8hpp_source.html#l00018">18</a> of file <a class="el" href="button_8hpp_source.html">button.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a00ee5f184661801e5e941e1dbbf02229" name="a00ee5f184661801e5e941e1dbbf02229"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00ee5f184661801e5e941e1dbbf02229">&#9670;&#160;</a></span>ButtonImage()</h2>
@@ -293,7 +303,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   16</span>    this-&gt;pressingID = -1;</div>
 <div class="line"><span class="lineno">   17</span>    this-&gt;clickedID = -1;</div>
 <div class="line"><span class="lineno">   18</span>}</div>
-<div class="ttc" id="aclass_container_html_ac834daaf7955ebf7cd11f3c032c7141a"><div class="ttname"><a href="class_container.html#ac834daaf7955ebf7cd11f3c032c7141a">Container::chooseImage</a></div><div class="ttdeci">void chooseImage(int)</div><div class="ttdoc">Choose the state of the sprite based on a single parameter.</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2constructor_8cpp_source.html#l00231">constructor.cpp:231</a></div></div>
+<div class="ttc" id="aclass_container_html_ac834daaf7955ebf7cd11f3c032c7141a"><div class="ttname"><a href="class_container.html#ac834daaf7955ebf7cd11f3c032c7141a">Container::chooseImage</a></div><div class="ttdeci">void chooseImage(int)</div><div class="ttdoc">choose the state of the sprite</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2constructor_8cpp_source.html#l00231">constructor.cpp:231</a></div></div>
 <div class="ttc" id="aclass_container_html_adfeb925c1e926d10a7a6608a09dfea74"><div class="ttname"><a href="class_container.html#adfeb925c1e926d10a7a6608a09dfea74">Container::Container</a></div><div class="ttdeci">Container(Frame *, Rectangle)</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2constructor_8cpp_source.html#l00010">constructor.cpp:10</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -457,13 +467,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Choose the state of the sprite based on a single parameter. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The state parameter. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>choose the state of the sprite </p>
 
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00231">231</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  232</span>{</div>
@@ -501,6 +505,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>choose the state of the sprite </p>
+
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00238">238</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  239</span>{</div>
 <div class="line"><span class="lineno">  240</span>    <span class="keywordflow">if</span>(sprites.empty()) <span class="keywordflow">return</span>;</div>
@@ -534,6 +540,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>choose a specific sprite from a vector of sprites </p>
 
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00224">224</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  225</span>{</div>
@@ -1408,7 +1416,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  104</span>        this-&gt;pressingID = actions.size() - 1;</div>
 <div class="line"><span class="lineno">  105</span>    }  </div>
 <div class="line"><span class="lineno">  106</span>}</div>
-<div class="ttc" id="aclass_container_html_a257d5a732fa522a82836366f51bb9b19"><div class="ttname"><a href="class_container.html#a257d5a732fa522a82836366f51bb9b19">Container::changeImageAction</a></div><div class="ttdeci">friend class changeImageAction</div><div class="ttdef"><b>Definition</b> <a href="container_8hpp_source.html#l00031">container.hpp:31</a></div></div>
+<div class="ttc" id="aclass_container_html_a257d5a732fa522a82836366f51bb9b19"><div class="ttname"><a href="class_container.html#a257d5a732fa522a82836366f51bb9b19">Container::changeImageAction</a></div><div class="ttdeci">friend class changeImageAction</div><div class="ttdef"><b>Definition</b> <a href="container_8hpp_source.html#l00022">container.hpp:22</a></div></div>
 <div class="ttc" id="adatatype_8hpp_html_ad86b53f6d177d3f8cdb26e0923180786"><div class="ttname"><a href="datatype_8hpp.html#ad86b53f6d177d3f8cdb26e0923180786">iPoint</a></div><div class="ttdeci">std::array&lt; int, 2 &gt; iPoint</div><div class="ttdef"><b>Definition</b> <a href="datatype_8hpp_source.html#l00008">datatype.hpp:8</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1852,6 +1860,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>move to next state of the sprite </p>
+
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00247">247</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  248</span>{</div>
 <div class="line"><span class="lineno">  249</span>    <span class="keywordflow">if</span>(sprites.empty()) <span class="keywordflow">return</span>;</div>
@@ -1883,6 +1893,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>move to the next sprite </p>
 
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00261">261</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  262</span>{</div>
@@ -2185,6 +2197,8 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>move to previous state of the sprite </p>
+
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00254">254</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  255</span>{</div>
 <div class="line"><span class="lineno">  256</span>    <span class="keywordflow">if</span>(sprites.empty()) <span class="keywordflow">return</span>;</div>
@@ -2216,6 +2230,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>move to the previous sprite </p>
 
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00268">268</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  269</span>{</div>
@@ -2292,7 +2308,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   49</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><span class="lineno">   50</span>}</div>
 <div class="ttc" id="abutton_8hpp_html_ae9196a4aeb033ebd6f9657c25bd16ac0"><div class="ttname"><a href="button_8hpp.html#ae9196a4aeb033ebd6f9657c25bd16ac0">rectangle</a></div><div class="ttdeci">#define rectangle</div><div class="ttdef"><b>Definition</b> <a href="button_8hpp_source.html#l00010">button.hpp:10</a></div></div>
-<div class="ttc" id="aclass_packet_action_html"><div class="ttname"><a href="class_packet_action.html">PacketAction</a></div><div class="ttdef"><b>Definition</b> <a href="action_8hpp_source.html#l00033">action.hpp:34</a></div></div>
+<div class="ttc" id="aclass_packet_action_html"><div class="ttname"><a href="class_packet_action.html">PacketAction</a></div><div class="ttdoc">organize selected actions into a package</div><div class="ttdef"><b>Definition</b> <a href="action_8hpp_source.html#l00046">action.hpp:47</a></div></div>
 <div class="ttc" id="aclass_packet_action_html_a0483e1b2bf449ec89c5b9044ec29321d"><div class="ttname"><a href="class_packet_action.html#a0483e1b2bf449ec89c5b9044ec29321d">PacketAction::addAction</a></div><div class="ttdeci">void addAction(Action *)</div><div class="ttdef"><b>Definition</b> <a href="action_2src_2action_8cpp_source.html#l00067">action.cpp:67</a></div></div>
 <div class="ttc" id="aclasschange_inf_request_html"><div class="ttname"><a href="classchange_inf_request.html">changeInfRequest</a></div><div class="ttdef"><b>Definition</b> <a href="action_2include_2request_8hpp_source.html#l00019">request.hpp:20</a></div></div>
 </div><!-- fragment -->

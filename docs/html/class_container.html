@@ -101,7 +101,7 @@ $(function(){initNavTree('class_container.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
-<p>contains specific sprites and their behavior  
+<p>contains specific entities and their behavior  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="container_8hpp_source.html">container.hpp</a>&gt;</code></p>
@@ -112,10 +112,10 @@ Inheritance diagram for Container:</div>
   <img src="class_container.png" usemap="#Container_map" alt=""/>
   <map id="Container_map" name="Container_map">
 <area href="class_frame.html" title="position and size of object on screen" alt="Frame" shape="rect" coords="90,0,170,24"/>
-<area href="class_button_image.html" alt="ButtonImage" shape="rect" coords="0,112,80,136"/>
-<area href="class_interface.html" title="position and size of object on screen" alt="Interface" shape="rect" coords="90,112,170,136"/>
+<area href="class_button_image.html" title="manages the appearance and behavior of a button" alt="ButtonImage" shape="rect" coords="0,112,80,136"/>
+<area href="class_interface.html" title="where user can interact with the game" alt="Interface" shape="rect" coords="90,112,170,136"/>
 <area href="class_object.html" alt="Object" shape="rect" coords="180,112,260,136"/>
-<area href="class_chunk.html" alt="Chunk" shape="rect" coords="45,168,125,192"/>
+<area href="class_chunk.html" title="manages the spawning of chunks and how entities interact witht them" alt="Chunk" shape="rect" coords="45,168,125,192"/>
 <area href="class_game.html" alt="Game" shape="rect" coords="135,168,215,192"/>
   </map>
 </div></div>
@@ -143,19 +143,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab48f0dd8fad66981b1047bb4351619b4" id="r_ab48f0dd8fad66981b1047bb4351619b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab48f0dd8fad66981b1047bb4351619b4">getProbability</a> ()</td></tr>
 <tr class="separator:ab48f0dd8fad66981b1047bb4351619b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fc266ae14009c6013f1952569f4a08" id="r_a04fc266ae14009c6013f1952569f4a08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04fc266ae14009c6013f1952569f4a08">chooseSprite</a> (int)</td></tr>
+<tr class="memdesc:a04fc266ae14009c6013f1952569f4a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">choose a specific sprite from a vector of sprites  <br /></td></tr>
 <tr class="separator:a04fc266ae14009c6013f1952569f4a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac834daaf7955ebf7cd11f3c032c7141a" id="r_ac834daaf7955ebf7cd11f3c032c7141a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac834daaf7955ebf7cd11f3c032c7141a">chooseImage</a> (int)</td></tr>
-<tr class="memdesc:ac834daaf7955ebf7cd11f3c032c7141a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choose the state of the sprite based on a single parameter.  <br /></td></tr>
+<tr class="memdesc:ac834daaf7955ebf7cd11f3c032c7141a"><td class="mdescLeft">&#160;</td><td class="mdescRight">choose the state of the sprite  <br /></td></tr>
 <tr class="separator:ac834daaf7955ebf7cd11f3c032c7141a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e1ea1d520bee6d8c48125546c795450" id="r_a7e1ea1d520bee6d8c48125546c795450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e1ea1d520bee6d8c48125546c795450">chooseImage</a> (int, int)</td></tr>
+<tr class="memdesc:a7e1ea1d520bee6d8c48125546c795450"><td class="mdescLeft">&#160;</td><td class="mdescRight">choose the state of the sprite  <br /></td></tr>
 <tr class="separator:a7e1ea1d520bee6d8c48125546c795450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa70930c6166a257b6e946b14fbc125a5" id="r_aa70930c6166a257b6e946b14fbc125a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa70930c6166a257b6e946b14fbc125a5">nextImage</a> ()</td></tr>
+<tr class="memdesc:aa70930c6166a257b6e946b14fbc125a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">move to next state of the sprite  <br /></td></tr>
 <tr class="separator:aa70930c6166a257b6e946b14fbc125a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab929bd67689548988435cd86948cc808" id="r_ab929bd67689548988435cd86948cc808"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab929bd67689548988435cd86948cc808">prevImage</a> ()</td></tr>
+<tr class="memdesc:ab929bd67689548988435cd86948cc808"><td class="mdescLeft">&#160;</td><td class="mdescRight">move to previous state of the sprite  <br /></td></tr>
 <tr class="separator:ab929bd67689548988435cd86948cc808"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae74100328cf86d4d9f5ad5873fe29aab" id="r_ae74100328cf86d4d9f5ad5873fe29aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae74100328cf86d4d9f5ad5873fe29aab">nextSprite</a> ()</td></tr>
+<tr class="memdesc:ae74100328cf86d4d9f5ad5873fe29aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">move to the next sprite  <br /></td></tr>
 <tr class="separator:ae74100328cf86d4d9f5ad5873fe29aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c0a45f4dd53257b83a02e539db1f509" id="r_a5c0a45f4dd53257b83a02e539db1f509"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c0a45f4dd53257b83a02e539db1f509">prevSprite</a> ()</td></tr>
+<tr class="memdesc:a5c0a45f4dd53257b83a02e539db1f509"><td class="mdescLeft">&#160;</td><td class="mdescRight">move to the previous sprite  <br /></td></tr>
 <tr class="separator:a5c0a45f4dd53257b83a02e539db1f509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e86a0c4bc0a072cbe7cc0725707053b" id="r_a5e86a0c4bc0a072cbe7cc0725707053b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e86a0c4bc0a072cbe7cc0725707053b">isOverlapping</a> (<a class="el" href="datatype_8hpp.html#ad3e7ac08c672de3cc72ca301768aae4a">fPoint</a>)</td></tr>
 <tr class="separator:a5e86a0c4bc0a072cbe7cc0725707053b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,9 +269,9 @@ Friends</h2></td></tr>
 <tr class="separator:a257d5a732fa522a82836366f51bb9b19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>contains specific sprites and their behavior </p>
+<div class="textblock"><p>contains specific entities and their behavior </p>
 
-<p class="definition">Definition at line <a class="el" href="container_8hpp_source.html#l00028">28</a> of file <a class="el" href="container_8hpp_source.html">container.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="container_8hpp_source.html#l00019">19</a> of file <a class="el" href="container_8hpp_source.html">container.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adfeb925c1e926d10a7a6608a09dfea74" name="adfeb925c1e926d10a7a6608a09dfea74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adfeb925c1e926d10a7a6608a09dfea74">&#9670;&#160;</a></span>Container() <span class="overload">[1/4]</span></h2>
@@ -559,13 +565,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Choose the state of the sprite based on a single parameter. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The state parameter. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>choose the state of the sprite </p>
 
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00231">231</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  232</span>{</div>
@@ -595,6 +595,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>choose the state of the sprite </p>
+
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00238">238</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  239</span>{</div>
 <div class="line"><span class="lineno">  240</span>    <span class="keywordflow">if</span>(sprites.empty()) <span class="keywordflow">return</span>;</div>
@@ -620,6 +622,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>choose a specific sprite from a vector of sprites </p>
 
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00224">224</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  225</span>{</div>
@@ -1712,6 +1716,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>move to next state of the sprite </p>
+
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00247">247</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  248</span>{</div>
 <div class="line"><span class="lineno">  249</span>    <span class="keywordflow">if</span>(sprites.empty()) <span class="keywordflow">return</span>;</div>
@@ -1735,6 +1741,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>move to the next sprite </p>
 
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00261">261</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  262</span>{</div>
@@ -2013,6 +2021,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>move to previous state of the sprite </p>
+
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00254">254</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  255</span>{</div>
 <div class="line"><span class="lineno">  256</span>    <span class="keywordflow">if</span>(sprites.empty()) <span class="keywordflow">return</span>;</div>
@@ -2036,6 +2046,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>move to the previous sprite </p>
 
 <p class="definition">Definition at line <a class="el" href="container_2src_2constructor_8cpp_source.html#l00268">268</a> of file <a class="el" href="container_2src_2constructor_8cpp_source.html">constructor.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  269</span>{</div>
@@ -2413,7 +2425,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="container_8hpp_source.html#l00031">31</a> of file <a class="el" href="container_8hpp_source.html">container.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="container_8hpp_source.html#l00022">22</a> of file <a class="el" href="container_8hpp_source.html">container.hpp</a>.</p>
 
 </div>
 </div>

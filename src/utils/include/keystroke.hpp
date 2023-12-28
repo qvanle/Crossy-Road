@@ -6,7 +6,7 @@
 #include <string>
 
 /**
- * @class Keystroke
+ * @class KeyStroke
  *
  * @brief manages the link between a key and the actions it performs
  *

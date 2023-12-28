@@ -2,6 +2,11 @@
 \hypertarget{class_button_image}{}\label{class_button_image}\index{ButtonImage@{ButtonImage}}
 
 
+manages the appearance and behavior of a button  
+
+
+
+
 {\ttfamily \#include $<$button.\+hpp$>$}
 
 Inheritance diagram for Button\+Image\+:\begin{figure}[H]
@@ -42,19 +47,19 @@ void \mbox{\hyperlink{class_container_a20103c0d27bd0706624e7c0161771ef6}{set\+Pr
 int \mbox{\hyperlink{class_container_ab48f0dd8fad66981b1047bb4351619b4}{get\+Probability}} ()
 \item 
 void \mbox{\hyperlink{class_container_a04fc266ae14009c6013f1952569f4a08}{choose\+Sprite}} (int)
-\item 
+\begin{DoxyCompactList}\small\item\em choose a specific sprite from a vector of sprites \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{choose\+Image}} (int)
-\begin{DoxyCompactList}\small\item\em Choose the state of the sprite based on a single parameter. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em choose the state of the sprite \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_container_a7e1ea1d520bee6d8c48125546c795450}{choose\+Image}} (int, int)
-\item 
+\begin{DoxyCompactList}\small\item\em choose the state of the sprite \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_container_aa70930c6166a257b6e946b14fbc125a5}{next\+Image}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em move to next state of the sprite \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_container_ab929bd67689548988435cd86948cc808}{prev\+Image}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em move to previous state of the sprite \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_container_ae74100328cf86d4d9f5ad5873fe29aab}{next\+Sprite}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em move to the next sprite \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_container_a5c0a45f4dd53257b83a02e539db1f509}{prev\+Sprite}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em move to the previous sprite \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_container_a5e86a0c4bc0a072cbe7cc0725707053b}{is\+Overlapping}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}})
 \item 
 bool \mbox{\hyperlink{class_container_a14a49b088ae5780fbf4ac0f826bb2785}{is\+Overlapping}} (Rectangle)
@@ -149,9 +154,9 @@ void \mbox{\hyperlink{class_frame_a701cffd131a90249033fc40f505f02d6}{end\+Update
 
 
 \doxysubsection{Detailed Description}
+manages the appearance and behavior of a button 
 
-
-Definition at line \mbox{\hyperlink{button_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}}.
+Definition at line \mbox{\hyperlink{button_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{button_8hpp_source}{button.\+hpp}}.
 
 
 
@@ -285,13 +290,8 @@ Definition at line \mbox{\hyperlink{button_2src_2arthmetic_8cpp_source_l00054}{5
 
 
 
-Choose the state of the sprite based on a single parameter. 
+choose the state of the sprite 
 
-
-\begin{DoxyParams}{Parameters}
-{\em a} & The state parameter. \\
-\hline
-\end{DoxyParams}
 
 
 Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00231}{231}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
@@ -313,6 +313,10 @@ Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l002
 
 
 
+choose the state of the sprite 
+
+
+
 Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00238}{238}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
@@ -331,6 +335,10 @@ Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l002
 \index{chooseSprite@{chooseSprite}!ButtonImage@{ButtonImage}}
 \doxysubsubsection{\texorpdfstring{chooseSprite()}{chooseSprite()}}
 {\footnotesize\ttfamily void Container\+::choose\+Sprite (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+choose a specific sprite from a vector of sprites 
 
 
 
@@ -1181,6 +1189,10 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00033}{33
 
 
 
+move to next state of the sprite 
+
+
+
 Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00247}{247}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
@@ -1197,6 +1209,10 @@ Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l002
 \index{nextSprite@{nextSprite}!ButtonImage@{ButtonImage}}
 \doxysubsubsection{\texorpdfstring{nextSprite()}{nextSprite()}}
 {\footnotesize\ttfamily void Container\+::next\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+move to the next sprite 
 
 
 
@@ -1395,6 +1411,10 @@ Definition at line \mbox{\hyperlink{family_8cpp_source_l00012}{12}} of file \mbo
 
 
 
+move to previous state of the sprite 
+
+
+
 Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00254}{254}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
@@ -1411,6 +1431,10 @@ Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l002
 \index{prevSprite@{prevSprite}!ButtonImage@{ButtonImage}}
 \doxysubsubsection{\texorpdfstring{prevSprite()}{prevSprite()}}
 {\footnotesize\ttfamily void Container\+::prev\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+move to the previous sprite 
 
 
 
