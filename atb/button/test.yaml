@@ -36,5 +36,6 @@
     "sprite": [[4, 0, 70]]
 "action":
   "type": "change-interface"
-  "str": ["game","1", "2"]
+  "str": ["game"] # change to str[0] interface, if pop-interface, we don't need str 
+
 "focus": [1,0]

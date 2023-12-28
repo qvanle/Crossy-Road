@@ -41,7 +41,6 @@ std::string ButtonImage::linkContentAbsolute(std::string path)
     
     if(node["action"])
     {
-        std::cout << "s27" << std::endl;
         loadAction(node["action"]);
     }
     return getName();

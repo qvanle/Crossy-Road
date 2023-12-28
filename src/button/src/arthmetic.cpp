@@ -79,7 +79,7 @@ void ButtonImage::loadAction(YAML::Node node)
     }
      if(node["type"].as<std::string>() == "pop-interface")
     {
-        request = new popInfRequest(); // TODO
+        request = new popInfRequest(); 
     }
 }
 
