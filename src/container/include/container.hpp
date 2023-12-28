@@ -20,8 +20,8 @@ class Container : public Frame
 {
 private:
     friend class changeImageAction;
-    static int id_count; ///< counter of all containers created
-    int instance_id; ///< ID of the container
+    static int id_count; 
+    int instance_id;
     int probability;
 
     std::vector<Sprite> sprites;
@@ -98,6 +98,13 @@ public:
     virtual Action* react();
     virtual Action* getRuntimeEvent();
 };
+
+/**
+ * @class changeImageAction
+ *
+ * @brief changes display image of container
+ * 
+**/
 class changeImageAction : public Action
 {
 private: 

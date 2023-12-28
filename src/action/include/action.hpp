@@ -4,6 +4,12 @@
 #include <vector>
 #include <string>
 
+/**
+ * @struct ARGS
+ *
+ * @brief stores request information
+ * 
+**/
 struct ARGS 
 {
     std::vector<std::string> str;

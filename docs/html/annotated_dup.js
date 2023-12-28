@@ -17,7 +17,6 @@ var annotated_dup =
     [ "moveChunksAction", "classmove_chunks_action.html", "classmove_chunks_action" ],
     [ "moveEntityAction", "classmove_entity_action.html", "classmove_entity_action" ],
     [ "moveObjectAction", "classmove_object_action.html", "classmove_object_action" ],
-    [ "moveobjectAction", "classmoveobject_action.html", null ],
     [ "Object", "class_object.html", "class_object" ],
     [ "PacketAction", "class_packet_action.html", "class_packet_action" ],
     [ "RandomEngine", "class_random_engine.html", "class_random_engine" ],

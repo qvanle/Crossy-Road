@@ -3,6 +3,14 @@
 
 #include <action.hpp>
 
+/**
+ * @class Request
+ *
+ * @brief sends information to a higher, relevant entity
+ * 
+ * upgrades information to higher level
+ * 
+**/
 class Request : public Action
 {
 protected: 

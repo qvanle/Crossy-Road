@@ -10,9 +10,7 @@ var searchData=
   ['moveentity_2ecpp_7',['moveentity.cpp',['../moveentity_8cpp.html',1,'']]],
   ['moveentityaction_8',['moveEntityAction',['../classmove_entity_action.html',1,'moveEntityAction'],['../class_chunk.html#a623ae8024fa228986719eda2f2948cd3',1,'Chunk::moveEntityAction'],['../classmove_entity_action.html#a261a4634a905aab40f23dce084d669c6',1,'moveEntityAction::moveEntityAction()']]],
   ['moveobject_2ecpp_9',['moveobject.cpp',['../moveobject_8cpp.html',1,'']]],
-  ['moveobjectaction_10',['moveObjectAction',['../classmove_object_action.html',1,'']]],
-  ['moveobjectaction_11',['moveobjectAction',['../classmoveobject_action.html',1,'']]],
-  ['moveobjectaction_12',['moveObjectAction',['../class_interface.html#ac6a2e86796e3f0ddf843423d09b23ed8',1,'Interface::moveObjectAction'],['../classmove_object_action.html#aac0c1fc2a7375604c87fe5727c260a55',1,'moveObjectAction::moveObjectAction(Container *obj, fPoint delta)'],['../classmove_object_action.html#aec2e7477f2afa33172d578efb609d263',1,'moveObjectAction::moveObjectAction(Container *obj, fPoint dir, float speed)']]],
-  ['moveto_13',['moveTo',['../class_frame.html#a97a44fc353ebd9feb9002fcfb2f7ecb6',1,'Frame::moveTo(fPoint rel)'],['../class_frame.html#a6b8233fda47b75fe55402700efdcca97',1,'Frame::moveTo(int x, int y)']]],
-  ['movingentity_14',['movingEntity',['../class_chunk.html#ae75de66267636fb89d3f753e09119795',1,'Chunk']]]
+  ['moveobjectaction_10',['moveObjectAction',['../classmove_object_action.html',1,'moveObjectAction'],['../class_interface.html#ac6a2e86796e3f0ddf843423d09b23ed8',1,'Interface::moveObjectAction'],['../classmove_object_action.html#aac0c1fc2a7375604c87fe5727c260a55',1,'moveObjectAction::moveObjectAction(Container *obj, fPoint delta)'],['../classmove_object_action.html#aec2e7477f2afa33172d578efb609d263',1,'moveObjectAction::moveObjectAction(Container *obj, fPoint dir, float speed)']]],
+  ['moveto_11',['moveTo',['../class_frame.html#a97a44fc353ebd9feb9002fcfb2f7ecb6',1,'Frame::moveTo(fPoint rel)'],['../class_frame.html#a6b8233fda47b75fe55402700efdcca97',1,'Frame::moveTo(int x, int y)']]],
+  ['movingentity_12',['movingEntity',['../class_chunk.html#ae75de66267636fb89d3f753e09119795',1,'Chunk']]]
 ];
