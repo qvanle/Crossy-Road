@@ -52,7 +52,7 @@ public:
 };
 
 /**
- * @class moveobjectAction
+ * @class moveObjectAction
  *
  * @brief manages the features of a movement, including which object, speed, direction etc.
  * 

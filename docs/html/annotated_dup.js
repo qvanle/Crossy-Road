@@ -13,7 +13,6 @@ var annotated_dup =
     [ "Game", "class_game.html", "class_game" ],
     [ "Interface", "class_interface.html", "class_interface" ],
     [ "KeyStroke", "class_key_stroke.html", "class_key_stroke" ],
-    [ "Keystroke", "class_keystroke.html", null ],
     [ "loseRequest", "classlose_request.html", "classlose_request" ],
     [ "moveChunksAction", "classmove_chunks_action.html", "classmove_chunks_action" ],
     [ "moveEntityAction", "classmove_entity_action.html", "classmove_entity_action" ],
