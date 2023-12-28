@@ -13,7 +13,7 @@ Window::Window()
     InitWindow(Wcontent.width, Wcontent.height, Wcontent.title.c_str());
     SetTargetFPS(60);
 
-    UI.root_frame = new Frame({0, 0, Wcontent.width, Wcontent.height});
+    UI.setRootFrame(new Frame({0, 0, Wcontent.width, Wcontent.height}));
 }
 
 Window::Window(std::string path)
@@ -25,7 +25,7 @@ Window::Window(std::string path)
     loadInterface(config["interface-list"]);
     loadGame(config["game"]);
     if(config["choose-interface"]) 
-        UI.interface->push(config["choose-interface"].as<std::string>());
+        UI.push(config["choose-interface"].as<std::string>());
 
     if(config["input-delay"]) 
     {
@@ -62,15 +62,15 @@ void Window::initRaylib(YAML::Node config)
     SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
     InitWindow(Wcontent.width, Wcontent.height, Wcontent.title.c_str());
     SetTargetFPS(60);
-    Wcontent.status = true;
-    UI.root_frame = new Frame({0, 0, Wcontent.width, Wcontent.height});
+    Wcontent.setStatus(true);
+    UI.setRootFrame(new Frame({0, 0, Wcontent.width, Wcontent.height}));
 }
 
 void Window::loadInterface(YAML::Node node)
 {
     if(!node) return ;
 
-    UI.interface = new InterfacePool();
+    UI.setInterfacePool(new InterfacePool());
     for(auto i : node)
     {
         std::string path = i["file"].as<std::string>();
@@ -82,16 +82,15 @@ void Window::loadInterface(YAML::Node node)
         if(i["h"]) h = i["h"].as<float>() / 100;
 
 
-        Interface* inf = new Interface(UI.root_frame, {x, y, w, h});
+        Interface* inf = new Interface(UI.getRootFrame(), {x, y, w, h});
         inf->linkContent(path);
-        UI.interface->load(inf);
+        UI.load(inf);
     }
 }
 
 void Window::loadGame(YAML::Node node)
 {
     if(!node) return ;
-    if(UI.interface == nullptr) UI.interface = new InterfacePool();
 
     std::string path = node["file"].as<std::string>();
     float x = 0, y = 0, w = 1, h = 1;
@@ -102,7 +101,7 @@ void Window::loadGame(YAML::Node node)
     if(node["h"]) h = node["h"].as<float>() / 100;
 
 
-    Interface* inf = new Game(UI.root_frame, {x, y, w, h});
+    Interface* inf = new Game(UI.getRootFrame(), {x, y, w, h});
     inf->linkContent(path);
-    UI.interface->load(inf);
+    UI.load(inf);
 }

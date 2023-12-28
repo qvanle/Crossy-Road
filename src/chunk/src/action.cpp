@@ -23,9 +23,17 @@ void Chunk::movingEntity()
     }
 }
 
-PacketAction* Chunk::getRuntimeEvent() 
+Action* Chunk::getRuntimeEvent() 
 {
-    PacketAction* packet = Interface::getRuntimeEvent();
+    PacketAction* packet = nullptr; 
+    Action* action = Interface::getRuntimeEvent();
+    
+    if(action != nullptr) 
+    {
+        packet = new PacketAction();
+        packet->addAction(action);
+    }
+
     if(std::chrono::system_clock::now() - moveClock >= moveTime) 
     {
         Action* action = new moveEntityAction(this);

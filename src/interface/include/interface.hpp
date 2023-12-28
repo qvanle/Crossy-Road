@@ -33,13 +33,27 @@ public:
     ~Interface();
 
     Container* getContainers(int);
+    int getContainersSize();
 
     std::string linkContent(std::string path) override;
     std::string linkContentAbsolute(std::string path) override;
 
-    PacketAction* react() override;
-    PacketAction* getRuntimeEvent() override;
+    Action* react() override;
+    Action* getRuntimeEvent() override;
     void draw() override;
+};
+
+class movetoObjectAction : public Action
+{
+private: 
+    Container* obj; 
+    fPoint pos;
+public: 
+    movetoObjectAction(Container* obj, fPoint pos);
+    ~movetoObjectAction();
+
+    void execute() override;
+    Action* clone() override;
 };
 
 class moveObjectAction : public Action
@@ -47,8 +61,11 @@ class moveObjectAction : public Action
 private: 
     Container* obj; 
     fPoint delta;
+    fPoint dir;
+    float speed;
 public: 
     moveObjectAction(Container* obj, fPoint delta);
+    moveObjectAction(Container* obj, fPoint dir, float speed);
     ~moveObjectAction();
 
     void execute() override;

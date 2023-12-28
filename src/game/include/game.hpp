@@ -19,8 +19,12 @@ private:
     friend class moveChunksAction;
     std::deque<Chunk*> chunks;
     std::vector<Chunk*> cache;
-    fPoint mapSpeed;
+    Container* main;
+    fPoint mapDisplacement;
+    fPoint mapDirection;
+    float mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
+    bool initState;
 protected:
     void loadChunk(YAML::Node);
     void loadCollide(YAML::Node);
@@ -37,8 +41,8 @@ public:
 
     std::string linkContentAbsolute(std::string path) override;
 
-    PacketAction* react() override;
-    PacketAction* getRuntimeEvent() override;
+    Action* react() override;
+    Action* getRuntimeEvent() override;
     void draw() override;
 
 };
@@ -48,8 +52,11 @@ class moveChunksAction : public Action
 private: 
     Game* game;
     fPoint delta;
+    fPoint direction;
+    float speed;
 public:
     moveChunksAction(Game*, fPoint);
+    moveChunksAction(Game*, fPoint, float);
     ~moveChunksAction();
 
     void execute() override;

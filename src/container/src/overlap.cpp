@@ -42,3 +42,19 @@ float Container::OverlappingArea(Container* container)
     if(w < 0 || h < 0) return 0;
     return w * h;
 }
+
+bool Container::isCollide(Rectangle rec)
+{
+    Rectangle rec2 = getFrame();
+    bool a1 = rec.x <= rec2.x && rec2.x <= rec.x + rec.width;
+    bool a2 = rec2.x <= rec.x && rec.x <= rec2.x + rec2.width;
+    bool b1 = rec.y <= rec2.y && rec2.y <= rec.y + rec.height;
+    bool b2 = rec2.y <= rec.y && rec.y <= rec2.y + rec2.height;
+
+    return (a1 || a2) && (b1 || b2);
+}
+
+bool Container::isCollide(Container* other)
+{
+    return isCollide(other->getFrame());
+}

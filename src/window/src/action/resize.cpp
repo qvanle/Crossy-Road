@@ -9,7 +9,7 @@ resizeAction::resizeAction(Window* window, float x, float y)
 
 void resizeAction::execute()
 {
-    win->UI.root_frame->resize(w, h);
+    win->UI.resize(w, h);
 }
 
 

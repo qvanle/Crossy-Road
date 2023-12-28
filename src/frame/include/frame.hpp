@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <mutex>
 
 #include <raylib.h>
  
@@ -28,11 +29,16 @@ private:
     Frame* parent;
     
     fRect relative;
+
+    mutable std::mutex mtx;
 protected:
     virtual void updateFrame(bool recursive = false);
-    bool isroot();
+    bool isroot() const;
     void addSubframe(Frame* subframe);
     void removeSubframe(Frame* subframe);
+
+    void beginUpdate();
+    void endUpdate();
 public:
     Frame(Frame* par, Rectangle rel);
     Frame(Frame* self);
