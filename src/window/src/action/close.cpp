@@ -7,5 +7,5 @@ CloseAction::CloseAction(Window* window)
 
 void CloseAction::execute()
 {
-    win->Wcontent.status = false;
+    win->Wcontent.setStatus(false);
 }

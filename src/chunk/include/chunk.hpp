@@ -7,6 +7,12 @@
 
 #include <interface.hpp>
 
+/**
+ * @class Chunk
+ *
+ * @brief manages the spawning of chunks and how entities interact witht them
+ * 
+**/
 class Chunk : public Interface 
 {
 private: 
@@ -39,7 +45,7 @@ public:
     void setVelocity(fPoint);
 
     std::string linkContent(std::string path) override;
-    PacketAction* getRuntimeEvent() override;
+    Action* getRuntimeEvent() override;
 
     void draw() override;
 };

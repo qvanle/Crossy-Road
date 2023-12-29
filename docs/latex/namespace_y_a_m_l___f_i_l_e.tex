@@ -1,0 +1,76 @@
+\doxysection{YAML\+\_\+\+FILE Namespace Reference}
+\hypertarget{namespace_y_a_m_l___f_i_l_e}{}\label{namespace_y_a_m_l___f_i_l_e}\index{YAML\_FILE@{YAML\_FILE}}
+
+
+opens and interacts with YAML files  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_a920afd2555cf04b4e07375b44437df96}{is\+File}} (std\+::string path)
+\item 
+YAML\+::\+Node \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{read\+File}} (std\+::string path)
+\item 
+bool \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_a6077246e58073c47a2cb6251b28984ba}{write\+File}} (std\+::string path, YAML\+::\+Node content)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+opens and interacts with YAML files 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_y_a_m_l___f_i_l_e_a920afd2555cf04b4e07375b44437df96}\label{namespace_y_a_m_l___f_i_l_e_a920afd2555cf04b4e07375b44437df96} 
+\index{YAML\_FILE@{YAML\_FILE}!isFile@{isFile}}
+\index{isFile@{isFile}!YAML\_FILE@{YAML\_FILE}}
+\doxysubsubsection{\texorpdfstring{isFile()}{isFile()}}
+{\footnotesize\ttfamily bool YAML\+\_\+\+FILE\+::is\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{file_8cpp_source}{file.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ return\ true\ if\ file\ exists}}
+\DoxyCodeLine{00008\ \ \ \ \ }
+\DoxyCodeLine{00009\ \ \ \ \ std::ifstream\ fin(path);}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{return}\ fin.good();}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}\label{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623} 
+\index{YAML\_FILE@{YAML\_FILE}!readFile@{readFile}}
+\index{readFile@{readFile}!YAML\_FILE@{YAML\_FILE}}
+\doxysubsubsection{\texorpdfstring{readFile()}{readFile()}}
+{\footnotesize\ttfamily YAML\+::\+Node YAML\+\_\+\+FILE\+::read\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{file_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{file_8cpp_source}{file.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//\ return\ YAML::Node\ from\ file}}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ YAML::Node\ node;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ node\ =\ YAML::LoadFile(path);}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{catch}\ (YAML::BadFile\&\ e)}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_y_a_m_l___f_i_l_e_a6077246e58073c47a2cb6251b28984ba}\label{namespace_y_a_m_l___f_i_l_e_a6077246e58073c47a2cb6251b28984ba} 
+\index{YAML\_FILE@{YAML\_FILE}!writeFile@{writeFile}}
+\index{writeFile@{writeFile}!YAML\_FILE@{YAML\_FILE}}
+\doxysubsubsection{\texorpdfstring{writeFile()}{writeFile()}}
+{\footnotesize\ttfamily bool YAML\+\_\+\+FILE\+::write\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{path,  }\item[{YAML\+::\+Node}]{content }\end{DoxyParamCaption})}
+

@@ -1,7 +1,9 @@
 #include "container.hpp"
 #include <object.hpp>
-PacketAction* Object::react() 
+Action* Object::react() 
 {
+    if(!isVisible()) return nullptr;
+
     if(std::chrono::steady_clock::now() < waitUntil) 
         return nullptr;
     for(int i = 0; i < strokes.size(); i++)
@@ -9,17 +11,15 @@ PacketAction* Object::react()
         Action* a = strokes[i].stroke->react();
         if(a == nullptr) continue;
         else strokes[i].stroke->nextAction();
-        PacketAction* packet = new PacketAction(); 
-        packet->addAction(a);
-        return packet;
+        return a;
     }
-
 
     return nullptr;
 }
 
 void Object::draw()
 {
+    if(!isVisible()) return;
     Container::draw();
     return ;
 }

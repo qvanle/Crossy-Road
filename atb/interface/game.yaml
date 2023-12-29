@@ -2,17 +2,17 @@
 
 "chunk": 
   - 
-    "file": "test.yaml"
+    "file": "test2.yaml"
     "w": 100
     "h": 10 
-    "velocity": 0.2
-    "probabilty": 50
+    "velocity": [0.005, 1, 0]
+    "probabilty": 20
   - 
-    "file": "test2.yaml"
+    "file": "test.yaml"
     "w": 100 
     "h": 10 
-    "velocity": 0.2
-    "probabilty": 50
+    "velocity": [0.005, 1, 0]
+    "probabilty": 80
 
 "object": 
   -
@@ -28,7 +28,7 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/duck.yaml"
+    "path": "entity/duck.yaml" 
     "x": 60
     "y": 40
     "w": 10
@@ -89,12 +89,6 @@
     "w": 10
     "h": 10
   - 
-    "path": "no_sfx.yaml"
-    "x": 00
-    "y": 30
-    "w": 10
-    "h": 10
-  - 
     "path": "resume.yaml"
     "x": 00
     "y": 40
@@ -112,14 +106,9 @@
     "y": 60
     "w": 10
     "h": 10
-  - 
-    "path": "sfx.yaml"
-    "x": 00
-    "y": 70
-    "w": 10
-    "h": 10
 "event": 
-  "map-speed": [0, 0.003] # 0.02% per 20 milisecond 
+  "map-speed": 0.001 # 0.02% per 20 milisecond 
+  "map-direction": [0, 1]
 
 "collide": 
   - 
@@ -129,47 +118,26 @@
 
 "attach-object": 
   - 
-    "chunk": 0 
-    "object": [3, 10] # each 1 second there is 10% to generate object 1
+    "chunk": 1 
+    "object": [4, 10] # each 1 second there is 10% to generate object 1
   - 
     "chunk": 1 
-    "object": [3, 10] # each 1 second there is 10% to generate object 1
-  - 
-    "chunk": 0 
-    "object": [3, 10] # each 1 second there is 10% to generate object 1
+    "object": [4, 10] # each 1 second there is 10% to generate object 1
 
 "control": 
   -
-    "key": ["s"]
-    "action": "move-object"
-    "args": [0, 0, 0.5] 
-  - 
-    "key": ["w"] 
-    "action": "move-object"
-    "args": [0, 0, -0.5] 
-  - 
-    "key": ["a"]
-    "action": "move-object"
-    "args": [0, -0.5, 0] 
-  - 
     "key": ["d"]
     "action": "move-object"
-    "args": [0, 0.5, 0] 
-  -
+    "args": [0, 2, 1, 0] 
+  - 
+    "key": ["a"] 
+    "action": "move-object"
+    "args": [0, 2, -1, 0] 
+  - 
+    "key": ["w"]
+    "action": "move-object"
+    "args": [0, 2, 0, -1] 
+  - 
     "key": ["s"]
     "action": "move-object"
-    "args": [2, 0, 0.5] 
-  - 
-    "key": ["w"] 
-    "action": "move-object"
-    "args": [02, 0, -0.5] 
-  - 
-    "key": ["a"]
-    "action": "move-object"
-    "args": [02, -0.5, 0] 
-  - 
-    "key": ["d"]
-    "action": "move-object"
-    "args": [02, 0.5, 0] 
-
-
+    "args": [0, 2, 0, 1] 

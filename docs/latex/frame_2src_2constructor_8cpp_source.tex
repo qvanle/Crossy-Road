@@ -1,0 +1,50 @@
+\doxysection{constructor.\+cpp}
+\hypertarget{frame_2src_2constructor_8cpp_source}{}\label{frame_2src_2constructor_8cpp_source}\index{src/frame/src/constructor.cpp@{src/frame/src/constructor.cpp}}
+\mbox{\hyperlink{frame_2src_2constructor_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{frame_8hpp}{frame.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00010}\mbox{\hyperlink{class_frame_aad3767ea88fdb482c7b9f3777605a793}{00010}}\ \mbox{\hyperlink{class_frame_aad3767ea88fdb482c7b9f3777605a793}{Frame::Frame}}(\mbox{\hyperlink{class_frame}{Frame}}*\ par,\ Rectangle\ rel)}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00012}00012\ \ \ \ \ parent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{if}(par\ ==\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::Frame(Frame*\ par,\ fRect\ rel):\ par\ is\ nullptr"{}});}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00018}00018\ \ \ \ \ parent\ =\ par;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00019}00019\ \ \ \ \ relative[0]\ =\ rel.x;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00020}00020\ \ \ \ \ relative[1]\ =\ rel.y;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00021}00021\ \ \ \ \ relative[2]\ =\ rel.width;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00022}00022\ \ \ \ \ relative[3]\ =\ rel.height;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00024}00024\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{addSubframe}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}();}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00033}\mbox{\hyperlink{class_frame_a42aad728c0e78803038097fcdb703864}{00033}}\ \mbox{\hyperlink{class_frame_aad3767ea88fdb482c7b9f3777605a793}{Frame::Frame}}(\mbox{\hyperlink{class_frame}{Frame}}*\ self)}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00035}00035\ \ \ \ \ parent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{if}(self\ ==\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::Frame(Frame*\ self):\ self\ is\ nullptr"{}});}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00041}00041\ \ \ \ \ parent\ =\ self-\/>parent;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00042}00042\ \ \ \ \ relative\ =\ self-\/>relative;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00043}00043\ \ \ \ \ frame\ =\ self-\/>frame;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ i\ :\ self-\/>subframes)}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00045}00045\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ subframes.push\_back(i);}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00057}\mbox{\hyperlink{class_frame_a55a2661c87f388399a770f0099999ca2}{00057}}\ \mbox{\hyperlink{class_frame_aad3767ea88fdb482c7b9f3777605a793}{Frame::Frame}}(Rectangle\ rec)}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00058}00058\ \{}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00059}00059\ \ \ \ \ parent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00060}00060\ \ \ \ \ frame\ =\ rec;}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00061}00061\ \ \ \ \ parent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00062}00062\ \ \ \ \ relative\ =\ \{1,\ 1,\ 1,\ 1\};}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{frame_2src_2constructor_8cpp_source_l00064}00064\ }
+
+\end{DoxyCode}

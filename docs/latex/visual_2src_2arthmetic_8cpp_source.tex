@@ -1,0 +1,49 @@
+\doxysection{arthmetic.\+cpp}
+\hypertarget{visual_2src_2arthmetic_8cpp_source}{}\label{visual_2src_2arthmetic_8cpp_source}\index{src/visual/src/arthmetic.cpp@{src/visual/src/arthmetic.cpp}}
+\mbox{\hyperlink{visual_2src_2arthmetic_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{visual_8hpp}{visual.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00004}\mbox{\hyperlink{class_visual_a61d31eabe8a71570191139cb9a2c182c}{00004}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_visual_a61d31eabe8a71570191139cb9a2c182c}{Visual::draw}}()}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordflow}{if}(m\_texture\ ==\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00007}00007\ \ \ \ \ Rectangle\ rec\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{comment}{//\ draw\ texture\ }}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00009}00009\ \ \ \ \ DrawTexture(*m\_texture,\ rec.x,\ rec.y,\ WHITE);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00012}\mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{00012}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{Visual::fitFrame}}()}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}(m\_texture\ ==\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{if}(!resizeable)\ return\ ;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{const}\ Rectangle\ \&rec\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{Frame::getFrame}}();}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00018}00018\ \ \ \ \ Image\ img\ =\ LoadImageFromTexture(*m\_texture);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00019}00019\ \ \ \ \ UnloadTexture(*m\_texture.get());}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00020}00020\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00021}00021\ \ \ \ \ ImageResize(\&img,\ rec.width,\ rec.height);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00022}00022\ \ \ \ \ *m\_texture.get()\ =\ LoadTextureFromImage(img);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00023}00023\ \ \ \ \ UnloadImage(img);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00026}\mbox{\hyperlink{class_visual_a919a0e27c37bb61635a9d0a0630a05ff}{00026}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_visual_a919a0e27c37bb61635a9d0a0630a05ff}{Visual::resize}}(\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ rel)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{class_frame_ac2d0460d67ec259633ba9d6a601ec954}{Frame::resize}}(rel);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{class_visual_a63668294defc8e0bbdb584016e1c08c6}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00032}\mbox{\hyperlink{class_visual_a63668294defc8e0bbdb584016e1c08c6}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_visual_a63668294defc8e0bbdb584016e1c08c6}{Visual::updateFrame}}(\textcolor{keywordtype}{bool}\ recursive)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{if}(m\_texture\ ==\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{float}\ prx\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}().width;\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{float}\ pry\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}().height;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{Frame::updateFrame}}(recursive);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{float}\ rx\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}().width\ -\/\ prx;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{float}\ ry\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}().height\ -\/\ pry;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}(rx\ <\ 1e-\/3\ \&\&\ ry\ <\ 1e-\/3)\ return\ ;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{\Hypertarget{visual_2src_2arthmetic_8cpp_source_l00043}00043\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,112 @@
+\doxysection{constructor.\+cpp}
+\hypertarget{button_2src_2constructor_8cpp_source}{}\label{button_2src_2constructor_8cpp_source}\index{src/button/src/constructor.cpp@{src/button/src/constructor.cpp}}
+\mbox{\hyperlink{button_2src_2constructor_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{button_8hpp}{button.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00004}00004\ \textcolor{comment}{//\ Button\ for\ Image}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00005}\mbox{\hyperlink{class_button_image_a00ee5f184661801e5e941e1dbbf02229}{00005}}\ \mbox{\hyperlink{class_button_image_a00ee5f184661801e5e941e1dbbf02229}{ButtonImage::ButtonImage}}(\mbox{\hyperlink{class_frame}{Frame}}*\ parrent,\ Rectangle\ rel)\ :\ \mbox{\hyperlink{class_container}{Container}}(parrent,\ rel)}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00007}00007\ \ \ \ \ \ \textcolor{comment}{//\ set\ default}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00008}00008\ \ \ \ \ this-\/>\mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{chooseImage}}(0,\ this-\/>tmpPath);}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00009}00009\ \ \ \ \ this-\/>color\ =\ WHITE;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00010}00010\ \ \ \ \ this-\/>pressing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00011}00011\ \ \ \ \ this-\/>isHover\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00012}00012\ \ \ \ \ this-\/>clicked\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00014}00014\ \ \ \ \ this-\/>releaseID\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00015}00015\ \ \ \ \ this-\/>hoverID\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00016}00016\ \ \ \ \ this-\/>pressingID\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00017}00017\ \ \ \ \ this-\/>clickedID\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00020}\mbox{\hyperlink{class_button_image_ad83ed76a4fdbfcd27e4e612a779d3b92}{00020}}\ std::string\ \mbox{\hyperlink{class_button_image_ad83ed76a4fdbfcd27e4e612a779d3b92}{ButtonImage::linkContent}}(std::string\ path)}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_button_image_a080c2861b9abbf6fb625089a48449dbf}{linkContentAbsolute}}(\mbox{\hyperlink{namespace_p_a_t_b_aebbabfb95825d695009156d983b9a97d}{PATB::BUTTON\_}}\ +\ path);}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00025}\mbox{\hyperlink{class_button_image_a080c2861b9abbf6fb625089a48449dbf}{00025}}\ std::string\ \mbox{\hyperlink{class_button_image_a080c2861b9abbf6fb625089a48449dbf}{ButtonImage::linkContentAbsolute}}(std::string\ path)}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00027}00027\ \ \ \ \ YAML::Node\ node\ =\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(path);}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_a3ebddddd7a940e4f5e3d287067103a3e}{loadName}}(node))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00029}00029\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}textures"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container_a11f0c20cb4f80f5d2a63f73f981a9d15}{loadSprites}}(node[\textcolor{stringliteral}{"{}textures"{}}]);}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{chooseImage}}(0,\ 0);}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}events"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_image_a4c689ea0ed97821b970b1f9f37af07b1}{loadEvent}}(node[\textcolor{stringliteral}{"{}events"{}}]);}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{getName}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00043}\mbox{\hyperlink{class_button_image_a4c689ea0ed97821b970b1f9f37af07b1}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_image_a4c689ea0ed97821b970b1f9f37af07b1}{ButtonImage::loadEvent}}(YAML::Node\ node)}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00044}00044\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}hover"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ sprite\ :\ node[\textcolor{stringliteral}{"{}hover"{}}][\textcolor{stringliteral}{"{}sprite"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad86b53f6d177d3f8cdb26e0923180786}{iPoint}}\ p;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ delay\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ p[0]\ =\ sprite[0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ p[1]\ =\ sprite[1].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(p.size()\ >=\ 3)\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ delay\ =\ sprite[2].as<int>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ actions.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_a257d5a732fa522a82836366f51bb9b19}{changeImageAction}}(\textcolor{keyword}{this},\ p));}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ this-\/>hoverID\ =\ actions.size()\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}release"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ sprite\ :\ node[\textcolor{stringliteral}{"{}release"{}}][\textcolor{stringliteral}{"{}sprite"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad86b53f6d177d3f8cdb26e0923180786}{iPoint}}\ p;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ delay\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ p[0]\ =\ sprite[0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ p[1]\ =\ sprite[1].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(p.size()\ >=\ 3)\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ delay\ =\ sprite[2].as<int>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ actions.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_a257d5a732fa522a82836366f51bb9b19}{changeImageAction}}(\textcolor{keyword}{this},\ p));}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ this-\/>releaseID\ =\ actions.size()\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}clicked"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ sprite\ :\ node[\textcolor{stringliteral}{"{}clicked"{}}][\textcolor{stringliteral}{"{}sprite"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad86b53f6d177d3f8cdb26e0923180786}{iPoint}}\ p;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ delay\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ p[0]\ =\ sprite[0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ p[1]\ =\ sprite[1].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(p.size()\ >=\ 3)\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ delay\ =\ sprite[2].as<int>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ actions.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_a257d5a732fa522a82836366f51bb9b19}{changeImageAction}}(\textcolor{keyword}{this},\ p));}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ this-\/>clickedID\ =\ actions.size()\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00090}00090\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}pressing"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00093}00093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ sprite\ :\ node[\textcolor{stringliteral}{"{}pressing"{}}][\textcolor{stringliteral}{"{}sprite"{}}])}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad86b53f6d177d3f8cdb26e0923180786}{iPoint}}\ p;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ delay\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ p[0]\ =\ sprite[0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ p[1]\ =\ sprite[1].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(p.size()\ >=\ 3)\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ delay\ =\ sprite[2].as<int>();}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ actions.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_a257d5a732fa522a82836366f51bb9b19}{changeImageAction}}(\textcolor{keyword}{this},\ p));}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ this-\/>pressingID\ =\ actions.size()\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00105}00105\ \ \ \ \ \}\ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2constructor_8cpp_source_l00106}00106\ \}}
+
+\end{DoxyCode}
