@@ -1,0 +1,37 @@
+\doxysection{destructor.\+cpp}
+\hypertarget{visual_2src_2destructor_8cpp_source}{}\label{visual_2src_2destructor_8cpp_source}\index{src/visual/src/destructor.cpp@{src/visual/src/destructor.cpp}}
+\mbox{\hyperlink{visual_2src_2destructor_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{visual_8hpp}{visual.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00003}00003\ \textcolor{keywordtype}{void}\ Visual::deleteTexture2D(Texture2D*\&\ texture)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{if}(texture\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00006}00006\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00007}00007\ \ \ \ \ \ \ \ \ UnloadTexture(*texture);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ texture\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00009}00009\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00012}\mbox{\hyperlink{class_visual_af32360b9f765f4be89233687dd219b1e}{00012}}\ \mbox{\hyperlink{class_visual_af32360b9f765f4be89233687dd219b1e}{Visual::\string~Visual}}()}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00014}00014\ \ \ \ \ m\_texture.reset();}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00017}\mbox{\hyperlink{visual_2src_2destructor_8cpp_aad4b211f99547e29889434d16bc757b3}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{visual_2src_2destructor_8cpp_aad4b211f99547e29889434d16bc757b3}{deleteSprite}}(\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}}\ sprite)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ frame\ :\ sprite)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ frame;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00021}00021\ \ \ \ \ sprite.clear();}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00024}\mbox{\hyperlink{visual_8hpp_a57a2121ba160142ca7c5541cd2c21a0a}{00024}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{visual_2src_2destructor_8cpp_af10265d0048e29bb2de7168f8368cc32}{deleteSprites}}(std::vector<Sprite>*\&\ sprites)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}}\ \&\ sprite\ :\ *sprites)}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00027}00027\ \ \ \ \ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{visual_2src_2destructor_8cpp_aad4b211f99547e29889434d16bc757b3}{deleteSprite}}(sprite);}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{delete}\ sprites;}
+\DoxyCodeLine{\Hypertarget{visual_2src_2destructor_8cpp_source_l00031}00031\ \}}
+
+\end{DoxyCode}

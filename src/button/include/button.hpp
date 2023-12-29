@@ -10,8 +10,12 @@
 #define TRANSPARENT Color {127, 127, 127, 0}
 #define rectangle this->getFrame()
 
-
-
+/**
+ * @class ButtonImage
+ *
+ * @brief manages the appearance and behavior of a button
+ * 
+**/
 class ButtonImage : public Container
 {
 private:

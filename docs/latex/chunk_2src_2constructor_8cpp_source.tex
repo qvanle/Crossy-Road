@@ -1,0 +1,129 @@
+\doxysection{constructor.\+cpp}
+\hypertarget{chunk_2src_2constructor_8cpp_source}{}\label{chunk_2src_2constructor_8cpp_source}\index{src/chunk/src/constructor.cpp@{src/chunk/src/constructor.cpp}}
+\mbox{\hyperlink{chunk_2src_2constructor_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{atb_8hpp}{const/path/atb.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{chunk_8hpp}{chunk.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00004}\mbox{\hyperlink{class_chunk_a0d075d134db29da3e7776ee7e862be4b}{00004}}\ \mbox{\hyperlink{class_chunk_a0d075d134db29da3e7776ee7e862be4b}{Chunk::Chunk}}(\mbox{\hyperlink{class_frame}{Frame}}*\ frame,\ Rectangle\ rect)\ :\ \mbox{\hyperlink{class_interface}{Interface}}(frame,\ rect)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00009}\mbox{\hyperlink{class_chunk_afb75fbf9b0f4d5eba89f12b3c7a02ace}{00009}}\ \mbox{\hyperlink{class_chunk_a0d075d134db29da3e7776ee7e862be4b}{Chunk::Chunk}}(\mbox{\hyperlink{class_chunk}{Chunk}}*\ other)\ :\ \mbox{\hyperlink{class_interface}{Interface}}(other)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>visiter)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00013}00013\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ rel.x\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ rel.y\ =\ -\/0.375;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ rel.width\ =\ i-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[2];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ rel.height\ =\ i-\/>getRelative()[3];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ visiter.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(i,\ \textcolor{keyword}{this},\ rel));}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00021}00021\ \ \ \ \ velocity\ =\ other-\/>velocity;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_chunk_a6276c31cadd50569143489791aa98c8c}{generateEntity}}();}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00025}\mbox{\hyperlink{class_chunk_a51442043dc90c6f69a60aa68180f9d3f}{00025}}\ \mbox{\hyperlink{class_chunk_a0d075d134db29da3e7776ee7e862be4b}{Chunk::Chunk}}(\mbox{\hyperlink{class_chunk}{Chunk}}*\ other,\ Rectangle\ rect)\ :\ \mbox{\hyperlink{class_interface}{Interface}}(other,\ rect)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>visiter)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ rel.x\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ rel.y\ =\ -\/0.375;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ rel.width\ =\ i-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[2];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ rel.height\ =\ i-\/>getRelative()[3];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ visiter.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(i,\ \textcolor{keyword}{this},\ rel));}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00036}00036\ \ \ \ \ velocity\ =\ other-\/>velocity;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_chunk_a6276c31cadd50569143489791aa98c8c}{generateEntity}}();}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00040}\mbox{\hyperlink{class_chunk_ac11d87153c10e0cb6e936b2af645eb3c}{00040}}\ \mbox{\hyperlink{class_chunk_a0d075d134db29da3e7776ee7e862be4b}{Chunk::Chunk}}(\mbox{\hyperlink{class_chunk}{Chunk}}*\ other,\ \mbox{\hyperlink{class_frame}{Frame}}*\ frame,\ Rectangle\ rect)\ :\ \mbox{\hyperlink{class_interface}{Interface}}(other,\ frame,\ rect)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00041}00041\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>visiter)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00043}00043\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ rel.x\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ rel.y\ =\ -\/0.375;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ rel.width\ =\ i-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[2];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ rel.height\ =\ i-\/>getRelative()[3];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ visiter.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(i,\ \textcolor{keyword}{this},\ rel));}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00051}00051\ \ \ \ \ velocity\ =\ other-\/>velocity;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{class_chunk_a6276c31cadd50569143489791aa98c8c}{generateEntity}}();}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00055}\mbox{\hyperlink{class_chunk_a6276c31cadd50569143489791aa98c8c}{00055}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_a6276c31cadd50569143489791aa98c8c}{Chunk::generateEntity}}()\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00056}00056\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{if}(visiter.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ GetRandomValue(-\/40,\ 10);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00060}00060\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{while}(x\ <\ 0.9)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}*\ c\ =\ \mbox{\hyperlink{class_chunk_ae3963abdd13c1ead0f2c062622b8963a}{randomEntity}}();}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ rel.x\ =\ x;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ rel.y\ =\ -\/0.375;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ rel.width\ =\ c-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[2];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ rel.height\ =\ c-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[3];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}*\ cont\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(c,\ \textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ Entity.push\_back(cont);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ x\ +=\ GetRandomValue(20,\ 60)\ /\ 100.0;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00076}\mbox{\hyperlink{class_chunk_a6c2ab1c746452b33fe23d3d1097b6ca3}{00076}}\ std::string\ \mbox{\hyperlink{class_chunk_a6c2ab1c746452b33fe23d3d1097b6ca3}{Chunk::linkContent}}(std::string\ path)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00077}00077\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_interface_ac7612dfabe159aebffc7e4553df315e9}{linkContentAbsolute}}(\mbox{\hyperlink{namespace_p_a_t_b_a7f9e59624350c13d5777c35d70497c58}{PATB::CHUNK\_}}\ +\ path);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00082}\mbox{\hyperlink{class_chunk_ad5fc7f3c0844d32ff7fdb9eec368bd51}{00082}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ad5fc7f3c0844d32ff7fdb9eec368bd51}{Chunk::addVisiter}}(\mbox{\hyperlink{class_container}{Container}}*\ obj)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00083}00083\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00084}00084\ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00085}00085\ \ \ \ \ rel.x\ =\ obj-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[0];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00086}00086\ \ \ \ \ rel.y\ =\ obj-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[1];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00087}00087\ \ \ \ \ rel.width\ =\ obj-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[2];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00088}00088\ \ \ \ \ rel.height\ =\ obj-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[3];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}*\ c\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(obj,\ \textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00091}00091\ \ \ \ \ visiter.push\_back(c);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00094}\mbox{\hyperlink{class_chunk_a2d21e4e69931f593ef994f2ae99916cc}{00094}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ad5fc7f3c0844d32ff7fdb9eec368bd51}{Chunk::addVisiter}}(\mbox{\hyperlink{class_container}{Container}}*\ obj,\ \textcolor{keywordtype}{int}\ prob)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00095}00095\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00096}00096\ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00097}00097\ \ \ \ \ rel.x\ =\ obj-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[0];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00098}00098\ \ \ \ \ rel.y\ =\ obj-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[1];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00099}00099\ \ \ \ \ rel.width\ =\ obj-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[2];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00100}00100\ \ \ \ \ rel.height\ =\ obj-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[3];}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00102}00102\ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}*\ c\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(obj,\ \textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00103}00103\ \ \ \ \ c-\/>\mbox{\hyperlink{class_container_a20103c0d27bd0706624e7c0161771ef6}{setProbability}}(prob);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00104}00104\ \ \ \ \ visiter.push\_back(c);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00107}\mbox{\hyperlink{class_chunk_a009d458838372b09044ad86767b87832}{00107}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ad5fc7f3c0844d32ff7fdb9eec368bd51}{Chunk::addVisiter}}(\mbox{\hyperlink{class_container}{Container}}*\ obj,\ Rectangle\ rel)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00108}00108\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00109}00109\ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}*\ c\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(obj,\ \textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00110}00110\ \ \ \ \ visiter.push\_back(c);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00111}00111\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00113}\mbox{\hyperlink{class_chunk_a40ec4189afe215c9750befcc2efb0d31}{00113}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ad5fc7f3c0844d32ff7fdb9eec368bd51}{Chunk::addVisiter}}(\mbox{\hyperlink{class_container}{Container}}*\ obj,\ \textcolor{keywordtype}{int}\ prob,\ Rectangle\ rel)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00114}00114\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00115}00115\ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}*\ c\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(obj,\ \textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00116}00116\ \ \ \ \ c-\/>\mbox{\hyperlink{class_container_a20103c0d27bd0706624e7c0161771ef6}{setProbability}}(prob);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00117}00117\ \ \ \ \ visiter.push\_back(c);}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00118}00118\ \}}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00120}\mbox{\hyperlink{class_chunk_a8854147872d209544a2da60814cd2133}{00120}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_a8854147872d209544a2da60814cd2133}{Chunk::setVelocity}}(\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ vel)}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00121}00121\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00122}00122\ \ \ \ \ velocity\ =\ vel;}
+\DoxyCodeLine{\Hypertarget{chunk_2src_2constructor_8cpp_source_l00123}00123\ \}}
+
+\end{DoxyCode}

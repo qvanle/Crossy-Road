@@ -9,6 +9,14 @@
 #include <keystroke.hpp>
 #include <button.hpp>
 
+/**
+ * @class Interface
+ *
+ * @brief where user can interact with the game
+ * 
+ * manages containers, all actions, subframes etc.
+ * 
+**/
 class Interface : public Container
 {
 private: 
@@ -43,19 +51,12 @@ public:
     void draw() override;
 };
 
-class movetoObjectAction : public Action
-{
-private: 
-    Container* obj; 
-    fPoint pos;
-public: 
-    movetoObjectAction(Container* obj, fPoint pos);
-    ~movetoObjectAction();
-
-    void execute() override;
-    Action* clone() override;
-};
-
+/**
+ * @class moveObjectAction
+ *
+ * @brief manages the features of a movement, including which object, speed, direction etc.
+ * 
+**/
 class moveObjectAction : public Action
 {
 private: 

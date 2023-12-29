@@ -10,7 +10,7 @@ void ButtonImage::draw() {
 }
 
 PacketAction* ButtonImage::react() {
-   
+    if(!isVisible()) return nullptr;
     if (CheckCollisionPointRec(GetMousePosition(), rectangle)) {
         this->isHover = 1;
         if (IsMouseButtonDown(MOUSE_LEFT_BUTTON)) { // click -> pressing

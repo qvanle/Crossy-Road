@@ -1,0 +1,43 @@
+\doxysection{movechunk.\+cpp}
+\hypertarget{movechunk_8cpp_source}{}\label{movechunk_8cpp_source}\index{src/game/src/action/movechunk.cpp@{src/game/src/action/movechunk.cpp}}
+\mbox{\hyperlink{movechunk_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{game_8hpp}{game.hpp}}>}\ }
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{vector_8hpp}{vector.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00004}\mbox{\hyperlink{classmove_chunks_action_a95fb46d8cbb12fd7715f901b56e7f0c2}{00004}}\ \mbox{\hyperlink{classmove_chunks_action_a95fb46d8cbb12fd7715f901b56e7f0c2}{moveChunksAction::moveChunksAction}}(\mbox{\hyperlink{class_game}{Game}}*\ game,\ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ delta)}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00006}00006\ \ \ \ \ this-\/>game\ =\ game;}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00007}00007\ \ \ \ \ this-\/>delta\ =\ delta;}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00010}\mbox{\hyperlink{classmove_chunks_action_abcac25599cdd0a0e926f9a0c9421da46}{00010}}\ \mbox{\hyperlink{classmove_chunks_action_a95fb46d8cbb12fd7715f901b56e7f0c2}{moveChunksAction::moveChunksAction}}(\mbox{\hyperlink{class_game}{Game}}*\ game,\ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ d,\ \textcolor{keywordtype}{float}\ v)}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00012}00012\ \ \ \ \ this-\/>game\ =\ game;}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00013}00013\ \ \ \ \ this-\/>direction\ =\ d;}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00014}00014\ \ \ \ \ this-\/>speed\ =\ v;}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ \mbox{\hyperlink{namespace_v_e_c_t_o_r2_d_a4109f03569959b180ac8753033a747f2}{VECTOR2D::getAngle}}(direction);}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00017}00017\ \ \ \ \ delta[0]\ =\ cos(angle)\ *\ speed;}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00018}00018\ \ \ \ \ delta[1]\ =\ sin(angle)\ *\ speed;}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00021}\mbox{\hyperlink{classmove_chunks_action_a368a08b4171fc3460534cb680e18dab5}{00021}}\ \mbox{\hyperlink{classmove_chunks_action_a368a08b4171fc3460534cb680e18dab5}{moveChunksAction::\string~moveChunksAction}}()}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00025}\mbox{\hyperlink{classmove_chunks_action_a56ce75e76131c18d217e056c1ab15457}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmove_chunks_action_a56ce75e76131c18d217e056c1ab15457}{moveChunksAction::execute}}()}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ chunk\ :\ game-\/>chunks)}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ chunk-\/>moveBy(delta);}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00031}00031\ \ \ \ \ game-\/>\mbox{\hyperlink{class_game_ada8c449d8f734c2ad2e2ed292d4b787d}{loadMap}}();}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00034}\mbox{\hyperlink{classmove_chunks_action_a63c2db18ac01c67a25969681395e1b16}{00034}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classmove_chunks_action_a63c2db18ac01c67a25969681395e1b16}{moveChunksAction::clone}}()}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmove_chunks_action_a95fb46d8cbb12fd7715f901b56e7f0c2}{moveChunksAction}}(game,\ delta);}
+\DoxyCodeLine{\Hypertarget{movechunk_8cpp_source_l00037}00037\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,30 @@
+\doxysection{random.\+hpp}
+\hypertarget{random_8hpp_source}{}\label{random_8hpp_source}\index{src/utils/include/random.hpp@{src/utils/include/random.hpp}}
+\mbox{\hyperlink{random_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ RANDOM\_HPP}}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ RANDOM\_HPP}}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00007}\mbox{\hyperlink{class_random_engine}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_random_engine}{RandomEngine}}\ }
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00009}00009\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00010}00010\ \ \ \ \ std::mt19937\ engine;}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00011}00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{class_random_engine_a2e3a09657d006b486b73bd029efa3824}{RandomEngine}}();}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_random_engine_a2e3a09657d006b486b73bd029efa3824}{RandomEngine}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ seed);}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_random_engine_abd096ac40446e2744f7b2a996bea5a77}{\string~RandomEngine}}();}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_random_engine_a7a689d692e59677e6e9e34b73a31e384}{randInt}}(\textcolor{keywordtype}{int}\ min\ =\ 0,\ \textcolor{keywordtype}{int}\ max\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_random_engine_aedd750b902239bea4ae802acc6342e4a}{randDouble}}(\textcolor{keywordtype}{double}\ min\ =\ 0,\ \textcolor{keywordtype}{double}\ max\ =\ 1);}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_random_engine_a6a870b09f5b11c36bc5154dea5392a09}{randChar}}(\textcolor{keywordtype}{char}\ min\ =\ 0,\ \textcolor{keywordtype}{char}\ max\ =\ 127);}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00018}00018\ \ \ \ \ std::string\ \mbox{\hyperlink{class_random_engine_af45c0afde44652830e998e393b02c0d8}{randString}}(\textcolor{keywordtype}{int}\ length,\ \textcolor{keywordtype}{char}\ min,\ \textcolor{keywordtype}{char}\ max);}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00019}00019\ \ \ \ \ std::string\ \mbox{\hyperlink{class_random_engine_af225048eb92f00fa03b6baef779e6fac}{randInt2String}}(\textcolor{keywordtype}{int}\ length,\ \textcolor{keywordtype}{int}\ min\ =\ 0,\ \textcolor{keywordtype}{int}\ max\ =\ 9);}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00020}00020\ \ \ \ \ std::string\ \mbox{\hyperlink{class_random_engine_af45c0afde44652830e998e393b02c0d8}{randString}}(\textcolor{keywordtype}{int}\ length,\ \textcolor{keywordtype}{bool}\ haveDigit\ =\ \textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ haveLower\ =\ \textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ haveUpper\ =\ \textcolor{keyword}{true},\ \textcolor{keywordtype}{bool}\ haveSpecial\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00021}00021\ \};}
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{random_8hpp_source_l00024}00024\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}
