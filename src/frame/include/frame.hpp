@@ -30,8 +30,8 @@ private:
     
     fRect relative;
 
-    mutable std::mutex mtx;
 protected:
+    mutable std::mutex mtx;
     virtual void updateFrame(bool recursive = false);
     bool isroot() const;
     void addSubframe(Frame* subframe);

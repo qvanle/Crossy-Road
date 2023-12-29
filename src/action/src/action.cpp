@@ -46,9 +46,9 @@ PacketAction::PacketAction() : Action()
 }
 
 
-PacketAction::PacketAction(PacketAction* action) : Action(action)
+PacketAction::PacketAction(PacketAction* other) : Action(other)
 {
-    for(Action* a : action->actions)
+    for(Action* a : other->actions)
         actions.push_back(a->clone());
 }
 
@@ -69,11 +69,12 @@ void PacketAction::addAction(Action* action)
     actions.push_back(action);
 }
 
-void PacketAction::addAction(PacketAction* action) 
+void PacketAction::addAction(PacketAction* other) 
 {
-    for(auto i : action->actions)
+    for(auto i : other->actions)
         actions.push_back(i);
-    action->actions.clear();
+    other->actions.clear();
+    delete other;
 }
 
 std::vector<Action*> PacketAction::unpack()
@@ -100,6 +101,7 @@ std::vector<Action*> PacketAction::unpack()
             }
         }
         p->actions.clear();
+        delete p;
     }
     return unpacked;
 }

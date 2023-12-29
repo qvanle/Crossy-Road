@@ -43,6 +43,7 @@ public:
     void generateEntity();
 
     void setVelocity(fPoint);
+    bool isEntityCollide(Container* main);
 
     std::string linkContent(std::string path) override;
     Action* getRuntimeEvent() override;

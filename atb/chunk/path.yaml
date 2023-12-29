@@ -1,0 +1,16 @@
+"name": "path" # require
+"textures":  # require
+  - 
+    "path": "path.png"  # require
+    "graphics":  #require
+      -
+        "x": 00
+        "y": 00 
+        "w": 100
+        "h": 100
+        "gapX": 0  
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1

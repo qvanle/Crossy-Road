@@ -44,6 +44,11 @@ Window::Window(std::string path)
     {
         Wcontent.runtime_delay = std::chrono::duration<int>(40) / 1000.0;
     }
+
+    // test inputbox
+    Font font = GetFontDefault();
+    inputBox = new InputBox(20, {0.25, 0.25, 0.25, 0.25}, UI.getRootFrame(), &font);
+    inputBox->linkContent("inputbox.yaml");
 }
 
 

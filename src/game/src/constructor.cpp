@@ -76,8 +76,11 @@ void Game::loadMap()
     while(!chunks.empty())
     {
         fRect rec = chunks.back()->getRelative();
-        if(rec[1] > 1) chunks.pop_back();
-        else break;
+        if(rec[1] > 1) 
+        {
+            delete chunks.back();
+            chunks.pop_back();
+        }else break;
     }
     if(chunks.empty()) 
     {

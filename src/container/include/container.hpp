@@ -87,6 +87,8 @@ public:
     bool isOverlapping(Container*);
     float OverlappingArea(Rectangle);
     float OverlappingArea(Container*);
+    bool isCollide(Rectangle);
+    bool isCollide(Container*);
 
     virtual void draw();
     void show();
