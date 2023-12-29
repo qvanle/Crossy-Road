@@ -7,7 +7,10 @@ void Game::draw()
 
     for(auto i = chunks.begin(); i != chunks.end(); ++i)
     {
-        (*i)->draw();
+        if(*i != nullptr) 
+        {
+            (*i)->draw();
+        }else std::cout << i - chunks.begin() << " is nullptr" << std::endl;
     }
     DrawRectangleLinesEx(main->getFrame(), 5, RED);
 
