@@ -3,6 +3,12 @@
 
 #include <chrono>
 
+/**
+ * @class CountDown
+ *
+ * @brief count the time a playthrough takes
+ * 
+**/
 class CountDown 
 {
 private: 

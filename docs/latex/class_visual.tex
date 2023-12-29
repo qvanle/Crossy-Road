@@ -1,0 +1,916 @@
+\doxysection{Visual Class Reference}
+\hypertarget{class_visual}{}\label{class_visual}\index{Visual@{Visual}}
+
+
+images displayed on screen  
+
+
+
+
+{\ttfamily \#include $<$visual.\+hpp$>$}
+
+Inheritance diagram for Visual\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_visual}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_visual_a11dd1472b7fdb2806152d274c55b3efe}{Visual}} (Texture2D \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}, Rectangle)
+\item 
+\mbox{\hyperlink{class_visual_a22cf889b1bc57d7d88a6d79fa78fce2c}{Visual}} (\mbox{\hyperlink{class_visual}{Visual}} \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{class_visual_a57c9bf13c7a633c9330be6f4d7c9b8f0}{Visual}} (\mbox{\hyperlink{class_visual}{Visual}} \texorpdfstring{$\ast$}{*}, Rectangle)
+\item 
+\mbox{\hyperlink{class_visual_ae38d3347bf1c2719cfcf0fe3a848c733}{Visual}} (\mbox{\hyperlink{class_visual}{Visual}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}, Rectangle)
+\item 
+\mbox{\hyperlink{class_visual_af32360b9f765f4be89233687dd219b1e}{\texorpdfstring{$\sim$}{\string~}\+Visual}} ()
+\item 
+void \mbox{\hyperlink{class_visual_a919a0e27c37bb61635a9d0a0630a05ff}{resize}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}})
+\item 
+void \mbox{\hyperlink{class_visual_a61d31eabe8a71570191139cb9a2c182c}{draw}} ()
+\item 
+void \mbox{\hyperlink{class_frame_a62c876a0e6d3b7c89288b81893434369}{plug}} (\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}par, \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} rel)
+\begin{DoxyCompactList}\small\item\em attach a frame to a parent by relative position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_a4b3c3543e057eb375edc5fb9f7db512d}{plug}} (\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}par)
+\begin{DoxyCompactList}\small\item\em attach a frame to a parent by old relative position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_a7fec746caea8b9cc27d28f829e3995a8}{unplug}} ()
+\begin{DoxyCompactList}\small\item\em detach a frame from its parent \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_a97a44fc353ebd9feb9002fcfb2f7ecb6}{move\+To}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} rel)
+\item 
+void \mbox{\hyperlink{class_frame_a6b8233fda47b75fe55402700efdcca97}{move\+To}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_frame_a0cc1c4c2c00c20cea37a9b9b36b8b8c7}{move\+Center\+To}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} rel)
+\item 
+void \mbox{\hyperlink{class_frame_abf3649cc78d87aaf4877723d3e342407}{move\+Center\+To}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_frame_a72456ad52812da3e4f805c20463238e3}{move\+By}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} rel)
+\item 
+void \mbox{\hyperlink{class_frame_abb0f7042ce5917e8e52cd0fe44934178}{move\+By}} (int, int)
+\item 
+void \mbox{\hyperlink{class_frame_ae515658ddcab39a3fc9e038eb86dfe61}{resize}} (int w, int h)
+\item 
+const Rectangle \& \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{get\+Frame}} () const
+\item 
+const \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} \& \mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{get\+Relative}} () const
+\item 
+\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_frame_a9b5a189c65cc1b011baeed32236e2c7f}{get\+Parent}} ()
+\item 
+void \mbox{\hyperlink{class_frame_ab54f6e87faf0216b708c40cb1bc1a4a2}{set\+Relative}} (\mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} rel)
+\item 
+const \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} \& \mbox{\hyperlink{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}{get\+Center}} () const
+\item 
+const float \& \mbox{\hyperlink{class_frame_ab0eefa85bb68bd39b6c502f552083b42}{getX}} () const
+\item 
+const float \& \mbox{\hyperlink{class_frame_a3808523d40227445dbd975fc0600b462}{getY}} () const
+\item 
+const float \& \mbox{\hyperlink{class_frame_a37aeab17b4d450237496d32a2eb6b191}{getW}} () const
+\item 
+const float \& \mbox{\hyperlink{class_frame_a33049f15ecb70bad2654e93f8d3009c5}{getH}} () const
+\item 
+\mbox{\hyperlink{class_frame_af9fbceb830138f25ed0cc8dcd62c467f}{operator Rectangle}} () const
+\item 
+\mbox{\hyperlink{class_frame_acb38199a86119e31c739bb46fd382ada}{operator f\+Rect}} () const
+\item 
+\mbox{\hyperlink{class_frame_a0dbda20497048b082c047daf5f09938c}{operator i\+Rect}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fit\+Frame}} ()
+\item 
+void \mbox{\hyperlink{class_visual_a63668294defc8e0bbdb584016e1c08c6}{update\+Frame}} (bool recursive=false) override
+\item 
+bool \mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}} () const
+\begin{DoxyCompactList}\small\item\em return true if this frame is root \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{add\+Subframe}} (\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}subframe)
+\begin{DoxyCompactList}\small\item\em Add a subframe to this frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_a6676f9cfd2639c9069341ee5844167af}{remove\+Subframe}} (\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}subframe)
+\begin{DoxyCompactList}\small\item\em Remove a subframe from this frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_add61373f7fc708652df88a8af032f996}{begin\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_frame_a701cffd131a90249033fc40f505f02d6}{end\+Update}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+images displayed on screen 
+
+Definition at line \mbox{\hyperlink{visual_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{visual_8hpp_source}{visual.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_visual_a11dd1472b7fdb2806152d274c55b3efe}\label{class_visual_a11dd1472b7fdb2806152d274c55b3efe} 
+\index{Visual@{Visual}!Visual@{Visual}}
+\index{Visual@{Visual}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{Visual()}{Visual()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Visual\+::\+Visual (\begin{DoxyParamCaption}\item[{Texture2D \texorpdfstring{$\ast$}{*}}]{txtr,  }\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{frame,  }\item[{Rectangle}]{rect }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2constructor_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{visual_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_frame_aad3767ea88fdb482c7b9f3777605a793}{Frame}}(frame,\ rect) }
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ m\_texture\ =\ std::shared\_ptr<Texture2D>(txtr,\ [](Texture2D*\ texture)\{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ UnloadTexture(*texture);}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ texture\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00009\ \ \ \ \ \});}
+\DoxyCodeLine{00010\ \ \ \ \ resizeable\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{00012\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_visual_a22cf889b1bc57d7d88a6d79fa78fce2c}\label{class_visual_a22cf889b1bc57d7d88a6d79fa78fce2c} 
+\index{Visual@{Visual}!Visual@{Visual}}
+\index{Visual@{Visual}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{Visual()}{Visual()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Visual\+::\+Visual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visual}{Visual}} \texorpdfstring{$\ast$}{*}}]{visual }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2constructor_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{visual_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_frame_aad3767ea88fdb482c7b9f3777605a793}{Frame}}(visual) }
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ resizeable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00017\ \ \ \ \ m\_texture\ =\ visual-\/>m\_texture;}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_visual_a57c9bf13c7a633c9330be6f4d7c9b8f0}\label{class_visual_a57c9bf13c7a633c9330be6f4d7c9b8f0} 
+\index{Visual@{Visual}!Visual@{Visual}}
+\index{Visual@{Visual}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{Visual()}{Visual()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Visual\+::\+Visual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visual}{Visual}} \texorpdfstring{$\ast$}{*}}]{visual,  }\item[{Rectangle}]{rect }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2constructor_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{visual_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_frame_aad3767ea88fdb482c7b9f3777605a793}{Frame}}(visual,\ rect) }
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ resizeable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00024\ \ \ \ \ m\_texture\ =\ visual-\/>m\_texture;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_visual_ae38d3347bf1c2719cfcf0fe3a848c733}\label{class_visual_ae38d3347bf1c2719cfcf0fe3a848c733} 
+\index{Visual@{Visual}!Visual@{Visual}}
+\index{Visual@{Visual}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{Visual()}{Visual()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Visual\+::\+Visual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visual}{Visual}} \texorpdfstring{$\ast$}{*}}]{visual,  }\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{frame,  }\item[{Rectangle}]{rect }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2constructor_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{visual_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_frame_aad3767ea88fdb482c7b9f3777605a793}{Frame}}(frame,\ rect) }
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ resizeable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ \ \ \ \ m\_texture\ =\ visual-\/>m\_texture;}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_visual_af32360b9f765f4be89233687dd219b1e}\label{class_visual_af32360b9f765f4be89233687dd219b1e} 
+\index{Visual@{Visual}!````~Visual@{\texorpdfstring{$\sim$}{\string~}Visual}}
+\index{````~Visual@{\texorpdfstring{$\sim$}{\string~}Visual}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Visual()}{\string~Visual()}}
+{\footnotesize\ttfamily Visual\+::\texorpdfstring{$\sim$}{\string~}\+Visual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2destructor_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{visual_2src_2destructor_8cpp_source}{destructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ m\_texture.reset();}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_frame_aa55237af72da40924ff97426112d5108}\label{class_frame_aa55237af72da40924ff97426112d5108} 
+\index{Visual@{Visual}!addSubframe@{addSubframe}}
+\index{addSubframe@{addSubframe}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{addSubframe()}{addSubframe()}}
+{\footnotesize\ttfamily void Frame\+::add\+Subframe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{subframe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Add a subframe to this frame. 
+
+When unplug a subframe, parent frame will call this function, so you shouldn\textquotesingle{}t call it
+
+
+\begin{DoxyParams}{Parameters}
+{\em subframe} & subframe to add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00073\ \ \ \ \ subframes.push\_back(subframe);}
+\DoxyCodeLine{00074\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00075\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_add61373f7fc708652df88a8af032f996}\label{class_frame_add61373f7fc708652df88a8af032f996} 
+\index{Visual@{Visual}!beginUpdate@{beginUpdate}}
+\index{beginUpdate@{beginUpdate}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{beginUpdate()}{beginUpdate()}}
+{\footnotesize\ttfamily void Frame\+::begin\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_visual_a61d31eabe8a71570191139cb9a2c182c}\label{class_visual_a61d31eabe8a71570191139cb9a2c182c} 
+\index{Visual@{Visual}!draw@{draw}}
+\index{draw@{draw}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Visual\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2arthmetic_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{visual_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordflow}{if}(m\_texture\ ==\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00007\ \ \ \ \ Rectangle\ rec\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{comment}{//\ draw\ texture\ }}
+\DoxyCodeLine{00009\ \ \ \ \ DrawTexture(*m\_texture,\ rec.x,\ rec.y,\ WHITE);}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a701cffd131a90249033fc40f505f02d6}\label{class_frame_a701cffd131a90249033fc40f505f02d6} 
+\index{Visual@{Visual}!endUpdate@{endUpdate}}
+\index{endUpdate@{endUpdate}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{endUpdate()}{endUpdate()}}
+{\footnotesize\ttfamily void Frame\+::end\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00118}{118}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00121\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}\label{class_visual_aaf9da56a094e8aec908dbba6b20b02e0} 
+\index{Visual@{Visual}!fitFrame@{fitFrame}}
+\index{fitFrame@{fitFrame}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{fitFrame()}{fitFrame()}}
+{\footnotesize\ttfamily void Visual\+::fit\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2arthmetic_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{visual_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}(m\_texture\ ==\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{if}(!resizeable)\ return\ ;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{const}\ Rectangle\ \&rec\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{Frame::getFrame}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ Image\ img\ =\ LoadImageFromTexture(*m\_texture);}
+\DoxyCodeLine{00019\ \ \ \ \ UnloadTexture(*m\_texture.get());}
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ ImageResize(\&img,\ rec.width,\ rec.height);}
+\DoxyCodeLine{00022\ \ \ \ \ *m\_texture.get()\ =\ LoadTextureFromImage(img);}
+\DoxyCodeLine{00023\ \ \ \ \ UnloadImage(img);}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}\label{class_frame_a5d52a474fbee6c61b5c1209d1a70e393} 
+\index{Visual@{Visual}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} \& Frame\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ resu;\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ resu\ =\ \{frame.x\ +\ frame.width\ /\ 2,\ frame.y\ +\ frame.height\ /\ 2\};}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ resu\ =\ \{relative[0]\ +\ relative[2]\ /\ 2,\ relative[1]\ +\ relative[3]\ /\ 2\};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{return}\ resu;}
+\DoxyCodeLine{00141\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_aada1e4093763936121df21b7dae80b5c}\label{class_frame_aada1e4093763936121df21b7dae80b5c} 
+\index{Visual@{Visual}!getFrame@{getFrame}}
+\index{getFrame@{getFrame}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{getFrame()}{getFrame()}}
+{\footnotesize\ttfamily const Rectangle \& Frame\+::get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{return}\ frame;}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a33049f15ecb70bad2654e93f8d3009c5}\label{class_frame_a33049f15ecb70bad2654e93f8d3009c5} 
+\index{Visual@{Visual}!getH@{getH}}
+\index{getH@{getH}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{getH()}{getH()}}
+{\footnotesize\ttfamily const float \& Frame\+::getH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00161}{161}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00162\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.height;}
+\DoxyCodeLine{00165\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a9b5a189c65cc1b011baeed32236e2c7f}\label{class_frame_a9b5a189c65cc1b011baeed32236e2c7f} 
+\index{Visual@{Visual}!getParent@{getParent}}
+\index{getParent@{getParent}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{getParent()}{getParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*} Frame\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{return}\ parent;}
+\DoxyCodeLine{00121\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}\label{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2} 
+\index{Visual@{Visual}!getRelative@{getRelative}}
+\index{getRelative@{getRelative}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{getRelative()}{getRelative()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} \& Frame\+::get\+Relative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ relative;}
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a37aeab17b4d450237496d32a2eb6b191}\label{class_frame_a37aeab17b4d450237496d32a2eb6b191} 
+\index{Visual@{Visual}!getW@{getW}}
+\index{getW@{getW}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{getW()}{getW()}}
+{\footnotesize\ttfamily const float \& Frame\+::getW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00155}{155}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.width;}
+\DoxyCodeLine{00159\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_ab0eefa85bb68bd39b6c502f552083b42}\label{class_frame_ab0eefa85bb68bd39b6c502f552083b42} 
+\index{Visual@{Visual}!getX@{getX}}
+\index{getX@{getX}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily const float \& Frame\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.x;}
+\DoxyCodeLine{00147\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a3808523d40227445dbd975fc0600b462}\label{class_frame_a3808523d40227445dbd975fc0600b462} 
+\index{Visual@{Visual}!getY@{getY}}
+\index{getY@{getY}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily const float \& Frame\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00149}{149}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00150\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.y;}
+\DoxyCodeLine{00153\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a867539f845278c60c84fd87d1b079de6}\label{class_frame_a867539f845278c60c84fd87d1b079de6} 
+\index{Visual@{Visual}!isroot@{isroot}}
+\index{isroot@{isroot}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{isroot()}{isroot()}}
+{\footnotesize\ttfamily bool Frame\+::isroot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+return true if this frame is root 
+
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00107}{107}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{return}\ parent\ ==\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00111\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a72456ad52812da3e4f805c20463238e3}\label{class_frame_a72456ad52812da3e4f805c20463238e3} 
+\index{Visual@{Visual}!moveBy@{moveBy}}
+\index{moveBy@{moveBy}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{moveBy()}{moveBy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+By (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
+\DoxyCodeLine{00068\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00069\ \ \ \ \ relative[0]\ +=\ rel[0];}
+\DoxyCodeLine{00070\ \ \ \ \ relative[1]\ +=\ rel[1];}
+\DoxyCodeLine{00071\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_abb0f7042ce5917e8e52cd0fe44934178}\label{class_frame_abb0f7042ce5917e8e52cd0fe44934178} 
+\index{Visual@{Visual}!moveBy@{moveBy}}
+\index{moveBy@{moveBy}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{moveBy()}{moveBy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+By (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00078\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00079\ \ \ \ \ frame.x\ +=\ x;}
+\DoxyCodeLine{00080\ \ \ \ \ frame.y\ +=\ y;}
+\DoxyCodeLine{00081\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00083\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a0cc1c4c2c00c20cea37a9b9b36b8b8c7}\label{class_frame_a0cc1c4c2c00c20cea37a9b9b36b8b8c7} 
+\index{Visual@{Visual}!moveCenterTo@{moveCenterTo}}
+\index{moveCenterTo@{moveCenterTo}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{moveCenterTo()}{moveCenterTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+Center\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
+\DoxyCodeLine{00046\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ center\ =\ \mbox{\hyperlink{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}{getCenter}}();}
+\DoxyCodeLine{00048\ \ \ \ \ relative[0]\ +=\ rel[0]\ -\/\ center[0];}
+\DoxyCodeLine{00049\ \ \ \ \ relative[1]\ +=\ rel[1]\ -\/\ center[1];}
+\DoxyCodeLine{00050\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_abf3649cc78d87aaf4877723d3e342407}\label{class_frame_abf3649cc78d87aaf4877723d3e342407} 
+\index{Visual@{Visual}!moveCenterTo@{moveCenterTo}}
+\index{moveCenterTo@{moveCenterTo}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{moveCenterTo()}{moveCenterTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+Center\+To (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00057\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ center\ =\ \mbox{\hyperlink{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}{getCenter}}();}
+\DoxyCodeLine{00059\ \ \ \ \ frame.x\ +=\ x\ -\/\ center[0];}
+\DoxyCodeLine{00060\ \ \ \ \ frame.y\ +=\ y\ -\/\ center[1];}
+\DoxyCodeLine{00061\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00063\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a97a44fc353ebd9feb9002fcfb2f7ecb6}\label{class_frame_a97a44fc353ebd9feb9002fcfb2f7ecb6} 
+\index{Visual@{Visual}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{moveTo()}{moveTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
+\DoxyCodeLine{00027\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00028\ \ \ \ \ relative[0]\ =\ rel[0];}
+\DoxyCodeLine{00029\ \ \ \ \ relative[1]\ =\ rel[1];}
+\DoxyCodeLine{00030\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a6b8233fda47b75fe55402700efdcca97}\label{class_frame_a6b8233fda47b75fe55402700efdcca97} 
+\index{Visual@{Visual}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{moveTo()}{moveTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+To (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00036\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00037\ \ \ \ \ frame.x\ =\ x;}
+\DoxyCodeLine{00038\ \ \ \ \ frame.y\ =\ y;}
+\DoxyCodeLine{00039\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00041\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_acb38199a86119e31c739bb46fd382ada}\label{class_frame_acb38199a86119e31c739bb46fd382ada} 
+\index{Visual@{Visual}!operator fRect@{operator fRect}}
+\index{operator fRect@{operator fRect}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{operator fRect()}{operator fRect()}}
+{\footnotesize\ttfamily Frame\+::operator \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00173}{173}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00174\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{return}\ relative;}
+\DoxyCodeLine{00177\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a0dbda20497048b082c047daf5f09938c}\label{class_frame_a0dbda20497048b082c047daf5f09938c} 
+\index{Visual@{Visual}!operator iRect@{operator iRect}}
+\index{operator iRect@{operator iRect}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{operator iRect()}{operator iRect()}}
+{\footnotesize\ttfamily Frame\+::operator \mbox{\hyperlink{datatype_8hpp_a80e1cb25342f1db1cc7bd45782c22935}{i\+Rect}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00179}{179}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00180\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{return}\ \{(int)\ frame.x,\ (\textcolor{keywordtype}{int})\ frame.y,\ (int)\ frame.width,\ (\textcolor{keywordtype}{int})\ frame.height\};}
+\DoxyCodeLine{00183\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_af9fbceb830138f25ed0cc8dcd62c467f}\label{class_frame_af9fbceb830138f25ed0cc8dcd62c467f} 
+\index{Visual@{Visual}!operator Rectangle@{operator Rectangle}}
+\index{operator Rectangle@{operator Rectangle}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{operator Rectangle()}{operator Rectangle()}}
+{\footnotesize\ttfamily Frame\+::operator Rectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00167}{167}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{return}\ frame;}
+\DoxyCodeLine{00171\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a4b3c3543e057eb375edc5fb9f7db512d}\label{class_frame_a4b3c3543e057eb375edc5fb9f7db512d} 
+\index{Visual@{Visual}!plug@{plug}}
+\index{plug@{plug}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{plug()}{plug()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frame\+::plug (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{par }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+attach a frame to a parent by old relative position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em par} & parent frame \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}(par\ ==\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::plug(Frame*\ par):\ par\ is\ nullptr"{}});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00042\ \ \ \ \ parent\ =\ par;}
+\DoxyCodeLine{00043\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{addSubframe}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a62c876a0e6d3b7c89288b81893434369}\label{class_frame_a62c876a0e6d3b7c89288b81893434369} 
+\index{Visual@{Visual}!plug@{plug}}
+\index{plug@{plug}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{plug()}{plug()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::plug (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{par,  }\item[{\mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+attach a frame to a parent by relative position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em par} & parent frame \\
+\hline
+{\em rel} & relative position and size in percentage (0.\+0f to 1.\+0f) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}(par\ ==\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::plug(Frame*\ par,\ fRect\ rel):\ par\ is\ nullptr"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00020\ \ \ \ \ parent\ =\ par;}
+\DoxyCodeLine{00021\ \ \ \ \ relative\ =\ rel;}
+\DoxyCodeLine{00022\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{addSubframe}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a6676f9cfd2639c9069341ee5844167af}\label{class_frame_a6676f9cfd2639c9069341ee5844167af} 
+\index{Visual@{Visual}!removeSubframe@{removeSubframe}}
+\index{removeSubframe@{removeSubframe}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{removeSubframe()}{removeSubframe()}}
+{\footnotesize\ttfamily void Frame\+::remove\+Subframe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{subframe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Remove a subframe from this frame. 
+
+When destroy a subframe that have parent frame, this function is called, so you shouldn\textquotesingle{}t call it
+
+
+\begin{DoxyParams}{Parameters}
+{\em subframe} & subframe to remove \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ subframes.size()\ -\/\ 1;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{while}(i\ >=\ 0\ \&\&\ subframes.size())}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!subframes.empty()\ \&\&\ subframes.back()\ ==\ subframe)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ subframes.pop\_back();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ i\ =\ std::min(i,\ (\textcolor{keywordtype}{int})\ subframes.size()\ -\/\ 1);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!subframes.empty()\ \&\&\ subframes[i]\ ==\ subframe)}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ subframes[i]\ =\ subframes.back();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ subframes.pop\_back();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00101\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_visual_a919a0e27c37bb61635a9d0a0630a05ff}\label{class_visual_a919a0e27c37bb61635a9d0a0630a05ff} 
+\index{Visual@{Visual}!resize@{resize}}
+\index{resize@{resize}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Visual\+::resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{rel }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2arthmetic_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{visual_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_frame_ac2d0460d67ec259633ba9d6a601ec954}{Frame::resize}}(rel);}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_visual_a63668294defc8e0bbdb584016e1c08c6}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00030\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_ae515658ddcab39a3fc9e038eb86dfe61}\label{class_frame_ae515658ddcab39a3fc9e038eb86dfe61} 
+\index{Visual@{Visual}!resize@{resize}}
+\index{resize@{resize}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::resize (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00098\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00099\ \ \ \ \ frame.width\ =\ w;}
+\DoxyCodeLine{00100\ \ \ \ \ frame.height\ =\ h;}
+\DoxyCodeLine{00101\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_ab54f6e87faf0216b708c40cb1bc1a4a2}\label{class_frame_ab54f6e87faf0216b708c40cb1bc1a4a2} 
+\index{Visual@{Visual}!setRelative@{setRelative}}
+\index{setRelative@{setRelative}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{setRelative()}{setRelative()}}
+{\footnotesize\ttfamily void Frame\+::set\+Relative (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00126\ \ \ \ \ relative\ =\ rel;}
+\DoxyCodeLine{00127\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a7fec746caea8b9cc27d28f829e3995a8}\label{class_frame_a7fec746caea8b9cc27d28f829e3995a8} 
+\index{Visual@{Visual}!unplug@{unplug}}
+\index{unplug@{unplug}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{unplug()}{unplug()}}
+{\footnotesize\ttfamily void Frame\+::unplug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+detach a frame from its parent 
+
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
+\DoxyCodeLine{00056\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00057\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_a6676f9cfd2639c9069341ee5844167af}{removeSubframe}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00058\ \ \ \ \ parent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00059\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_visual_a63668294defc8e0bbdb584016e1c08c6}\label{class_visual_a63668294defc8e0bbdb584016e1c08c6} 
+\index{Visual@{Visual}!updateFrame@{updateFrame}}
+\index{updateFrame@{updateFrame}!Visual@{Visual}}
+\doxysubsubsection{\texorpdfstring{updateFrame()}{updateFrame()}}
+{\footnotesize\ttfamily void Visual\+::update\+Frame (\begin{DoxyParamCaption}\item[{bool}]{recursive = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{Frame}}.
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2arthmetic_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{visual_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}(m\_texture\ ==\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ prx\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}().width;\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ pry\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}().height;}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{Frame::updateFrame}}(recursive);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ rx\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}().width\ -\/\ prx;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ ry\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}().height\ -\/\ pry;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}(rx\ <\ 1e-\/3\ \&\&\ ry\ <\ 1e-\/3)\ return\ ;}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_visual_aaf9da56a094e8aec908dbba6b20b02e0}{fitFrame}}();}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/visual/include/\mbox{\hyperlink{visual_8hpp}{visual.\+hpp}}\item 
+src/visual/src/\mbox{\hyperlink{visual_2src_2arthmetic_8cpp}{arthmetic.\+cpp}}\item 
+src/visual/src/\mbox{\hyperlink{visual_2src_2constructor_8cpp}{constructor.\+cpp}}\item 
+src/visual/src/\mbox{\hyperlink{visual_2src_2destructor_8cpp}{destructor.\+cpp}}\end{DoxyCompactItemize}

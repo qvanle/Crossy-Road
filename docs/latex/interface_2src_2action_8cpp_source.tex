@@ -1,0 +1,78 @@
+\doxysection{action.\+cpp}
+\hypertarget{interface_2src_2action_8cpp_source}{}\label{interface_2src_2action_8cpp_source}\index{src/interface/src/action.cpp@{src/interface/src/action.cpp}}
+\mbox{\hyperlink{interface_2src_2action_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{action_8hpp}{action.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{interface_8hpp}{interface.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00004}\mbox{\hyperlink{class_interface_a8459923385998b7f172650eb3045f7e1}{00004}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{class_interface_a8459923385998b7f172650eb3045f7e1}{Interface::getRuntimeEvent}}()}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00006}00006\ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00007}00007\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ \mbox{\hyperlink{class_container_a4dcc4e2e23156625290921982927848a}{Container::getRuntimeEvent}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00013}00013\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00014}00014\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ nested)}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ action\ =\ i-\/>getRuntimeEvent();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ containers)\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ action\ =\ i-\/>getRuntimeEvent();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00038}\mbox{\hyperlink{class_interface_a71e6f65404421002b2e91a0114b7d1fb}{00038}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{class_interface_a71e6f65404421002b2e91a0114b7d1fb}{Interface::react}}()}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00039}00039\ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{isVisible}}())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00042}00042\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ \mbox{\hyperlink{class_container_aa99fd45b65f5f4c29fd0291602711b72}{Container::react}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00044}00044\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ keystrokes)}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00052}00052\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ i-\/>react();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ containers)\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ i-\/>react();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{\Hypertarget{interface_2src_2action_8cpp_source_l00072}00072\ \}}
+
+\end{DoxyCode}

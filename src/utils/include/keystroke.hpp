@@ -5,6 +5,12 @@
 #include <vector>
 #include <string>
 
+/**
+ * @class KeyStroke
+ *
+ * @brief manages the link between a key and the actions it performs
+ *
+**/
 int toKey(std::string);
 
 class KeyStroke 

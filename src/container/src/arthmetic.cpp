@@ -33,12 +33,12 @@ int Container::getInstanceId()
     return instance_id;
 }
 
-PacketAction* Container::react()
+Action* Container::react()
 {
     return nullptr;
 }
 
-PacketAction* Container::getRuntimeEvent()
+Action* Container::getRuntimeEvent()
 {
     return nullptr;
 }

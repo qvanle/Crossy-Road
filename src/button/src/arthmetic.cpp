@@ -1,4 +1,5 @@
 #include <button.hpp>
+#include <request.hpp>
 
 
 // Button for image
@@ -9,7 +10,7 @@ void ButtonImage::draw() {
 }
 
 PacketAction* ButtonImage::react() {
-   
+    if(!isVisible()) return nullptr;
     if (CheckCollisionPointRec(GetMousePosition(), rectangle)) {
         this->isHover = 1;
         if (IsMouseButtonDown(MOUSE_LEFT_BUTTON)) { // click -> pressing
@@ -27,6 +28,7 @@ PacketAction* ButtonImage::react() {
                 return nullptr;
             PacketAction* packet = new PacketAction();
             packet->addAction(actions[clickedID]->clone());
+            packet->addAction(new changeInfRequest("test"));
             return packet;
         }
         if(this->hoverID == -1)

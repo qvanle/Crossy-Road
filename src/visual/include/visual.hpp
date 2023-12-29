@@ -7,6 +7,12 @@
 
 #include <frame.hpp>
 
+/**
+ * @class Visual
+ *
+ * @brief images displayed on screen
+ * 
+**/
 class Visual : public Frame
 {
 private:

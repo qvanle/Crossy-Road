@@ -29,7 +29,7 @@ public:
     virtual std::string linkContent(std::string) override;
     virtual std::string linkContentAbsolute(std::string) override;
     
-    virtual PacketAction* react() override;
+    virtual Action* react() override;
     void draw() override;
 };
 

@@ -9,6 +9,14 @@
 #include <keystroke.hpp>
 #include <button.hpp>
 
+/**
+ * @class Interface
+ *
+ * @brief where user can interact with the game
+ * 
+ * manages containers, all actions, subframes etc.
+ * 
+**/
 class Interface : public Container
 {
 private: 
@@ -33,22 +41,32 @@ public:
     ~Interface();
 
     Container* getContainers(int);
+    int getContainersSize();
 
     std::string linkContent(std::string path) override;
     std::string linkContentAbsolute(std::string path) override;
 
-    PacketAction* react() override;
-    PacketAction* getRuntimeEvent() override;
+    Action* react() override;
+    Action* getRuntimeEvent() override;
     void draw() override;
 };
 
+/**
+ * @class moveObjectAction
+ *
+ * @brief manages the features of a movement, including which object, speed, direction etc.
+ * 
+**/
 class moveObjectAction : public Action
 {
 private: 
     Container* obj; 
     fPoint delta;
+    fPoint dir;
+    float speed;
 public: 
     moveObjectAction(Container* obj, fPoint delta);
+    moveObjectAction(Container* obj, fPoint dir, float speed);
     ~moveObjectAction();
 
     void execute() override;

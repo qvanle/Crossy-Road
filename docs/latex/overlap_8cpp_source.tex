@@ -1,0 +1,50 @@
+\doxysection{overlap.\+cpp}
+\hypertarget{overlap_8cpp_source}{}\label{overlap_8cpp_source}\index{src/container/src/overlap.cpp@{src/container/src/overlap.cpp}}
+\mbox{\hyperlink{overlap_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{container_8hpp}{container.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00003}\mbox{\hyperlink{class_container_a5e86a0c4bc0a072cbe7cc0725707053b}{00003}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_container_a5e86a0c4bc0a072cbe7cc0725707053b}{Container::isOverlapping}}(\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ point)}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00005}00005\ \ \ \ \ Rectangle\ rec\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordflow}{return}\ (point[0]\ >=\ rec.x\ \&\&\ point[0]\ <=\ rec.x\ +\ rec.width\ \&\&\ point[1]\ >=\ rec.y\ \&\&\ point[1]\ <=\ rec.y\ +\ rec.height);}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00010}\mbox{\hyperlink{class_container_a14a49b088ae5780fbf4ac0f826bb2785}{00010}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_container_a5e86a0c4bc0a072cbe7cc0725707053b}{Container::isOverlapping}}(Rectangle\ rec)}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00012}00012\ \ \ \ \ Rectangle\ rec2\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{return}\ (rec.x\ <=\ rec2.x\ +\ rec2.width\ \&\&\ rec.x\ +\ rec.width\ >=\ rec2.x\ \&\&\ rec.y\ <=\ rec2.y\ +\ rec2.height\ \&\&\ rec.y\ +\ rec.height\ >=\ rec2.y);}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00016}\mbox{\hyperlink{class_container_af4f3195c0da8b663b272d326e2e5d48d}{00016}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_container_a5e86a0c4bc0a072cbe7cc0725707053b}{Container::isOverlapping}}(\mbox{\hyperlink{class_container}{Container}}*\ container)}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00018}00018\ \ \ \ \ Rectangle\ rec\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00019}00019\ \ \ \ \ Rectangle\ rec2\ =\ container-\/>\mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{return}\ (rec.x\ <=\ rec2.x\ +\ rec2.width\ \&\&\ rec.x\ +\ rec.width\ >=\ rec2.x\ \&\&\ rec.y\ <=\ rec2.y\ +\ rec2.height\ \&\&\ rec.y\ +\ rec.height\ >=\ rec2.y);}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00023}\mbox{\hyperlink{class_container_afe701a67848a2f7b9a1fe03742de4854}{00023}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_container_afe701a67848a2f7b9a1fe03742de4854}{Container::OverlappingArea}}(Rectangle\ rec)}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00025}00025\ \ \ \ \ Rectangle\ rec2\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ std::max(rec.x,\ rec2.x);}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ std::max(rec.y,\ rec2.y);}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{float}\ w\ =\ std::min(rec.x\ +\ rec.width,\ rec2.x\ +\ rec2.width)\ -\/\ x;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{float}\ h\ =\ std::min(rec.y\ +\ rec.height,\ rec2.y\ +\ rec2.height)\ -\/\ y;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{if}(w\ <\ 0\ ||\ h\ <\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ w\ *\ h;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00034}\mbox{\hyperlink{class_container_a1759ea4c463c53472edac2148a4a29aa}{00034}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_container_afe701a67848a2f7b9a1fe03742de4854}{Container::OverlappingArea}}(\mbox{\hyperlink{class_container}{Container}}*\ container)}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00036}00036\ \ \ \ \ Rectangle\ rec\ =\ container-\/>\mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00037}00037\ \ \ \ \ Rectangle\ rec2\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ std::max(rec.x,\ rec2.x);}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ std::max(rec.y,\ rec2.y);}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{float}\ w\ =\ std::min(rec.x\ +\ rec.width,\ rec2.x\ +\ rec2.width)\ -\/\ x;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{float}\ h\ =\ std::min(rec.y\ +\ rec.height,\ rec2.y\ +\ rec2.height)\ -\/\ y;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{if}(w\ <\ 0\ ||\ h\ <\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{return}\ w\ *\ h;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00044}00044\ \}}
+
+\end{DoxyCode}

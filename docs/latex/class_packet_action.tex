@@ -1,0 +1,304 @@
+\doxysection{Packet\+Action Class Reference}
+\hypertarget{class_packet_action}{}\label{class_packet_action}\index{PacketAction@{PacketAction}}
+
+
+organize selected actions into a package  
+
+
+
+
+{\ttfamily \#include $<$action.\+hpp$>$}
+
+Inheritance diagram for Packet\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_packet_action}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_packet_action_a5c0f78024bc39aac9aac97f8be05bd80}{Packet\+Action}} ()
+\item 
+\mbox{\hyperlink{class_packet_action_aed905a6cd23d3d3ec15d189cee19d710}{Packet\+Action}} (\mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{class_packet_action_a174557222c02976b9282a6d59b7df968}{\texorpdfstring{$\sim$}{\string~}\+Packet\+Action}} ()
+\item 
+bool \mbox{\hyperlink{class_packet_action_aabd2a32c3b4b3946098a406315bc4b8b}{is\+Package}} () override
+\item 
+void \mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{add\+Action}} (\mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*})
+\item 
+void \mbox{\hyperlink{class_packet_action_addef62c60fc12feb54d7869e332eebff}{add\+Action}} (\mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*})
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_packet_action_ae28f68158029f77be1262900afdc0121}{unpack}} () override
+\item 
+void \mbox{\hyperlink{class_packet_action_a4408e65a3fd32f65b5c5ce0b6fd25b87}{execute}} () override
+\item 
+\mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_packet_action_afad82eb9d4666aa8bdcd0461a6589888}{clone}} () override
+\item 
+virtual int \mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{is\+Request}} ()
+\item 
+virtual \mbox{\hyperlink{struct_a_r_g_s}{ARGS}} \& \mbox{\hyperlink{class_action_aa8860c08894cce78bf203e26acc56e16}{get\+Args}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+organize selected actions into a package 
+
+Definition at line \mbox{\hyperlink{action_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{action_8hpp_source}{action.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_packet_action_a5c0f78024bc39aac9aac97f8be05bd80}\label{class_packet_action_a5c0f78024bc39aac9aac97f8be05bd80} 
+\index{PacketAction@{PacketAction}!PacketAction@{PacketAction}}
+\index{PacketAction@{PacketAction}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{PacketAction()}{PacketAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Packet\+Action\+::\+Packet\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_action_a4f457ccfc8336b565cadca56b36e0271}{Action}}() }
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_packet_action_aed905a6cd23d3d3ec15d189cee19d710}\label{class_packet_action_aed905a6cd23d3d3ec15d189cee19d710} 
+\index{PacketAction@{PacketAction}!PacketAction@{PacketAction}}
+\index{PacketAction@{PacketAction}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{PacketAction()}{PacketAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Packet\+Action\+::\+Packet\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*}}]{action }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_action_a4f457ccfc8336b565cadca56b36e0271}{Action}}(action) }
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ action-\/>actions)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ actions.push\_back(a-\/>\mbox{\hyperlink{class_packet_action_afad82eb9d4666aa8bdcd0461a6589888}{clone}}());}
+\DoxyCodeLine{00053\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_packet_action_a174557222c02976b9282a6d59b7df968}\label{class_packet_action_a174557222c02976b9282a6d59b7df968} 
+\index{PacketAction@{PacketAction}!````~PacketAction@{\texorpdfstring{$\sim$}{\string~}PacketAction}}
+\index{````~PacketAction@{\texorpdfstring{$\sim$}{\string~}PacketAction}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PacketAction()}{\string~PacketAction()}}
+{\footnotesize\ttfamily Packet\+Action\+::\texorpdfstring{$\sim$}{\string~}\+Packet\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ actions)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ delete\ a;}
+\DoxyCodeLine{00059\ \ \ \ \ actions.clear();}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}\label{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d} 
+\index{PacketAction@{PacketAction}!addAction@{addAction}}
+\index{addAction@{addAction}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{addAction()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Packet\+Action\+::add\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*}}]{action }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ actions.push\_back(action);}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_packet_action_addef62c60fc12feb54d7869e332eebff}\label{class_packet_action_addef62c60fc12feb54d7869e332eebff} 
+\index{PacketAction@{PacketAction}!addAction@{addAction}}
+\index{addAction@{addAction}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{addAction()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Packet\+Action\+::add\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*}}]{action }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ action-\/>actions)}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ actions.push\_back(i);}
+\DoxyCodeLine{00076\ \ \ \ \ action-\/>actions.clear();}
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_packet_action_afad82eb9d4666aa8bdcd0461a6589888}\label{class_packet_action_afad82eb9d4666aa8bdcd0461a6589888} 
+\index{PacketAction@{PacketAction}!clone@{clone}}
+\index{clone@{clone}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*} Packet\+Action\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_action_abfec8e53b222f91614f1d9e1ac9d750a}{Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action_a5c0f78024bc39aac9aac97f8be05bd80}{PacketAction}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00119\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_packet_action_a4408e65a3fd32f65b5c5ce0b6fd25b87}\label{class_packet_action_a4408e65a3fd32f65b5c5ce0b6fd25b87} 
+\index{PacketAction@{PacketAction}!execute@{execute}}
+\index{execute@{execute}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void Packet\+Action\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00107}{107}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ actions)}
+\DoxyCodeLine{00110\ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ a-\/>execute();}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_aa8860c08894cce78bf203e26acc56e16}\label{class_action_aa8860c08894cce78bf203e26acc56e16} 
+\index{PacketAction@{PacketAction}!getArgs@{getArgs}}
+\index{getArgs@{getArgs}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{getArgs()}{getArgs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_a_r_g_s}{ARGS}} \& Action\+::get\+Args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classchange_inf_request_adbd51fe6146c100c463db8499324031f}{change\+Inf\+Request}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{action_8hpp_aec8684d39aaf84b00ed6865d4b281cd4}{NONE\_ARGS}};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_packet_action_aabd2a32c3b4b3946098a406315bc4b8b}\label{class_packet_action_aabd2a32c3b4b3946098a406315bc4b8b} 
+\index{PacketAction@{PacketAction}!isPackage@{isPackage}}
+\index{isPackage@{isPackage}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{isPackage()}{isPackage()}}
+{\footnotesize\ttfamily bool Packet\+Action\+::is\+Package (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_action_aa52ec29adf562280bdd3942d30f94d10}{Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}\label{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d} 
+\index{PacketAction@{PacketAction}!isRequest@{isRequest}}
+\index{isRequest@{isRequest}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{isRequest()}{isRequest()}}
+{\footnotesize\ttfamily int Action\+::is\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_request_aa1c81e7dd0a737e8eece7f46199af34c}{Request}}, \mbox{\hyperlink{classchange_inf_request_acf1df90c90e0ffec7512ecbda9109a4c}{change\+Inf\+Request}}, and \mbox{\hyperlink{classlose_request_a62f30b392783e1623352f0ae71838579}{lose\+Request}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_packet_action_ae28f68158029f77be1262900afdc0121}\label{class_packet_action_ae28f68158029f77be1262900afdc0121} 
+\index{PacketAction@{PacketAction}!unpack@{unpack}}
+\index{unpack@{unpack}!PacketAction@{PacketAction}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} $>$ Packet\+Action\+::unpack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_action_ad79568053a276c15c84e3ec09637bc67}{Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ std::vector<Action*>\ unpacked;}
+\DoxyCodeLine{00082\ \ \ \ \ std::queue<PacketAction*>\ q;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ q.push(\textcolor{keyword}{this});}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{while}(!q.empty())\ }
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ p\ =\ q.front();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ q.pop();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ p-\/>actions)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(a-\/>isPackage())}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q.push((\mbox{\hyperlink{class_packet_action}{PacketAction}}*)a);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ unpacked.push\_back(a);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ p-\/>actions.clear();}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{return}\ unpacked;}
+\DoxyCodeLine{00105\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/action/include/\mbox{\hyperlink{action_8hpp}{action.\+hpp}}\item 
+src/action/src/\mbox{\hyperlink{action_2src_2action_8cpp}{action.\+cpp}}\end{DoxyCompactItemize}

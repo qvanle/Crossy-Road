@@ -1,0 +1,17 @@
+\doxysection{destructor.\+cpp}
+\hypertarget{container_2src_2destructor_8cpp_source}{}\label{container_2src_2destructor_8cpp_source}\index{src/container/src/destructor.cpp@{src/container/src/destructor.cpp}}
+\mbox{\hyperlink{container_2src_2destructor_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{container_8hpp}{container.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00003}\mbox{\hyperlink{class_container_ae9f5d07bfc3defda274aa06091c19f56}{00003}}\ \mbox{\hyperlink{class_container_ae9f5d07bfc3defda274aa06091c19f56}{Container::\string~Container}}()}
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}}\ \&\ sprite\ :\ sprites)}
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00006}00006\ \ \ \ \ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00007}00007\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ frame\ :\ sprite)}
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ frame;}
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ sprite.clear();}
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00010}00010\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2destructor_8cpp_source_l00011}00011\ \}}
+
+\end{DoxyCode}

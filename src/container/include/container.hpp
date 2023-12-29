@@ -10,12 +10,17 @@
 #include <const/path/atb.hpp>
 #include <file.hpp>
 
-
+/**
+ * @class Container
+ *
+ * @brief holds specific entities and their behavior
+ *
+**/
 class Container : public Frame
 {
 private:
     friend class changeImageAction;
-    static int id_count;
+    static int id_count; 
     int instance_id;
     int probability;
 
@@ -42,12 +47,39 @@ public:
     void setProbability(int);
     int getProbability();
     
+    /**
+     * @brief choose a specific sprite from a vector of sprites
+     */
     void chooseSprite(int);
+
+    /**
+     * @brief choose the state of the sprite
+     */
     void chooseImage(int);
+
+    /**
+     * @brief choose the state of the sprite
+     */
     void chooseImage(int, int);
+
+    /**
+     * @brief move to next state of the sprite
+     */
     void nextImage();
+
+    /**
+     * @brief move to previous state of the sprite
+     */
     void prevImage();
+
+    /**
+     * @brief move to the next sprite
+     */
     void nextSprite();
+
+    /**
+     * @brief move to the previous sprite
+     */
     void prevSprite();
 
     bool isOverlapping(fPoint);
@@ -63,9 +95,16 @@ public:
     bool isVisible();
     int getInstanceId();
 
-    virtual PacketAction* react();
-    virtual PacketAction* getRuntimeEvent();
+    virtual Action* react();
+    virtual Action* getRuntimeEvent();
 };
+
+/**
+ * @class changeImageAction
+ *
+ * @brief changes display image of container
+ * 
+**/
 class changeImageAction : public Action
 {
 private: 
