@@ -128,7 +128,7 @@ bool Chunk::isEntityCollide(Container* main)
     {
         if(i->isCollide(main)) 
         {
-            throw i;
+            //throw i;
             return true;
         }
     }
