@@ -38,3 +38,6 @@
 "focus": [1,0]
   # "clicked"
   #   "sprite": [[2, 0, 70]]
+"action":
+  "type": "change-interface"
+  "str": ["pause"] # change to str[0] interface, if pop-interface, we don't need str 
