@@ -56,9 +56,9 @@ void Chunk::generateEntity()
 {
 
     if(visiter.empty()) return;
-    float x = GetRandomValue(-40, 10);
+    float x = -0.3;
     
-    while(x < 0.9)
+    while(x < 1.3)
     {
         Container* c = randomEntity();
         Rectangle rel;

@@ -13,14 +13,20 @@
     "h": 10 
     "velocity": [0.005, 1, 0]
     "probabilty": 80
+  - 
+    "file": "test.yaml"
+    "w": 100 
+    "h": 10 
+    "velocity": [-0.005, 1, 0]
+    "probabilty": 80
 
 "object": 
   -
     "path": "testQ.yaml"
     "x": 46
     "y": 70
-    "w": 8 
-    "h": 10
+    "w": 7 
+    "h": 7
   -
     "path": "entity/cow.yaml"
     "x": 40
@@ -135,6 +141,9 @@
   - 
     "chunk": 1 
     "object": [2, 10] # each 1 second there is 10% to generate object 1
+  - 
+    "chunk": 2 
+    "object": [3, 10] # each 1 second there is 10% to generate object 1
 
 "control": 
   -
