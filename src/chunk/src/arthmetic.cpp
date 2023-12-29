@@ -12,7 +12,7 @@ void Chunk::drawEntity()
 
 void Chunk::draw() 
 {
-
+    if(!isVisible()) return;
     Container::draw();
     drawNested();
     drawContainers();

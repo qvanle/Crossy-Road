@@ -3,6 +3,7 @@
 
 Action* Interface::getRuntimeEvent()
 {
+    if(!isVisible()) return nullptr;
     PacketAction* packet = nullptr; 
     Action* action = Container::getRuntimeEvent();
 

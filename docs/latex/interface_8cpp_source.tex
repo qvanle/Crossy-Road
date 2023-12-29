@@ -1,0 +1,111 @@
+\doxysection{interface.\+cpp}
+\hypertarget{interface_8cpp_source}{}\label{interface_8cpp_source}\index{src/window/src/interface.cpp@{src/window/src/interface.cpp}}
+\mbox{\hyperlink{interface_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{window_8hpp}{window.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00003}00003\ \textcolor{keywordtype}{void}\ Window::InterfacePool::clearStack()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{while}(!inf.empty())}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00006}00006\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00007}00007\ \ \ \ \ \ \ \ \ inf.pop();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00008}00008\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00009}00009\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00011}00011\ Window::InterfacePool::InterfacePool()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00015}00015\ Window::InterfacePool::\string~InterfacePool()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00017}00017\ \ \ \ \ clear();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00019}00019\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00020}00020\ \textcolor{keywordtype}{void}\ Window::InterfacePool::load(\mbox{\hyperlink{class_interface}{Interface}}*\ i)}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00022}00022\ \ \ \ \ storage[i-\/>\mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{getName}}()]\ =\ i;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00025}00025\ \textcolor{keywordtype}{void}\ Window::InterfacePool::unload(\mbox{\hyperlink{class_interface}{Interface}}*\ i)}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{if}(storage.find(i-\/>\mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{getName}}())\ !=\ storage.end())}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00028}00028\ \ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ storage.erase(i-\/>\mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{getName}}());}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ i;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00034}00034\ \textcolor{keywordtype}{void}\ Window::InterfacePool::clear()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00035}00035\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ storage)}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ i.second;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00040}00040\ \ \ \ \ storage.clear();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00041}00041\ \ \ \ \ clearStack();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00044}00044\ \mbox{\hyperlink{class_interface}{Interface}}*\ Window::InterfacePool::getInterface(std::string\ name)}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00045}00045\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}(storage.find(name)\ !=\ storage.end())}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ storage[name];}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00053}00053\ \textcolor{keywordtype}{void}\ Window::InterfacePool::push(std::string\ name)}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00054}00054\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{if}(storage.find(name)\ !=\ storage.end())}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ inf.push(storage[name]);}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00061}00061\ std::string\ Window::InterfacePool::pop()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00062}00062\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{if}(!inf.empty())}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00064}00064\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ std::string\ name\ =\ inf.top()-\/>getName();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ inf.pop();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00072}00072\ \mbox{\hyperlink{class_interface}{Interface}}*\ Window::InterfacePool::top()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00073}00073\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00074}00074\ \ \ \ \ \textcolor{keywordflow}{if}(!inf.empty())}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00075}00075\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ inf.top();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00081}00081\ \textcolor{keywordtype}{void}\ Window::InterfacePool::draw()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00082}00082\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{if}(!inf.empty())}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ inf.top()-\/>draw();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00089}00089\ \mbox{\hyperlink{class_action}{Action}}*\ Window::InterfacePool::react()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00090}00090\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{if}(!inf.empty())}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ inf.top()-\/>react();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00098}00098\ \mbox{\hyperlink{class_action}{Action}}*\ Window::InterfacePool::getRuntimeEvent()}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00099}00099\ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00100}00100\ \ \ \ \ \textcolor{keywordflow}{if}(!inf.empty())}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00101}00101\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ inf.top()-\/>getRuntimeEvent();}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{interface_8cpp_source_l00105}00105\ \}}
+
+\end{DoxyCode}

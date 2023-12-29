@@ -6,6 +6,12 @@
 
 #include <yaml-cpp/yaml.h>
 
+/**
+ * @namespace YAML_FILE
+ *
+ * @brief opens and interacts with YAML files
+ * 
+**/
 namespace YAML_FILE 
 {
     bool isFile(std::string path);

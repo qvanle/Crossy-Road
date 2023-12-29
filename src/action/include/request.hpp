@@ -3,6 +3,14 @@
 
 #include <action.hpp>
 
+/**
+ * @class Request
+ *
+ * @brief sends information to a higher, relevant entity
+ * 
+ * upgrades information to higher level
+ * 
+**/
 class Request : public Action
 {
 protected: 
@@ -27,6 +35,12 @@ public:
     ARGS& getArgs() override;
 };
 
+/**
+ * @class loseRequest
+ *
+ * @brief request sent when the player loses
+ * 
+**/
 class loseRequest : public Request 
 {
 public: 

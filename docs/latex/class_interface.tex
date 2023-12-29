@@ -1,0 +1,1937 @@
+\doxysection{Interface Class Reference}
+\hypertarget{class_interface}{}\label{class_interface}\index{Interface@{Interface}}
+
+
+where user can interact with the game  
+
+
+
+
+{\ttfamily \#include $<$interface.\+hpp$>$}
+
+Inheritance diagram for Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_interface}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}} (\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}, Rectangle)
+\item 
+\mbox{\hyperlink{class_interface_a60df45ab6c4de7bc02d6cce9ea2ccbb0}{Interface}} (\mbox{\hyperlink{class_interface}{Interface}} \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{class_interface_af680ffecb686e55703009ab7d09c7af3}{Interface}} (\mbox{\hyperlink{class_interface}{Interface}} \texorpdfstring{$\ast$}{*}, Rectangle)
+\item 
+\mbox{\hyperlink{class_interface_a444a555adff56b620c394abadc30c2b9}{Interface}} (\mbox{\hyperlink{class_interface}{Interface}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}, Rectangle)
+\item 
+\mbox{\hyperlink{class_interface_a19179888f29f18f1be54a3dfe98f68c0}{\texorpdfstring{$\sim$}{\string~}\+Interface}} ()
+\item 
+\mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_interface_a332ce853492ebef1b6326beff13027bb}{get\+Containers}} (int)
+\item 
+int \mbox{\hyperlink{class_interface_a26bcaeacade393c1223612186d661ab2}{get\+Containers\+Size}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_interface_a519953da76597bba050cce61f5483fc6}{link\+Content}} (std\+::string path) override
+\item 
+std\+::string \mbox{\hyperlink{class_interface_ac7612dfabe159aebffc7e4553df315e9}{link\+Content\+Absolute}} (std\+::string path) override
+\item 
+\mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_interface_a71e6f65404421002b2e91a0114b7d1fb}{react}} () override
+\item 
+\mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_interface_a8459923385998b7f172650eb3045f7e1}{get\+Runtime\+Event}} () override
+\item 
+void \mbox{\hyperlink{class_interface_a6c4f34c5e36460289f95b486a961307f}{draw}} () override
+\item 
+std\+::string \mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{get\+Name}} ()
+\item 
+void \mbox{\hyperlink{class_container_a20103c0d27bd0706624e7c0161771ef6}{set\+Probability}} (int)
+\item 
+int \mbox{\hyperlink{class_container_ab48f0dd8fad66981b1047bb4351619b4}{get\+Probability}} ()
+\item 
+void \mbox{\hyperlink{class_container_a04fc266ae14009c6013f1952569f4a08}{choose\+Sprite}} (int)
+\begin{DoxyCompactList}\small\item\em choose a specific sprite from a vector of sprites \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{choose\+Image}} (int)
+\begin{DoxyCompactList}\small\item\em choose the state of the sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_a7e1ea1d520bee6d8c48125546c795450}{choose\+Image}} (int, int)
+\begin{DoxyCompactList}\small\item\em choose the state of the sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_aa70930c6166a257b6e946b14fbc125a5}{next\+Image}} ()
+\begin{DoxyCompactList}\small\item\em move to next state of the sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_ab929bd67689548988435cd86948cc808}{prev\+Image}} ()
+\begin{DoxyCompactList}\small\item\em move to previous state of the sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_ae74100328cf86d4d9f5ad5873fe29aab}{next\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em move to the next sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_a5c0a45f4dd53257b83a02e539db1f509}{prev\+Sprite}} ()
+\begin{DoxyCompactList}\small\item\em move to the previous sprite \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_container_a5e86a0c4bc0a072cbe7cc0725707053b}{is\+Overlapping}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}})
+\item 
+bool \mbox{\hyperlink{class_container_a14a49b088ae5780fbf4ac0f826bb2785}{is\+Overlapping}} (Rectangle)
+\item 
+bool \mbox{\hyperlink{class_container_af4f3195c0da8b663b272d326e2e5d48d}{is\+Overlapping}} (\mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*})
+\item 
+float \mbox{\hyperlink{class_container_afe701a67848a2f7b9a1fe03742de4854}{Overlapping\+Area}} (Rectangle)
+\item 
+float \mbox{\hyperlink{class_container_a1759ea4c463c53472edac2148a4a29aa}{Overlapping\+Area}} (\mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*})
+\item 
+void \mbox{\hyperlink{class_container_a48cdaa85884938b417513cca003f4f6c}{show}} ()
+\item 
+void \mbox{\hyperlink{class_container_a5f2b24b3eff15fb251043fcfd32bf537}{hide}} ()
+\item 
+void \mbox{\hyperlink{class_container_ab03c3b8ce43fb4212de772f9edef22cd}{toggle\+Visibility}} ()
+\item 
+bool \mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{is\+Visible}} ()
+\item 
+int \mbox{\hyperlink{class_container_a9f1d774a52e24e4be7d610f481f03d69}{get\+Instance\+Id}} ()
+\item 
+void \mbox{\hyperlink{class_frame_a62c876a0e6d3b7c89288b81893434369}{plug}} (\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}par, \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} rel)
+\begin{DoxyCompactList}\small\item\em attach a frame to a parent by relative position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_a4b3c3543e057eb375edc5fb9f7db512d}{plug}} (\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}par)
+\begin{DoxyCompactList}\small\item\em attach a frame to a parent by old relative position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_a7fec746caea8b9cc27d28f829e3995a8}{unplug}} ()
+\begin{DoxyCompactList}\small\item\em detach a frame from its parent \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_a97a44fc353ebd9feb9002fcfb2f7ecb6}{move\+To}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} rel)
+\item 
+void \mbox{\hyperlink{class_frame_a6b8233fda47b75fe55402700efdcca97}{move\+To}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_frame_a0cc1c4c2c00c20cea37a9b9b36b8b8c7}{move\+Center\+To}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} rel)
+\item 
+void \mbox{\hyperlink{class_frame_abf3649cc78d87aaf4877723d3e342407}{move\+Center\+To}} (int x, int y)
+\item 
+void \mbox{\hyperlink{class_frame_a72456ad52812da3e4f805c20463238e3}{move\+By}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} rel)
+\item 
+void \mbox{\hyperlink{class_frame_abb0f7042ce5917e8e52cd0fe44934178}{move\+By}} (int, int)
+\item 
+void \mbox{\hyperlink{class_frame_ac2d0460d67ec259633ba9d6a601ec954}{resize}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} rel)
+\item 
+void \mbox{\hyperlink{class_frame_ae515658ddcab39a3fc9e038eb86dfe61}{resize}} (int w, int h)
+\item 
+const Rectangle \& \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{get\+Frame}} () const
+\item 
+const \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} \& \mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{get\+Relative}} () const
+\item 
+\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_frame_a9b5a189c65cc1b011baeed32236e2c7f}{get\+Parent}} ()
+\item 
+void \mbox{\hyperlink{class_frame_ab54f6e87faf0216b708c40cb1bc1a4a2}{set\+Relative}} (\mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} rel)
+\item 
+const \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} \& \mbox{\hyperlink{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}{get\+Center}} () const
+\item 
+const float \& \mbox{\hyperlink{class_frame_ab0eefa85bb68bd39b6c502f552083b42}{getX}} () const
+\item 
+const float \& \mbox{\hyperlink{class_frame_a3808523d40227445dbd975fc0600b462}{getY}} () const
+\item 
+const float \& \mbox{\hyperlink{class_frame_a37aeab17b4d450237496d32a2eb6b191}{getW}} () const
+\item 
+const float \& \mbox{\hyperlink{class_frame_a33049f15ecb70bad2654e93f8d3009c5}{getH}} () const
+\item 
+\mbox{\hyperlink{class_frame_af9fbceb830138f25ed0cc8dcd62c467f}{operator Rectangle}} () const
+\item 
+\mbox{\hyperlink{class_frame_acb38199a86119e31c739bb46fd382ada}{operator f\+Rect}} () const
+\item 
+\mbox{\hyperlink{class_frame_a0dbda20497048b082c047daf5f09938c}{operator i\+Rect}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_interface_a8ba364e555facee31b4179534e53586f}{load\+Object}} (YAML\+::\+Node)
+\item 
+void \mbox{\hyperlink{class_interface_a51eadcf3056c6b68cf8b17762a6f68e6}{load\+Control}} (YAML\+::\+Node)
+\item 
+void \mbox{\hyperlink{class_interface_a93ff118be7317e3c02f40b3ff43e6c6e}{load\+Button}} (YAML\+::\+Node)
+\item 
+void \mbox{\hyperlink{class_interface_a77300df653a7ab735342494bc9285695}{draw\+Nested}} ()
+\item 
+void \mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{draw\+Containers}} ()
+\item 
+bool \mbox{\hyperlink{class_container_a3ebddddd7a940e4f5e3d287067103a3e}{load\+Name}} (YAML\+::\+Node node)
+\item 
+void \mbox{\hyperlink{class_container_a11f0c20cb4f80f5d2a63f73f981a9d15}{load\+Sprites}} (YAML\+::\+Node node)
+\item 
+void \mbox{\hyperlink{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}{load\+Focus}} (YAML\+::\+Node node)
+\item 
+virtual void \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{update\+Frame}} (bool recursive=false)
+\item 
+bool \mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}} () const
+\begin{DoxyCompactList}\small\item\em return true if this frame is root \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{add\+Subframe}} (\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}subframe)
+\begin{DoxyCompactList}\small\item\em Add a subframe to this frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_a6676f9cfd2639c9069341ee5844167af}{remove\+Subframe}} (\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}subframe)
+\begin{DoxyCompactList}\small\item\em Remove a subframe from this frame. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frame_add61373f7fc708652df88a8af032f996}{begin\+Update}} ()
+\item 
+void \mbox{\hyperlink{class_frame_a701cffd131a90249033fc40f505f02d6}{end\+Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_interface_ac6a2e86796e3f0ddf843423d09b23ed8}{move\+Object\+Action}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+where user can interact with the game 
+
+manages containers, all actions, subframes etc. 
+
+Definition at line \mbox{\hyperlink{interface_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{interface_8hpp_source}{interface.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}\label{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed} 
+\index{Interface@{Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{Interface()}{Interface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Interface\+::\+Interface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{frame,  }\item[{Rectangle}]{rect }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(frame,\ rect) }
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a60df45ab6c4de7bc02d6cce9ea2ccbb0}\label{class_interface_a60df45ab6c4de7bc02d6cce9ea2ccbb0} 
+\index{Interface@{Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{Interface()}{Interface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Interface\+::\+Interface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface}{Interface}} \texorpdfstring{$\ast$}{*}}]{other }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(other) }
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>nested)}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ rel.x\ =\ i-\/>getRelative()[0];}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ rel.y\ =\ i-\/>getRelative()[1];}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ rel.width\ =\ i-\/>getRelative()[2];}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ rel.height\ =\ i-\/>getRelative()[3];}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ nested.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(i,\ \textcolor{keyword}{this},\ rel));}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>containers)}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ rel.x\ =\ i-\/>getRelative()[0];}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ rel.y\ =\ i-\/>getRelative()[1];}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ rel.width\ =\ i-\/>getRelative()[2];}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ rel.height\ =\ i-\/>getRelative()[3];}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ containers.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(i,\ \textcolor{keyword}{this},\ rel));}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_af680ffecb686e55703009ab7d09c7af3}\label{class_interface_af680ffecb686e55703009ab7d09c7af3} 
+\index{Interface@{Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{Interface()}{Interface()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Interface\+::\+Interface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface}{Interface}} \texorpdfstring{$\ast$}{*}}]{other,  }\item[{Rectangle}]{rect }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(other,\ rect) }
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>nested)}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ rel.x\ =\ i-\/>getRelative()[0];}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ rel.y\ =\ i-\/>getRelative()[1];}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ rel.width\ =\ i-\/>getRelative()[2];}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ rel.height\ =\ i-\/>getRelative()[3];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ nested.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(i,\ \textcolor{keyword}{this},\ rel));}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>containers)}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ rel.x\ =\ i-\/>getRelative()[0];}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ rel.y\ =\ i-\/>getRelative()[1];}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ rel.width\ =\ i-\/>getRelative()[2];}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ rel.height\ =\ i-\/>getRelative()[3];}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ containers.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(i,\ \textcolor{keyword}{this},\ rel));}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a444a555adff56b620c394abadc30c2b9}\label{class_interface_a444a555adff56b620c394abadc30c2b9} 
+\index{Interface@{Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{Interface()}{Interface()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Interface\+::\+Interface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interface}{Interface}} \texorpdfstring{$\ast$}{*}}]{other,  }\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{frame,  }\item[{Rectangle}]{rect }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(other,\ frame,\ rect) }
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>nested)}
+\DoxyCodeLine{00059\ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ rel.x\ =\ i-\/>getRelative()[0];}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ rel.y\ =\ i-\/>getRelative()[1];}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ rel.width\ =\ i-\/>getRelative()[2];}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ rel.height\ =\ i-\/>getRelative()[3];}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ nested.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(i,\ \textcolor{keyword}{this},\ rel));}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>containers)}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ rel.x\ =\ i-\/>getRelative()[0];}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ rel.y\ =\ i-\/>getRelative()[1];}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ rel.width\ =\ i-\/>getRelative()[2];}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ rel.height\ =\ i-\/>getRelative()[3];}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ containers.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_container_adfeb925c1e926d10a7a6608a09dfea74}{Container}}(i,\ \textcolor{keyword}{this},\ rel));}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a19179888f29f18f1be54a3dfe98f68c0}\label{class_interface_a19179888f29f18f1be54a3dfe98f68c0} 
+\index{Interface@{Interface}!````~Interface@{\texorpdfstring{$\sim$}{\string~}Interface}}
+\index{````~Interface@{\texorpdfstring{$\sim$}{\string~}Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Interface()}{\string~Interface()}}
+{\footnotesize\ttfamily Interface\+::\texorpdfstring{$\sim$}{\string~}\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2destructor_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{interface_2src_2destructor_8cpp_source}{destructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ i\ :\ containers)\ }
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ delete\ i;}
+\DoxyCodeLine{00008\ \ \ \ \ containers.clear();}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ i\ :\ nested)\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ delete\ i;}
+\DoxyCodeLine{00012\ \ \ \ \ nested.clear();}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ i\ :\ keystrokes)\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ delete\ i;}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_frame_aa55237af72da40924ff97426112d5108}\label{class_frame_aa55237af72da40924ff97426112d5108} 
+\index{Interface@{Interface}!addSubframe@{addSubframe}}
+\index{addSubframe@{addSubframe}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{addSubframe()}{addSubframe()}}
+{\footnotesize\ttfamily void Frame\+::add\+Subframe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{subframe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Add a subframe to this frame. 
+
+When unplug a subframe, parent frame will call this function, so you shouldn\textquotesingle{}t call it
+
+
+\begin{DoxyParams}{Parameters}
+{\em subframe} & subframe to add \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00073\ \ \ \ \ subframes.push\_back(subframe);}
+\DoxyCodeLine{00074\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00075\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_add61373f7fc708652df88a8af032f996}\label{class_frame_add61373f7fc708652df88a8af032f996} 
+\index{Interface@{Interface}!beginUpdate@{beginUpdate}}
+\index{beginUpdate@{beginUpdate}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{beginUpdate()}{beginUpdate()}}
+{\footnotesize\ttfamily void Frame\+::begin\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00116\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_ac834daaf7955ebf7cd11f3c032c7141a}\label{class_container_ac834daaf7955ebf7cd11f3c032c7141a} 
+\index{Interface@{Interface}!chooseImage@{chooseImage}}
+\index{chooseImage@{chooseImage}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{chooseImage()}{chooseImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Container\+::choose\+Image (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+choose the state of the sprite 
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00231}{231}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00232\ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00235\ \ \ \ \ focus[1]\ =\ index;}
+\DoxyCodeLine{00236\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a7e1ea1d520bee6d8c48125546c795450}\label{class_container_a7e1ea1d520bee6d8c48125546c795450} 
+\index{Interface@{Interface}!chooseImage@{chooseImage}}
+\index{chooseImage@{chooseImage}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{chooseImage()}{chooseImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Container\+::choose\+Image (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{index2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+choose the state of the sprite 
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00238}{238}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00239\ \{}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordflow}{if}(index2\ <\ 0\ ||\ index2\ >=\ sprites.at(index).size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00243\ \ \ \ \ focus[0]\ =\ index;}
+\DoxyCodeLine{00244\ \ \ \ \ focus[1]\ =\ index2;}
+\DoxyCodeLine{00245\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a04fc266ae14009c6013f1952569f4a08}\label{class_container_a04fc266ae14009c6013f1952569f4a08} 
+\index{Interface@{Interface}!chooseSprite@{chooseSprite}}
+\index{chooseSprite@{chooseSprite}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{chooseSprite()}{chooseSprite()}}
+{\footnotesize\ttfamily void Container\+::choose\+Sprite (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+choose a specific sprite from a vector of sprites 
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00224}{224}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00225\ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00228\ \ \ \ \ focus[0]\ =\ index;}
+\DoxyCodeLine{00229\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a6c4f34c5e36460289f95b486a961307f}\label{class_interface_a6c4f34c5e36460289f95b486a961307f} 
+\index{Interface@{Interface}!draw@{draw}}
+\index{draw@{draw}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Interface\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_container_ac8feb6b3a790483f85aad40a46327f24}{Container}}.
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_container_ac8feb6b3a790483f85aad40a46327f24}{Container::draw}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_interface_a77300df653a7ab735342494bc9285695}{drawNested}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{drawContainers}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a485966ce945f1a7efe691245140a3125}\label{class_interface_a485966ce945f1a7efe691245140a3125} 
+\index{Interface@{Interface}!drawContainers@{drawContainers}}
+\index{drawContainers@{drawContainers}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{drawContainers()}{drawContainers()}}
+{\footnotesize\ttfamily void Interface\+::draw\+Containers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ child\ :\ containers)}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ child-\/>draw();}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a77300df653a7ab735342494bc9285695}\label{class_interface_a77300df653a7ab735342494bc9285695} 
+\index{Interface@{Interface}!drawNested@{drawNested}}
+\index{drawNested@{drawNested}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{drawNested()}{drawNested()}}
+{\footnotesize\ttfamily void Interface\+::draw\+Nested (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ child\ :\ nested)}
+\DoxyCodeLine{00006\ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ child-\/>draw();}
+\DoxyCodeLine{00008\ \ \ \ \ \}}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a701cffd131a90249033fc40f505f02d6}\label{class_frame_a701cffd131a90249033fc40f505f02d6} 
+\index{Interface@{Interface}!endUpdate@{endUpdate}}
+\index{endUpdate@{endUpdate}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{endUpdate()}{endUpdate()}}
+{\footnotesize\ttfamily void Frame\+::end\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00118}{118}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00121\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}\label{class_frame_a5d52a474fbee6c61b5c1209d1a70e393} 
+\index{Interface@{Interface}!getCenter@{getCenter}}
+\index{getCenter@{getCenter}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getCenter()}{getCenter()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} \& Frame\+::get\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ resu;\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ resu\ =\ \{frame.x\ +\ frame.width\ /\ 2,\ frame.y\ +\ frame.height\ /\ 2\};}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ resu\ =\ \{relative[0]\ +\ relative[2]\ /\ 2,\ relative[1]\ +\ relative[3]\ /\ 2\};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{return}\ resu;}
+\DoxyCodeLine{00141\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a332ce853492ebef1b6326beff13027bb}\label{class_interface_a332ce853492ebef1b6326beff13027bb} 
+\index{Interface@{Interface}!getContainers@{getContainers}}
+\index{getContainers@{getContainers}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getContainers()}{getContainers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*} Interface\+::get\+Containers (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00176}{176}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177\ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{if}(id\ <\ 0\ ||\ id\ >=\ containers.size())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{return}\ containers[id];}
+\DoxyCodeLine{00180\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a26bcaeacade393c1223612186d661ab2}\label{class_interface_a26bcaeacade393c1223612186d661ab2} 
+\index{Interface@{Interface}!getContainersSize@{getContainersSize}}
+\index{getContainersSize@{getContainersSize}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getContainersSize()}{getContainersSize()}}
+{\footnotesize\ttfamily int Interface\+::get\+Containers\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00182}{182}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00183\ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ containers.size();}
+\DoxyCodeLine{00185\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_aada1e4093763936121df21b7dae80b5c}\label{class_frame_aada1e4093763936121df21b7dae80b5c} 
+\index{Interface@{Interface}!getFrame@{getFrame}}
+\index{getFrame@{getFrame}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getFrame()}{getFrame()}}
+{\footnotesize\ttfamily const Rectangle \& Frame\+::get\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{return}\ frame;}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a33049f15ecb70bad2654e93f8d3009c5}\label{class_frame_a33049f15ecb70bad2654e93f8d3009c5} 
+\index{Interface@{Interface}!getH@{getH}}
+\index{getH@{getH}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getH()}{getH()}}
+{\footnotesize\ttfamily const float \& Frame\+::getH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00161}{161}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00162\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.height;}
+\DoxyCodeLine{00165\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a9f1d774a52e24e4be7d610f481f03d69}\label{class_container_a9f1d774a52e24e4be7d610f481f03d69} 
+\index{Interface@{Interface}!getInstanceId@{getInstanceId}}
+\index{getInstanceId@{getInstanceId}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getInstanceId()}{getInstanceId()}}
+{\footnotesize\ttfamily int Container\+::get\+Instance\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{return}\ instance\_id;}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}\label{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b} 
+\index{Interface@{Interface}!getName@{getName}}
+\index{getName@{getName}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Container\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00275}{275}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00276\ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00278\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a9b5a189c65cc1b011baeed32236e2c7f}\label{class_frame_a9b5a189c65cc1b011baeed32236e2c7f} 
+\index{Interface@{Interface}!getParent@{getParent}}
+\index{getParent@{getParent}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getParent()}{getParent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*} Frame\+::get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{return}\ parent;}
+\DoxyCodeLine{00121\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_ab48f0dd8fad66981b1047bb4351619b4}\label{class_container_ab48f0dd8fad66981b1047bb4351619b4} 
+\index{Interface@{Interface}!getProbability@{getProbability}}
+\index{getProbability@{getProbability}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getProbability()}{getProbability()}}
+{\footnotesize\ttfamily int Container\+::get\+Probability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00285}{285}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00286\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordflow}{return}\ probability;}
+\DoxyCodeLine{00288\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}\label{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2} 
+\index{Interface@{Interface}!getRelative@{getRelative}}
+\index{getRelative@{getRelative}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getRelative()}{getRelative()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} \& Frame\+::get\+Relative (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ relative;}
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a8459923385998b7f172650eb3045f7e1}\label{class_interface_a8459923385998b7f172650eb3045f7e1} 
+\index{Interface@{Interface}!getRuntimeEvent@{getRuntimeEvent}}
+\index{getRuntimeEvent@{getRuntimeEvent}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getRuntimeEvent()}{getRuntimeEvent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} Interface\+::get\+Runtime\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_container_a4dcc4e2e23156625290921982927848a}{Container}}.
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2action_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{interface_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ \mbox{\hyperlink{class_container_a4dcc4e2e23156625290921982927848a}{Container::getRuntimeEvent}}();}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+\DoxyCodeLine{00014\ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ nested)}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ action\ =\ i-\/>getRuntimeEvent();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ containers)\ }
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ action\ =\ i-\/>getRuntimeEvent();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a37aeab17b4d450237496d32a2eb6b191}\label{class_frame_a37aeab17b4d450237496d32a2eb6b191} 
+\index{Interface@{Interface}!getW@{getW}}
+\index{getW@{getW}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getW()}{getW()}}
+{\footnotesize\ttfamily const float \& Frame\+::getW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00155}{155}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156\ \{}
+\DoxyCodeLine{00157\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.width;}
+\DoxyCodeLine{00159\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_ab0eefa85bb68bd39b6c502f552083b42}\label{class_frame_ab0eefa85bb68bd39b6c502f552083b42} 
+\index{Interface@{Interface}!getX@{getX}}
+\index{getX@{getX}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily const float \& Frame\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00144\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.x;}
+\DoxyCodeLine{00147\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a3808523d40227445dbd975fc0600b462}\label{class_frame_a3808523d40227445dbd975fc0600b462} 
+\index{Interface@{Interface}!getY@{getY}}
+\index{getY@{getY}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily const float \& Frame\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00149}{149}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00150\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.y;}
+\DoxyCodeLine{00153\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a5f2b24b3eff15fb251043fcfd32bf537}\label{class_container_a5f2b24b3eff15fb251043fcfd32bf537} 
+\index{Interface@{Interface}!hide@{hide}}
+\index{hide@{hide}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{hide()}{hide()}}
+{\footnotesize\ttfamily void Container\+::hide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ visible\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_af4f3195c0da8b663b272d326e2e5d48d}\label{class_container_af4f3195c0da8b663b272d326e2e5d48d} 
+\index{Interface@{Interface}!isOverlapping@{isOverlapping}}
+\index{isOverlapping@{isOverlapping}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{isOverlapping()}{isOverlapping()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Container\+::is\+Overlapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*}}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{overlap_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{overlap_8cpp_source}{overlap.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ Rectangle\ rec\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00019\ \ \ \ \ Rectangle\ rec2\ =\ container-\/>\mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{return}\ (rec.x\ <=\ rec2.x\ +\ rec2.width\ \&\&\ rec.x\ +\ rec.width\ >=\ rec2.x\ \&\&\ rec.y\ <=\ rec2.y\ +\ rec2.height\ \&\&\ rec.y\ +\ rec.height\ >=\ rec2.y);}
+\DoxyCodeLine{00021\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a5e86a0c4bc0a072cbe7cc0725707053b}\label{class_container_a5e86a0c4bc0a072cbe7cc0725707053b} 
+\index{Interface@{Interface}!isOverlapping@{isOverlapping}}
+\index{isOverlapping@{isOverlapping}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{isOverlapping()}{isOverlapping()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Container\+::is\+Overlapping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{overlap_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{overlap_8cpp_source}{overlap.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ Rectangle\ rec\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordflow}{return}\ (point[0]\ >=\ rec.x\ \&\&\ point[0]\ <=\ rec.x\ +\ rec.width\ \&\&\ point[1]\ >=\ rec.y\ \&\&\ point[1]\ <=\ rec.y\ +\ rec.height);}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a14a49b088ae5780fbf4ac0f826bb2785}\label{class_container_a14a49b088ae5780fbf4ac0f826bb2785} 
+\index{Interface@{Interface}!isOverlapping@{isOverlapping}}
+\index{isOverlapping@{isOverlapping}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{isOverlapping()}{isOverlapping()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Container\+::is\+Overlapping (\begin{DoxyParamCaption}\item[{Rectangle}]{rec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{overlap_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{overlap_8cpp_source}{overlap.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ Rectangle\ rec2\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{return}\ (rec.x\ <=\ rec2.x\ +\ rec2.width\ \&\&\ rec.x\ +\ rec.width\ >=\ rec2.x\ \&\&\ rec.y\ <=\ rec2.y\ +\ rec2.height\ \&\&\ rec.y\ +\ rec.height\ >=\ rec2.y);}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a867539f845278c60c84fd87d1b079de6}\label{class_frame_a867539f845278c60c84fd87d1b079de6} 
+\index{Interface@{Interface}!isroot@{isroot}}
+\index{isroot@{isroot}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{isroot()}{isroot()}}
+{\footnotesize\ttfamily bool Frame\+::isroot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+return true if this frame is root 
+
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00107}{107}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{return}\ parent\ ==\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00111\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}\label{class_container_aee9a838a8f651d7d1e195290a2ba1ecb} 
+\index{Interface@{Interface}!isVisible@{isVisible}}
+\index{isVisible@{isVisible}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{isVisible()}{isVisible()}}
+{\footnotesize\ttfamily bool Container\+::is\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ visible;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a519953da76597bba050cce61f5483fc6}\label{class_interface_a519953da76597bba050cce61f5483fc6} 
+\index{Interface@{Interface}!linkContent@{linkContent}}
+\index{linkContent@{linkContent}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{linkContent()}{linkContent()}}
+{\footnotesize\ttfamily std\+::string Interface\+::link\+Content (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_container_adf264388b241215dc829580050e93ac5}{Container}}.
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_interface_ac7612dfabe159aebffc7e4553df315e9}{linkContentAbsolute}}(\mbox{\hyperlink{namespace_p_a_t_b_ad5bd661beccfb199cdf6eb43ff79e087}{PATB::INTERFACE\_}}\ +\ path);}
+\DoxyCodeLine{00081\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_ac7612dfabe159aebffc7e4553df315e9}\label{class_interface_ac7612dfabe159aebffc7e4553df315e9} 
+\index{Interface@{Interface}!linkContentAbsolute@{linkContentAbsolute}}
+\index{linkContentAbsolute@{linkContentAbsolute}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{linkContentAbsolute()}{linkContentAbsolute()}}
+{\footnotesize\ttfamily std\+::string Interface\+::link\+Content\+Absolute (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_container_aa7d24144929d01ca83d4e5f2e4b38f31}{Container}}.
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ YAML::Node\ node\ =\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(path);}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_a3ebddddd7a940e4f5e3d287067103a3e}{loadName}}(node))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}textures"{}}])\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container_a11f0c20cb4f80f5d2a63f73f981a9d15}{loadSprites}}(node[\textcolor{stringliteral}{"{}textures"{}}]);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}focus"{}}])\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}{loadFocus}}(node[\textcolor{stringliteral}{"{}focus"{}}]);}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{chooseImage}}(0,\ 0);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}object"{}}])\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a8ba364e555facee31b4179534e53586f}{loadObject}}(node[\textcolor{stringliteral}{"{}object"{}}]);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}control"{}}])}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a51eadcf3056c6b68cf8b17762a6f68e6}{loadControl}}(node[\textcolor{stringliteral}{"{}control"{}}]);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}button"{}}])}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a93ff118be7317e3c02f40b3ff43e6c6e}{loadButton}}(node[\textcolor{stringliteral}{"{}button"{}}]);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{comment}{//\ \ \ \ if(node["{}collide"{}])}}
+\DoxyCodeLine{00105\ \textcolor{comment}{//\ \ \ \ \ \ \ \ loadCollide(node["{}collide"{}]);}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{comment}{//\ \ \ \ if(node["{}chunk"{}])}}
+\DoxyCodeLine{00108\ \textcolor{comment}{//\ \ \ \ \ \ \ \ loadChunk(node["{}chunk"{}]);}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{comment}{//\ \ \ \ if(node["{}event"{}])}}
+\DoxyCodeLine{00112\ \textcolor{comment}{//\ \ \ \ \ \ \ \ loadEvent(node["{}event"{}]);}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{getName}}();}
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a93ff118be7317e3c02f40b3ff43e6c6e}\label{class_interface_a93ff118be7317e3c02f40b3ff43e6c6e} 
+\index{Interface@{Interface}!loadButton@{loadButton}}
+\index{loadButton@{loadButton}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{loadButton()}{loadButton()}}
+{\footnotesize\ttfamily void Interface\+::load\+Button (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00160\ \{}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
+\DoxyCodeLine{00162\ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ Rectangle\ rel(\{0,\ 0,\ 0,\ 0\});}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ rel.x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ rel.y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ rel.width\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ rel.height\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_image}{ButtonImage}}\ *obj;}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ obj\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_button_image}{ButtonImage}}(\textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ obj-\/>linkContent(i[\textcolor{stringliteral}{"{}path"{}}].as<std::string>());}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ obj-\/>show();}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ containers.push\_back(obj);}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+\DoxyCodeLine{00174\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a51eadcf3056c6b68cf8b17762a6f68e6}\label{class_interface_a51eadcf3056c6b68cf8b17762a6f68e6} 
+\index{Interface@{Interface}!loadControl@{loadControl}}
+\index{loadControl@{loadControl}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{loadControl()}{loadControl()}}
+{\footnotesize\ttfamily void Interface\+::load\+Control (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ stroke\ :\ node)\ }
+\DoxyCodeLine{00137\ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_key_stroke}{KeyStroke}}*\ k\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_key_stroke}{KeyStroke}}();}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ key\ :\ stroke[\textcolor{stringliteral}{"{}key"{}}])}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ k-\/>\mbox{\hyperlink{class_key_stroke_afdb74080a2eafa7b541b96a695599eeb}{add}}(\mbox{\hyperlink{keystroke_8hpp_a7019dcdfa4139eca0425f1382ad60543}{toKey}}(key.as<std::string>()));}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ std::string\ action\ =\ stroke[\textcolor{stringliteral}{"{}action"{}}].as<std::string>();}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{stringliteral}{"{}move-\/object"{}})\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ v\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][1].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][2].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][3].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmove_object_action}{moveObjectAction}}*\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface_ac6a2e86796e3f0ddf843423d09b23ed8}{moveObjectAction}}(containers[\textcolor{keywordtype}{id}],\ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}(\{x,\ y\}),\ v);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ k-\/>\mbox{\hyperlink{class_key_stroke_ae9e993176bb8607cd4bb19c8831bbd14}{addAction}}(action);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ keystrokes.push\_back(k);}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}\label{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6} 
+\index{Interface@{Interface}!loadFocus@{loadFocus}}
+\index{loadFocus@{loadFocus}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{loadFocus()}{loadFocus()}}
+{\footnotesize\ttfamily void Container\+::load\+Focus (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00218}{218}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00219\ \{}
+\DoxyCodeLine{00220\ \ \ \ \ focus[0]\ =\ node[0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00221\ \ \ \ \ focus[1]\ =\ node[1].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00222\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a3ebddddd7a940e4f5e3d287067103a3e}\label{class_container_a3ebddddd7a940e4f5e3d287067103a3e} 
+\index{Interface@{Interface}!loadName@{loadName}}
+\index{loadName@{loadName}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{loadName()}{loadName()}}
+{\footnotesize\ttfamily bool Container\+::load\+Name (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{if}(!node[\textcolor{stringliteral}{"{}name"{}}])\ }
+\DoxyCodeLine{00114\ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ name\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ name\ =\ node[\textcolor{stringliteral}{"{}name"{}}].as<std::string>();}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00120\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a8ba364e555facee31b4179534e53586f}\label{class_interface_a8ba364e555facee31b4179534e53586f} 
+\index{Interface@{Interface}!loadObject@{loadObject}}
+\index{loadObject@{loadObject}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{loadObject()}{loadObject()}}
+{\footnotesize\ttfamily void Interface\+::load\+Object (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
+\DoxyCodeLine{00120\ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ Rectangle\ rel(\{0,\ 0,\ 0,\ 0\});}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ rel.x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ rel.y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ rel.width\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ rel.height\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}\ *obj;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ obj\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_object}{Object}}(\textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ obj-\/>linkContent(i[\textcolor{stringliteral}{"{}path"{}}].as<std::string>());}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ containers.push\_back(obj);}
+\DoxyCodeLine{00130\ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a11f0c20cb4f80f5d2a63f73f981a9d15}\label{class_container_a11f0c20cb4f80f5d2a63f73f981a9d15} 
+\index{Interface@{Interface}!loadSprites@{loadSprites}}
+\index{loadSprites@{loadSprites}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{loadSprites()}{loadSprites()}}
+{\footnotesize\ttfamily void Container\+::load\+Sprites (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ sprite\ :\ node)}
+\DoxyCodeLine{00125\ \ \ \ \ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!sprite[\textcolor{stringliteral}{"{}path"{}}])\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!sprite[\textcolor{stringliteral}{"{}graphics"{}}])\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ std::string\ path\ =\ \mbox{\hyperlink{namespace_p_a_s_s_e_t_s_a2484d8b53277b4dd214ca080762ded12}{PASSETS::GRAPHIC\_}}\ +\ sprite[\textcolor{stringliteral}{"{}path"{}}].as<std::string>();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ Image\ image\ =\ LoadImage(path.c\_str());}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(sprite[\textcolor{stringliteral}{"{}resize"{}}])}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ image.width\ *\ sprite[\textcolor{stringliteral}{"{}resize"{}}][0].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ image.height\ *\ sprite[\textcolor{stringliteral}{"{}resize"{}}][1].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ ImageResize(\&image,\ x,\ y);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ sprites.emplace\_back();}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ img\ :\ sprite[\textcolor{stringliteral}{"{}graphics"{}}])\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y,\ w,\ h;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ repeat\ =\ 1;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ gapX\ =\ 0;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ gapY\ =\ 0;}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ 1;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dy\ =\ 1;}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}x"{}}])\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ img[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ x\ =\ 0;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}y"{}}])\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ img[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ y\ =\ 0;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}w"{}}])\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ w\ =\ img[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ w\ =\ 1;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}h"{}}])\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ h\ =\ img[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ h\ =\ 1;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}repeat"{}}])\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ repeat\ =\ img[\textcolor{stringliteral}{"{}repeat"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}gapX"{}}])}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapX\ =\ img[\textcolor{stringliteral}{"{}gapX"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}gapY"{}}])}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapY\ =\ img[\textcolor{stringliteral}{"{}gapY"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}dx"{}}])}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dx\ =\ img[\textcolor{stringliteral}{"{}dx"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dx\ <\ 0)\ dx\ =\ -\/1;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ dx\ =\ 1;}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}dy"{}}])}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dy\ =\ img[\textcolor{stringliteral}{"{}dy"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dy\ <\ 0)\ dy\ =\ -\/1;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ dy\ =\ 1;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ imgw\ =\ image.width;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ imgh\ =\ image.height;}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}axis"{}}]\ \&\&\ img[\textcolor{stringliteral}{"{}axis"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}horizontal"{}})}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2;\ j\ +=\ dy\ *\ (gapY\ +\ h))}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ j\ +=\ dy\ *\ (gapY\ +\ h))}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ UnloadImage(image);}
+\DoxyCodeLine{00215\ \ \ \ \ \}}
+\DoxyCodeLine{00216\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a72456ad52812da3e4f805c20463238e3}\label{class_frame_a72456ad52812da3e4f805c20463238e3} 
+\index{Interface@{Interface}!moveBy@{moveBy}}
+\index{moveBy@{moveBy}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{moveBy()}{moveBy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+By (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
+\DoxyCodeLine{00068\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00069\ \ \ \ \ relative[0]\ +=\ rel[0];}
+\DoxyCodeLine{00070\ \ \ \ \ relative[1]\ +=\ rel[1];}
+\DoxyCodeLine{00071\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_abb0f7042ce5917e8e52cd0fe44934178}\label{class_frame_abb0f7042ce5917e8e52cd0fe44934178} 
+\index{Interface@{Interface}!moveBy@{moveBy}}
+\index{moveBy@{moveBy}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{moveBy()}{moveBy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+By (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00078\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00079\ \ \ \ \ frame.x\ +=\ x;}
+\DoxyCodeLine{00080\ \ \ \ \ frame.y\ +=\ y;}
+\DoxyCodeLine{00081\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00083\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a0cc1c4c2c00c20cea37a9b9b36b8b8c7}\label{class_frame_a0cc1c4c2c00c20cea37a9b9b36b8b8c7} 
+\index{Interface@{Interface}!moveCenterTo@{moveCenterTo}}
+\index{moveCenterTo@{moveCenterTo}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{moveCenterTo()}{moveCenterTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+Center\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
+\DoxyCodeLine{00046\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ center\ =\ \mbox{\hyperlink{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}{getCenter}}();}
+\DoxyCodeLine{00048\ \ \ \ \ relative[0]\ +=\ rel[0]\ -\/\ center[0];}
+\DoxyCodeLine{00049\ \ \ \ \ relative[1]\ +=\ rel[1]\ -\/\ center[1];}
+\DoxyCodeLine{00050\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00052\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_abf3649cc78d87aaf4877723d3e342407}\label{class_frame_abf3649cc78d87aaf4877723d3e342407} 
+\index{Interface@{Interface}!moveCenterTo@{moveCenterTo}}
+\index{moveCenterTo@{moveCenterTo}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{moveCenterTo()}{moveCenterTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+Center\+To (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00057\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ center\ =\ \mbox{\hyperlink{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}{getCenter}}();}
+\DoxyCodeLine{00059\ \ \ \ \ frame.x\ +=\ x\ -\/\ center[0];}
+\DoxyCodeLine{00060\ \ \ \ \ frame.y\ +=\ y\ -\/\ center[1];}
+\DoxyCodeLine{00061\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00063\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a97a44fc353ebd9feb9002fcfb2f7ecb6}\label{class_frame_a97a44fc353ebd9feb9002fcfb2f7ecb6} 
+\index{Interface@{Interface}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{moveTo()}{moveTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
+\DoxyCodeLine{00027\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00028\ \ \ \ \ relative[0]\ =\ rel[0];}
+\DoxyCodeLine{00029\ \ \ \ \ relative[1]\ =\ rel[1];}
+\DoxyCodeLine{00030\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a6b8233fda47b75fe55402700efdcca97}\label{class_frame_a6b8233fda47b75fe55402700efdcca97} 
+\index{Interface@{Interface}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{moveTo()}{moveTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::move\+To (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00036\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00037\ \ \ \ \ frame.x\ =\ x;}
+\DoxyCodeLine{00038\ \ \ \ \ frame.y\ =\ y;}
+\DoxyCodeLine{00039\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00041\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_aa70930c6166a257b6e946b14fbc125a5}\label{class_container_aa70930c6166a257b6e946b14fbc125a5} 
+\index{Interface@{Interface}!nextImage@{nextImage}}
+\index{nextImage@{nextImage}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{nextImage()}{nextImage()}}
+{\footnotesize\ttfamily void Container\+::next\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+move to next state of the sprite 
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00247}{247}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00248\ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00250\ \ \ \ \ focus[1]++;}
+\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ >=\ sprites.at(focus[0]).size())\ focus[1]\ =\ 0;}
+\DoxyCodeLine{00252\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_ae74100328cf86d4d9f5ad5873fe29aab}\label{class_container_ae74100328cf86d4d9f5ad5873fe29aab} 
+\index{Interface@{Interface}!nextSprite@{nextSprite}}
+\index{nextSprite@{nextSprite}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{nextSprite()}{nextSprite()}}
+{\footnotesize\ttfamily void Container\+::next\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+move to the next sprite 
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00261}{261}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00262\ \{}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00264\ \ \ \ \ focus[0]++;}
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ >=\ sprites.size())\ focus[0]\ =\ 0;}
+\DoxyCodeLine{00266\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_acb38199a86119e31c739bb46fd382ada}\label{class_frame_acb38199a86119e31c739bb46fd382ada} 
+\index{Interface@{Interface}!operator fRect@{operator fRect}}
+\index{operator fRect@{operator fRect}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{operator fRect()}{operator fRect()}}
+{\footnotesize\ttfamily Frame\+::operator \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00173}{173}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00174\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{return}\ relative;}
+\DoxyCodeLine{00177\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a0dbda20497048b082c047daf5f09938c}\label{class_frame_a0dbda20497048b082c047daf5f09938c} 
+\index{Interface@{Interface}!operator iRect@{operator iRect}}
+\index{operator iRect@{operator iRect}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{operator iRect()}{operator iRect()}}
+{\footnotesize\ttfamily Frame\+::operator \mbox{\hyperlink{datatype_8hpp_a80e1cb25342f1db1cc7bd45782c22935}{i\+Rect}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00179}{179}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00180\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{return}\ \{(int)\ frame.x,\ (\textcolor{keywordtype}{int})\ frame.y,\ (int)\ frame.width,\ (\textcolor{keywordtype}{int})\ frame.height\};}
+\DoxyCodeLine{00183\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_af9fbceb830138f25ed0cc8dcd62c467f}\label{class_frame_af9fbceb830138f25ed0cc8dcd62c467f} 
+\index{Interface@{Interface}!operator Rectangle@{operator Rectangle}}
+\index{operator Rectangle@{operator Rectangle}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{operator Rectangle()}{operator Rectangle()}}
+{\footnotesize\ttfamily Frame\+::operator Rectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00167}{167}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00168\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{return}\ frame;}
+\DoxyCodeLine{00171\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a1759ea4c463c53472edac2148a4a29aa}\label{class_container_a1759ea4c463c53472edac2148a4a29aa} 
+\index{Interface@{Interface}!OverlappingArea@{OverlappingArea}}
+\index{OverlappingArea@{OverlappingArea}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{OverlappingArea()}{OverlappingArea()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float Container\+::\+Overlapping\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*}}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{overlap_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{overlap_8cpp_source}{overlap.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ Rectangle\ rec\ =\ container-\/>\mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00037\ \ \ \ \ Rectangle\ rec2\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ std::max(rec.x,\ rec2.x);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ std::max(rec.y,\ rec2.y);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ w\ =\ std::min(rec.x\ +\ rec.width,\ rec2.x\ +\ rec2.width)\ -\/\ x;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ h\ =\ std::min(rec.y\ +\ rec.height,\ rec2.y\ +\ rec2.height)\ -\/\ y;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{if}(w\ <\ 0\ ||\ h\ <\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ w\ *\ h;}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_afe701a67848a2f7b9a1fe03742de4854}\label{class_container_afe701a67848a2f7b9a1fe03742de4854} 
+\index{Interface@{Interface}!OverlappingArea@{OverlappingArea}}
+\index{OverlappingArea@{OverlappingArea}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{OverlappingArea()}{OverlappingArea()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float Container\+::\+Overlapping\+Area (\begin{DoxyParamCaption}\item[{Rectangle}]{rec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{overlap_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{overlap_8cpp_source}{overlap.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ Rectangle\ rec2\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ std::max(rec.x,\ rec2.x);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ std::max(rec.y,\ rec2.y);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ w\ =\ std::min(rec.x\ +\ rec.width,\ rec2.x\ +\ rec2.width)\ -\/\ x;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ h\ =\ std::min(rec.y\ +\ rec.height,\ rec2.y\ +\ rec2.height)\ -\/\ y;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}(w\ <\ 0\ ||\ h\ <\ 0)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ w\ *\ h;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a4b3c3543e057eb375edc5fb9f7db512d}\label{class_frame_a4b3c3543e057eb375edc5fb9f7db512d} 
+\index{Interface@{Interface}!plug@{plug}}
+\index{plug@{plug}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{plug()}{plug()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frame\+::plug (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{par }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+attach a frame to a parent by old relative position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em par} & parent frame \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}(par\ ==\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::plug(Frame*\ par):\ par\ is\ nullptr"{}});}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00042\ \ \ \ \ parent\ =\ par;}
+\DoxyCodeLine{00043\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{addSubframe}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a62c876a0e6d3b7c89288b81893434369}\label{class_frame_a62c876a0e6d3b7c89288b81893434369} 
+\index{Interface@{Interface}!plug@{plug}}
+\index{plug@{plug}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{plug()}{plug()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::plug (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{par,  }\item[{\mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+attach a frame to a parent by relative position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em par} & parent frame \\
+\hline
+{\em rel} & relative position and size in percentage (0.\+0f to 1.\+0f) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}(par\ ==\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::plug(Frame*\ par,\ fRect\ rel):\ par\ is\ nullptr"{}});}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{00018\ \ \ \ \ \}}
+\DoxyCodeLine{00019\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00020\ \ \ \ \ parent\ =\ par;}
+\DoxyCodeLine{00021\ \ \ \ \ relative\ =\ rel;}
+\DoxyCodeLine{00022\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{addSubframe}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_ab929bd67689548988435cd86948cc808}\label{class_container_ab929bd67689548988435cd86948cc808} 
+\index{Interface@{Interface}!prevImage@{prevImage}}
+\index{prevImage@{prevImage}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{prevImage()}{prevImage()}}
+{\footnotesize\ttfamily void Container\+::prev\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+move to previous state of the sprite 
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00254}{254}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00255\ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00257\ \ \ \ \ focus[1]-\/-\/;}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ <\ 0)\ focus[1]\ =\ sprites.at(focus[0]).size()\ -\/\ 1;}
+\DoxyCodeLine{00259\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a5c0a45f4dd53257b83a02e539db1f509}\label{class_container_a5c0a45f4dd53257b83a02e539db1f509} 
+\index{Interface@{Interface}!prevSprite@{prevSprite}}
+\index{prevSprite@{prevSprite}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{prevSprite()}{prevSprite()}}
+{\footnotesize\ttfamily void Container\+::prev\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+move to the previous sprite 
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00268}{268}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00269\ \{}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00271\ \ \ \ \ focus[0]-\/-\/;}
+\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ <\ 0)\ focus[0]\ =\ sprites.size()\ -\/\ 1;}
+\DoxyCodeLine{00273\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a71e6f65404421002b2e91a0114b7d1fb}\label{class_interface_a71e6f65404421002b2e91a0114b7d1fb} 
+\index{Interface@{Interface}!react@{react}}
+\index{react@{react}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{react()}{react()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} Interface\+::react (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_container_aa99fd45b65f5f4c29fd0291602711b72}{Container}}.
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2action_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{interface_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{isVisible}}())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ \mbox{\hyperlink{class_container_aa99fd45b65f5f4c29fd0291602711b72}{Container::react}}();}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ keystrokes)}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ i-\/>react();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ containers)\ }
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ i-\/>react();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a6676f9cfd2639c9069341ee5844167af}\label{class_frame_a6676f9cfd2639c9069341ee5844167af} 
+\index{Interface@{Interface}!removeSubframe@{removeSubframe}}
+\index{removeSubframe@{removeSubframe}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{removeSubframe()}{removeSubframe()}}
+{\footnotesize\ttfamily void Frame\+::remove\+Subframe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frame}{Frame}} \texorpdfstring{$\ast$}{*}}]{subframe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Remove a subframe from this frame. 
+
+When destroy a subframe that have parent frame, this function is called, so you shouldn\textquotesingle{}t call it
+
+
+\begin{DoxyParams}{Parameters}
+{\em subframe} & subframe to remove \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ subframes.size()\ -\/\ 1;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{while}(i\ >=\ 0\ \&\&\ subframes.size())}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!subframes.empty()\ \&\&\ subframes.back()\ ==\ subframe)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ subframes.pop\_back();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ i\ =\ std::min(i,\ (\textcolor{keywordtype}{int})\ subframes.size()\ -\/\ 1);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!subframes.empty()\ \&\&\ subframes[i]\ ==\ subframe)}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ subframes[i]\ =\ subframes.back();}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ subframes.pop\_back();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00101\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_ac2d0460d67ec259633ba9d6a601ec954}\label{class_frame_ac2d0460d67ec259633ba9d6a601ec954} 
+\index{Interface@{Interface}!resize@{resize}}
+\index{resize@{resize}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Frame\+::resize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
+\DoxyCodeLine{00088\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00089\ \ \ \ \ relative[2]\ =\ rel[0];}
+\DoxyCodeLine{00090\ \ \ \ \ relative[3]\ =\ rel[1];}
+\DoxyCodeLine{00091\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00093\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_ae515658ddcab39a3fc9e038eb86dfe61}\label{class_frame_ae515658ddcab39a3fc9e038eb86dfe61} 
+\index{Interface@{Interface}!resize@{resize}}
+\index{resize@{resize}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Frame\+::resize (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{00098\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00099\ \ \ \ \ frame.width\ =\ w;}
+\DoxyCodeLine{00100\ \ \ \ \ frame.height\ =\ h;}
+\DoxyCodeLine{00101\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a20103c0d27bd0706624e7c0161771ef6}\label{class_container_a20103c0d27bd0706624e7c0161771ef6} 
+\index{Interface@{Interface}!setProbability@{setProbability}}
+\index{setProbability@{setProbability}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{setProbability()}{setProbability()}}
+{\footnotesize\ttfamily void Container\+::set\+Probability (\begin{DoxyParamCaption}\item[{int}]{prob }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00280}{280}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00281\ \{}
+\DoxyCodeLine{00282\ \ \ \ \ probability\ =\ prob;}
+\DoxyCodeLine{00283\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_ab54f6e87faf0216b708c40cb1bc1a4a2}\label{class_frame_ab54f6e87faf0216b708c40cb1bc1a4a2} 
+\index{Interface@{Interface}!setRelative@{setRelative}}
+\index{setRelative@{setRelative}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{setRelative()}{setRelative()}}
+{\footnotesize\ttfamily void Frame\+::set\+Relative (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{f\+Rect}}}]{rel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00126\ \ \ \ \ relative\ =\ rel;}
+\DoxyCodeLine{00127\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
+\DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a48cdaa85884938b417513cca003f4f6c}\label{class_container_a48cdaa85884938b417513cca003f4f6c} 
+\index{Interface@{Interface}!show@{show}}
+\index{show@{show}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Container\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ visible\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_ab03c3b8ce43fb4212de772f9edef22cd}\label{class_container_ab03c3b8ce43fb4212de772f9edef22cd} 
+\index{Interface@{Interface}!toggleVisibility@{toggleVisibility}}
+\index{toggleVisibility@{toggleVisibility}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{toggleVisibility()}{toggleVisibility()}}
+{\footnotesize\ttfamily void Container\+::toggle\+Visibility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ visible\ =\ !visible;}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a7fec746caea8b9cc27d28f829e3995a8}\label{class_frame_a7fec746caea8b9cc27d28f829e3995a8} 
+\index{Interface@{Interface}!unplug@{unplug}}
+\index{unplug@{unplug}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{unplug()}{unplug()}}
+{\footnotesize\ttfamily void Frame\+::unplug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+detach a frame from its parent 
+
+
+
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
+\DoxyCodeLine{00056\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00057\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_a6676f9cfd2639c9069341ee5844167af}{removeSubframe}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00058\ \ \ \ \ parent\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00059\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_frame_a7142b4749ec9adf106935fbafa8b67b0}\label{class_frame_a7142b4749ec9adf106935fbafa8b67b0} 
+\index{Interface@{Interface}!updateFrame@{updateFrame}}
+\index{updateFrame@{updateFrame}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{updateFrame()}{updateFrame()}}
+{\footnotesize\ttfamily void Frame\+::update\+Frame (\begin{DoxyParamCaption}\item[{bool}]{recursive = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_visual_a63668294defc8e0bbdb584016e1c08c6}{Visual}}.
+
+
+
+Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ }
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00007\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ frame.x\ =\ parent-\/>\mbox{\hyperlink{class_frame_ab0eefa85bb68bd39b6c502f552083b42}{getX}}()\ +\ relative[0]\ *\ parent-\/>\mbox{\hyperlink{class_frame_a37aeab17b4d450237496d32a2eb6b191}{getW}}();}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ frame.y\ =\ parent-\/>\mbox{\hyperlink{class_frame_a3808523d40227445dbd975fc0600b462}{getY}}()\ +\ relative[1]\ *\ parent-\/>\mbox{\hyperlink{class_frame_a33049f15ecb70bad2654e93f8d3009c5}{getH}}();}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ frame.width\ =\ relative[2]\ *\ parent-\/>\mbox{\hyperlink{class_frame_a37aeab17b4d450237496d32a2eb6b191}{getW}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ frame.height\ =\ relative[3]\ *\ parent-\/>\mbox{\hyperlink{class_frame_a33049f15ecb70bad2654e93f8d3009c5}{getH}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{if}(recursive)}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ subframe\ :\ subframes)}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ subframe-\/>updateFrame(\textcolor{keyword}{true});}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_interface_ac6a2e86796e3f0ddf843423d09b23ed8}\label{class_interface_ac6a2e86796e3f0ddf843423d09b23ed8} 
+\index{Interface@{Interface}!moveObjectAction@{moveObjectAction}}
+\index{moveObjectAction@{moveObjectAction}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{moveObjectAction}{moveObjectAction}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classmove_object_action}{move\+Object\+Action}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{interface_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{interface_8hpp_source}{interface.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/interface/include/\mbox{\hyperlink{interface_8hpp}{interface.\+hpp}}\item 
+src/interface/src/\mbox{\hyperlink{interface_2src_2action_8cpp}{action.\+cpp}}\item 
+src/interface/src/\mbox{\hyperlink{interface_2src_2arthmetic_8cpp}{arthmetic.\+cpp}}\item 
+src/interface/src/\mbox{\hyperlink{interface_2src_2constructor_8cpp}{constructor.\+cpp}}\item 
+src/interface/src/\mbox{\hyperlink{interface_2src_2destructor_8cpp}{destructor.\+cpp}}\end{DoxyCompactItemize}

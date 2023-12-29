@@ -176,6 +176,12 @@ public:
     void run();
 };
 
+/**
+ * @class CloseAction
+ *
+ * @brief manages the closing of the application
+ * 
+**/
 class CloseAction : public Action
 {
 private: 
@@ -186,6 +192,12 @@ public:
     void execute();
 };
 
+/**
+ * @class resizeAction
+ *
+ * @brief manages the resizing of the window
+ * 
+**/
 class resizeAction : public Action
 {
 private: 

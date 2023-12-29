@@ -15,7 +15,7 @@
  *
  * @brief position and size of object on screen
  * 
- * When change position or size, it also change position and size of all subframes
+ * when changing its position or size, it also changes position and size of all subframes
  * 
  * a subframe is relative to its parent by percentage (0.0f to 1.0f)
  *

@@ -1,0 +1,53 @@
+\doxysection{VECTOR2D Namespace Reference}
+\hypertarget{namespace_v_e_c_t_o_r2_d}{}\label{namespace_v_e_c_t_o_r2_d}\index{VECTOR2D@{VECTOR2D}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{namespace_v_e_c_t_o_r2_d_a4109f03569959b180ac8753033a747f2}{get\+Angle}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} v1)
+\item 
+float \mbox{\hyperlink{namespace_v_e_c_t_o_r2_d_a6799022456df6e9d2704fd3d255e44fe}{get\+Angle}} (\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} v1, \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}} v2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_v_e_c_t_o_r2_d_a4109f03569959b180ac8753033a747f2}\label{namespace_v_e_c_t_o_r2_d_a4109f03569959b180ac8753033a747f2} 
+\index{VECTOR2D@{VECTOR2D}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!VECTOR2D@{VECTOR2D}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily float VECTOR2\+D\+::get\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{v1 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vector_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{vector_8cpp_source}{vector.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ arctan(y\ /\ x)\ }}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{return}\ atan2(v1[1],\ v1[0]);}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_v_e_c_t_o_r2_d_a6799022456df6e9d2704fd3d255e44fe}\label{namespace_v_e_c_t_o_r2_d_a6799022456df6e9d2704fd3d255e44fe} 
+\index{VECTOR2D@{VECTOR2D}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!VECTOR2D@{VECTOR2D}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily float VECTOR2\+D\+::get\+Angle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{v1,  }\item[{\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{f\+Point}}}]{v2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{vector_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{vector_8cpp_source}{vector.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ angle\ between\ 2\ vector\ }}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ v1\ *\ v2\ =\ |v1|\ *\ |v2|\ *\ cos(angle)}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ dot\ =\ v1[0]\ *\ v2[0]\ +\ v1[1]\ *\ v2[1];}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{float}\ abs1\ =\ sqrt(\mbox{\hyperlink{vector_8cpp_a8cab84cc5fe4972692fbdae513a78f6f}{sqr}}(v1[0])\ +\ \mbox{\hyperlink{vector_8cpp_a8cab84cc5fe4972692fbdae513a78f6f}{sqr}}(v1[1]));}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{float}\ abs2\ =\ sqrt(\mbox{\hyperlink{vector_8cpp_a8cab84cc5fe4972692fbdae513a78f6f}{sqr}}(v2[0])\ +\ \mbox{\hyperlink{vector_8cpp_a8cab84cc5fe4972692fbdae513a78f6f}{sqr}}(v2[1]));}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{return}\ acos(dot\ /\ (abs1\ *\ abs2));}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}

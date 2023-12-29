@@ -1,0 +1,34 @@
+\doxysection{countdown.\+cpp}
+\hypertarget{countdown_8cpp_source}{}\label{countdown_8cpp_source}\index{src/utils/src/countdown.cpp@{src/utils/src/countdown.cpp}}
+\mbox{\hyperlink{countdown_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{countdown_8hpp}{countdown.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00003}\mbox{\hyperlink{class_count_down_abc95faf017608257eff0c8cfe5d83358}{00003}}\ \mbox{\hyperlink{class_count_down_abc95faf017608257eff0c8cfe5d83358}{CountDown::CountDown}}(\textcolor{keywordtype}{int}\ milliseconds)\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00005}00005\ \ \ \ \ start\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00006}00006\ \ \ \ \ finished\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00007}00007\ \ \ \ \ elapsed\_seconds\ =\ std::chrono::milliseconds(milliseconds);}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00010}\mbox{\hyperlink{class_count_down_a933d510b884ee270ecbc42af87a331a6}{00010}}\ \mbox{\hyperlink{class_count_down_a933d510b884ee270ecbc42af87a331a6}{CountDown::\string~CountDown}}()\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00012}00012\ \}}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00014}\mbox{\hyperlink{class_count_down_aaa8063479042fab3361ff91fbc444069}{00014}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_count_down_aaa8063479042fab3361ff91fbc444069}{CountDown::isFinished}}()\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{return}\ finished\ ||\ (std::chrono::system\_clock::now()\ -\/\ start)\ >\ elapsed\_seconds;}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00019}\mbox{\hyperlink{class_count_down_ac9cc8a437e50e582172ab88004791bc5}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_count_down_ac9cc8a437e50e582172ab88004791bc5}{CountDown::run}}()\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00021}00021\ \ \ \ \ finished\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00022}00022\ \ \ \ \ start\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00025}\mbox{\hyperlink{class_count_down_a3a7b5ddc0263bcd2698c64979d061fc0}{00025}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_count_down_a3a7b5ddc0263bcd2698c64979d061fc0}{CountDown::get}}()\ }
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return}\ elapsed\_seconds.count()\ *\ 1000;}
+\DoxyCodeLine{\Hypertarget{countdown_8cpp_source_l00028}00028\ \}}
+
+\end{DoxyCode}

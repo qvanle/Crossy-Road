@@ -1,0 +1,618 @@
+\doxysection{Window Class Reference}
+\hypertarget{class_window}{}\label{class_window}\index{Window@{Window}}
+
+
+{\ttfamily \#include $<$window.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_window_a74e6087da23d3c24e9fac0245e5ec92c}{Window}} ()
+\item 
+\mbox{\hyperlink{class_window_a69527f8092897e79761b59608ca6ba2b}{Window}} (std\+::string path)
+\item 
+\mbox{\hyperlink{class_window_a245d821e6016fa1f6970ccbbedd635f6}{\texorpdfstring{$\sim$}{\string~}\+Window}} ()
+\item 
+bool \mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{is\+Run}} ()
+\item 
+bool \mbox{\hyperlink{class_window_ac814385898713b342da0c0030de72fed}{is\+Close}} ()
+\item 
+void \mbox{\hyperlink{class_window_ae137ec42ddc87d666d49661484410091}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_window_a2ec96f7b1e29635e7a7bff479697ecf9}{draw}} ()
+\item 
+void \mbox{\hyperlink{class_window_aae7dda8daf0968d8c6206ebb11e8768d}{system\+Event}} ()
+\item 
+void \mbox{\hyperlink{class_window_a51169e60003d71a199cf3d9221dfa229}{get\+User\+Event}} ()
+\item 
+void \mbox{\hyperlink{class_window_a1e1d137d6d2f207883d9c098a2a9a0a9}{get\+Runtime\+Event}} ()
+\item 
+void \mbox{\hyperlink{class_window_a2c07f02fa7a91560a56d238c9350bae2}{sound\+\_\+effect}} ()
+\item 
+void \mbox{\hyperlink{class_window_a7c8938f4d38b3f42c9650a69f0a4033f}{immediate\+Acting}} ()
+\item 
+void \mbox{\hyperlink{class_window_a7513617caa6b1a47881c78d2f8f52382}{user\+Acting}} ()
+\item 
+void \mbox{\hyperlink{class_window_a593f842e27a96389784cb70e566d1d5e}{request\+Acting}} ()
+\item 
+void \mbox{\hyperlink{class_window_a7ddf17f69d4bfdd667f20b028a8c6324}{system\+Acting}} ()
+\item 
+void \mbox{\hyperlink{class_window_ad558d17039a65a0d42d3bdda01e36651}{init\+Raylib}} (YAML\+::\+Node node)
+\item 
+void \mbox{\hyperlink{class_window_a10eed1c286789ea0a3159d4a5c6b5a06}{load\+Interface}} (YAML\+::\+Node node)
+\item 
+void \mbox{\hyperlink{class_window_a966b152fb1c5e3bd38f80145522f025f}{load\+Game}} (YAML\+::\+Node node)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_window_a2ef7f0010e69da47bc84a993e52d787e}{Close\+Action}}
+\item 
+class \mbox{\hyperlink{class_window_a8f3ba516e4706c53e45089ad4e2afbaf}{resize\+Action}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{window_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{window_8hpp_source}{window.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_window_a74e6087da23d3c24e9fac0245e5ec92c}\label{class_window_a74e6087da23d3c24e9fac0245e5ec92c} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_2src_2constructor_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{window_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ Wcontent.width\ =\ 1200;}
+\DoxyCodeLine{00010\ \ \ \ \ Wcontent.height\ =\ 668;}
+\DoxyCodeLine{00011\ \ \ \ \ Wcontent.title\ =\ \textcolor{stringliteral}{"{}Crossy\ Road\ clone"{}};}
+\DoxyCodeLine{00012\ \ \ \ \ SetConfigFlags(FLAG\_WINDOW\_RESIZABLE\ |\ FLAG\_VSYNC\_HINT);}
+\DoxyCodeLine{00013\ \ \ \ \ InitWindow(Wcontent.width,\ Wcontent.height,\ Wcontent.title.c\_str());}
+\DoxyCodeLine{00014\ \ \ \ \ SetTargetFPS(60);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ UI.setRootFrame(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_frame}{Frame}}(\{0,\ 0,\ Wcontent.width,\ Wcontent.height\}));}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a69527f8092897e79761b59608ca6ba2b}\label{class_window_a69527f8092897e79761b59608ca6ba2b} 
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Window\+::\+Window (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_2src_2constructor_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{window_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ path\ =\ \mbox{\hyperlink{namespace_p_a_t_b_a562ce625bb3219dffc943bf8b69ab5a1}{PATB::WINDOW\_}}\ +\ path;}
+\DoxyCodeLine{00022\ \ \ \ \ YAML::Node\ config\ =\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(path);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_window_ad558d17039a65a0d42d3bdda01e36651}{initRaylib}}(config);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_window_a10eed1c286789ea0a3159d4a5c6b5a06}{loadInterface}}(config[\textcolor{stringliteral}{"{}interface-\/list"{}}]);}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_window_a966b152fb1c5e3bd38f80145522f025f}{loadGame}}(config[\textcolor{stringliteral}{"{}game"{}}]);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}(config[\textcolor{stringliteral}{"{}choose-\/interface"{}}])\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ UI.push(config[\textcolor{stringliteral}{"{}choose-\/interface"{}}].as<std::string>());}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{if}(config[\textcolor{stringliteral}{"{}input-\/delay"{}}])\ }
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ delay\ =\ config[\textcolor{stringliteral}{"{}input-\/delay"{}}].as<\textcolor{keywordtype}{int}>()\ /\ 1000.0;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ Wcontent.input\_delay\ =\ std::chrono::duration<double>(delay);}
+\DoxyCodeLine{00034\ \ \ \ \ \}\textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ Wcontent.input\_delay\ =\ std::chrono::duration<int>(50)\ /\ 1000.0;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{if}(config[\textcolor{stringliteral}{"{}runtime-\/delay"{}}])\ }
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ delay\ =\ config[\textcolor{stringliteral}{"{}runtime-\/delay"{}}].as<\textcolor{keywordtype}{int}>()\ /\ 1000.0;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ Wcontent.runtime\_delay\ =\ std::chrono::duration<double>(delay);}
+\DoxyCodeLine{00043\ \ \ \ \ \}\textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ Wcontent.runtime\_delay\ =\ std::chrono::duration<int>(40)\ /\ 1000.0;}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a245d821e6016fa1f6970ccbbedd635f6}\label{class_window_a245d821e6016fa1f6970ccbbedd635f6} 
+\index{Window@{Window}!````~Window@{\texorpdfstring{$\sim$}{\string~}Window}}
+\index{````~Window@{\texorpdfstring{$\sim$}{\string~}Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Window()}{\string~Window()}}
+{\footnotesize\ttfamily Window\+::\texorpdfstring{$\sim$}{\string~}\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{window_2src_2destructor_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{window_2src_2destructor_8cpp_source}{destructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ CloseWindow();}
+\DoxyCodeLine{00006\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_window_a2ec96f7b1e29635e7a7bff479697ecf9}\label{class_window_a2ec96f7b1e29635e7a7bff479697ecf9} 
+\index{Window@{Window}!draw@{draw}}
+\index{draw@{draw}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Window\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{running_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{running_8cpp_source}{running.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ BeginDrawing();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ UI.draw();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ EndDrawing();}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a1e1d137d6d2f207883d9c098a2a9a0a9}\label{class_window_a1e1d137d6d2f207883d9c098a2a9a0a9} 
+\index{Window@{Window}!getRuntimeEvent@{getRuntimeEvent}}
+\index{getRuntimeEvent@{getRuntimeEvent}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{getRuntimeEvent()}{getRuntimeEvent()}}
+{\footnotesize\ttfamily void Window\+::get\+Runtime\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{running_8cpp_source_l00097}{97}} of file \mbox{\hyperlink{running_8cpp_source}{running.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!Wcontent.isRuntimeDelayOver())}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(10));}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ UI.getRuntimeEvent();}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action-\/>\mbox{\hyperlink{class_action_aa52ec29adf562280bdd3942d30f94d10}{isPackage}}())}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ act\ :\ action-\/>unpack())\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(act-\/>isRequest())\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ request\_pool.push(act);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ immediate\_user\_pool.push(act);}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!action-\/>\mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{isRequest}}())}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ immediate\_pool.push(action);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ Wcontent.setRuntimeClock2Now();}
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a51169e60003d71a199cf3d9221dfa229}\label{class_window_a51169e60003d71a199cf3d9221dfa229} 
+\index{Window@{Window}!getUserEvent@{getUserEvent}}
+\index{getUserEvent@{getUserEvent}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{getUserEvent()}{getUserEvent()}}
+{\footnotesize\ttfamily void Window\+::get\+User\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{running_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{running_8cpp_source}{running.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!Wcontent.isInputDelayOver())}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(10));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ UI.react();}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action-\/>\mbox{\hyperlink{class_action_aa52ec29adf562280bdd3942d30f94d10}{isPackage}}())}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ act\ :\ action-\/>unpack())\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(act-\/>isRequest())\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ request\_pool.push(act);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ immediate\_user\_pool.push(act);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(!action-\/>\mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{isRequest}}())\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ immediate\_user\_pool.push(action);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ Wcontent.setInputClock2Now();}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a7c8938f4d38b3f42c9650a69f0a4033f}\label{class_window_a7c8938f4d38b3f42c9650a69f0a4033f} 
+\index{Window@{Window}!immediateActing@{immediateActing}}
+\index{immediateActing@{immediateActing}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{immediateActing()}{immediateActing()}}
+{\footnotesize\ttfamily void Window\+::immediate\+Acting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{acting_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{acting_8cpp_source}{acting.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{00053\ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ immediate\_pool.pop();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ action-\/>\mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{execute}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_ad558d17039a65a0d42d3bdda01e36651}\label{class_window_ad558d17039a65a0d42d3bdda01e36651} 
+\index{Window@{Window}!initRaylib@{initRaylib}}
+\index{initRaylib@{initRaylib}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{initRaylib()}{initRaylib()}}
+{\footnotesize\ttfamily void Window\+::init\+Raylib (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{window_2src_2constructor_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{window_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ Wcontent.width\ =\ config[\textcolor{stringliteral}{"{}width"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00053\ \ \ \ \ Wcontent.height\ =\ config[\textcolor{stringliteral}{"{}height"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00054\ \ \ \ \ Wcontent.title\ =\ config[\textcolor{stringliteral}{"{}title"{}}].as<std::string>();}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ enable\ resizeable\ window\ and\ vsync}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ SetConfigFlags(FLAG\_WINDOW\_RESIZABLE\ |\ FLAG\_VSYNC\_HINT);}
+\DoxyCodeLine{00058\ \ \ \ \ InitWindow(Wcontent.width,\ Wcontent.height,\ Wcontent.title.c\_str());}
+\DoxyCodeLine{00059\ \ \ \ \ SetTargetFPS(60);}
+\DoxyCodeLine{00060\ \ \ \ \ Wcontent.setStatus(\textcolor{keyword}{true});}
+\DoxyCodeLine{00061\ \ \ \ \ UI.setRootFrame(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_frame}{Frame}}(\{0,\ 0,\ Wcontent.width,\ Wcontent.height\}));}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_ac814385898713b342da0c0030de72fed}\label{class_window_ac814385898713b342da0c0030de72fed} 
+\index{Window@{Window}!isClose@{isClose}}
+\index{isClose@{isClose}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{isClose()}{isClose()}}
+{\footnotesize\ttfamily bool Window\+::is\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{running_8cpp_source_l00136}{136}} of file \mbox{\hyperlink{running_8cpp_source}{running.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{return}\ !Wcontent.getStatus();}
+\DoxyCodeLine{00139\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a481e1b58c1cd3c4f209ebb77389b0035}\label{class_window_a481e1b58c1cd3c4f209ebb77389b0035} 
+\index{Window@{Window}!isRun@{isRun}}
+\index{isRun@{isRun}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{isRun()}{isRun()}}
+{\footnotesize\ttfamily bool Window\+::is\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{running_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{running_8cpp_source}{running.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{return}\ Wcontent.getStatus();}
+\DoxyCodeLine{00134\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a966b152fb1c5e3bd38f80145522f025f}\label{class_window_a966b152fb1c5e3bd38f80145522f025f} 
+\index{Window@{Window}!loadGame@{loadGame}}
+\index{loadGame@{loadGame}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{loadGame()}{loadGame()}}
+{\footnotesize\ttfamily void Window\+::load\+Game (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{window_2src_2constructor_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{window_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{if}(!node)\ return\ ;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}file"{}}].as<std::string>();}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ 0,\ y\ =\ 0,\ w\ =\ 1,\ h\ =\ 1;}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}x"{}}])\ x\ =\ node[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}y"{}}])\ y\ =\ node[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}w"{}}])\ w\ =\ node[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}h"{}}])\ h\ =\ node[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{class_interface}{Interface}}*\ inf\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game}{Game}}(UI.getRootFrame(),\ \{x,\ y,\ w,\ h\});}
+\DoxyCodeLine{00100\ \ \ \ \ inf-\/>linkContent(path);}
+\DoxyCodeLine{00101\ \ \ \ \ UI.load(inf);}
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a10eed1c286789ea0a3159d4a5c6b5a06}\label{class_window_a10eed1c286789ea0a3159d4a5c6b5a06} 
+\index{Window@{Window}!loadInterface@{loadInterface}}
+\index{loadInterface@{loadInterface}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{loadInterface()}{loadInterface()}}
+{\footnotesize\ttfamily void Window\+::load\+Interface (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{window_2src_2constructor_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{window_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}(!node)\ return\ ;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ UI.setInterfacePool(\textcolor{keyword}{new}\ InterfacePool());}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ std::string\ path\ =\ i[\textcolor{stringliteral}{"{}file"{}}].as<std::string>();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ 0,\ y\ =\ 0,\ w\ =\ 1,\ h\ =\ 1;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ w\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ h\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface}{Interface}}*\ inf\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface}{Interface}}(UI.getRootFrame(),\ \{x,\ y,\ w,\ h\});}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ inf-\/>linkContent(path);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ UI.load(inf);}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a593f842e27a96389784cb70e566d1d5e}\label{class_window_a593f842e27a96389784cb70e566d1d5e} 
+\index{Window@{Window}!requestActing@{requestActing}}
+\index{requestActing@{requestActing}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{requestActing()}{requestActing()}}
+{\footnotesize\ttfamily void Window\+::request\+Acting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{acting_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{acting_8cpp_source}{acting.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ }
+\DoxyCodeLine{00088\ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ request\_pool.pop();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(action-\/>\mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{isRequest}}())}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5cac5575e09f76609e1b780647b7ca7c459}{REQUEST::ID::NONE}}):}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca507082297973a57b116eefe37c0539e9}{REQUEST::ID::INVALID}}):\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca707976868535b915c0f7e544da62fe5b}{REQUEST::ID::CHANGE\_INF}}):\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keywordtype}{id}\ =\ action-\/>\mbox{\hyperlink{class_action_aa8860c08894cce78bf203e26acc56e16}{getArgs}}().\mbox{\hyperlink{struct_a_r_g_s_a51e5e8276d28e2d5a217797643388994}{getInterfaceName}}();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.push(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_ae137ec42ddc87d666d49661484410091}\label{class_window_ae137ec42ddc87d666d49661484410091} 
+\index{Window@{Window}!run@{run}}
+\index{run@{run}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Window\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{running_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{running_8cpp_source}{running.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{comment}{//\ last\_chrismas\ =\ now()\ }}
+\DoxyCodeLine{00006\ \ \ \ \ Wcontent.setInputClock2Now();}
+\DoxyCodeLine{00007\ \ \ \ \ Wcontent.setRuntimeClock2Now();}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//Wcontent.thread\_pool.push\_back(std::thread(\&Window::draw,\ this));}}
+\DoxyCodeLine{00010\ \ \ \ \ Wcontent.thread\_pool.push\_back(std::thread(\&\mbox{\hyperlink{class_window_a51169e60003d71a199cf3d9221dfa229}{Window::getUserEvent}},\ \textcolor{keyword}{this}));}
+\DoxyCodeLine{00011\ \ \ \ \ Wcontent.thread\_pool.push\_back(std::thread(\&\mbox{\hyperlink{class_window_a1e1d137d6d2f207883d9c098a2a9a0a9}{Window::getRuntimeEvent}},\ \textcolor{keyword}{this}));}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{//Wcontent.thread\_pool.push\_back(std::thread(\&Window::sound\_effect,\ this));}}
+\DoxyCodeLine{00013\ \ \ \ \ Wcontent.thread\_pool.push\_back(std::thread(\&\mbox{\hyperlink{class_window_a7513617caa6b1a47881c78d2f8f52382}{Window::userActing}},\ \textcolor{keyword}{this}));}
+\DoxyCodeLine{00014\ \ \ \ \ Wcontent.thread\_pool.push\_back(std::thread(\&\mbox{\hyperlink{class_window_a7513617caa6b1a47881c78d2f8f52382}{Window::userActing}},\ \textcolor{keyword}{this}));}
+\DoxyCodeLine{00015\ \ \ \ \ Wcontent.thread\_pool.push\_back(std::thread(\&\mbox{\hyperlink{class_window_a7c8938f4d38b3f42c9650a69f0a4033f}{Window::immediateActing}},\ \textcolor{keyword}{this}));}
+\DoxyCodeLine{00016\ \ \ \ \ Wcontent.thread\_pool.push\_back(std::thread(\&\mbox{\hyperlink{class_window_a7c8938f4d38b3f42c9650a69f0a4033f}{Window::immediateActing}},\ \textcolor{keyword}{this}));}
+\DoxyCodeLine{00017\ \ \ \ \ Wcontent.thread\_pool.push\_back(std::thread(\&\mbox{\hyperlink{class_window_a7c8938f4d38b3f42c9650a69f0a4033f}{Window::immediateActing}},\ \textcolor{keyword}{this}));}
+\DoxyCodeLine{00018\ \ \ \ \ Wcontent.thread\_pool.push\_back(std::thread(\&\mbox{\hyperlink{class_window_a593f842e27a96389784cb70e566d1d5e}{Window::requestActing}},\ \textcolor{keyword}{this}));}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{00021\ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_a2ec96f7b1e29635e7a7bff479697ecf9}{draw}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_aae7dda8daf0968d8c6206ebb11e8768d}{systemEvent}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_a7ddf17f69d4bfdd667f20b028a8c6324}{systemActing}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//getUserEvent();}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{comment}{//getRuntimeEvent();}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//sound\_effect();}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//userActing();}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//immediateActing();}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(5));}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a2c07f02fa7a91560a56d238c9350bae2}\label{class_window_a2c07f02fa7a91560a56d238c9350bae2} 
+\index{Window@{Window}!sound\_effect@{sound\_effect}}
+\index{sound\_effect@{sound\_effect}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{sound\_effect()}{sound\_effect()}}
+{\footnotesize\ttfamily void Window\+::sound\+\_\+effect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{running_8cpp_source_l00126}{126}} of file \mbox{\hyperlink{running_8cpp_source}{running.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ do\ nothing}}
+\DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a7ddf17f69d4bfdd667f20b028a8c6324}\label{class_window_a7ddf17f69d4bfdd667f20b028a8c6324} 
+\index{Window@{Window}!systemActing@{systemActing}}
+\index{systemActing@{systemActing}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{systemActing()}{systemActing()}}
+{\footnotesize\ttfamily void Window\+::system\+Acting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{acting_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{acting_8cpp_source}{acting.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ system\_pool.pop();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ action-\/>\mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{execute}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_aae7dda8daf0968d8c6206ebb11e8768d}\label{class_window_aae7dda8daf0968d8c6206ebb11e8768d} 
+\index{Window@{Window}!systemEvent@{systemEvent}}
+\index{systemEvent@{systemEvent}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{systemEvent()}{systemEvent()}}
+{\footnotesize\ttfamily void Window\+::system\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{running_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{running_8cpp_source}{running.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ alt\ +\ F4\ to\ exit\ }}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsKeyDown(KEY\_LEFT\_ALT)\ \&\&\ IsKeyDown(KEY\_F4))}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ system\_pool.push(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_window_a2ef7f0010e69da47bc84a993e52d787e}{CloseAction}}(\textcolor{keyword}{this}));}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (WindowShouldClose())}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ system\_pool.push(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_window_a2ef7f0010e69da47bc84a993e52d787e}{CloseAction}}(\textcolor{keyword}{this}));}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsWindowResized()\ \&\&\ !IsWindowFullscreen())}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ width\ =\ GetScreenWidth();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ height\ =\ GetScreenHeight();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ system\_pool.push(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_window_a8f3ba516e4706c53e45089ad4e2afbaf}{resizeAction}}(\textcolor{keyword}{this},\ width,\ height));}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_window_a7513617caa6b1a47881c78d2f8f52382}\label{class_window_a7513617caa6b1a47881c78d2f8f52382} 
+\index{Window@{Window}!userActing@{userActing}}
+\index{userActing@{userActing}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{userActing()}{userActing()}}
+{\footnotesize\ttfamily void Window\+::user\+Acting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{acting_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{acting_8cpp_source}{acting.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ immediate\_user\_pool.pop();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ action-\/>\mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{execute}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_window_a2ef7f0010e69da47bc84a993e52d787e}\label{class_window_a2ef7f0010e69da47bc84a993e52d787e} 
+\index{Window@{Window}!CloseAction@{CloseAction}}
+\index{CloseAction@{CloseAction}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{CloseAction}{CloseAction}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_close_action}{Close\+Action}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{window_8hpp_source_l00144}{144}} of file \mbox{\hyperlink{window_8hpp_source}{window.\+hpp}}.
+
+\Hypertarget{class_window_a8f3ba516e4706c53e45089ad4e2afbaf}\label{class_window_a8f3ba516e4706c53e45089ad4e2afbaf} 
+\index{Window@{Window}!resizeAction@{resizeAction}}
+\index{resizeAction@{resizeAction}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{resizeAction}{resizeAction}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classresize_action}{resize\+Action}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{window_8hpp_source_l00145}{145}} of file \mbox{\hyperlink{window_8hpp_source}{window.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/window/include/\mbox{\hyperlink{window_8hpp}{window.\+hpp}}\item 
+src/window/src/\mbox{\hyperlink{acting_8cpp}{acting.\+cpp}}\item 
+src/window/src/\mbox{\hyperlink{window_2src_2constructor_8cpp}{constructor.\+cpp}}\item 
+src/window/src/\mbox{\hyperlink{window_2src_2destructor_8cpp}{destructor.\+cpp}}\item 
+src/window/src/\mbox{\hyperlink{running_8cpp}{running.\+cpp}}\end{DoxyCompactItemize}

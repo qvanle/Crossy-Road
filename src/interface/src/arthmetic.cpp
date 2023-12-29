@@ -18,6 +18,7 @@ void Interface::drawContainers()
 
 void Interface::draw()
 {
+    if(!isVisible()) return ;
     Container::draw();
 
     drawNested();

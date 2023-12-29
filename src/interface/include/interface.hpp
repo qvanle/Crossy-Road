@@ -9,6 +9,14 @@
 #include <keystroke.hpp>
 #include <button.hpp>
 
+/**
+ * @class Interface
+ *
+ * @brief where user can interact with the game
+ * 
+ * manages containers, all actions, subframes etc.
+ * 
+**/
 class Interface : public Container
 {
 private: 
@@ -56,6 +64,12 @@ public:
     Action* clone() override;
 };
 
+/**
+ * @class moveObjectAction
+ *
+ * @brief manages the features of a movement, including which object, speed, direction etc.
+ * 
+**/
 class moveObjectAction : public Action
 {
 private: 
