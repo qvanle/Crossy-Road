@@ -43,6 +43,7 @@ Action* Game::getRuntimeEvent()
 
     for(auto i : chunks)
     {
+        if(i->getRelative()[1] > 1.05) break;
         if(i->isEntityCollide(main)) 
         {
             Action* act = new loseRequest();
@@ -69,6 +70,12 @@ Action* Game::getRuntimeEvent()
         action = new moveChunksAction(this, {mapDisplacement[0], mapDisplacement[1]});
         if(packet == nullptr) packet = new PacketAction();
         packet->addAction(action);
+    }
+    if(main->getRelative()[1] > 1.05) 
+    {
+        Action* act = new loseRequest();
+        if(packet == nullptr) packet = new PacketAction();
+        packet->addAction(act);
     }
     action = new moveObjectAction(main, mapDisplacement);
     if(packet == nullptr) packet = new PacketAction();

@@ -152,12 +152,15 @@ void Game::loadAttactObject(YAML::Node node)
 {
     for(auto i : node) 
     {
-        int id = i["chunk"].as<int>();
         int objID = i["object"][0].as<int>();
-        int prob = i["object"][1].as<int>();
         Container* container = getContainers(objID);
-        container->setProbability(prob);
-        cache[id]->addVisiter(container);
+        int prob = i["object"][1].as<int>();
+        for(auto j : i["chunk"])
+        {
+            int id = j.as<int>();
+            container->setProbability(prob);
+            cache[id]->addVisiter(container);
+        }
     }
 }
 
