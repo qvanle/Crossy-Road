@@ -9,6 +9,7 @@ namespace REQUEST
         NONE,
         CHANGE_INF,
         POP_INF,
+        POP_THEN_CHANGE_INF,
         DELAY, 
         LOSE,
     };

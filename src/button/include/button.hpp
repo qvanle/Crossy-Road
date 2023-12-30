@@ -69,4 +69,15 @@ public:
     Action* clone() override;
 };
 
+class popThenChangeInfRequest : public Request
+{
+public:
+    popThenChangeInfRequest(std::string s);
+    popThenChangeInfRequest(popThenChangeInfRequest*);
+    ~popThenChangeInfRequest() = default;
+    int isRequest() override;
+    Action* clone() override;
+    ARGS& getArgs() override;
+};
+
 #endif 

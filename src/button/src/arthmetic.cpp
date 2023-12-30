@@ -72,14 +72,22 @@ void ButtonImage::loadAction(YAML::Node node)
 {
     if(!node) return;
     if(!node["type"]) return;
+
     if(node["type"].as<std::string>() == "change-interface")
     {
         if(!node["str"]) return;
         request = new changeInfRequest(node["str"][0].as<std::string>());
     }
+
      if(node["type"].as<std::string>() == "pop-interface")
     {
         request = new popInfRequest(); // TODO
+    }
+
+    if(node["type"].as<std::string>() == "pop-then-change-interface")
+    {
+        if(!node["str"]) return;
+        request = new popThenChangeInfRequest(node["str"][0].as<std::string>());
     }
 }
 
@@ -101,4 +109,29 @@ int popInfRequest::isRequest()
 Action* popInfRequest::clone()
 {
     return new popInfRequest(this);
+}
+
+popThenChangeInfRequest::popThenChangeInfRequest(std::string s)
+{  
+    args.str.push_back(s);
+}
+
+popThenChangeInfRequest::popThenChangeInfRequest(popThenChangeInfRequest* other)
+{
+    args = other->args;
+}
+
+int popThenChangeInfRequest::isRequest()
+{
+    return REQUEST::ID::POP_THEN_CHANGE_INF;
+}
+
+Action* popThenChangeInfRequest::clone()
+{
+    return new popThenChangeInfRequest(this);
+}
+
+ARGS& popThenChangeInfRequest::getArgs() 
+{
+    return args;
 }

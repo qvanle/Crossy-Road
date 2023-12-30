@@ -101,6 +101,13 @@ void Window::requestActing()
                     UI.push(id);
                     break;
                 }
+            case (REQUEST::ID::POP_THEN_CHANGE_INF): 
+                {
+                    UI.pop();
+                    std::string id = action->getArgs().getInterfaceName();
+                    UI.push(id);
+                    break;
+                }
             case (REQUEST::ID::POP_INF): 
                 {
                     UI.pop();

@@ -53,69 +53,9 @@
     "h": 10
 "button":
   - 
-    "path": "credit.yaml"
-    "x": 00
-    "y": 00
-    "w": 10
-    "h": 10
-  - 
-    "path": "highscore.yaml"
-    "x": 20
-    "y": 00
-    "w": 10
-    "h": 10
-  - 
-    "path": "loadgame.yaml"
-    "x": 40
-    "y": 00
-    "w": 10
-    "h": 10
-  - 
-    "path": "menu.yaml"
-    "x": 60
-    "y": 00
-    "w": 10
-    "h": 10
-  - 
-    "path": "music.yaml"
-    "x": 80
-    "y": 00
-    "w": 10
-    "h": 10
-  - 
-    "path": "newgame.yaml"
-    "x": 00
-    "y": 10
-    "w": 10
-    "h": 10
-  - 
-    "path": "no_music.yaml"
-    "x": 00
-    "y": 20
-    "w": 10
-    "h": 10
-  - 
-    "path": "resume.yaml"
-    "x": 00
-    "y": 40
-    "w": 10
-    "h": 10
-  - 
-    "path": "saveNexit.yaml"
-    "x": 00
-    "y": 50
-    "w": 10
-    "h": 10
-  - 
     "path": "setting.yaml"
     "x": 00
     "y": 60
-    "w": 10
-    "h": 10
-  - 
-    "path": "sfx.yaml"
-    "x": 00
-    "y": 70
     "w": 10
     "h": 10
   - 
