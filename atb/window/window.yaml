@@ -11,12 +11,36 @@
     "h": 100
   -
     "file": "difficultylevel.yaml" 
+    "x": 35
+    "y": 10
+    "w": 30
+    "h": 80
+  -
+    "file": "highscoreeasy.yaml" 
     "x": 25
     "y": 15
     "w": 50
     "h": 70
   -
-    "file": "highscore.yaml" 
+    "file": "highscorenormal.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "highscorehard.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "highscoreinsane.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "highscorenightmare.yaml" 
     "x": 25
     "y": 15
     "w": 50
@@ -58,7 +82,7 @@
   "w": 100 
   "h": 100 
 
-"choose-interface": "game"
+"choose-interface": "gameover"
 "input-delay": 60
 "runtime-delay": 30 
 
