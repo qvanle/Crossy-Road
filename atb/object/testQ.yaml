@@ -6,10 +6,11 @@
    
     "graphics": 
       - 
-        "x": 0
-        "y": 75
-        "w": 25
-        "h": 25
+        "x": 8
+        "y": 80
+        "w": 9
+        "h": 15
+        "gapX": 16
         "repeat": 4
         "axis": "horizontal" 
   -
@@ -17,10 +18,11 @@
     
     "graphics": 
       - 
-        "x": 0
-        "y": 50
-        "w": 25
-        "h": 25
+        "x": 8
+        "y": 55
+        "w": 9
+        "h": 15
+        "gapX": 16
         "repeat": 4
         "axis": "horizontal" 
   - 
@@ -28,10 +30,11 @@
     
     "graphics": 
       - 
-        "x": 0
-        "y": 0
-        "w": 25
-        "h": 25
+        "x": 8
+        "y": 5
+        "w": 9
+        "h": 15
+        "gapX": 16
         "repeat": 4
         "axis": "horizontal"
   - 
@@ -39,10 +42,11 @@
     
     "graphics": 
       - 
-        "x": 0
-        "y": 25
-        "w": 25
-        "h": 25
+        "x": 8
+        "y": 30
+        "w": 9
+        "h": 15
+        "gapX": 16
         "repeat": 4
         "axis": "horizontal"
 

@@ -25,8 +25,8 @@
     "path": "testQ.yaml"
     "x": 46
     "y": 70
-    "w": 7 
-    "h": 7
+    "w": 3 
+    "h": 5
   -
     "path": "entity/cow.yaml"
     "x": 40
