@@ -1,0 +1,54 @@
+"name": "highscorenightmare" # require
+"textures":  # require
+  - 
+    "path": "background/scoreboard-nightmare_background.png"  # require
+    "graphics":  #require
+      -
+        "x": 0
+        "y": 0
+        "w": 100
+        "h": 100
+        "gapX": 0  
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1
+    
+"button":
+  - 
+    "path": "exit.yaml"
+    "x": 85
+    "y": 6
+    "w": 8
+    "h": 8
+  - 
+    "path": "easy_score.yaml" # easy_score is different from easy_difficulty
+    "x": 5
+    "y": 23
+    "w": 16.4
+    "h": 7.5
+  - 
+    "path": "normal_score.yaml"
+    "x": 23
+    "y": 23
+    "w": 16.4
+    "h": 7.5
+  - 
+    "path": "hard_score.yaml"
+    "x": 40.9
+    "y": 23
+    "w": 16.5
+    "h": 7.5
+  - 
+    "path": "insane_score.yaml"
+    "x": 59
+    "y": 23
+    "w": 17
+    "h": 7.5
+  - 
+    "path": "nightmare_score.yaml"
+    "x": 77.5
+    "y": 23
+    "w": 17
+    "h": 7.5
