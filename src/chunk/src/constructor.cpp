@@ -12,10 +12,10 @@ Chunk::Chunk(Chunk* other) : Interface(other)
     for(auto i : other->visiter)
     {
         Rectangle rel;
-        rel.x = 1;
-        rel.y = -0.375;
-        rel.width = i->getRelative()[2];
-        rel.height = i->getRelative()[3];
+        rel.x = 0;
+        rel.y = 0;
+        rel.width = i->getRelative()[2] - 0.03;
+        rel.height = 0.8;
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
@@ -27,10 +27,10 @@ Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
     for(auto i : other->visiter)
     {
         Rectangle rel;
-        rel.x = 1;
-        rel.y = -0.375;
-        rel.width = i->getRelative()[2];
-        rel.height = i->getRelative()[3];
+        rel.x = 0;
+        rel.y = 0;
+        rel.width = i->getRelative()[2] - 0.03;
+        rel.height = 0.8;
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
@@ -42,10 +42,10 @@ Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, fram
     for(auto i : other->visiter)
     {
         Rectangle rel;
-        rel.x = 1;
-        rel.y = -0.375;
-        rel.width = i->getRelative()[2];
-        rel.height = i->getRelative()[3];
+        rel.x = -0.1;
+        rel.y = -0.1;
+        rel.width = i->getRelative()[2] - 0.03;
+        rel.height = 0.8;
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
@@ -56,14 +56,14 @@ void Chunk::generateEntity()
 {
 
     if(visiter.empty()) return;
-    float x = GetRandomValue(-40, 10);
+    float x = -0.3;
     
-    while(x < 0.9)
+    while(x < 1.3)
     {
         Container* c = randomEntity();
         Rectangle rel;
         rel.x = x;
-        rel.y = -0.375;
+        rel.y = 0;
         rel.width = c->getRelative()[2];
         rel.height = c->getRelative()[3];
         Container* cont = new Container(c, this, rel);
@@ -126,7 +126,11 @@ bool Chunk::isEntityCollide(Container* main)
 {
     for(auto i : Entity)
     {
-        if(i->isCollide(main)) return true;
+        if(i->isCollide(main)) 
+        {
+            //throw i;
+            return true;
+        }
     }
     return false;
 }

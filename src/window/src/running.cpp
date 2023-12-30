@@ -1,20 +1,21 @@
 #include "raylib.h"
 #include <window.hpp>
 
-void Window::run() {
-    // last_chrismas = now() 
+void Window::run()
+{
+    // last_chrismas = now()
     Wcontent.setInputClock2Now();
     Wcontent.setRuntimeClock2Now();
 
-    //Wcontent.thread_pool.push_back(std::thread(&Window::draw, this));
+    // Wcontent.thread_pool.push_back(std::thread(&Window::draw, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::getUserEvent, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::getRuntimeEvent, this));
-    //Wcontent.thread_pool.push_back(std::thread(&Window::sound_effect, this));
+    // Wcontent.thread_pool.push_back(std::thread(&Window::sound_effect, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
-    Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
+    //Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
-    Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
-    Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
+    //Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
+    //Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::requestActing, this));
 
     while (isRun())
@@ -22,11 +23,11 @@ void Window::run() {
         draw();
         systemEvent();
         systemActing();
-        //getUserEvent();
-        //getRuntimeEvent();
-        //sound_effect();
-        //userActing();
-        //immediateActing();
+        // getUserEvent();
+        // getRuntimeEvent();
+        // sound_effect();
+        // userActing();
+        // immediateActing();
         std::this_thread::sleep_for(std::chrono::milliseconds(5));
     }
 }
@@ -36,16 +37,15 @@ void Window::draw()
     {
         BeginDrawing();
         UI.draw();
-        inputBox->draw();
+        //inputBox->draw();
         EndDrawing();
     }
-
 }
 
-void Window::systemEvent() 
+void Window::systemEvent()
 {
     {
-        // alt + F4 to exit 
+        // alt + F4 to exit
         if (IsKeyDown(KEY_LEFT_ALT) && IsKeyDown(KEY_F4))
         {
             system_pool.push(new CloseAction(this));
@@ -66,37 +66,44 @@ void Window::systemEvent()
 
 void Window::getUserEvent()
 {
-    while(isRun())
+    while (isRun())
     {
-        if(!Wcontent.isInputDelayOver())
+        if (!Wcontent.isInputDelayOver())
         {
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
             continue;
         }
 
-        Action* action = UI.react();
-        if(action != nullptr) 
+        Action *action = UI.react();
+        if (action != nullptr)
         {
-            if(action->isPackage())
+            if (action->isPackage())
             {
-                for(auto act : action->unpack()) 
+                for (auto act : action->unpack())
                 {
-                    if(act->isRequest()) 
+                    if (act->isRequest())
                         request_pool.push(act);
-                    else 
+                    else
                         immediate_user_pool.push(act);
                 }
             }
-            else if(!action->isRequest()) 
+            else if (!action->isRequest())
+                immediate_user_pool.push(action);
+        }
+        // test inputBox
+        action = inputBox->react();
+        if (action != nullptr)
+        {
+            if (!action->isRequest())
                 immediate_user_pool.push(action);
         }
 
-        action = inputBox->react();
-        if(action != nullptr) 
-        {
-            if(!action->isRequest()) 
-                immediate_user_pool.push(action);
-        }
+        // action = inputBox->react();
+        // if(action != nullptr) 
+        // {
+        //     if(!action->isRequest()) 
+        //         immediate_user_pool.push(action);
+        // }
 
         Wcontent.setInputClock2Now();
     }
@@ -104,24 +111,24 @@ void Window::getUserEvent()
 
 void Window::getRuntimeEvent()
 {
-    while(isRun())
+    while (isRun())
     {
 
-        if(!Wcontent.isRuntimeDelayOver())
+        if (!Wcontent.isRuntimeDelayOver())
         {
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
             continue;
         }
-        Action* action = UI.getRuntimeEvent();
-        if(action != nullptr) 
+        Action *action = UI.getRuntimeEvent();
+        if (action != nullptr)
         {
-            if(action->isPackage())
+            if (action->isPackage())
             {
-                for(auto act : action->unpack()) 
+                for (auto act : action->unpack())
                 {
-                    if(act->isRequest()) 
+                    if (act->isRequest())
                         request_pool.push(act);
-                    else 
+                    else
                         immediate_user_pool.push(act);
                 }
             }

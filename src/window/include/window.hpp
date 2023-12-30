@@ -147,9 +147,10 @@ private:
 
     WinContent Wcontent;
     UI UI;
+    ActionPool immediate_user_pool, immediate_pool, request_pool, system_pool;
+
     // test inputBox
     InputBox* inputBox;
-    ActionPool immediate_user_pool, immediate_pool, request_pool, system_pool;
 
 protected:
     void draw();

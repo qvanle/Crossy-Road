@@ -13,14 +13,20 @@
     "h": 10 
     "velocity": [0.005, 1, 0]
     "probabilty": 80
+  - 
+    "file": "test.yaml"
+    "w": 100 
+    "h": 10 
+    "velocity": [-0.005, 1, 0]
+    "probabilty": 80
 
 "object": 
   -
-    "path": "test.yaml"
+    "path": "testQ.yaml"
     "x": 46
     "y": 70
-    "w": 8 
-    "h": 10
+    "w": 7 
+    "h": 7
   -
     "path": "entity/cow.yaml"
     "x": 40
@@ -42,12 +48,6 @@
   - 
     "path": "entity/frog.yaml"
     "x": 90
-    "y": 40
-    "w": 10
-    "h": 10
-  - 
-    "path": "testQ.yaml"
-    "x": 80
     "y": 40
     "w": 10
     "h": 10
@@ -112,8 +112,20 @@
     "y": 60
     "w": 10
     "h": 10
+  - 
+    "path": "sfx.yaml"
+    "x": 00
+    "y": 70
+    "w": 10
+    "h": 10
+  - 
+    "path": "pause.yaml"
+    "x": 20
+    "y": 70
+    "w": 10
+    "h": 10
 "event": 
-  "map-speed": 0.001 # 0.02% per 20 milisecond 
+  "map-speed": 0.002 # 0.02% per 20 milisecond 
   "map-direction": [0, 1]
 
 "collide": 
@@ -125,25 +137,28 @@
 "attach-object": 
   - 
     "chunk": 1 
-    "object": [4, 10] # each 1 second there is 10% to generate object 1
+    "object": [1, 10] # each 1 second there is 10% to generate object 1
   - 
     "chunk": 1 
-    "object": [4, 10] # each 1 second there is 10% to generate object 1
+    "object": [2, 10] # each 1 second there is 10% to generate object 1
+  - 
+    "chunk": 2 
+    "object": [3, 10] # each 1 second there is 10% to generate object 1
 
 "control": 
   -
     "key": ["d"]
     "action": "move-object"
-    "args": [0, 2, 1, 0] 
+    "args": [0, 0.8, 1, 0] 
   - 
     "key": ["a"] 
     "action": "move-object"
-    "args": [0, 2, -1, 0] 
+    "args": [0, 0.8, -1, 0] 
   - 
     "key": ["w"]
     "action": "move-object"
-    "args": [0, 2, 0, -1] 
+    "args": [0, 0.8, 0, -1] 
   - 
     "key": ["s"]
     "action": "move-object"
-    "args": [0, 2, 0, 1] 
+    "args": [0, 0.8, 0, 1] 
