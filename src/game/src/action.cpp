@@ -77,6 +77,18 @@ Action* Game::getRuntimeEvent()
         if(packet == nullptr) packet = new PacketAction();
         packet->addAction(act);
     }
+    if(main->getRelative()[0] < -0.4)
+    {
+        Action* act = new loseRequest();
+        if(packet == nullptr) packet = new PacketAction();
+        packet->addAction(act);
+    }
+    if(main->getRelative()[0] > 1.2)
+    {
+        Action* act = new loseRequest();
+        if(packet == nullptr) packet = new PacketAction();
+        packet->addAction(act);
+    }
     action = new moveObjectAction(main, mapDisplacement);
     if(packet == nullptr) packet = new PacketAction();
     packet->addAction(action);
