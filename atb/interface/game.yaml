@@ -35,10 +35,10 @@
 "object": 
   -
     "path": "testQ.yaml"
-    "x": 46
-    "y": 50
-    "w": 3 
-    "h": 5
+    "x": 100
+    "y": 100
+    "w": 7 
+    "h": 7
   -
     "path": "entity/cow.yaml"
     "x": 40
@@ -59,6 +59,12 @@
     "h": 10
   - 
     "path": "entity/frog.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/squirrel.yaml"
     "x": 90
     "y": 40
     "w": 10
@@ -89,13 +95,13 @@
 "attach-object": 
   - 
     "chunk": [1] 
-    "object": [1, 10] # each 1 second there is 10% to generate object 1
+    "object": [5, 10] # each 1 second there is 10% to generate object 1
   - 
-    "chunk": [1, 2, 3]
-    "object": [2, 10] # each 1 second there is 10% to generate object 1
+    "chunk": [2, 3, 4]
+    "object": [5, 10] # each 1 second there is 20% to generate object 2
   - 
     "chunk": [4] 
-    "object": [3, 10] # each 1 second there is 10% to generate object 1
+    "object": [5, 10] # each 1 second there is 30% to generate object 3
 
 "control": 
   -

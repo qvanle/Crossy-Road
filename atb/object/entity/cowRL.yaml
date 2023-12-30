@@ -1,8 +1,8 @@
-"name": "cowLR" 
+"name": "cowRL" 
 
-"textures": 
+"textures":  
   -
-    "path": "animals/cow_map_LR.png"
+    "path": "animals/cow_map_RL.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
@@ -18,7 +18,9 @@
         "w": 25
         "h": 50
         "repeat": 3
-        "axis": "horizontal"     
+        "axis": "horizontal"   
+
+
 "focus": [0, 0]
 
 # "control": 

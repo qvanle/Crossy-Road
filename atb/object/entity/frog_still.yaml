@@ -1,24 +1,17 @@
-"name": "cowLR" 
+"name": "frogstil" 
 
 "textures": 
   -
-    "path": "animals/cow_map_LR.png"
+    "path": "animals/frog_still.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
         "x": 0
         "y": 0
-        "w": 25
-        "h": 50
-        "repeat": 4
-        "axis": "horizontal"
-      -
-        "x": 0
-        "y": 50
-        "w": 25
-        "h": 50
-        "repeat": 3
-        "axis": "horizontal"     
+        "w": 20
+        "h": 100
+        "repeat": 5
+        "axis": "horizontal" 
 "focus": [0, 0]
 
 # "control": 
