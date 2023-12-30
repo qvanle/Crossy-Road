@@ -141,8 +141,8 @@ void Container::loadSprites(YAML::Node node)
         {
             float x, y, w, h;
             int repeat = 1;
-            int gapX = 0;
-            int gapY = 0;
+            float gapX = 0;
+            float gapY = 0;
 
             int dx = 1;
             int dy = 1;
@@ -162,9 +162,9 @@ void Container::loadSprites(YAML::Node node)
             if(img["repeat"]) 
                 repeat = img["repeat"].as<int>();
             if(img["gapX"])
-                gapX = img["gapX"].as<int>();
+                gapX = img["gapX"].as<float>() / 100.0;
             if(img["gapY"])
-                gapY = img["gapY"].as<int>();
+                gapY = img["gapY"].as<float>() / 100.0;
 
             if(img["dx"])
                 dx = img["dx"].as<int>();

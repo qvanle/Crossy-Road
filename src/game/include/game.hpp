@@ -17,6 +17,7 @@ class Game : public Interface
 {
 private: 
     friend class moveChunksAction;
+    friend class startInitClockAction;
     std::deque<Chunk*> chunks;
     std::vector<Chunk*> cache;
     Container* main;
@@ -24,6 +25,7 @@ private:
     fPoint mapDirection;
     float mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
+    std::chrono::time_point<std::chrono::system_clock> initStateClock;
     bool initState;
 protected:
     void loadChunk(YAML::Node);
@@ -40,6 +42,8 @@ public:
     ~Game();
 
     std::string linkContentAbsolute(std::string path) override;
+    
+    void reset() override;
 
     Action* react() override;
     Action* getRuntimeEvent() override;
@@ -58,6 +62,18 @@ public:
     moveChunksAction(Game*, fPoint);
     moveChunksAction(Game*, fPoint, float);
     ~moveChunksAction();
+
+    void execute() override;
+    Action* clone() override;
+};
+
+class startInitClockAction : public Action
+{
+private: 
+    Game* game;
+public:
+    startInitClockAction(Game*);
+    ~startInitClockAction() = default;
 
     void execute() override;
     Action* clone() override;

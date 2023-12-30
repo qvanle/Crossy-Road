@@ -17,6 +17,18 @@
     "file": "test.yaml"
     "w": 100 
     "h": 10 
+    "velocity": [0.009, 1, 0]
+    "probabilty": 80
+  - 
+    "file": "test.yaml"
+    "w": 100 
+    "h": 10 
+    "velocity": [0.003, 1, 0]
+    "probabilty": 80
+  - 
+    "file": "test.yaml"
+    "w": 100 
+    "h": 10 
     "velocity": [-0.005, 1, 0]
     "probabilty": 80
 
@@ -24,9 +36,9 @@
   -
     "path": "testQ.yaml"
     "x": 46
-    "y": 70
-    "w": 7 
-    "h": 7
+    "y": 50
+    "w": 3 
+    "h": 5
   -
     "path": "entity/cow.yaml"
     "x": 40
@@ -76,13 +88,13 @@
 
 "attach-object": 
   - 
-    "chunk": 1 
+    "chunk": [1] 
     "object": [1, 10] # each 1 second there is 10% to generate object 1
   - 
-    "chunk": 1 
+    "chunk": [1, 2, 3]
     "object": [2, 10] # each 1 second there is 10% to generate object 1
   - 
-    "chunk": 2 
+    "chunk": [4] 
     "object": [3, 10] # each 1 second there is 10% to generate object 1
 
 "control": 

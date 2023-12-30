@@ -5,8 +5,6 @@ void Chunk::drawEntity()
     for(auto i : Entity)
     {
         i->draw();
-
-        DrawRectangleLinesEx(i->getFrame(), 5, RED);
     }
 }
 

@@ -12,7 +12,6 @@ void Game::draw()
             (*i)->draw();
         }else std::cout << i - chunks.begin() << " is nullptr" << std::endl;
     }
-    DrawRectangleLinesEx(main->getFrame(), 5, RED);
-
+    main->draw();
     drawContainers();
 }

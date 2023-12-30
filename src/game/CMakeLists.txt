@@ -7,6 +7,7 @@ add_library(
     src/arthmetic.cpp
     src/action.cpp
     src/action/movechunk.cpp
+    src/action/startinit.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC dep::raylib)
