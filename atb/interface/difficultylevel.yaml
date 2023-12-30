@@ -1,7 +1,7 @@
 "name": "difficultylevel" # require
 "textures":  # require
   - 
-    "path": "menu_background.png"  # require
+    "path": "background/difficulty_background.png"  # require
     "graphics":  #require
       -
         "x": 00
@@ -17,32 +17,38 @@
     
 "button":
   - 
-    "path": "newgame.yaml" # should be nightmare.yaml
-    "x": 40
-    "y": 25
-    "w": 20
-    "h": 20
+    "path": "nightmare_difficulty.yaml"
+    "x": 30
+    "y": 23
+    "w": 40
+    "h": 10
   - 
-    "path": "newgame.yaml" # should be insane.yaml
-    "x": 40
-    "y": 37
-    "w": 20
-    "h": 20
+    "path": "insane_difficulty.yaml"
+    "x": 30
+    "y": 38
+    "w": 40
+    "h": 10
   - 
-    "path": "newgame.yaml" # should be hard.yaml
-    "x": 40
-    "y": 49
-    "w": 20
-    "h": 20
+    "path": "hard_difficulty.yaml"
+    "x": 30
+    "y": 53
+    "w": 40
+    "h": 10
   - 
-    "path": "newgame.yaml" # should be normal.yaml
-    "x": 40
-    "y": 61
-    "w": 20
-    "h": 20
-  - 
-    "path": "newgame.yaml" # should be easy.yaml
-    "x": 40
-    "y": 73
-    "w": 20
-    "h": 20
+    "path": "normal_difficulty.yaml"
+    "x": 30
+    "y": 68
+    "w": 40
+    "h": 10
+  -
+    "path": "easy_difficulty.yaml"
+    "x": 30
+    "y": 83
+    "w": 40
+    "h": 10
+  -
+    "path": "exit.yaml"
+    "x": 85
+    "y": 3.5
+    "w": 10
+    "h": 6

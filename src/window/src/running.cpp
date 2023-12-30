@@ -98,6 +98,13 @@ void Window::getUserEvent()
                 immediate_user_pool.push(action);
         }
 
+        // action = inputBox->react();
+        // if(action != nullptr) 
+        // {
+        //     if(!action->isRequest()) 
+        //         immediate_user_pool.push(action);
+        // }
+
         Wcontent.setInputClock2Now();
     }
 }

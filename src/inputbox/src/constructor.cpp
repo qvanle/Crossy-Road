@@ -29,7 +29,7 @@ highScore::highScore(std::string path)
 			char space;
 			//ss >> space;
 			getline(ss, name);
-			if(name[0] = ' ') name.erase(0, 1);
+			if(name[0] == ' ') name.erase(0, 1);
 			list.push_back(std::make_pair(score, name));
 		}
 	}

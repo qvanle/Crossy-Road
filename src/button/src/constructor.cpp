@@ -15,6 +15,8 @@ ButtonImage::ButtonImage(Frame* parrent, Rectangle rel) : Container(parrent, rel
     this->hoverID = -1;
     this->pressingID = -1;
     this->clickedID = -1;
+
+    this->request = nullptr;
 }
 
 std::string ButtonImage::linkContent(std::string path)
@@ -36,7 +38,11 @@ std::string ButtonImage::linkContentAbsolute(std::string path)
     {
         loadEvent(node["events"]);
     }
-
+    
+    if(node["action"])
+    {
+        loadAction(node["action"]);
+    }
     return getName();
 }
 

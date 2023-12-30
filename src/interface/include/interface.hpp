@@ -51,6 +51,7 @@ public:
     Action* react() override;
     Action* getRuntimeEvent() override;
     void draw() override;
+	
 };
 
 class movetoObjectAction : public Action

@@ -8,7 +8,7 @@
 #include <fstream>
 #include <sstream>
 
-static std::chrono::duration<double> backspace_delay = std::chrono::duration<double>(50 / 1000.0);
+static std::chrono::duration<double> typing_delay = std::chrono::duration<double>(70 / 1000.0);
 
 class InputBox : public Interface
 {
@@ -24,7 +24,7 @@ private:
     int fontSize, framesCounter;
     Font* font;
     std::string showText, rawText;
-    std::chrono::time_point<std::chrono::steady_clock> lastBackspace;
+    std::chrono::time_point<std::chrono::steady_clock> lastTyping;
 
     bool isActivated, isFlicked;
     int letterCount;
