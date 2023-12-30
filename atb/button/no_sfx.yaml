@@ -2,25 +2,25 @@
 
 "textures": 
   -
-    "path": "buttons/no_sfx_normal.png"
+    "path": "pause menu/no_sfx_normal.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
         "axis": "horizontal" 
   -
-    "path": "buttons/no_sfx_hover.png"
+    "path": "pause menu/no_sfx_hover.png"
     "resize": [0.5, 0.5]
     "graphics": 
       -
         "axis": "horizontal" 
   -
-    "path": "buttons/no_sfx_clicked.png"
+    "path": "pause menu/no_sfx_clicked.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
         "axis": "horizontal"
   -
-    "path": "buttons/no_sfx_clicked.png"
+    "path": "pause menu/no_sfx_clicked.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
