@@ -34,7 +34,7 @@
 
 "object": 
   -
-    "path": "testQ.yaml"
+    "path": "ghost.yaml"
     "x": 100
     "y": 100
     "w": 7 
@@ -64,7 +64,7 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/squirrel.yaml"
+    "path": "entity/policeRL.yaml"
     "x": 90
     "y": 40
     "w": 10

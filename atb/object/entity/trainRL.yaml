@@ -2,7 +2,7 @@
 
 "textures": 
   -
-    "path": "vehicle/TRAIN_EAST.png"
+    "path": "vehicle/TRAIN_WEST.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
