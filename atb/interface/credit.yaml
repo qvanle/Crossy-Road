@@ -1,7 +1,7 @@
 "name": "credit" # require
 "textures":  # require
   - 
-    "path": "credit_background.png"  # require
+    "path": "background/credit_background.png"  # require
     "graphics":  #require
       -
         "x": 00
@@ -17,8 +17,8 @@
     
 "button":
   - 
-    "path": "music.yaml" # should be exit.yaml
-    "x": 82
+    "path": "exit.yaml"
+    "x": 85
     "y": 6
-    "w": 12
-    "h": 12
+    "w": 8
+    "h": 8

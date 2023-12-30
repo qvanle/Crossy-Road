@@ -1,7 +1,7 @@
 "name": "setting" # require
 "textures":  # require
   - 
-    "path": "menu_background.png"  # require
+    "path": "background/setting_background.png"  # require
     "graphics":  #require
       -
         "x": 00
@@ -17,32 +17,32 @@
     
 "button":
   - 
-    "path": "music.yaml"
-    "x": 16
-    "y": 25
-    "w": 30
-    "h": 30
-  - 
     "path": "no_music.yaml"
-    "x": 56
-    "y": 25
-    "w": 30
-    "h": 30
+    "x": 15
+    "y": 37
+    "w": 25
+    "h": 25
   - 
-    "path": "sfx.yaml"
-    "x": 16
-    "y": 60
-    "w": 30
-    "h": 30
+    "path": "music.yaml"
+    "x": 15
+    "y": 37
+    "w": 25
+    "h": 25
   - 
     "path": "no_sfx.yaml"
-    "x": 56
-    "y": 60
-    "w": 30
-    "h": 30
+    "x": 60
+    "y": 37
+    "w": 25
+    "h": 25
   - 
-    "path": "sfx.yaml" # should be exit.yaml
-    "x": 75
-    "y": 5
-    "w": 20
-    "h": 20
+    "path": "sfx.yaml"
+    "x": 60
+    "y": 37
+    "w": 25
+    "h": 25
+  - 
+    "path": "exit.yaml"
+    "x": 42.5
+    "y": 75
+    "w": 15
+    "h": 15

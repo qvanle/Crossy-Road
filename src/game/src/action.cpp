@@ -59,7 +59,7 @@ Action* Game::getRuntimeEvent()
     }
     if(main->getRelative()[1] < 0.5)
     {
-        action = new movetoObjectAction(main, fPoint({main->getRelative()[0], 0.5}));
+        action = new moveObjectAction(main, fPoint({main->getRelative()[0], 0.5}));
         if(packet == nullptr) packet = new PacketAction();
         packet->addAction(action);
 

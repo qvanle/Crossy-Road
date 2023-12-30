@@ -1,7 +1,7 @@
 "name": "pause" # require
 "textures":  # require
   - 
-    "path": "menu_background.png"  # require
+    "path": "background/menu_background.png"  # require
     "graphics":  #require
       -
         "x": 00
@@ -20,41 +20,41 @@
     "path": "resume.yaml"
     "x": 15
     "y": 25
-    "w": 25
-    "h": 19
+    "w": 15
+    "h": 15
   - 
     "path": "saveNexit.yaml"
     "x": 35
-    "y": 22
-    "w": 55
-    "h": 25
-  - 
-    "path": "music.yaml"
-    "x": 25
-    "y": 45
-    "w": 20
+    "y": 25
+    "w": 50
     "h": 15
   - 
     "path": "no_music.yaml"
-    "x": 55
-    "y": 45
-    "w": 20
+    "x": 25
+    "y": 50
+    "w": 15
     "h": 15
   - 
-    "path": "sfx.yaml"
+    "path": "music.yaml"
     "x": 25
-    "y": 61
-    "w": 20
+    "y": 50
+    "w": 15
     "h": 15
   - 
     "path": "no_sfx.yaml"
-    "x": 55
-    "y": 61
-    "w": 20
+    "x": 60
+    "y": 50
+    "w": 15
+    "h": 15
+  - 
+    "path": "sfx.yaml"
+    "x": 60
+    "y": 50
+    "w": 15
     "h": 15
   - 
     "path": "credit.yaml"
-    "x": 25
+    "x": 30
     "y": 75
-    "w": 50
-    "h": 20
+    "w": 40
+    "h": 10
