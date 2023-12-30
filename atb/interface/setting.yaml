@@ -1,7 +1,7 @@
 "name": "setting" # require
 "textures":  # require
   - 
-    "path": "setting_background.png"  # require
+    "path": "background/setting_background.png"  # require
     "graphics":  #require
       -
         "x": 00
@@ -41,7 +41,7 @@
     "w": 25
     "h": 25
   - 
-    "path": "exit.yaml" # should be exit.yaml
+    "path": "exit.yaml"
     "x": 42.5
     "y": 75
     "w": 15
