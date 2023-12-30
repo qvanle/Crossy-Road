@@ -36,5 +36,6 @@
   "clicked":
     "sprite": [[4, 0, 70]]
 "focus": [1,0]
-  # "clicked"
-  #   "sprite": [[2, 0, 70]]
+"action":
+  "type": "change-interface"
+  "str": ["start"]
