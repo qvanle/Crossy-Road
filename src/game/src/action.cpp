@@ -5,6 +5,12 @@
 Action* Game::react()
 {
     if(!isVisible()) return nullptr;
+    if(initState) 
+    {
+        return new startInitClockAction(this);
+    }
+    if(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - initStateClock).count() < 400) 
+        return nullptr;
     return Interface::react();
 }
 
@@ -12,6 +18,12 @@ Action* Game::getRuntimeEvent()
 {
     if(!isVisible()) return nullptr;
     // if now - mapSpeedClock < 10 millisecond, return nullptr 
+    if(initState) 
+    {
+        return new startInitClockAction(this);
+    }
+    if(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - initStateClock).count() < 400) 
+        return nullptr;
 
     if(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - mapSpeedClock).count() < 20) 
         return nullptr;

@@ -26,6 +26,11 @@ Game::Game(Game* other, Frame* frame, Rectangle rect) : Interface(other, frame, 
     initState = true;
 }
 
+void Game::reset()
+{
+    initState = true;
+}
+
 std::string Game::linkContentAbsolute(std::string path)
 {
     YAML::Node node = YAML_FILE::readFile(path);
@@ -92,7 +97,7 @@ void Game::loadMap()
 
         Chunk* chunk = new Chunk(cache[0], this, rel);
         chunks.push_front(chunk);
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 6; i++)
         {
             rel.y += 0.005 - rel.height;
             chunk = new Chunk(cache[0], this, rel);

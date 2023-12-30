@@ -46,6 +46,8 @@ public:
     std::string linkContent(std::string path) override;
     std::string linkContentAbsolute(std::string path) override;
 
+    virtual void reset();
+
     Action* react() override;
     Action* getRuntimeEvent() override;
     void draw() override;

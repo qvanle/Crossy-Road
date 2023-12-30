@@ -103,8 +103,7 @@ void Window::requestActing()
                 }
             case (REQUEST::ID::LOSE): 
                 {
-                    std::cout << "hehe\n";
-                    Wcontent.setStatus(false);
+                    UI.top()->reset();
                     break;
                 }
             default: 
