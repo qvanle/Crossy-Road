@@ -3,7 +3,6 @@
 .todo
 build
 *log
-countline.py
 src/dependency/raylib/raylib 
 src/dependency/yamlcpp/yamlcpp
 .vs
