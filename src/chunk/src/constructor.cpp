@@ -12,10 +12,10 @@ Chunk::Chunk(Chunk* other) : Interface(other)
     for(auto i : other->visiter)
     {
         Rectangle rel;
-        rel.x = 0;
-        rel.y = 0;
-        rel.width = i->getRelative()[2] - 0.03;
-        rel.height = 0.8;
+        rel.x = -0.4;
+        rel.y = -0.1;
+        rel.width = i->getRelative()[2] - 0.04;
+        rel.height = 0.6;
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
@@ -27,10 +27,10 @@ Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
     for(auto i : other->visiter)
     {
         Rectangle rel;
-        rel.x = 0;
-        rel.y = 0;
-        rel.width = i->getRelative()[2] - 0.03;
-        rel.height = 0.8;
+        rel.x = -0.4;
+        rel.y = -0.1;
+        rel.width = i->getRelative()[2] - 0.04;
+        rel.height = 0.6;
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
@@ -42,10 +42,10 @@ Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, fram
     for(auto i : other->visiter)
     {
         Rectangle rel;
-        rel.x = -0.1;
-        rel.y = -0.1;
-        rel.width = i->getRelative()[2] - 0.03;
-        rel.height = 0.8;
+        rel.x = -0.7;
+        rel.y = -0.8;
+        rel.width = i->getRelative()[2] - 0.06;
+        rel.height = 0.4;
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
