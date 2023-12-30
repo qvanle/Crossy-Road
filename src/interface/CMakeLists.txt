@@ -7,6 +7,7 @@ add_library(
     src/arthmetic.cpp
     src/action.cpp
     src/action/moveobject.cpp
+    src/action/movetoobject.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC dep::raylib)
