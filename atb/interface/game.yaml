@@ -78,10 +78,10 @@
     "h": 10
   - 
     "path": "pause.yaml"
-    "x": 20
-    "y": 70
-    "w": 10
-    "h": 10
+    "x": 93.5
+    "y": 2
+    "w": 5
+    "h": 7
 "event": 
   "map-speed": 0.002 # 0.02% per 20 milisecond 
   "map-direction": [0, 1]
