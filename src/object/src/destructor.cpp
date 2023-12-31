@@ -3,9 +3,9 @@
 
 Object::~Object()
 {
-    for(auto &stroke : strokes)
+    for (auto &stroke : strokes)
     {
-        delete stroke;
+        delete stroke.stroke;
     }
     strokes.clear();
 

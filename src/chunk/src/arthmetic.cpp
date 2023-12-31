@@ -1,11 +1,18 @@
 #include <chunk.hpp>
 
-Action* Chunk::react()
+void Chunk::drawEntity() 
 {
-	
+    for(auto i : Entity)
+    {
+        i->draw();
+    }
 }
 
-Action* Chunk::getRuntimeEvent()
+void Chunk::draw() 
 {
-	return nullptr;
+    if(!isVisible()) return;
+    Container::draw();
+    drawNested();
+    drawContainers();
+    drawEntity();
 }

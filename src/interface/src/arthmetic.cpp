@@ -1,31 +1,29 @@
 #include <interface.hpp>
 
-void Interface::draw()
+void Interface::drawNested()
 {
-    Container::draw();
+    for(auto& child : nested)
+    {
+        child->draw();
+    }
+}
 
+void Interface::drawContainers()
+{
     for(auto& child : containers)
     {
         child->draw();
     }
 }
 
-void Interface::push(Container* contain)
+void Interface::draw()
 {
-	containers.push_back(contain);
-}
+    if(!isVisible()) return ;
+    Container::draw();
 
-void Interface::pop()
-{
-	containers.pop_back();
-}
+    drawNested();
 
-Container* Interface::get()
-{
-	return nullptr;
-}
+    drawContainers();
 
-Action* Interface::getRuntimeEvent()
-{
-	return nullptr;
+
 }

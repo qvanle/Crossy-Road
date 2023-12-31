@@ -13,6 +13,7 @@ namespace PATB
     extern const std::string BUTTON_;
     extern const std::string CONTAINER_;
     extern const std::string OBJECT_;
+    extern const std::string INPUTBOX_;
 
 
     extern const std::string MAP_;

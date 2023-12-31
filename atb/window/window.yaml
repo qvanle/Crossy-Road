@@ -1,22 +1,90 @@
 "title": "Crossy Road"
-"width": 1920
-"height": 1080
+"width": 1280
+"height": 768
 
 "interface-list": 
   -
-    "file": "test.yaml" 
-    "x": 0,
-    "y": 0,
-    "w": 100, 
-    "h": 100, 
+    "file": "start.yaml" 
+    "x": 0
+    "y": 0
+    "w": 100
+    "h": 100
   -
-    "file": "game.yaml" 
-    "x": 0,
-    "y": 0,
-    "w": 100, 
-    "h": 100, 
+    "file": "difficultylevel.yaml" 
+    "x": 35
+    "y": 10
+    "w": 30
+    "h": 80
+  -
+    "file": "highscoreeasy.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "highscorenormal.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "highscorehard.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "highscoreinsane.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "highscorenightmare.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "setting.yaml" 
+    "x": 37.5
+    "y": 32.5
+    "w": 25
+    "h": 35
+  -
+    "file": "pause.yaml" 
+    "x": 35
+    "y": 15
+    "w": 30
+    "h": 70
+  -
+    "file": "credit.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "gameover.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70
+  -
+    "file": "test.yaml" 
+    "x": 25
+    "y": 15
+    "w": 50
+    "h": 70  
+"game": 
+  "file": "game.yaml" 
+  "x": 0
+  "y": 0
+  "w": 100 
+  "h": 100 
 
-"choose-interface": "game"
+"choose-interface": "start"
+"input-delay": 60
+"runtime-delay": 30 
 
 "control":
   -

@@ -1,7 +1,16 @@
 .cache
 .cached 
+.todo
 build
+*log
 src/dependency/raylib/raylib 
 src/dependency/yamlcpp/yamlcpp
-.vscode
 .vs
+.vscode
+.vscode/settings.json
+.vscode/settings.json
+<<<<<<< HEAD
+countline.py
+=======
+*.log
+>>>>>>> master

@@ -1,0 +1,130 @@
+\doxysection{Count\+Down Class Reference}
+\hypertarget{class_count_down}{}\label{class_count_down}\index{CountDown@{CountDown}}
+
+
+count the time a playthrough takes  
+
+
+
+
+{\ttfamily \#include $<$countdown.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_count_down_abc95faf017608257eff0c8cfe5d83358}{Count\+Down}} (int milliseconds)
+\item 
+\mbox{\hyperlink{class_count_down_a933d510b884ee270ecbc42af87a331a6}{\texorpdfstring{$\sim$}{\string~}\+Count\+Down}} ()
+\item 
+int \mbox{\hyperlink{class_count_down_a3a7b5ddc0263bcd2698c64979d061fc0}{get}} ()
+\item 
+bool \mbox{\hyperlink{class_count_down_aaa8063479042fab3361ff91fbc444069}{is\+Finished}} ()
+\item 
+void \mbox{\hyperlink{class_count_down_ac9cc8a437e50e582172ab88004791bc5}{run}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+count the time a playthrough takes 
+
+Definition at line \mbox{\hyperlink{countdown_8hpp_source_l00012}{12}} of file \mbox{\hyperlink{countdown_8hpp_source}{countdown.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_count_down_abc95faf017608257eff0c8cfe5d83358}\label{class_count_down_abc95faf017608257eff0c8cfe5d83358} 
+\index{CountDown@{CountDown}!CountDown@{CountDown}}
+\index{CountDown@{CountDown}!CountDown@{CountDown}}
+\doxysubsubsection{\texorpdfstring{CountDown()}{CountDown()}}
+{\footnotesize\ttfamily Count\+Down\+::\+Count\+Down (\begin{DoxyParamCaption}\item[{int}]{milliseconds }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{countdown_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{countdown_8cpp_source}{countdown.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ start\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{00006\ \ \ \ \ finished\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00007\ \ \ \ \ elapsed\_seconds\ =\ std::chrono::milliseconds(milliseconds);}
+\DoxyCodeLine{00008\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_count_down_a933d510b884ee270ecbc42af87a331a6}\label{class_count_down_a933d510b884ee270ecbc42af87a331a6} 
+\index{CountDown@{CountDown}!````~CountDown@{\texorpdfstring{$\sim$}{\string~}CountDown}}
+\index{````~CountDown@{\texorpdfstring{$\sim$}{\string~}CountDown}!CountDown@{CountDown}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CountDown()}{\string~CountDown()}}
+{\footnotesize\ttfamily Count\+Down\+::\texorpdfstring{$\sim$}{\string~}\+Count\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{countdown_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{countdown_8cpp_source}{countdown.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_count_down_a3a7b5ddc0263bcd2698c64979d061fc0}\label{class_count_down_a3a7b5ddc0263bcd2698c64979d061fc0} 
+\index{CountDown@{CountDown}!get@{get}}
+\index{get@{get}!CountDown@{CountDown}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily int Count\+Down\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{countdown_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{countdown_8cpp_source}{countdown.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{return}\ elapsed\_seconds.count()\ *\ 1000;}
+\DoxyCodeLine{00028\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_count_down_aaa8063479042fab3361ff91fbc444069}\label{class_count_down_aaa8063479042fab3361ff91fbc444069} 
+\index{CountDown@{CountDown}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!CountDown@{CountDown}}
+\doxysubsubsection{\texorpdfstring{isFinished()}{isFinished()}}
+{\footnotesize\ttfamily bool Count\+Down\+::is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{countdown_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{countdown_8cpp_source}{countdown.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{return}\ finished\ ||\ (std::chrono::system\_clock::now()\ -\/\ start)\ >\ elapsed\_seconds;}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_count_down_ac9cc8a437e50e582172ab88004791bc5}\label{class_count_down_ac9cc8a437e50e582172ab88004791bc5} 
+\index{CountDown@{CountDown}!run@{run}}
+\index{run@{run}!CountDown@{CountDown}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Count\+Down\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{countdown_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{countdown_8cpp_source}{countdown.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ finished\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00022\ \ \ \ \ start\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/include/\mbox{\hyperlink{countdown_8hpp}{countdown.\+hpp}}\item 
+src/utils/src/\mbox{\hyperlink{countdown_8cpp}{countdown.\+cpp}}\end{DoxyCompactItemize}

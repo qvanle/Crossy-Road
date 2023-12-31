@@ -1,0 +1,71 @@
+"name": "testQ" 
+
+"textures": 
+  -
+    "path": "cat.png"
+   
+    "graphics": 
+      - 
+        "x": 8
+        "y": 80
+        "w": 9
+        "h": 15
+        "gapX": 16
+        "repeat": 4
+        "axis": "horizontal" 
+  -
+    "path": "cat.png"
+    
+    "graphics": 
+      - 
+        "x": 8
+        "y": 55
+        "w": 9
+        "h": 15
+        "gapX": 16
+        "repeat": 4
+        "axis": "horizontal" 
+  - 
+    "path": "cat.png"
+    
+    "graphics": 
+      - 
+        "x": 8
+        "y": 5
+        "w": 9
+        "h": 15
+        "gapX": 16
+        "repeat": 4
+        "axis": "horizontal"
+  - 
+    "path": "cat.png"
+    
+    "graphics": 
+      - 
+        "x": 8
+        "y": 30
+        "w": 9
+        "h": 15
+        "gapX": 16
+        "repeat": 4
+        "axis": "horizontal"
+
+"focus": [0, 0]
+
+"control": 
+  - 
+    "key": ["d"]
+    "sprite": [[0, 0], [0, 1], [0, 2], [0, 3]]
+    "duration": [70, 70, 70, 70]
+  - 
+    "key": ["a"]
+    "sprite": [[1, 0], [1, 1], [1, 2], [1, 3]]
+    "duration": [70, 70, 70, 70]
+  - 
+    "key": ["s"]
+    "sprite": [[2, 0], [2, 1], [2, 2], [2, 3]]
+    "duration": [70, 70, 70, 70]
+  - 
+    "key": ["w"]
+    "sprite": [[3, 0], [3, 1], [3, 2], [3, 3]]
+    "duration": [70, 70, 70, 70]

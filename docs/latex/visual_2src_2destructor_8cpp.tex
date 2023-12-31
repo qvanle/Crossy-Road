@@ -1,0 +1,53 @@
+\doxysection{src/visual/src/destructor.cpp File Reference}
+\hypertarget{visual_2src_2destructor_8cpp}{}\label{visual_2src_2destructor_8cpp}\index{src/visual/src/destructor.cpp@{src/visual/src/destructor.cpp}}
+{\ttfamily \#include $<$visual.\+hpp$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{visual_2src_2destructor_8cpp_aad4b211f99547e29889434d16bc757b3}{delete\+Sprite}} (\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}} sprite)
+\item 
+void \mbox{\hyperlink{visual_2src_2destructor_8cpp_af10265d0048e29bb2de7168f8368cc32}{delete\+Sprites}} (std\+::vector$<$ \mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}} $>$ \texorpdfstring{$\ast$}{*}\&sprites)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{visual_2src_2destructor_8cpp_aad4b211f99547e29889434d16bc757b3}\label{visual_2src_2destructor_8cpp_aad4b211f99547e29889434d16bc757b3} 
+\index{destructor.cpp@{destructor.cpp}!deleteSprite@{deleteSprite}}
+\index{deleteSprite@{deleteSprite}!destructor.cpp@{destructor.cpp}}
+\doxysubsubsection{\texorpdfstring{deleteSprite()}{deleteSprite()}}
+{\footnotesize\ttfamily void delete\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}}}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2destructor_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{visual_2src_2destructor_8cpp_source}{destructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ frame\ :\ sprite)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ delete\ frame;}
+\DoxyCodeLine{00021\ \ \ \ \ sprite.clear();}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+\Hypertarget{visual_2src_2destructor_8cpp_af10265d0048e29bb2de7168f8368cc32}\label{visual_2src_2destructor_8cpp_af10265d0048e29bb2de7168f8368cc32} 
+\index{destructor.cpp@{destructor.cpp}!deleteSprites@{deleteSprites}}
+\index{deleteSprites@{deleteSprites}!destructor.cpp@{destructor.cpp}}
+\doxysubsubsection{\texorpdfstring{deleteSprites()}{deleteSprites()}}
+{\footnotesize\ttfamily void delete\+Sprites (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}} $>$ \texorpdfstring{$\ast$}{*}\&}]{sprites }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{visual_2src_2destructor_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{visual_2src_2destructor_8cpp_source}{destructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{visual_8hpp_af1013d70443d0744ca4b3631b6f75627}{Sprite}}\ \&\ sprite\ :\ *sprites)}
+\DoxyCodeLine{00027\ \ \ \ \ \{\ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{visual_2src_2destructor_8cpp_aad4b211f99547e29889434d16bc757b3}{deleteSprite}}(sprite);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{delete}\ sprites;}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}

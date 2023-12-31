@@ -2,45 +2,67 @@
 #define ACTION_HPP
 
 #include <vector>
+#include <string>
 
+/**
+ * @struct ARGS
+ *
+ * @brief stores request information
+ * 
+**/
+struct ARGS 
+{
+    std::vector<std::string> str;
+    std::vector<int> num;
+    std::vector<void*> addr;
+    ARGS() = default;
+    ~ARGS() = default;
+
+    std::string getInterfaceName();
+};
+extern ARGS NONE_ARGS;
+
+/**
+ * @class Action
+ *
+ * @brief manages the way an action is executed
+ * 
+**/
 class Action 
 {
-private: 
-    int repeat = 1; 
-protected: 
-    void doneExecute();
 public:
     Action();
-    Action(int);
     Action(Action*);
     virtual ~Action() = default;
-    void setRepeat(int);
 
-    virtual bool isRequest();
-    virtual void execute() = 0;
-    virtual void ForceEnd();
-    virtual void Interrupt();
+    virtual int isRequest();
+    virtual bool isPackage();
+    virtual void execute();
     virtual Action* clone();
-
-    int getRepeat() const;
-    bool isInfinite() const;
-    bool isFinished() const;
-
+    virtual std::vector<Action*> unpack();
+    virtual ARGS& getArgs();
 };
 
+/**
+ * @class PacketAction
+ *
+ * @brief organize selected actions into a package
+ * 
+**/
 class PacketAction : public Action
 {
 private: 
     std::vector<Action*> actions;
 public: 
     PacketAction();
-    PacketAction(int);
     PacketAction(PacketAction*);
     ~PacketAction();
-    virtual void addAction(Action*);
-    virtual void execute();
-    virtual void ForceEnd();
-    virtual void Interrupt();
-    virtual PacketAction* clone();
+    bool isPackage() override;
+    void addAction(Action*);
+    void addAction(PacketAction*);
+    std::vector<Action*> unpack() override;
+    void execute() override;
+    PacketAction* clone() override;
 };
+
 #endif 

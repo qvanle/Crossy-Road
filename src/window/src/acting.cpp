@@ -1,54 +1,127 @@
+#include <const/request.hpp>
 #include <window.hpp>
 
 void Window::ActionPool::push(Action* action)
 {
+    std::lock_guard<std::mutex> lock(mtx);
     pool.push(action);
+}
+
+void Window::ActionPool::push(PacketAction* action)
+{
+    std::lock_guard<std::mutex> lock(mtx);
+    std::vector<Action*> unpacked = action->unpack();
+    delete action;
+
+    for(Action*& a : unpacked)
+    {
+        pool.push(a);
+    }
+
 }
 
 Window::ActionPool::~ActionPool()
 {
-    while(!pool.empty())
-    {
-        delete pool.front();
-        pool.pop();
-    }
+    while(pop() != nullptr);
 }
 
 Action* Window::ActionPool::front()
 {
+    std::lock_guard<std::mutex> lock(mtx);
     return pool.front();
 }
 
 Action* Window::ActionPool::pop()
 {
+    std::lock_guard<std::mutex> lock(mtx);
+    if(pool.empty()) return nullptr;
     Action* action = pool.front();
     pool.pop();
     return action;
 }
 
-bool Window::ActionPool::empty() const
+bool Window::ActionPool::empty() 
 {
+    std::lock_guard<std::mutex> lock(mtx);
     return pool.empty();
 }
 
 
 void Window::immediateActing()
 {
-    if(immediate_pool.empty()) return ;
-    Action* action = immediate_pool.pop();
-    
-    action->execute();
-    delete action;
-
+    while(isRun())
+    {
+        Action* action = immediate_pool.pop();
+        if(action == nullptr) continue;
+        if(!isRun()) break;
+        action->execute();
+        delete action;
+    }
 }
 
-void Window::durationActing()
+void Window::userActing()
 {
-    if(duration_pool.empty()) return ;
-    Action* action = duration_pool.pop();
+    while(isRun())
+    {
+        Action* action = immediate_user_pool.pop();
+        if(action == nullptr) continue;
+        if(!isRun()) break;
+        action->execute();
+        delete action;
+    }
+}
 
-    action->execute();
-    if(action->getRepeat() > 0) 
-        duration_pool.push(action);
-    else delete action;
+void Window::systemActing()
+{
+    {
+        Action* action = system_pool.pop();
+        if(action == nullptr) return;
+        if(!isRun()) return;
+        action->execute();
+        delete action;
+    }
+}
+
+void Window::requestActing()
+{
+    while(isRun()) 
+    {
+        Action* action = request_pool.pop();
+        if(action == nullptr) continue;
+        if(!isRun()) break;
+        switch(action->isRequest())
+        {
+            case (REQUEST::ID::NONE):
+                break;
+            case (REQUEST::ID::INVALID): 
+                break;
+            case (REQUEST::ID::CHANGE_INF): 
+                {
+                    std::string id = action->getArgs().getInterfaceName();
+                    UI.push(id);
+                    break;
+                }
+            case (REQUEST::ID::POP_THEN_CHANGE_INF): 
+                {
+                    UI.pop();
+                    std::string id = action->getArgs().getInterfaceName();
+                    UI.push(id);
+                    break;
+                }
+            case (REQUEST::ID::POP_INF): 
+                {
+                    UI.pop();
+                    break;
+                }
+            case (REQUEST::ID::LOSE): 
+                {
+                    UI.top()->reset();
+                    break;
+                }
+            default: 
+                break;
+        };
+
+        delete action;
+    }
 }

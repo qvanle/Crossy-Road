@@ -2,29 +2,24 @@
 #include <object.hpp>
 Action* Object::react() 
 {
-    if(currentDelay != -1)
-    {
-        if(std::chrono::steady_clock::now() - lastAction < actionDelay[currentDelay]) 
-            return nullptr;
-    }
-    
+    if(!isVisible()) return nullptr;
+
+    if(std::chrono::steady_clock::now() < waitUntil) 
+        return nullptr;
     for(int i = 0; i < strokes.size(); i++)
     {
-        Action* a = strokes[i]->react();
+        Action* a = strokes[i].stroke->react();
         if(a == nullptr) continue;
-        if(i != currentDelay) strokes[i]->chooseAction(0);
-        else strokes[i]->nextAction();
-        currentDelay = i;
-        lastAction = std::chrono::steady_clock::now();
+        else strokes[i].stroke->nextAction();
         return a;
     }
-
 
     return nullptr;
 }
 
 void Object::draw()
 {
+    if(!isVisible()) return;
     Container::draw();
     return ;
 }

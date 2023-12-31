@@ -3,6 +3,7 @@ project (window)
 add_library(
     ${PROJECT_NAME} STATIC 
     src/UI.cpp
+    src/wincontent.cpp
     src/constructor.cpp
     src/destructor.cpp
     src/running.cpp
@@ -23,5 +24,8 @@ target_link_libraries(${PROJECT_NAME} PUBLIC visual::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC action::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC container::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC interface::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC button::lib)
 target_link_libraries(${PROJECT_NAME} PUBLIC object::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC game::lib)
+target_link_libraries(${PROJECT_NAME} PUBLIC inputbox::lib)
 

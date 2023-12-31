@@ -1,10 +1,11 @@
+#include "action.hpp"
 #include <container.hpp>
 
 void Container::draw()
 {
-    if(!sprites) return;
+    if(sprites.empty()) return;
     if(!visible) return;
-    (*sprites)[focus[0]][focus[1]]->draw();
+    sprites[focus[0]][focus[1]]->draw();
 }
 
 void Container::show()
@@ -37,20 +38,7 @@ Action* Container::react()
     return nullptr;
 }
 
-void Container::push(Container* contain)
-{
-}
-
-void Container::pop()
-{
-}
-
-Container* Container::get()
-{
-	return nullptr;
-}
-
 Action* Container::getRuntimeEvent()
 {
-	return nullptr;
+    return nullptr;
 }

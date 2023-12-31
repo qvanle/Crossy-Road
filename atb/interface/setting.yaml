@@ -1,0 +1,48 @@
+"name": "setting" # require
+"textures":  # require
+  - 
+    "path": "background/setting_background.png"  # require
+    "graphics":  #require
+      -
+        "x": 00
+        "y": 00
+        "w": 100
+        "h": 100
+        "gapX": 0
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1
+    
+"button":
+  - 
+    "path": "no_music.yaml"
+    "x": 15
+    "y": 37
+    "w": 25
+    "h": 25
+  - 
+    "path": "music.yaml"
+    "x": 15
+    "y": 37
+    "w": 25
+    "h": 25
+  - 
+    "path": "no_sfx.yaml"
+    "x": 60
+    "y": 37
+    "w": 25
+    "h": 25
+  - 
+    "path": "sfx.yaml"
+    "x": 60
+    "y": 37
+    "w": 25
+    "h": 25
+  - 
+    "path": "exit.yaml"
+    "x": 42.5
+    "y": 75
+    "w": 15
+    "h": 15

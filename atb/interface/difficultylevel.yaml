@@ -1,0 +1,54 @@
+"name": "difficultylevel" # require
+"textures":  # require
+  - 
+    "path": "background/difficulty_background.png"  # require
+    "graphics":  #require
+      -
+        "x": 00
+        "y": 00
+        "w": 100
+        "h": 100
+        "gapX": 0
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1
+    
+"button":
+  - 
+    "path": "nightmare_difficulty.yaml"
+    "x": 30
+    "y": 23
+    "w": 40
+    "h": 10
+  - 
+    "path": "insane_difficulty.yaml"
+    "x": 30
+    "y": 38
+    "w": 40
+    "h": 10
+  - 
+    "path": "hard_difficulty.yaml"
+    "x": 30
+    "y": 53
+    "w": 40
+    "h": 10
+  - 
+    "path": "normal_difficulty.yaml"
+    "x": 30
+    "y": 68
+    "w": 40
+    "h": 10
+  -
+    "path": "easy_difficulty.yaml"
+    "x": 30
+    "y": 83
+    "w": 40
+    "h": 10
+  -
+    "path": "exit.yaml"
+    "x": 85
+    "y": 3.5
+    "w": 10
+    "h": 6

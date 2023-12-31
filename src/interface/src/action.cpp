@@ -1,20 +1,21 @@
+#include "action.hpp"
 #include <interface.hpp>
 
-Action* Interface::react()
+Action* Interface::getRuntimeEvent()
 {
     if(!isVisible()) return nullptr;
-    PacketAction* packet = nullptr;
+    PacketAction* packet = nullptr; 
+    Action* action = Container::getRuntimeEvent();
 
-    Action* action = Container::react();
     if(action != nullptr) 
     {
         packet = new PacketAction();
         packet->addAction(action);
     }
-
-    for(auto i : keystrokes)
+    
+    for(auto i : nested)
     {
-        action = i->react();
+        action = i->getRuntimeEvent();
         if(action != nullptr) 
         {
             if(packet == nullptr) packet = new PacketAction();
@@ -24,7 +25,43 @@ Action* Interface::react()
 
     for(auto i : containers) 
     {
-        action = i->react();
+        action = i->getRuntimeEvent();
+        if(action != nullptr) 
+        {
+            if(packet == nullptr) packet = new PacketAction();
+            packet->addAction(action);
+        }
+    }
+
+    return packet;
+}
+
+Action* Interface::react()
+{
+    if(!isVisible()) return nullptr;
+    PacketAction* packet = nullptr; 
+    
+    Action* action = Container::react();
+    
+    if(action != nullptr) 
+    {
+        packet = new PacketAction();
+        packet->addAction(action);
+    }
+
+    for(auto i : keystrokes)
+    {
+        Action* action = i->react();
+        if(action != nullptr) 
+        {
+            if(packet == nullptr) packet = new PacketAction();
+            packet->addAction(action);
+        }
+    }
+
+    for(auto i : containers) 
+    {
+        Action* action = i->react();
         if(action != nullptr) 
         {
             if(packet == nullptr) packet = new PacketAction();

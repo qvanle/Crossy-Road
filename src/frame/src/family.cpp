@@ -16,8 +16,10 @@ void Frame::plug(Frame* par, fRect rel)
         throw std::runtime_error("Frame::plug(Frame* par, fRect rel): par is nullptr");
         return ;
     }
+    mtx.lock();
     parent = par;
     relative = rel;
+    mtx.unlock();
     updateFrame();
 
     parent->addSubframe(this);
@@ -36,7 +38,9 @@ void Frame::plug(Frame* par)
         throw std::runtime_error("Frame::plug(Frame* par): par is nullptr");
         return ;
     }
+    mtx.lock();
     parent = par;
+    mtx.unlock();
     updateFrame();
 
     parent->addSubframe(this);
@@ -48,9 +52,11 @@ void Frame::plug(Frame* par)
  **/
 void Frame::unplug()
 {
-    if(parent == nullptr) return ;
+    if(isroot()) return ;
+    mtx.lock();
     parent->removeSubframe(this);
     parent = nullptr;
+    mtx.unlock();
 }
 
 /** 
@@ -63,7 +69,9 @@ void Frame::unplug()
  **/
 void Frame::addSubframe(Frame* subframe)
 {
+    mtx.lock();
     subframes.push_back(subframe);
+    mtx.unlock();
 }
 
 /** 
@@ -76,6 +84,7 @@ void Frame::addSubframe(Frame* subframe)
  **/
 void Frame::removeSubframe(Frame* subframe)
 {
+    mtx.lock();
     int i = subframes.size() - 1;
     while(i >= 0 && subframes.size())
     {
@@ -88,13 +97,25 @@ void Frame::removeSubframe(Frame* subframe)
             subframes.pop_back();
         }
     }
+    mtx.unlock();
 }
 
 /** 
  * @brief return true if this frame is root
  * 
  **/
-bool Frame::isroot()
+bool Frame::isroot() const
 {
+    std::lock_guard<std::mutex> lock(mtx);
     return parent == nullptr;
+}
+
+void Frame::beginUpdate()
+{
+    mtx.lock();
+}
+
+void Frame::endUpdate()
+{
+    mtx.unlock();
 }

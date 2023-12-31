@@ -1,17 +1,19 @@
 #ifndef OBJECT_HPP 
 #define OBJECT_HPP
 
+#include "action.hpp"
 #include <container.hpp>
 #include <keystroke.hpp>
 #include <chrono>
-
 class Object : public Container
 {
 private: 
-    std::vector<KeyStroke*> strokes;
-    std::chrono::time_point<std::chrono::steady_clock> lastAction;
-    std::vector<std::chrono::duration<double> > actionDelay;
-    int currentDelay;
+    struct ObjectKeyStroke
+    {
+        KeyStroke* stroke;
+    };
+    std::vector<ObjectKeyStroke> strokes;
+    std::chrono::time_point<std::chrono::steady_clock> waitUntil;
 
 
 protected: 

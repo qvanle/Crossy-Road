@@ -1,0 +1,40 @@
+"name": "nosfx" 
+
+"textures": 
+  -
+    "path": "pause menu/no-sfx_normal.png"
+    "resize": [0.5, 0.5]
+    "graphics": 
+      - 
+        "axis": "horizontal" 
+  -
+    "path": "pause menu/no-sfx_hover.png"
+    "resize": [0.5, 0.5]
+    "graphics": 
+      -
+        "axis": "horizontal" 
+  -
+    "path": "pause menu/no-sfx_clicked.png"
+    "resize": [0.5, 0.5]
+    "graphics": 
+      - 
+        "axis": "horizontal"
+  -
+    "path": "pause menu/no-sfx_clicked.png"
+    "resize": [0.5, 0.5]
+    "graphics": 
+      - 
+        "axis": "horizontal"
+         
+"events": 
+  "release":
+    "sprite": [[0, 0, 70]]
+  "hover":
+    "sprite": [[1, 0, 70]]
+  "pressing":
+    "sprite": [[3, 0, 70]]
+  "clicked":
+    "sprite": [[4, 0, 70]]
+"focus": [1,0]
+  # "clicked"
+  #   "sprite": [[2, 0, 70]]

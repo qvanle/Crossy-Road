@@ -1,0 +1,24 @@
+"name": "credit" # require
+"textures":  # require
+  - 
+    "path": "background/credit_background.png"  # require
+    "graphics":  #require
+      -
+        "x": 00
+        "y": 00
+        "w": 100
+        "h": 100
+        "gapX": 0
+        "gapY": 0
+        "repeat": 1
+        "axis": "vertical"  # horizontal
+        "Xaxis": 1 # -1
+        "Yaxis": 1 # -1
+    
+"button":
+  - 
+    "path": "exit.yaml"
+    "x": 85
+    "y": 6
+    "w": 8
+    "h": 8

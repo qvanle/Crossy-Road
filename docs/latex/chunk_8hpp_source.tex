@@ -1,0 +1,65 @@
+\doxysection{chunk.\+hpp}
+\hypertarget{chunk_8hpp_source}{}\label{chunk_8hpp_source}\index{src/chunk/include/chunk.hpp@{src/chunk/include/chunk.hpp}}
+\mbox{\hyperlink{chunk_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ CHUNK\_HPP}}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ CHUNK\_HPP\ }}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{action_8hpp}{action.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <chrono>}\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{interface_8hpp}{interface.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00016}\mbox{\hyperlink{class_chunk}{00016}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_chunk}{Chunk}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_interface}{Interface}}\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00018}00018\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00019}\mbox{\hyperlink{class_chunk_a623ae8024fa228986719eda2f2948cd3}{00019}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmove_entity_action}{moveEntityAction}};}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ velocity;}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00021}00021\ \ \ \ \ std::vector<Container*>\ visiter;}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00022}00022\ \ \ \ \ std::deque<Container*>\ Entity;}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00023}00023\ \ \ \ \ std::chrono::time\_point<std::chrono::system\_clock>\ spawnClock;}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00024}00024\ \ \ \ \ std::chrono::time\_point<std::chrono::system\_clock>\ moveClock;}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{static}\ std::chrono::duration<double>\ spawnTime\ =\ std::chrono::duration<double>(1.0);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{static}\ std::chrono::duration<double>\ moveTime\ =\ std::chrono::duration<double>(0.1);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00028}00028\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ac874c45bfe135f9e6b0b6328869b30db}{drawEntity}}();}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}*\ \mbox{\hyperlink{class_chunk_ae3963abdd13c1ead0f2c062622b8963a}{randomEntity}}();}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ae75de66267636fb89d3f753e09119795}{movingEntity}}();}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00032}00032\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_chunk_a0d075d134db29da3e7776ee7e862be4b}{Chunk}}(\mbox{\hyperlink{class_frame}{Frame}}*,\ Rectangle);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{class_chunk_a0d075d134db29da3e7776ee7e862be4b}{Chunk}}(\mbox{\hyperlink{class_chunk}{Chunk}}*);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{class_chunk_a0d075d134db29da3e7776ee7e862be4b}{Chunk}}(\mbox{\hyperlink{class_chunk}{Chunk}}*,\ Rectangle);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{class_chunk_a0d075d134db29da3e7776ee7e862be4b}{Chunk}}(\mbox{\hyperlink{class_chunk}{Chunk}}*,\ \mbox{\hyperlink{class_frame}{Frame}}*,\ Rectangle);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_chunk_ad21b515f41c9a1d21740b9e7e3f8eede}{\string~Chunk}}();}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ad5fc7f3c0844d32ff7fdb9eec368bd51}{addVisiter}}(\mbox{\hyperlink{class_container}{Container}}*);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ad5fc7f3c0844d32ff7fdb9eec368bd51}{addVisiter}}(\mbox{\hyperlink{class_container}{Container}}*,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ad5fc7f3c0844d32ff7fdb9eec368bd51}{addVisiter}}(\mbox{\hyperlink{class_container}{Container}}*,\ Rectangle);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_ad5fc7f3c0844d32ff7fdb9eec368bd51}{addVisiter}}(\mbox{\hyperlink{class_container}{Container}}*,\ \textcolor{keywordtype}{int},\ Rectangle);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_a6276c31cadd50569143489791aa98c8c}{generateEntity}}();}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_a8854147872d209544a2da60814cd2133}{setVelocity}}(\mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}});}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00047}00047\ \ \ \ \ std::string\ \mbox{\hyperlink{class_chunk_a6c2ab1c746452b33fe23d3d1097b6ca3}{linkContent}}(std::string\ path)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{class_chunk_ac8097d10482928ea15de562f9c567179}{getRuntimeEvent}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_chunk_a508db570ed3775d30564dbdeea07db48}{draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00051}00051\ \};}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00053}\mbox{\hyperlink{classmove_entity_action}{00053}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmove_entity_action}{moveEntityAction}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action}{Action}}}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00054}00054\ \{}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00055}00055\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{class_chunk}{Chunk}}*\ chunk;}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00057}00057\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{classmove_entity_action_a261a4634a905aab40f23dce084d669c6}{moveEntityAction}}(\mbox{\hyperlink{class_chunk}{Chunk}}*);}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{classmove_entity_action_a860cf6f4758a93de4cdde644161448bc}{\string~moveEntityAction}}();}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmove_entity_action_a1ef595916c4096280f303a29a2131638}{execute}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classmove_entity_action_a5b266845049ac842b564ade38a433ed5}{clone}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00063}00063\ \};}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00064}00064\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{\Hypertarget{chunk_8hpp_source_l00065}00065\ }
+
+\end{DoxyCode}

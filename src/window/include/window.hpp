@@ -15,6 +15,8 @@
 #include <container.hpp>
 #include <object.hpp>
 #include <interface.hpp>
+#include <button.hpp>
+#include <inputbox.hpp>
 
 
 class Window 
@@ -40,37 +42,104 @@ private:
 
         void draw();
         Action* react();
+        Action* getRuntimeEvent();
 
     };
     class ActionPool 
     {
     private:
         std::queue<Action*> pool;
+        std::mutex mtx;
     public: 
         ActionPool() = default;
         ~ActionPool();
         void push(Action* act);
+        void push(PacketAction* act);
         Action* front();
         Action* pop();
-        bool empty() const;
+        bool empty();
     };
-    struct WinContent 
+    class WinContent 
     {
+    private:
+        bool status;
+        std::chrono::time_point<std::chrono::steady_clock> input_clock;
+        std::chrono::time_point<std::chrono::steady_clock> runtime_clock;
+
+        std::mutex status_mtx;
+        std::mutex input_mtx;
+        std::mutex runtime_mtx;
+    public: 
+        std::chrono::duration<double> input_delay;
+        std::chrono::duration<double> runtime_delay;
         float width;
         float height;
         Color background;
         std::string title;
-        bool status;
+
         std::vector<std::thread> thread_pool;
+        
+        ~WinContent();
+
+        void setStatus(bool);
+        bool getStatus();
+
+        void setInputClock2Now();
+        void setRuntimeClock2Now();
+
+        bool isInputDelayOver();
+        bool isRuntimeDelayOver();
+
     };
-    struct UI 
+    class UI 
     {
+    private: 
         Frame* root_frame;
         InterfacePool* interface;
+
+        std::mutex mtx;
+        int reader;
+        int writer;
+        bool noRead;
+        bool noWrite;
+    protected: 
+        bool isReadable();
+        bool isWritable();
+
+        void reading();
+        bool tryReading();
+        void endReading();
+
+        void writing();
+        bool tryWriting();
+        void endWriting();
+
+        void DenyRead();
+        void AllowRead();
+
+        void DenyWrite();
+        void AllowWrite();
+
+    public: 
         UI();
         ~UI();
         void draw();
         Action* react();
+        Action* getRuntimeEvent();
+
+        void setRootFrame(Frame*);
+        Frame* getRootFrame();
+        void resize(float, float);
+
+        void setInterfacePool(InterfacePool*);
+
+        void load(Interface*);
+        void unload(Interface*);
+        Interface* getInterface(std::string);
+
+        void push(std::string);
+        std::string pop();
+        Interface* top();
     };
 
     friend class CloseAction;
@@ -78,18 +147,25 @@ private:
 
     WinContent Wcontent;
     UI UI;
-    ActionPool immediate_pool, duration_pool;
+    ActionPool immediate_user_pool, immediate_pool, request_pool, system_pool;
+
+    // test inputBox
+    InputBox* inputBox;
 
 protected:
     void draw();
+    void systemEvent();
     void getUserEvent();
     void getRuntimeEvent();
     void sound_effect();
     void immediateActing();
-    void durationActing();
+    void userActing();
+    void requestActing();
+    void systemActing();
 
     void initRaylib(YAML::Node node);
     void loadInterface(YAML::Node node);
+    void loadGame(YAML::Node node);
 public:
     Window();
     Window(std::string path);
@@ -100,6 +176,12 @@ public:
     void run();
 };
 
+/**
+ * @class CloseAction
+ *
+ * @brief manages the closing of the application
+ * 
+**/
 class CloseAction : public Action
 {
 private: 
@@ -108,10 +190,14 @@ public:
     CloseAction(Window* win);
     ~CloseAction() = default;
     void execute();
-    void forceEnd();
-    void interrupt();
 };
 
+/**
+ * @class resizeAction
+ *
+ * @brief manages the resizing of the window
+ * 
+**/
 class resizeAction : public Action
 {
 private: 
@@ -121,7 +207,5 @@ public:
     resizeAction(Window* window, float w, float h);
     ~resizeAction() = default;
     void execute();
-    void forceEnd();
-    void interrupt();
 };
 #endif 
