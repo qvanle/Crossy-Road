@@ -71,12 +71,6 @@
     "h": 10
 "button":
   - 
-    "path": "setting.yaml"
-    "x": 00
-    "y": 60
-    "w": 10
-    "h": 10
-  - 
     "path": "pause.yaml"
     "x": 93.5
     "y": 2
