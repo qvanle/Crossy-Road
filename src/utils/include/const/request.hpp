@@ -11,7 +11,9 @@ namespace REQUEST
         POP_INF,
         POP_THEN_CHANGE_INF,
         DELAY, 
-        LOSE,
+        LOSE, 
+        SAVE_GAME, 
+        LOAD_GAME
     };
 }
 

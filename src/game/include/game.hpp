@@ -27,6 +27,7 @@ private:
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
     std::chrono::time_point<std::chrono::system_clock> initStateClock;
     bool initState;
+    std::deque<int> chunkOrder;
 protected:
     void loadChunk(YAML::Node);
     void loadCollide(YAML::Node);
@@ -47,6 +48,8 @@ public:
 
     Action* react() override;
     Action* getRuntimeEvent() override;
+    YAML::Node createSpecialContent() override;
+    void loadSpecialContent(YAML::Node) override;
     void draw() override;
 
 };
@@ -77,5 +80,15 @@ public:
 
     void execute() override;
     Action* clone() override;
+};
+
+class saveGameRequest : public Request 
+{
+private: 
+public:
+    saveGameRequest() = default;
+    ~saveGameRequest() = default;
+    int isRequest() override;
+    Request* clone() override;
 };
 #endif 

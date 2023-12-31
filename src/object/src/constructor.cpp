@@ -42,6 +42,18 @@ std::string Object::linkContentAbsolute(std::string path)
     return "";
 }
 
+YAML::Node Object::createSpecialContent()
+{
+    YAML::Node node = Container::createSpecialContent();
+
+    return node;
+}
+
+void Object::loadSpecialContent(YAML::Node node)
+{
+    Container::loadSpecialContent(node);
+}
+
 void Object::loadControl(YAML::Node node)
 {
     for(auto stroke : node)
