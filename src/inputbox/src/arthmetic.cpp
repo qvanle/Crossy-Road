@@ -189,33 +189,33 @@ void InputBox::clear()
 }
 
 
-std::vector<std::pair<int, std::string>> highScore::getList()
+std::vector<std::pair<int, std::string>> highScore::getList(int level)
 {
-    return list;
+    return list[level];
 }
 
-void highScore::add(std::string name, int score)
+void highScore::add(std::string name, int score, int level)
 {
     for(int i=0; i<list.size(); i++)
     {
-        if(list[i].second == name)
+        if(list[level][i].second == name)
         {
-            if(list[i].first < score)
+            if(list[level][i].first < score)
             {
-                list[i].first = score;
+                list[level][i].first = score;
                 // std::cout<<"Update score of "<<name<<" to "<<score<<std::endl;
             }
             return;
         }
     }
-    list.push_back(std::make_pair(score, name));
+    list[level].push_back(std::make_pair(score, name));
 }
 
-void highScore::save(std::string path)
+void highScore::save(std::string path, int level)
 {
     std::ofstream fo;
     fo.open(path);
-    for(auto i : list)
+    for(auto i : list[level])
     {
         fo<<i.first<<" "<<i.second<<std::endl;
     }

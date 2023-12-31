@@ -46,17 +46,6 @@ public:
     std::string linkContentAbsolute(std::string);
 };
 
-class highScore
-{
-private:
-    std::vector<std::pair<int, std::string>> list;
-public:
-    highScore(std::string path);
-    std::vector<std::pair<int, std::string>> getList();
-    void add(std::string name, int score);
-    void save(std::string path);
-};
-
 class setActivateAction : public Action 
 {
 private: 
@@ -79,6 +68,17 @@ public:
     setRawTextAction(setRawTextAction* other);
     void execute();
     Action* clone();
+};
+
+class highScore
+{
+private:
+    std::vector<std::vector<std::pair<int, std::string>>> list;
+public:
+    highScore(std::string path);
+    std::vector<std::pair<int, std::string>> getList(int level);
+    void add(std::string name, int score, int level);
+    void save(std::string path, int level);
 };
 
 #endif 

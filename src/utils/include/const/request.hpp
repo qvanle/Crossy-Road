@@ -15,5 +15,17 @@ namespace REQUEST
     };
 }
 
+namespace DIFFICULTY 
+{
+    enum ID 
+    {
+        INVALID,
+        EASY,
+        NORMAL,
+        HARD,
+        INSANE,
+        NIGHTMARE,
+    };
+}
 #endif 
 
