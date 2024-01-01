@@ -101,6 +101,11 @@ void Window::requestActing()
                     UI.push(id);
                     break;
                 }
+            case (REQUEST::ID::LOAD_GAME): 
+                {
+                    std::cout << "Hehe\n";
+                    break;
+                }
             case (REQUEST::ID::POP_THEN_CHANGE_INF): 
                 {
                     UI.pop();

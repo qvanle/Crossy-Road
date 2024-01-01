@@ -89,6 +89,10 @@ void ButtonImage::loadAction(YAML::Node node)
         if(!node["str"]) return;
         request = new popThenChangeInfRequest(node["str"][0].as<std::string>());
     }
+    if(node["type"].as<std::string>() == "load-game") 
+    {
+        request = new loadGameRequest();
+    }
 }
 
 popInfRequest::popInfRequest()
@@ -134,4 +138,15 @@ Action* popThenChangeInfRequest::clone()
 ARGS& popThenChangeInfRequest::getArgs() 
 {
     return args;
+}
+
+
+int loadGameRequest::isRequest()
+{
+    return REQUEST::ID::LOAD_GAME;
+}
+
+Action* loadGameRequest::clone()
+{
+    return new loadGameRequest();
 }

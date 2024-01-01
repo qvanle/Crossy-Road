@@ -80,4 +80,13 @@ public:
     ARGS& getArgs() override;
 };
 
+class loadGameRequest : public Request 
+{
+public:
+    loadGameRequest() = default;
+    ~loadGameRequest() = default;
+    int isRequest() override;
+    Action* clone() override;
+};
+
 #endif 
