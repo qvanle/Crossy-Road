@@ -64,7 +64,7 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/policeRL.yaml"
+    "path": "entity/jeepRL.yaml"
     "x": 90
     "y": 40
     "w": 10
@@ -89,10 +89,10 @@
 "attach-object": 
   - 
     "chunk": [1] 
-    "object": [5, 10] # each 1 second there is 10% to generate object 1
+    "object": [1, 10] # each 1 second there is 10% to generate object 1
   - 
     "chunk": [2, 3, 4]
-    "object": [5, 10] # each 1 second there is 20% to generate object 2
+    "object": [2, 10] # each 1 second there is 20% to generate object 2
   - 
     "chunk": [4] 
     "object": [5, 10] # each 1 second there is 30% to generate object 3
