@@ -79,6 +79,14 @@ void Interface::reset()
 {
 }
 
+void Interface::pause()
+{
+}
+
+void Interface::cont()
+{
+}
+
 std::string Interface::linkContent(std::string path)
 {
     return linkContentAbsolute(PATB::INTERFACE_ + path);

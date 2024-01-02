@@ -114,12 +114,6 @@ private:
         bool tryWriting();
         void endWriting();
 
-        void DenyRead();
-        void AllowRead();
-
-        void DenyWrite();
-        void AllowWrite();
-
     public: 
         UI();
         ~UI();
@@ -140,6 +134,12 @@ private:
         void push(std::string);
         std::string pop();
         Interface* top();
+
+        void DenyRead();
+        void AllowRead();
+
+        void DenyWrite();
+        void AllowWrite();
     };
 
     friend class CloseAction;

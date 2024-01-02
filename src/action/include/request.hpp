@@ -41,7 +41,7 @@ public:
  * @brief request sent when the player loses
  * 
 **/
-class loseRequest : public Request 
+class loseRequest : public Request
 {
 public: 
     loseRequest() = default;

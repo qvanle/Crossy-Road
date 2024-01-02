@@ -2,9 +2,21 @@
 #include <request.hpp>
 #include <game.hpp>
 
+
+void Game::pause()
+{
+    isPause = true;
+}
+
+void Game::cont()
+{
+    isPause = false;
+}
+
 Action* Game::react()
 {
     if(!isVisible()) return nullptr;
+    if(isPause) return nullptr;
     if(initState) 
     {
         return new startInitClockAction(this);
@@ -17,6 +29,7 @@ Action* Game::react()
 Action* Game::getRuntimeEvent()
 {
     if(!isVisible()) return nullptr;
+    if(isPause) return nullptr;
     // if now - mapSpeedClock < 10 millisecond, return nullptr 
     if(initState) 
     {

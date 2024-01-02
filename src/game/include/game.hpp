@@ -26,7 +26,7 @@ private:
     float mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
     std::chrono::time_point<std::chrono::system_clock> initStateClock;
-    bool initState;
+    bool initState, isPause;
 protected:
     void loadChunk(YAML::Node);
     void loadCollide(YAML::Node);
@@ -48,6 +48,9 @@ public:
     Action* react() override;
     Action* getRuntimeEvent() override;
     void draw() override;
+
+    void pause() override;
+    void cont() override;
 
 };
 
