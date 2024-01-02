@@ -5,44 +5,44 @@
     "path": "main_char/ghost_map_back.png"
     "graphics": 
       - 
-        "x": 0
-        "y": 0
-        "w": 16.666666666666666666666666666667
-        "h": 100
-        "gapX": 0
+        "x": 5.555555555
+        "y": 15
+        "w": 5.555555555
+        "h": 70
+        "gapX": 11.111111111
         "repeat": 6
         "axis": "horizontal" 
   -
     "path": "main_char/ghost_map_front.png"
     "graphics": 
       - 
-        "x": 0
-        "y": 0
-        "w": 16.666666666666666666666666666667
-        "h": 100
-        "gapX": 0
+        "x": 5.555555555
+        "y": 15
+        "w": 5.555555555
+        "h": 70
+        "gapX": 11.111111111
         "repeat": 6
         "axis": "horizontal" 
   -
     "path": "main_char/ghost_map_LR.png"
     "graphics": 
       - 
-        "x": 0
-        "y": 0
-        "w": 33.333334
-        "h": 100
-        "gapX": 0
+        "x": 11.111111111
+        "y": 15
+        "w": 11.111111111
+        "h": 70
+        "gapX": 22.222222222
         "repeat": 3
         "axis": "horizontal" 
   -
     "path": "main_char/ghost_map_RL.png"
     "graphics": 
       - 
-        "x": 0
-        "y": 00
-        "w": 33.333334
-        "h": 100
-        "gapX": 0
+        "x": 11.111111111
+        "y": 15
+        "w": 11.111111111
+        "h": 70
+        "gapX": 22.222222222
         "repeat": 3
         "axis": "horizontal" 
 

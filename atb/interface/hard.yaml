@@ -1,4 +1,4 @@
-"name": "game" # require
+"name": "hard" # require
 
 "chunk": 
   - 
@@ -37,8 +37,8 @@
     "path": "ghost.yaml"
     "x": 100
     "y": 100
-    "w": 7 
-    "h": 7
+    "w": 3
+    "h": 6
   -
     "path": "entity/cow.yaml"
     "x": 40

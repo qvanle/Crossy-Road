@@ -76,13 +76,44 @@
     "w": 50
     "h": 70  
 "game": 
-  "file": "game.yaml" 
-  "x": 0
-  "y": 0
-  "w": 100 
-  "h": 100 
+  -
+    "file": "game.yaml" 
+    "x": 0
+    "y": 0
+    "w": 100 
+    "h": 100 
+  -
+    "file": "easy.yaml" 
+    "x": 0
+    "y": 0
+    "w": 100 
+    "h": 100 
+  -
+    "file": "normal.yaml" 
+    "x": 0
+    "y": 0
+    "w": 100 
+    "h": 100
+  -
+    "file": "hard.yaml" 
+    "x": 0
+    "y": 0
+    "w": 100 
+    "h": 100
+  -
+    "file": "insane.yaml" 
+    "x": 0
+    "y": 0
+    "w": 100 
+    "h": 100
+  -
+    "file": "nightmare.yaml" 
+    "x": 0
+    "y": 0
+    "w": 100 
+    "h": 100
 
-"choose-interface": "start"
+"choose-interface": "easy"
 "input-delay": 60
 "runtime-delay": 30 
 

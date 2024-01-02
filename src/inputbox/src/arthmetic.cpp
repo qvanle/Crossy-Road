@@ -4,6 +4,8 @@
 
 void InputBox::draw()
 {
+    if(!isVisible())
+        return;
     DrawRectangleRec(this->getFrame(), LIGHTGRAY); // can change by texture in yaml file
 
     if (isActivated) DrawRectangleLines((int)this->getFrame().x, (int)this->getFrame().y, (int)this->getFrame().width, (int)this->getFrame().height, RED);
@@ -27,6 +29,7 @@ void InputBox::draw()
 
 PacketAction* InputBox::react()
 {
+    if(!isVisible()) return nullptr;
     bool cur = (CheckCollisionPointRec(GetMousePosition(), this->getFrame()));
 
     PacketAction* packet = nullptr;

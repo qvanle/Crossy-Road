@@ -38,4 +38,4 @@
 "focus": [1,0]
 "action":
   "type": "pop-then-change-interface"
-  "str": ["game", "easy"]
+  "str": ["easy", "easy"]

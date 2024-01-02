@@ -10,6 +10,7 @@ moveEntityAction::~moveEntityAction()
 
 void moveEntityAction::execute()
 {
+    
     chunk->movingEntity();
 }
 

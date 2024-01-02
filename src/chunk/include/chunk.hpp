@@ -20,6 +20,7 @@ private:
     fPoint velocity;
     std::vector<Container*> visiter;
     std::deque<Container*> Entity;
+    Container* trafficLight;
     std::chrono::time_point<std::chrono::system_clock> spawnClock;
     std::chrono::time_point<std::chrono::system_clock> moveClock;
     constexpr static std::chrono::duration<double> spawnTime = std::chrono::duration<double>(1.0);
