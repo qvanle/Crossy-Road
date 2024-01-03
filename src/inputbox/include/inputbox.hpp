@@ -70,7 +70,7 @@ public:
     Action* clone();
 };
 
-class highScore
+class highScore 
 {
 private:
     std::vector<std::vector<std::pair<int, std::string>>> list;
@@ -78,7 +78,9 @@ public:
     highScore(std::string path);
     std::vector<std::pair<int, std::string>> getList(int level);
     void add(std::string name, int score, int level);
-    void save(std::string path, int level);
+    void save(std::string path);
+    void linkContent(std::string);
+    void linkContentAbsolute(std::string);
 };
 
 #endif 

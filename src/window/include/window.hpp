@@ -151,6 +151,7 @@ private:
 
     // test inputBox
     InputBox* inputBox;
+    highScore* highscore;
 
 protected:
     void draw();

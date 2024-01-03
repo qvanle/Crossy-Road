@@ -52,6 +52,8 @@ Window::Window(std::string path)
     inputBox = new InputBox(20, {0.4, 0.2, 0.2, 0.2}, UI.getRootFrame(), &font);
     inputBox->linkContent("inputbox.yaml");
     inputBox->hide();
+
+    highscore = new highScore("inputbox.yaml");
 }
 
 void Window::initRaylib(YAML::Node config)
