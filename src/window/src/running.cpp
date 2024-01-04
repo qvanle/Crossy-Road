@@ -17,9 +17,13 @@ void Window::run()
     //Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
     //Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::requestActing, this));
-
+    
+    Music& music = music_data.m_data[0];
+    PlayMusicStream(music);
+    SetMusicVolume(music, 1);
     while (isRun())
     {
+        UpdateMusicStream(music);
         draw();
         systemEvent();
         systemActing();
