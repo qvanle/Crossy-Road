@@ -14,4 +14,15 @@ void Game::draw()
     }
     main->draw();
     drawContainers();
+
+    // draw rectangle color white on top right 
+    
+    Rectangle rel = getFrame();
+    rel.x = rel.width * 0.85;
+    rel.y = 0;
+    rel.width *= 0.15;
+    rel.height *= 0.06;
+
+    DrawRectangleRec(rel, {200, 200, 200, 255});
+    DrawText(TextFormat("Score: %08i", score), rel.x + 10, 25, 20, RED);
 }
