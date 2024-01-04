@@ -63,6 +63,12 @@ Action* Game::getRuntimeEvent()
             if(packet == nullptr) packet = new PacketAction();
             packet->addAction(act);
         }
+        if(i->isCollide(main)) 
+        {
+            Action* act = new addScoreAction(this, i);
+            if(packet == nullptr) packet = new PacketAction();
+            packet->addAction(act);
+        }
         Action* act = i->getRuntimeEvent();
         if(act == nullptr) 
             continue;

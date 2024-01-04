@@ -3,12 +3,13 @@
 
 Chunk::Chunk(Frame* frame, Rectangle rect) : Interface(frame, rect)
 {
-
+    score = 1;
 }
 
 Chunk::Chunk(Chunk* other) : Interface(other)
 {
 
+    score = 1;
     for(auto i : other->visiter)
     {
         Rectangle rel;
@@ -24,6 +25,7 @@ Chunk::Chunk(Chunk* other) : Interface(other)
 
 Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
 {
+    score = 1;
     for(auto i : other->visiter)
     {
         Rectangle rel;
@@ -39,6 +41,7 @@ Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
 
 Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, frame, rect)
 {
+    score = 1;
     for(auto i : other->visiter)
     {
         Rectangle rel;
@@ -189,4 +192,10 @@ void Chunk::loadSpecialContent(YAML::Node node)
     {
         Entity[i]->loadSpecialContent(node["entity"][i]);  
     }
+}
+
+int Chunk::getScore()
+{
+    if(score == 1) return score--;
+    return 0;
 }

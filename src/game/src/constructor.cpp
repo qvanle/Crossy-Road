@@ -9,21 +9,25 @@
 Game::Game(Frame* frame, Rectangle rect) : Interface(frame, rect)
 {
     initState = true;
+    score = 0;
 }
 
 Game::Game(Game* other) : Interface(other)
 {
     initState = true;
+    score = 0;
 }
 
 Game::Game(Game* other, Rectangle rect) : Interface(other, rect)
 {
     initState = true;
+    score = 0;
 }
 
 Game::Game(Game* other, Frame* frame, Rectangle rect) : Interface(other, frame, rect)
 {
     initState = true;
+    score = 0;
 }
 
 void Game::reset()
