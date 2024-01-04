@@ -103,7 +103,6 @@ void Window::requestActing()
                 }
             case (REQUEST::ID::LOAD_GAME): 
                 {
-                    std::cout << "Hehe\n";
                     break;
                 }
             case (REQUEST::ID::POP_THEN_CHANGE_INF): 
@@ -121,6 +120,11 @@ void Window::requestActing()
             case (REQUEST::ID::LOSE): 
                 {
                     UI.top()->reset();
+                    break;
+                }
+            case (REQUEST::ID::TOGGLE_MUSIC): 
+                {
+                    musicController.toggle();
                     break;
                 }
             default: 

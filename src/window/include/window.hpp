@@ -142,11 +142,25 @@ private:
         Interface* top();
     };
     
-    struct MusicData 
+    class MusicController
     {
+    private: 
         std::vector<Music> m_data;
         int focus = 0;
-        bool stop = true;
+        bool stop = false;
+    public: 
+        MusicController();
+        ~MusicController();
+        void choose(int);
+        void play();
+        void pause();
+        void cont();
+        void add(Music);
+        bool isEnd();
+        int getFocus();
+        int size();
+        void update();
+        void toggle();
     };
 
     friend class CloseAction;
@@ -154,7 +168,7 @@ private:
 
     WinContent Wcontent;
     UI UI;
-    MusicData music_data;
+    MusicController musicController;
     ActionPool immediate_user_pool, immediate_pool, request_pool, system_pool;
 
     // test inputBox

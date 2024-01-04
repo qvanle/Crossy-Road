@@ -93,6 +93,10 @@ void ButtonImage::loadAction(YAML::Node node)
     {
         request = new loadGameRequest();
     }
+    if(node["type"].as<std::string>() == "toggle-music") 
+    {
+        request = new toggleMusicRequest();
+    }
 }
 
 popInfRequest::popInfRequest()
@@ -149,4 +153,14 @@ int loadGameRequest::isRequest()
 Action* loadGameRequest::clone()
 {
     return new loadGameRequest();
+}
+
+int toggleMusicRequest::isRequest()
+{
+    return REQUEST::ID::TOGGLE_MUSIC;
+}
+
+Action* toggleMusicRequest::clone()
+{
+    return new toggleMusicRequest();
 }

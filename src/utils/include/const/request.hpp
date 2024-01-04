@@ -13,7 +13,8 @@ namespace REQUEST
         DELAY, 
         LOSE, 
         SAVE_GAME, 
-        LOAD_GAME
+        LOAD_GAME,
+        TOGGLE_MUSIC
     };
 }
 

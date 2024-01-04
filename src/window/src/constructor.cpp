@@ -103,10 +103,9 @@ void Window::loadMusic(YAML::Node node)
         std::string path = i["path"].as<std::string>();
         path = PASSETS::SOUND_ + path;
         Music music = LoadMusicStream(path.c_str());
-        music_data.m_data.push_back(music);
+        SetMusicVolume(music, 1);
+        musicController.add(music);
     }
-    music_data.focus = -1;
-    music_data.stop = false;
 }
 
 void Window::loadGame(YAML::Node node)

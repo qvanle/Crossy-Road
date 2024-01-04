@@ -89,4 +89,14 @@ public:
     Action* clone() override;
 };
 
+class toggleMusicRequest : public Request
+{
+public:
+    toggleMusicRequest() = default;
+    ~toggleMusicRequest() = default;
+    int isRequest() override;
+    Action* clone() override;
+};
+
+
 #endif 
