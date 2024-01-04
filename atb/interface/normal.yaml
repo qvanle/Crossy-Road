@@ -2,31 +2,31 @@
 
 "chunk": 
   - 
-    "file": "test2.yaml"
+    "file": "autumnpath.yaml"
     "w": 100
     "h": 10 
     "velocity": [0.005, 1, 0]
     "probabilty": 20
   - 
-    "file": "test.yaml"
+    "file": "autumnland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.005, 1, 0]
     "probabilty": 80
   - 
-    "file": "test.yaml"
+    "file": "autumnland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.009, 1, 0]
     "probabilty": 80
   - 
-    "file": "test.yaml"
+    "file": "autumnland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.003, 1, 0]
     "probabilty": 80
   - 
-    "file": "test.yaml"
+    "file": "autumnland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [-0.005, 1, 0]
@@ -37,10 +37,52 @@
     "path": "ghost.yaml"
     "x": 100
     "y": 100
-    "w": 3
+    "w": 3 
     "h": 6
   -
+    "path": "entity/ambulance.yaml"
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+  -
+    "path": "entity/ambulanceRL.yaml"
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+  -
+    "path": "entity/bus.yaml"
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+  -
+    "path": "entity/busRL.yaml"
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+  -
+    "path": "entity/civic.yaml"
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+  -
+    "path": "entity/civicRL.yaml"
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+  -
     "path": "entity/cow.yaml"
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+  -
+    "path": "entity/cowRL.yaml"
     "x": 40
     "y": 40
     "w": 10
@@ -51,9 +93,15 @@
     "y": 40
     "w": 10
     "h": 10 
-  - 
-    "path": "entity/rabbit.yaml"
-    "x": 80
+  -
+    "path": "entity/duckRL.yaml"
+    "x": 40
+    "y": 40
+    "w": 10
+    "h": 10
+  -
+    "path": "entity/frog_still.yaml"
+    "x": 40
     "y": 40
     "w": 10
     "h": 10
@@ -64,7 +112,67 @@
     "w": 10
     "h": 10
   - 
+    "path": "entity/frogRL.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/jeep.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
     "path": "entity/jeepRL.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/police.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/policeRL.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/rabbit.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/rabbitRL.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/squirrel.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/squirrelRL.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/train.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/trainRL.yaml"
     "x": 90
     "y": 40
     "w": 10

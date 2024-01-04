@@ -1,7 +1,7 @@
-"name": "river" # require
+"name": "autumnpath" # require
 "textures":  # require
   - 
-    "path": "river.png"  # require
+    "path": "theme/autumn/path.png"  # require
     "graphics":  #require
       -
         "x": 00

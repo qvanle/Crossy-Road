@@ -1,7 +1,7 @@
-"name": "river" # require
+"name": "winterland" # require
 "textures":  # require
   - 
-    "path": "river.png"  # require
+    "path": "theme/winter/snow_ground.png"  # require
     "graphics":  #require
       -
         "x": 00
