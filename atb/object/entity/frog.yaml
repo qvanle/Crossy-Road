@@ -1,8 +1,8 @@
-"name": "frog" 
+"name": "frogLR" 
 
 "textures": 
   -
-    "path": "animals/frog_jump_LR.png"
+    "path": "animals/frog_jump_LR_map.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 
@@ -11,28 +11,6 @@
         "w": 20
         "h": 25
         "repeat": 17
-        "axis": "horizontal" 
-  -
-    "path": "animals/frog_jump_RL.png"
-    "resize": [0.5, 0.5]
-    "graphics": 
-      - 
-        "x": 0
-        "y": 0
-        "w": 20
-        "h": 25
-        "repeat": 17
-        "axis": "horizontal" 
-  -
-    "path": "animals/frog_still.png"
-    "resize": [0.5, 0.5]
-    "graphics": 
-      - 
-        "x": 0
-        "y": 0
-        "w": 20
-        "h": 100
-        "repeat": 5
         "axis": "horizontal" 
 "focus": [0, 0]
 

@@ -37,6 +37,7 @@ void Game::reset()
 
 std::string Game::linkContentAbsolute(std::string path)
 {
+    isPause = false;
     YAML::Node node = YAML_FILE::readFile(path);
     if(!loadName(node)) return "";
 

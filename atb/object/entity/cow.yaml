@@ -1,4 +1,4 @@
-"name": "cow" 
+"name": "cowLR" 
 
 "textures": 
   -
@@ -18,27 +18,7 @@
         "w": 25
         "h": 50
         "repeat": 3
-        "axis": "horizontal"   
-  -
-    "path": "animals/cow_map_RL.png"
-    "resize": [0.5, 0.5]
-    "graphics": 
-      - 
-        "x": 0
-        "y": 0
-        "w": 25
-        "h": 50
-        "repeat": 4
-        "axis": "horizontal"
-      -
-        "x": 0
-        "y": 50
-        "w": 25
-        "h": 50
-        "repeat": 3
-        "axis": "horizontal"   
-
-
+        "axis": "horizontal"     
 "focus": [0, 0]
 
 # "control": 

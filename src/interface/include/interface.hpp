@@ -49,6 +49,8 @@ public:
     void loadSpecialContent(YAML::Node) override;
 
     virtual void reset();
+    virtual void pause();
+    virtual void cont();
 
     Action* react() override;
     Action* getRuntimeEvent() override;

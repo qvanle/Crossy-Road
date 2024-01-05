@@ -1,0 +1,67 @@
+"name": "ghost" 
+
+"textures": 
+  -
+    "path": "main_char/ghost_map_back.png"
+    "graphics": 
+      - 
+        "x": 5.555555555
+        "y": 15
+        "w": 5.555555555
+        "h": 70
+        "gapX": 11.111111111
+        "repeat": 6
+        "axis": "horizontal" 
+  -
+    "path": "main_char/ghost_map_front.png"
+    "graphics": 
+      - 
+        "x": 5.555555555
+        "y": 15
+        "w": 5.555555555
+        "h": 70
+        "gapX": 11.111111111
+        "repeat": 6
+        "axis": "horizontal" 
+  -
+    "path": "main_char/ghost_map_LR.png"
+    "graphics": 
+      - 
+        "x": 11.111111111
+        "y": 15
+        "w": 11.111111111
+        "h": 70
+        "gapX": 22.222222222
+        "repeat": 3
+        "axis": "horizontal" 
+  -
+    "path": "main_char/ghost_map_RL.png"
+    "graphics": 
+      - 
+        "x": 11.111111111
+        "y": 15
+        "w": 11.111111111
+        "h": 70
+        "gapX": 22.222222222
+        "repeat": 3
+        "axis": "horizontal" 
+
+"focus": [0, 0]
+
+"control": 
+  - 
+    "key": ["w"]
+    "sprite": [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5]]
+    "duration": [70, 70, 70, 70, 70, 70]
+  - 
+    "key": ["s"]
+    "sprite": [[1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5]]
+    "duration": [70, 70, 70, 70, 70, 70]
+  - 
+    "key": ["d"]
+    "sprite": [[2, 0], [2, 1], [2, 2], [2, 3], [2, 4], [2, 5]]
+    "duration": [70, 70, 70, 70, 70, 70]
+  - 
+    "key": ["a"]
+    "sprite": [[3, 0], [3, 1], [3, 2], [3, 3], [3, 4], [3, 5]]
+    "duration": [70, 70, 70, 70, 70, 70]

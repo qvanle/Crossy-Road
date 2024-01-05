@@ -27,7 +27,7 @@ private:
     float mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
     std::chrono::time_point<std::chrono::system_clock> initStateClock;
-    bool initState;
+    bool initState, isPause;
     std::deque<int> chunkOrder;
     int score;
 protected:
@@ -53,6 +53,9 @@ public:
     YAML::Node createSpecialContent() override;
     void loadSpecialContent(YAML::Node) override;
     void draw() override;
+
+    void pause() override;
+    void cont() override;
 
 };
 

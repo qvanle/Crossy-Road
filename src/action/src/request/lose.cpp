@@ -1,7 +1,8 @@
 #include <request.hpp>
 #include <const/request.hpp>
 
-loseRequest::loseRequest(loseRequest* other) 
+
+loseRequest::loseRequest(loseRequest* other)
 {
     args = other->args;
 }

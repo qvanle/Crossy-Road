@@ -37,5 +37,5 @@
     "sprite": [[4, 0, 70]]
 "focus": [1,0]
 "action":
-  "type": "change-interface"
-  "str": ["game", "easy"]
+  "type": "pop-then-change-interface"
+  "str": ["easy", "easy"]

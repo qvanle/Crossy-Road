@@ -2,5 +2,7 @@
 
 Window::~Window()
 {
+    delete inputBox;
+    delete highscore;
     CloseWindow();
 }
