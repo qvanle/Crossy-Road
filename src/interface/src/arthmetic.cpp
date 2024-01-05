@@ -26,4 +26,11 @@ void Interface::draw()
     drawContainers();
 
 
+
+}
+
+void Interface::setScore(int score)
+{
+    this->score = score;
+    std::cout<<getName()<<std::endl;
 }

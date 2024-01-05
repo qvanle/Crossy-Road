@@ -25,6 +25,7 @@ private:
     std::vector<Container*> containers;
     std::vector<Interface*> nested;
     std::vector<KeyStroke*> keystrokes;
+    int score;
 protected:
     void loadObject(YAML::Node);
     void loadControl(YAML::Node);
@@ -55,6 +56,8 @@ public:
     Action* react() override;
     Action* getRuntimeEvent() override;
     void draw() override;
+
+    void setScore(int);
 	
 };
 

@@ -21,7 +21,7 @@ void Game::draw()
     // draw rectangle color white on top right 
     
     Rectangle rel = getFrame();
-    rel.x = rel.width * 0.85;
+    rel.x = rel.width * 0.0;
     rel.y = 0;
     rel.width *= 0.15;
     rel.height *= 0.06;

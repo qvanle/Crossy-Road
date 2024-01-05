@@ -59,7 +59,7 @@ Action* Game::getRuntimeEvent()
         if(i->getRelative()[1] > 1.05) break;
         if(i->isEntityCollide(main)) 
         {
-            Action* act = new loseRequest();
+            Action* act = new loseRequest(score);
             if(packet == nullptr) packet = new PacketAction();
             packet->addAction(act);
         }
@@ -92,19 +92,19 @@ Action* Game::getRuntimeEvent()
     }
     if(main->getRelative()[1] > 1.05) 
     {
-        Action* act = new loseRequest();
+        Action* act = new loseRequest(score);
         if(packet == nullptr) packet = new PacketAction();
         packet->addAction(act);
     }
     if(main->getRelative()[0] < -0.4)
     {
-        Action* act = new loseRequest();
+        Action* act = new loseRequest(score);
         if(packet == nullptr) packet = new PacketAction();
         packet->addAction(act);
     }
     if(main->getRelative()[0] > 1.2)
     {
-        Action* act = new loseRequest();
+        Action* act = new loseRequest(score);
         if(packet == nullptr) packet = new PacketAction();
         packet->addAction(act);
     }

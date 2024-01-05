@@ -131,8 +131,7 @@ void Window::requestActing()
                     std::string id = "gameover";
                     std::this_thread::sleep_for(std::chrono::milliseconds(200));
                     UI.push(id);
-                    UI.top()->cont();
-                    
+                    // UI.top()->setScore(action->getArgs().num[0]);
                     break;
                 }
             case (REQUEST::ID::TOGGLE_MUSIC): 
