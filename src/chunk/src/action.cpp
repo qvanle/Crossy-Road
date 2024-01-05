@@ -22,6 +22,7 @@ Container* Chunk::randomEntity()
 
 void Chunk::movingEntity() 
 {
+    if(trafficLight != nullptr && stop) return ;
     for(auto i : Entity)
     {
         i->moveBy(velocity);
@@ -39,6 +40,29 @@ Action* Chunk::getRuntimeEvent()
     {
         packet = new PacketAction();
         packet->addAction(action);
+    }
+
+    if(trafficLight != nullptr)
+    {
+        if(stop && std::chrono::system_clock::now() - LightClock >= lightRed) 
+        {
+            Action* action = new switchTrafficLightAction(this);
+            if(packet == nullptr) 
+            {
+                packet = new PacketAction();
+            }
+            packet->addAction(action);
+            LightClock = std::chrono::system_clock::now();
+        }else if(!stop && std::chrono::system_clock::now() - LightClock >= lightGreen) 
+        {
+            Action* action = new switchTrafficLightAction(this);
+            if(packet == nullptr) 
+            {
+                packet = new PacketAction();
+            }
+            packet->addAction(action);
+            LightClock = std::chrono::system_clock::now();
+        }
     }
 
     if(std::chrono::system_clock::now() - moveClock >= moveTime) 
