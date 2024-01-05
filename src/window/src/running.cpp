@@ -17,9 +17,13 @@ void Window::run()
     //Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
     //Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::requestActing, this));
+    
+    musicController.choose(0);
+    musicController.play();
 
     while (isRun())
     {
+        musicController.update();
         draw();
         systemEvent();
         systemActing();

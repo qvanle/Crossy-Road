@@ -85,6 +85,7 @@ void Game::loadMap()
         if(rec[1] > 1) 
         {
             delete chunks.back();
+            chunkOrder.pop_back();
             chunks.pop_back();
         }else break;
     }
@@ -97,12 +98,14 @@ void Game::loadMap()
         rel.y = (1.01 - rel.height);
 
         Chunk* chunk = new Chunk(cache[0], this, rel);
+        chunkOrder.push_front(0);
         chunks.push_front(chunk);
         for(int i = 0; i < 6; i++)
         {
             rel.y += 0.005 - rel.height;
             chunk = new Chunk(cache[0], this, rel);
             chunks.push_front(chunk);
+            chunkOrder.push_front(0);
         }
     }
     while(chunks.front()->getRelative()[1] > 0)
@@ -116,6 +119,7 @@ void Game::loadMap()
         int id = GetRandomValue(0, cache.size() - 1);
         Chunk* chunk = new Chunk(cache[id], this, rel);
         chunks.push_front(chunk);
+        chunkOrder.push_front(id);
     }
 }
 
@@ -180,4 +184,67 @@ void Game::loadEvent(YAML::Node node)
     std::cout << "hehe: " << angle << std::endl;
     mapDisplacement[0] = mapSpeed * cos(angle);
     mapDisplacement[1] = mapSpeed * sin(angle);
+}
+
+YAML::Node Game::createSpecialContent() 
+{
+    YAML::Node node = Interface::createSpecialContent();
+    node["map-speed"] = mapSpeed;
+    node["map-direction"][0] = mapDirection[0];
+    node["map-direction"][1] = mapDirection[1];
+    node["map-displacement"][0] = mapDisplacement[0];
+    node["map-displacement"][1] = mapDisplacement[1];
+    node["main"] = main->createSpecialContent();
+
+    for(int i = 0; i < chunkOrder.size(); i++)
+    {
+        node["chunk-order"][i] = chunkOrder[i];
+    }
+    
+    for(int i = 0; i < chunks.size(); i++)
+    {
+        node["chunks"][i] = chunks[i]->createSpecialContent();
+    }
+
+    for(int i = 0; i < cache.size(); i++)
+    {
+        node["cache"][i] = cache[i]->createSpecialContent();
+    }
+    return node;
+}
+
+void Game::loadSpecialContent(YAML::Node node)
+{
+    Interface::loadSpecialContent(node);
+    mapSpeed = node["map-speed"].as<float>();
+    mapDirection[0] = node["map-direction"][0].as<float>();
+    mapDirection[1] = node["map-direction"][1].as<float>();
+    mapDisplacement[0] = node["map-displacement"][0].as<float>();
+    mapDisplacement[1] = node["map-displacement"][1].as<float>();
+    main->loadSpecialContent(node["main"]);
+
+    for(auto i : node["chunk-order"])
+    {
+        chunkOrder.push_back(i.as<int>());
+        Chunk* c = cache[i.as<int>()];
+        Rectangle rel;
+        rel.x = c->getRelative()[0];
+        rel.y = c->getRelative()[1];
+        rel.width = c->getRelative()[2];
+        rel.height = c->getRelative()[3];
+
+        Chunk* chunk = new Chunk(c, this, rel);
+        chunks.push_back(chunk);
+    }
+
+    for(int i = 0; i < chunks.size(); i++)
+    {
+        chunks[i]->loadSpecialContent(node["chunks"][i]);
+    }
+
+    for(int i = 0; i < cache.size(); i++)
+    {
+        cache[i]->loadSpecialContent(node["cache"][i]);
+    }
+
 }

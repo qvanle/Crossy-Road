@@ -38,3 +38,5 @@
 "focus": [1,0]
   # "clicked"
   #   "sprite": [[2, 0, 70]]
+"action": 
+  "type": "toogle-music"

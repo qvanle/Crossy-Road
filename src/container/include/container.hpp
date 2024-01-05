@@ -42,6 +42,8 @@ public:
 
     virtual std::string linkContent(std::string);
     virtual std::string linkContentAbsolute(std::string);
+    virtual YAML::Node createSpecialContent();
+    virtual void loadSpecialContent(YAML::Node);
     std::string getName();
 
     void setProbability(int);

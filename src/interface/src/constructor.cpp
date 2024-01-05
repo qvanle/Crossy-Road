@@ -195,3 +195,39 @@ int Interface::getContainersSize()
 {
     return containers.size();
 }
+
+YAML::Node Interface::createSpecialContent()
+{
+    YAML::Node node = Container::createSpecialContent();
+    
+    for(int i = 0; i < containers.size(); i++) 
+    {
+        Container* c = containers[i];
+        node["containers"][i] = c->createSpecialContent();
+    }
+
+    for(int i = 0; i < nested.size(); i++) 
+    {
+        Interface* c = nested[i];
+        node["nested"][i] = c->createSpecialContent();
+    }
+
+    return node;
+}
+
+void Interface::loadSpecialContent(YAML::Node node)
+{
+    Container::loadSpecialContent(node);
+    
+    for(int i = 0; i < containers.size(); i++) 
+    {
+        Container* c = containers[i];
+        c->loadSpecialContent(node["containers"][i]);
+    }
+
+    for(int i = 0; i < nested.size(); i++) 
+    {
+        Interface* c = nested[i];
+        c->loadSpecialContent(node["nested"][i]);
+    }
+}

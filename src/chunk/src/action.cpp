@@ -4,14 +4,20 @@
 Container* Chunk::randomEntity() 
 {
     int value = GetRandomValue(0, 100);
-
+    int id = 0;
     for(auto i : visiter)
     {
         value -= i->getProbability();
-        if(value <= 0) return i;
+        if(value <= 0) 
+        {
+            entityOrder.push_back(id);
+            return i;
+        }
+        id++;
     }
-
-    return visiter[GetRandomValue(0, visiter.size() - 1)];
+    id = GetRandomValue(0, visiter.size() - 1);
+    entityOrder.push_back(id);
+    return visiter[id];
 }
 
 void Chunk::movingEntity() 
