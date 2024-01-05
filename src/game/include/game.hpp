@@ -22,6 +22,7 @@ private:
     std::deque<Chunk*> chunks;
     std::vector<Chunk*> cache;
     Container* main;
+    Container* light;
     fPoint mapDisplacement;
     fPoint mapDirection;
     float mapSpeed;
@@ -35,6 +36,7 @@ protected:
     void loadCollide(YAML::Node);
     void loadEvent(YAML::Node);
     void loadAttactObject(YAML::Node);
+    void loadLight(YAML::Node);
     void loadMap();
 public: 
     Game(Frame*, Rectangle);

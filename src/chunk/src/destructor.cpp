@@ -10,5 +10,7 @@ Chunk::~Chunk()
         delete Entity.back();
         Entity.pop_back();
     }
+    if(trafficLight != nullptr)
+        delete trafficLight;
 }
 
