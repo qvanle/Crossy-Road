@@ -6,31 +6,21 @@
     "w": 100
     "h": 10 
     "velocity": [0.005, 1, 0]
-    "probabilty": 20
   - 
     "file": "summer/summerland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.005, 1, 0]
-    "probabilty": 80
-  - 
-    "file": "summer/summerland.yaml"
-    "w": 100 
-    "h": 10 
-    "velocity": [0.009, 1, 0]
-    "probabilty": 80
-  - 
-    "file": "summer/summerland.yaml"
-    "w": 100 
-    "h": 10 
-    "velocity": [0.003, 1, 0]
-    "probabilty": 80
   - 
     "file": "summer/summerland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [-0.005, 1, 0]
-    "probabilty": 80
+  - 
+    "file": "summer/summerland.yaml"
+    "w": 100 
+    "h": 10 
+    "velocity": [0, 1, 0]
 
 "object": 
   -
@@ -177,6 +167,44 @@
     "y": 40
     "w": 10
     "h": 10
+  - 
+    "path": "entity/summer/log.yaml"  # 24
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/summer/rock.yaml" #25
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/summer/tree_1.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/summer/tree_2.yaml" #27
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "entity/summer/tree_3.yaml"
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+  - 
+    "path": "light.yaml"  # 29
+    "x": 90
+    "y": 40
+    "w": 10
+    "h": 10
+"traffic-light" : 29
+"attach-light" : [1, 2, 3]
 "button":
   - 
     "path": "pause.yaml"
@@ -199,11 +227,20 @@
     "chunk": [1] 
     "object": [1, 10] # each 1 second there is 10% to generate object 1
   - 
-    "chunk": [2, 3, 4]
-    "object": [2, 10] # each 1 second there is 20% to generate object 2
+    "chunk": [2]
+    "object": [2, 10] # each 1 second there is 10% to generate object 2
   - 
-    "chunk": [4] 
-    "object": [5, 10] # each 1 second there is 30% to generate object 3
+    "chunk": [3]
+    "object": [25, 10] # each 1 second there is 10% to generate object 2
+  - 
+    "chunk": [3]
+    "object": [26, 10] # each 1 second there is 10% to generate object 2
+  - 
+    "chunk": [3]
+    "object": [27, 10] # each 1 second there is 10% to generate object 2
+  - 
+    "chunk": [3]
+    "object": [28, 10] # each 1 second there is 10% to generate object 2
 
 "control": 
   -
