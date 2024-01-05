@@ -1,7 +1,7 @@
-"name": "winterland" # require
+"name": "summerpath" # require
 "textures":  # require
   - 
-    "path": "theme/winter/snow_path.png"  # require
+    "path": "theme/summer/path.png"  # require
     "graphics":  #require
       -
         "x": 00

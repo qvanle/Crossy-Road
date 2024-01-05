@@ -2,31 +2,31 @@
 
 "chunk": 
   - 
-    "file": "lava.yaml"
+    "file": "nightmare/lava.yaml"
     "w": 100
     "h": 10 
     "velocity": [0.005, 1, 0]
     "probabilty": 20
   - 
-    "file": "deadland.yaml"
+    "file": "nightmare/deadland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.005, 1, 0]
     "probabilty": 80
   - 
-    "file": "deadland.yaml"
+    "file": "nightmare/deadland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.009, 1, 0]
     "probabilty": 80
   - 
-    "file": "deadland.yaml"
+    "file": "nightmare/deadland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.003, 1, 0]
     "probabilty": 80
   - 
-    "file": "deadland.yaml"
+    "file": "nightmare/deadland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [-0.005, 1, 0]

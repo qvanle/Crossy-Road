@@ -2,7 +2,7 @@
 
 "textures": 
   -
-    "path": "animals/frog_jump_LR.png"
+    "path": "animals/frog_jump_LR_map.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 

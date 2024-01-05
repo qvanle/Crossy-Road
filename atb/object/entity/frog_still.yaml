@@ -2,7 +2,7 @@
 
 "textures": 
   -
-    "path": "animals/frog_still.png"
+    "path": "animals/frog_still_map.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 

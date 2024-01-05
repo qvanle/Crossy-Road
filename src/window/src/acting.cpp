@@ -121,7 +121,7 @@ void Window::requestActing()
                 }
             case (REQUEST::ID::LOSE): 
                 {
-                    inputBox->show();
+                    // inputBox->show();
                     UI.top()->pause();
                     UI.top()->reset();
                     std::string id = "gameover";

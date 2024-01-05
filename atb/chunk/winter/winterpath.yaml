@@ -1,7 +1,7 @@
-"name": "grass" # require
+"name": "winterpath" # require
 "textures":  # require
   - 
-    "path": "grass.png"  # require
+    "path": "theme/winter/snow_path.png"  # require
     "graphics":  #require
       -
         "x": 00

@@ -1,7 +1,7 @@
-"name": "autumnland" # require
+"name": "summerland" # require
 "textures":  # require
   - 
-    "path": "theme/autumn/autumn_ground.png"  # require
+    "path": "theme/summer/summer_land.png"  # require
     "graphics":  #require
       -
         "x": 00

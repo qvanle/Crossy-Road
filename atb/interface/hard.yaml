@@ -2,31 +2,31 @@
 
 "chunk": 
   - 
-    "file": "winterpath.yaml"
+    "file": "autumn/autumnpath.yaml"
     "w": 100
     "h": 10 
     "velocity": [0.005, 1, 0]
     "probabilty": 20
   - 
-    "file": "winterland.yaml"
+    "file": "autumn/autumnland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.005, 1, 0]
     "probabilty": 80
   - 
-    "file": "winterland.yaml"
+    "file": "autumn/autumnland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.009, 1, 0]
     "probabilty": 80
   - 
-    "file": "winterland.yaml"
+    "file": "autumn/autumnland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [0.003, 1, 0]
     "probabilty": 80
   - 
-    "file": "winterland.yaml"
+    "file": "autumn/autumnland.yaml"
     "w": 100 
     "h": 10 
     "velocity": [-0.005, 1, 0]

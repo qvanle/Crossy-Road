@@ -1,0 +1,13 @@
+"name": "tree3" 
+
+"textures": 
+  -
+    "path": "theme/spring/tree_3.png"
+    "resize": [0.5, 0.5]
+    "graphics": 
+      - 
+        "x": 0
+        "y": 0
+        "w": 100
+        "h": 100
+        "axis": "horizontal"   

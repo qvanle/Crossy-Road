@@ -1,7 +1,7 @@
-"name": "Backgr" # require
+"name": "winterland" # require
 "textures":  # require
   - 
-    "path": "theme/nightmare/deadland_ground.png"  # require
+    "path": "theme/winter/snow_land.png"  # require
     "graphics":  #require
       -
         "x": 00
