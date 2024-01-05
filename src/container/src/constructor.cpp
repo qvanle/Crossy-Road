@@ -181,9 +181,7 @@ void Container::loadSprites(YAML::Node node)
 
             if(img["axis"] && img["axis"].as<std::string>() == "horizontal")
             {
-                for(float j = y; j >= 0 && j + h < 1 + 1e-2; j += dy * (gapY + h))
-                {
-                    for(float i = x; i >= 0 && i + w <= 1 + 1e-2 && repeat--; i += dx * (gapX + w))
+                for(float j = y; j >= 0 && j + h < 1 + 1e-2; j += dy * (gapY + h)) { for(float i = x; i >= 0 && i + w <= 1 + 1e-2 && repeat--; i += dx * (gapX + w))
                     {
                         Rectangle rect = {i * imgw, j * imgh, w * imgw, h * imgh};
                         Image img2 = ImageFromImage(image, rect);
@@ -285,4 +283,44 @@ void Container::setProbability(int prob)
 int Container::getProbability()
 {
     return probability;
+}
+
+YAML::Node Container::createSpecialContent()
+{
+    YAML::Node node;
+    node["name"] = name;
+    node["focus"][0] = focus[0];
+    node["focus"][1] = focus[1];
+    node["probability"] = probability;
+    node["visible"] = visible;
+    node["x"] = getRelative()[0];
+    node["y"] = getRelative()[1];
+    node["w"] = getRelative()[2];
+    node["h"] = getRelative()[3];
+    return node;
+}
+
+void Container::loadSpecialContent(YAML::Node node)
+{
+    if(node["name"])
+        name = node["name"].as<std::string>();
+    if(node["focus"])
+    {
+        focus[0] = node["focus"][0].as<int>();
+        focus[1] = node["focus"][1].as<int>();
+    }
+    if(node["probability"])
+        probability = node["probability"].as<int>();
+    if(node["visible"])
+        visible = node["visible"].as<bool>();
+    fRect rec;
+    if(node["x"])
+        rec[0] = node["x"].as<float>();
+    if(node["y"])
+        rec[1] = node["y"].as<float>();
+    if(node["w"])
+        rec[2] = node["w"].as<float>();
+    if(node["h"])
+        rec[3] = node["h"].as<float>();
+    setRelative(rec);
 }

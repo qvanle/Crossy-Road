@@ -45,6 +45,8 @@ public:
 
     std::string linkContent(std::string path) override;
     std::string linkContentAbsolute(std::string path) override;
+    YAML::Node createSpecialContent() override;
+    void loadSpecialContent(YAML::Node) override;
 
     virtual void reset();
 

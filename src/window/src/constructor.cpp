@@ -1,6 +1,7 @@
 #include <window.hpp>
 #include <game.hpp>
 #include <const/path/atb.hpp>
+#include <const/path/assets.hpp>
 
 #include <file.hpp>
 
@@ -44,6 +45,10 @@ Window::Window(std::string path)
     {
         Wcontent.runtime_delay = std::chrono::duration<int>(40) / 1000.0;
     }
+    if(config["music"]) 
+    {
+        loadMusic(config["music"]);
+    }
 
     // test inputbox
     Font font = GetFontDefault();
@@ -61,6 +66,7 @@ void Window::initRaylib(YAML::Node config)
 
     SetConfigFlags(FLAG_WINDOW_RESIZABLE | FLAG_VSYNC_HINT);
     InitWindow(Wcontent.width, Wcontent.height, Wcontent.title.c_str());
+    InitAudioDevice();
     SetTargetFPS(60);
     Wcontent.setStatus(true);
     UI.setRootFrame(new Frame({0, 0, Wcontent.width, Wcontent.height}));
@@ -85,6 +91,20 @@ void Window::loadInterface(YAML::Node node)
         Interface* inf = new Interface(UI.getRootFrame(), {x, y, w, h});
         inf->linkContent(path);
         UI.load(inf);
+    }
+}
+
+void Window::loadMusic(YAML::Node node)
+{
+    if(!node) return ;
+
+    for(auto i : node)
+    {
+        std::string path = i["path"].as<std::string>();
+        path = PASSETS::SOUND_ + path;
+        Music music = LoadMusicStream(path.c_str());
+        SetMusicVolume(music, 1);
+        musicController.add(music);
     }
 }
 

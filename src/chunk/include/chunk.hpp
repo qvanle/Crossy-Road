@@ -24,7 +24,7 @@ private:
     std::chrono::time_point<std::chrono::system_clock> moveClock;
     constexpr static std::chrono::duration<double> spawnTime = std::chrono::duration<double>(1.0);
     constexpr static std::chrono::duration<double> moveTime = std::chrono::duration<double>(0.1);
-
+    std::vector<int> entityOrder;
 protected:
     void drawEntity();
     Container* randomEntity();
@@ -46,6 +46,8 @@ public:
     bool isEntityCollide(Container* main);
 
     std::string linkContent(std::string path) override;
+    YAML::Node createSpecialContent() override;
+    void loadSpecialContent(YAML::Node) override;
     Action* getRuntimeEvent() override;
 
     void draw() override;

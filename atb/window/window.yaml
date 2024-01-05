@@ -2,6 +2,12 @@
 "width": 1280
 "height": 768
 
+"music": 
+  - 
+    "path": "home_bgm.mp3" 
+  - 
+    "path": "in-game_bgm.mp3"
+
 "interface-list": 
   -
     "file": "start.yaml" 

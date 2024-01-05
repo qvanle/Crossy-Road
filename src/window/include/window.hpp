@@ -141,12 +141,34 @@ private:
         std::string pop();
         Interface* top();
     };
+    
+    class MusicController
+    {
+    private: 
+        std::vector<Music> m_data;
+        int focus = 0;
+        bool stop = false;
+    public: 
+        MusicController();
+        ~MusicController();
+        void choose(int);
+        void play();
+        void pause();
+        void cont();
+        void add(Music);
+        bool isEnd();
+        int getFocus();
+        int size();
+        void update();
+        void toggle();
+    };
 
     friend class CloseAction;
     friend class resizeAction;
 
     WinContent Wcontent;
     UI UI;
+    MusicController musicController;
     ActionPool immediate_user_pool, immediate_pool, request_pool, system_pool;
 
     // test inputBox
@@ -166,6 +188,7 @@ protected:
     void initRaylib(YAML::Node node);
     void loadInterface(YAML::Node node);
     void loadGame(YAML::Node node);
+    void loadMusic(YAML::Node node);
 public:
     Window();
     Window(std::string path);

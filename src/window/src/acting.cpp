@@ -101,6 +101,10 @@ void Window::requestActing()
                     UI.push(id);
                     break;
                 }
+            case (REQUEST::ID::LOAD_GAME): 
+                {
+                    break;
+                }
             case (REQUEST::ID::POP_THEN_CHANGE_INF): 
                 {
                     UI.pop();
@@ -116,6 +120,11 @@ void Window::requestActing()
             case (REQUEST::ID::LOSE): 
                 {
                     UI.top()->reset();
+                    break;
+                }
+            case (REQUEST::ID::TOGGLE_MUSIC): 
+                {
+                    musicController.toggle();
                     break;
                 }
             default: 
