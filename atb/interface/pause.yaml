@@ -18,37 +18,43 @@
 "button":
   - 
     "path": "resume.yaml"
-    "x": 15
+    "x": 12.5
     "y": 25
-    "w": 15
-    "h": 15
+    "w": 13
+    "h": 12.5
   - 
     "path": "saveNexit.yaml"
-    "x": 35
+    "x": 32.5
     "y": 25
-    "w": 50
-    "h": 15
+    "w": 55
+    "h": 12.5
   - 
     "path": "no_music.yaml"
     "x": 25
     "y": 50
-    "w": 15
-    "h": 15
+    "w": 13
+    "h": 12.5
   - 
     "path": "music.yaml"
     "x": 25
     "y": 50
-    "w": 15
-    "h": 15
+    "w": 13
+    "h": 12.5
   - 
     "path": "no_sfx.yaml"
     "x": 60
     "y": 50
-    "w": 15
-    "h": 15
+    "w": 13
+    "h": 12.5
   - 
     "path": "sfx.yaml"
     "x": 60
     "y": 50
-    "w": 15
-    "h": 15
+    "w": 13
+    "h": 12.5
+  - 
+    "path": "credit.yaml"
+    "x": 30
+    "y": 75 
+    "w": 40
+    "h": 12

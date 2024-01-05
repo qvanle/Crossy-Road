@@ -17,38 +17,38 @@
     
 "button":
   - 
-    "path": "home.yaml"
+    "path": "exit.yaml"
     "x": 85
     "y": 6
     "w": 8
     "h": 8
   - 
-    "path": "easy_score.yaml" # easy_score is different from easy_difficulty
+    "path": "easy_score.yaml"
     "x": 5
-    "y": 23
+    "y": 23.5
     "w": 16.4
-    "h": 7.5
+    "h": 6
   - 
     "path": "normal_score.yaml"
     "x": 23
-    "y": 23
+    "y": 23.5
     "w": 16.4
-    "h": 7.5
+    "h": 6
   - 
     "path": "hard_score.yaml"
     "x": 40.9
-    "y": 23
+    "y": 23.5
     "w": 16.5
-    "h": 7.5
+    "h": 6
   - 
     "path": "insane_score.yaml"
     "x": 59
-    "y": 23
+    "y": 23.5
     "w": 17
-    "h": 7.5
+    "h": 6
   - 
     "path": "nightmare_score.yaml"
     "x": 77.5
-    "y": 23
+    "y": 23.5
     "w": 17
-    "h": 7.5
+    "h": 6
