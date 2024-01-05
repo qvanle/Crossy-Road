@@ -18,31 +18,31 @@
 "button":
   - 
     "path": "newgame.yaml"
-    "x": 43.5
+    "x": 42.5
     "y": 63
-    "w": 13
-    "h": 6
+    "w": 15
+    "h": 5
   - 
     "path": "loadgame.yaml"
-    "x": 43.5
+    "x": 42.5
     "y": 72
-    "w": 13
-    "h": 6
+    "w": 15
+    "h": 5
   - 
     "path": "setting.yaml"
-    "x": 43.5
+    "x": 42.5
     "y": 81
-    "w": 13
-    "h": 6
+    "w": 15
+    "h": 5
   - 
     "path": "credit.yaml"
-    "x": 43.5
+    "x": 42.5
     "y": 90
-    "w": 13
-    "h": 6
+    "w": 15
+    "h": 5
   - 
     "path": "highscore.yaml"
-    "x": 86
-    "y": 2
-    "w": 13
-    "h": 6
+    "x": 84
+    "y": 3
+    "w": 15
+    "h": 5

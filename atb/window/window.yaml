@@ -12,9 +12,9 @@
   -
     "file": "difficultylevel.yaml" 
     "x": 35
-    "y": 10
+    "y": 20
     "w": 30
-    "h": 80
+    "h": 60
   -
     "file": "highscoreeasy.yaml" 
     "x": 25
@@ -54,9 +54,9 @@
   -
     "file": "pause.yaml" 
     "x": 35
-    "y": 15
+    "y": 30
     "w": 30
-    "h": 70
+    "h": 40
   -
     "file": "credit.yaml" 
     "x": 25
