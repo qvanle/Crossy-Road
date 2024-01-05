@@ -26,6 +26,7 @@ private:
     constexpr static std::chrono::duration<double> spawnTime = std::chrono::duration<double>(1.0);
     constexpr static std::chrono::duration<double> moveTime = std::chrono::duration<double>(0.1);
     std::vector<int> entityOrder;
+    int score;
 protected:
     void drawEntity();
     Container* randomEntity();
@@ -45,6 +46,7 @@ public:
 
     void setVelocity(fPoint);
     bool isEntityCollide(Container* main);
+    int getScore();
 
     std::string linkContent(std::string path) override;
     YAML::Node createSpecialContent() override;

@@ -18,6 +18,7 @@ class Game : public Interface
 private: 
     friend class moveChunksAction;
     friend class startInitClockAction;
+    friend class addScoreAction;
     std::deque<Chunk*> chunks;
     std::vector<Chunk*> cache;
     Container* main;
@@ -28,6 +29,7 @@ private:
     std::chrono::time_point<std::chrono::system_clock> initStateClock;
     bool initState, isPause;
     std::deque<int> chunkOrder;
+    int score;
 protected:
     void loadChunk(YAML::Node);
     void loadCollide(YAML::Node);
@@ -68,6 +70,20 @@ public:
     moveChunksAction(Game*, fPoint);
     moveChunksAction(Game*, fPoint, float);
     ~moveChunksAction();
+
+    void execute() override;
+    Action* clone() override;
+};
+
+class addScoreAction : public Action
+{
+private: 
+    Game* game;
+    Chunk* chunk;
+
+public:
+    addScoreAction(Game*, Chunk*);
+    ~addScoreAction() = default;
 
     void execute() override;
     Action* clone() override;
