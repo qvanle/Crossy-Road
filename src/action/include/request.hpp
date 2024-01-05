@@ -45,6 +45,7 @@ class loseRequest : public Request
 {
 public: 
     loseRequest() = default;
+    loseRequest(int score);
     loseRequest(loseRequest*);
     ~loseRequest() = default;
     int isRequest() override;

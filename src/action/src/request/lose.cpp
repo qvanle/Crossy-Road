@@ -1,6 +1,11 @@
 #include <request.hpp>
 #include <const/request.hpp>
 
+loseRequest::loseRequest(int score)
+{
+    args.num.clear();
+    args.num.push_back(score);
+}
 
 loseRequest::loseRequest(loseRequest* other)
 {
