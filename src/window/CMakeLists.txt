@@ -3,6 +3,7 @@ project (window)
 add_library(
     ${PROJECT_NAME} STATIC 
     src/UI.cpp
+    src/musiccontroller.cpp
     src/wincontent.cpp
     src/constructor.cpp
     src/destructor.cpp

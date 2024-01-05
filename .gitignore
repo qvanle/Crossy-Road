@@ -3,6 +3,8 @@
 .todo
 build
 *log
+.DS_Store
+saving/
 src/dependency/raylib/raylib 
 src/dependency/yamlcpp/yamlcpp
 .vs

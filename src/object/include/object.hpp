@@ -28,6 +28,8 @@ public:
 
     virtual std::string linkContent(std::string) override;
     virtual std::string linkContentAbsolute(std::string) override;
+    YAML::Node createSpecialContent() override;
+    void loadSpecialContent(YAML::Node) override;
     
     virtual Action* react() override;
     void draw() override;
