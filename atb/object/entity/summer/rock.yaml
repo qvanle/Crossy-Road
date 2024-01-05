@@ -1,0 +1,13 @@
+"name": "rock" 
+
+"textures": 
+  -
+    "path": "theme/summer/rock.png"
+    "resize": [0.5, 0.5]
+    "graphics": 
+      - 
+        "x": 0
+        "y": 0
+        "w": 100
+        "h": 100
+        "axis": "horizontal"   

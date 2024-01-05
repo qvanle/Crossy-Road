@@ -97,8 +97,10 @@ void Window::requestActing()
                 break;
             case (REQUEST::ID::CHANGE_INF): 
                 {
+                    UI.top()->pause();
                     std::string id = action->getArgs().getInterfaceName();
                     UI.push(id);
+                    UI.top()->cont();
                     break;
                 }
             case (REQUEST::ID::LOAD_GAME): 
@@ -107,19 +109,30 @@ void Window::requestActing()
                 }
             case (REQUEST::ID::POP_THEN_CHANGE_INF): 
                 {
+                    UI.top()->pause();
                     UI.pop();
                     std::string id = action->getArgs().getInterfaceName();
                     UI.push(id);
+                    UI.top()->cont();
                     break;
                 }
             case (REQUEST::ID::POP_INF): 
                 {
+                    UI.top()->pause();
                     UI.pop();
+                    UI.top()->cont();
                     break;
                 }
             case (REQUEST::ID::LOSE): 
                 {
+                    // inputBox->show();
+                    UI.top()->pause();
                     UI.top()->reset();
+                    std::string id = "gameover";
+                    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+                    UI.push(id);
+                    UI.top()->cont();
+                    
                     break;
                 }
             case (REQUEST::ID::TOGGLE_MUSIC): 

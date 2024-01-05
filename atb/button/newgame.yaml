@@ -38,4 +38,4 @@
 "focus": [1,0]
 "action":
   "type": "change-interface"
-  "str": ["game"]
+  "str": ["difficultylevel"]

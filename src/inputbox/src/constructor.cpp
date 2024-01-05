@@ -15,23 +15,6 @@ InputBox::InputBox(int fontSize, Rectangle relative, Frame* root, Font* font) : 
 
 highScore::highScore(std::string path)
 {
-	std::ifstream fi;
-	fi.open(path);
-	if (fi.is_open())
-	{
-		std::string name;
-		int score;
-		std::string line;
-		while (getline(fi, line))
-		{
-			std::stringstream ss(line);
-			ss >> score;
-			char space;
-			//ss >> space;
-			getline(ss, name);
-			if(name[0] == ' ') name.erase(0, 1);
-			list.push_back(std::make_pair(score, name));
-		}
-	}
-	fi.close();
+	list = std::vector<std::vector<std::pair<int, std::string>>>();
+	linkContent(path);
 }

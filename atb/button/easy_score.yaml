@@ -37,5 +37,6 @@
     "sprite": [[4, 0, 70]]
 "focus": [1,0]
 "action":
-  "type": "pop-then-change-interface"
+  #"type": "pop-then-change-interface"
+  "type": "change-interface"
   "str": ["highscoreeasy"]

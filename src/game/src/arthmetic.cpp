@@ -13,5 +13,8 @@ void Game::draw()
         }else std::cout << i - chunks.begin() << " is nullptr" << std::endl;
     }
     main->draw();
+    Rectangle rect = main->getFrame();
+    // draw hitbox of 5px 
+    DrawRectangleLinesEx(rect, 5, RED);
     drawContainers();
 }

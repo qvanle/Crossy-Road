@@ -25,23 +25,25 @@ Window::Window(std::string path)
 
     loadInterface(config["interface-list"]);
     loadGame(config["game"]);
-    if(config["choose-interface"]) 
+    if (config["choose-interface"])
         UI.push(config["choose-interface"].as<std::string>());
 
-    if(config["input-delay"]) 
+    if (config["input-delay"])
     {
         double delay = config["input-delay"].as<int>() / 1000.0;
         Wcontent.input_delay = std::chrono::duration<double>(delay);
-    }else 
+    }
+    else
     {
         Wcontent.input_delay = std::chrono::duration<int>(50) / 1000.0;
     }
 
-    if(config["runtime-delay"]) 
+    if (config["runtime-delay"])
     {
         double delay = config["runtime-delay"].as<int>() / 1000.0;
         Wcontent.runtime_delay = std::chrono::duration<double>(delay);
-    }else 
+    }
+    else
     {
         Wcontent.runtime_delay = std::chrono::duration<int>(40) / 1000.0;
     }
@@ -52,10 +54,12 @@ Window::Window(std::string path)
 
     // test inputbox
     Font font = GetFontDefault();
-    inputBox = new InputBox(20, {0.25, 0.25, 0.25, 0.25}, UI.getRootFrame(), &font);
+    inputBox = new InputBox(20, {0.4, 0.2, 0.2, 0.2}, UI.getRootFrame(), &font);
     inputBox->linkContent("inputbox.yaml");
-}
+    inputBox->hide();
 
+    highscore = new highScore("inputbox.yaml");
+}
 
 void Window::initRaylib(YAML::Node config)
 {
@@ -74,25 +78,30 @@ void Window::initRaylib(YAML::Node config)
 
 void Window::loadInterface(YAML::Node node)
 {
-    if(!node) return ;
+    if (!node)
+        return;
 
     UI.setInterfacePool(new InterfacePool());
-    for(auto i : node)
+    for (auto i : node)
     {
         std::string path = i["file"].as<std::string>();
         float x = 0, y = 0, w = 1, h = 1;
 
-        if(i["x"]) x = i["x"].as<float>() / 100;
-        if(i["y"]) y = i["y"].as<float>() / 100;
-        if(i["w"]) w = i["w"].as<float>() / 100;
-        if(i["h"]) h = i["h"].as<float>() / 100;
+        if (i["x"])
+            x = i["x"].as<float>() / 100;
+        if (i["y"])
+            y = i["y"].as<float>() / 100;
+        if (i["w"])
+            w = i["w"].as<float>() / 100;
+        if (i["h"])
+            h = i["h"].as<float>() / 100;
 
-
-        Interface* inf = new Interface(UI.getRootFrame(), {x, y, w, h});
+        Interface *inf = new Interface(UI.getRootFrame(), {x, y, w, h});
         inf->linkContent(path);
         UI.load(inf);
     }
 }
+
 
 void Window::loadMusic(YAML::Node node)
 {
@@ -108,20 +117,26 @@ void Window::loadMusic(YAML::Node node)
     }
 }
 
-void Window::loadGame(YAML::Node node)
+void Window::loadGame(YAML::Node f)
 {
-    if(!node) return ;
+    if (!f)
+        return;
+    for (auto node : f)
+    {
+        std::string path = node["file"].as<std::string>();
+        float x = 0, y = 0, w = 1, h = 1;
 
-    std::string path = node["file"].as<std::string>();
-    float x = 0, y = 0, w = 1, h = 1;
+        if (node["x"])
+            x = node["x"].as<float>() / 100;
+        if (node["y"])
+            y = node["y"].as<float>() / 100;
+        if (node["w"])
+            w = node["w"].as<float>() / 100;
+        if (node["h"])
+            h = node["h"].as<float>() / 100;
 
-    if(node["x"]) x = node["x"].as<float>() / 100;
-    if(node["y"]) y = node["y"].as<float>() / 100;
-    if(node["w"]) w = node["w"].as<float>() / 100;
-    if(node["h"]) h = node["h"].as<float>() / 100;
-
-
-    Interface* inf = new Game(UI.getRootFrame(), {x, y, w, h});
-    inf->linkContent(path);
-    UI.load(inf);
+        Interface *inf = new Game(UI.getRootFrame(), {x, y, w, h});
+        inf->linkContent(path);
+        UI.load(inf);
+    }
 }
