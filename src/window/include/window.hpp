@@ -49,6 +49,7 @@ private:
     {
     private:
         std::queue<Action*> pool;
+        bool stop = false;
         std::mutex mtx;
     public: 
         ActionPool() = default;
@@ -57,6 +58,9 @@ private:
         void push(PacketAction* act);
         Action* front();
         Action* pop();
+        void stopReceiving();
+        void continueReceiving();
+        void clear();
         bool empty();
     };
     class WinContent 

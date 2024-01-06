@@ -4,12 +4,22 @@
 void Window::ActionPool::push(Action* action)
 {
     std::lock_guard<std::mutex> lock(mtx);
+    if(stop) 
+    {
+        delete action; 
+        return ;
+    }
     pool.push(action);
 }
 
 void Window::ActionPool::push(PacketAction* action)
 {
     std::lock_guard<std::mutex> lock(mtx);
+    if(stop) 
+    {
+        delete action; 
+        return ;
+    }
     std::vector<Action*> unpacked = action->unpack();
     delete action;
 
@@ -20,9 +30,31 @@ void Window::ActionPool::push(PacketAction* action)
 
 }
 
+void Window::ActionPool::clear() 
+{
+    std::lock_guard<std::mutex> lock(mtx);
+    while(!pool.empty())
+    {
+        delete pool.front();
+        pool.pop();
+    }
+}
+
+void Window::ActionPool::stopReceiving()
+{
+    std::lock_guard<std::mutex> lock(mtx);
+    stop = true;
+}
+
+void Window::ActionPool::continueReceiving()
+{
+    std::lock_guard<std::mutex> lock(mtx);
+    stop = false;
+}
+
 Window::ActionPool::~ActionPool()
 {
-    while(pop() != nullptr);
+    clear();
 }
 
 Action* Window::ActionPool::front()
@@ -35,6 +67,7 @@ Action* Window::ActionPool::pop()
 {
     std::lock_guard<std::mutex> lock(mtx);
     if(pool.empty()) return nullptr;
+    if(stop) return nullptr;
     Action* action = pool.front();
     pool.pop();
     return action;
@@ -77,8 +110,27 @@ void Window::systemActing()
         Action* action = system_pool.pop();
         if(action == nullptr) return;
         if(!isRun()) return;
+        immediate_user_pool.stopReceiving();
+        immediate_pool.stopReceiving();
+        request_pool.stopReceiving();
+        system_pool.stopReceiving();
+
+
+        immediate_user_pool.clear();
+        immediate_pool.clear();
+        request_pool.clear();
+        system_pool.clear();
+    
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
         action->execute();
         delete action;
+
+        immediate_user_pool.continueReceiving();
+        immediate_pool.continueReceiving();
+        request_pool.continueReceiving();
+        system_pool.continueReceiving();
+
     }
 }
 
