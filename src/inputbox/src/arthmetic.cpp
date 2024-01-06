@@ -182,7 +182,6 @@ std::vector<std::pair<int, std::string>> highScore::getList(int level)
 
 void highScore::add(std::string name, int score, int level)
 {
-    std::cout << level << std::endl;
     for (int i = 0; i < list[level].size(); i++)
     {
         if (list[level][i].second == name)
@@ -190,7 +189,6 @@ void highScore::add(std::string name, int score, int level)
             if (list[level][i].first < score)
             {
                 list[level][i].first = score;
-                // std::cout<<"Update score of "<<name<<" to "<<score<<std::endl;
             }
             return;
         }
@@ -200,7 +198,6 @@ void highScore::add(std::string name, int score, int level)
 
 void highScore::add(std::string name, int score, std::string level)
 {
-    std::cout << level << std::endl;
     if (level == "easy")
         add(name, score, 0);
     else if (level == "normal")
@@ -229,8 +226,6 @@ void highScore::save(std::string yamlpath)
         std::string path = node["highscore"]["easy"].as<std::string>();
         std::ofstream fo;
         fo.open(path);
-        if(fo.is_open())
-            std::cout<<"yeah"<<path<<std::endl;
         for (auto i : list[0])
         {
             fo << i.first << " " << i.second << std::endl;
@@ -452,7 +447,6 @@ void highScore::setScore(int score)
 
 void highScore::add(std::string name)
 {
-    std::cout<<tmpName<<" "<<tmpScore<<std::endl;
     add(name, tmpScore, tmpName);
 }
 

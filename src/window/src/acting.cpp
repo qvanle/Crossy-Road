@@ -153,6 +153,7 @@ void Window::requestActing()
         {
             highscore->add(inputBox->getText());
             highscore->sort();
+            highscore->save(PATB::INPUTBOX_ +"inputbox.yaml");
             inputBox->clear();
             inputBox->hide();
             break;

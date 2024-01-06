@@ -33,6 +33,7 @@ void Window::run()
         // userActing();
         // immediateActing();
         std::this_thread::sleep_for(std::chrono::milliseconds(5));
+        // highscore->save(PATB::INPUTBOX_ +"inputbox.yaml");
     }
 }
 
