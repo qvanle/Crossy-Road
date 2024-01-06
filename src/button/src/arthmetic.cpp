@@ -97,6 +97,10 @@ void ButtonImage::loadAction(YAML::Node node)
     {
         request = new toggleMusicRequest();
     }
+    if(node["type"].as<std::string>() == "close-inputbox") 
+    {
+        request = new closeInputboxRequest();
+    }
 }
 
 popInfRequest::popInfRequest()
@@ -163,4 +167,23 @@ int toggleMusicRequest::isRequest()
 Action* toggleMusicRequest::clone()
 {
     return new toggleMusicRequest();
+}
+
+closeInputboxRequest::closeInputboxRequest()
+{  
+
+}
+
+closeInputboxRequest::closeInputboxRequest(closeInputboxRequest* request)
+{
+
+}
+int closeInputboxRequest::isRequest()
+{
+    return REQUEST::ID::CLOSE_INPUTBOX;
+}
+
+Action* closeInputboxRequest::clone()
+{
+    return new closeInputboxRequest(this);
 }

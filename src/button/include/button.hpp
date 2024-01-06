@@ -98,5 +98,14 @@ public:
     Action* clone() override;
 };
 
+class closeInputboxRequest : public Request
+{
+public:
+    closeInputboxRequest();
+    closeInputboxRequest(closeInputboxRequest*);
+    ~closeInputboxRequest() = default;
+    int isRequest() override;
+    Action* clone() override;
+};
 
 #endif 

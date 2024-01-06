@@ -13,6 +13,10 @@ void Game::cont()
     isPause = false;
 }
 
+int Game::getScore()
+{
+   return score;
+}
 Action* Game::react()
 {
     if(!isVisible()) return nullptr;

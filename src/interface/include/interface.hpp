@@ -58,6 +58,8 @@ public:
     void draw() override;
 
     void setScore(int);
+
+    virtual int getScore();
 	
 };
 

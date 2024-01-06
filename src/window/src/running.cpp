@@ -12,12 +12,12 @@ void Window::run()
     Wcontent.thread_pool.push_back(std::thread(&Window::getRuntimeEvent, this));
     // Wcontent.thread_pool.push_back(std::thread(&Window::sound_effect, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
-    //Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
+    // Wcontent.thread_pool.push_back(std::thread(&Window::userActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
-    //Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
-    //Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
+    // Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
+    // Wcontent.thread_pool.push_back(std::thread(&Window::immediateActing, this));
     Wcontent.thread_pool.push_back(std::thread(&Window::requestActing, this));
-    
+
     musicController.choose(0);
     musicController.play();
 
@@ -42,6 +42,17 @@ void Window::draw()
         BeginDrawing();
         UI.draw();
         inputBox->draw();
+        if (isOver)
+        {
+            Rectangle rel = UI.top()->getFrame();
+            // std::cout<<rel.x<<" "<<rel.y<<" "<<rel.width<<" "<<rel.height<<std::endl;
+            rel.x = rel.width * 1;
+            rel.y = rel.height * 0.8;
+            rel.width *= 0.3;
+            rel.height *= 0.12;
+            
+            DrawText(TextFormat("%08i", highscore->getScore()), rel.x, rel.y, 40, RED);
+        }
         EndDrawing();
     }
 }
@@ -103,9 +114,9 @@ void Window::getUserEvent()
         }
 
         action = inputBox->react();
-        if(action != nullptr) 
+        if (action != nullptr)
         {
-            if(!action->isRequest()) 
+            if (!action->isRequest())
                 immediate_user_pool.push(action);
         }
 

@@ -74,13 +74,23 @@ class highScore
 {
 private:
     std::vector<std::vector<std::pair<int, std::string>>> list;
+    std::string tmpName;
+    int tmpScore;
 public:
     highScore(std::string path);
+    void setName(std::string name);
     std::vector<std::pair<int, std::string>> getList(int level);
+    void add(std::string name);
     void add(std::string name, int score, int level);
+    void add(std::string name, int score, std::string level);
     void save(std::string path);
     void linkContent(std::string);
     void linkContentAbsolute(std::string);
+    void sort();
+    std::string getName();
+    void setScore(int score);
+    int getScore();
+    ~highScore();
 };
 
 #endif 

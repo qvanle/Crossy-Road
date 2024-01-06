@@ -59,6 +59,7 @@ Window::Window(std::string path)
     inputBox->hide();
 
     highscore = new highScore("inputbox.yaml");
+    isOver = false;
 }
 
 void Window::initRaylib(YAML::Node config)

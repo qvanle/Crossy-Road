@@ -174,6 +174,7 @@ private:
     // test inputBox
     InputBox* inputBox;
     highScore* highscore;
+    bool isOver;
 
 protected:
     void draw();

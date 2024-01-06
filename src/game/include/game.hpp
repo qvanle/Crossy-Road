@@ -12,6 +12,7 @@
 #include <keystroke.hpp>
 #include <interface.hpp>
 #include <chunk.hpp>
+#include <inputbox.hpp>
 
 class Game : public Interface
 {
@@ -19,6 +20,7 @@ private:
     friend class moveChunksAction;
     friend class startInitClockAction;
     friend class addScoreAction;
+    friend class highScore;
     std::deque<Chunk*> chunks;
     std::vector<Chunk*> cache;
     Container* main;
@@ -56,6 +58,8 @@ public:
 
     void pause() override;
     void cont() override;
+
+    int getScore();
 
 };
 

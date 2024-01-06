@@ -17,4 +17,7 @@ highScore::highScore(std::string path)
 {
 	list = std::vector<std::vector<std::pair<int, std::string>>>();
 	linkContent(path);
+	tmpName = "easy";
+	tmpScore = 0;
 }
+

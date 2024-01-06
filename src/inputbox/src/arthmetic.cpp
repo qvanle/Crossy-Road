@@ -182,7 +182,8 @@ std::vector<std::pair<int, std::string>> highScore::getList(int level)
 
 void highScore::add(std::string name, int score, int level)
 {
-    for (int i = 0; i < list.size(); i++)
+    std::cout << level << std::endl;
+    for (int i = 0; i < list[level].size(); i++)
     {
         if (list[level][i].second == name)
         {
@@ -197,6 +198,27 @@ void highScore::add(std::string name, int score, int level)
     list[level].push_back(std::make_pair(score, name));
 }
 
+void highScore::add(std::string name, int score, std::string level)
+{
+    std::cout << level << std::endl;
+    if (level == "easy")
+        add(name, score, 0);
+    else if (level == "normal")
+        add(name, score, 1);
+    else if (level == "hard")
+        add(name, score, 2);
+    else if (level == "insane")
+        add(name, score, 3);
+    else if (level == "nightmare")
+        add(name, score, 4);
+}
+void highScore::sort()
+{
+    for(int level = 0; level < list.size(); level++)
+    std::sort(list[level].begin(), list[level].end(), [](std::pair<int, std::string> a, std::pair<int, std::string> b) {
+        return a.first > b.first;
+    });
+}
 void highScore::save(std::string yamlpath)
 {
     YAML::Node node = YAML_FILE::readFile(yamlpath);
@@ -207,6 +229,8 @@ void highScore::save(std::string yamlpath)
         std::string path = node["highscore"]["easy"].as<std::string>();
         std::ofstream fo;
         fo.open(path);
+        if(fo.is_open())
+            std::cout<<"yeah"<<path<<std::endl;
         for (auto i : list[0])
         {
             fo << i.first << " " << i.second << std::endl;
@@ -410,3 +434,31 @@ void highScore::linkContentAbsolute(std::string yamlpath)
         this->list.push_back(std::vector<std::pair<int, std::string>>());
         return ;
 }
+
+void highScore::setName(std::string name)
+{
+    this->tmpName = name;
+}
+
+std::string highScore::getName()
+{
+    return this->tmpName;
+}
+
+void highScore::setScore(int score)
+{
+    this->tmpScore = score;
+}
+
+void highScore::add(std::string name)
+{
+    std::cout<<tmpName<<" "<<tmpScore<<std::endl;
+    add(name, tmpScore, tmpName);
+}
+
+int highScore::getScore()
+{
+    return this->tmpScore;
+}
+
+

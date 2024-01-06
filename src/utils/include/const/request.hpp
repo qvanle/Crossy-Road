@@ -14,7 +14,8 @@ namespace REQUEST
         LOSE, 
         SAVE_GAME, 
         LOAD_GAME,
-        TOGGLE_MUSIC
+        TOGGLE_MUSIC,
+        CLOSE_INPUTBOX,
     };
 }
 
