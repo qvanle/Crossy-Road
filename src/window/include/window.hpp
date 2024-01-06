@@ -170,6 +170,7 @@ private:
     UI UI;
     MusicController musicController;
     ActionPool immediate_user_pool, immediate_pool, request_pool, system_pool;
+    std::string lastGame;
 
     // test inputBox
     InputBox* inputBox;

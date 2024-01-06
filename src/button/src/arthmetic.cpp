@@ -93,6 +93,11 @@ void ButtonImage::loadAction(YAML::Node node)
     {
         request = new loadGameRequest();
     }
+    if(node["type"].as<std::string>() == "save") 
+    {
+        if(!node["str"]) return;
+        request = new saveRequest(node["str"][0].as<std::string>());
+    }
     if(node["type"].as<std::string>() == "toggle-music") 
     {
         request = new toggleMusicRequest();
@@ -163,4 +168,18 @@ int toggleMusicRequest::isRequest()
 Action* toggleMusicRequest::clone()
 {
     return new toggleMusicRequest();
+}
+
+saveRequest::saveRequest(std::string s) : changeInfRequest(s)
+{
+}
+
+int saveRequest::isRequest()
+{
+    return REQUEST::ID::SAVE_GAME;
+}
+
+Action* saveRequest::clone()
+{
+    return new saveRequest(args.str[0]);
 }

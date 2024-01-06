@@ -105,6 +105,21 @@ void Window::requestActing()
                 }
             case (REQUEST::ID::LOAD_GAME): 
                 {
+                    UI.push(lastGame);
+                    std::this_thread::sleep_for(std::chrono::milliseconds(400));
+                    UI.top()->cont();
+                    break;
+                }
+            case (REQUEST::ID::SAVE_GAME): 
+                {
+                    UI.top()->pause();
+                    UI.pop();
+                    UI.top()->pause();
+                    lastGame = UI.top()->getName();
+                    UI.pop();
+                    std::string id = action->getArgs().getInterfaceName();
+                    UI.push(id);
+                    UI.top()->cont();
                     break;
                 }
             case (REQUEST::ID::POP_THEN_CHANGE_INF): 
