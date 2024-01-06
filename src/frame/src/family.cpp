@@ -86,17 +86,9 @@ void Frame::removeSubframe(Frame* subframe)
 {
     mtx.lock();
     int i = subframes.size() - 1;
-    while(i >= 0 && subframes.size())
-    {
-        while(!subframes.empty() && subframes.back() == subframe)
-            subframes.pop_back();
-        i = std::min(i, (int) subframes.size() - 1);
-        if(!subframes.empty() && subframes[i] == subframe)
-        {
-            subframes[i] = subframes.back();
-            subframes.pop_back();
-        }
-    }
+    auto it = std::find(subframes.begin(), subframes.end(), subframe);
+    if(it != subframes.end())
+        subframes.erase(it);
     mtx.unlock();
 }
 

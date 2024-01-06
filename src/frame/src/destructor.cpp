@@ -9,4 +9,9 @@
 
 Frame::~Frame()
 {
+    for(auto i : subframes) 
+    {
+        i->parent = nullptr;
+    }
+    unplug();
 }
