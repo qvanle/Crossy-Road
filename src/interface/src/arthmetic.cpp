@@ -45,5 +45,5 @@ void Interface::setScore(int score)
 
 int Interface::getScore()
 {
-    
+    return 0;
 }
