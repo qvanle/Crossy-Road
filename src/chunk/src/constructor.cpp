@@ -4,12 +4,14 @@
 
 Chunk::Chunk(Frame* frame, Rectangle rect) : Interface(frame, rect)
 {
+    trafficLight = nullptr;
     score = 1;
 }
 
 Chunk::Chunk(Chunk* other) : Interface(other)
 {
 
+    trafficLight = nullptr;
     score = 1;
     for(auto i : other->visiter)
     {
@@ -36,6 +38,7 @@ Chunk::Chunk(Chunk* other) : Interface(other)
 
 Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
 {
+    trafficLight = nullptr;
     score = 1;
     for(auto i : other->visiter)
     {
@@ -62,6 +65,7 @@ Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
 
 Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, frame, rect)
 {
+    trafficLight = nullptr;
     score = 1;
     for(auto i : other->visiter)
     {
