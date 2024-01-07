@@ -2,7 +2,7 @@
 
 "textures": 
   -
-    "path": "theme/deadland/deadtree_2.png"
+    "path": "theme/deadland/tree_2.png"
     "resize": [0.5, 0.5]
     "graphics": 
       - 

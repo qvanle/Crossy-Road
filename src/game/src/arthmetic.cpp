@@ -15,8 +15,8 @@ void Game::draw()
     main->draw();
     Rectangle rect = main->getFrame();
     // draw hitbox of 5px 
-    DrawRectangleLinesEx(rect, 5, RED);
-    drawContainers();
+    // DrawRectangleLinesEx(rect, 5, RED);
+    // drawContainers();
 
     // draw rectangle color white on top right 
     

@@ -25,17 +25,6 @@ void Interface::draw()
     drawNested();
 
     drawContainers();
-
-//     if (getName() == "gameover")
-//     {
-//         Rectangle rel = getFrame();
-//         rel.x = rel.width * 1.0 ;
-//         rel.y = rel.height * 0.8;
-//         rel.width *= 0.3;
-//         rel.height *= 0.12;
-
-//         DrawText(TextFormat("%08i", score), rel.x , rel.y, 40, RED);
-//     }
 }
 
 void Interface::setScore(int score)
