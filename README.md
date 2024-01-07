@@ -1,4 +1,12 @@
 # Crossy Road clone
+![Static Badge](https://img.shields.io/badge/make-color000-black)
+![Static Badge](https://img.shields.io/badge/make-color001-red)
+![Static Badge](https://img.shields.io/badge/make-color010-green)
+![Static Badge](https://img.shields.io/badge/make-color100-blue)
+![Static Badge](https://img.shields.io/badge/make-color011-yellow)
+![Static Badge](https://img.shields.io/badge/make-color101-fuchsia)
+![Static Badge](https://img.shields.io/badge/make-color110-cyan)
+![Static Badge](https://img.shields.io/badge/make-color011-white)
 
 ## Descriptions 
 - CS202 group project.
