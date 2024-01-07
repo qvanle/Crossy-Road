@@ -5,7 +5,7 @@
     "file": "spring/springpath.yaml"
     "w": 100
     "h": 10 
-    "velocity": [0.005, 1, 0]
+    "velocity": [0, 1, 0]
   - 
     "file": "spring/grass.yaml"
     "w": 100 
@@ -93,8 +93,8 @@
     "path": "entity/frog_still.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 5
+    "h": 5
   - 
     "path": "entity/frog.yaml"  # 12
     "x": 90
@@ -224,24 +224,50 @@
 
 "attach-object": 
   - 
+    "chunk": [3]
+    "object": [25, 10] 
+  - 
+    "chunk": [3]
+    "object": [26, 10] 
+  - 
+    "chunk": [3]
+    "object": [27, 10] 
+  - 
+    "chunk": [3]
+    "object": [28, 10]
+  - 
+    "chunk": [3]
+    "object": [11, 10]  
+  - 
     "chunk": [1] 
-    "object": [1, 10] # each 1 second there is 10% to generate object 1
+    "object": [7, 10]
+  - 
+    "chunk": [1] 
+    "object": [9, 10]
+  - 
+    "chunk": [1] 
+    "object": [12, 10]
+  - 
+    "chunk": [1] 
+    "object": [18, 10]
+  - 
+    "chunk": [1] 
+    "object": [20, 10]
   - 
     "chunk": [2]
-    "object": [2, 10] # each 1 second there is 10% to generate object 2
+    "object": [8, 10] 
   - 
-    "chunk": [3]
-    "object": [25, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [2]
+    "object": [10, 10]
   - 
-    "chunk": [3]
-    "object": [26, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [2]
+    "object": [13, 10]
   - 
-    "chunk": [3]
-    "object": [27, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [2]
+    "object": [19, 10]
   - 
-    "chunk": [3]
-    "object": [28, 10] # each 1 second there is 10% to generate object 2
-
+    "chunk": [2]
+    "object": [21, 10]
 "control": 
   -
     "key": ["d"]

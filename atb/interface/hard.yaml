@@ -93,8 +93,8 @@
     "path": "entity/frog_still.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 5
+    "h": 5
   - 
     "path": "entity/frog.yaml"
     "x": 90
