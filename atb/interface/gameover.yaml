@@ -19,33 +19,33 @@
   - 
     "path": "home.yaml"
     "x": 45.5
-    "y": 86
-    "w": 9
-    "h": 9
+    "y": 84
+    "w": 8
+    "h": 8
   - 
     "path": "newgame.yaml"
-    "x": 10
+    "x": 4
     "y": 72
-    "w": 20
-    "h": 10
+    "w": 28
+    "h": 7
   - 
     "path": "setting.yaml"
-    "x": 40
+    "x": 36
     "y": 72
-    "w": 20
-    "h": 10
+    "w": 28
+    "h": 7
   - 
     "path": "highscore.yaml"
-    "x": 70
+    "x": 68
     "y": 72
-    "w": 20
-    "h": 10
+    "w": 28
+    "h": 7
   - 
     "path": "submit.yaml"
     "x": 70
     "y": 85
-    "w": 20
-    "h": 10
+    "w": 27
+    "h": 7
   - 
     "path": "edit.yaml"
     "x": 82
