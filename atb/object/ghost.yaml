@@ -45,6 +45,17 @@
         "gapX": 22.222222222
         "repeat": 3
         "axis": "horizontal" 
+  - 
+    "path": "main_char/dis.png" 
+    "graphics": 
+      - 
+        "x": 5.555555555
+        "y": 15
+        "w": 5.555555555
+        "h": 70
+        "gapX": 11.111111111
+        "repeat": 6
+        "axis": "horizontal"
 
 "focus": [0, 0]
 

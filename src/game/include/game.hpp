@@ -21,6 +21,8 @@ private:
     friend class startInitClockAction;
     friend class addScoreAction;
     friend class highScore;
+    friend class dyingAction;
+
     std::deque<Chunk*> chunks;
     std::vector<Chunk*> cache;
     Container* main;
@@ -30,9 +32,14 @@ private:
     float mapSpeed;
     std::chrono::time_point<std::chrono::system_clock> mapSpeedClock;
     std::chrono::time_point<std::chrono::system_clock> initStateClock;
+    std::chrono::time_point<std::chrono::system_clock> dyingClock;
     bool initState, isPause;
+    bool isLose;
+    bool isDying;
     std::deque<int> chunkOrder;
     int score;
+
+    int dieIndex;
 protected:
     void loadChunk(YAML::Node);
     void loadCollide(YAML::Node);
@@ -115,5 +122,17 @@ public:
     ~saveGameRequest() = default;
     int isRequest() override;
     Request* clone() override;
+};
+
+class dyingAction : public Action 
+{
+private: 
+    Game* game;
+public:
+    dyingAction(Game*);
+    ~dyingAction() = default;
+
+    void execute() override;
+    Action* clone() override;
 };
 #endif 

@@ -8,30 +8,41 @@
 
 Game::Game(Frame* frame, Rectangle rect) : Interface(frame, rect)
 {
+    isLose = false;
+    isDying = true;
     initState = true;
     score = 0;
 }
 
 Game::Game(Game* other) : Interface(other)
 {
+    isLose = false;
     initState = true;
+    isDying = true;
     score = 0;
 }
 
 Game::Game(Game* other, Rectangle rect) : Interface(other, rect)
 {
+    isLose = false;
+    isDying = true;
     initState = true;
     score = 0;
 }
 
 Game::Game(Game* other, Frame* frame, Rectangle rect) : Interface(other, frame, rect)
 {
+    isLose = false;
+    isDying = true;
     initState = true;
     score = 0;
 }
 
 void Game::reset()
 {
+    isLose = false;
+    isDying = true;
+    dieIndex = 0;
     initState = true;
 }
 

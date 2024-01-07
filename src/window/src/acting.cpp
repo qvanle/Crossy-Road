@@ -205,7 +205,6 @@ void Window::requestActing()
                     UI.top()->pause();
                     UI.top()->reset();
                     std::string id = "gameover";
-                    std::this_thread::sleep_for(std::chrono::milliseconds(200));
                     UI.push(id);
                     UI.top()->cont();
                     

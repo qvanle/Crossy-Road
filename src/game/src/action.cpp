@@ -15,12 +15,13 @@ void Game::cont()
 
 int Game::getScore()
 {
-   return score;
+    return score;
 }
 Action* Game::react()
 {
     if(!isVisible()) return nullptr;
     if(isPause) return nullptr;
+    if(isLose) return nullptr;
     if(initState) 
     {
         return new startInitClockAction(this);
@@ -44,6 +45,26 @@ Action* Game::getRuntimeEvent()
 
     if(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - mapSpeedClock).count() < 20) 
         return nullptr;
+
+    if(isLose && isDying) 
+    {
+        if(std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - dyingClock).count() < 200) 
+            return nullptr;
+
+        dyingClock = std::chrono::system_clock::now();
+        return new dyingAction(this);
+    }
+
+    if(isLose && !isDying)
+    {
+        if(dieIndex++ != 0) return nullptr;
+        Action* act = new loseRequest(score);
+        PacketAction* packet = nullptr;
+        if(packet == nullptr) packet = new PacketAction();
+        packet->addAction(act);
+        return packet;
+    }
+
     Action* action; 
     PacketAction* packet = nullptr;
     action = Interface::getRuntimeEvent();
@@ -63,9 +84,10 @@ Action* Game::getRuntimeEvent()
         if(i->getRelative()[1] > 1.05) break;
         if(i->isEntityCollide(main)) 
         {
-            Action* act = new loseRequest(score);
+            Action* act = new dyingAction(this);
             if(packet == nullptr) packet = new PacketAction();
             packet->addAction(act);
+            dyingClock = std::chrono::system_clock::now();
         }
         if(i->isCollide(main)) 
         {
@@ -96,21 +118,24 @@ Action* Game::getRuntimeEvent()
     }
     if(main->getRelative()[1] > 1.05) 
     {
-        Action* act = new loseRequest(score);
+        Action* act = new dyingAction(this);
         if(packet == nullptr) packet = new PacketAction();
         packet->addAction(act);
+        dyingClock = std::chrono::system_clock::now();
     }
     if(main->getRelative()[0] < -0.4)
     {
-        Action* act = new loseRequest(score);
+        Action* act = new dyingAction(this);
         if(packet == nullptr) packet = new PacketAction();
         packet->addAction(act);
+        dyingClock = std::chrono::system_clock::now();
     }
     if(main->getRelative()[0] > 1.2)
     {
-        Action* act = new loseRequest(score);
+        Action* act = new dyingAction(this);
         if(packet == nullptr) packet = new PacketAction();
         packet->addAction(act);
+        dyingClock = std::chrono::system_clock::now();
     }
     action = new moveObjectAction(main, mapDisplacement);
     if(packet == nullptr) packet = new PacketAction();
