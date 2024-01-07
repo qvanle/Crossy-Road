@@ -37,5 +37,5 @@
     "sprite": [[4, 0, 70]]
 "focus": [1,0]
 "action":
-  "type": "change-interface"  # shoulb be save and then back to main menu
+  "type": "save"  # shoulb be save and then back to main menu
   "str": ["start"]

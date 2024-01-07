@@ -138,6 +138,7 @@ void Window::loadGame(YAML::Node f)
 
         Interface *inf = new Game(UI.getRootFrame(), {x, y, w, h});
         inf->linkContent(path);
+        lastGame = inf->getName();
         UI.load(inf);
     }
 }

@@ -5,6 +5,7 @@ build
 *log
 .DS_Store
 saving/
+src/x64-Debug/
 src/dependency/raylib/raylib 
 src/dependency/yamlcpp/yamlcpp
 .vs

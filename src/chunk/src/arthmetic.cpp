@@ -16,4 +16,6 @@ void Chunk::draw()
     drawNested();
     drawContainers();
     drawEntity();
+    if(trafficLight != nullptr) 
+        trafficLight->draw();
 }

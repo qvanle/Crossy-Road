@@ -1,14 +1,17 @@
 #include "const/path/atb.hpp"
 #include <chunk.hpp>
+#include <raylib.h>
 
 Chunk::Chunk(Frame* frame, Rectangle rect) : Interface(frame, rect)
 {
+    trafficLight = nullptr;
     score = 1;
 }
 
 Chunk::Chunk(Chunk* other) : Interface(other)
 {
 
+    trafficLight = nullptr;
     score = 1;
     for(auto i : other->visiter)
     {
@@ -20,11 +23,22 @@ Chunk::Chunk(Chunk* other) : Interface(other)
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
+    if(other->trafficLight != nullptr)
+    {
+        Rectangle rel;
+        rel.x = GetRandomValue(0, 90) / 100.0;
+        rel.y = other->trafficLight->getRelative()[1];
+        rel.width = other->trafficLight->getRelative()[2];
+        rel.height = other->trafficLight->getRelative()[3];
+        trafficLight = new Container(other->trafficLight, this, rel);
+        trafficLight->show();
+    }
     generateEntity();
 }
 
 Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
 {
+    trafficLight = nullptr;
     score = 1;
     for(auto i : other->visiter)
     {
@@ -36,11 +50,22 @@ Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
+    if(other->trafficLight != nullptr)
+    {
+        Rectangle rel;
+        rel.x = GetRandomValue(0, 90) / 100.0;
+        rel.y = other->trafficLight->getRelative()[1];
+        rel.width = other->trafficLight->getRelative()[2];
+        rel.height = other->trafficLight->getRelative()[3];
+        trafficLight = new Container(other->trafficLight, this, rel);
+        trafficLight->show();
+    }
     generateEntity();
 }
 
 Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, frame, rect)
 {
+    trafficLight = nullptr;
     score = 1;
     for(auto i : other->visiter)
     {
@@ -53,6 +78,16 @@ Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, fram
     }
     velocity = other->velocity;
     generateEntity();
+    if(other->trafficLight != nullptr)
+    {
+        Rectangle rel;
+        rel.x = GetRandomValue(0, 90) / 100.0;
+        rel.y = other->trafficLight->getRelative()[1];
+        rel.width = other->trafficLight->getRelative()[2];
+        rel.height = other->trafficLight->getRelative()[3];
+        trafficLight = new Container(other->trafficLight, this, rel);
+        trafficLight->show();
+    }
 }
 
 void Chunk::generateEntity() 
@@ -198,4 +233,17 @@ int Chunk::getScore()
 {
     if(score == 1) return score--;
     return 0;
+}
+
+void Chunk::attachLight(Container* light)
+{
+    stop = false;
+    Rectangle rel;
+    rel.x = 0.5;
+    rel.y = -0.5;
+    rel.width = light->getRelative()[2];
+    rel.height = 0.5;
+
+    trafficLight = new Container(light, this, rel);
+    trafficLight->show();
 }
