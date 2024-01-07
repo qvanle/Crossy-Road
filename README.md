@@ -53,20 +53,20 @@
 - image 
 
 ## Features 
-- [ x ] Basic requirement
-- [ x ] Menu
-- [ x ] Save game and Load game
-- [ x ] Traffic lights
-- [ x ] Collision effects
-- [ x ] Game levels: at least 5
-- [ x ] Main character resources
-- [ x ] Vehicle resources
-- [ x ] Animal resources
-- [ x ] Other special effects
-- [ x ] Bonus feature (max 0.5 point) : Highscores
-- [ x ] Bonus feature (max 0.5 point) : Resize 
-- [ x ] Bonus feature (max 0.5 point) : 5 themes 
-- [ x ] Bonus feature (max 0.5 point) : Musics
+- [x] Basic requirement
+- [x] Menu
+- [x] Save game and Load game
+- [x] Traffic lights
+- [x] Collision effects
+- [x] Game levels: at least 5
+- [x] Main character resources
+- [x] Vehicle resources
+- [x] Animal resources
+- [x] Other special effects
+- [x] Bonus feature (max 0.5 point) : Highscores
+- [x] Bonus feature (max 0.5 point) : Resize 
+- [x] Bonus feature (max 0.5 point) : 5 themes 
+- [x] Bonus feature (max 0.5 point) : Musics
 
 ## Documentation 
 - [Report]()
