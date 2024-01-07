@@ -21,6 +21,22 @@
     "w": 100 
     "h": 10 
     "velocity": [0, 1, 0]
+  - 
+    "file": "nightmare/deadland.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [0.005, 1, 0]
+  - 
+    "file": "railway.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [0.05, 1, 0]
+  - 
+    "file": "railway.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [-0.05, 1, 0]
+
 
 "object": 
   -
@@ -42,13 +58,13 @@
     "w": 10
     "h": 10
   -
-    "path": "entity/bus.yaml"
+    "path": "entity/nightmare/bus.yaml"
     "x": 40
     "y": 40
     "w": 10
     "h": 10
   -
-    "path": "entity/busRL.yaml"
+    "path": "entity/nightmare/busRL.yaml"
     "x": 40
     "y": 40
     "w": 10
@@ -66,25 +82,25 @@
     "w": 10
     "h": 10
   -
-    "path": "entity/cow.yaml"
+    "path": "entity/nightmare/cow.yaml"
     "x": 40
     "y": 40
     "w": 10
     "h": 10
   -
-    "path": "entity/cowRL.yaml"
+    "path": "entity/nightmare/cowRL.yaml"
     "x": 40
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/duck.yaml" 
+    "path": "entity/nightmare/duck.yaml" 
     "x": 60
     "y": 40
     "w": 10
     "h": 10 
   -
-    "path": "entity/duckRL.yaml"
+    "path": "entity/nightmare/duckRL.yaml"
     "x": 40
     "y": 40
     "w": 10
@@ -108,25 +124,25 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/jeep.yaml"
+    "path": "entity/nightmare/jeep.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/jeepRL.yaml"
+    "path": "entity/nightmare/jeepRL.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/police.yaml"
+    "path": "entity/nightmare/police.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/policeRL.yaml"
+    "path": "entity/nightmare/policeRL.yaml"
     "x": 90
     "y": 40
     "w": 10
@@ -156,13 +172,13 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/train.yaml"
+    "path": "entity/nightmare/train.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/trainRL.yaml"
+    "path": "entity/nightmare/trainRL.yaml"
     "x": 90
     "y": 40
     "w": 10
@@ -224,23 +240,53 @@
 
 "attach-object": 
   - 
+    "chunk": [3]
+    "object": [25, 10] 
+  - 
+    "chunk": [3]
+    "object": [26, 10] 
+  - 
+    "chunk": [3]
+    "object": [27, 10] 
+  - 
+    "chunk": [3]
+    "object": [28, 10] 
+  - 
     "chunk": [1] 
-    "object": [1, 10] # each 1 second there is 10% to generate object 1
+    "object": [7, 10]
+  - 
+    "chunk": [1] 
+    "object": [9, 10]
+  - 
+    "chunk": [4] 
+    "object": [14, 10]
+  - 
+    "chunk": [4] 
+    "object": [16, 10]
+  - 
+    "chunk": [4] 
+    "object": [3, 10]
   - 
     "chunk": [2]
-    "object": [2, 10] # each 1 second there is 10% to generate object 2
+    "object": [8, 10] 
   - 
-    "chunk": [3]
-    "object": [25, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [2]
+    "object": [10, 10]
   - 
-    "chunk": [3]
-    "object": [26, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [5]
+    "object": [15, 10]
   - 
-    "chunk": [3]
-    "object": [27, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [5]
+    "object": [17, 10]
   - 
-    "chunk": [3]
-    "object": [28, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [5]
+    "object": [4, 10]
+  - 
+    "chunk": [6]
+    "object": [22, 10]
+  - 
+    "chunk": [6]
+    "object": [23, 10]
 
 "control": 
   -

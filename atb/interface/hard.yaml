@@ -21,6 +21,16 @@
     "w": 100 
     "h": 10 
     "velocity": [0, 1, 0]
+  - 
+    "file": "autumn/autumnpath.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [0.005, 1, 0]
+  - 
+    "file": "autumn/autumnpath.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [-0.005, 1, 0]
 
 "object": 
   -
@@ -42,13 +52,13 @@
     "w": 10
     "h": 10
   -
-    "path": "entity/bus.yaml"
+    "path": "entity/autumn/bus.yaml"
     "x": 40
     "y": 40
     "w": 10
     "h": 10
   -
-    "path": "entity/busRL.yaml"
+    "path": "entity/autumn/busRL.yaml"
     "x": 40
     "y": 40
     "w": 10
@@ -66,13 +76,13 @@
     "w": 10
     "h": 10
   -
-    "path": "entity/cow.yaml"
+    "path": "entity/autumn/cow.yaml"
     "x": 40
     "y": 40
     "w": 10
     "h": 10
   -
-    "path": "entity/cowRL.yaml"
+    "path": "entity/autumn/cowRL.yaml"
     "x": 40
     "y": 40
     "w": 10
@@ -108,25 +118,25 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/jeep.yaml"
+    "path": "entity/autumn/jeep.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/jeepRL.yaml"
+    "path": "entity/autumn/jeepRL.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/police.yaml"
+    "path": "entity/autumn/police.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/policeRL.yaml"
+    "path": "entity/autumn/policeRL.yaml"
     "x": 90
     "y": 40
     "w": 10
@@ -224,23 +234,47 @@
 
 "attach-object": 
   - 
+    "chunk": [3]
+    "object": [25, 10] 
+  - 
+    "chunk": [3]
+    "object": [26, 10] 
+  - 
+    "chunk": [3]
+    "object": [27, 10] 
+  - 
+    "chunk": [3]
+    "object": [28, 10] 
+  - 
     "chunk": [1] 
-    "object": [1, 10] # each 1 second there is 10% to generate object 1
+    "object": [7, 10]
+  - 
+    "chunk": [1] 
+    "object": [9, 10]
+  - 
+    "chunk": [4] 
+    "object": [14, 10]
+  - 
+    "chunk": [4] 
+    "object": [16, 10]
+  - 
+    "chunk": [4] 
+    "object": [3, 10]
   - 
     "chunk": [2]
-    "object": [2, 10] # each 1 second there is 10% to generate object 2
+    "object": [8, 10] 
   - 
-    "chunk": [3]
-    "object": [25, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [2]
+    "object": [10, 10]
   - 
-    "chunk": [3]
-    "object": [26, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [5]
+    "object": [15, 10]
   - 
-    "chunk": [3]
-    "object": [27, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [5]
+    "object": [17, 10]
   - 
-    "chunk": [3]
-    "object": [28, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [5]
+    "object": [4, 10]
 
 "control": 
   -

@@ -21,7 +21,26 @@
     "w": 100 
     "h": 10 
     "velocity": [0, 1, 0]
-
+  - 
+    "file": "winter/winterpath.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [0.005, 1, 0]
+  - 
+    "file": "winter/winterpath.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [-0.005, 1, 0]
+  - 
+    "file": "railway.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [0.05, 1, 0]
+  - 
+    "file": "railway.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [-0.05, 1, 0]
 "object": 
   -
     "path": "ghost.yaml"
@@ -224,23 +243,53 @@
 
 "attach-object": 
   - 
+    "chunk": [3]
+    "object": [25, 10] 
+  - 
+    "chunk": [3]
+    "object": [26, 10] 
+  - 
+    "chunk": [3]
+    "object": [27, 10] 
+  - 
+    "chunk": [3]
+    "object": [28, 10] 
+  - 
     "chunk": [1] 
-    "object": [1, 10] # each 1 second there is 10% to generate object 1
+    "object": [7, 10]
+  - 
+    "chunk": [1] 
+    "object": [9, 10]
+  - 
+    "chunk": [4] 
+    "object": [14, 10]
+  - 
+    "chunk": [4] 
+    "object": [16, 10]
+  - 
+    "chunk": [4] 
+    "object": [3, 10]
   - 
     "chunk": [2]
-    "object": [2, 10] # each 1 second there is 10% to generate object 2
+    "object": [8, 10] 
   - 
-    "chunk": [3]
-    "object": [25, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [2]
+    "object": [10, 10]
   - 
-    "chunk": [3]
-    "object": [26, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [5]
+    "object": [15, 10]
   - 
-    "chunk": [3]
-    "object": [27, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [5]
+    "object": [17, 10]
   - 
-    "chunk": [3]
-    "object": [28, 10] # each 1 second there is 10% to generate object 2
+    "chunk": [5]
+    "object": [4, 10]
+  - 
+    "chunk": [6]
+    "object": [22, 10]
+  - 
+    "chunk": [6]
+    "object": [23, 10]
 "control": 
   -
     "key": ["d"]

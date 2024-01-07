@@ -21,6 +21,16 @@
     "w": 100 
     "h": 10 
     "velocity": [0, 1, 0]
+  - 
+    "file": "summer/summerpath.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [0.005, 1, 0]
+  - 
+    "file": "summer/summerpath.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [-0.005, 1, 0]
 
 "object": 
   -
@@ -234,10 +244,7 @@
     "object": [27, 10] 
   - 
     "chunk": [3]
-    "object": [28, 10]
-  - 
-    "chunk": [3]
-    "object": [11, 10]  
+    "object": [28, 10]  
   - 
     "chunk": [1] 
     "object": [7, 10]
@@ -245,14 +252,14 @@
     "chunk": [1] 
     "object": [9, 10]
   - 
-    "chunk": [1] 
-    "object": [12, 10]
+    "chunk": [4] 
+    "object": [3, 10]
   - 
     "chunk": [1] 
     "object": [18, 10]
   - 
-    "chunk": [1] 
-    "object": [20, 10]
+    "chunk": [4] 
+    "object": [14, 10]
   - 
     "chunk": [2]
     "object": [8, 10] 
@@ -260,14 +267,14 @@
     "chunk": [2]
     "object": [10, 10]
   - 
-    "chunk": [2]
-    "object": [13, 10]
+    "chunk": [5]
+    "object": [4, 10]
   - 
     "chunk": [2]
     "object": [19, 10]
   - 
-    "chunk": [2]
-    "object": [21, 10]
+    "chunk": [5]
+    "object": [15, 10]
 
 "control": 
   -
