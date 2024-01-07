@@ -215,6 +215,7 @@ int openInputboxRequest::isRequest()
 Action* openInputboxRequest::clone()
 {
     return new openInputboxRequest(this);
+}
 saveRequest::saveRequest(std::string s) : changeInfRequest(s)
 {
 }

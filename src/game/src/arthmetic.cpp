@@ -28,4 +28,6 @@ void Game::draw()
 
     DrawRectangleRec(rel, {200, 200, 200, 255});
     DrawText(TextFormat("Score: %08i", score), rel.x + 10, 25, 20, RED);
+
+    drawContainers();
 }

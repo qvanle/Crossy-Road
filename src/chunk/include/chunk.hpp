@@ -53,7 +53,7 @@ public:
 
     void setVelocity(fPoint);
     bool isEntityCollide(Container* main);
-    int getScore();
+    int getScore() override;
 
     std::string linkContent(std::string path) override;
     YAML::Node createSpecialContent() override;
