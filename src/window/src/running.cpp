@@ -66,7 +66,6 @@ void Window::draw()
         if (isOver)
         {
             Rectangle rel = UI.top()->getFrame();
-            // std::cout<<rel.x<<" "<<rel.y<<" "<<rel.width<<" "<<rel.height<<std::endl;
             rel.x = rel.width * 1;
             rel.y = rel.height * 0.8;
             rel.width *= 0.3;

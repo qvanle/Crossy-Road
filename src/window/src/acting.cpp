@@ -210,7 +210,6 @@ void Window::requestActing()
             std::this_thread::sleep_for(std::chrono::milliseconds(200));
             highscore->setName(UI.top()->getName());
             highscore->setScore(UI.top()->getScore());
-
             UI.push(id);
             break;
         }
