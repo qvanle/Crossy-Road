@@ -43,6 +43,26 @@ void Window::draw()
         BeginDrawing();
         UI.draw();
         inputBox->draw();
+        std::string tmp = UI.top()->getName();
+        if(tmp == "highscoreeasy" || tmp == "highscorenormal" || tmp == "highscorehard" || tmp == "highscoreinsane" || tmp == "highscorenightmare")
+        {
+            Rectangle rel = UI.top()->getFrame();
+            int level = 0;
+           
+            if(tmp == "highscoreeasy") level = 0;
+            if(tmp == "highscorenormal") level = 1;
+            if(tmp == "highscorehard") level = 2;
+            if(tmp == "highscoreinsane") level = 3;
+            if(tmp == "highscorenightmare") level = 4;
+            int num = 4;
+            std::vector<std::pair<int, std::string>> player = highscore->getList(level);
+            if(num>player.size()) num = player.size();
+            for(int i = 0; i < num; i++)
+            {
+                DrawText(TextFormat("%s", player[i].second.c_str()), rel.x + rel.width * 0.31, rel.y + rel.height * 0.451 + rel.height * 0.117 * i, 40, RED);
+                DrawText(TextFormat("%03i", player[i].first), rel.x + rel.width * 0.67, rel.y + rel.height * 0.451 + rel.height * 0.117 * i, 40, RED);
+            }
+        }
         if (isOver)
         {
             Rectangle rel = UI.top()->getFrame();

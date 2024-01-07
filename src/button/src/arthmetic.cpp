@@ -101,6 +101,10 @@ void ButtonImage::loadAction(YAML::Node node)
     {
         request = new closeInputboxRequest();
     }
+     if(node["type"].as<std::string>() == "open-inputbox") 
+    {
+        request = new openInputboxRequest();
+    }
 }
 
 popInfRequest::popInfRequest()
@@ -186,4 +190,24 @@ int closeInputboxRequest::isRequest()
 Action* closeInputboxRequest::clone()
 {
     return new closeInputboxRequest(this);
+}
+
+openInputboxRequest::openInputboxRequest()
+{  
+
+}
+
+openInputboxRequest::openInputboxRequest(openInputboxRequest* request)
+{
+
+}
+
+int openInputboxRequest::isRequest()
+{
+    return REQUEST::ID::OPEN_INPUTBOX;
+}
+
+Action* openInputboxRequest::clone()
+{
+    return new openInputboxRequest(this);
 }

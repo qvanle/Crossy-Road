@@ -4,9 +4,9 @@
   -
     "x": 40
     "y": 20
-    "w": 20
-    "h": 20
-"fontsize": 20
+    "w": 40
+    "h": 10
+"fontsize": 35
 "highscore":
   "easy" : "saving/highscore/easy.txt"
   "normal" : "saving/highscore/normal.txt"

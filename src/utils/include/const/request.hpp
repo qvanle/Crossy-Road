@@ -16,6 +16,7 @@ namespace REQUEST
         LOAD_GAME,
         TOGGLE_MUSIC,
         CLOSE_INPUTBOX,
+        OPEN_INPUTBOX,
     };
 }
 

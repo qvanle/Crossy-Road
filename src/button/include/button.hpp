@@ -108,4 +108,14 @@ public:
     Action* clone() override;
 };
 
+class openInputboxRequest : public Request
+{
+public:
+    openInputboxRequest();
+    openInputboxRequest(openInputboxRequest*);
+    ~openInputboxRequest() = default;
+    int isRequest() override;
+    Action* clone() override;
+};
+
 #endif 

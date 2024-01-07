@@ -97,7 +97,7 @@ void Window::requestActing()
             continue;
         if (!isRun())
             break;
-        if(action->isRequest() == REQUEST::ID::LOSE || action->isRequest() == REQUEST::ID::CLOSE_INPUTBOX)
+        if(action->isRequest() == REQUEST::ID::LOSE || action->isRequest() == REQUEST::ID::CLOSE_INPUTBOX || action->isRequest() == REQUEST::ID::OPEN_INPUTBOX)
             isOver = true;
         else
             isOver = false;
@@ -138,7 +138,7 @@ void Window::requestActing()
         }
         case (REQUEST::ID::LOSE):
         {
-            inputBox->show();
+            // inputBox->show();
             UI.top()->pause();
             UI.top()->reset();
             std::string id = "gameover";
@@ -156,6 +156,11 @@ void Window::requestActing()
             highscore->save(PATB::INPUTBOX_ +"inputbox.yaml");
             inputBox->clear();
             inputBox->hide();
+            break;
+        }
+        case (REQUEST::ID::OPEN_INPUTBOX):
+        {
+            inputBox->show();
             break;
         }
         case (REQUEST::ID::TOGGLE_MUSIC):

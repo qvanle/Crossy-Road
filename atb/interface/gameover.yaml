@@ -43,6 +43,12 @@
   - 
     "path": "submit.yaml"
     "x": 70
-    "y": 92
+    "y": 85
     "w": 20
     "h": 10
+  - 
+    "path": "edit.yaml"
+    "x": 82
+    "y": 57
+    "w": 8
+    "h": 8

@@ -54,7 +54,7 @@ Window::Window(std::string path)
 
     // test inputbox
     Font font = GetFontDefault();
-    inputBox = new InputBox(20, {0.4, 0.2, 0.2, 0.2}, UI.getRootFrame(), &font);
+    inputBox = new InputBox(30, {0.35, 0.45, 0.3, 0.08}, UI.getRootFrame(), &font);
     inputBox->linkContent("inputbox.yaml");
     inputBox->hide();
 
