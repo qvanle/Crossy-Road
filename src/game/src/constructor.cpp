@@ -73,11 +73,28 @@ std::string Game::linkContentAbsolute(std::string path)
 
     if(node["button"])
         loadButton(node["button"]);
+
+    loadLight(node);
     return getName();
 }
 
 void Game::loadCollide(YAML::Node node)
 {
+}
+
+void Game::loadLight(YAML::Node node) 
+{
+    if(!node["traffic-light"]) return ;
+    int id = node["traffic-light"].as<int>();
+    light = getContainers(id);
+
+    if(!node["attach-light"]) return ;
+
+    for(auto i : node["attach-light"])
+    {
+        int id = i.as<int>();
+        cache[id]->attachLight(light);
+    }
 }
 
 void Game::loadMap() 
@@ -204,7 +221,7 @@ YAML::Node Game::createSpecialContent()
     {
         node["chunk-order"][i] = chunkOrder[i];
     }
-    
+
     for(int i = 0; i < chunks.size(); i++)
     {
         node["chunks"][i] = chunks[i]->createSpecialContent();

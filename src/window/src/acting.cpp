@@ -4,12 +4,22 @@
 void Window::ActionPool::push(Action *action)
 {
     std::lock_guard<std::mutex> lock(mtx);
+    if (stop)
+    {
+        delete action;
+        return;
+    }
     pool.push(action);
 }
 
 void Window::ActionPool::push(PacketAction *action)
 {
     std::lock_guard<std::mutex> lock(mtx);
+    if (stop)
+    {
+        delete action;
+        return;
+    }
     std::vector<Action *> unpacked = action->unpack();
     delete action;
 
@@ -19,10 +29,31 @@ void Window::ActionPool::push(PacketAction *action)
     }
 }
 
+void Window::ActionPool::clear()
+{
+    std::lock_guard<std::mutex> lock(mtx);
+    while (!pool.empty())
+    {
+        delete pool.front();
+        pool.pop();
+    }
+}
+
+void Window::ActionPool::stopReceiving()
+{
+    std::lock_guard<std::mutex> lock(mtx);
+    stop = true;
+}
+
+void Window::ActionPool::continueReceiving()
+{
+    std::lock_guard<std::mutex> lock(mtx);
+    stop = false;
+}
+
 Window::ActionPool::~ActionPool()
 {
-    while (pop() != nullptr)
-        ;
+    clear();
 }
 
 Action *Window::ActionPool::front()
@@ -35,6 +66,8 @@ Action *Window::ActionPool::pop()
 {
     std::lock_guard<std::mutex> lock(mtx);
     if (pool.empty())
+        return nullptr;
+    if (stop)
         return nullptr;
     Action *action = pool.front();
     pool.pop();
@@ -83,8 +116,25 @@ void Window::systemActing()
             return;
         if (!isRun())
             return;
+        immediate_user_pool.stopReceiving();
+        immediate_pool.stopReceiving();
+        request_pool.stopReceiving();
+        system_pool.stopReceiving();
+
+        immediate_user_pool.clear();
+        immediate_pool.clear();
+        request_pool.clear();
+        system_pool.clear();
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
         action->execute();
         delete action;
+
+        immediate_user_pool.continueReceiving();
+        immediate_pool.continueReceiving();
+        request_pool.continueReceiving();
+        system_pool.continueReceiving();
     }
 }
 
@@ -97,11 +147,11 @@ void Window::requestActing()
             continue;
         if (!isRun())
             break;
-        if(action->isRequest() == REQUEST::ID::LOSE || action->isRequest() == REQUEST::ID::CLOSE_INPUTBOX || action->isRequest() == REQUEST::ID::OPEN_INPUTBOX)
+        if (action->isRequest() == REQUEST::ID::LOSE || action->isRequest() == REQUEST::ID::CLOSE_INPUTBOX || action->isRequest() == REQUEST::ID::OPEN_INPUTBOX)
             isOver = true;
         else
             isOver = false;
-        
+
         switch (action->isRequest())
         {
         case (REQUEST::ID::NONE):
@@ -118,6 +168,21 @@ void Window::requestActing()
         }
         case (REQUEST::ID::LOAD_GAME):
         {
+            UI.push(lastGame);
+            std::this_thread::sleep_for(std::chrono::milliseconds(400));
+            UI.top()->cont();
+            break;
+        }
+        case (REQUEST::ID::SAVE_GAME):
+        {
+            UI.top()->pause();
+            UI.pop();
+            UI.top()->pause();
+            lastGame = UI.top()->getName();
+            UI.pop();
+            std::string id = action->getArgs().getInterfaceName();
+            UI.push(id);
+            UI.top()->cont();
             break;
         }
         case (REQUEST::ID::POP_THEN_CHANGE_INF):
@@ -145,7 +210,7 @@ void Window::requestActing()
             std::this_thread::sleep_for(std::chrono::milliseconds(200));
             highscore->setName(UI.top()->getName());
             highscore->setScore(UI.top()->getScore());
-           
+
             UI.push(id);
             break;
         }
@@ -153,7 +218,7 @@ void Window::requestActing()
         {
             highscore->add(inputBox->getText());
             highscore->sort();
-            highscore->save(PATB::INPUTBOX_ +"inputbox.yaml");
+            highscore->save(PATB::INPUTBOX_ + "inputbox.yaml");
             inputBox->clear();
             inputBox->hide();
             break;

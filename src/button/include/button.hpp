@@ -69,6 +69,15 @@ public:
     Action* clone() override;
 };
 
+class saveRequest : public changeInfRequest 
+{
+public: 
+    saveRequest(std::string s);
+    ~saveRequest() = default;
+    int isRequest() override;
+    Action* clone() override;
+};
+
 class popThenChangeInfRequest : public Request
 {
 public:

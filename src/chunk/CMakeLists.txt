@@ -7,6 +7,7 @@ add_library(
     src/arthmetic.cpp
     src/action.cpp
     src/action/moveentity.cpp
+    src/action/switchlight.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC dep::raylib)

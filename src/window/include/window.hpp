@@ -49,6 +49,7 @@ private:
     {
     private:
         std::queue<Action*> pool;
+        bool stop = false;
         std::mutex mtx;
     public: 
         ActionPool() = default;
@@ -57,6 +58,9 @@ private:
         void push(PacketAction* act);
         Action* front();
         Action* pop();
+        void stopReceiving();
+        void continueReceiving();
+        void clear();
         bool empty();
     };
     class WinContent 
@@ -170,6 +174,7 @@ private:
     UI UI;
     MusicController musicController;
     ActionPool immediate_user_pool, immediate_pool, request_pool, system_pool;
+    std::string lastGame;
 
     // test inputBox
     InputBox* inputBox;
