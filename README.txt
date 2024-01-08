@@ -1,19 +1,27 @@
-# Crossy Road 
+# Report on Run 4 Ur Life
+
+## Table of content 
+- Description
+- Contributors
+- Requirement
+- Installation Guide
+- Features
+- Documentation
 
 ## Description 
 
-### Table of content 
+*Run 4 Ur Life* belongs to the category of games commonly known as "endless runners" or "infinite runners."
+Featuring 5 levels of difficulties ranging from Easy to Nightmare, our game presents a fun and sufficiently challenging means of passing time.
+In *Run 4 Ur Life*, players control the main character as they attempt to cross roads, rivers, and other obstacles;
+for every mode of difficulty, the speed at which obstacles move will be increased and themes will be changed accordingly.
 
-### brief CS202 project 
+### Demonstration
 
-### demo image, video  
-
-
-## Credit / contributor  
-- qvanle 
-- quang 
-- nhi 
-- huy 
+## Contributors
+- Lê Quốc Văn - @qvanle
+- Dương Minh Quang - @DuongMQuang
+- Lâm Tú Nhi - @fragilember
+- Trần Quang Huy - @TranQuangHuy2004
 
 ## Install 
 
