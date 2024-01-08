@@ -12,6 +12,8 @@ Game::Game(Frame* frame, Rectangle rect) : Interface(frame, rect)
     isDying = true;
     initState = true;
     score = 0;
+    isPause = 0;
+    dieIndex = 0;
 }
 
 Game::Game(Game* other) : Interface(other)
@@ -20,6 +22,8 @@ Game::Game(Game* other) : Interface(other)
     initState = true;
     isDying = true;
     score = 0;
+    isPause = 0;
+    dieIndex = 0;
 }
 
 Game::Game(Game* other, Rectangle rect) : Interface(other, rect)
@@ -28,6 +32,8 @@ Game::Game(Game* other, Rectangle rect) : Interface(other, rect)
     isDying = true;
     initState = true;
     score = 0;
+    isPause = 0;
+    dieIndex = 0;
 }
 
 Game::Game(Game* other, Frame* frame, Rectangle rect) : Interface(other, frame, rect)
@@ -36,14 +42,17 @@ Game::Game(Game* other, Frame* frame, Rectangle rect) : Interface(other, frame, 
     isDying = true;
     initState = true;
     score = 0;
+    isPause = 0;
+    dieIndex = 0;
 }
 
 void Game::reset()
 {
     isLose = false;
     isDying = true;
-    dieIndex = 0;
     initState = true;
+    score = 0;
+    dieIndex = 0;
 }
 
 std::string Game::linkContentAbsolute(std::string path)

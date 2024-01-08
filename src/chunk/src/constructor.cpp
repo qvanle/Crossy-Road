@@ -2,18 +2,20 @@
 #include <chunk.hpp>
 #include <raylib.h>
 
-Chunk::Chunk(Frame* frame, Rectangle rect) : Interface(frame, rect)
+Chunk::Chunk(Frame *frame, Rectangle rect) : Interface(frame, rect)
 {
+    stop = 0;
     trafficLight = nullptr;
     score = 1;
 }
 
-Chunk::Chunk(Chunk* other) : Interface(other)
+Chunk::Chunk(Chunk *other) : Interface(other)
 {
 
+    stop = 0;
     trafficLight = nullptr;
     score = 1;
-    for(auto i : other->visiter)
+    for (auto i : other->visiter)
     {
         Rectangle rel;
         rel.x = -0.4;
@@ -23,7 +25,7 @@ Chunk::Chunk(Chunk* other) : Interface(other)
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
-    if(other->trafficLight != nullptr)
+    if (other->trafficLight != nullptr)
     {
         Rectangle rel;
         rel.x = GetRandomValue(0, 90) / 100.0;
@@ -36,11 +38,12 @@ Chunk::Chunk(Chunk* other) : Interface(other)
     generateEntity();
 }
 
-Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
+Chunk::Chunk(Chunk *other, Rectangle rect) : Interface(other, rect)
 {
+    stop = 0;
     trafficLight = nullptr;
     score = 1;
-    for(auto i : other->visiter)
+    for (auto i : other->visiter)
     {
         Rectangle rel;
         rel.x = -0.4;
@@ -50,7 +53,7 @@ Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
         visiter.push_back(new Container(i, this, rel));
     }
     velocity = other->velocity;
-    if(other->trafficLight != nullptr)
+    if (other->trafficLight != nullptr)
     {
         Rectangle rel;
         rel.x = GetRandomValue(0, 90) / 100.0;
@@ -63,11 +66,12 @@ Chunk::Chunk(Chunk* other, Rectangle rect) : Interface(other, rect)
     generateEntity();
 }
 
-Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, frame, rect)
+Chunk::Chunk(Chunk *other, Frame *frame, Rectangle rect) : Interface(other, frame, rect)
 {
+    stop = 0;
     trafficLight = nullptr;
     score = 1;
-    for(auto i : other->visiter)
+    for (auto i : other->visiter)
     {
         Rectangle rel;
         rel.x = -0.7;
@@ -78,7 +82,7 @@ Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, fram
     }
     velocity = other->velocity;
     generateEntity();
-    if(other->trafficLight != nullptr)
+    if (other->trafficLight != nullptr)
     {
         Rectangle rel;
         rel.x = GetRandomValue(0, 90) / 100.0;
@@ -90,34 +94,33 @@ Chunk::Chunk(Chunk* other, Frame* frame, Rectangle rect) : Interface(other, fram
     }
 }
 
-void Chunk::generateEntity() 
+void Chunk::generateEntity()
 {
 
-    if(visiter.empty()) return;
+    if (visiter.empty())
+        return;
     float x = -0.3;
-    
-    while(x < 1.3)
+
+    while (x < 1.3)
     {
-        Container* c = randomEntity();
+        Container *c = randomEntity();
         Rectangle rel;
         rel.x = x;
         rel.y = 0;
         rel.width = c->getRelative()[2];
         rel.height = c->getRelative()[3];
-        Container* cont = new Container(c, this, rel);
+        Container *cont = new Container(c, this, rel);
         Entity.push_back(cont);
         x += GetRandomValue(20, 60) / 100.0;
     }
 }
-
 
 std::string Chunk::linkContent(std::string path)
 {
     return linkContentAbsolute(PATB::CHUNK_ + path);
 }
 
-
-void Chunk::addVisiter(Container* obj)
+void Chunk::addVisiter(Container *obj)
 {
     Rectangle rel;
     rel.x = obj->getRelative()[0];
@@ -125,11 +128,11 @@ void Chunk::addVisiter(Container* obj)
     rel.width = obj->getRelative()[2];
     rel.height = obj->getRelative()[3];
 
-    Container* c = new Container(obj, this, rel);
+    Container *c = new Container(obj, this, rel);
     visiter.push_back(c);
 }
 
-void Chunk::addVisiter(Container* obj, int prob)
+void Chunk::addVisiter(Container *obj, int prob)
 {
     Rectangle rel;
     rel.x = obj->getRelative()[0];
@@ -137,20 +140,20 @@ void Chunk::addVisiter(Container* obj, int prob)
     rel.width = obj->getRelative()[2];
     rel.height = obj->getRelative()[3];
 
-    Container* c = new Container(obj, this, rel);
+    Container *c = new Container(obj, this, rel);
     c->setProbability(prob);
     visiter.push_back(c);
 }
 
-void Chunk::addVisiter(Container* obj, Rectangle rel)
+void Chunk::addVisiter(Container *obj, Rectangle rel)
 {
-    Container* c = new Container(obj, this, rel);
+    Container *c = new Container(obj, this, rel);
     visiter.push_back(c);
 }
 
-void Chunk::addVisiter(Container* obj, int prob, Rectangle rel)
+void Chunk::addVisiter(Container *obj, int prob, Rectangle rel)
 {
-    Container* c = new Container(obj, this, rel);
+    Container *c = new Container(obj, this, rel);
     c->setProbability(prob);
     visiter.push_back(c);
 }
@@ -160,13 +163,13 @@ void Chunk::setVelocity(fPoint vel)
     velocity = vel;
 }
 
-bool Chunk::isEntityCollide(Container* main)
+bool Chunk::isEntityCollide(Container *main)
 {
-    for(auto i : Entity)
+    for (auto i : Entity)
     {
-        if(i->isCollide(main)) 
+        if (i->isCollide(main))
         {
-            //throw i;
+            // throw i;
             return true;
         }
     }
@@ -176,18 +179,18 @@ bool Chunk::isEntityCollide(Container* main)
 YAML::Node Chunk::createSpecialContent()
 {
     YAML::Node node = Interface::createSpecialContent();
-    for(int i = 0; i < visiter.size(); i++)
+    for (int i = 0; i < visiter.size(); i++)
     {
         node["visiter"][i] = visiter[i]->createSpecialContent();
     }
     node["velocity"][0] = velocity[0];
     node["velocity"][1] = velocity[1];
 
-    for(int i = 0; i < Entity.size(); i++)
+    for (int i = 0; i < Entity.size(); i++)
     {
         node["entity"][i] = Entity[i]->createSpecialContent();
     }
-    for(int i = 0; i < entityOrder.size(); i++)
+    for (int i = 0; i < entityOrder.size(); i++)
     {
         node["order"][i] = entityOrder[i];
     }
@@ -198,44 +201,45 @@ YAML::Node Chunk::createSpecialContent()
 void Chunk::loadSpecialContent(YAML::Node node)
 {
     Interface::loadSpecialContent(node);
-    while(!Entity.empty())
+    while (!Entity.empty())
     {
         delete Entity.back();
         Entity.pop_back();
     }
-    
-    for(int i = 0; i < visiter.size(); i++) 
+
+    for (int i = 0; i < visiter.size(); i++)
     {
         visiter[i]->loadSpecialContent(node["visiter"][i]);
     }
     velocity[0] = node["velocity"][0].as<float>();
     velocity[1] = node["velocity"][1].as<float>();
-    
-    for(auto i : node["order"])
+
+    for (auto i : node["order"])
     {
         entityOrder.push_back(i.as<int>());
-        Container* c = visiter[i.as<int>()];
+        Container *c = visiter[i.as<int>()];
         Rectangle rel;
         rel.x = c->getRelative()[0];
         rel.y = c->getRelative()[1];
         rel.width = c->getRelative()[2];
         rel.height = c->getRelative()[3];
-        Container* cont = new Container(c, this, rel);
+        Container *cont = new Container(c, this, rel);
         Entity.push_back(cont);
     }
-    for(int i = 0; i < Entity.size(); i++)
+    for (int i = 0; i < Entity.size(); i++)
     {
-        Entity[i]->loadSpecialContent(node["entity"][i]);  
+        Entity[i]->loadSpecialContent(node["entity"][i]);
     }
 }
 
 int Chunk::getScore()
 {
-    if(score == 1) return score--;
+    if (score == 1)
+        return score--;
     return 0;
 }
 
-void Chunk::attachLight(Container* light)
+void Chunk::attachLight(Container *light)
 {
     stop = false;
     Rectangle rel;

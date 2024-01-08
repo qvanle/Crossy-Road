@@ -9,6 +9,7 @@ add_library(
     src/action/movechunk.cpp
     src/action/startinit.cpp
     src/action/addscore.cpp
+    src/action/dying.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC dep::raylib)

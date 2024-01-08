@@ -12,7 +12,7 @@ add_library(
     src/interface.cpp
     src/action/close.cpp
     src/action/resize.cpp
-    src/action/dying.cpp
+
 )
 
 add_library(window::lib ALIAS ${PROJECT_NAME})
