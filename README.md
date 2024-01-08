@@ -19,7 +19,8 @@
 
 ## Description 
 
-*Run 4 Ur Life* belongs to the category of games commonly known as "endless runners" or "infinite runners." Featuring 5 levels of difficulties ranging from Easy to Nightmare, our game presents a fun and sufficiently challenging means of passing time. In *Run 4 Ur Life*, players control the main character as they attempt to cross roads, rivers, and other obstacles; for every mode of difficulty, the speed at which obstacles move will be increased and themes will be changed accordingly.
+*Run 4 Ur Life* belongs to the category of games commonly known as "endless runners" or "infinite runners." Featuring 5 levels of difficulties ranging from Easy to Nightmare, our game presents a fun and sufficiently challenging means of passing time.
+In *Run 4 Ur Life*, players control the main character as they attempt to cross roads, rivers, and other obstacles; for every mode of difficulty, the speed at which obstacles move will be increased and themes will be changed accordingly.
 
 ### Demonstration
 ![Homescreen](./docs/img/homescreen.png)
@@ -108,7 +109,7 @@ This should display information about the installed CMake version.
 ![Insane mode](./docs/img/gameplay2.png)
 
 ### Save & load 
-[Save & load](https://youtu.be/-8zYW2Oad_o)
+[Save & load Demonstration](https://youtu.be/-8zYW2Oad_o)
 
 ### Highscores 
 ![Highscores](/docs/img/highscore.png)
