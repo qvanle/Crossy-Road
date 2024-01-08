@@ -5,7 +5,7 @@
     "file": "nightmare/deadland.yaml"
     "w": 100
     "h": 10 
-    "velocity": [0.005, 1, 0]
+    "velocity": [0, 1, 0]
   - 
     "file": "nightmare/lava.yaml"
     "w": 100 
@@ -26,6 +26,11 @@
     "w": 100
     "h": 10 
     "velocity": [0.005, 1, 0]
+  - 
+    "file": "nightmare/deadland.yaml"
+    "w": 100
+    "h": 10 
+    "velocity": [-0.005, 1, 0]
   - 
     "file": "railway.yaml"
     "w": 100
@@ -291,7 +296,7 @@
     "chunk": [6]
     "object": [22, 10]
   - 
-    "chunk": [6]
+    "chunk": [7]
     "object": [23, 10]
 
 "control": 
