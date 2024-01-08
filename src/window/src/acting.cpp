@@ -122,7 +122,7 @@ void Window::systemActing()
         immediate_pool.clear();
         request_pool.clear();
         system_pool.clear();
-    
+
         std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
         action->execute();
@@ -149,7 +149,7 @@ void Window::requestActing()
             isOver = true;
         else
             isOver = false;
-        
+
         switch (action->isRequest())
         {
             case (REQUEST::ID::NONE):
@@ -207,7 +207,22 @@ void Window::requestActing()
                     std::string id = "gameover";
                     UI.push(id);
                     UI.top()->cont();
-                    
+                    highscore->setName(UI.top()->getName());
+                    highscore->setScore(action->getArgs().num[0]);                   
+                    break;
+                }
+            case (REQUEST::ID::CLOSE_INPUTBOX):
+                {
+                    highscore->add(inputBox->getText());
+                    highscore->sort();
+                    highscore->save(PATB::INPUTBOX_ +"inputbox.yaml");
+                    inputBox->clear();
+                    inputBox->hide();
+                    break;
+                }
+            case (REQUEST::ID::OPEN_INPUTBOX):
+                {
+                    inputBox->show();
                     break;
                 }
             case (REQUEST::ID::TOGGLE_MUSIC): 

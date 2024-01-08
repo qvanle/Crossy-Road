@@ -49,6 +49,7 @@ public:
     loseRequest(loseRequest*);
     ~loseRequest() = default;
     int isRequest() override;
+    ARGS& getArgs() override;
     Action* clone() override;
 };
 

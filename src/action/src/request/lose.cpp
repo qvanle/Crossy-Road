@@ -22,3 +22,7 @@ Action* loseRequest::clone()
     return new loseRequest(this);
 }
 
+ARGS& loseRequest::getArgs() 
+{
+    return args;
+}
