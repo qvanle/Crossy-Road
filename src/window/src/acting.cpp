@@ -205,10 +205,10 @@ void Window::requestActing()
                     UI.top()->pause();
                     UI.top()->reset();
                     std::string id = "gameover";
-                    UI.push(id);
-                    UI.top()->cont();
                     highscore->setName(UI.top()->getName());
                     highscore->setScore(action->getArgs().num[0]);                   
+                    UI.push(id);
+                    UI.top()->cont();
                     break;
                 }
             case (REQUEST::ID::CLOSE_INPUTBOX):
