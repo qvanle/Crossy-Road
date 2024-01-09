@@ -225,7 +225,7 @@
     "w": 10
     "h": 10
 "traffic-light" : 29
-"attach-light" : [1, 2, 3]
+"attach-light" : [6, 7]
 "button":
   - 
     "path": "pause.yaml"
