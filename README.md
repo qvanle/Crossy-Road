@@ -135,7 +135,7 @@ This should display information about the installed CMake version.
 - [x] Bonus feature (max 0.5 point) : Musics
 
 ## Documentation 
-- [Report]()
+- [Report](/docs/Report.pdf)
 - [Contribution](https://docs.google.com/spreadsheets/d/1AVUBVkAyLRs_uJDbkoPnMfpPMAuqWG7FugoVfJgquLs/edit?usp=sharing)
 - [Grading scheme](https://docs.google.com/spreadsheets/d/1jVbS3Elh6-2IouKZW_RCUDCNzjiY3pcXCJgKksatuZs/edit?usp=sharing)
 - [Video demo]()
