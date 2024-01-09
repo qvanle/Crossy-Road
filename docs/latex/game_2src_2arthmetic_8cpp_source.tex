@@ -6,15 +6,34 @@
 \DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00003}\mbox{\hyperlink{class_game_a9dbbb6429980a91196ed07d299404304}{00003}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a9dbbb6429980a91196ed07d299404304}{Game::draw}}()}
 \DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{isVisible}}())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00006}00006\ \ \ \ \ \mbox{\hyperlink{class_interface_a77300df653a7ab735342494bc9285695}{drawNested}}();}
 \DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00007}00007\ }
 \DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ =\ chunks.begin();\ i\ !=\ chunks.end();\ ++i)}
 \DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00009}00009\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ (*i)-\/>draw();}
-\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00011}00011\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{drawContainers}}();}
-\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(*i\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ (*i)-\/>draw();}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ std::cout\ <<\ i\ -\/\ chunks.begin()\ <<\ \textcolor{stringliteral}{"{}\ is\ nullptr"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00015}00015\ \ \ \ \ main-\/>\mbox{\hyperlink{class_container_ac8feb6b3a790483f85aad40a46327f24}{draw}}();}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00016}00016\ \ \ \ \ Rectangle\ rect\ =\ main-\/>\mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ draw\ hitbox\ of\ 5px\ }}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ DrawRectangleLinesEx(rect,\ 5,\ RED);}}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ drawContainers();}}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ draw\ rectangle\ color\ white\ on\ top\ right\ }}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00023}00023\ \ \ \ \ Rectangle\ rel\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00024}00024\ \ \ \ \ rel.x\ =\ rel.width\ *\ 0.0;}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00025}00025\ \ \ \ \ rel.y\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00026}00026\ \ \ \ \ rel.width\ *=\ 0.15;}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00027}00027\ \ \ \ \ rel.height\ *=\ 0.06;}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00029}00029\ \ \ \ \ DrawRectangleRec(rel,\ \{200,\ 200,\ 200,\ 255\});}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00030}00030\ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}Score:\ \%08i"{}},\ score),\ rel.x\ +\ 10,\ 25,\ 20,\ RED);}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{drawContainers}}();}
+\DoxyCodeLine{\Hypertarget{game_2src_2arthmetic_8cpp_source_l00033}00033\ \}}
 
 \end{DoxyCode}

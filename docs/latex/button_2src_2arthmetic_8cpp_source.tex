@@ -14,7 +14,7 @@
 \DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00010}00010\ \}}
 \DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00011}00011\ }
 \DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00012}\mbox{\hyperlink{class_button_image_a342259372d097c3291c5945707489220}{00012}}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ \mbox{\hyperlink{class_button_image_a342259372d097c3291c5945707489220}{ButtonImage::react}}()\ \{}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00013}00013\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{isVisible}}())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (CheckCollisionPointRec(GetMousePosition(),\ \mbox{\hyperlink{button_8hpp_ae9196a4aeb033ebd6f9657c25bd16ac0}{rectangle}}))\ \{}
 \DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ this-\/>isHover\ =\ 1;}
 \DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsMouseButtonDown(MOUSE\_LEFT\_BUTTON))\ \{\ \textcolor{comment}{//\ click\ -\/>\ pressing}}
@@ -32,41 +32,206 @@
 \DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
 \DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(actions[clickedID]-\/>clone());}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classchange_inf_request}{changeInfRequest}}(\textcolor{stringliteral}{"{}test"{}}));}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>hoverID\ ==\ -\/1)}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(actions[hoverID]-\/>clone());}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00039}00039\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isHover\ ==\ 1)}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00041}00041\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ this-\/>isHover\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>releaseID\ ==\ -\/1)}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(actions[releaseID]-\/>clone());}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00048}00048\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00050}00050\ \}}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00054}\mbox{\hyperlink{class_button_image_a03ef3a61bb18f43bc674e17c5c976581}{00054}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_image_a03ef3a61bb18f43bc674e17c5c976581}{ButtonImage::changeIndex}}(\textcolor{keywordtype}{int}\ newindex)}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00055}00055\ \{}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00056}00056\ \ \ \ \ tmpPath\ =\ newindex;}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00057}00057\ \}}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00059}\mbox{\hyperlink{class_button_image_a35a65ba2e7792d0b02d8a44a9f329377}{00059}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_button_image_a35a65ba2e7792d0b02d8a44a9f329377}{ButtonImage::getClicked}}()}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00060}00060\ \{}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{return}\ tmpPath;}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00062}00062\ \}}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00063}00063\ }
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00064}\mbox{\hyperlink{class_button_image_a4be3314cbc7d6d91c0035c501ce0449a}{00064}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_button_image_a4be3314cbc7d6d91c0035c501ce0449a}{ButtonImage::isClicked}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>clicked;}
-\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(request\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}request"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(request-\/>\mbox{\hyperlink{class_request_a8e44d712eba3826b620b7d1a0519ecf3}{clone}}());\}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>hoverID\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(actions[hoverID]-\/>clone());}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>isHover\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ this-\/>isHover\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>releaseID\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(actions[releaseID]-\/>clone());}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00057}\mbox{\hyperlink{class_button_image_a03ef3a61bb18f43bc674e17c5c976581}{00057}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_image_a03ef3a61bb18f43bc674e17c5c976581}{ButtonImage::changeIndex}}(\textcolor{keywordtype}{int}\ newindex)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00058}00058\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00059}00059\ \ \ \ \ tmpPath\ =\ newindex;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00062}\mbox{\hyperlink{class_button_image_a35a65ba2e7792d0b02d8a44a9f329377}{00062}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_button_image_a35a65ba2e7792d0b02d8a44a9f329377}{ButtonImage::getClicked}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00063}00063\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{return}\ tmpPath;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00067}\mbox{\hyperlink{class_button_image_a4be3314cbc7d6d91c0035c501ce0449a}{00067}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_button_image_a4be3314cbc7d6d91c0035c501ce0449a}{ButtonImage::isClicked}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>clicked;}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00071}\mbox{\hyperlink{class_button_image_ab3593403c11146e3a18881ba70e0b497}{00071}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_button_image_ab3593403c11146e3a18881ba70e0b497}{ButtonImage::loadAction}}(YAML::Node\ node)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00072}00072\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{if}(!node)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00074}00074\ \ \ \ \ \textcolor{keywordflow}{if}(!node[\textcolor{stringliteral}{"{}type"{}}])\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}type"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}change-\/interface"{}})}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00077}00077\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!node[\textcolor{stringliteral}{"{}str"{}}])\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classchange_inf_request}{changeInfRequest}}(node[\textcolor{stringliteral}{"{}str"{}}][0].as<std::string>());}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00082}00082\ \ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}type"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}pop-\/interface"{}})}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00083}00083\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classpop_inf_request}{popInfRequest}}();\ \textcolor{comment}{//\ TODO}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}type"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}pop-\/then-\/change-\/interface"{}})}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00088}00088\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!node[\textcolor{stringliteral}{"{}str"{}}])\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classpop_then_change_inf_request}{popThenChangeInfRequest}}(node[\textcolor{stringliteral}{"{}str"{}}][0].as<std::string>());}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}type"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}load-\/game"{}})\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00093}00093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classload_game_request}{loadGameRequest}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}type"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}save"{}})\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00097}00097\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!node[\textcolor{stringliteral}{"{}str"{}}])\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classsave_request}{saveRequest}}(node[\textcolor{stringliteral}{"{}str"{}}][0].as<std::string>());}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00100}00100\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00101}00101\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}type"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}toggle-\/music"{}})\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00102}00102\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classtoggle_music_request}{toggleMusicRequest}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00105}00105\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}type"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}close-\/inputbox"{}})\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00106}00106\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classclose_inputbox_request}{closeInputboxRequest}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00109}00109\ \ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}type"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}open-\/inputbox"{}})\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00110}00110\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ request\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classopen_inputbox_request}{openInputboxRequest}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00113}00113\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00115}\mbox{\hyperlink{classpop_inf_request_a281cf16f8f1a8e90e759607c9cc88406}{00115}}\ \mbox{\hyperlink{classpop_inf_request_a281cf16f8f1a8e90e759607c9cc88406}{popInfRequest::popInfRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00116}00116\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00118}00118\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00120}\mbox{\hyperlink{classpop_inf_request_a0c6be38bd3f4b56075d80026706f1d40}{00120}}\ \mbox{\hyperlink{classpop_inf_request_a281cf16f8f1a8e90e759607c9cc88406}{popInfRequest::popInfRequest}}(\mbox{\hyperlink{classpop_inf_request}{popInfRequest}}*\ request)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00121}00121\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00122}00122\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00123}00123\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00125}\mbox{\hyperlink{classpop_inf_request_a7f8030f245e6e324df0b83b083055df4}{00125}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classpop_inf_request_a7f8030f245e6e324df0b83b083055df4}{popInfRequest::isRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00126}00126\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca4e65ca30619f8d93311002f29a1b1cde}{REQUEST::ID::POP\_INF}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00128}00128\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00130}\mbox{\hyperlink{classpop_inf_request_ad0cde0062344f65c9f8e97c39234edc5}{00130}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classpop_inf_request_ad0cde0062344f65c9f8e97c39234edc5}{popInfRequest::clone}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00131}00131\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classpop_inf_request_a281cf16f8f1a8e90e759607c9cc88406}{popInfRequest}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00133}00133\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00135}\mbox{\hyperlink{classpop_then_change_inf_request_ad89a93555cb2df55ad4a11a23c00863b}{00135}}\ \mbox{\hyperlink{classpop_then_change_inf_request_ad89a93555cb2df55ad4a11a23c00863b}{popThenChangeInfRequest::popThenChangeInfRequest}}(std::string\ s)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00136}00136\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00137}00137\ \ \ \ \ \mbox{\hyperlink{class_request_aee33f1be0bb8d1bb6b8c8af1acbd0b4c}{args}}.\mbox{\hyperlink{struct_a_r_g_s_a31574e0adc25f28d165300c31f6d2535}{str}}.push\_back(s);}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00138}00138\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00140}\mbox{\hyperlink{classpop_then_change_inf_request_aae84cceea57e66a6c08d36a307fefe6f}{00140}}\ \mbox{\hyperlink{classpop_then_change_inf_request_ad89a93555cb2df55ad4a11a23c00863b}{popThenChangeInfRequest::popThenChangeInfRequest}}(\mbox{\hyperlink{classpop_then_change_inf_request}{popThenChangeInfRequest}}*\ other)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00141}00141\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00142}00142\ \ \ \ \ \mbox{\hyperlink{class_request_aee33f1be0bb8d1bb6b8c8af1acbd0b4c}{args}}\ =\ other-\/>\mbox{\hyperlink{class_request_aee33f1be0bb8d1bb6b8c8af1acbd0b4c}{args}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00143}00143\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00145}\mbox{\hyperlink{classpop_then_change_inf_request_abee0eb7a5d627bb1341b44d9358d1299}{00145}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classpop_then_change_inf_request_abee0eb7a5d627bb1341b44d9358d1299}{popThenChangeInfRequest::isRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00146}00146\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00147}00147\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5cafc2886603d8293153c927094f9597008}{REQUEST::ID::POP\_THEN\_CHANGE\_INF}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00148}00148\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00150}\mbox{\hyperlink{classpop_then_change_inf_request_aa05f590059c9e4140a6afc8a305d7353}{00150}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classpop_then_change_inf_request_aa05f590059c9e4140a6afc8a305d7353}{popThenChangeInfRequest::clone}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00151}00151\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00152}00152\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classpop_then_change_inf_request_ad89a93555cb2df55ad4a11a23c00863b}{popThenChangeInfRequest}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00153}00153\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00155}\mbox{\hyperlink{classpop_then_change_inf_request_a9066d86bce55a375d9d4b1cb86989acf}{00155}}\ \mbox{\hyperlink{struct_a_r_g_s}{ARGS}}\&\ \mbox{\hyperlink{classpop_then_change_inf_request_a9066d86bce55a375d9d4b1cb86989acf}{popThenChangeInfRequest::getArgs}}()\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00156}00156\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00157}00157\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_request_aee33f1be0bb8d1bb6b8c8af1acbd0b4c}{args}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00158}00158\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00161}\mbox{\hyperlink{classload_game_request_a7a03852ce2b8ef29d4cddb7e4fcafc9e}{00161}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classload_game_request_a7a03852ce2b8ef29d4cddb7e4fcafc9e}{loadGameRequest::isRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00162}00162\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00163}00163\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca237fcc575567a72d65d7452dc64c4ed5}{REQUEST::ID::LOAD\_GAME}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00164}00164\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00166}\mbox{\hyperlink{classload_game_request_aad50a59d60d2951a55f70edecbb409f7}{00166}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classload_game_request_aad50a59d60d2951a55f70edecbb409f7}{loadGameRequest::clone}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00167}00167\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00168}00168\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classload_game_request_abc8d056e31268d61be8ff19268995e26}{loadGameRequest}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00169}00169\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00171}\mbox{\hyperlink{classtoggle_music_request_aae7d7bf1bdf6a6435712c5bca665375d}{00171}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classtoggle_music_request_aae7d7bf1bdf6a6435712c5bca665375d}{toggleMusicRequest::isRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00172}00172\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00173}00173\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca72be10d764453caeba104b01526a0382}{REQUEST::ID::TOGGLE\_MUSIC}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00174}00174\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00176}\mbox{\hyperlink{classtoggle_music_request_a78134eb101c9bb32f58277d3283bb233}{00176}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classtoggle_music_request_a78134eb101c9bb32f58277d3283bb233}{toggleMusicRequest::clone}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00177}00177\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00178}00178\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classtoggle_music_request_ad9b2a419b80fc896dec1f16d775df9f0}{toggleMusicRequest}}();}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00179}00179\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00181}\mbox{\hyperlink{classclose_inputbox_request_ad8b07f6319b301caf58f26e88173f631}{00181}}\ \mbox{\hyperlink{classclose_inputbox_request_ad8b07f6319b301caf58f26e88173f631}{closeInputboxRequest::closeInputboxRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00182}00182\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00184}00184\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00186}\mbox{\hyperlink{classclose_inputbox_request_a41a309a94dacf9b7752767b41e4fe5a4}{00186}}\ \mbox{\hyperlink{classclose_inputbox_request_ad8b07f6319b301caf58f26e88173f631}{closeInputboxRequest::closeInputboxRequest}}(\mbox{\hyperlink{classclose_inputbox_request}{closeInputboxRequest}}*\ request)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00187}00187\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00189}00189\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00190}\mbox{\hyperlink{classclose_inputbox_request_a708ffbe83794abc8b61e591d0b1ee471}{00190}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classclose_inputbox_request_a708ffbe83794abc8b61e591d0b1ee471}{closeInputboxRequest::isRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00191}00191\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00192}00192\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5caf5caffd3944a2efff7521924adedc75b}{REQUEST::ID::CLOSE\_INPUTBOX}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00193}00193\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00195}\mbox{\hyperlink{classclose_inputbox_request_a7419e6620fbc558cea475d9500e48b42}{00195}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classclose_inputbox_request_a7419e6620fbc558cea475d9500e48b42}{closeInputboxRequest::clone}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00196}00196\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00197}00197\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classclose_inputbox_request_ad8b07f6319b301caf58f26e88173f631}{closeInputboxRequest}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00198}00198\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00200}\mbox{\hyperlink{classopen_inputbox_request_a2a23ff066a9324599b191ff06fd785bf}{00200}}\ \mbox{\hyperlink{classopen_inputbox_request_a2a23ff066a9324599b191ff06fd785bf}{openInputboxRequest::openInputboxRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00201}00201\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00203}00203\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00205}\mbox{\hyperlink{classopen_inputbox_request_a9bb0fdd9271c39d60e0272afdb9d8e04}{00205}}\ \mbox{\hyperlink{classopen_inputbox_request_a2a23ff066a9324599b191ff06fd785bf}{openInputboxRequest::openInputboxRequest}}(\mbox{\hyperlink{classopen_inputbox_request}{openInputboxRequest}}*\ request)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00206}00206\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00208}00208\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00210}\mbox{\hyperlink{classopen_inputbox_request_a5334a14a10bd14eb46c2ecceed21a613}{00210}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classopen_inputbox_request_a5334a14a10bd14eb46c2ecceed21a613}{openInputboxRequest::isRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00211}00211\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00212}00212\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca2c79747c3512fa19bef533b72268cce7}{REQUEST::ID::OPEN\_INPUTBOX}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00213}00213\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00215}\mbox{\hyperlink{classopen_inputbox_request_a5c602c137fedc6f0292879e45037b94b}{00215}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classopen_inputbox_request_a5c602c137fedc6f0292879e45037b94b}{openInputboxRequest::clone}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00216}00216\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00217}00217\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classopen_inputbox_request_a2a23ff066a9324599b191ff06fd785bf}{openInputboxRequest}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00218}00218\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00219}\mbox{\hyperlink{classsave_request_ab28937c0b2e786dbde3536158032e760}{00219}}\ \mbox{\hyperlink{classsave_request_ab28937c0b2e786dbde3536158032e760}{saveRequest::saveRequest}}(std::string\ s)\ :\ \mbox{\hyperlink{classchange_inf_request}{changeInfRequest}}(s)}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00220}00220\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00221}00221\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00223}\mbox{\hyperlink{classsave_request_a0da9bc42212a3078e62711b6f929c330}{00223}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsave_request_a0da9bc42212a3078e62711b6f929c330}{saveRequest::isRequest}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00224}00224\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00225}00225\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca655e43a69801a685bf83409a95fa4331}{REQUEST::ID::SAVE\_GAME}};}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00226}00226\ \}}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00228}\mbox{\hyperlink{classsave_request_ac74ec8d00cd297c4079b2ee9b3ec945b}{00228}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classsave_request_ac74ec8d00cd297c4079b2ee9b3ec945b}{saveRequest::clone}}()}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00229}00229\ \{}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00230}00230\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classsave_request_ab28937c0b2e786dbde3536158032e760}{saveRequest}}(\mbox{\hyperlink{class_request_aee33f1be0bb8d1bb6b8c8af1acbd0b4c}{args}}.\mbox{\hyperlink{struct_a_r_g_s_a31574e0adc25f28d165300c31f6d2535}{str}}[0]);}
+\DoxyCodeLine{\Hypertarget{button_2src_2arthmetic_8cpp_source_l00231}00231\ \}}
 
 \end{DoxyCode}

@@ -1,0 +1,103 @@
+\doxysection{inputbox.\+hpp}
+\hypertarget{inputbox_8hpp_source}{}\label{inputbox_8hpp_source}\index{src/inputbox/include/inputbox.hpp@{src/inputbox/include/inputbox.hpp}}
+\mbox{\hyperlink{inputbox_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ INPUTBOX\_HPP}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00002}00002\ \textcolor{preprocessor}{\#define\ INPUTBOX\_HPP\ }}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{interface_8hpp}{interface.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00011}00011\ \textcolor{keyword}{static}\ std::chrono::duration<double>\ typing\_delay\ =\ std::chrono::duration<double>(70\ /\ 1000.0);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00013}\mbox{\hyperlink{class_input_box}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_input_box}{InputBox}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_interface}{Interface}}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00015}00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00017}\mbox{\hyperlink{class_input_box_a09b51316c5f9c060bede6152061dd5d4}{00017}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classset_activate_action}{setActivateAction}};}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00018}\mbox{\hyperlink{class_input_box_ad7a59735b9929397efa562ef852bf490}{00018}}\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classset_raw_text_action}{setRawTextAction}};}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ handle\ constant\ in\ file\ yaml}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ MAX\_LENGTH\ =\ 15;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \ FRAMES\_PER\_SECOND\ =\ 30;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00022}00022\ \ \ \ \ Texture\ textureBlank;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ crucial\ parameters}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ fontSize,\ framesCounter;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00025}00025\ \ \ \ \ Font*\ font;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00026}00026\ \ \ \ \ std::string\ showText,\ rawText;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00027}00027\ \ \ \ \ std::chrono::time\_point<std::chrono::steady\_clock>\ lastTyping;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ isActivated,\ isFlicked;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordtype}{int}\ letterCount;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_frame}{Frame}}*\ root;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00033}00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_box_a60c40141a0ccff65e3d520fe7a9b9e13}{loadEvent}}(YAML::Node\ node);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00035}00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{class_input_box_a9f068e178a89d69f676bc15b65811ebd}{InputBox}}(\textcolor{keywordtype}{int}\ fontSize,\ Rectangle\ relative,\ \mbox{\hyperlink{class_frame}{Frame}}*\ root,\ Font*\ font);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_box_a033300a4e689a818e91fbd8b2fb10967}{draw}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_input_box_a55d66144905721f3fc1b698761691814}{clear}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00041}00041\ \ \ \ \ \textcolor{comment}{/*void\ setList(std::vector<std::pair<std::string,\ std::string>>\ list);*/}}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00042}\mbox{\hyperlink{class_input_box_ad5b62f912392912ec469b5a01d82262b}{00042}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_input_box_ad5b62f912392912ec469b5a01d82262b}{getChoseId}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00043}00043\ \ \ \ \ std::string\ \mbox{\hyperlink{class_input_box_adefe57e52696c79f193863f7cd53712e}{getText}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ \mbox{\hyperlink{class_input_box_a0528ec341d20befd8d669b1c00673cb4}{react}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00045}00045\ \ \ \ \ std::string\ \mbox{\hyperlink{class_input_box_a4e999f8ed17c3294c9058f18d8e8f6ba}{linkContent}}(std::string);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00046}00046\ \ \ \ \ std::string\ \mbox{\hyperlink{class_input_box_a025bcd3e32578d166650930e8a13d6df}{linkContentAbsolute}}(std::string);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00047}00047\ \};}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00049}\mbox{\hyperlink{classset_activate_action}{00049}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classset_activate_action}{setActivateAction}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action}{Action}}\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00050}00050\ \{}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00051}00051\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{class_input_box}{InputBox}}*\ but;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ b;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00054}00054\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{classset_activate_action_aa2149a3d653e15cf2eaa32f9157ddb37}{setActivateAction}}(\mbox{\hyperlink{class_input_box}{InputBox}}*\ but,\ \textcolor{keywordtype}{bool}\ b);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{classset_activate_action_aa2149a3d653e15cf2eaa32f9157ddb37}{setActivateAction}}(\mbox{\hyperlink{classset_activate_action}{setActivateAction}}*\ other);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classset_activate_action_a8c680107a0fcc1fd8347d605c1be741a}{execute}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classset_activate_action_a9257155ab5f47176381308d20ff16601}{clone}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00059}00059\ \};}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00061}\mbox{\hyperlink{classset_raw_text_action}{00061}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classset_raw_text_action}{setRawTextAction}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_action}{Action}}\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00062}00062\ \{}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00063}00063\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00064}00064\ \ \ \ \ \mbox{\hyperlink{class_input_box}{InputBox}}*\ but;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00065}00065\ \ \ \ \ std::string\ s;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00066}00066\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{classset_raw_text_action_a24521cda4d627c7f9742ce563448b7d5}{setRawTextAction}}(\mbox{\hyperlink{class_input_box}{InputBox}}*\ but,\ std::string\ s);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00068}00068\ \ \ \ \ \mbox{\hyperlink{classset_raw_text_action_a24521cda4d627c7f9742ce563448b7d5}{setRawTextAction}}(\mbox{\hyperlink{classset_raw_text_action}{setRawTextAction}}*\ other);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classset_raw_text_action_ab06eed5f302ccf331996f3b7e330d7d4}{execute}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classset_raw_text_action_aeea6524edcdcf4a4575bfe2ff94f010c}{clone}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00071}00071\ \};}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00073}\mbox{\hyperlink{classhigh_score}{00073}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classhigh_score}{highScore}}\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00074}00074\ \{}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00075}00075\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00076}00076\ \ \ \ \ std::vector<std::vector<std::pair<int,\ std::string>>>\ list;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00077}00077\ \ \ \ \ std::string\ tmpName;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordtype}{int}\ tmpScore;}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00079}00079\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{classhigh_score_a190b1b17e39c80d8fca43237f04c55b4}{highScore}}(std::string\ path);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhigh_score_ab67c9e61d8ecb26a3c91a7069ea3a725}{setName}}(std::string\ name);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00082}00082\ \ \ \ \ std::vector<std::pair<int,\ std::string>>\ \mbox{\hyperlink{classhigh_score_abe38293383a07a4b2572a107eef66bef}{getList}}(\textcolor{keywordtype}{int}\ level);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(std::string\ name);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(std::string\ name,\ \textcolor{keywordtype}{int}\ score,\ \textcolor{keywordtype}{int}\ level);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(std::string\ name,\ \textcolor{keywordtype}{int}\ score,\ std::string\ level);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhigh_score_a26008a5ae2fc2721d07053561f720b02}{save}}(std::string\ path);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhigh_score_aa9c3a89ea8e9d158d4ffca1601badaa4}{linkContent}}(std::string);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhigh_score_ac6accb3d03cacb5edead0644ed983fe3}{linkContentAbsolute}}(std::string);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhigh_score_ac25dcfc70022ea3172803166fd05377d}{sort}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00090}00090\ \ \ \ \ std::string\ \mbox{\hyperlink{classhigh_score_a3fa6e939e3ae41d5f326ff25c89adea4}{getName}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classhigh_score_ab0fd849525e5f73d7e2d80614eda3c4b}{setScore}}(\textcolor{keywordtype}{int}\ score);}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00092}00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classhigh_score_aa4fd89a942009817d0e3e622e2186284}{getScore}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00093}00093\ \ \ \ \ \mbox{\hyperlink{classhigh_score_af7624cecad53a9fcde127d41d29427fb}{\string~highScore}}();}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00094}00094\ \};}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00096}00096\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{\Hypertarget{inputbox_8hpp_source_l00097}00097\ }
+
+\end{DoxyCode}

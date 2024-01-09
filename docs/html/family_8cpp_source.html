@@ -112,10 +112,10 @@ $(function(){initNavTree('family_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Frame::plug(Frame* par, fRect rel): par is nullptr&quot;</span>);</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        return ;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    mtx.lock();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.lock();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    parent = par;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    relative = rel;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    mtx.unlock();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.unlock();</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_frame.html#a7142b4749ec9adf106935fbafa8b67b0">updateFrame</a>();</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    parent-&gt;<a class="code hl_function" href="class_frame.html#aa55237af72da40924ff97426112d5108">addSubframe</a>(<span class="keyword">this</span>);</div>
@@ -130,9 +130,9 @@ $(function(){initNavTree('family_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Frame::plug(Frame* par): par is nullptr&quot;</span>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        return ;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    mtx.lock();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.lock();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    parent = par;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    mtx.unlock();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.unlock();</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_function" href="class_frame.html#a7142b4749ec9adf106935fbafa8b67b0">updateFrame</a>();</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    parent-&gt;<a class="code hl_function" href="class_frame.html#aa55237af72da40924ff97426112d5108">addSubframe</a>(<span class="keyword">this</span>);</div>
@@ -143,72 +143,65 @@ $(function(){initNavTree('family_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_frame.html#a7fec746caea8b9cc27d28f829e3995a8">   53</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#a7fec746caea8b9cc27d28f829e3995a8">Frame::unplug</a>()</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="class_frame.html#a867539f845278c60c84fd87d1b079de6">isroot</a>()) return ;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    mtx.lock();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.lock();</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    parent-&gt;<a class="code hl_function" href="class_frame.html#a6676f9cfd2639c9069341ee5844167af">removeSubframe</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    parent = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    mtx.unlock();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.unlock();</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
 <div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_frame.html#aa55237af72da40924ff97426112d5108">   70</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#aa55237af72da40924ff97426112d5108">Frame::addSubframe</a>(<a class="code hl_class" href="class_frame.html">Frame</a>* subframe)</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    mtx.lock();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.lock();</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    subframes.push_back(subframe);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    mtx.unlock();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.unlock();</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
 </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_frame.html#a6676f9cfd2639c9069341ee5844167af">   85</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#a6676f9cfd2639c9069341ee5844167af">Frame::removeSubframe</a>(<a class="code hl_class" href="class_frame.html">Frame</a>* subframe)</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    mtx.lock();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.lock();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">int</span> i = subframes.size() - 1;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">while</span>(i &gt;= 0 &amp;&amp; subframes.size())</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">while</span>(!subframes.empty() &amp;&amp; subframes.back() == subframe)</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            subframes.pop_back();</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        i = std::min(i, (<span class="keywordtype">int</span>) subframes.size() - 1);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">if</span>(!subframes.empty() &amp;&amp; subframes[i] == subframe)</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            subframes[i] = subframes.back();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            subframes.pop_back();</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    mtx.unlock();</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">auto</span> it = std::find(subframes.begin(), subframes.end(), subframe);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span>(it != subframes.end())</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        subframes.erase(it);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.unlock();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
 </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_frame.html#a867539f845278c60c84fd87d1b079de6">  107</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_frame.html#a867539f845278c60c84fd87d1b079de6">Frame::isroot</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    std::lock_guard&lt;std::mutex&gt; lock(mtx);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">return</span> parent == <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_frame.html#a867539f845278c60c84fd87d1b079de6">   99</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_frame.html#a867539f845278c60c84fd87d1b079de6">Frame::isroot</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    std::lock_guard&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">return</span> parent == <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
 </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_frame.html#add61373f7fc708652df88a8af032f996">  113</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#add61373f7fc708652df88a8af032f996">Frame::beginUpdate</a>()</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>{</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    mtx.lock();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_frame.html#add61373f7fc708652df88a8af032f996">  105</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#add61373f7fc708652df88a8af032f996">Frame::beginUpdate</a>()</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>{</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.lock();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}</div>
 </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_frame.html#a701cffd131a90249033fc40f505f02d6">  118</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#a701cffd131a90249033fc40f505f02d6">Frame::endUpdate</a>()</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    mtx.unlock();</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_frame.html#a701cffd131a90249033fc40f505f02d6">  110</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_frame.html#a701cffd131a90249033fc40f505f02d6">Frame::endUpdate</a>()</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>{</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_variable" href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">mtx</a>.unlock();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
 </div>
 <div class="ttc" id="aclass_frame_html"><div class="ttname"><a href="class_frame.html">Frame</a></div><div class="ttdoc">position and size of object on screen</div><div class="ttdef"><b>Definition</b> <a href="frame_8hpp_source.html#l00024">frame.hpp:25</a></div></div>
+<div class="ttc" id="aclass_frame_html_a5a592afcbc41e45fccc62974a592b0a1"><div class="ttname"><a href="class_frame.html#a5a592afcbc41e45fccc62974a592b0a1">Frame::mtx</a></div><div class="ttdeci">std::mutex mtx</div><div class="ttdef"><b>Definition</b> <a href="frame_8hpp_source.html#l00034">frame.hpp:34</a></div></div>
 <div class="ttc" id="aclass_frame_html_a62c876a0e6d3b7c89288b81893434369"><div class="ttname"><a href="class_frame.html#a62c876a0e6d3b7c89288b81893434369">Frame::plug</a></div><div class="ttdeci">void plug(Frame *par, fRect rel)</div><div class="ttdoc">attach a frame to a parent by relative position</div><div class="ttdef"><b>Definition</b> <a href="#l00012">family.cpp:12</a></div></div>
 <div class="ttc" id="aclass_frame_html_a6676f9cfd2639c9069341ee5844167af"><div class="ttname"><a href="class_frame.html#a6676f9cfd2639c9069341ee5844167af">Frame::removeSubframe</a></div><div class="ttdeci">void removeSubframe(Frame *subframe)</div><div class="ttdoc">Remove a subframe from this frame.</div><div class="ttdef"><b>Definition</b> <a href="#l00085">family.cpp:85</a></div></div>
-<div class="ttc" id="aclass_frame_html_a701cffd131a90249033fc40f505f02d6"><div class="ttname"><a href="class_frame.html#a701cffd131a90249033fc40f505f02d6">Frame::endUpdate</a></div><div class="ttdeci">void endUpdate()</div><div class="ttdef"><b>Definition</b> <a href="#l00118">family.cpp:118</a></div></div>
+<div class="ttc" id="aclass_frame_html_a701cffd131a90249033fc40f505f02d6"><div class="ttname"><a href="class_frame.html#a701cffd131a90249033fc40f505f02d6">Frame::endUpdate</a></div><div class="ttdeci">void endUpdate()</div><div class="ttdef"><b>Definition</b> <a href="#l00110">family.cpp:110</a></div></div>
 <div class="ttc" id="aclass_frame_html_a7142b4749ec9adf106935fbafa8b67b0"><div class="ttname"><a href="class_frame.html#a7142b4749ec9adf106935fbafa8b67b0">Frame::updateFrame</a></div><div class="ttdeci">virtual void updateFrame(bool recursive=false)</div><div class="ttdef"><b>Definition</b> <a href="frame_2src_2arthmetic_8cpp_source.html#l00003">arthmetic.cpp:3</a></div></div>
 <div class="ttc" id="aclass_frame_html_a7fec746caea8b9cc27d28f829e3995a8"><div class="ttname"><a href="class_frame.html#a7fec746caea8b9cc27d28f829e3995a8">Frame::unplug</a></div><div class="ttdeci">void unplug()</div><div class="ttdoc">detach a frame from its parent</div><div class="ttdef"><b>Definition</b> <a href="#l00053">family.cpp:53</a></div></div>
-<div class="ttc" id="aclass_frame_html_a867539f845278c60c84fd87d1b079de6"><div class="ttname"><a href="class_frame.html#a867539f845278c60c84fd87d1b079de6">Frame::isroot</a></div><div class="ttdeci">bool isroot() const</div><div class="ttdoc">return true if this frame is root</div><div class="ttdef"><b>Definition</b> <a href="#l00107">family.cpp:107</a></div></div>
+<div class="ttc" id="aclass_frame_html_a867539f845278c60c84fd87d1b079de6"><div class="ttname"><a href="class_frame.html#a867539f845278c60c84fd87d1b079de6">Frame::isroot</a></div><div class="ttdeci">bool isroot() const</div><div class="ttdoc">return true if this frame is root</div><div class="ttdef"><b>Definition</b> <a href="#l00099">family.cpp:99</a></div></div>
 <div class="ttc" id="aclass_frame_html_aa55237af72da40924ff97426112d5108"><div class="ttname"><a href="class_frame.html#aa55237af72da40924ff97426112d5108">Frame::addSubframe</a></div><div class="ttdeci">void addSubframe(Frame *subframe)</div><div class="ttdoc">Add a subframe to this frame.</div><div class="ttdef"><b>Definition</b> <a href="#l00070">family.cpp:70</a></div></div>
-<div class="ttc" id="aclass_frame_html_add61373f7fc708652df88a8af032f996"><div class="ttname"><a href="class_frame.html#add61373f7fc708652df88a8af032f996">Frame::beginUpdate</a></div><div class="ttdeci">void beginUpdate()</div><div class="ttdef"><b>Definition</b> <a href="#l00113">family.cpp:113</a></div></div>
+<div class="ttc" id="aclass_frame_html_add61373f7fc708652df88a8af032f996"><div class="ttname"><a href="class_frame.html#add61373f7fc708652df88a8af032f996">Frame::beginUpdate</a></div><div class="ttdeci">void beginUpdate()</div><div class="ttdef"><b>Definition</b> <a href="#l00105">family.cpp:105</a></div></div>
 <div class="ttc" id="adatatype_8hpp_html_a847b181805472a4947139515352f33df"><div class="ttname"><a href="datatype_8hpp.html#a847b181805472a4947139515352f33df">fRect</a></div><div class="ttdeci">std::array&lt; float, 4 &gt; fRect</div><div class="ttdef"><b>Definition</b> <a href="datatype_8hpp_source.html#l00012">datatype.hpp:12</a></div></div>
 <div class="ttc" id="aframe_8hpp_html"><div class="ttname"><a href="frame_8hpp.html">frame.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

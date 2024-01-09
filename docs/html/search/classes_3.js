@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['frame_0',['Frame',['../class_frame.html',1,'']]]
+  ['dyingaction_0',['dyingAction',['../classdying_action.html',1,'']]]
 ];

@@ -1,0 +1,522 @@
+\doxysection{high\+Score Class Reference}
+\hypertarget{classhigh_score}{}\label{classhigh_score}\index{highScore@{highScore}}
+
+
+{\ttfamily \#include $<$inputbox.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhigh_score_a190b1b17e39c80d8fca43237f04c55b4}{high\+Score}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{classhigh_score_ab67c9e61d8ecb26a3c91a7069ea3a725}{set\+Name}} (std\+::string name)
+\item 
+std\+::vector$<$ std\+::pair$<$ int, std\+::string $>$ $>$ \mbox{\hyperlink{classhigh_score_abe38293383a07a4b2572a107eef66bef}{get\+List}} (int level)
+\item 
+void \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{classhigh_score_aba359e63933a24d963f295953223061e}{add}} (std\+::string name, int score, int level)
+\item 
+void \mbox{\hyperlink{classhigh_score_a0fd754406d21474246f0f84648fc1a55}{add}} (std\+::string name, int score, std\+::string level)
+\item 
+void \mbox{\hyperlink{classhigh_score_a26008a5ae2fc2721d07053561f720b02}{save}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{classhigh_score_aa9c3a89ea8e9d158d4ffca1601badaa4}{link\+Content}} (std\+::string)
+\item 
+void \mbox{\hyperlink{classhigh_score_ac6accb3d03cacb5edead0644ed983fe3}{link\+Content\+Absolute}} (std\+::string)
+\item 
+void \mbox{\hyperlink{classhigh_score_ac25dcfc70022ea3172803166fd05377d}{sort}} ()
+\item 
+std\+::string \mbox{\hyperlink{classhigh_score_a3fa6e939e3ae41d5f326ff25c89adea4}{get\+Name}} ()
+\item 
+void \mbox{\hyperlink{classhigh_score_ab0fd849525e5f73d7e2d80614eda3c4b}{set\+Score}} (int score)
+\item 
+int \mbox{\hyperlink{classhigh_score_aa4fd89a942009817d0e3e622e2186284}{get\+Score}} ()
+\item 
+\mbox{\hyperlink{classhigh_score_af7624cecad53a9fcde127d41d29427fb}{\texorpdfstring{$\sim$}{\string~}high\+Score}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{inputbox_8hpp_source_l00073}{73}} of file \mbox{\hyperlink{inputbox_8hpp_source}{inputbox.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classhigh_score_a190b1b17e39c80d8fca43237f04c55b4}\label{classhigh_score_a190b1b17e39c80d8fca43237f04c55b4} 
+\index{highScore@{highScore}!highScore@{highScore}}
+\index{highScore@{highScore}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{highScore()}{highScore()}}
+{\footnotesize\ttfamily high\+Score\+::high\+Score (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2constructor_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{inputbox_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ list\ =\ std::vector<std::vector<std::pair<int,\ std::string>>>();}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classhigh_score_aa9c3a89ea8e9d158d4ffca1601badaa4}{linkContent}}(path);}
+\DoxyCodeLine{00020\ \ \ \ \ tmpName\ =\ \textcolor{stringliteral}{"{}easy"{}};}
+\DoxyCodeLine{00021\ \ \ \ \ tmpScore\ =\ 0;}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_af7624cecad53a9fcde127d41d29427fb}\label{classhigh_score_af7624cecad53a9fcde127d41d29427fb} 
+\index{highScore@{highScore}!````~highScore@{\texorpdfstring{$\sim$}{\string~}highScore}}
+\index{````~highScore@{\texorpdfstring{$\sim$}{\string~}highScore}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}highScore()}{\string~highScore()}}
+{\footnotesize\ttfamily high\+Score\+::\texorpdfstring{$\sim$}{\string~}high\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2destructor_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{inputbox_2src_2destructor_8cpp_source}{destructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{classhigh_score_a26008a5ae2fc2721d07053561f720b02}{save}}(\textcolor{stringliteral}{"{}inputbox.yaml"{}});}
+\DoxyCodeLine{00008\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}\label{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6} 
+\index{highScore@{highScore}!add@{add}}
+\index{add@{add}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void high\+Score\+::add (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00448}{448}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00449\ \{}
+\DoxyCodeLine{00450\ \ \ \ \ \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(name,\ tmpScore,\ tmpName);}
+\DoxyCodeLine{00451\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_aba359e63933a24d963f295953223061e}\label{classhigh_score_aba359e63933a24d963f295953223061e} 
+\index{highScore@{highScore}!add@{add}}
+\index{add@{add}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void high\+Score\+::add (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{score,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00183}{183}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184\ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ list[level].size();\ i++)}
+\DoxyCodeLine{00186\ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list[level][i].second\ ==\ name)}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list[level][i].first\ <\ score)}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list[level][i].first\ =\ score;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ list[level].push\_back(std::make\_pair(score,\ name));}
+\DoxyCodeLine{00197\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_a0fd754406d21474246f0f84648fc1a55}\label{classhigh_score_a0fd754406d21474246f0f84648fc1a55} 
+\index{highScore@{highScore}!add@{add}}
+\index{add@{add}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void high\+Score\+::add (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{score,  }\item[{std\+::string}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00200\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordflow}{if}\ (level\ ==\ \textcolor{stringliteral}{"{}easy"{}})}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(name,\ score,\ 0);}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (level\ ==\ \textcolor{stringliteral}{"{}normal"{}})}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(name,\ score,\ 1);}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (level\ ==\ \textcolor{stringliteral}{"{}hard"{}})}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(name,\ score,\ 2);}
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (level\ ==\ \textcolor{stringliteral}{"{}insane"{}})}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(name,\ score,\ 3);}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (level\ ==\ \textcolor{stringliteral}{"{}nightmare"{}})}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(name,\ score,\ 4);}
+\DoxyCodeLine{00211\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_abe38293383a07a4b2572a107eef66bef}\label{classhigh_score_abe38293383a07a4b2572a107eef66bef} 
+\index{highScore@{highScore}!getList@{getList}}
+\index{getList@{getList}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{getList()}{getList()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ int, std\+::string $>$ $>$ high\+Score\+::get\+List (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00178}{178}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordflow}{return}\ list[level];}
+\DoxyCodeLine{00181\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_a3fa6e939e3ae41d5f326ff25c89adea4}\label{classhigh_score_a3fa6e939e3ae41d5f326ff25c89adea4} 
+\index{highScore@{highScore}!getName@{getName}}
+\index{getName@{getName}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string high\+Score\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00438}{438}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00439\ \{}
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>tmpName;}
+\DoxyCodeLine{00441\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_aa4fd89a942009817d0e3e622e2186284}\label{classhigh_score_aa4fd89a942009817d0e3e622e2186284} 
+\index{highScore@{highScore}!getScore@{getScore}}
+\index{getScore@{getScore}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily int high\+Score\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00453}{453}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00454\ \{}
+\DoxyCodeLine{00455\ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>tmpScore;}
+\DoxyCodeLine{00456\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_aa9c3a89ea8e9d158d4ffca1601badaa4}\label{classhigh_score_aa9c3a89ea8e9d158d4ffca1601badaa4} 
+\index{highScore@{highScore}!linkContent@{linkContent}}
+\index{linkContent@{linkContent}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{linkContent()}{linkContent()}}
+{\footnotesize\ttfamily void high\+Score\+::link\+Content (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00281}{281}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00282\ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classhigh_score_ac6accb3d03cacb5edead0644ed983fe3}{linkContentAbsolute}}(\mbox{\hyperlink{namespace_p_a_t_b_a88a283307f40c708a84cc34c53e4d597}{PATB::INPUTBOX\_}}\ +\ path);}
+\DoxyCodeLine{00284\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_ac6accb3d03cacb5edead0644ed983fe3}\label{classhigh_score_ac6accb3d03cacb5edead0644ed983fe3} 
+\index{highScore@{highScore}!linkContentAbsolute@{linkContentAbsolute}}
+\index{linkContentAbsolute@{linkContentAbsolute}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{linkContentAbsolute()}{linkContentAbsolute()}}
+{\footnotesize\ttfamily void high\+Score\+::link\+Content\+Absolute (\begin{DoxyParamCaption}\item[{std\+::string}]{yamlpath }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00285}{285}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00286\ \{}
+\DoxyCodeLine{00287\ \ \ \ \ YAML::Node\ node\ =\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(yamlpath);}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node[\textcolor{stringliteral}{"{}highscore"{}}])}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{00290\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}easy"{}}])}
+\DoxyCodeLine{00291\ \ \ \ \ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}easy"{}}].as<std::string>();}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ std::ifstream\ fi;}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ std::vector<std::pair<int,\ std::string>>\ tmp;}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ fi.open(path);}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fi.is\_open())}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fi,\ line))}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(line);}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ss\ >>\ score;}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ space;}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ss\ >>\ space;}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ name);}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name[0]\ ==\ \textcolor{charliteral}{'\ '})}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name.erase(0,\ 1);}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.push\_back(std::make\_pair(score,\ name));}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(tmp);}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ fi.close();}
+\DoxyCodeLine{00315\ \ \ \ \ \}}
+\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(std::vector<std::pair<int,\ std::string>>());}
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}normal"{}}])}
+\DoxyCodeLine{00319\ \ \ \ \ \{}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}normal"{}}].as<std::string>();}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ std::ifstream\ fi;}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ std::vector<std::pair<int,\ std::string>>\ tmp;}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ fi.open(path);}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fi.is\_open())}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fi,\ line))}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(line);}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ss\ >>\ score;}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ space;}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ss\ >>\ space;}}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ name);}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name[0]\ ==\ \textcolor{charliteral}{'\ '})}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name.erase(0,\ 1);}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.push\_back(std::make\_pair(score,\ name));}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(tmp);}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ fi.close();}
+\DoxyCodeLine{00343\ \ \ \ \ \}}
+\DoxyCodeLine{00344\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(std::vector<std::pair<int,\ std::string>>());}
+\DoxyCodeLine{00346\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}hard"{}}])}
+\DoxyCodeLine{00347\ \ \ \ \ \{}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}hard"{}}].as<std::string>();}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ std::ifstream\ fi;}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ std::vector<std::pair<int,\ std::string>>\ tmp;}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ fi.open(path);}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fi.is\_open())}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fi,\ line))}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(line);}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ss\ >>\ score;}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ space;}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ss\ >>\ space;}}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ name);}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name[0]\ ==\ \textcolor{charliteral}{'\ '})}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name.erase(0,\ 1);}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.push\_back(std::make\_pair(score,\ name));}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(tmp);}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ fi.close();}
+\DoxyCodeLine{00371\ \ \ \ \ \}}
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(std::vector<std::pair<int,\ std::string>>());}
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}insane"{}}])}
+\DoxyCodeLine{00375\ \ \ \ \ \{}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}insane"{}}].as<std::string>();}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ std::ifstream\ fi;}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ std::vector<std::pair<int,\ std::string>>\ tmp;}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ fi.open(path);}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fi.is\_open())}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fi,\ line))}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(line);}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ss\ >>\ score;}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ space;}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ss\ >>\ space;}}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ name);}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name[0]\ ==\ \textcolor{charliteral}{'\ '})}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name.erase(0,\ 1);}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.push\_back(std::make\_pair(score,\ name));}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(tmp);}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ fi.close();}
+\DoxyCodeLine{00399\ \ \ \ \ \}}
+\DoxyCodeLine{00400\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(std::vector<std::pair<int,\ std::string>>());}
+\DoxyCodeLine{00402\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}nightmare"{}}])}
+\DoxyCodeLine{00403\ \ \ \ \ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}nightmare"{}}].as<std::string>();}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ std::ifstream\ fi;}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ std::vector<std::pair<int,\ std::string>>\ tmp;}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ fi.open(path);}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (fi.is\_open())}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ line;}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fi,\ line))}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::stringstream\ ss(line);}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ss\ >>\ score;}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ space;}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ss\ >>\ space;}}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getline(ss,\ name);}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (name[0]\ ==\ \textcolor{charliteral}{'\ '})}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ name.erase(0,\ 1);}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.push\_back(std::make\_pair(score,\ name));}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(tmp);}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ fi.close();}
+\DoxyCodeLine{00427\ \ \ \ \ \}}
+\DoxyCodeLine{00428\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ this-\/>list.push\_back(std::vector<std::pair<int,\ std::string>>());}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{00431\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_a26008a5ae2fc2721d07053561f720b02}\label{classhigh_score_a26008a5ae2fc2721d07053561f720b02} 
+\index{highScore@{highScore}!save@{save}}
+\index{save@{save}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void high\+Score\+::save (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00219}{219}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00220\ \{}
+\DoxyCodeLine{00221\ \ \ \ \ YAML::Node\ node\ =\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(yamlpath);}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node[\textcolor{stringliteral}{"{}highscore"{}}])}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}easy"{}}])}
+\DoxyCodeLine{00225\ \ \ \ \ \{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}easy"{}}].as<std::string>();}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ std::ofstream\ fo;}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ fo.open(path);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ :\ list[0])}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ fo\ <<\ i.first\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ i.second\ <<\ std::endl;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ fo.close();}
+\DoxyCodeLine{00234\ \ \ \ \ \}}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}normal"{}}])}
+\DoxyCodeLine{00236\ \ \ \ \ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}normal"{}}].as<std::string>();}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ std::ofstream\ fo;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ fo.open(path);}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ :\ list[1])}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ fo\ <<\ i.first\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ i.second\ <<\ std::endl;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ fo.close();}
+\DoxyCodeLine{00245\ \ \ \ \ \}}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}hard"{}}])}
+\DoxyCodeLine{00247\ \ \ \ \ \{}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}hard"{}}].as<std::string>();}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ std::ofstream\ fo;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ fo.open(path);}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ :\ list[2])}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ fo\ <<\ i.first\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ i.second\ <<\ std::endl;}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ fo.close();}
+\DoxyCodeLine{00256\ \ \ \ \ \}}
+\DoxyCodeLine{00257\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}insane"{}}])}
+\DoxyCodeLine{00258\ \ \ \ \ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}insane"{}}].as<std::string>();}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ std::ofstream\ fo;}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ fo.open(path);}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ :\ list[3])}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ fo\ <<\ i.first\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ i.second\ <<\ std::endl;}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ fo.close();}
+\DoxyCodeLine{00267\ \ \ \ \ \}}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}nightmare"{}}])}
+\DoxyCodeLine{00269\ \ \ \ \ \{}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}highscore"{}}][\textcolor{stringliteral}{"{}nightmare"{}}].as<std::string>();}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ std::ofstream\ fo;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ fo.open(path);}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ :\ list[4])}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ fo\ <<\ i.first\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ i.second\ <<\ std::endl;}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ fo.close();}
+\DoxyCodeLine{00278\ \ \ \ \ \}}
+\DoxyCodeLine{00279\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_ab67c9e61d8ecb26a3c91a7069ea3a725}\label{classhigh_score_ab67c9e61d8ecb26a3c91a7069ea3a725} 
+\index{highScore@{highScore}!setName@{setName}}
+\index{setName@{setName}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void high\+Score\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00433}{433}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00434\ \{}
+\DoxyCodeLine{00435\ \ \ \ \ this-\/>tmpName\ =\ name;}
+\DoxyCodeLine{00436\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_ab0fd849525e5f73d7e2d80614eda3c4b}\label{classhigh_score_ab0fd849525e5f73d7e2d80614eda3c4b} 
+\index{highScore@{highScore}!setScore@{setScore}}
+\index{setScore@{setScore}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{setScore()}{setScore()}}
+{\footnotesize\ttfamily void high\+Score\+::set\+Score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00443}{443}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00444\ \{}
+\DoxyCodeLine{00445\ \ \ \ \ this-\/>tmpScore\ =\ score;}
+\DoxyCodeLine{00446\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classhigh_score_ac25dcfc70022ea3172803166fd05377d}\label{classhigh_score_ac25dcfc70022ea3172803166fd05377d} 
+\index{highScore@{highScore}!sort@{sort}}
+\index{sort@{sort}!highScore@{highScore}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void high\+Score\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source_l00212}{212}} of file \mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00213\ \{}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ level\ =\ 0;\ level\ <\ list.size();\ level++)}
+\DoxyCodeLine{00215\ \ \ \ \ std::sort(list[level].begin(),\ list[level].end(),\ [](std::pair<int,\ std::string>\ a,\ std::pair<int,\ std::string>\ b)\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ a.first\ >\ b.first;}
+\DoxyCodeLine{00217\ \ \ \ \ \});}
+\DoxyCodeLine{00218\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/inputbox/include/\mbox{\hyperlink{inputbox_8hpp}{inputbox.\+hpp}}\item 
+src/inputbox/src/\mbox{\hyperlink{inputbox_2src_2arthmetic_8cpp}{arthmetic.\+cpp}}\item 
+src/inputbox/src/\mbox{\hyperlink{inputbox_2src_2constructor_8cpp}{constructor.\+cpp}}\item 
+src/inputbox/src/\mbox{\hyperlink{inputbox_2src_2destructor_8cpp}{destructor.\+cpp}}\end{DoxyCompactItemize}

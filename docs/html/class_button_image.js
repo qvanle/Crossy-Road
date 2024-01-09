@@ -9,6 +9,7 @@ var class_button_image =
     [ "chooseImage", "class_button_image.html#ac834daaf7955ebf7cd11f3c032c7141a", null ],
     [ "chooseImage", "class_button_image.html#a7e1ea1d520bee6d8c48125546c795450", null ],
     [ "chooseSprite", "class_button_image.html#a04fc266ae14009c6013f1952569f4a08", null ],
+    [ "createSpecialContent", "class_button_image.html#afccde5a258c662bdd59a8b24f135603c", null ],
     [ "draw", "class_button_image.html#a68e6463f48504d130cb9107c4a6168c6", null ],
     [ "endUpdate", "class_button_image.html#a701cffd131a90249033fc40f505f02d6", null ],
     [ "getCenter", "class_button_image.html#a5d52a474fbee6c61b5c1209d1a70e393", null ],
@@ -26,6 +27,8 @@ var class_button_image =
     [ "getY", "class_button_image.html#a3808523d40227445dbd975fc0600b462", null ],
     [ "hide", "class_button_image.html#a5f2b24b3eff15fb251043fcfd32bf537", null ],
     [ "isClicked", "class_button_image.html#a4be3314cbc7d6d91c0035c501ce0449a", null ],
+    [ "isCollide", "class_button_image.html#a58b605e54db2a0719196286523bbd28c", null ],
+    [ "isCollide", "class_button_image.html#a5cfe43ea483203fb87e36bff0f97bada", null ],
     [ "isOverlapping", "class_button_image.html#af4f3195c0da8b663b272d326e2e5d48d", null ],
     [ "isOverlapping", "class_button_image.html#a5e86a0c4bc0a072cbe7cc0725707053b", null ],
     [ "isOverlapping", "class_button_image.html#a14a49b088ae5780fbf4ac0f826bb2785", null ],
@@ -34,9 +37,11 @@ var class_button_image =
     [ "isVisible", "class_button_image.html#aee9a838a8f651d7d1e195290a2ba1ecb", null ],
     [ "linkContent", "class_button_image.html#ad83ed76a4fdbfcd27e4e612a779d3b92", null ],
     [ "linkContentAbsolute", "class_button_image.html#a080c2861b9abbf6fb625089a48449dbf", null ],
+    [ "loadAction", "class_button_image.html#ab3593403c11146e3a18881ba70e0b497", null ],
     [ "loadEvent", "class_button_image.html#a4c689ea0ed97821b970b1f9f37af07b1", null ],
     [ "loadFocus", "class_button_image.html#a2b2426d6f7233fd0d2d3213a20a92dd6", null ],
     [ "loadName", "class_button_image.html#a3ebddddd7a940e4f5e3d287067103a3e", null ],
+    [ "loadSpecialContent", "class_button_image.html#a290967d3f4355d8945456006076ae92f", null ],
     [ "loadSprites", "class_button_image.html#a11f0c20cb4f80f5d2a63f73f981a9d15", null ],
     [ "moveBy", "class_button_image.html#a72456ad52812da3e4f805c20463238e3", null ],
     [ "moveBy", "class_button_image.html#abb0f7042ce5917e8e52cd0fe44934178", null ],
@@ -64,5 +69,6 @@ var class_button_image =
     [ "show", "class_button_image.html#a48cdaa85884938b417513cca003f4f6c", null ],
     [ "toggleVisibility", "class_button_image.html#ab03c3b8ce43fb4212de772f9edef22cd", null ],
     [ "unplug", "class_button_image.html#a7fec746caea8b9cc27d28f829e3995a8", null ],
-    [ "updateFrame", "class_button_image.html#a7142b4749ec9adf106935fbafa8b67b0", null ]
+    [ "updateFrame", "class_button_image.html#a7142b4749ec9adf106935fbafa8b67b0", null ],
+    [ "mtx", "class_button_image.html#a5a592afcbc41e45fccc62974a592b0a1", null ]
 ];

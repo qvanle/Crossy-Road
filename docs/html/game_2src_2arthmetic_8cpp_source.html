@@ -105,17 +105,39 @@ $(function(){initNavTree('game_2src_2arthmetic_8cpp_source.html',''); initResiza
 <div class="foldopen" id="foldopen00003" data-start="{" data-end="}">
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_game.html#a9dbbb6429980a91196ed07d299404304">    3</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_game.html#a9dbbb6429980a91196ed07d299404304">Game::draw</a>()</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="class_container.html#aee9a838a8f651d7d1e195290a2ba1ecb">isVisible</a>()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <a class="code hl_function" href="class_interface.html#a77300df653a7ab735342494bc9285695">drawNested</a>();</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = chunks.begin(); i != chunks.end(); ++i)</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        (*i)-&gt;draw();</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    }</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="class_interface.html#a485966ce945f1a7efe691245140a3125">drawContainers</a>();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordflow">if</span>(*i != <span class="keyword">nullptr</span>) </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>            (*i)-&gt;draw();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        }<span class="keywordflow">else</span> std::cout &lt;&lt; i - chunks.begin() &lt;&lt; <span class="stringliteral">&quot; is nullptr&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    }</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    main-&gt;<a class="code hl_function" href="class_container.html#ac8feb6b3a790483f85aad40a46327f24">draw</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Rectangle rect = main-&gt;<a class="code hl_function" href="class_frame.html#aada1e4093763936121df21b7dae80b5c">getFrame</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// draw hitbox of 5px </span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// DrawRectangleLinesEx(rect, 5, RED);</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">// drawContainers();</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// draw rectangle color white on top right </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    Rectangle rel = <a class="code hl_function" href="class_frame.html#aada1e4093763936121df21b7dae80b5c">getFrame</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    rel.x = rel.width * 0.0;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    rel.y = 0;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    rel.width *= 0.15;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    rel.height *= 0.06;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    DrawRectangleRec(rel, {200, 200, 200, 255});</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    DrawText(TextFormat(<span class="stringliteral">&quot;Score: %08i&quot;</span>, score), rel.x + 10, 25, 20, RED);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_function" href="class_interface.html#a485966ce945f1a7efe691245140a3125">drawContainers</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 </div>
+<div class="ttc" id="aclass_container_html_ac8feb6b3a790483f85aad40a46327f24"><div class="ttname"><a href="class_container.html#ac8feb6b3a790483f85aad40a46327f24">Container::draw</a></div><div class="ttdeci">virtual void draw()</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2arthmetic_8cpp_source.html#l00004">arthmetic.cpp:4</a></div></div>
+<div class="ttc" id="aclass_container_html_aee9a838a8f651d7d1e195290a2ba1ecb"><div class="ttname"><a href="class_container.html#aee9a838a8f651d7d1e195290a2ba1ecb">Container::isVisible</a></div><div class="ttdeci">bool isVisible()</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2arthmetic_8cpp_source.html#l00026">arthmetic.cpp:26</a></div></div>
+<div class="ttc" id="aclass_frame_html_aada1e4093763936121df21b7dae80b5c"><div class="ttname"><a href="class_frame.html#aada1e4093763936121df21b7dae80b5c">Frame::getFrame</a></div><div class="ttdeci">const Rectangle &amp; getFrame() const</div><div class="ttdef"><b>Definition</b> <a href="frame_2src_2arthmetic_8cpp_source.html#l00105">arthmetic.cpp:105</a></div></div>
 <div class="ttc" id="aclass_game_html_a9dbbb6429980a91196ed07d299404304"><div class="ttname"><a href="class_game.html#a9dbbb6429980a91196ed07d299404304">Game::draw</a></div><div class="ttdeci">void draw() override</div><div class="ttdef"><b>Definition</b> <a href="#l00003">arthmetic.cpp:3</a></div></div>
 <div class="ttc" id="aclass_interface_html_a485966ce945f1a7efe691245140a3125"><div class="ttname"><a href="class_interface.html#a485966ce945f1a7efe691245140a3125">Interface::drawContainers</a></div><div class="ttdeci">void drawContainers()</div><div class="ttdef"><b>Definition</b> <a href="interface_2src_2arthmetic_8cpp_source.html#l00011">arthmetic.cpp:11</a></div></div>
 <div class="ttc" id="aclass_interface_html_a77300df653a7ab735342494bc9285695"><div class="ttname"><a href="class_interface.html#a77300df653a7ab735342494bc9285695">Interface::drawNested</a></div><div class="ttdeci">void drawNested()</div><div class="ttdef"><b>Definition</b> <a href="interface_2src_2arthmetic_8cpp_source.html#l00003">arthmetic.cpp:3</a></div></div>

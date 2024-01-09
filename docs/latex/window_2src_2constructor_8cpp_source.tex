@@ -5,104 +5,146 @@
 \DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{window_8hpp}{window.hpp}}>}}
 \DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{game_8hpp}{game.hpp}}>}}
 \DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{atb_8hpp}{const/path/atb.hpp}}>}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00004}00004\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{file_8hpp}{file.hpp}}>}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00007}\mbox{\hyperlink{class_window_a74e6087da23d3c24e9fac0245e5ec92c}{00007}}\ \mbox{\hyperlink{class_window_a74e6087da23d3c24e9fac0245e5ec92c}{Window::Window}}()}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00008}00008\ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00009}00009\ \ \ \ \ Wcontent.width\ =\ 1200;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00010}00010\ \ \ \ \ Wcontent.height\ =\ 668;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00011}00011\ \ \ \ \ Wcontent.title\ =\ \textcolor{stringliteral}{"{}Crossy\ Road\ clone"{}};}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00012}00012\ \ \ \ \ SetConfigFlags(FLAG\_WINDOW\_RESIZABLE\ |\ FLAG\_VSYNC\_HINT);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00013}00013\ \ \ \ \ InitWindow(Wcontent.width,\ Wcontent.height,\ Wcontent.title.c\_str());}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00014}00014\ \ \ \ \ SetTargetFPS(60);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00016}00016\ \ \ \ \ UI.setRootFrame(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_frame}{Frame}}(\{0,\ 0,\ Wcontent.width,\ Wcontent.height\}));}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00017}00017\ \}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00019}\mbox{\hyperlink{class_window_a69527f8092897e79761b59608ca6ba2b}{00019}}\ \mbox{\hyperlink{class_window_a74e6087da23d3c24e9fac0245e5ec92c}{Window::Window}}(std::string\ path)}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00020}00020\ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00021}00021\ \ \ \ \ path\ =\ \mbox{\hyperlink{namespace_p_a_t_b_a562ce625bb3219dffc943bf8b69ab5a1}{PATB::WINDOW\_}}\ +\ path;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00022}00022\ \ \ \ \ YAML::Node\ config\ =\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(path);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_window_ad558d17039a65a0d42d3bdda01e36651}{initRaylib}}(config);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{class_window_a10eed1c286789ea0a3159d4a5c6b5a06}{loadInterface}}(config[\textcolor{stringliteral}{"{}interface-\/list"{}}]);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_window_a966b152fb1c5e3bd38f80145522f025f}{loadGame}}(config[\textcolor{stringliteral}{"{}game"{}}]);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{if}(config[\textcolor{stringliteral}{"{}choose-\/interface"{}}])\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ UI.push(config[\textcolor{stringliteral}{"{}choose-\/interface"{}}].as<std::string>());}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{if}(config[\textcolor{stringliteral}{"{}input-\/delay"{}}])\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00031}00031\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ delay\ =\ config[\textcolor{stringliteral}{"{}input-\/delay"{}}].as<\textcolor{keywordtype}{int}>()\ /\ 1000.0;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ Wcontent.input\_delay\ =\ std::chrono::duration<double>(delay);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00034}00034\ \ \ \ \ \}\textcolor{keywordflow}{else}\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00035}00035\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ Wcontent.input\_delay\ =\ std::chrono::duration<int>(50)\ /\ 1000.0;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00037}00037\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}(config[\textcolor{stringliteral}{"{}runtime-\/delay"{}}])\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00040}00040\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ delay\ =\ config[\textcolor{stringliteral}{"{}runtime-\/delay"{}}].as<\textcolor{keywordtype}{int}>()\ /\ 1000.0;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ Wcontent.runtime\_delay\ =\ std::chrono::duration<double>(delay);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00043}00043\ \ \ \ \ \}\textcolor{keywordflow}{else}\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00044}00044\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ Wcontent.runtime\_delay\ =\ std::chrono::duration<int>(40)\ /\ 1000.0;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00046}00046\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00047}00047\ \}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00050}\mbox{\hyperlink{class_window_ad558d17039a65a0d42d3bdda01e36651}{00050}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_ad558d17039a65a0d42d3bdda01e36651}{Window::initRaylib}}(YAML::Node\ config)}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00051}00051\ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00052}00052\ \ \ \ \ Wcontent.width\ =\ config[\textcolor{stringliteral}{"{}width"{}}].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00053}00053\ \ \ \ \ Wcontent.height\ =\ config[\textcolor{stringliteral}{"{}height"{}}].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00054}00054\ \ \ \ \ Wcontent.title\ =\ config[\textcolor{stringliteral}{"{}title"{}}].as<std::string>();}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ enable\ resizeable\ window\ and\ vsync}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00057}00057\ \ \ \ \ SetConfigFlags(FLAG\_WINDOW\_RESIZABLE\ |\ FLAG\_VSYNC\_HINT);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00058}00058\ \ \ \ \ InitWindow(Wcontent.width,\ Wcontent.height,\ Wcontent.title.c\_str());}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00059}00059\ \ \ \ \ SetTargetFPS(60);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00060}00060\ \ \ \ \ Wcontent.setStatus(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00061}00061\ \ \ \ \ UI.setRootFrame(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_frame}{Frame}}(\{0,\ 0,\ Wcontent.width,\ Wcontent.height\}));}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00062}00062\ \}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00063}00063\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00064}\mbox{\hyperlink{class_window_a10eed1c286789ea0a3159d4a5c6b5a06}{00064}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a10eed1c286789ea0a3159d4a5c6b5a06}{Window::loadInterface}}(YAML::Node\ node)}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00065}00065\ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{if}(!node)\ return\ ;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00068}00068\ \ \ \ \ UI.setInterfacePool(\textcolor{keyword}{new}\ InterfacePool());}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00070}00070\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ std::string\ path\ =\ i[\textcolor{stringliteral}{"{}file"{}}].as<std::string>();}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ 0,\ y\ =\ 0,\ w\ =\ 1,\ h\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ w\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ h\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{assets_8hpp}{const/path/assets.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{file_8hpp}{file.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00008}\mbox{\hyperlink{class_window_a74e6087da23d3c24e9fac0245e5ec92c}{00008}}\ \mbox{\hyperlink{class_window_a74e6087da23d3c24e9fac0245e5ec92c}{Window::Window}}()}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00010}00010\ \ \ \ \ Wcontent.width\ =\ 1200;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00011}00011\ \ \ \ \ Wcontent.height\ =\ 668;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00012}00012\ \ \ \ \ Wcontent.title\ =\ \textcolor{stringliteral}{"{}Crossy\ Road\ clone"{}};}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00013}00013\ \ \ \ \ SetConfigFlags(FLAG\_WINDOW\_RESIZABLE\ |\ FLAG\_VSYNC\_HINT);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00014}00014\ \ \ \ \ InitWindow(Wcontent.width,\ Wcontent.height,\ Wcontent.title.c\_str());}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00015}00015\ \ \ \ \ SetTargetFPS(60);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00017}00017\ \ \ \ \ UI.setRootFrame(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_frame}{Frame}}(\{0,\ 0,\ Wcontent.width,\ Wcontent.height\}));}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00020}\mbox{\hyperlink{class_window_a69527f8092897e79761b59608ca6ba2b}{00020}}\ \mbox{\hyperlink{class_window_a74e6087da23d3c24e9fac0245e5ec92c}{Window::Window}}(std::string\ path)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00022}00022\ \ \ \ \ path\ =\ \mbox{\hyperlink{namespace_p_a_t_b_a562ce625bb3219dffc943bf8b69ab5a1}{PATB::WINDOW\_}}\ +\ path;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00023}00023\ \ \ \ \ YAML::Node\ config\ =\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(path);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{class_window_ad558d17039a65a0d42d3bdda01e36651}{initRaylib}}(config);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_window_a10eed1c286789ea0a3159d4a5c6b5a06}{loadInterface}}(config[\textcolor{stringliteral}{"{}interface-\/list"{}}]);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{class_window_a966b152fb1c5e3bd38f80145522f025f}{loadGame}}(config[\textcolor{stringliteral}{"{}game"{}}]);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (config[\textcolor{stringliteral}{"{}choose-\/interface"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ UI.push(config[\textcolor{stringliteral}{"{}choose-\/interface"{}}].as<std::string>());}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (config[\textcolor{stringliteral}{"{}input-\/delay"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ delay\ =\ config[\textcolor{stringliteral}{"{}input-\/delay"{}}].as<\textcolor{keywordtype}{int}>()\ /\ 1000.0;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ Wcontent.input\_delay\ =\ std::chrono::duration<double>(delay);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00037}00037\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ Wcontent.input\_delay\ =\ std::chrono::duration<int>(50)\ /\ 1000.0;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (config[\textcolor{stringliteral}{"{}runtime-\/delay"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ delay\ =\ config[\textcolor{stringliteral}{"{}runtime-\/delay"{}}].as<\textcolor{keywordtype}{int}>()\ /\ 1000.0;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ Wcontent.runtime\_delay\ =\ std::chrono::duration<double>(delay);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ Wcontent.runtime\_delay\ =\ std::chrono::duration<int>(40)\ /\ 1000.0;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{if}(config[\textcolor{stringliteral}{"{}music"{}}])\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00051}00051\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_window_a26d033c12de37527c75e5a763dd986a0}{loadMusic}}(config[\textcolor{stringliteral}{"{}music"{}}]);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ test\ inputbox}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00056}00056\ \ \ \ \ Font\ font\ =\ GetFontDefault();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00057}00057\ \ \ \ \ inputBox\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_input_box}{InputBox}}(30,\ \{0.35,\ 0.45,\ 0.3,\ 0.08\},\ UI.getRootFrame(),\ \&font);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00058}00058\ \ \ \ \ inputBox-\/>\mbox{\hyperlink{class_input_box_a4e999f8ed17c3294c9058f18d8e8f6ba}{linkContent}}(\textcolor{stringliteral}{"{}inputbox.yaml"{}});}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00059}00059\ \ \ \ \ inputBox-\/>\mbox{\hyperlink{class_container_a5f2b24b3eff15fb251043fcfd32bf537}{hide}}();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00061}00061\ \ \ \ \ highscore\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classhigh_score}{highScore}}(\textcolor{stringliteral}{"{}inputbox.yaml"{}});}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00062}00062\ \ \ \ \ isOver\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00065}\mbox{\hyperlink{class_window_ad558d17039a65a0d42d3bdda01e36651}{00065}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_ad558d17039a65a0d42d3bdda01e36651}{Window::initRaylib}}(YAML::Node\ config)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00067}00067\ \ \ \ \ Wcontent.width\ =\ config[\textcolor{stringliteral}{"{}width"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00068}00068\ \ \ \ \ Wcontent.height\ =\ config[\textcolor{stringliteral}{"{}height"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00069}00069\ \ \ \ \ Wcontent.title\ =\ config[\textcolor{stringliteral}{"{}title"{}}].as<std::string>();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{comment}{//\ enable\ resizeable\ window\ and\ vsync}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00072}00072\ \ \ \ \ SetConfigFlags(FLAG\_WINDOW\_RESIZABLE\ |\ FLAG\_VSYNC\_HINT);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00073}00073\ \ \ \ \ InitWindow(Wcontent.width,\ Wcontent.height,\ Wcontent.title.c\_str());}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00074}00074\ \ \ \ \ InitAudioDevice();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00075}00075\ \ \ \ \ SetTargetFPS(60);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00076}00076\ \ \ \ \ Wcontent.setStatus(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00077}00077\ \ \ \ \ UI.setRootFrame(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_frame}{Frame}}(\{0,\ 0,\ Wcontent.width,\ Wcontent.height\}));}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00078}00078\ \}}
 \DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00079}00079\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface}{Interface}}*\ inf\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface}{Interface}}(UI.getRootFrame(),\ \{x,\ y,\ w,\ h\});}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ inf-\/>linkContent(path);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ UI.load(inf);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00083}00083\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00084}00084\ \}}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00086}\mbox{\hyperlink{class_window_a966b152fb1c5e3bd38f80145522f025f}{00086}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a966b152fb1c5e3bd38f80145522f025f}{Window::loadGame}}(YAML::Node\ node)}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00087}00087\ \{}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{if}(!node)\ return\ ;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00089}00089\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00090}00090\ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}file"{}}].as<std::string>();}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00091}00091\ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ 0,\ y\ =\ 0,\ w\ =\ 1,\ h\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00092}00092\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}x"{}}])\ x\ =\ node[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}y"{}}])\ y\ =\ node[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}w"{}}])\ w\ =\ node[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}h"{}}])\ h\ =\ node[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00097}00097\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00098}00098\ }
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00099}00099\ \ \ \ \ \mbox{\hyperlink{class_interface}{Interface}}*\ inf\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game}{Game}}(UI.getRootFrame(),\ \{x,\ y,\ w,\ h\});}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00100}00100\ \ \ \ \ inf-\/>linkContent(path);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00101}00101\ \ \ \ \ UI.load(inf);}
-\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00102}00102\ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00080}\mbox{\hyperlink{class_window_a10eed1c286789ea0a3159d4a5c6b5a06}{00080}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a10eed1c286789ea0a3159d4a5c6b5a06}{Window::loadInterface}}(YAML::Node\ node)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00081}00081\ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{if}\ (!node)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00085}00085\ \ \ \ \ UI.setInterfacePool(\textcolor{keyword}{new}\ InterfacePool());}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ i\ :\ node)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00087}00087\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ std::string\ path\ =\ i[\textcolor{stringliteral}{"{}file"{}}].as<std::string>();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ 0,\ y\ =\ 0,\ w\ =\ 1,\ h\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i[\textcolor{stringliteral}{"{}x"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i[\textcolor{stringliteral}{"{}y"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i[\textcolor{stringliteral}{"{}w"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ w\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i[\textcolor{stringliteral}{"{}h"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ h\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface}{Interface}}\ *inf\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface}{Interface}}(UI.getRootFrame(),\ \{x,\ y,\ w,\ h\});}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ inf-\/>linkContent(path);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ UI.load(inf);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00107}\mbox{\hyperlink{class_window_a26d033c12de37527c75e5a763dd986a0}{00107}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a26d033c12de37527c75e5a763dd986a0}{Window::loadMusic}}(YAML::Node\ node)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00108}00108\ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordflow}{if}(!node)\ return\ ;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00111}00111\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00112}00112\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ std::string\ path\ =\ i[\textcolor{stringliteral}{"{}path"{}}].as<std::string>();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ path\ =\ \mbox{\hyperlink{namespace_p_a_s_s_e_t_s_a82142981e7680f13479efc6f51b3dab3}{PASSETS::SOUND\_}}\ +\ path;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ Music\ music\ =\ LoadMusicStream(path.c\_str());}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ SetMusicVolume(music,\ 1);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ musicController.add(music);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00119}00119\ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00121}\mbox{\hyperlink{class_window_a966b152fb1c5e3bd38f80145522f025f}{00121}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a966b152fb1c5e3bd38f80145522f025f}{Window::loadGame}}(YAML::Node\ f)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00122}00122\ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{if}\ (!f)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ node\ :\ f)}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00126}00126\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ std::string\ path\ =\ node[\textcolor{stringliteral}{"{}file"{}}].as<std::string>();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ 0,\ y\ =\ 0,\ w\ =\ 1,\ h\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}x"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ node[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}y"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ node[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}w"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ w\ =\ node[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (node[\textcolor{stringliteral}{"{}h"{}}])}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ h\ =\ node[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface}{Interface}}\ *inf\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game}{Game}}(UI.getRootFrame(),\ \{x,\ y,\ w,\ h\});}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ inf-\/>linkContent(path);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ lastGame\ =\ inf-\/>getName();}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ UI.load(inf);}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00143}00143\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{window_2src_2constructor_8cpp_source_l00144}00144\ \}}
 
 \end{DoxyCode}

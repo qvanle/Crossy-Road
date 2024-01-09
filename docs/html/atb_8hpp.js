@@ -6,6 +6,7 @@ var atb_8hpp =
     [ "CHUNK_", "atb_8hpp.html#a7f9e59624350c13d5777c35d70497c58", null ],
     [ "CONTAINER_", "atb_8hpp.html#a7b5b472dee45158e8fe18fa1d4e367ba", null ],
     [ "ENTITY_", "atb_8hpp.html#adc7e4499b8dd0e85041c802935d72163", null ],
+    [ "INPUTBOX_", "atb_8hpp.html#a88a283307f40c708a84cc34c53e4d597", null ],
     [ "INTERFACE_", "atb_8hpp.html#ad5bd661beccfb199cdf6eb43ff79e087", null ],
     [ "MAP_", "atb_8hpp.html#a4170508b217c7cec3be56b7f23622f3f", null ],
     [ "OBJECT_", "atb_8hpp.html#a1079c50b80736597bdd3ba25ea21f282", null ],

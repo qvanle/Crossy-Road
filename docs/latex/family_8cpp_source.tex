@@ -13,10 +13,10 @@
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::plug(Frame*\ par,\ fRect\ rel):\ par\ is\ nullptr"{}});}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ return\ ;}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00018}00018\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00019}00019\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00020}00020\ \ \ \ \ parent\ =\ par;}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00021}00021\ \ \ \ \ relative\ =\ rel;}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00022}00022\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00024}00024\ }
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00025}00025\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{addSubframe}}(\textcolor{keyword}{this});}
@@ -29,9 +29,9 @@
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::plug(Frame*\ par):\ par\ is\ nullptr"{}});}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ return\ ;}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00040}00040\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00041}00041\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00042}00042\ \ \ \ \ parent\ =\ par;}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00043}00043\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00045}00045\ }
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00046}00046\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{addSubframe}}(\textcolor{keyword}{this});}
@@ -40,51 +40,43 @@
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00053}\mbox{\hyperlink{class_frame_a7fec746caea8b9cc27d28f829e3995a8}{00053}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_frame_a7fec746caea8b9cc27d28f829e3995a8}{Frame::unplug}}()}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00054}00054\ \{}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00056}00056\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00057}00057\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_a6676f9cfd2639c9069341ee5844167af}{removeSubframe}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00058}00058\ \ \ \ \ parent\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00059}00059\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00060}00060\ \}}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00061}00061\ }
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00070}\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{00070}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{Frame::addSubframe}}(\mbox{\hyperlink{class_frame}{Frame}}*\ subframe)}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00071}00071\ \{}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00072}00072\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00072}00072\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00073}00073\ \ \ \ \ subframes.push\_back(subframe);}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00074}00074\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00074}00074\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00075}00075\ \}}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00076}00076\ }
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00085}\mbox{\hyperlink{class_frame_a6676f9cfd2639c9069341ee5844167af}{00085}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_frame_a6676f9cfd2639c9069341ee5844167af}{Frame::removeSubframe}}(\mbox{\hyperlink{class_frame}{Frame}}*\ subframe)}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00086}00086\ \{}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00087}00087\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{\Hypertarget{family_8cpp_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ subframes.size()\ -\/\ 1;}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{while}(i\ >=\ 0\ \&\&\ subframes.size())}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00090}00090\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!subframes.empty()\ \&\&\ subframes.back()\ ==\ subframe)}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ subframes.pop\_back();}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ i\ =\ std::min(i,\ (\textcolor{keywordtype}{int})\ subframes.size()\ -\/\ 1);}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!subframes.empty()\ \&\&\ subframes[i]\ ==\ subframe)}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ subframes[i]\ =\ subframes.back();}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ subframes.pop\_back();}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00099}00099\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00100}00100\ \ \ \ \ mtx.unlock();}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00101}00101\ \}}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00102}00102\ }
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00107}\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{00107}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{Frame::isroot}}()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00108}00108\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00109}00109\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00110}00110\ \ \ \ \ \textcolor{keywordflow}{return}\ parent\ ==\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00111}00111\ \}}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00112}00112\ }
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00113}\mbox{\hyperlink{class_frame_add61373f7fc708652df88a8af032f996}{00113}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_frame_add61373f7fc708652df88a8af032f996}{Frame::beginUpdate}}()}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00114}00114\ \{}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00115}00115\ \ \ \ \ mtx.lock();}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00116}00116\ \}}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00117}00117\ }
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00118}\mbox{\hyperlink{class_frame_a701cffd131a90249033fc40f505f02d6}{00118}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_frame_a701cffd131a90249033fc40f505f02d6}{Frame::endUpdate}}()}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00119}00119\ \{}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00120}00120\ \ \ \ \ mtx.unlock();}
-\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00121}00121\ \}}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find(subframes.begin(),\ subframes.end(),\ subframe);}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00090}00090\ \ \ \ \ \textcolor{keywordflow}{if}(it\ !=\ subframes.end())}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ subframes.erase(it);}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00092}00092\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00099}\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{00099}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{Frame::isroot}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00100}00100\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00101}00101\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{return}\ parent\ ==\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00105}\mbox{\hyperlink{class_frame_add61373f7fc708652df88a8af032f996}{00105}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_frame_add61373f7fc708652df88a8af032f996}{Frame::beginUpdate}}()}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00106}00106\ \{}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00107}00107\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00108}00108\ \}}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00110}\mbox{\hyperlink{class_frame_a701cffd131a90249033fc40f505f02d6}{00110}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_frame_a701cffd131a90249033fc40f505f02d6}{Frame::endUpdate}}()}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00111}00111\ \{}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00112}00112\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
+\DoxyCodeLine{\Hypertarget{family_8cpp_source_l00113}00113\ \}}
 
 \end{DoxyCode}

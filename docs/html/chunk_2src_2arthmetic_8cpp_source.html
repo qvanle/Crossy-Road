@@ -106,24 +106,30 @@ $(function(){initNavTree('chunk_2src_2arthmetic_8cpp_source.html',''); initResiz
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="class_chunk.html#ac874c45bfe135f9e6b0b6328869b30db">    3</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_chunk.html#ac874c45bfe135f9e6b0b6328869b30db">Chunk::drawEntity</a>() </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> i : Entity)</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>        i-&gt;draw();</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>}</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>        <span class="comment">// DrawRectangleLinesEx(i-&gt;getFrame(), 5, RED);</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>        i-&gt;draw();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    }</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
 </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_chunk.html#a508db570ed3775d30564dbdeea07db48">    9</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_chunk.html#a508db570ed3775d30564dbdeea07db48">Chunk::draw</a>() </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_function" href="class_container.html#ac8feb6b3a790483f85aad40a46327f24">Container::draw</a>();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="class_interface.html#a77300df653a7ab735342494bc9285695">drawNested</a>();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="class_interface.html#a485966ce945f1a7efe691245140a3125">drawContainers</a>();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_function" href="class_chunk.html#ac874c45bfe135f9e6b0b6328869b30db">drawEntity</a>();</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_chunk.html#a508db570ed3775d30564dbdeea07db48">   12</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_chunk.html#a508db570ed3775d30564dbdeea07db48">Chunk::draw</a>() </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="class_container.html#aee9a838a8f651d7d1e195290a2ba1ecb">isVisible</a>()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_function" href="class_container.html#ac8feb6b3a790483f85aad40a46327f24">Container::draw</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_function" href="class_interface.html#a77300df653a7ab735342494bc9285695">drawNested</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="class_interface.html#a485966ce945f1a7efe691245140a3125">drawContainers</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_function" href="class_chunk.html#ac874c45bfe135f9e6b0b6328869b30db">drawEntity</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">if</span>(trafficLight != <span class="keyword">nullptr</span>) </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        trafficLight-&gt;<a class="code hl_function" href="class_container.html#ac8feb6b3a790483f85aad40a46327f24">draw</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 </div>
 <div class="ttc" id="achunk_8hpp_html"><div class="ttname"><a href="chunk_8hpp.html">chunk.hpp</a></div></div>
-<div class="ttc" id="aclass_chunk_html_a508db570ed3775d30564dbdeea07db48"><div class="ttname"><a href="class_chunk.html#a508db570ed3775d30564dbdeea07db48">Chunk::draw</a></div><div class="ttdeci">void draw() override</div><div class="ttdef"><b>Definition</b> <a href="#l00009">arthmetic.cpp:9</a></div></div>
+<div class="ttc" id="aclass_chunk_html_a508db570ed3775d30564dbdeea07db48"><div class="ttname"><a href="class_chunk.html#a508db570ed3775d30564dbdeea07db48">Chunk::draw</a></div><div class="ttdeci">void draw() override</div><div class="ttdef"><b>Definition</b> <a href="#l00012">arthmetic.cpp:12</a></div></div>
 <div class="ttc" id="aclass_chunk_html_ac874c45bfe135f9e6b0b6328869b30db"><div class="ttname"><a href="class_chunk.html#ac874c45bfe135f9e6b0b6328869b30db">Chunk::drawEntity</a></div><div class="ttdeci">void drawEntity()</div><div class="ttdef"><b>Definition</b> <a href="#l00003">arthmetic.cpp:3</a></div></div>
 <div class="ttc" id="aclass_container_html_ac8feb6b3a790483f85aad40a46327f24"><div class="ttname"><a href="class_container.html#ac8feb6b3a790483f85aad40a46327f24">Container::draw</a></div><div class="ttdeci">virtual void draw()</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2arthmetic_8cpp_source.html#l00004">arthmetic.cpp:4</a></div></div>
+<div class="ttc" id="aclass_container_html_aee9a838a8f651d7d1e195290a2ba1ecb"><div class="ttname"><a href="class_container.html#aee9a838a8f651d7d1e195290a2ba1ecb">Container::isVisible</a></div><div class="ttdeci">bool isVisible()</div><div class="ttdef"><b>Definition</b> <a href="container_2src_2arthmetic_8cpp_source.html#l00026">arthmetic.cpp:26</a></div></div>
 <div class="ttc" id="aclass_interface_html_a485966ce945f1a7efe691245140a3125"><div class="ttname"><a href="class_interface.html#a485966ce945f1a7efe691245140a3125">Interface::drawContainers</a></div><div class="ttdeci">void drawContainers()</div><div class="ttdef"><b>Definition</b> <a href="interface_2src_2arthmetic_8cpp_source.html#l00011">arthmetic.cpp:11</a></div></div>
 <div class="ttc" id="aclass_interface_html_a77300df653a7ab735342494bc9285695"><div class="ttname"><a href="class_interface.html#a77300df653a7ab735342494bc9285695">Interface::drawNested</a></div><div class="ttdeci">void drawNested()</div><div class="ttdef"><b>Definition</b> <a href="interface_2src_2arthmetic_8cpp_source.html#l00003">arthmetic.cpp:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

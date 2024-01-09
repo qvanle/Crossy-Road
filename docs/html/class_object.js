@@ -10,6 +10,7 @@ var class_object =
     [ "chooseImage", "class_object.html#ac834daaf7955ebf7cd11f3c032c7141a", null ],
     [ "chooseImage", "class_object.html#a7e1ea1d520bee6d8c48125546c795450", null ],
     [ "chooseSprite", "class_object.html#a04fc266ae14009c6013f1952569f4a08", null ],
+    [ "createSpecialContent", "class_object.html#ae11ecc03917031a15d9a374fffb004f7", null ],
     [ "draw", "class_object.html#ae87be150261c17fc08fa6364dac4c5fe", null ],
     [ "endUpdate", "class_object.html#a701cffd131a90249033fc40f505f02d6", null ],
     [ "getCenter", "class_object.html#a5d52a474fbee6c61b5c1209d1a70e393", null ],
@@ -25,6 +26,8 @@ var class_object =
     [ "getX", "class_object.html#ab0eefa85bb68bd39b6c502f552083b42", null ],
     [ "getY", "class_object.html#a3808523d40227445dbd975fc0600b462", null ],
     [ "hide", "class_object.html#a5f2b24b3eff15fb251043fcfd32bf537", null ],
+    [ "isCollide", "class_object.html#a58b605e54db2a0719196286523bbd28c", null ],
+    [ "isCollide", "class_object.html#a5cfe43ea483203fb87e36bff0f97bada", null ],
     [ "isOverlapping", "class_object.html#af4f3195c0da8b663b272d326e2e5d48d", null ],
     [ "isOverlapping", "class_object.html#a5e86a0c4bc0a072cbe7cc0725707053b", null ],
     [ "isOverlapping", "class_object.html#a14a49b088ae5780fbf4ac0f826bb2785", null ],
@@ -35,6 +38,7 @@ var class_object =
     [ "loadControl", "class_object.html#a709cdf998a96d47b1d729487cb626a64", null ],
     [ "loadFocus", "class_object.html#a2b2426d6f7233fd0d2d3213a20a92dd6", null ],
     [ "loadName", "class_object.html#a3ebddddd7a940e4f5e3d287067103a3e", null ],
+    [ "loadSpecialContent", "class_object.html#aa46daca66efd8d3015e77197e3e89b1b", null ],
     [ "loadSprites", "class_object.html#a11f0c20cb4f80f5d2a63f73f981a9d15", null ],
     [ "moveBy", "class_object.html#a72456ad52812da3e4f805c20463238e3", null ],
     [ "moveBy", "class_object.html#abb0f7042ce5917e8e52cd0fe44934178", null ],
@@ -62,5 +66,6 @@ var class_object =
     [ "show", "class_object.html#a48cdaa85884938b417513cca003f4f6c", null ],
     [ "toggleVisibility", "class_object.html#ab03c3b8ce43fb4212de772f9edef22cd", null ],
     [ "unplug", "class_object.html#a7fec746caea8b9cc27d28f829e3995a8", null ],
-    [ "updateFrame", "class_object.html#a7142b4749ec9adf106935fbafa8b67b0", null ]
+    [ "updateFrame", "class_object.html#a7142b4749ec9adf106935fbafa8b67b0", null ],
+    [ "mtx", "class_object.html#a5a592afcbc41e45fccc62974a592b0a1", null ]
 ];

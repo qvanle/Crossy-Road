@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['object_0',['Object',['../class_object.html',1,'']]]
+  ['loadgamerequest_0',['loadGameRequest',['../classload_game_request.html',1,'']]],
+  ['loserequest_1',['loseRequest',['../classlose_request.html',1,'']]]
 ];

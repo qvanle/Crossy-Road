@@ -167,9 +167,9 @@ $(function(){initNavTree('action_2src_2action_8cpp_source.html',''); initResizab
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_packet_action.html#aed905a6cd23d3d3ec15d189cee19d710">   49</a></span><a class="code hl_function" href="class_packet_action.html#a5c0f78024bc39aac9aac97f8be05bd80">PacketAction::PacketAction</a>(<a class="code hl_class" href="class_packet_action.html">PacketAction</a>* action) : <a class="code hl_class" href="class_action.html">Action</a>(action)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_packet_action.html#aed905a6cd23d3d3ec15d189cee19d710">   49</a></span><a class="code hl_function" href="class_packet_action.html#a5c0f78024bc39aac9aac97f8be05bd80">PacketAction::PacketAction</a>(<a class="code hl_class" href="class_packet_action.html">PacketAction</a>* other) : <a class="code hl_class" href="class_action.html">Action</a>(other)</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">for</span>(<a class="code hl_class" href="class_action.html">Action</a>* a : action-&gt;actions)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">for</span>(<a class="code hl_class" href="class_action.html">Action</a>* a : other-&gt;actions)</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        actions.push_back(a-&gt;clone());</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
 </div>
@@ -198,60 +198,62 @@ $(function(){initNavTree('action_2src_2action_8cpp_source.html',''); initResizab
 </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_packet_action.html#addef62c60fc12feb54d7869e332eebff">   72</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_packet_action.html#a0483e1b2bf449ec89c5b9044ec29321d">PacketAction::addAction</a>(<a class="code hl_class" href="class_packet_action.html">PacketAction</a>* action) </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_packet_action.html#addef62c60fc12feb54d7869e332eebff">   72</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_packet_action.html#a0483e1b2bf449ec89c5b9044ec29321d">PacketAction::addAction</a>(<a class="code hl_class" href="class_packet_action.html">PacketAction</a>* other) </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> i : action-&gt;actions)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> i : other-&gt;actions)</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        actions.push_back(i);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    action-&gt;actions.clear();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    other-&gt;actions.clear();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">delete</span> other;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
 </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_packet_action.html#ae28f68158029f77be1262900afdc0121">   79</a></span>std::vector&lt;Action*&gt; <a class="code hl_function" href="class_packet_action.html#ae28f68158029f77be1262900afdc0121">PacketAction::unpack</a>()</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::vector&lt;Action*&gt; unpacked;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::queue&lt;PacketAction*&gt; q;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    q.push(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">while</span>(!q.empty()) </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_class" href="class_packet_action.html">PacketAction</a>* p = q.front();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        q.pop();</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">for</span>(<a class="code hl_class" href="class_action.html">Action</a>* a : p-&gt;actions)</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">if</span>(a-&gt;isPackage())</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                q.push((<a class="code hl_class" href="class_packet_action.html">PacketAction</a>*)a);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                unpacked.push_back(a);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        p-&gt;actions.clear();</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> unpacked;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_packet_action.html#ae28f68158029f77be1262900afdc0121">   80</a></span>std::vector&lt;Action*&gt; <a class="code hl_function" href="class_packet_action.html#ae28f68158029f77be1262900afdc0121">PacketAction::unpack</a>()</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::vector&lt;Action*&gt; unpacked;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::queue&lt;PacketAction*&gt; q;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    q.push(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">while</span>(!q.empty()) </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_class" href="class_packet_action.html">PacketAction</a>* p = q.front();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        q.pop();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">for</span>(<a class="code hl_class" href="class_action.html">Action</a>* a : p-&gt;actions)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="keywordflow">if</span>(a-&gt;isPackage())</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                q.push((<a class="code hl_class" href="class_packet_action.html">PacketAction</a>*)a);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                unpacked.push_back(a);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        p-&gt;actions.clear();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">delete</span> p;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> unpacked;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
 </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_packet_action.html#a4408e65a3fd32f65b5c5ce0b6fd25b87">  107</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_packet_action.html#a4408e65a3fd32f65b5c5ce0b6fd25b87">PacketAction::execute</a>()</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>{</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">for</span>(<a class="code hl_class" href="class_action.html">Action</a>* a : actions)</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        a-&gt;execute();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_packet_action.html#a4408e65a3fd32f65b5c5ce0b6fd25b87">  109</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_packet_action.html#a4408e65a3fd32f65b5c5ce0b6fd25b87">PacketAction::execute</a>()</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">for</span>(<a class="code hl_class" href="class_action.html">Action</a>* a : actions)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        a-&gt;<a class="code hl_function" href="class_packet_action.html#a4408e65a3fd32f65b5c5ce0b6fd25b87">execute</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
 </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_packet_action.html#afad82eb9d4666aa8bdcd0461a6589888">  116</a></span><a class="code hl_class" href="class_packet_action.html">PacketAction</a>* <a class="code hl_function" href="class_packet_action.html#afad82eb9d4666aa8bdcd0461a6589888">PacketAction::clone</a>()</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>{</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="class_packet_action.html#a5c0f78024bc39aac9aac97f8be05bd80">PacketAction</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_packet_action.html#afad82eb9d4666aa8bdcd0461a6589888">  118</a></span><a class="code hl_class" href="class_packet_action.html">PacketAction</a>* <a class="code hl_function" href="class_packet_action.html#afad82eb9d4666aa8bdcd0461a6589888">PacketAction::clone</a>()</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_function" href="class_packet_action.html#a5c0f78024bc39aac9aac97f8be05bd80">PacketAction</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
 </div>
 <div class="ttc" id="aaction_2src_2action_8cpp_html_aec8684d39aaf84b00ed6865d4b281cd4"><div class="ttname"><a href="action_2src_2action_8cpp.html#aec8684d39aaf84b00ed6865d4b281cd4">NONE_ARGS</a></div><div class="ttdeci">ARGS NONE_ARGS</div><div class="ttdef"><b>Definition</b> <a href="#l00004">action.cpp:4</a></div></div>
 <div class="ttc" id="aaction_8hpp_html"><div class="ttname"><a href="action_8hpp.html">action.hpp</a></div></div>
@@ -267,11 +269,11 @@ $(function(){initNavTree('action_2src_2action_8cpp_source.html',''); initResizab
 <div class="ttc" id="aclass_packet_action_html"><div class="ttname"><a href="class_packet_action.html">PacketAction</a></div><div class="ttdoc">organize selected actions into a package</div><div class="ttdef"><b>Definition</b> <a href="action_8hpp_source.html#l00052">action.hpp:53</a></div></div>
 <div class="ttc" id="aclass_packet_action_html_a0483e1b2bf449ec89c5b9044ec29321d"><div class="ttname"><a href="class_packet_action.html#a0483e1b2bf449ec89c5b9044ec29321d">PacketAction::addAction</a></div><div class="ttdeci">void addAction(Action *)</div><div class="ttdef"><b>Definition</b> <a href="#l00067">action.cpp:67</a></div></div>
 <div class="ttc" id="aclass_packet_action_html_a174557222c02976b9282a6d59b7df968"><div class="ttname"><a href="class_packet_action.html#a174557222c02976b9282a6d59b7df968">PacketAction::~PacketAction</a></div><div class="ttdeci">~PacketAction()</div><div class="ttdef"><b>Definition</b> <a href="#l00055">action.cpp:55</a></div></div>
-<div class="ttc" id="aclass_packet_action_html_a4408e65a3fd32f65b5c5ce0b6fd25b87"><div class="ttname"><a href="class_packet_action.html#a4408e65a3fd32f65b5c5ce0b6fd25b87">PacketAction::execute</a></div><div class="ttdeci">void execute() override</div><div class="ttdef"><b>Definition</b> <a href="#l00107">action.cpp:107</a></div></div>
+<div class="ttc" id="aclass_packet_action_html_a4408e65a3fd32f65b5c5ce0b6fd25b87"><div class="ttname"><a href="class_packet_action.html#a4408e65a3fd32f65b5c5ce0b6fd25b87">PacketAction::execute</a></div><div class="ttdeci">void execute() override</div><div class="ttdef"><b>Definition</b> <a href="#l00109">action.cpp:109</a></div></div>
 <div class="ttc" id="aclass_packet_action_html_a5c0f78024bc39aac9aac97f8be05bd80"><div class="ttname"><a href="class_packet_action.html#a5c0f78024bc39aac9aac97f8be05bd80">PacketAction::PacketAction</a></div><div class="ttdeci">PacketAction()</div><div class="ttdef"><b>Definition</b> <a href="#l00044">action.cpp:44</a></div></div>
 <div class="ttc" id="aclass_packet_action_html_aabd2a32c3b4b3946098a406315bc4b8b"><div class="ttname"><a href="class_packet_action.html#aabd2a32c3b4b3946098a406315bc4b8b">PacketAction::isPackage</a></div><div class="ttdeci">bool isPackage() override</div><div class="ttdef"><b>Definition</b> <a href="#l00062">action.cpp:62</a></div></div>
-<div class="ttc" id="aclass_packet_action_html_ae28f68158029f77be1262900afdc0121"><div class="ttname"><a href="class_packet_action.html#ae28f68158029f77be1262900afdc0121">PacketAction::unpack</a></div><div class="ttdeci">std::vector&lt; Action * &gt; unpack() override</div><div class="ttdef"><b>Definition</b> <a href="#l00079">action.cpp:79</a></div></div>
-<div class="ttc" id="aclass_packet_action_html_afad82eb9d4666aa8bdcd0461a6589888"><div class="ttname"><a href="class_packet_action.html#afad82eb9d4666aa8bdcd0461a6589888">PacketAction::clone</a></div><div class="ttdeci">PacketAction * clone() override</div><div class="ttdef"><b>Definition</b> <a href="#l00116">action.cpp:116</a></div></div>
+<div class="ttc" id="aclass_packet_action_html_ae28f68158029f77be1262900afdc0121"><div class="ttname"><a href="class_packet_action.html#ae28f68158029f77be1262900afdc0121">PacketAction::unpack</a></div><div class="ttdeci">std::vector&lt; Action * &gt; unpack() override</div><div class="ttdef"><b>Definition</b> <a href="#l00080">action.cpp:80</a></div></div>
+<div class="ttc" id="aclass_packet_action_html_afad82eb9d4666aa8bdcd0461a6589888"><div class="ttname"><a href="class_packet_action.html#afad82eb9d4666aa8bdcd0461a6589888">PacketAction::clone</a></div><div class="ttdeci">PacketAction * clone() override</div><div class="ttdef"><b>Definition</b> <a href="#l00118">action.cpp:118</a></div></div>
 <div class="ttc" id="astruct_a_r_g_s_html"><div class="ttname"><a href="struct_a_r_g_s.html">ARGS</a></div><div class="ttdoc">stores request information</div><div class="ttdef"><b>Definition</b> <a href="action_8hpp_source.html#l00013">action.hpp:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

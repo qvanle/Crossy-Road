@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visualizer: Crossy Road clone</title>
+<title>Visualizer: Run 4 Ur Life</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,25 +92,146 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Crossy Road clone </div></div>
+  <div class="headertitle"><div class="title">Run 4 Ur Life </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a>CS202 group project.</p>
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
+Table of content</h1>
+<ul>
+<li>Description</li>
+<li>Contributors</li>
+<li>Dependencies</li>
+<li>Installation Guide</li>
+<li>Usage</li>
+<li>Features</li>
+<li>Documentation</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Description</h1>
+<p><em>Run 4 Ur Life</em> belongs to the category of games commonly known as "endless runners" or "infinite runners." Featuring 5 levels of difficulties ranging from Easy to Nightmare, our game presents a fun and sufficiently challenging means of passing time. In <em>Run 4 Ur Life</em>, players control the main character as they attempt to cross roads, rivers, and other obstacles; for every mode of difficulty, the speed at which obstacles move will be increased and themes will be changed accordingly.</p>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Demonstration</h2>
+<p><img src="./docs/img/homescreen.png" alt="Homescreen" class="inline"/></p><ul>
+<li>video</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Contributors</h1>
+<ul>
+<li>Lê Quốc Văn - @qvanle</li>
+<li>Dương Minh Quang - @DuongMQuang</li>
+<li>Lâm Tú Nhi - @fragilember</li>
+<li>Trần Quang Huy - @TranQuangHuy2004</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Dependencies</h1>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Required</h2>
 <ul>
-<li>GCC 11</li>
+<li>GCC 13+ (or clang 15+)</li>
 <li>Cmake</li>
-<li>Makefile </li>
+<li>build system (makefile, ninja etc)</li>
+<li>mesa packet (optional for mac and linux) </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Automated downloads</h2>
 <ul>
 <li>Raylib</li>
-<li>GLFW</li>
 <li>cppyaml </li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Other</h2>
+<ul>
+<li>doxygen</li>
+<li>git</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Installation Guide</h1>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Install GCC</h2>
+<ul>
+<li>For Linux: On most Linux distributions, GCC can be installed using the package manager. Open a terminal and run the following commands based on your package manager:<ul>
+<li>Debian/Ubuntu: <code>sudo apt update</code> <code>sudo apt install gcc</code></li>
+<li>Red Hat/Fedora: <code>sudo dnf install gcc</code></li>
+</ul>
+</li>
+<li>For macOS: On macOS, you can use <em>Homebrew</em> to install GCC. First, make sure you have Homebrew installed. If not, you can install it from <a href="https://brew.sh/">https://brew.sh/</a>. Once Homebrew is installed, open a terminal and run: <code>brew install gcc</code></li>
+<li>For Windows: On Windows, you can use <em>MinGW</em> (Minimalist GNU for Windows) or <em>MSYS2</em> to install GCC.<ul>
+<li>MinGW:<ol type="1">
+<li>Download the MinGW installer from <a href="https://mingw-w64.org/doku.php">https://mingw-w64.org/doku.php</a>.</li>
+<li>Run the installer and follow the on-screen instructions.</li>
+<li>During installation, select the components including the "gcc" compiler.</li>
+</ol>
+</li>
+<li>MSYS2:<ol type="1">
+<li>Download the MSYS2 installer from <a href="https://www.msys2.org/">https://www.msys2.org/</a>.</li>
+<li>Run the installer and follow the on-screen instructions.</li>
+<li>Open the MSYS2 terminal and run: <code>pacman -S mingw-w64-x86_64-gcc</code></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Verification: To verify that GCC is installed, open a terminal (or command prompt on Windows) and type: <code>gcc &ndash;version</code> This should display information about the installed GCC version.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Install Cmake</h2>
+<ul>
+<li>For Linux: On most Linux distributions, you can use the package manager to install CMake. Open a terminal and run the following commands based on your package manager:<ul>
+<li>Debian/Ubuntu: <code>sudo apt update</code> <code>sudo apt install cmake</code></li>
+<li>Red Hat/Fedora: <code>sudo dnf install cmake</code></li>
+</ul>
+</li>
+<li>For macOS: On macOS, you can use <em>Homebrew</em> to install CMake. If you don't have Homebrew installed, you can get it from <a href="https://brew.sh/">https://brew.sh/</a>. Once Homebrew is installed, open a terminal and run: <code>brew install cmake</code></li>
+<li>For Windows: On Windows, you can download the installer from the official CMake website:<ol type="1">
+<li>Visit <a href="https://cmake.org/download/">https://cmake.org/download/</a> in your web browser.</li>
+<li>Download the Windows Installer.</li>
+<li>Run the installer and follow the on-screen instructions.</li>
+</ol>
+</li>
+<li>Verification: To verify that CMake is installed, open a terminal or command prompt and type: <code>cmake &ndash;version</code> This should display information about the installed CMake version.</li>
+<li>Install build system</li>
+<li>Download file from github: <a href="https://github.com/qvanle/Crossy-Road">https://github.com/qvanle/Crossy-Road</a></li>
+<li>Run build.bat (build.sh for Mac and Linux)</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md12"></a>
+Usage</h1>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Gameplay</h2>
+<p><img src="./docs/img/gameplay.png" alt="Easy mode" class="inline"/> <img src="./docs/img/gameplay2.png" alt="Insane mode" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Save &amp; load</h2>
+<p><a href="https://youtu.be/-8zYW2Oad_o">Save &amp; load Demonstration</a></p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Highscores</h2>
+<p><img src="/docs/img/highscore.png" alt="Highscores" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Resize</h2>
+<p><img src="/docs/img/resize1.png" alt="Before resize" class="inline"/> <img src="/docs/img/resize2.png" alt="After resize" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md17"></a>
+Features</h1>
+<ul>
+<li>[x] Basic requirement</li>
+<li>[x] Menu</li>
+<li>[x] Save game and Load game</li>
+<li>[x] Traffic lights</li>
+<li>[x] Collision effects</li>
+<li>[x] <a class="el" href="class_game.html">Game</a> levels: at least 5</li>
+<li>[x] Main character resources</li>
+<li>[x] Vehicle resources</li>
+<li>[x] Animal resources</li>
+<li>[x] Other special effects</li>
+<li>[x] Bonus feature (max 0.5 point) : Highscores</li>
+<li>[x] Bonus feature (max 0.5 point) : Resize</li>
+<li>[x] Bonus feature (max 0.5 point) : 5 themes</li>
+<li>[x] Bonus feature (max 0.5 point) : Musics</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md18"></a>
+Documentation</h1>
+<ul>
+<li>[Report]()</li>
+<li><a href="https://docs.google.com/spreadsheets/d/1AVUBVkAyLRs_uJDbkoPnMfpPMAuqWG7FugoVfJgquLs/edit?usp=sharing">Contribution</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1jVbS3Elh6-2IouKZW_RCUDCNzjiY3pcXCJgKksatuZs/edit?usp=sharing">Grading scheme</a></li>
+<li>[Video demo]() </li>
 </ul>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
