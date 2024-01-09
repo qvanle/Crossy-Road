@@ -32,5 +32,6 @@ var class_frame =
     [ "resize", "class_frame.html#ae515658ddcab39a3fc9e038eb86dfe61", null ],
     [ "setRelative", "class_frame.html#ab54f6e87faf0216b708c40cb1bc1a4a2", null ],
     [ "unplug", "class_frame.html#a7fec746caea8b9cc27d28f829e3995a8", null ],
-    [ "updateFrame", "class_frame.html#a7142b4749ec9adf106935fbafa8b67b0", null ]
+    [ "updateFrame", "class_frame.html#a7142b4749ec9adf106935fbafa8b67b0", null ],
+    [ "mtx", "class_frame.html#a5a592afcbc41e45fccc62974a592b0a1", null ]
 ];

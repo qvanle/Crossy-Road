@@ -46,5 +46,21 @@
 \DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{if}(w\ <\ 0\ ||\ h\ <\ 0)\ \textcolor{keywordflow}{return}\ 0;}
 \DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{return}\ w\ *\ h;}
 \DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00046}\mbox{\hyperlink{class_container_a5cfe43ea483203fb87e36bff0f97bada}{00046}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_container_a5cfe43ea483203fb87e36bff0f97bada}{Container::isCollide}}(Rectangle\ rec)}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00047}00047\ \{}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00048}00048\ \ \ \ \ Rectangle\ rec2\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ a1\ =\ rec.x\ <=\ rec2.x\ \&\&\ rec2.x\ <=\ rec.x\ +\ rec.width;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ a2\ =\ rec2.x\ <=\ rec.x\ \&\&\ rec.x\ <=\ rec2.x\ +\ rec2.width;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ b1\ =\ rec.y\ <=\ rec2.y\ \&\&\ rec2.y\ <=\ rec.y\ +\ rec.height;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ b2\ =\ rec2.y\ <=\ rec.y\ \&\&\ rec.y\ <=\ rec2.y\ +\ rec2.height;}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ (a1\ ||\ a2)\ \&\&\ (b1\ ||\ b2);}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00057}\mbox{\hyperlink{class_container_a58b605e54db2a0719196286523bbd28c}{00057}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_container_a5cfe43ea483203fb87e36bff0f97bada}{Container::isCollide}}(\mbox{\hyperlink{class_container}{Container}}*\ other)}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00058}00058\ \{}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_container_a5cfe43ea483203fb87e36bff0f97bada}{isCollide}}(other-\/>\mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}());}
+\DoxyCodeLine{\Hypertarget{overlap_8cpp_source_l00060}00060\ \}}
 
 \end{DoxyCode}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keystroke_0',['KeyStroke',['../class_key_stroke.html',1,'']]]
+  ['highscore_0',['highScore',['../classhigh_score.html',1,'']]]
 ];

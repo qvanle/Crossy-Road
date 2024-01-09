@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['clone_0',['Crossy Road clone',['../index.html',1,'']]],
-  ['crossy_20road_20clone_1',['Crossy Road clone',['../index.html',1,'']]]
+  ['4_20ur_20life_0',['Run 4 Ur Life',['../index.html',1,'']]]
 ];

@@ -7,5 +7,6 @@ var searchData=
   ['moveentityaction_4',['moveEntityAction',['../classmove_entity_action.html#a261a4634a905aab40f23dce084d669c6',1,'moveEntityAction']]],
   ['moveobjectaction_5',['moveObjectAction',['../classmove_object_action.html#aac0c1fc2a7375604c87fe5727c260a55',1,'moveObjectAction::moveObjectAction(Container *obj, fPoint delta)'],['../classmove_object_action.html#aec2e7477f2afa33172d578efb609d263',1,'moveObjectAction::moveObjectAction(Container *obj, fPoint dir, float speed)']]],
   ['moveto_6',['moveTo',['../class_frame.html#a97a44fc353ebd9feb9002fcfb2f7ecb6',1,'Frame::moveTo(fPoint rel)'],['../class_frame.html#a6b8233fda47b75fe55402700efdcca97',1,'Frame::moveTo(int x, int y)']]],
-  ['movingentity_7',['movingEntity',['../class_chunk.html#ae75de66267636fb89d3f753e09119795',1,'Chunk']]]
+  ['movetoobjectaction_7',['movetoObjectAction',['../classmoveto_object_action.html#a585a8d74cb2c980f2795b35e3ba24800',1,'movetoObjectAction']]],
+  ['movingentity_8',['movingEntity',['../class_chunk.html#ae75de66267636fb89d3f753e09119795',1,'Chunk']]]
 ];

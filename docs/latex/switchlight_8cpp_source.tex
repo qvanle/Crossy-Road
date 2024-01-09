@@ -1,0 +1,28 @@
+\doxysection{switchlight.\+cpp}
+\hypertarget{switchlight_8cpp_source}{}\label{switchlight_8cpp_source}\index{src/chunk/src/action/switchlight.cpp@{src/chunk/src/action/switchlight.cpp}}
+\mbox{\hyperlink{switchlight_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{chunk_8hpp}{chunk.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00003}\mbox{\hyperlink{classswitch_traffic_light_action_af4c2eb429e8f024ab8107b14d8ad8a20}{00003}}\ \mbox{\hyperlink{classswitch_traffic_light_action_af4c2eb429e8f024ab8107b14d8ad8a20}{switchTrafficLightAction::switchTrafficLightAction}}(\mbox{\hyperlink{class_chunk}{Chunk}}*\ chunk)}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00005}00005\ \ \ \ \ this-\/>chunk\ =\ chunk;}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00006}00006\ \}}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00008}\mbox{\hyperlink{classswitch_traffic_light_action_ad819eb33079c468bd2659840d4247ef7}{00008}}\ \mbox{\hyperlink{classswitch_traffic_light_action_ad819eb33079c468bd2659840d4247ef7}{switchTrafficLightAction::\string~switchTrafficLightAction}}()}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00010}00010\ \}}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00012}\mbox{\hyperlink{classswitch_traffic_light_action_ac0e8acc666388110579eae32b9f7762f}{00012}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classswitch_traffic_light_action_ac0e8acc666388110579eae32b9f7762f}{switchTrafficLightAction::execute}}()}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}(chunk-\/>trafficLight\ ==\ \textcolor{keyword}{nullptr})\ return\ ;}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00015}00015\ \ \ \ \ chunk-\/>stop\ =\ !chunk-\/>stop;}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00016}00016\ \ \ \ \ chunk-\/>trafficLight-\/>\mbox{\hyperlink{class_container_a04fc266ae14009c6013f1952569f4a08}{chooseSprite}}(chunk-\/>stop);}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00019}\mbox{\hyperlink{classswitch_traffic_light_action_a99aa12254cf70a63e2323cd2f644c696}{00019}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classswitch_traffic_light_action_a99aa12254cf70a63e2323cd2f644c696}{switchTrafficLightAction::clone}}()}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classswitch_traffic_light_action_af4c2eb429e8f024ab8107b14d8ad8a20}{switchTrafficLightAction}}(chunk);}
+\DoxyCodeLine{\Hypertarget{switchlight_8cpp_source_l00022}00022\ \}}
+
+\end{DoxyCode}

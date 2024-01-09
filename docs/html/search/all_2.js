@@ -1,28 +1,8 @@
 var searchData=
 [
-  ['change_5finf_0',['CHANGE_INF',['../namespace_r_e_q_u_e_s_t.html#ae245172e8afb7949635ea359bc4d6c5ca707976868535b915c0f7e544da62fe5b',1,'REQUEST']]],
-  ['changeimageaction_1',['changeImageAction',['../classchange_image_action.html',1,'changeImageAction'],['../class_container.html#a257d5a732fa522a82836366f51bb9b19',1,'Container::changeImageAction'],['../classchange_image_action.html#a13c7e530e3e14c581beab722397277fe',1,'changeImageAction::changeImageAction(Container *, iPoint)'],['../classchange_image_action.html#a76f311912fa44a35cfd86bf71e2c63c0',1,'changeImageAction::changeImageAction(changeImageAction *)']]],
-  ['changeindex_2',['changeIndex',['../class_button_image.html#a03ef3a61bb18f43bc674e17c5c976581',1,'ButtonImage']]],
-  ['changeinf_2ecpp_3',['changeinf.cpp',['../changeinf_8cpp.html',1,'']]],
-  ['changeinfrequest_4',['changeInfRequest',['../classchange_inf_request.html',1,'changeInfRequest'],['../classchange_inf_request.html#afc923b6ef9dfd97849475d236afa5029',1,'changeInfRequest::changeInfRequest(std::string s)'],['../classchange_inf_request.html#a35b9cf5c1e3e122643e1648d5192208e',1,'changeInfRequest::changeInfRequest(changeInfRequest *)']]],
-  ['changeposition_5',['changePosition',['../class_button_image.html#ab100753e1794e2f27318ffb28bc675a1',1,'ButtonImage']]],
-  ['changesprite_2ecpp_6',['changesprite.cpp',['../changesprite_8cpp.html',1,'']]],
-  ['chooseaction_7',['chooseAction',['../class_key_stroke.html#a43ec1835222f0b2b14c45c9fa92959d9',1,'KeyStroke']]],
-  ['chooseimage_8',['chooseImage',['../class_container.html#ac834daaf7955ebf7cd11f3c032c7141a',1,'Container::chooseImage(int)'],['../class_container.html#a7e1ea1d520bee6d8c48125546c795450',1,'Container::chooseImage(int, int)']]],
-  ['choosesprite_9',['chooseSprite',['../class_container.html#a04fc266ae14009c6013f1952569f4a08',1,'Container']]],
-  ['chunk_10',['Chunk',['../class_chunk.html',1,'Chunk'],['../class_chunk.html#a0d075d134db29da3e7776ee7e862be4b',1,'Chunk::Chunk(Frame *, Rectangle)'],['../class_chunk.html#afb75fbf9b0f4d5eba89f12b3c7a02ace',1,'Chunk::Chunk(Chunk *)'],['../class_chunk.html#a51442043dc90c6f69a60aa68180f9d3f',1,'Chunk::Chunk(Chunk *, Rectangle)'],['../class_chunk.html#ac11d87153c10e0cb6e936b2af645eb3c',1,'Chunk::Chunk(Chunk *, Frame *, Rectangle)']]],
-  ['chunk_2ehpp_11',['chunk.hpp',['../chunk_8hpp.html',1,'']]],
-  ['chunk_5f_12',['CHUNK_',['../namespace_p_a_t_b.html#a7f9e59624350c13d5777c35d70497c58',1,'PATB']]],
-  ['clone_13',['clone',['../class_action.html#abfec8e53b222f91614f1d9e1ac9d750a',1,'Action::clone()'],['../class_packet_action.html#afad82eb9d4666aa8bdcd0461a6589888',1,'PacketAction::clone()'],['../class_request.html#a8e44d712eba3826b620b7d1a0519ecf3',1,'Request::clone()'],['../classchange_inf_request.html#ab7eaf38eb5ba3883090521477c4d0612',1,'changeInfRequest::clone()'],['../classlose_request.html#a3725ba24be5fe38ccdd1086ecd6a3042',1,'loseRequest::clone()'],['../classmove_entity_action.html#a5b266845049ac842b564ade38a433ed5',1,'moveEntityAction::clone()'],['../classchange_image_action.html#a10924d494d84763483274c11dab64698',1,'changeImageAction::clone()'],['../classmove_chunks_action.html#a63c2db18ac01c67a25969681395e1b16',1,'moveChunksAction::clone()'],['../classmove_object_action.html#aa816e24cfe6f9c93d0be7b9cc1b44d72',1,'moveObjectAction::clone()'],['../index.html',1,'Crossy Road clone']]],
-  ['close_2ecpp_14',['close.cpp',['../close_8cpp.html',1,'']]],
-  ['closeaction_15',['CloseAction',['../class_close_action.html',1,'CloseAction'],['../class_window.html#a2ef7f0010e69da47bc84a993e52d787e',1,'Window::CloseAction'],['../class_close_action.html#a9025e0c5d027536eaa967af0f392449c',1,'CloseAction::CloseAction()']]],
-  ['constant_2ecpp_16',['constant.cpp',['../constant_8cpp.html',1,'']]],
-  ['constructor_2ecpp_17',['constructor.cpp',['../button_2src_2constructor_8cpp.html',1,'(Global Namespace)'],['../chunk_2src_2constructor_8cpp.html',1,'(Global Namespace)'],['../container_2src_2constructor_8cpp.html',1,'(Global Namespace)'],['../frame_2src_2constructor_8cpp.html',1,'(Global Namespace)'],['../game_2src_2constructor_8cpp.html',1,'(Global Namespace)'],['../interface_2src_2constructor_8cpp.html',1,'(Global Namespace)'],['../object_2src_2constructor_8cpp.html',1,'(Global Namespace)'],['../visual_2src_2constructor_8cpp.html',1,'(Global Namespace)'],['../window_2src_2constructor_8cpp.html',1,'(Global Namespace)']]],
-  ['container_18',['Container',['../class_container.html',1,'Container'],['../class_container.html#adfeb925c1e926d10a7a6608a09dfea74',1,'Container::Container(Frame *, Rectangle)'],['../class_container.html#a0b0b0187e842114d366e07123898c751',1,'Container::Container(Container *)'],['../class_container.html#ae8058a61db2caf759ee6b8f39845147b',1,'Container::Container(Container *, Rectangle)'],['../class_container.html#ad10eef9f963fc1d9b5065738f93f4b94',1,'Container::Container(Container *, Frame *, Rectangle)']]],
-  ['container_2ehpp_19',['container.hpp',['../container_8hpp.html',1,'']]],
-  ['container_5f_20',['CONTAINER_',['../namespace_p_a_t_b.html#a7b5b472dee45158e8fe18fa1d4e367ba',1,'PATB']]],
-  ['countdown_21',['CountDown',['../class_count_down.html',1,'CountDown'],['../class_count_down.html#abc95faf017608257eff0c8cfe5d83358',1,'CountDown::CountDown()']]],
-  ['countdown_2ecpp_22',['countdown.cpp',['../countdown_8cpp.html',1,'']]],
-  ['countdown_2ehpp_23',['countdown.hpp',['../countdown_8hpp.html',1,'']]],
-  ['crossy_20road_20clone_24',['Crossy Road clone',['../index.html',1,'']]]
+  ['beginupdate_0',['beginUpdate',['../class_frame.html#add61373f7fc708652df88a8af032f996',1,'Frame']]],
+  ['block_5f_1',['BLOCK_',['../namespace_p_a_t_b.html#aacbab529bfaf68fc974fbb5e4cb8785b',1,'PATB']]],
+  ['button_2ehpp_2',['button.hpp',['../button_8hpp.html',1,'']]],
+  ['button_5f_3',['BUTTON_',['../namespace_p_a_t_b.html#aebbabfb95825d695009156d983b9a97d',1,'PATB']]],
+  ['buttonimage_4',['ButtonImage',['../class_button_image.html',1,'ButtonImage'],['../class_button_image.html#a00ee5f184661801e5e941e1dbbf02229',1,'ButtonImage::ButtonImage()']]]
 ];

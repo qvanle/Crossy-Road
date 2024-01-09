@@ -25,17 +25,31 @@ Inheritance diagram for Game\+:\begin{figure}[H]
 \item 
 std\+::string \mbox{\hyperlink{class_game_ae9b0358d1d621f4664ec37e8af9736c9}{link\+Content\+Absolute}} (std\+::string path) override
 \item 
+void \mbox{\hyperlink{class_game_a70619d2cf0a6447303bf0c5542bbb682}{reset}} () override
+\item 
 \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_a20fc3d7f6e3b7ab5b0af48b116191971}{react}} () override
 \item 
 \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_a6c80ad7c42ba116bf3b755e8fd9faad1}{get\+Runtime\+Event}} () override
 \item 
+YAML\+::\+Node \mbox{\hyperlink{class_game_a7fe609a109972a1156e69ae34531a09b}{create\+Special\+Content}} () override
+\item 
+void \mbox{\hyperlink{class_game_a4b3af72c8881662ca0d808ed288d6ee3}{load\+Special\+Content}} (YAML\+::\+Node) override
+\item 
 void \mbox{\hyperlink{class_game_a9dbbb6429980a91196ed07d299404304}{draw}} () override
+\item 
+void \mbox{\hyperlink{class_game_ae0cb0381dfd3cad029a83fafedabfa6c}{pause}} () override
+\item 
+void \mbox{\hyperlink{class_game_a23761281c93a6609041e6484b3ae219f}{cont}} () override
+\item 
+int \mbox{\hyperlink{class_game_ad8e73946b98f55e680115feba2d447eb}{get\+Score}} ()
 \item 
 \mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_interface_a332ce853492ebef1b6326beff13027bb}{get\+Containers}} (int)
 \item 
 int \mbox{\hyperlink{class_interface_a26bcaeacade393c1223612186d661ab2}{get\+Containers\+Size}} ()
 \item 
 std\+::string \mbox{\hyperlink{class_interface_a519953da76597bba050cce61f5483fc6}{link\+Content}} (std\+::string path) override
+\item 
+void \mbox{\hyperlink{class_interface_a9f68267f5444b13b15fd4b476dd4010a}{set\+Score}} (int)
 \item 
 std\+::string \mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{get\+Name}} ()
 \item 
@@ -66,6 +80,10 @@ bool \mbox{\hyperlink{class_container_af4f3195c0da8b663b272d326e2e5d48d}{is\+Ove
 float \mbox{\hyperlink{class_container_afe701a67848a2f7b9a1fe03742de4854}{Overlapping\+Area}} (Rectangle)
 \item 
 float \mbox{\hyperlink{class_container_a1759ea4c463c53472edac2148a4a29aa}{Overlapping\+Area}} (\mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*})
+\item 
+bool \mbox{\hyperlink{class_container_a5cfe43ea483203fb87e36bff0f97bada}{is\+Collide}} (Rectangle)
+\item 
+bool \mbox{\hyperlink{class_container_a58b605e54db2a0719196286523bbd28c}{is\+Collide}} (\mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*})
 \item 
 void \mbox{\hyperlink{class_container_a48cdaa85884938b417513cca003f4f6c}{show}} ()
 \item 
@@ -134,6 +152,8 @@ void \mbox{\hyperlink{class_game_a1eebc36977f2e365bddf9d9bf0093fd5}{load\+Event}
 \item 
 void \mbox{\hyperlink{class_game_acd2f2b403adb32664ba63058d95e1158}{load\+Attact\+Object}} (YAML\+::\+Node)
 \item 
+void \mbox{\hyperlink{class_game_a1adae5d98d689c450dd71f4d12fc8cf0}{load\+Light}} (YAML\+::\+Node)
+\item 
 void \mbox{\hyperlink{class_game_ada8c449d8f734c2ad2e2ed292d4b787d}{load\+Map}} ()
 \item 
 void \mbox{\hyperlink{class_interface_a8ba364e555facee31b4179534e53586f}{load\+Object}} (YAML\+::\+Node)
@@ -164,17 +184,30 @@ void \mbox{\hyperlink{class_frame_add61373f7fc708652df88a8af032f996}{begin\+Upda
 \item 
 void \mbox{\hyperlink{class_frame_a701cffd131a90249033fc40f505f02d6}{end\+Update}} ()
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_game_a05ad469c97a6214d483abd3440099150}{move\+Chunks\+Action}}
+\item 
+class \mbox{\hyperlink{class_game_a961959a8c1ceaac64586a00f2f59b48c}{start\+Init\+Clock\+Action}}
+\item 
+class \mbox{\hyperlink{class_game_ac2e5ca6e8af013a2358cdc3a918785bc}{add\+Score\+Action}}
+\item 
+class \mbox{\hyperlink{class_game_aeddefec0371bd239d608c289d0a05be5}{high\+Score}}
+\item 
+class \mbox{\hyperlink{class_game_a44e864e2be0a8361c438908e72035477}{dying\+Action}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{game_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}}.
+Definition at line \mbox{\hyperlink{game_8hpp_source_l00017}{17}} of file \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}}.
 
 
 
@@ -193,8 +226,13 @@ Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00009}{9
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(frame,\ rect) }
 \DoxyCodeLine{00010\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ initState\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00011\ \ \ \ \ isLose\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00012\ \ \ \ \ isDying\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00013\ \ \ \ \ initState\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00014\ \ \ \ \ score\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ isPause\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ dieIndex\ =\ 0;}
+\DoxyCodeLine{00017\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_a5c15313e32b3f1bad6f3745665ce09d1}\label{class_game_a5c15313e32b3f1bad6f3745665ce09d1} 
@@ -205,14 +243,19 @@ Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00009}{9
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(other) }
-\DoxyCodeLine{00015\ \{}
-\DoxyCodeLine{00016\ \ \ \ \ initState\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00017\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(other) }
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ isLose\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00022\ \ \ \ \ initState\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00023\ \ \ \ \ isDying\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00024\ \ \ \ \ score\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ isPause\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ dieIndex\ =\ 0;}
+\DoxyCodeLine{00027\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_aaffd338ecb0d7953482847497aa1dcae}\label{class_game_aaffd338ecb0d7953482847497aa1dcae} 
@@ -223,14 +266,19 @@ Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00014}{1
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(other,\ rect) }
-\DoxyCodeLine{00020\ \{}
-\DoxyCodeLine{00021\ \ \ \ \ initState\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00022\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(other,\ rect) }
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ isLose\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00032\ \ \ \ \ isDying\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00033\ \ \ \ \ initState\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00034\ \ \ \ \ score\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ isPause\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ dieIndex\ =\ 0;}
+\DoxyCodeLine{00037\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_abefe7e43b7b76f1561a0b9e9a673cbf2}\label{class_game_abefe7e43b7b76f1561a0b9e9a673cbf2} 
@@ -241,14 +289,19 @@ Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00019}{1
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(other,\ frame,\ rect) }
-\DoxyCodeLine{00025\ \{}
-\DoxyCodeLine{00026\ \ \ \ \ initState\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_interface_a76d3f51eb36e20511a6e9ed270a5aaed}{Interface}}(other,\ frame,\ rect) }
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ isLose\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00042\ \ \ \ \ isDying\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00043\ \ \ \ \ initState\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00044\ \ \ \ \ score\ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ isPause\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ dieIndex\ =\ 0;}
+\DoxyCodeLine{00047\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_ae3d112ca6e0e55150d2fdbc704474530}\label{class_game_ae3d112ca6e0e55150d2fdbc704474530} 
@@ -303,9 +356,9 @@ Definition at line \mbox{\hyperlink{family_8cpp_source_l00070}{70}} of file \mbo
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00071\ \{}
-\DoxyCodeLine{00072\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00073\ \ \ \ \ subframes.push\_back(subframe);}
-\DoxyCodeLine{00074\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00075\ \}}
 
 \end{DoxyCode}
@@ -317,13 +370,13 @@ Definition at line \mbox{\hyperlink{family_8cpp_source_l00070}{70}} of file \mbo
 
 
 
-Definition at line \mbox{\hyperlink{family_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00114\ \{}
-\DoxyCodeLine{00115\ \ \ \ \ mtx.lock();}
-\DoxyCodeLine{00116\ \}}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
+\DoxyCodeLine{00108\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_ac834daaf7955ebf7cd11f3c032c7141a}\label{class_container_ac834daaf7955ebf7cd11f3c032c7141a} 
@@ -338,15 +391,15 @@ choose the state of the sprite
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00231}{231}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00229}{229}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00232\ \{}
-\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00235\ \ \ \ \ focus[1]\ =\ index;}
-\DoxyCodeLine{00236\ \}}
+\DoxyCodeLine{00230\ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00233\ \ \ \ \ focus[1]\ =\ index;}
+\DoxyCodeLine{00234\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_a7e1ea1d520bee6d8c48125546c795450}\label{class_container_a7e1ea1d520bee6d8c48125546c795450} 
@@ -361,17 +414,17 @@ choose the state of the sprite
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00238}{238}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00236}{236}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00239\ \{}
-\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00242\ \ \ \ \ \textcolor{keywordflow}{if}(index2\ <\ 0\ ||\ index2\ >=\ sprites.at(index).size())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00243\ \ \ \ \ focus[0]\ =\ index;}
-\DoxyCodeLine{00244\ \ \ \ \ focus[1]\ =\ index2;}
-\DoxyCodeLine{00245\ \}}
+\DoxyCodeLine{00237\ \{}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordflow}{if}(index2\ <\ 0\ ||\ index2\ >=\ sprites.at(index).size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00241\ \ \ \ \ focus[0]\ =\ index;}
+\DoxyCodeLine{00242\ \ \ \ \ focus[1]\ =\ index2;}
+\DoxyCodeLine{00243\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_a04fc266ae14009c6013f1952569f4a08}\label{class_container_a04fc266ae14009c6013f1952569f4a08} 
@@ -386,15 +439,79 @@ choose a specific sprite from a vector of sprites
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00224}{224}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00222}{222}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00225\ \{}
-\DoxyCodeLine{00226\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00228\ \ \ \ \ focus[0]\ =\ index;}
-\DoxyCodeLine{00229\ \}}
+\DoxyCodeLine{00223\ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00226\ \ \ \ \ focus[0]\ =\ index;}
+\DoxyCodeLine{00227\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_game_a23761281c93a6609041e6484b3ae219f}\label{class_game_a23761281c93a6609041e6484b3ae219f} 
+\index{Game@{Game}!cont@{cont}}
+\index{cont@{cont}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{cont()}{cont()}}
+{\footnotesize\ttfamily void Game\+::cont (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interface_a08b9e5e865a4b83f62025998ed74d6e5}{Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{game_2src_2action_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{game_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ isPause\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00014\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_game_a7fe609a109972a1156e69ae34531a09b}\label{class_game_a7fe609a109972a1156e69ae34531a09b} 
+\index{Game@{Game}!createSpecialContent@{createSpecialContent}}
+\index{createSpecialContent@{createSpecialContent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{createSpecialContent()}{createSpecialContent()}}
+{\footnotesize\ttfamily YAML\+::\+Node Game\+::create\+Special\+Content (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_container_afccde5a258c662bdd59a8b24f135603c}{Container}}.
+
+
+
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00230}{230}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00231\ \{}
+\DoxyCodeLine{00232\ \ \ \ \ YAML::Node\ node\ =\ \mbox{\hyperlink{class_interface_ad1493ed58207586bc1d3b3b66943e187}{Interface::createSpecialContent}}();}
+\DoxyCodeLine{00233\ \ \ \ \ node[\textcolor{stringliteral}{"{}map-\/speed"{}}]\ =\ mapSpeed;}
+\DoxyCodeLine{00234\ \ \ \ \ node[\textcolor{stringliteral}{"{}map-\/direction"{}}][0]\ =\ mapDirection[0];}
+\DoxyCodeLine{00235\ \ \ \ \ node[\textcolor{stringliteral}{"{}map-\/direction"{}}][1]\ =\ mapDirection[1];}
+\DoxyCodeLine{00236\ \ \ \ \ node[\textcolor{stringliteral}{"{}map-\/displacement"{}}][0]\ =\ mapDisplacement[0];}
+\DoxyCodeLine{00237\ \ \ \ \ node[\textcolor{stringliteral}{"{}map-\/displacement"{}}][1]\ =\ mapDisplacement[1];}
+\DoxyCodeLine{00238\ \ \ \ \ node[\textcolor{stringliteral}{"{}main"{}}]\ =\ main-\/>\mbox{\hyperlink{class_container_afccde5a258c662bdd59a8b24f135603c}{createSpecialContent}}();}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ chunkOrder.size();\ i++)}
+\DoxyCodeLine{00241\ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ node[\textcolor{stringliteral}{"{}chunk-\/order"{}}][i]\ =\ chunkOrder[i];}
+\DoxyCodeLine{00243\ \ \ \ \ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ chunks.size();\ i++)}
+\DoxyCodeLine{00246\ \ \ \ \ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ node[\textcolor{stringliteral}{"{}chunks"{}}][i]\ =\ chunks[i]-\/>createSpecialContent();}
+\DoxyCodeLine{00248\ \ \ \ \ \}}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ cache.size();\ i++)}
+\DoxyCodeLine{00251\ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ node[\textcolor{stringliteral}{"{}cache"{}}][i]\ =\ cache[i]-\/>createSpecialContent();}
+\DoxyCodeLine{00253\ \ \ \ \ \}}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{00255\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_a9dbbb6429980a91196ed07d299404304}\label{class_game_a9dbbb6429980a91196ed07d299404304} 
@@ -414,16 +531,35 @@ Definition at line \mbox{\hyperlink{game_2src_2arthmetic_8cpp_source_l00003}{3}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00004\ \{}
-\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{isVisible}}())\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{class_interface_a77300df653a7ab735342494bc9285695}{drawNested}}();}
 \DoxyCodeLine{00007\ }
 \DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ =\ chunks.begin();\ i\ !=\ chunks.end();\ ++i)}
 \DoxyCodeLine{00009\ \ \ \ \ \{}
-\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ (*i)-\/>draw();}
-\DoxyCodeLine{00011\ \ \ \ \ \}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{drawContainers}}();}
-\DoxyCodeLine{00014\ \}}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(*i\ !=\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ (*i)-\/>draw();}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ std::cout\ <<\ i\ -\/\ chunks.begin()\ <<\ \textcolor{stringliteral}{"{}\ is\ nullptr"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00014\ \ \ \ \ \}}
+\DoxyCodeLine{00015\ \ \ \ \ main-\/>\mbox{\hyperlink{class_container_ac8feb6b3a790483f85aad40a46327f24}{draw}}();}
+\DoxyCodeLine{00016\ \ \ \ \ Rectangle\ rect\ =\ main-\/>\mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ draw\ hitbox\ of\ 5px\ }}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ DrawRectangleLinesEx(rect,\ 5,\ RED);}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ drawContainers();}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ draw\ rectangle\ color\ white\ on\ top\ right\ }}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ Rectangle\ rel\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00024\ \ \ \ \ rel.x\ =\ rel.width\ *\ 0.0;}
+\DoxyCodeLine{00025\ \ \ \ \ rel.y\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ rel.width\ *=\ 0.15;}
+\DoxyCodeLine{00027\ \ \ \ \ rel.height\ *=\ 0.06;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ DrawRectangleRec(rel,\ \{200,\ 200,\ 200,\ 255\});}
+\DoxyCodeLine{00030\ \ \ \ \ DrawText(TextFormat(\textcolor{stringliteral}{"{}Score:\ \%08i"{}},\ score),\ rel.x\ +\ 10,\ 25,\ 20,\ RED);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{drawContainers}}();}
+\DoxyCodeLine{00033\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_interface_a485966ce945f1a7efe691245140a3125}\label{class_interface_a485966ce945f1a7efe691245140a3125} 
@@ -439,7 +575,7 @@ Definition at line \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source_l00011
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00012\ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ child\ :\ containers)}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&child\ :\ containers)}
 \DoxyCodeLine{00014\ \ \ \ \ \{}
 \DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ child-\/>draw();}
 \DoxyCodeLine{00016\ \ \ \ \ \}}
@@ -459,7 +595,7 @@ Definition at line \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source_l00003
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00004\ \{}
-\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ child\ :\ nested)}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&child\ :\ nested)}
 \DoxyCodeLine{00006\ \ \ \ \ \{}
 \DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ child-\/>draw();}
 \DoxyCodeLine{00008\ \ \ \ \ \}}
@@ -474,13 +610,13 @@ Definition at line \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source_l00003
 
 
 
-Definition at line \mbox{\hyperlink{family_8cpp_source_l00118}{118}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00119\ \{}
-\DoxyCodeLine{00120\ \ \ \ \ mtx.unlock();}
-\DoxyCodeLine{00121\ \}}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
+\DoxyCodeLine{00113\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}\label{class_frame_a5d52a474fbee6c61b5c1209d1a70e393} 
@@ -496,7 +632,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00131}{13
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00132\ \{}
-\DoxyCodeLine{00133\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00133\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ resu;\ }
 \DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ }
 \DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ resu\ =\ \{frame.x\ +\ frame.width\ /\ 2,\ frame.y\ +\ frame.height\ /\ 2\};}
@@ -515,14 +651,14 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00131}{13
 
 
 
-Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00176}{176}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00188}{188}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00177\ \{}
-\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{if}(id\ <\ 0\ ||\ id\ >=\ containers.size())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{return}\ containers[id];}
-\DoxyCodeLine{00180\ \}}
+\DoxyCodeLine{00189\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{if}(id\ <\ 0\ ||\ id\ >=\ containers.size())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordflow}{return}\ containers[id];}
+\DoxyCodeLine{00192\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_interface_a26bcaeacade393c1223612186d661ab2}\label{class_interface_a26bcaeacade393c1223612186d661ab2} 
@@ -533,13 +669,13 @@ Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l001
 
 
 
-Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00182}{182}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00194}{194}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00183\ \{}
-\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ containers.size();}
-\DoxyCodeLine{00185\ \}}
+\DoxyCodeLine{00195\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{return}\ containers.size();}
+\DoxyCodeLine{00197\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_aada1e4093763936121df21b7dae80b5c}\label{class_frame_aada1e4093763936121df21b7dae80b5c} 
@@ -555,7 +691,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00105}{10
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00106\ \{}
-\DoxyCodeLine{00107\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00107\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{return}\ frame;}
 \DoxyCodeLine{00109\ \}}
 
@@ -573,7 +709,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00161}{16
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00162\ \{}
-\DoxyCodeLine{00163\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00163\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.height;}
 \DoxyCodeLine{00165\ \}}
 
@@ -603,13 +739,13 @@ Definition at line \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source_l00031
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00275}{275}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00273}{273}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00276\ \{}
-\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
-\DoxyCodeLine{00278\ \}}
+\DoxyCodeLine{00274\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{00276\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_a9b5a189c65cc1b011baeed32236e2c7f}\label{class_frame_a9b5a189c65cc1b011baeed32236e2c7f} 
@@ -625,7 +761,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00117}{11
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00118\ \{}
-\DoxyCodeLine{00119\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00119\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{return}\ parent;}
 \DoxyCodeLine{00121\ \}}
 
@@ -638,13 +774,13 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00117}{11
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00285}{285}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00283}{283}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00286\ \{}
-\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordflow}{return}\ probability;}
-\DoxyCodeLine{00288\ \}}
+\DoxyCodeLine{00284\ \{}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordflow}{return}\ probability;}
+\DoxyCodeLine{00286\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}\label{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2} 
@@ -660,7 +796,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00111}{11
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00112\ \{}
-\DoxyCodeLine{00113\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00113\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ relative;}
 \DoxyCodeLine{00115\ \}}
 
@@ -677,47 +813,144 @@ Reimplemented from \mbox{\hyperlink{class_container_a4dcc4e2e2315662529092198292
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2action_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{game_2src_2action_8cpp_source}{action.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2action_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{game_2src_2action_8cpp_source}{action.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00009\ \{}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ if\ now\ -\/\ mapSpeedClock\ <\ 10\ millisecond,\ return\ nullptr\ }}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}(std::chrono::duration\_cast<std::chrono::milliseconds>(std::chrono::system\_clock::now()\ -\/\ mapSpeedClock).count()\ <\ 20)\ }
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action;\ }
-\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00016\ \ \ \ \ action\ =\ \mbox{\hyperlink{class_interface_a8459923385998b7f172650eb3045f7e1}{Interface::getRuntimeEvent}}();}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})}
-\DoxyCodeLine{00019\ \ \ \ \ \{}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
-\DoxyCodeLine{00022\ \ \ \ \ \}}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \ \ \ \ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a05ad469c97a6214d483abd3440099150}{moveChunksAction}}(\textcolor{keyword}{this},\ mapDisplacement);}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
-\DoxyCodeLine{00026\ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ chunks)}
-\DoxyCodeLine{00029\ \ \ \ \ \{}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ act\ =\ i-\/>getRuntimeEvent();}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(act\ ==\ \textcolor{keyword}{nullptr})\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(act);}
-\DoxyCodeLine{00036\ \ \ \ \ \}}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface_ac6a2e86796e3f0ddf843423d09b23ed8}{moveObjectAction}}(main,\ mapDisplacement);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
-\DoxyCodeLine{00040\ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \ \ mapSpeedClock\ =\ std::chrono::system\_clock::now();}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
-\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{isVisible}}())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{if}(isPause)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ if\ now\ -\/\ mapSpeedClock\ <\ 10\ millisecond,\ return\ nullptr\ }}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{if}(initState)\ }
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a961959a8c1ceaac64586a00f2f59b48c}{startInitClockAction}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{if}(std::chrono::duration\_cast<std::chrono::milliseconds>(std::chrono::system\_clock::now()\ -\/\ initStateClock).count()\ <\ 400)\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{if}(std::chrono::duration\_cast<std::chrono::milliseconds>(std::chrono::system\_clock::now()\ -\/\ mapSpeedClock).count()\ <\ 20)\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{if}(isLose\ \&\&\ isDying)\ }
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(std::chrono::duration\_cast<std::chrono::milliseconds>(std::chrono::system\_clock::now()\ -\/\ dyingClock).count()\ <\ 200)\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ dyingClock\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a44e864e2be0a8361c438908e72035477}{dyingAction}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}(isLose\ \&\&\ !isDying)}
+\DoxyCodeLine{00059\ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dieIndex++\ !=\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ act\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classlose_request}{loseRequest}}(score);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(act);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action;\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ packet\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00070\ \ \ \ \ action\ =\ \mbox{\hyperlink{class_interface_a8459923385998b7f172650eb3045f7e1}{Interface::getRuntimeEvent}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{if}(action\ !=\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{00073\ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a05ad469c97a6214d483abd3440099150}{moveChunksAction}}(\textcolor{keyword}{this},\ mapDisplacement);}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00080\ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ chunks)}
+\DoxyCodeLine{00083\ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i-\/>getRelative()[1]\ >\ 1.05)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i-\/>isEntityCollide(main))\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ act\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a44e864e2be0a8361c438908e72035477}{dyingAction}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(act);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ dyingClock\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i-\/>isCollide(main))\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ act\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_ac2e5ca6e8af013a2358cdc3a918785bc}{addScoreAction}}(\textcolor{keyword}{this},\ i);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(act);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ act\ =\ i-\/>getRuntimeEvent();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(act\ ==\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(act);}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{if}(main-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[1]\ <\ 0.5)}
+\DoxyCodeLine{00106\ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmoveto_object_action}{movetoObjectAction}}(main,\ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}(\{main-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[0],\ 0.5\}));}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a05ad469c97a6214d483abd3440099150}{moveChunksAction}}(\textcolor{keyword}{this},\ \{mapDisplacement[0],\ mapDisplacement[1]\});}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a05ad469c97a6214d483abd3440099150}{moveChunksAction}}(\textcolor{keyword}{this},\ \{mapDisplacement[0],\ mapDisplacement[1]\});}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{if}(main-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[1]\ >\ 1.05)\ }
+\DoxyCodeLine{00120\ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ act\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a44e864e2be0a8361c438908e72035477}{dyingAction}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(act);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ dyingClock\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{00125\ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{if}(main-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[0]\ <\ -\/0.4)}
+\DoxyCodeLine{00127\ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ act\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a44e864e2be0a8361c438908e72035477}{dyingAction}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(act);}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ dyingClock\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{if}(main-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[0]\ >\ 1.2)}
+\DoxyCodeLine{00134\ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ act\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a44e864e2be0a8361c438908e72035477}{dyingAction}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(act);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ dyingClock\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface_ac6a2e86796e3f0ddf843423d09b23ed8}{moveObjectAction}}(main,\ mapDisplacement);}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordflow}{if}(packet\ ==\ \textcolor{keyword}{nullptr})\ packet\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action}{PacketAction}}();}
+\DoxyCodeLine{00142\ \ \ \ \ packet-\/>\mbox{\hyperlink{class_packet_action_a0483e1b2bf449ec89c5b9044ec29321d}{addAction}}(action);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ mapSpeedClock\ =\ std::chrono::system\_clock::now();}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{return}\ packet;}
+\DoxyCodeLine{00147\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_game_ad8e73946b98f55e680115feba2d447eb}\label{class_game_ad8e73946b98f55e680115feba2d447eb} 
+\index{Game@{Game}!getScore@{getScore}}
+\index{getScore@{getScore}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily int Game\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interface_a84b511ee832ef7716a3958e74556e4a4}{Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{game_2src_2action_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{game_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordflow}{return}\ score;}
+\DoxyCodeLine{00019\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_a37aeab17b4d450237496d32a2eb6b191}\label{class_frame_a37aeab17b4d450237496d32a2eb6b191} 
@@ -733,7 +966,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00155}{15
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00156\ \{}
-\DoxyCodeLine{00157\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00157\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.width;}
 \DoxyCodeLine{00159\ \}}
 
@@ -751,7 +984,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00143}{14
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00144\ \{}
-\DoxyCodeLine{00145\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00145\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.x;}
 \DoxyCodeLine{00147\ \}}
 
@@ -769,7 +1002,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00149}{14
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00150\ \{}
-\DoxyCodeLine{00151\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00151\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{return}\ frame.y;}
 \DoxyCodeLine{00153\ \}}
 
@@ -789,6 +1022,46 @@ Definition at line \mbox{\hyperlink{container_2src_2arthmetic_8cpp_source_l00016
 \DoxyCodeLine{00017\ \{}
 \DoxyCodeLine{00018\ \ \ \ \ visible\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a58b605e54db2a0719196286523bbd28c}\label{class_container_a58b605e54db2a0719196286523bbd28c} 
+\index{Game@{Game}!isCollide@{isCollide}}
+\index{isCollide@{isCollide}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isCollide()}{isCollide()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Container\+::is\+Collide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_container}{Container}} \texorpdfstring{$\ast$}{*}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{overlap_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{overlap_8cpp_source}{overlap.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_container_a5cfe43ea483203fb87e36bff0f97bada}{isCollide}}(other-\/>\mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}());}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_container_a5cfe43ea483203fb87e36bff0f97bada}\label{class_container_a5cfe43ea483203fb87e36bff0f97bada} 
+\index{Game@{Game}!isCollide@{isCollide}}
+\index{isCollide@{isCollide}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isCollide()}{isCollide()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Container\+::is\+Collide (\begin{DoxyParamCaption}\item[{Rectangle}]{rec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{overlap_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{overlap_8cpp_source}{overlap.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ Rectangle\ rec2\ =\ \mbox{\hyperlink{class_frame_aada1e4093763936121df21b7dae80b5c}{getFrame}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ a1\ =\ rec.x\ <=\ rec2.x\ \&\&\ rec2.x\ <=\ rec.x\ +\ rec.width;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ a2\ =\ rec2.x\ <=\ rec.x\ \&\&\ rec.x\ <=\ rec2.x\ +\ rec2.width;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ b1\ =\ rec.y\ <=\ rec2.y\ \&\&\ rec2.y\ <=\ rec.y\ +\ rec.height;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ b2\ =\ rec2.y\ <=\ rec.y\ \&\&\ rec.y\ <=\ rec2.y\ +\ rec2.height;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ (a1\ ||\ a2)\ \&\&\ (b1\ ||\ b2);}
+\DoxyCodeLine{00055\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_af4f3195c0da8b663b272d326e2e5d48d}\label{class_container_af4f3195c0da8b663b272d326e2e5d48d} 
@@ -859,14 +1132,14 @@ return true if this frame is root
 
 
 
-Definition at line \mbox{\hyperlink{family_8cpp_source_l00107}{107}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
+Definition at line \mbox{\hyperlink{family_8cpp_source_l00099}{99}} of file \mbox{\hyperlink{family_8cpp_source}{family.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00108\ \{}
-\DoxyCodeLine{00109\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
-\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordflow}{return}\ parent\ ==\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00111\ \}}
+\DoxyCodeLine{00100\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{return}\ parent\ ==\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00103\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}\label{class_container_aee9a838a8f651d7d1e195290a2ba1ecb} 
@@ -898,13 +1171,13 @@ Reimplemented from \mbox{\hyperlink{class_container_adf264388b241215dc829580050e
 
 
 
-Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00090}{90}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00079\ \{}
-\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_interface_ac7612dfabe159aebffc7e4553df315e9}{linkContentAbsolute}}(\mbox{\hyperlink{namespace_p_a_t_b_ad5bd661beccfb199cdf6eb43ff79e087}{PATB::INTERFACE\_}}\ +\ path);}
-\DoxyCodeLine{00081\ \}}
+\DoxyCodeLine{00091\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_interface_ac7612dfabe159aebffc7e4553df315e9}{linkContentAbsolute}}(\mbox{\hyperlink{namespace_p_a_t_b_ad5bd661beccfb199cdf6eb43ff79e087}{PATB::INTERFACE\_}}\ +\ path);}
+\DoxyCodeLine{00093\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_ae9b0358d1d621f4664ec37e8af9736c9}\label{class_game_ae9b0358d1d621f4664ec37e8af9736c9} 
@@ -919,48 +1192,51 @@ Reimplemented from \mbox{\hyperlink{class_container_aa7d24144929d01ca83d4e5f2e4b
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00030\ \{}
-\DoxyCodeLine{00031\ \ \ \ \ YAML::Node\ node\ =\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(path);}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_a3ebddddd7a940e4f5e3d287067103a3e}{loadName}}(node))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}textures"{}}])\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container_a11f0c20cb4f80f5d2a63f73f981a9d15}{loadSprites}}(node[\textcolor{stringliteral}{"{}textures"{}}]);}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}focus"{}}])\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}{loadFocus}}(node[\textcolor{stringliteral}{"{}focus"{}}]);}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{chooseImage}}(0,\ 0);}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}object"{}}])\ }
-\DoxyCodeLine{00042\ \ \ \ \ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a8ba364e555facee31b4179534e53586f}{loadObject}}(node[\textcolor{stringliteral}{"{}object"{}}]);}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_interface_a26bcaeacade393c1223612186d661ab2}{getContainersSize}}();\ i++)\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a332ce853492ebef1b6326beff13027bb}{getContainers}}(i)-\/>\mbox{\hyperlink{class_container_a5f2b24b3eff15fb251043fcfd32bf537}{hide}}();}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ main\ =\ \mbox{\hyperlink{class_interface_a332ce853492ebef1b6326beff13027bb}{getContainers}}(0);}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ main-\/>\mbox{\hyperlink{class_container_a48cdaa85884938b417513cca003f4f6c}{show}}();}
-\DoxyCodeLine{00048\ \ \ \ \ \}}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}collide"{}}])}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_abe26fc50dde4811a652c3bd361176219}{loadCollide}}(node[\textcolor{stringliteral}{"{}collide"{}}]);}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}chunk"{}}])}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a1c503228fa94eec10b9d519288916301}{loadChunk}}(node[\textcolor{stringliteral}{"{}chunk"{}}]);}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}attach-\/object"{}}])}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_acd2f2b403adb32664ba63058d95e1158}{loadAttactObject}}(node[\textcolor{stringliteral}{"{}attach-\/object"{}}]);}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}control"{}}])}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a51eadcf3056c6b68cf8b17762a6f68e6}{loadControl}}(node[\textcolor{stringliteral}{"{}control"{}}]);}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}event"{}}])}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a1eebc36977f2e365bddf9d9bf0093fd5}{loadEvent}}(node[\textcolor{stringliteral}{"{}event"{}}]);}
+\DoxyCodeLine{00059\ \{}
+\DoxyCodeLine{00060\ \ \ \ \ isPause\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00061\ \ \ \ \ YAML::Node\ node\ =\ \mbox{\hyperlink{namespace_y_a_m_l___f_i_l_e_aad4897829c6630fd6567d070a3ae3623}{YAML\_FILE::readFile}}(path);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_a3ebddddd7a940e4f5e3d287067103a3e}{loadName}}(node))\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
 \DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}button"{}}])}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a93ff118be7317e3c02f40b3ff43e6c6e}{loadButton}}(node[\textcolor{stringliteral}{"{}button"{}}]);}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{getName}}();}
-\DoxyCodeLine{00067\ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}textures"{}}])\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container_a11f0c20cb4f80f5d2a63f73f981a9d15}{loadSprites}}(node[\textcolor{stringliteral}{"{}textures"{}}]);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}focus"{}}])\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}{loadFocus}}(node[\textcolor{stringliteral}{"{}focus"{}}]);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{else}\ \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{chooseImage}}(0,\ 0);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}object"{}}])\ }
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a8ba364e555facee31b4179534e53586f}{loadObject}}(node[\textcolor{stringliteral}{"{}object"{}}]);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_interface_a26bcaeacade393c1223612186d661ab2}{getContainersSize}}();\ i++)\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a332ce853492ebef1b6326beff13027bb}{getContainers}}(i)-\/>\mbox{\hyperlink{class_container_a5f2b24b3eff15fb251043fcfd32bf537}{hide}}();}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ main\ =\ \mbox{\hyperlink{class_interface_a332ce853492ebef1b6326beff13027bb}{getContainers}}(0);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ main-\/>\mbox{\hyperlink{class_container_a48cdaa85884938b417513cca003f4f6c}{show}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}collide"{}}])}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_abe26fc50dde4811a652c3bd361176219}{loadCollide}}(node[\textcolor{stringliteral}{"{}collide"{}}]);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}chunk"{}}])}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a1c503228fa94eec10b9d519288916301}{loadChunk}}(node[\textcolor{stringliteral}{"{}chunk"{}}]);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}attach-\/object"{}}])}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_acd2f2b403adb32664ba63058d95e1158}{loadAttactObject}}(node[\textcolor{stringliteral}{"{}attach-\/object"{}}]);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}control"{}}])}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a51eadcf3056c6b68cf8b17762a6f68e6}{loadControl}}(node[\textcolor{stringliteral}{"{}control"{}}]);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}event"{}}])}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_game_a1eebc36977f2e365bddf9d9bf0093fd5}{loadEvent}}(node[\textcolor{stringliteral}{"{}event"{}}]);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}button"{}}])}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_interface_a93ff118be7317e3c02f40b3ff43e6c6e}{loadButton}}(node[\textcolor{stringliteral}{"{}button"{}}]);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{class_game_a1adae5d98d689c450dd71f4d12fc8cf0}{loadLight}}(node);}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{getName}}();}
+\DoxyCodeLine{00099\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_acd2f2b403adb32664ba63058d95e1158}\label{class_game_acd2f2b403adb32664ba63058d95e1158} 
@@ -971,21 +1247,24 @@ Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00029}{2
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00197}{197}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00144\ \{}
-\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
-\DoxyCodeLine{00146\ \ \ \ \ \{}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ i[\textcolor{stringliteral}{"{}chunk"{}}].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ objID\ =\ i[\textcolor{stringliteral}{"{}object"{}}][0].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ prob\ =\ i[\textcolor{stringliteral}{"{}object"{}}][1].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}*\ container\ =\ \mbox{\hyperlink{class_interface_a332ce853492ebef1b6326beff13027bb}{getContainers}}(objID);}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ container-\/>setProbability(prob);}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ cache[id]-\/>addVisiter(container);}
-\DoxyCodeLine{00153\ \ \ \ \ \}}
-\DoxyCodeLine{00154\ \}}
+\DoxyCodeLine{00198\ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
+\DoxyCodeLine{00200\ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ objID\ =\ i[\textcolor{stringliteral}{"{}object"{}}][0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}*\ container\ =\ \mbox{\hyperlink{class_interface_a332ce853492ebef1b6326beff13027bb}{getContainers}}(objID);}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ prob\ =\ i[\textcolor{stringliteral}{"{}object"{}}][1].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ j\ :\ i[\textcolor{stringliteral}{"{}chunk"{}}])}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ j.as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ container-\/>setProbability(prob);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ cache[id]-\/>addVisiter(container);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_interface_a93ff118be7317e3c02f40b3ff43e6c6e}\label{class_interface_a93ff118be7317e3c02f40b3ff43e6c6e} 
@@ -996,25 +1275,25 @@ Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00143}{1
 
 
 
-Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00171}{171}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00160\ \{}
-\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
-\DoxyCodeLine{00162\ \ \ \ \ \{}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ Rectangle\ rel(\{0,\ 0,\ 0,\ 0\});}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ rel.x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;\ }
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ rel.y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ rel.width\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ rel.height\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_image}{ButtonImage}}\ *obj;}
-\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ obj\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_button_image}{ButtonImage}}(\textcolor{keyword}{this},\ rel);}
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ obj-\/>linkContent(i[\textcolor{stringliteral}{"{}path"{}}].as<std::string>());}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ obj-\/>show();}
-\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ containers.push\_back(obj);}
-\DoxyCodeLine{00173\ \ \ \ \ \}}
-\DoxyCodeLine{00174\ \}}
+\DoxyCodeLine{00172\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
+\DoxyCodeLine{00174\ \ \ \ \ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ Rectangle\ rel(\{0,\ 0,\ 0,\ 0\});}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ rel.x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;\ }
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ rel.y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ rel.width\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ rel.height\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_button_image}{ButtonImage}}\ *obj;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ obj\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_button_image}{ButtonImage}}(\textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ obj-\/>linkContent(i[\textcolor{stringliteral}{"{}path"{}}].as<std::string>());}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ obj-\/>show();}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ containers.push\_back(obj);}
+\DoxyCodeLine{00185\ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_a1c503228fa94eec10b9d519288916301}\label{class_game_a1c503228fa94eec10b9d519288916301} 
@@ -1025,38 +1304,38 @@ Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l001
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00167}{167}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00114\ \{}
-\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
-\DoxyCodeLine{00116\ \ \ \ \ \{}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ 0,\ y\ =\ 0,\ w\ =\ 1,\ h\ =\ 1;}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ repeat\ =\ 1;}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ std::string\ path\ =\ i[\textcolor{stringliteral}{"{}file"{}}].as<std::string>();}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ w\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ h\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}repeat"{}}])\ repeat\ =\ i[\textcolor{stringliteral}{"{}repeat"{}}].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ direction\ =\ \{1,\ 0\};}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ velo\ =\ 0.002;}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}velocity"{}}])\ }
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ velo\ =\ i[\textcolor{stringliteral}{"{}velocity"{}}][0].as<\textcolor{keywordtype}{float}>();}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ direction\ =\ \{i[\textcolor{stringliteral}{"{}velocity"{}}][1].as<\textcolor{keywordtype}{float}>(),\ i[\textcolor{stringliteral}{"{}velocity"{}}][2].as<float>()\};}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ \mbox{\hyperlink{namespace_v_e_c_t_o_r2_d_a4109f03569959b180ac8753033a747f2}{VECTOR2D::getAngle}}(direction);}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ displacement\ =\ \{velo\ *\ cos(angle),\ velo\ *\ sin(angle)\};}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chunk}{Chunk}}*\ chunk\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(\textcolor{keyword}{this},\ \{x,\ y,\ w,\ h\});\ }
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ chunk-\/>\mbox{\hyperlink{class_chunk_a6c2ab1c746452b33fe23d3d1097b6ca3}{linkContent}}(path);}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ chunk-\/>\mbox{\hyperlink{class_chunk_a8854147872d209544a2da60814cd2133}{setVelocity}}(displacement);}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ cache.push\_back(chunk);}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(-\/-\/repeat\ >\ 0)\ }
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ cache.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(cache[0]));}
-\DoxyCodeLine{00140\ \ \ \ \ \}}
-\DoxyCodeLine{00141\ \}}
+\DoxyCodeLine{00168\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
+\DoxyCodeLine{00170\ \ \ \ \ \{}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ 0,\ y\ =\ 0,\ w\ =\ 1,\ h\ =\ 1;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ repeat\ =\ 1;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ std::string\ path\ =\ i[\textcolor{stringliteral}{"{}file"{}}].as<std::string>();}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ w\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ h\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}repeat"{}}])\ repeat\ =\ i[\textcolor{stringliteral}{"{}repeat"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ direction\ =\ \{1,\ 0\};}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ velo\ =\ 0.002;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}velocity"{}}])\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ velo\ =\ i[\textcolor{stringliteral}{"{}velocity"{}}][0].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ direction\ =\ \{i[\textcolor{stringliteral}{"{}velocity"{}}][1].as<\textcolor{keywordtype}{float}>(),\ i[\textcolor{stringliteral}{"{}velocity"{}}][2].as<float>()\};}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ \mbox{\hyperlink{namespace_v_e_c_t_o_r2_d_a4109f03569959b180ac8753033a747f2}{VECTOR2D::getAngle}}(direction);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ displacement\ =\ \{velo\ *\ cos(angle),\ velo\ *\ sin(angle)\};}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chunk}{Chunk}}*\ chunk\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(\textcolor{keyword}{this},\ \{x,\ y,\ w,\ h\});\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ chunk-\/>\mbox{\hyperlink{class_chunk_a6c2ab1c746452b33fe23d3d1097b6ca3}{linkContent}}(path);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ chunk-\/>\mbox{\hyperlink{class_chunk_a8854147872d209544a2da60814cd2133}{setVelocity}}(displacement);}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ cache.push\_back(chunk);}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(-\/-\/repeat\ >\ 0)\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ cache.push\_back(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(cache[0]));}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_abe26fc50dde4811a652c3bd361176219}\label{class_game_abe26fc50dde4811a652c3bd361176219} 
@@ -1067,12 +1346,12 @@ Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00113}{1
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00070\ \{}
-\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00102\ \{}
+\DoxyCodeLine{00103\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_interface_a51eadcf3056c6b68cf8b17762a6f68e6}\label{class_interface_a51eadcf3056c6b68cf8b17762a6f68e6} 
@@ -1083,33 +1362,33 @@ Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00069}{6
 
 
 
-Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00146}{146}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00135\ \{}
-\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ stroke\ :\ node)\ }
-\DoxyCodeLine{00137\ \ \ \ \ \{}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_key_stroke}{KeyStroke}}*\ k\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_key_stroke}{KeyStroke}}();}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ key\ :\ stroke[\textcolor{stringliteral}{"{}key"{}}])}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ k-\/>\mbox{\hyperlink{class_key_stroke_afdb74080a2eafa7b541b96a695599eeb}{add}}(\mbox{\hyperlink{keystroke_8hpp_a7019dcdfa4139eca0425f1382ad60543}{toKey}}(key.as<std::string>()));}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ std::string\ action\ =\ stroke[\textcolor{stringliteral}{"{}action"{}}].as<std::string>();}
-\DoxyCodeLine{00144\ }
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{stringliteral}{"{}move-\/object"{}})\ }
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][0].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ v\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][1].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][2].as<\textcolor{keywordtype}{float}>();}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][3].as<\textcolor{keywordtype}{float}>();}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmove_object_action}{moveObjectAction}}*\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface_ac6a2e86796e3f0ddf843423d09b23ed8}{moveObjectAction}}(containers[\textcolor{keywordtype}{id}],\ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}(\{x,\ y\}),\ v);}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ k-\/>\mbox{\hyperlink{class_key_stroke_ae9e993176bb8607cd4bb19c8831bbd14}{addAction}}(action);}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00154\ }
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ keystrokes.push\_back(k);}
-\DoxyCodeLine{00156\ \ \ \ \ \}}
-\DoxyCodeLine{00157\ \}}
+\DoxyCodeLine{00147\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ stroke\ :\ node)\ }
+\DoxyCodeLine{00149\ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_key_stroke}{KeyStroke}}*\ k\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_key_stroke}{KeyStroke}}();}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ key\ :\ stroke[\textcolor{stringliteral}{"{}key"{}}])}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ k-\/>\mbox{\hyperlink{class_key_stroke_afdb74080a2eafa7b541b96a695599eeb}{add}}(\mbox{\hyperlink{keystroke_8hpp_a7019dcdfa4139eca0425f1382ad60543}{toKey}}(key.as<std::string>()));}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ std::string\ action\ =\ stroke[\textcolor{stringliteral}{"{}action"{}}].as<std::string>();}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{stringliteral}{"{}move-\/object"{}})\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ v\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][1].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][2].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ stroke[\textcolor{stringliteral}{"{}args"{}}][3].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmove_object_action}{moveObjectAction}}*\ action\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_interface_ac6a2e86796e3f0ddf843423d09b23ed8}{moveObjectAction}}(containers[\textcolor{keywordtype}{id}],\ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}(\{x,\ y\}),\ v);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ k-\/>\mbox{\hyperlink{class_key_stroke_ae9e993176bb8607cd4bb19c8831bbd14}{addAction}}(action);}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ keystrokes.push\_back(k);}
+\DoxyCodeLine{00168\ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_a1eebc36977f2e365bddf9d9bf0093fd5}\label{class_game_a1eebc36977f2e365bddf9d9bf0093fd5} 
@@ -1120,25 +1399,25 @@ Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l001
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00156}{156}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00213}{213}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00157\ \{}
-\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}map-\/speed"{}}])}
-\DoxyCodeLine{00159\ \ \ \ \ \{}
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ mapSpeed\ =\ node[\textcolor{stringliteral}{"{}map-\/speed"{}}].as<\textcolor{keywordtype}{float}>();}
-\DoxyCodeLine{00161\ \ \ \ \ \}}
-\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}map-\/direction"{}}])}
-\DoxyCodeLine{00163\ \ \ \ \ \{}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ mapDirection[0]\ =\ node[\textcolor{stringliteral}{"{}map-\/direction"{}}][0].as<\textcolor{keywordtype}{float}>();}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ mapDirection[1]\ =\ node[\textcolor{stringliteral}{"{}map-\/direction"{}}][1].as<\textcolor{keywordtype}{float}>();}
-\DoxyCodeLine{00166\ \ \ \ \ \}}
-\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ \mbox{\hyperlink{namespace_v_e_c_t_o_r2_d_a4109f03569959b180ac8753033a747f2}{VECTOR2D::getAngle}}(mapDirection);}
-\DoxyCodeLine{00168\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}hehe:\ "{}}\ <<\ angle\ <<\ std::endl;}
-\DoxyCodeLine{00169\ \ \ \ \ mapDisplacement[0]\ =\ mapSpeed\ *\ cos(angle);}
-\DoxyCodeLine{00170\ \ \ \ \ mapDisplacement[1]\ =\ mapSpeed\ *\ sin(angle);}
-\DoxyCodeLine{00171\ \}}
+\DoxyCodeLine{00214\ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}map-\/speed"{}}])}
+\DoxyCodeLine{00216\ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ mapSpeed\ =\ node[\textcolor{stringliteral}{"{}map-\/speed"{}}].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00218\ \ \ \ \ \}}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}map-\/direction"{}}])}
+\DoxyCodeLine{00220\ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ mapDirection[0]\ =\ node[\textcolor{stringliteral}{"{}map-\/direction"{}}][0].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ mapDirection[1]\ =\ node[\textcolor{stringliteral}{"{}map-\/direction"{}}][1].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00223\ \ \ \ \ \}}
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ \mbox{\hyperlink{namespace_v_e_c_t_o_r2_d_a4109f03569959b180ac8753033a747f2}{VECTOR2D::getAngle}}(mapDirection);}
+\DoxyCodeLine{00225\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}hehe:\ "{}}\ <<\ angle\ <<\ std::endl;}
+\DoxyCodeLine{00226\ \ \ \ \ mapDisplacement[0]\ =\ mapSpeed\ *\ cos(angle);}
+\DoxyCodeLine{00227\ \ \ \ \ mapDisplacement[1]\ =\ mapSpeed\ *\ sin(angle);}
+\DoxyCodeLine{00228\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}\label{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6} 
@@ -1149,14 +1428,41 @@ Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00156}{1
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00218}{218}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00216}{216}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00219\ \{}
-\DoxyCodeLine{00220\ \ \ \ \ focus[0]\ =\ node[0].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{00221\ \ \ \ \ focus[1]\ =\ node[1].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{00222\ \}}
+\DoxyCodeLine{00217\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ focus[0]\ =\ node[0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00219\ \ \ \ \ focus[1]\ =\ node[1].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00220\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_game_a1adae5d98d689c450dd71f4d12fc8cf0}\label{class_game_a1adae5d98d689c450dd71f4d12fc8cf0} 
+\index{Game@{Game}!loadLight@{loadLight}}
+\index{loadLight@{loadLight}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{loadLight()}{loadLight()}}
+{\footnotesize\ttfamily void Game\+::load\+Light (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{if}(!node[\textcolor{stringliteral}{"{}traffic-\/light"{}}])\ return\ ;}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ node[\textcolor{stringliteral}{"{}traffic-\/light"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00109\ \ \ \ \ light\ =\ \mbox{\hyperlink{class_interface_a332ce853492ebef1b6326beff13027bb}{getContainers}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{if}(!node[\textcolor{stringliteral}{"{}attach-\/light"{}}])\ return\ ;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node[\textcolor{stringliteral}{"{}attach-\/light"{}}])}
+\DoxyCodeLine{00114\ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ i.as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ cache[id]-\/>attachLight(light);}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_ada8c449d8f734c2ad2e2ed292d4b787d}\label{class_game_ada8c449d8f734c2ad2e2ed292d4b787d} 
@@ -1167,48 +1473,55 @@ Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l002
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00074\ \{}
-\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{if}(cache.empty())\ return\ ;}
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{while}(!chunks.empty())}
-\DoxyCodeLine{00077\ \ \ \ \ \{}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{fRect}}\ rec\ =\ chunks.back()-\/>getRelative();}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rec[1]\ >\ 1)\ chunks.pop\_back();}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00081\ \ \ \ \ \}}
-\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{if}(chunks.empty())\ }
-\DoxyCodeLine{00083\ \ \ \ \ \{}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ rel.width\ =\ cache[0]-\/>getRelative()[2];}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ rel.height\ =\ cache[0]-\/>getRelative()[3];}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ rel.x\ =\ 0;}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ rel.y\ =\ (1.01\ -\/\ rel.height);}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chunk}{Chunk}}*\ chunk\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(cache[0],\ \textcolor{keyword}{this},\ rel);}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ chunks.push\_front(chunk);}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ rel.y\ +=\ 0.005\ -\/\ rel.height;}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ chunk\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(cache[0],\ \textcolor{keyword}{this},\ rel);}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ chunks.push\_front(chunk);}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00098\ \ \ \ \ \}}
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{while}(chunks.front()-\/>getRelative()[1]\ >\ 0)}
-\DoxyCodeLine{00100\ \ \ \ \ \{}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ rel.width\ =\ chunks.front()-\/>getRelative()[2];}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ rel.height\ =\ chunks.front()-\/>getRelative()[3];}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ rel.x\ =\ 0;}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ rel.y\ =\ (chunks.front()-\/>getRelative()[1]\ +\ 0.005\ -\/\ rel.height);}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ GetRandomValue(0,\ cache.size()\ -\/\ 1);}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chunk}{Chunk}}*\ chunk\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(cache[\textcolor{keywordtype}{id}],\ \textcolor{keyword}{this},\ rel);}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ chunks.push\_front(chunk);}
-\DoxyCodeLine{00110\ \ \ \ \ \}}
-\DoxyCodeLine{00111\ \}}
+\DoxyCodeLine{00121\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordflow}{if}(cache.empty())\ return\ ;}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{while}(!chunks.empty())}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{fRect}}\ rec\ =\ chunks.back()-\/>getRelative();}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rec[1]\ >\ 1)\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ chunks.back();}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ chunkOrder.pop\_back();}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ chunks.pop\_back();}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{if}(chunks.empty())\ }
+\DoxyCodeLine{00134\ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ rel.width\ =\ cache[0]-\/>getRelative()[2];}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ rel.height\ =\ cache[0]-\/>getRelative()[3];}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ rel.x\ =\ 0;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ rel.y\ =\ (1.01\ -\/\ rel.height);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chunk}{Chunk}}*\ chunk\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(cache[0],\ \textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ chunkOrder.push\_front(0);}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ chunks.push\_front(chunk);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 6;\ i++)}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ rel.y\ +=\ 0.005\ -\/\ rel.height;}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ chunk\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(cache[0],\ \textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ chunks.push\_front(chunk);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ chunkOrder.push\_front(0);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{while}(chunks.front()-\/>getRelative()[1]\ >\ 0)}
+\DoxyCodeLine{00153\ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ rel.width\ =\ chunks.front()-\/>getRelative()[2];}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ rel.height\ =\ chunks.front()-\/>getRelative()[3];}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ rel.x\ =\ 0;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ rel.y\ =\ (chunks.front()-\/>getRelative()[1]\ +\ 0.005\ -\/\ rel.height);}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ GetRandomValue(0,\ cache.size()\ -\/\ 1);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chunk}{Chunk}}*\ chunk\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(cache[\textcolor{keywordtype}{id}],\ \textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ chunks.push\_front(chunk);}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ chunkOrder.push\_front(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_a3ebddddd7a940e4f5e3d287067103a3e}\label{class_container_a3ebddddd7a940e4f5e3d287067103a3e} 
@@ -1242,24 +1555,76 @@ Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l001
 
 
 
-Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{interface_2src_2constructor_8cpp_source_l00129}{129}} of file \mbox{\hyperlink{interface_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00118\ \{}
-\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
-\DoxyCodeLine{00120\ \ \ \ \ \{}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ Rectangle\ rel(\{0,\ 0,\ 0,\ 0\});}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ rel.x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;\ }
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ rel.y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ rel.width\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ rel.height\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}\ *obj;}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ obj\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_object}{Object}}(\textcolor{keyword}{this},\ rel);}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ obj-\/>linkContent(i[\textcolor{stringliteral}{"{}path"{}}].as<std::string>());}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ containers.push\_back(obj);}
-\DoxyCodeLine{00130\ \ \ \ \ \}}
-\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00130\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node)\ }
+\DoxyCodeLine{00132\ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ Rectangle\ rel(\{0,\ 0,\ 0,\ 0\});}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}x"{}}])\ rel.x\ =\ i[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}y"{}}])\ rel.y\ =\ i[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}w"{}}])\ rel.width\ =\ i[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i[\textcolor{stringliteral}{"{}h"{}}])\ rel.height\ =\ i[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_container}{Container}}\ *obj;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ obj\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_object}{Object}}(\textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ obj-\/>linkContent(i[\textcolor{stringliteral}{"{}path"{}}].as<std::string>());}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ containers.push\_back(obj);}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_game_a4b3af72c8881662ca0d808ed288d6ee3}\label{class_game_a4b3af72c8881662ca0d808ed288d6ee3} 
+\index{Game@{Game}!loadSpecialContent@{loadSpecialContent}}
+\index{loadSpecialContent@{loadSpecialContent}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{loadSpecialContent()}{loadSpecialContent()}}
+{\footnotesize\ttfamily void Game\+::load\+Special\+Content (\begin{DoxyParamCaption}\item[{YAML\+::\+Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_container_a290967d3f4355d8945456006076ae92f}{Container}}.
+
+
+
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00257}{257}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00258\ \{}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{class_interface_a1a05ddffcc2bd1d8af99d4829c833a84}{Interface::loadSpecialContent}}(node);}
+\DoxyCodeLine{00260\ \ \ \ \ mapSpeed\ =\ node[\textcolor{stringliteral}{"{}map-\/speed"{}}].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00261\ \ \ \ \ mapDirection[0]\ =\ node[\textcolor{stringliteral}{"{}map-\/direction"{}}][0].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00262\ \ \ \ \ mapDirection[1]\ =\ node[\textcolor{stringliteral}{"{}map-\/direction"{}}][1].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00263\ \ \ \ \ mapDisplacement[0]\ =\ node[\textcolor{stringliteral}{"{}map-\/displacement"{}}][0].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00264\ \ \ \ \ mapDisplacement[1]\ =\ node[\textcolor{stringliteral}{"{}map-\/displacement"{}}][1].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{00265\ \ \ \ \ main-\/>\mbox{\hyperlink{class_container_a290967d3f4355d8945456006076ae92f}{loadSpecialContent}}(node[\textcolor{stringliteral}{"{}main"{}}]);}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ node[\textcolor{stringliteral}{"{}chunk-\/order"{}}])}
+\DoxyCodeLine{00268\ \ \ \ \ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ chunkOrder.push\_back(i.as<\textcolor{keywordtype}{int}>());}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chunk}{Chunk}}*\ c\ =\ cache[i.as<\textcolor{keywordtype}{int}>()];}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ Rectangle\ rel;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ rel.x\ =\ c-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[0];}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ rel.y\ =\ c-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[1];}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ rel.width\ =\ c-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[2];}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ rel.height\ =\ c-\/>\mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[3];}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_chunk}{Chunk}}*\ chunk\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_chunk}{Chunk}}(c,\ \textcolor{keyword}{this},\ rel);}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ chunks.push\_back(chunk);}
+\DoxyCodeLine{00279\ \ \ \ \ \}}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ chunks.size();\ i++)}
+\DoxyCodeLine{00282\ \ \ \ \ \{}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ chunks[i]-\/>loadSpecialContent(node[\textcolor{stringliteral}{"{}chunks"{}}][i]);}
+\DoxyCodeLine{00284\ \ \ \ \ \}}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00286\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ cache.size();\ i++)}
+\DoxyCodeLine{00287\ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ cache[i]-\/>loadSpecialContent(node[\textcolor{stringliteral}{"{}cache"{}}][i]);}
+\DoxyCodeLine{00289\ \ \ \ \ \}}
+\DoxyCodeLine{00290\ }
+\DoxyCodeLine{00291\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_a11f0c20cb4f80f5d2a63f73f981a9d15}\label{class_container_a11f0c20cb4f80f5d2a63f73f981a9d15} 
@@ -1295,8 +1660,8 @@ Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l001
 \DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y,\ w,\ h;}
 \DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ repeat\ =\ 1;}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ gapX\ =\ 0;}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ gapY\ =\ 0;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ gapX\ =\ 0;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ gapY\ =\ 0;}
 \DoxyCodeLine{00146\ }
 \DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ 1;}
 \DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dy\ =\ 1;}
@@ -1316,9 +1681,9 @@ Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l001
 \DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}repeat"{}}])\ }
 \DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ repeat\ =\ img[\textcolor{stringliteral}{"{}repeat"{}}].as<\textcolor{keywordtype}{int}>();}
 \DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}gapX"{}}])}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapX\ =\ img[\textcolor{stringliteral}{"{}gapX"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapX\ =\ img[\textcolor{stringliteral}{"{}gapX"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
 \DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}gapY"{}}])}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapY\ =\ img[\textcolor{stringliteral}{"{}gapY"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapY\ =\ img[\textcolor{stringliteral}{"{}gapY"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
 \DoxyCodeLine{00168\ }
 \DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}dx"{}}])}
 \DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dx\ =\ img[\textcolor{stringliteral}{"{}dx"{}}].as<\textcolor{keywordtype}{int}>();}
@@ -1335,39 +1700,37 @@ Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l001
 \DoxyCodeLine{00181\ }
 \DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}axis"{}}]\ \&\&\ img[\textcolor{stringliteral}{"{}axis"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}horizontal"{}})}
 \DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2;\ j\ +=\ dy\ *\ (gapY\ +\ h))}
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
-\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
-\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
-\DoxyCodeLine{00193\ }
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ }
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ j\ +=\ dy\ *\ (gapY\ +\ h))}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
-\DoxyCodeLine{00208\ }
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ UnloadImage(image);}
-\DoxyCodeLine{00215\ \ \ \ \ \}}
-\DoxyCodeLine{00216\ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2;\ j\ +=\ dy\ *\ (gapY\ +\ h))\ \{\ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ j\ +=\ dy\ *\ (gapY\ +\ h))}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ UnloadImage(image);}
+\DoxyCodeLine{00213\ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_a72456ad52812da3e4f805c20463238e3}\label{class_frame_a72456ad52812da3e4f805c20463238e3} 
@@ -1384,10 +1747,10 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00065}{65
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00066\ \{}
 \DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
-\DoxyCodeLine{00068\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00069\ \ \ \ \ relative[0]\ +=\ rel[0];}
 \DoxyCodeLine{00070\ \ \ \ \ relative[1]\ +=\ rel[1];}
-\DoxyCodeLine{00071\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{00073\ \}}
 
@@ -1406,10 +1769,10 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00075}{75
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00076\ \{}
 \DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
-\DoxyCodeLine{00078\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00079\ \ \ \ \ frame.x\ +=\ x;}
 \DoxyCodeLine{00080\ \ \ \ \ frame.y\ +=\ y;}
-\DoxyCodeLine{00081\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{00083\ \}}
 
@@ -1428,11 +1791,11 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00043}{43
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00044\ \{}
 \DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
-\DoxyCodeLine{00046\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ center\ =\ \mbox{\hyperlink{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}{getCenter}}();}
 \DoxyCodeLine{00048\ \ \ \ \ relative[0]\ +=\ rel[0]\ -\/\ center[0];}
 \DoxyCodeLine{00049\ \ \ \ \ relative[1]\ +=\ rel[1]\ -\/\ center[1];}
-\DoxyCodeLine{00050\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{00052\ \}}
 
@@ -1451,11 +1814,11 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00054}{54
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00055\ \{}
 \DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
-\DoxyCodeLine{00057\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_ad3e7ac08c672de3cc72ca301768aae4a}{fPoint}}\ center\ =\ \mbox{\hyperlink{class_frame_a5d52a474fbee6c61b5c1209d1a70e393}{getCenter}}();}
 \DoxyCodeLine{00059\ \ \ \ \ frame.x\ +=\ x\ -\/\ center[0];}
 \DoxyCodeLine{00060\ \ \ \ \ frame.y\ +=\ y\ -\/\ center[1];}
-\DoxyCodeLine{00061\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{00063\ \}}
 
@@ -1474,10 +1837,10 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00024}{24
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00025\ \{}
 \DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
-\DoxyCodeLine{00027\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00028\ \ \ \ \ relative[0]\ =\ rel[0];}
 \DoxyCodeLine{00029\ \ \ \ \ relative[1]\ =\ rel[1];}
-\DoxyCodeLine{00030\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{00032\ \}}
 
@@ -1496,10 +1859,10 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00033}{33
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00034\ \{}
 \DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
-\DoxyCodeLine{00036\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00037\ \ \ \ \ frame.x\ =\ x;}
 \DoxyCodeLine{00038\ \ \ \ \ frame.y\ =\ y;}
-\DoxyCodeLine{00039\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{00041\ \}}
 
@@ -1516,15 +1879,15 @@ move to next state of the sprite
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00247}{247}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00245}{245}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00248\ \{}
-\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00250\ \ \ \ \ focus[1]++;}
-\DoxyCodeLine{00251\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ >=\ sprites.at(focus[0]).size())\ focus[1]\ =\ 0;}
-\DoxyCodeLine{00252\ \}}
+\DoxyCodeLine{00246\ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00248\ \ \ \ \ focus[1]++;}
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ >=\ sprites.at(focus[0]).size())\ focus[1]\ =\ 0;}
+\DoxyCodeLine{00250\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_ae74100328cf86d4d9f5ad5873fe29aab}\label{class_container_ae74100328cf86d4d9f5ad5873fe29aab} 
@@ -1539,15 +1902,15 @@ move to the next sprite
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00261}{261}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00259}{259}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00262\ \{}
-\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00264\ \ \ \ \ focus[0]++;}
-\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ >=\ sprites.size())\ focus[0]\ =\ 0;}
-\DoxyCodeLine{00266\ \}}
+\DoxyCodeLine{00260\ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00262\ \ \ \ \ focus[0]++;}
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ >=\ sprites.size())\ focus[0]\ =\ 0;}
+\DoxyCodeLine{00264\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_acb38199a86119e31c739bb46fd382ada}\label{class_frame_acb38199a86119e31c739bb46fd382ada} 
@@ -1563,7 +1926,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00173}{17
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00174\ \{}
-\DoxyCodeLine{00175\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00175\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordflow}{return}\ relative;}
 \DoxyCodeLine{00177\ \}}
 
@@ -1581,7 +1944,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00179}{17
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00180\ \{}
-\DoxyCodeLine{00181\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00181\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{return}\ \{(int)\ frame.x,\ (\textcolor{keywordtype}{int})\ frame.y,\ (int)\ frame.width,\ (\textcolor{keywordtype}{int})\ frame.height\};}
 \DoxyCodeLine{00183\ \}}
 
@@ -1599,7 +1962,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00167}{16
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00168\ \{}
-\DoxyCodeLine{00169\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00169\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordflow}{return}\ frame;}
 \DoxyCodeLine{00171\ \}}
 
@@ -1651,6 +2014,27 @@ Definition at line \mbox{\hyperlink{overlap_8cpp_source_l00023}{23}} of file \mb
 \DoxyCodeLine{00032\ \}}
 
 \end{DoxyCode}
+\Hypertarget{class_game_ae0cb0381dfd3cad029a83fafedabfa6c}\label{class_game_ae0cb0381dfd3cad029a83fafedabfa6c} 
+\index{Game@{Game}!pause@{pause}}
+\index{pause@{pause}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Game\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interface_ac4353febca418be3dc9041af71246830}{Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{game_2src_2action_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{game_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ isPause\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
 \Hypertarget{class_frame_a4b3c3543e057eb375edc5fb9f7db512d}\label{class_frame_a4b3c3543e057eb375edc5fb9f7db512d} 
 \index{Game@{Game}!plug@{plug}}
 \index{plug@{plug}!Game@{Game}}
@@ -1678,9 +2062,9 @@ Definition at line \mbox{\hyperlink{family_8cpp_source_l00034}{34}} of file \mbo
 \DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::plug(Frame*\ par):\ par\ is\ nullptr"{}});}
 \DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ return\ ;}
 \DoxyCodeLine{00040\ \ \ \ \ \}}
-\DoxyCodeLine{00041\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00042\ \ \ \ \ parent\ =\ par;}
-\DoxyCodeLine{00043\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}();}
 \DoxyCodeLine{00045\ }
 \DoxyCodeLine{00046\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{addSubframe}}(\textcolor{keyword}{this});}
@@ -1716,10 +2100,10 @@ Definition at line \mbox{\hyperlink{family_8cpp_source_l00012}{12}} of file \mbo
 \DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Frame::plug(Frame*\ par,\ fRect\ rel):\ par\ is\ nullptr"{}});}
 \DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ return\ ;}
 \DoxyCodeLine{00018\ \ \ \ \ \}}
-\DoxyCodeLine{00019\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00020\ \ \ \ \ parent\ =\ par;}
 \DoxyCodeLine{00021\ \ \ \ \ relative\ =\ rel;}
-\DoxyCodeLine{00022\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}();}
 \DoxyCodeLine{00024\ }
 \DoxyCodeLine{00025\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_aa55237af72da40924ff97426112d5108}{addSubframe}}(\textcolor{keyword}{this});}
@@ -1738,15 +2122,15 @@ move to previous state of the sprite
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00254}{254}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00252}{252}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00255\ \{}
-\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00257\ \ \ \ \ focus[1]-\/-\/;}
-\DoxyCodeLine{00258\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ <\ 0)\ focus[1]\ =\ sprites.at(focus[0]).size()\ -\/\ 1;}
-\DoxyCodeLine{00259\ \}}
+\DoxyCodeLine{00253\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00255\ \ \ \ \ focus[1]-\/-\/;}
+\DoxyCodeLine{00256\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ <\ 0)\ focus[1]\ =\ sprites.at(focus[0]).size()\ -\/\ 1;}
+\DoxyCodeLine{00257\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_a5c0a45f4dd53257b83a02e539db1f509}\label{class_container_a5c0a45f4dd53257b83a02e539db1f509} 
@@ -1761,15 +2145,15 @@ move to the previous sprite
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00268}{268}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00266}{266}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00269\ \{}
-\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00271\ \ \ \ \ focus[0]-\/-\/;}
-\DoxyCodeLine{00272\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ <\ 0)\ focus[0]\ =\ sprites.size()\ -\/\ 1;}
-\DoxyCodeLine{00273\ \}}
+\DoxyCodeLine{00267\ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00269\ \ \ \ \ focus[0]-\/-\/;}
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ <\ 0)\ focus[0]\ =\ sprites.size()\ -\/\ 1;}
+\DoxyCodeLine{00271\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_game_a20fc3d7f6e3b7ab5b0af48b116191971}\label{class_game_a20fc3d7f6e3b7ab5b0af48b116191971} 
@@ -1784,13 +2168,22 @@ Reimplemented from \mbox{\hyperlink{class_container_aa99fd45b65f5f4c29fd02916027
 
 
 
-Definition at line \mbox{\hyperlink{game_2src_2action_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{game_2src_2action_8cpp_source}{action.\+cpp}}.
+Definition at line \mbox{\hyperlink{game_2src_2action_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{game_2src_2action_8cpp_source}{action.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00004\ \{}
-\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_interface_a71e6f65404421002b2e91a0114b7d1fb}{Interface::react}}();}
-\DoxyCodeLine{00006\ \}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{isVisible}}())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{if}(isPause)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{if}(isLose)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}(initState)\ }
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_game_a961959a8c1ceaac64586a00f2f59b48c}{startInitClockAction}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}(std::chrono::duration\_cast<std::chrono::milliseconds>(std::chrono::system\_clock::now()\ -\/\ initStateClock).count()\ <\ 400)\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_interface_a71e6f65404421002b2e91a0114b7d1fb}{Interface::react}}();}
+\DoxyCodeLine{00032\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_a6676f9cfd2639c9069341ee5844167af}\label{class_frame_a6676f9cfd2639c9069341ee5844167af} 
@@ -1817,21 +2210,38 @@ Definition at line \mbox{\hyperlink{family_8cpp_source_l00085}{85}} of file \mbo
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00086\ \{}
-\DoxyCodeLine{00087\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ subframes.size()\ -\/\ 1;}
-\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{while}(i\ >=\ 0\ \&\&\ subframes.size())}
-\DoxyCodeLine{00090\ \ \ \ \ \{}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(!subframes.empty()\ \&\&\ subframes.back()\ ==\ subframe)}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ subframes.pop\_back();}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ i\ =\ std::min(i,\ (\textcolor{keywordtype}{int})\ subframes.size()\ -\/\ 1);}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!subframes.empty()\ \&\&\ subframes[i]\ ==\ subframe)}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ subframes[i]\ =\ subframes.back();}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ subframes.pop\_back();}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00099\ \ \ \ \ \}}
-\DoxyCodeLine{00100\ \ \ \ \ mtx.unlock();}
-\DoxyCodeLine{00101\ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ std::find(subframes.begin(),\ subframes.end(),\ subframe);}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{if}(it\ !=\ subframes.end())}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ subframes.erase(it);}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
+\DoxyCodeLine{00093\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_game_a70619d2cf0a6447303bf0c5542bbb682}\label{class_game_a70619d2cf0a6447303bf0c5542bbb682} 
+\index{Game@{Game}!reset@{reset}}
+\index{reset@{reset}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Game\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_interface_a2ec51b5a4e330649d6707a9431110ce2}{Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{game_2src_2constructor_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{game_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ isLose\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00052\ \ \ \ \ isDying\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00053\ \ \ \ \ initState\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00054\ \ \ \ \ score\ =\ 0;}
+\DoxyCodeLine{00055\ \ \ \ \ dieIndex\ =\ 0;}
+\DoxyCodeLine{00056\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_ac2d0460d67ec259633ba9d6a601ec954}\label{class_frame_ac2d0460d67ec259633ba9d6a601ec954} 
@@ -1848,10 +2258,10 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00085}{85
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00086\ \{}
 \DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
-\DoxyCodeLine{00088\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00089\ \ \ \ \ relative[2]\ =\ rel[0];}
 \DoxyCodeLine{00090\ \ \ \ \ relative[3]\ =\ rel[1];}
-\DoxyCodeLine{00091\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{00093\ \}}
 
@@ -1870,10 +2280,10 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00095}{95
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00096\ \{}
 \DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})\ return\ ;}
-\DoxyCodeLine{00098\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00099\ \ \ \ \ frame.width\ =\ w;}
 \DoxyCodeLine{00100\ \ \ \ \ frame.height\ =\ h;}
-\DoxyCodeLine{00101\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{00103\ \}}
 
@@ -1886,13 +2296,13 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00095}{95
 
 
 
-Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00280}{280}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
+Definition at line \mbox{\hyperlink{container_2src_2constructor_8cpp_source_l00278}{278}} of file \mbox{\hyperlink{container_2src_2constructor_8cpp_source}{constructor.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00281\ \{}
-\DoxyCodeLine{00282\ \ \ \ \ probability\ =\ prob;}
-\DoxyCodeLine{00283\ \}}
+\DoxyCodeLine{00279\ \{}
+\DoxyCodeLine{00280\ \ \ \ \ probability\ =\ prob;}
+\DoxyCodeLine{00281\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_frame_ab54f6e87faf0216b708c40cb1bc1a4a2}\label{class_frame_ab54f6e87faf0216b708c40cb1bc1a4a2} 
@@ -1908,11 +2318,28 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00123}{12
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00124\ \{}
-\DoxyCodeLine{00125\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00126\ \ \ \ \ relative\ =\ rel;}
-\DoxyCodeLine{00127\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{class_frame_a7142b4749ec9adf106935fbafa8b67b0}{updateFrame}}(\textcolor{keyword}{true});}
 \DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_interface_a9f68267f5444b13b15fd4b476dd4010a}\label{class_interface_a9f68267f5444b13b15fd4b476dd4010a} 
+\index{Game@{Game}!setScore@{setScore}}
+\index{setScore@{setScore}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setScore()}{setScore()}}
+{\footnotesize\ttfamily void Interface\+::set\+Score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{interface_2src_2arthmetic_8cpp_source}{arthmetic.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00033\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_container_a48cdaa85884938b417513cca003f4f6c}\label{class_container_a48cdaa85884938b417513cca003f4f6c} 
@@ -1967,10 +2394,10 @@ Definition at line \mbox{\hyperlink{family_8cpp_source_l00053}{53}} of file \mbo
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00054\ \{}
 \DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_frame_a867539f845278c60c84fd87d1b079de6}{isroot}}())\ return\ ;}
-\DoxyCodeLine{00056\ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.lock();}
 \DoxyCodeLine{00057\ \ \ \ \ parent-\/>\mbox{\hyperlink{class_frame_a6676f9cfd2639c9069341ee5844167af}{removeSubframe}}(\textcolor{keyword}{this});}
 \DoxyCodeLine{00058\ \ \ \ \ parent\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00059\ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}}.unlock();}
 \DoxyCodeLine{00060\ \}}
 
 \end{DoxyCode}
@@ -1994,7 +2421,7 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00003}{3}
 \DoxyCodeLine{00005\ \ \ \ \ }
 \DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordflow}{if}(parent\ !=\ \textcolor{keyword}{nullptr})}
 \DoxyCodeLine{00007\ \ \ \ \ \{}
-\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ std::lock\_guard<std::mutex>\ lock(\mbox{\hyperlink{class_frame_a5a592afcbc41e45fccc62974a592b0a1}{mtx}});}
 \DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ frame.x\ =\ parent-\/>\mbox{\hyperlink{class_frame_ab0eefa85bb68bd39b6c502f552083b42}{getX}}()\ +\ relative[0]\ *\ parent-\/>\mbox{\hyperlink{class_frame_a37aeab17b4d450237496d32a2eb6b191}{getW}}();}
 \DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ frame.y\ =\ parent-\/>\mbox{\hyperlink{class_frame_a3808523d40227445dbd975fc0600b462}{getY}}()\ +\ relative[1]\ *\ parent-\/>\mbox{\hyperlink{class_frame_a33049f15ecb70bad2654e93f8d3009c5}{getH}}();}
 \DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ frame.width\ =\ relative[2]\ *\ parent-\/>\mbox{\hyperlink{class_frame_a37aeab17b4d450237496d32a2eb6b191}{getW}}();}
@@ -2014,6 +2441,36 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00003}{3}
 
 
 \doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_game_ac2e5ca6e8af013a2358cdc3a918785bc}\label{class_game_ac2e5ca6e8af013a2358cdc3a918785bc} 
+\index{Game@{Game}!addScoreAction@{addScoreAction}}
+\index{addScoreAction@{addScoreAction}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{addScoreAction}{addScoreAction}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classadd_score_action}{add\+Score\+Action}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{game_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}}.
+
+\Hypertarget{class_game_a44e864e2be0a8361c438908e72035477}\label{class_game_a44e864e2be0a8361c438908e72035477} 
+\index{Game@{Game}!dyingAction@{dyingAction}}
+\index{dyingAction@{dyingAction}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{dyingAction}{dyingAction}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classdying_action}{dying\+Action}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{game_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}}.
+
+\Hypertarget{class_game_aeddefec0371bd239d608c289d0a05be5}\label{class_game_aeddefec0371bd239d608c289d0a05be5} 
+\index{Game@{Game}!highScore@{highScore}}
+\index{highScore@{highScore}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{highScore}{highScore}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classhigh_score}{high\+Score}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{game_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}}.
+
 \Hypertarget{class_game_a05ad469c97a6214d483abd3440099150}\label{class_game_a05ad469c97a6214d483abd3440099150} 
 \index{Game@{Game}!moveChunksAction@{moveChunksAction}}
 \index{moveChunksAction@{moveChunksAction}!Game@{Game}}
@@ -2022,7 +2479,30 @@ Definition at line \mbox{\hyperlink{frame_2src_2arthmetic_8cpp_source_l00003}{3}
 
 
 
-Definition at line \mbox{\hyperlink{game_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}}.
+Definition at line \mbox{\hyperlink{game_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}}.
+
+\Hypertarget{class_game_a961959a8c1ceaac64586a00f2f59b48c}\label{class_game_a961959a8c1ceaac64586a00f2f59b48c} 
+\index{Game@{Game}!startInitClockAction@{startInitClockAction}}
+\index{startInitClockAction@{startInitClockAction}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{startInitClockAction}{startInitClockAction}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classstart_init_clock_action}{start\+Init\+Clock\+Action}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{game_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_frame_a5a592afcbc41e45fccc62974a592b0a1}\label{class_frame_a5a592afcbc41e45fccc62974a592b0a1} 
+\index{Game@{Game}!mtx@{mtx}}
+\index{mtx@{mtx}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{mtx}{mtx}}
+{\footnotesize\ttfamily std\+::mutex Frame\+::mtx\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line \mbox{\hyperlink{frame_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{frame_8hpp_source}{frame.\+hpp}}.
 
 
 

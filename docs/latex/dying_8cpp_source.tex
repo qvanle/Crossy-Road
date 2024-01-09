@@ -1,0 +1,26 @@
+\doxysection{dying.\+cpp}
+\hypertarget{dying_8cpp_source}{}\label{dying_8cpp_source}\index{src/game/src/action/dying.cpp@{src/game/src/action/dying.cpp}}
+\mbox{\hyperlink{dying_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{game_8hpp}{game.hpp}}>}}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00003}\mbox{\hyperlink{classdying_action_a31ba8681eff33e7f69cd6c9c7c1108cf}{00003}}\ \mbox{\hyperlink{classdying_action_a31ba8681eff33e7f69cd6c9c7c1108cf}{dyingAction::dyingAction}}(\mbox{\hyperlink{class_game}{Game}}*\ game)\ :\ game(game)\ \{\}}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00005}\mbox{\hyperlink{classdying_action_a2dce14c1f128ce3eb8f497eff81126b8}{00005}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classdying_action_a2dce14c1f128ce3eb8f497eff81126b8}{dyingAction::execute}}()}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{keywordflow}{if}(game-\/>dieIndex\ ==\ 6)\ }
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ game-\/>isDying\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ game-\/>dieIndex\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00011}00011\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00012}00012\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00013}00013\ \ \ \ \ game-\/>isLose\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00014}00014\ \ \ \ \ game-\/>main-\/>\mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{chooseImage}}(4,\ game-\/>dieIndex++);}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00017}\mbox{\hyperlink{classdying_action_a96d8dfbac4ef859329fd07e34c96cc8a}{00017}}\ \mbox{\hyperlink{class_action}{Action}}*\ \mbox{\hyperlink{classdying_action_a96d8dfbac4ef859329fd07e34c96cc8a}{dyingAction::clone}}()}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdying_action_a31ba8681eff33e7f69cd6c9c7c1108cf}{dyingAction}}(*\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{dying_8cpp_source_l00020}00020\ \}}
+
+\end{DoxyCode}

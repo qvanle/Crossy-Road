@@ -12,6 +12,7 @@ var class_window =
     [ "isRun", "class_window.html#a481e1b58c1cd3c4f209ebb77389b0035", null ],
     [ "loadGame", "class_window.html#a966b152fb1c5e3bd38f80145522f025f", null ],
     [ "loadInterface", "class_window.html#a10eed1c286789ea0a3159d4a5c6b5a06", null ],
+    [ "loadMusic", "class_window.html#a26d033c12de37527c75e5a763dd986a0", null ],
     [ "requestActing", "class_window.html#a593f842e27a96389784cb70e566d1d5e", null ],
     [ "run", "class_window.html#ae137ec42ddc87d666d49661484410091", null ],
     [ "sound_effect", "class_window.html#a2c07f02fa7a91560a56d238c9350bae2", null ],

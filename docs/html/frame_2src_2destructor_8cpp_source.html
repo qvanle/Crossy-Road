@@ -105,8 +105,14 @@ $(function(){initNavTree('frame_2src_2destructor_8cpp_source.html',''); initResi
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_frame.html#abec8c7bccdfc88cb4da137caae9f73d6">   10</a></span><a class="code hl_function" href="class_frame.html#abec8c7bccdfc88cb4da137caae9f73d6">Frame::~Frame</a>()</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> i : subframes) </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        i-&gt;parent = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_function" href="class_frame.html#a7fec746caea8b9cc27d28f829e3995a8">unplug</a>();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
 </div>
+<div class="ttc" id="aclass_frame_html_a7fec746caea8b9cc27d28f829e3995a8"><div class="ttname"><a href="class_frame.html#a7fec746caea8b9cc27d28f829e3995a8">Frame::unplug</a></div><div class="ttdeci">void unplug()</div><div class="ttdoc">detach a frame from its parent</div><div class="ttdef"><b>Definition</b> <a href="family_8cpp_source.html#l00053">family.cpp:53</a></div></div>
 <div class="ttc" id="aclass_frame_html_abec8c7bccdfc88cb4da137caae9f73d6"><div class="ttname"><a href="class_frame.html#abec8c7bccdfc88cb4da137caae9f73d6">Frame::~Frame</a></div><div class="ttdeci">~Frame()</div><div class="ttdoc">destroy a frame</div><div class="ttdef"><b>Definition</b> <a href="#l00010">destructor.cpp:10</a></div></div>
 <div class="ttc" id="aframe_8hpp_html"><div class="ttname"><a href="frame_8hpp.html">frame.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

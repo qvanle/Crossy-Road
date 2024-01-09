@@ -154,7 +154,28 @@ $(function(){initNavTree('overlap_8cpp_source.html',''); initResizable(); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">return</span> w * h;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
 </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_container.html#a5cfe43ea483203fb87e36bff0f97bada">   46</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_container.html#a5cfe43ea483203fb87e36bff0f97bada">Container::isCollide</a>(Rectangle rec)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    Rectangle rec2 = <a class="code hl_function" href="class_frame.html#aada1e4093763936121df21b7dae80b5c">getFrame</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">bool</span> a1 = rec.x &lt;= rec2.x &amp;&amp; rec2.x &lt;= rec.x + rec.width;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">bool</span> a2 = rec2.x &lt;= rec.x &amp;&amp; rec.x &lt;= rec2.x + rec2.width;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">bool</span> b1 = rec.y &lt;= rec2.y &amp;&amp; rec2.y &lt;= rec.y + rec.height;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">bool</span> b2 = rec2.y &lt;= rec.y &amp;&amp; rec.y &lt;= rec2.y + rec2.height;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">return</span> (a1 || a2) &amp;&amp; (b1 || b2);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_container.html#a58b605e54db2a0719196286523bbd28c">   57</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_container.html#a5cfe43ea483203fb87e36bff0f97bada">Container::isCollide</a>(<a class="code hl_class" href="class_container.html">Container</a>* other)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="class_container.html#a5cfe43ea483203fb87e36bff0f97bada">isCollide</a>(other-&gt;<a class="code hl_function" href="class_frame.html#aada1e4093763936121df21b7dae80b5c">getFrame</a>());</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+</div>
 <div class="ttc" id="aclass_container_html"><div class="ttname"><a href="class_container.html">Container</a></div><div class="ttdoc">holds specific entities and their behavior</div><div class="ttdef"><b>Definition</b> <a href="container_8hpp_source.html#l00019">container.hpp:20</a></div></div>
+<div class="ttc" id="aclass_container_html_a5cfe43ea483203fb87e36bff0f97bada"><div class="ttname"><a href="class_container.html#a5cfe43ea483203fb87e36bff0f97bada">Container::isCollide</a></div><div class="ttdeci">bool isCollide(Rectangle)</div><div class="ttdef"><b>Definition</b> <a href="#l00046">overlap.cpp:46</a></div></div>
 <div class="ttc" id="aclass_container_html_a5e86a0c4bc0a072cbe7cc0725707053b"><div class="ttname"><a href="class_container.html#a5e86a0c4bc0a072cbe7cc0725707053b">Container::isOverlapping</a></div><div class="ttdeci">bool isOverlapping(fPoint)</div><div class="ttdef"><b>Definition</b> <a href="#l00003">overlap.cpp:3</a></div></div>
 <div class="ttc" id="aclass_container_html_afe701a67848a2f7b9a1fe03742de4854"><div class="ttname"><a href="class_container.html#afe701a67848a2f7b9a1fe03742de4854">Container::OverlappingArea</a></div><div class="ttdeci">float OverlappingArea(Rectangle)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">overlap.cpp:23</a></div></div>
 <div class="ttc" id="aclass_frame_html_aada1e4093763936121df21b7dae80b5c"><div class="ttname"><a href="class_frame.html#aada1e4093763936121df21b7dae80b5c">Frame::getFrame</a></div><div class="ttdeci">const Rectangle &amp; getFrame() const</div><div class="ttdef"><b>Definition</b> <a href="frame_2src_2arthmetic_8cpp_source.html#l00105">arthmetic.cpp:105</a></div></div>

@@ -5,112 +5,241 @@
 \DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{utils_2include_2const_2request_8hpp}{const/request.hpp}}>}}
 \DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{window_8hpp}{window.hpp}}>}}
 \DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00004}00004\ \textcolor{keywordtype}{void}\ Window::ActionPool::push(\mbox{\hyperlink{class_action}{Action}}*\ action)}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00004}00004\ \textcolor{keywordtype}{void}\ Window::ActionPool::push(\mbox{\hyperlink{class_action}{Action}}\ *action)}
 \DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00005}00005\ \{}
 \DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00006}00006\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00007}00007\ \ \ \ \ pool.push(action);}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00008}00008\ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00010}00010\ \textcolor{keywordtype}{void}\ Window::ActionPool::push(\mbox{\hyperlink{class_packet_action}{PacketAction}}*\ action)}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00011}00011\ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00012}00012\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00013}00013\ \ \ \ \ std::vector<Action*>\ unpacked\ =\ action-\/>\mbox{\hyperlink{class_packet_action_ae28f68158029f77be1262900afdc0121}{unpack}}();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{delete}\ action;}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\&\ a\ :\ unpacked)}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00017}00017\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ pool.push(a);}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00019}00019\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00021}00021\ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00023}00023\ Window::ActionPool::\string~ActionPool()}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00024}00024\ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{while}(pop()\ !=\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00026}00026\ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00028}00028\ \mbox{\hyperlink{class_action}{Action}}*\ Window::ActionPool::front()}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00029}00029\ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00030}00030\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ pool.front();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00032}00032\ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00034}00034\ \mbox{\hyperlink{class_action}{Action}}*\ Window::ActionPool::pop()}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00035}00035\ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00036}00036\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{if}(pool.empty())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ pool.front();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00039}00039\ \ \ \ \ pool.pop();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{return}\ action;}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00041}00041\ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00043}00043\ \textcolor{keywordtype}{bool}\ Window::ActionPool::empty()\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00044}00044\ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00045}00045\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ pool.empty();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00047}00047\ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00050}\mbox{\hyperlink{class_window_a7c8938f4d38b3f42c9650a69f0a4033f}{00050}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a7c8938f4d38b3f42c9650a69f0a4033f}{Window::immediateActing}}()}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00051}00051\ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00053}00053\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ immediate\_pool.pop();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ action-\/>\mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{execute}}();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00059}00059\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00060}00060\ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00062}\mbox{\hyperlink{class_window_a7513617caa6b1a47881c78d2f8f52382}{00062}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a7513617caa6b1a47881c78d2f8f52382}{Window::userActing}}()}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00063}00063\ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00065}00065\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ immediate\_user\_pool.pop();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ action-\/>\mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{execute}}();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00071}00071\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00072}00072\ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00074}\mbox{\hyperlink{class_window_a7ddf17f69d4bfdd667f20b028a8c6324}{00074}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a7ddf17f69d4bfdd667f20b028a8c6324}{Window::systemActing}}()}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00075}00075\ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00076}00076\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ system\_pool.pop();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ action-\/>\mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{execute}}();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00082}00082\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00083}00083\ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00084}00084\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00085}\mbox{\hyperlink{class_window_a593f842e27a96389784cb70e566d1d5e}{00085}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a593f842e27a96389784cb70e566d1d5e}{Window::requestActing}}()}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00086}00086\ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00088}00088\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ request\_pool.pop();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(action-\/>\mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{isRequest}}())}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5cac5575e09f76609e1b780647b7ca7c459}{REQUEST::ID::NONE}}):}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca507082297973a57b116eefe37c0539e9}{REQUEST::ID::INVALID}}):\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca707976868535b915c0f7e544da62fe5b}{REQUEST::ID::CHANGE\_INF}}):\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keywordtype}{id}\ =\ action-\/>\mbox{\hyperlink{class_action_aa8860c08894cce78bf203e26acc56e16}{getArgs}}().\mbox{\hyperlink{struct_a_r_g_s_a51e5e8276d28e2d5a217797643388994}{getInterfaceName}}();}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.push(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00107}00107\ }
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00109}00109\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00110}00110\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00007}00007\ \ \ \ \ \textcolor{keywordflow}{if}(stop)\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00011}00011\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00012}00012\ \ \ \ \ pool.push(action);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00015}00015\ \textcolor{keywordtype}{void}\ Window::ActionPool::push(\mbox{\hyperlink{class_packet_action}{PacketAction}}\ *action)}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00017}00017\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{if}(stop)\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ return\ ;}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00023}00023\ \ \ \ \ std::vector<Action*>\ unpacked\ =\ action-\/>\mbox{\hyperlink{class_packet_action_ae28f68158029f77be1262900afdc0121}{unpack}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{delete}\ action;}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{class_action}{Action}}\ *\&a\ :\ unpacked)}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ pool.push(a);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00032}00032\ \textcolor{keywordtype}{void}\ Window::ActionPool::clear()\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00034}00034\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{while}(!pool.empty())}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00036}00036\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ pool.front();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ pool.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00042}00042\ \textcolor{keywordtype}{void}\ Window::ActionPool::stopReceiving()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00044}00044\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00045}00045\ \ \ \ \ stop\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00046}00046\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00048}00048\ \textcolor{keywordtype}{void}\ Window::ActionPool::continueReceiving()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00049}00049\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00050}00050\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00051}00051\ \ \ \ \ stop\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00054}00054\ Window::ActionPool::\string~ActionPool()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00056}00056\ \ \ \ \ clear();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00059}00059\ \mbox{\hyperlink{class_action}{Action}}\ *Window::ActionPool::front()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00061}00061\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ pool.front();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00065}00065\ \mbox{\hyperlink{class_action}{Action}}\ *Window::ActionPool::pop()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00067}00067\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{if}(pool.empty())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{if}(stop)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ pool.front();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00071}00071\ \ \ \ \ pool.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{return}\ action;}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00073}00073\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00075}00075\ \textcolor{keywordtype}{bool}\ Window::ActionPool::empty()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00076}00076\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00077}00077\ \ \ \ \ std::lock\_guard<std::mutex>\ lock(mtx);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{return}\ pool.empty();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00081}\mbox{\hyperlink{class_window_a7c8938f4d38b3f42c9650a69f0a4033f}{00081}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a7c8938f4d38b3f42c9650a69f0a4033f}{Window::immediateActing}}()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00082}00082\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}\ *action\ =\ immediate\_pool.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ action-\/>\mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{execute}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00095}\mbox{\hyperlink{class_window_a7513617caa6b1a47881c78d2f8f52382}{00095}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a7513617caa6b1a47881c78d2f8f52382}{Window::userActing}}()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00096}00096\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00098}00098\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}\ *action\ =\ immediate\_user\_pool.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ action-\/>\mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{execute}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00109}\mbox{\hyperlink{class_window_a7ddf17f69d4bfdd667f20b028a8c6324}{00109}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a7ddf17f69d4bfdd667f20b028a8c6324}{Window::systemActing}}()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00110}00110\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00111}00111\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}*\ action\ =\ system\_pool.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action\ ==\ \textcolor{keyword}{nullptr})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ immediate\_user\_pool.stopReceiving();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ immediate\_pool.stopReceiving();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ request\_pool.stopReceiving();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ system\_pool.stopReceiving();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ immediate\_user\_pool.clear();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ immediate\_pool.clear();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ request\_pool.clear();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ system\_pool.clear();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(200));}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ action-\/>\mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{execute}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ immediate\_user\_pool.continueReceiving();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ immediate\_pool.continueReceiving();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ request\_pool.continueReceiving();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ system\_pool.continueReceiving();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00136}00136\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00137}00137\ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00139}\mbox{\hyperlink{class_window_a593f842e27a96389784cb70e566d1d5e}{00139}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_window_a593f842e27a96389784cb70e566d1d5e}{Window::requestActing}}()}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00140}00140\ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00141}00141\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00142}00142\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_action}{Action}}\ *action\ =\ request\_pool.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (action\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_window_a481e1b58c1cd3c4f209ebb77389b0035}{isRun}}())}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(action-\/>\mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{isRequest}}()\ ==\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca1756eb5063b409a18fdbe46db0cf46c2}{REQUEST::ID::LOSE}}\ ||\ action-\/>\mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{isRequest}}()\ ==\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5caf5caffd3944a2efff7521924adedc75b}{REQUEST::ID::CLOSE\_INPUTBOX}}\ ||\ action-\/>\mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{isRequest}}()\ ==\ \mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca2c79747c3512fa19bef533b72268cce7}{REQUEST::ID::OPEN\_INPUTBOX}})}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ isOver\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ isOver\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (action-\/>\mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{isRequest}}())}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5cac5575e09f76609e1b780647b7ca7c459}{REQUEST::ID::NONE}}):}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca507082297973a57b116eefe37c0539e9}{REQUEST::ID::INVALID}}):\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca707976868535b915c0f7e544da62fe5b}{REQUEST::ID::CHANGE\_INF}}):\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>pause();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keywordtype}{id}\ =\ action-\/>\mbox{\hyperlink{class_action_aa8860c08894cce78bf203e26acc56e16}{getArgs}}().\mbox{\hyperlink{struct_a_r_g_s_a51e5e8276d28e2d5a217797643388994}{getInterfaceName}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.push(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>cont();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca237fcc575567a72d65d7452dc64c4ed5}{REQUEST::ID::LOAD\_GAME}}):\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.push(lastGame);}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(400));}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>cont();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca655e43a69801a685bf83409a95fa4331}{REQUEST::ID::SAVE\_GAME}}):\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>pause();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>pause();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastGame\ =\ UI.top()-\/>getName();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keywordtype}{id}\ =\ action-\/>\mbox{\hyperlink{class_action_aa8860c08894cce78bf203e26acc56e16}{getArgs}}().\mbox{\hyperlink{struct_a_r_g_s_a51e5e8276d28e2d5a217797643388994}{getInterfaceName}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.push(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>cont();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5cafc2886603d8293153c927094f9597008}{REQUEST::ID::POP\_THEN\_CHANGE\_INF}}):\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>pause();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keywordtype}{id}\ =\ action-\/>\mbox{\hyperlink{class_action_aa8860c08894cce78bf203e26acc56e16}{getArgs}}().\mbox{\hyperlink{struct_a_r_g_s_a51e5e8276d28e2d5a217797643388994}{getInterfaceName}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.push(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>cont();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca4e65ca30619f8d93311002f29a1b1cde}{REQUEST::ID::POP\_INF}}):\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>pause();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.pop();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>cont();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca1756eb5063b409a18fdbe46db0cf46c2}{REQUEST::ID::LOSE}}):\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ inputBox-\/>show();}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>pause();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>reset();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \textcolor{keywordtype}{id}\ =\ \textcolor{stringliteral}{"{}gameover"{}};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ highscore-\/>\mbox{\hyperlink{classhigh_score_ab67c9e61d8ecb26a3c91a7069ea3a725}{setName}}(UI.top()-\/>getName());}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ highscore-\/>\mbox{\hyperlink{classhigh_score_ab0fd849525e5f73d7e2d80614eda3c4b}{setScore}}(action-\/>\mbox{\hyperlink{class_action_aa8860c08894cce78bf203e26acc56e16}{getArgs}}().\mbox{\hyperlink{struct_a_r_g_s_a6d13d4e7914812ba0015357bf1ef1011}{num}}[0]);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.push(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UI.top()-\/>cont();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5caf5caffd3944a2efff7521924adedc75b}{REQUEST::ID::CLOSE\_INPUTBOX}}):}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ highscore-\/>\mbox{\hyperlink{classhigh_score_a8bba47705fe7a9fe39a4f52861748cd6}{add}}(inputBox-\/>\mbox{\hyperlink{class_input_box_adefe57e52696c79f193863f7cd53712e}{getText}}());}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ highscore-\/>\mbox{\hyperlink{classhigh_score_ac25dcfc70022ea3172803166fd05377d}{sort}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ highscore-\/>\mbox{\hyperlink{classhigh_score_a26008a5ae2fc2721d07053561f720b02}{save}}(\mbox{\hyperlink{namespace_p_a_t_b_a88a283307f40c708a84cc34c53e4d597}{PATB::INPUTBOX\_}}\ +\textcolor{stringliteral}{"{}inputbox.yaml"{}});}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputBox-\/>\mbox{\hyperlink{class_input_box_a55d66144905721f3fc1b698761691814}{clear}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputBox-\/>\mbox{\hyperlink{class_container_a5f2b24b3eff15fb251043fcfd32bf537}{hide}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca2c79747c3512fa19bef533b72268cce7}{REQUEST::ID::OPEN\_INPUTBOX}}):}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ inputBox-\/>\mbox{\hyperlink{class_container_a48cdaa85884938b417513cca003f4f6c}{show}}();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ (\mbox{\hyperlink{namespace_r_e_q_u_e_s_t_ae245172e8afb7949635ea359bc4d6c5ca72be10d764453caeba104b01526a0382}{REQUEST::ID::TOGGLE\_MUSIC}}):\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ musicController.toggle();}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00235}00235\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ action;}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00238}00238\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{acting_8cpp_source_l00239}00239\ \}}
 
 \end{DoxyCode}

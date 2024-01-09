@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Visualizer", "index.html", [
-    [ "Crossy Road clone", "index.html", "index" ],
+    [ "Run 4 Ur Life", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -63,9 +63,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_u_i_8cpp.html",
-"class_container.html#a7142b4749ec9adf106935fbafa8b67b0",
-"class_object.html#a3808523d40227445dbd975fc0600b462",
-"dir_558474d7e0002aa2c7120cf8bc1be17c.html"
+"class_container.html#a0dcb24d42fcc5d1bf4142c2e794f06b2",
+"class_input_box.html#a9f1d774a52e24e4be7d610f481f03d69",
+"class_visual.html#aaf9da56a094e8aec908dbba6b20b02e0",
+"classswitch_traffic_light_action.html#a99aa12254cf70a63e2323cd2f644c696",
+"namespace_p_a_t_b.html#a1079c50b80736597bdd3ba25ea21f282"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

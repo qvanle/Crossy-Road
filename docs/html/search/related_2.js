@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resizeaction_0',['resizeAction',['../class_window.html#a8f3ba516e4706c53e45089ad4e2afbaf',1,'Window']]]
+  ['dyingaction_0',['dyingAction',['../class_game.html#a44e864e2be0a8361c438908e72035477',1,'Game']]]
 ];

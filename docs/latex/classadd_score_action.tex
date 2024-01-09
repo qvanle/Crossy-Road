@@ -1,0 +1,200 @@
+\doxysection{add\+Score\+Action Class Reference}
+\hypertarget{classadd_score_action}{}\label{classadd_score_action}\index{addScoreAction@{addScoreAction}}
+
+
+{\ttfamily \#include $<$game.\+hpp$>$}
+
+Inheritance diagram for add\+Score\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classadd_score_action}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classadd_score_action_a12fb42e57ac0272d637bb94afc614790}{add\+Score\+Action}} (\mbox{\hyperlink{class_game}{Game}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{class_chunk}{Chunk}} \texorpdfstring{$\ast$}{*})
+\item 
+\mbox{\hyperlink{classadd_score_action_ab9235fabb663acb847053f9d82a2cce3}{\texorpdfstring{$\sim$}{\string~}add\+Score\+Action}} ()=default
+\item 
+void \mbox{\hyperlink{classadd_score_action_a84c0a9080aae4cba624e6b6218c87a02}{execute}} () override
+\item 
+\mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classadd_score_action_ae585d49a3ed24eb47c9c15f4a9a2d81d}{clone}} () override
+\item 
+virtual int \mbox{\hyperlink{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}{is\+Request}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_action_aa52ec29adf562280bdd3942d30f94d10}{is\+Package}} ()
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_action_ad79568053a276c15c84e3ec09637bc67}{unpack}} ()
+\item 
+virtual \mbox{\hyperlink{struct_a_r_g_s}{ARGS}} \& \mbox{\hyperlink{class_action_aa8860c08894cce78bf203e26acc56e16}{get\+Args}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{game_8hpp_source_l00091}{91}} of file \mbox{\hyperlink{game_8hpp_source}{game.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classadd_score_action_a12fb42e57ac0272d637bb94afc614790}\label{classadd_score_action_a12fb42e57ac0272d637bb94afc614790} 
+\index{addScoreAction@{addScoreAction}!addScoreAction@{addScoreAction}}
+\index{addScoreAction@{addScoreAction}!addScoreAction@{addScoreAction}}
+\doxysubsubsection{\texorpdfstring{addScoreAction()}{addScoreAction()}}
+{\footnotesize\ttfamily add\+Score\+Action\+::add\+Score\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} \texorpdfstring{$\ast$}{*}}]{game,  }\item[{\mbox{\hyperlink{class_chunk}{Chunk}} \texorpdfstring{$\ast$}{*}}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{addscore_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{addscore_8cpp_source}{addscore.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ this-\/>game\ =\ game;}
+\DoxyCodeLine{00006\ \ \ \ \ chunk\ =\ c;}
+\DoxyCodeLine{00007\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classadd_score_action_ab9235fabb663acb847053f9d82a2cce3}\label{classadd_score_action_ab9235fabb663acb847053f9d82a2cce3} 
+\index{addScoreAction@{addScoreAction}!````~addScoreAction@{\texorpdfstring{$\sim$}{\string~}addScoreAction}}
+\index{````~addScoreAction@{\texorpdfstring{$\sim$}{\string~}addScoreAction}!addScoreAction@{addScoreAction}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}addScoreAction()}{\string~addScoreAction()}}
+{\footnotesize\ttfamily add\+Score\+Action\+::\texorpdfstring{$\sim$}{\string~}add\+Score\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classadd_score_action_ae585d49a3ed24eb47c9c15f4a9a2d81d}\label{classadd_score_action_ae585d49a3ed24eb47c9c15f4a9a2d81d} 
+\index{addScoreAction@{addScoreAction}!clone@{clone}}
+\index{clone@{clone}!addScoreAction@{addScoreAction}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} add\+Score\+Action\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_action_abfec8e53b222f91614f1d9e1ac9d750a}{Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{addscore_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{addscore_8cpp_source}{addscore.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classadd_score_action_a12fb42e57ac0272d637bb94afc614790}{addScoreAction}}(game,\ chunk);}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classadd_score_action_a84c0a9080aae4cba624e6b6218c87a02}\label{classadd_score_action_a84c0a9080aae4cba624e6b6218c87a02} 
+\index{addScoreAction@{addScoreAction}!execute@{execute}}
+\index{execute@{execute}!addScoreAction@{addScoreAction}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily void add\+Score\+Action\+::execute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef571}{Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{addscore_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{addscore_8cpp_source}{addscore.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ game-\/>score\ +=\ chunk-\/>\mbox{\hyperlink{class_chunk_afcb0169fde26911251dafeb89683088c}{getScore}}();}
+\DoxyCodeLine{00012\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_aa8860c08894cce78bf203e26acc56e16}\label{class_action_aa8860c08894cce78bf203e26acc56e16} 
+\index{addScoreAction@{addScoreAction}!getArgs@{getArgs}}
+\index{getArgs@{getArgs}!addScoreAction@{addScoreAction}}
+\doxysubsubsection{\texorpdfstring{getArgs()}{getArgs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_a_r_g_s}{ARGS}} \& Action\+::get\+Args (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classchange_inf_request_adbd51fe6146c100c463db8499324031f}{change\+Inf\+Request}}, \mbox{\hyperlink{classlose_request_ac33c72169197387eaeb6567718a52abe}{lose\+Request}}, and \mbox{\hyperlink{classpop_then_change_inf_request_a9066d86bce55a375d9d4b1cb86989acf}{pop\+Then\+Change\+Inf\+Request}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{action_8hpp_aec8684d39aaf84b00ed6865d4b281cd4}{NONE\_ARGS}};}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_aa52ec29adf562280bdd3942d30f94d10}\label{class_action_aa52ec29adf562280bdd3942d30f94d10} 
+\index{addScoreAction@{addScoreAction}!isPackage@{isPackage}}
+\index{isPackage@{isPackage}!addScoreAction@{addScoreAction}}
+\doxysubsubsection{\texorpdfstring{isPackage()}{isPackage()}}
+{\footnotesize\ttfamily bool Action\+::is\+Package (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_packet_action_aabd2a32c3b4b3946098a406315bc4b8b}{Packet\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d}\label{class_action_a13a27cca8f03f3ed04ab5efd0b8e460d} 
+\index{addScoreAction@{addScoreAction}!isRequest@{isRequest}}
+\index{isRequest@{isRequest}!addScoreAction@{addScoreAction}}
+\doxysubsubsection{\texorpdfstring{isRequest()}{isRequest()}}
+{\footnotesize\ttfamily int Action\+::is\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_request_aa1c81e7dd0a737e8eece7f46199af34c}{Request}}, \mbox{\hyperlink{classchange_inf_request_acf1df90c90e0ffec7512ecbda9109a4c}{change\+Inf\+Request}}, \mbox{\hyperlink{classlose_request_a62f30b392783e1623352f0ae71838579}{lose\+Request}}, \mbox{\hyperlink{classpop_inf_request_a7f8030f245e6e324df0b83b083055df4}{pop\+Inf\+Request}}, \mbox{\hyperlink{classsave_request_a0da9bc42212a3078e62711b6f929c330}{save\+Request}}, \mbox{\hyperlink{classpop_then_change_inf_request_abee0eb7a5d627bb1341b44d9358d1299}{pop\+Then\+Change\+Inf\+Request}}, \mbox{\hyperlink{classload_game_request_a7a03852ce2b8ef29d4cddb7e4fcafc9e}{load\+Game\+Request}}, \mbox{\hyperlink{classtoggle_music_request_aae7d7bf1bdf6a6435712c5bca665375d}{toggle\+Music\+Request}}, \mbox{\hyperlink{classclose_inputbox_request_a708ffbe83794abc8b61e591d0b1ee471}{close\+Inputbox\+Request}}, \mbox{\hyperlink{classopen_inputbox_request_a5334a14a10bd14eb46c2ecceed21a613}{open\+Inputbox\+Request}}, and \mbox{\hyperlink{classsave_game_request_a897af93ee0494e91a701c6cb79b99b10}{save\+Game\+Request}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_action_ad79568053a276c15c84e3ec09637bc67}\label{class_action_ad79568053a276c15c84e3ec09637bc67} 
+\index{addScoreAction@{addScoreAction}!unpack@{unpack}}
+\index{unpack@{unpack}!addScoreAction@{addScoreAction}}
+\doxysubsubsection{\texorpdfstring{unpack()}{unpack()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_action}{Action}} \texorpdfstring{$\ast$}{*} $>$ Action\+::unpack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_packet_action_ae28f68158029f77be1262900afdc0121}{Packet\+Action}}.
+
+
+
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{return}\ std::vector<Action*>\ (\{\textcolor{keyword}{this}\});}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/game/include/\mbox{\hyperlink{game_8hpp}{game.\+hpp}}\item 
+src/game/src/action/\mbox{\hyperlink{addscore_8cpp}{addscore.\+cpp}}\end{DoxyCompactItemize}

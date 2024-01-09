@@ -145,8 +145,8 @@
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y,\ w,\ h;}
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ repeat\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ gapX\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ gapY\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ gapX\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ gapY\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00146}00146\ }
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dx\ =\ 1;}
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ dy\ =\ 1;}
@@ -166,9 +166,9 @@
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}repeat"{}}])\ }
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ repeat\ =\ img[\textcolor{stringliteral}{"{}repeat"{}}].as<\textcolor{keywordtype}{int}>();}
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}gapX"{}}])}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapX\ =\ img[\textcolor{stringliteral}{"{}gapX"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapX\ =\ img[\textcolor{stringliteral}{"{}gapX"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}gapY"{}}])}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapY\ =\ img[\textcolor{stringliteral}{"{}gapY"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gapY\ =\ img[\textcolor{stringliteral}{"{}gapY"{}}].as<\textcolor{keywordtype}{float}>()\ /\ 100.0;}
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00168}00168\ }
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}dx"{}}])}
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dx\ =\ img[\textcolor{stringliteral}{"{}dx"{}}].as<\textcolor{keywordtype}{int}>();}
@@ -185,110 +185,148 @@
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00181}00181\ }
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(img[\textcolor{stringliteral}{"{}axis"{}}]\ \&\&\ img[\textcolor{stringliteral}{"{}axis"{}}].as<std::string>()\ ==\ \textcolor{stringliteral}{"{}horizontal"{}})}
 \DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2;\ j\ +=\ dy\ *\ (gapY\ +\ h))}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00193}00193\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ j\ +=\ dy\ *\ (gapY\ +\ h))}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00208}00208\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ UnloadImage(image);}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00215}00215\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00216}00216\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00217}00217\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00218}\mbox{\hyperlink{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}{00218}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}{Container::loadFocus}}(YAML::Node\ node)}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00219}00219\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00220}00220\ \ \ \ \ focus[0]\ =\ node[0].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00221}00221\ \ \ \ \ focus[1]\ =\ node[1].as<\textcolor{keywordtype}{int}>();}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00222}00222\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00223}00223\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00224}\mbox{\hyperlink{class_container_a04fc266ae14009c6013f1952569f4a08}{00224}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_a04fc266ae14009c6013f1952569f4a08}{Container::chooseSprite}}(\textcolor{keywordtype}{int}\ index)}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00225}00225\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00226}00226\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00227}00227\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00228}00228\ \ \ \ \ focus[0]\ =\ index;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00229}00229\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00230}00230\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00231}\mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{00231}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{Container::chooseImage}}(\textcolor{keywordtype}{int}\ index)}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00232}00232\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00233}00233\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00234}00234\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00235}00235\ \ \ \ \ focus[1]\ =\ index;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00236}00236\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00237}00237\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00238}\mbox{\hyperlink{class_container_a7e1ea1d520bee6d8c48125546c795450}{00238}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{Container::chooseImage}}(\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{int}\ index2)}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00239}00239\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00240}00240\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00241}00241\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00242}00242\ \ \ \ \ \textcolor{keywordflow}{if}(index2\ <\ 0\ ||\ index2\ >=\ sprites.at(index).size())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00243}00243\ \ \ \ \ focus[0]\ =\ index;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00244}00244\ \ \ \ \ focus[1]\ =\ index2;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00245}00245\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00246}00246\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00247}\mbox{\hyperlink{class_container_aa70930c6166a257b6e946b14fbc125a5}{00247}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_aa70930c6166a257b6e946b14fbc125a5}{Container::nextImage}}()}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00248}00248\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00249}00249\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00250}00250\ \ \ \ \ focus[1]++;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00251}00251\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ >=\ sprites.at(focus[0]).size())\ focus[1]\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00252}00252\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00253}00253\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00254}\mbox{\hyperlink{class_container_ab929bd67689548988435cd86948cc808}{00254}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_ab929bd67689548988435cd86948cc808}{Container::prevImage}}()}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00255}00255\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00256}00256\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00257}00257\ \ \ \ \ focus[1]-\/-\/;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00258}00258\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ <\ 0)\ focus[1]\ =\ sprites.at(focus[0]).size()\ -\/\ 1;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00259}00259\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00260}00260\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00261}\mbox{\hyperlink{class_container_ae74100328cf86d4d9f5ad5873fe29aab}{00261}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_ae74100328cf86d4d9f5ad5873fe29aab}{Container::nextSprite}}()}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00262}00262\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00263}00263\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00264}00264\ \ \ \ \ focus[0]++;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00265}00265\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ >=\ sprites.size())\ focus[0]\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00266}00266\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00267}00267\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00268}\mbox{\hyperlink{class_container_a5c0a45f4dd53257b83a02e539db1f509}{00268}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_a5c0a45f4dd53257b83a02e539db1f509}{Container::prevSprite}}()}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00269}00269\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00270}00270\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00271}00271\ \ \ \ \ focus[0]-\/-\/;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00272}00272\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ <\ 0)\ focus[0]\ =\ sprites.size()\ -\/\ 1;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00273}00273\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00274}00274\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00275}\mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{00275}}\ std::string\ \mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{Container::getName}}()}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00276}00276\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00277}00277\ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00278}00278\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00279}00279\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00280}\mbox{\hyperlink{class_container_a20103c0d27bd0706624e7c0161771ef6}{00280}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_a20103c0d27bd0706624e7c0161771ef6}{Container::setProbability}}(\textcolor{keywordtype}{int}\ prob)}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00281}00281\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00282}00282\ \ \ \ \ probability\ =\ prob;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00283}00283\ \}}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00284}00284\ }
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00285}\mbox{\hyperlink{class_container_ab48f0dd8fad66981b1047bb4351619b4}{00285}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_container_ab48f0dd8fad66981b1047bb4351619b4}{Container::getProbability}}()}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00286}00286\ \{}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00287}00287\ \ \ \ \ \textcolor{keywordflow}{return}\ probability;}
-\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00288}00288\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2;\ j\ +=\ dy\ *\ (gapY\ +\ h))\ \{\ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ i\ =\ x;\ i\ >=\ 0\ \&\&\ i\ +\ w\ <=\ 1\ +\ 1e-\/2;\ i\ +=\ dx\ *\ (gapX\ +\ w))}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{float}\ j\ =\ y;\ j\ >=\ 0\ \&\&\ j\ +\ h\ <\ 1\ +\ 1e-\/2\ \&\&\ repeat-\/-\/;\ j\ +=\ dy\ *\ (gapY\ +\ h))}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Rectangle\ rect\ =\ \{i\ *\ imgw,\ j\ *\ imgh,\ w\ *\ imgw,\ h\ *\ imgh\};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Image\ img2\ =\ ImageFromImage(image,\ rect);}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Texture2D\ *txt\ =\ \textcolor{keyword}{new}\ Texture2D(LoadTextureFromImage(img2));\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_visual}{Visual}}\ *vis\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_visual}{Visual}}(txt,\ \textcolor{keyword}{this},\ \{0,\ 0,\ 1,\ 1\});}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sprites.back().push\_back(vis);}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ UnloadImage(img2);}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ UnloadImage(image);}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00213}00213\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00214}00214\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00216}\mbox{\hyperlink{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}{00216}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_a2b2426d6f7233fd0d2d3213a20a92dd6}{Container::loadFocus}}(YAML::Node\ node)}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00217}00217\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00218}00218\ \ \ \ \ focus[0]\ =\ node[0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00219}00219\ \ \ \ \ focus[1]\ =\ node[1].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00220}00220\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00222}\mbox{\hyperlink{class_container_a04fc266ae14009c6013f1952569f4a08}{00222}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_a04fc266ae14009c6013f1952569f4a08}{Container::chooseSprite}}(\textcolor{keywordtype}{int}\ index)}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00223}00223\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00224}00224\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00225}00225\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00226}00226\ \ \ \ \ focus[0]\ =\ index;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00227}00227\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00229}\mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{00229}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{Container::chooseImage}}(\textcolor{keywordtype}{int}\ index)}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00230}00230\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00231}00231\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00232}00232\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00233}00233\ \ \ \ \ focus[1]\ =\ index;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00234}00234\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00236}\mbox{\hyperlink{class_container_a7e1ea1d520bee6d8c48125546c795450}{00236}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_ac834daaf7955ebf7cd11f3c032c7141a}{Container::chooseImage}}(\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{int}\ index2)}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00237}00237\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00238}00238\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00239}00239\ \ \ \ \ \textcolor{keywordflow}{if}(index\ <\ 0\ ||\ index\ >=\ sprites.size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00240}00240\ \ \ \ \ \textcolor{keywordflow}{if}(index2\ <\ 0\ ||\ index2\ >=\ sprites.at(index).size())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00241}00241\ \ \ \ \ focus[0]\ =\ index;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00242}00242\ \ \ \ \ focus[1]\ =\ index2;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00243}00243\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00244}00244\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00245}\mbox{\hyperlink{class_container_aa70930c6166a257b6e946b14fbc125a5}{00245}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_aa70930c6166a257b6e946b14fbc125a5}{Container::nextImage}}()}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00246}00246\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00247}00247\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00248}00248\ \ \ \ \ focus[1]++;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00249}00249\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ >=\ sprites.at(focus[0]).size())\ focus[1]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00250}00250\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00252}\mbox{\hyperlink{class_container_ab929bd67689548988435cd86948cc808}{00252}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_ab929bd67689548988435cd86948cc808}{Container::prevImage}}()}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00253}00253\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00254}00254\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00255}00255\ \ \ \ \ focus[1]-\/-\/;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00256}00256\ \ \ \ \ \textcolor{keywordflow}{if}(focus[1]\ <\ 0)\ focus[1]\ =\ sprites.at(focus[0]).size()\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00257}00257\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00259}\mbox{\hyperlink{class_container_ae74100328cf86d4d9f5ad5873fe29aab}{00259}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_ae74100328cf86d4d9f5ad5873fe29aab}{Container::nextSprite}}()}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00260}00260\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00261}00261\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00262}00262\ \ \ \ \ focus[0]++;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00263}00263\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ >=\ sprites.size())\ focus[0]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00264}00264\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00266}\mbox{\hyperlink{class_container_a5c0a45f4dd53257b83a02e539db1f509}{00266}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_a5c0a45f4dd53257b83a02e539db1f509}{Container::prevSprite}}()}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00267}00267\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00268}00268\ \ \ \ \ \textcolor{keywordflow}{if}(sprites.empty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00269}00269\ \ \ \ \ focus[0]-\/-\/;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00270}00270\ \ \ \ \ \textcolor{keywordflow}{if}(focus[0]\ <\ 0)\ focus[0]\ =\ sprites.size()\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00271}00271\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00272}00272\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00273}\mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{00273}}\ std::string\ \mbox{\hyperlink{class_container_ae8cf3f2a9bbf12e6388c97c61c74d69b}{Container::getName}}()}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00274}00274\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00275}00275\ \ \ \ \ \textcolor{keywordflow}{return}\ name;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00276}00276\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00278}\mbox{\hyperlink{class_container_a20103c0d27bd0706624e7c0161771ef6}{00278}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_a20103c0d27bd0706624e7c0161771ef6}{Container::setProbability}}(\textcolor{keywordtype}{int}\ prob)}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00279}00279\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00280}00280\ \ \ \ \ probability\ =\ prob;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00281}00281\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00283}\mbox{\hyperlink{class_container_ab48f0dd8fad66981b1047bb4351619b4}{00283}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_container_ab48f0dd8fad66981b1047bb4351619b4}{Container::getProbability}}()}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00284}00284\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00285}00285\ \ \ \ \ \textcolor{keywordflow}{return}\ probability;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00286}00286\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00288}\mbox{\hyperlink{class_container_afccde5a258c662bdd59a8b24f135603c}{00288}}\ YAML::Node\ \mbox{\hyperlink{class_container_afccde5a258c662bdd59a8b24f135603c}{Container::createSpecialContent}}()}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00289}00289\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00290}00290\ \ \ \ \ YAML::Node\ node;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00291}00291\ \ \ \ \ node[\textcolor{stringliteral}{"{}name"{}}]\ =\ name;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00292}00292\ \ \ \ \ node[\textcolor{stringliteral}{"{}focus"{}}][0]\ =\ focus[0];}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00293}00293\ \ \ \ \ node[\textcolor{stringliteral}{"{}focus"{}}][1]\ =\ focus[1];}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00294}00294\ \ \ \ \ node[\textcolor{stringliteral}{"{}probability"{}}]\ =\ probability;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00295}00295\ \ \ \ \ node[\textcolor{stringliteral}{"{}visible"{}}]\ =\ visible;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00296}00296\ \ \ \ \ node[\textcolor{stringliteral}{"{}x"{}}]\ =\ \mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[0];}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00297}00297\ \ \ \ \ node[\textcolor{stringliteral}{"{}y"{}}]\ =\ \mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[1];}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00298}00298\ \ \ \ \ node[\textcolor{stringliteral}{"{}w"{}}]\ =\ \mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[2];}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00299}00299\ \ \ \ \ node[\textcolor{stringliteral}{"{}h"{}}]\ =\ \mbox{\hyperlink{class_frame_a0dcb24d42fcc5d1bf4142c2e794f06b2}{getRelative}}()[3];}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00300}00300\ \ \ \ \ \textcolor{keywordflow}{return}\ node;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00301}00301\ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00302}00302\ }
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00303}\mbox{\hyperlink{class_container_a290967d3f4355d8945456006076ae92f}{00303}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_container_a290967d3f4355d8945456006076ae92f}{Container::loadSpecialContent}}(YAML::Node\ node)}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00304}00304\ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00305}00305\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}name"{}}])}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00306}00306\ \ \ \ \ \ \ \ \ name\ =\ node[\textcolor{stringliteral}{"{}name"{}}].as<std::string>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00307}00307\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}focus"{}}])}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00308}00308\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00309}00309\ \ \ \ \ \ \ \ \ focus[0]\ =\ node[\textcolor{stringliteral}{"{}focus"{}}][0].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00310}00310\ \ \ \ \ \ \ \ \ focus[1]\ =\ node[\textcolor{stringliteral}{"{}focus"{}}][1].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00311}00311\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00312}00312\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}probability"{}}])}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00313}00313\ \ \ \ \ \ \ \ \ probability\ =\ node[\textcolor{stringliteral}{"{}probability"{}}].as<\textcolor{keywordtype}{int}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00314}00314\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}visible"{}}])}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00315}00315\ \ \ \ \ \ \ \ \ visible\ =\ node[\textcolor{stringliteral}{"{}visible"{}}].as<\textcolor{keywordtype}{bool}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00316}00316\ \ \ \ \ \mbox{\hyperlink{datatype_8hpp_a847b181805472a4947139515352f33df}{fRect}}\ rec;}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00317}00317\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}x"{}}])}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00318}00318\ \ \ \ \ \ \ \ \ rec[0]\ =\ node[\textcolor{stringliteral}{"{}x"{}}].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00319}00319\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}y"{}}])}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00320}00320\ \ \ \ \ \ \ \ \ rec[1]\ =\ node[\textcolor{stringliteral}{"{}y"{}}].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00321}00321\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}w"{}}])}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00322}00322\ \ \ \ \ \ \ \ \ rec[2]\ =\ node[\textcolor{stringliteral}{"{}w"{}}].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00323}00323\ \ \ \ \ \textcolor{keywordflow}{if}(node[\textcolor{stringliteral}{"{}h"{}}])}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00324}00324\ \ \ \ \ \ \ \ \ rec[3]\ =\ node[\textcolor{stringliteral}{"{}h"{}}].as<\textcolor{keywordtype}{float}>();}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00325}00325\ \ \ \ \ \mbox{\hyperlink{class_frame_ab54f6e87faf0216b708c40cb1bc1a4a2}{setRelative}}(rec);}
+\DoxyCodeLine{\Hypertarget{container_2src_2constructor_8cpp_source_l00326}00326\ \}}
 
 \end{DoxyCode}

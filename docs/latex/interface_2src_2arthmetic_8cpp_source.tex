@@ -6,7 +6,7 @@
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00002}00002\ }
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00003}\mbox{\hyperlink{class_interface_a77300df653a7ab735342494bc9285695}{00003}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_interface_a77300df653a7ab735342494bc9285695}{Interface::drawNested}}()}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ child\ :\ nested)}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&child\ :\ nested)}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00006}00006\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00007}00007\ \ \ \ \ \ \ \ \ child-\/>draw();}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00008}00008\ \ \ \ \ \}}
@@ -14,7 +14,7 @@
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00010}00010\ }
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00011}\mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{00011}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{Interface::drawContainers}}()}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00012}00012\ \{}
-\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ child\ :\ containers)}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&child\ :\ containers)}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00014}00014\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ child-\/>draw();}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00016}00016\ \ \ \ \ \}}
@@ -22,13 +22,23 @@
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00018}00018\ }
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00019}\mbox{\hyperlink{class_interface_a6c4f34c5e36460289f95b486a961307f}{00019}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_interface_a6c4f34c5e36460289f95b486a961307f}{Interface::draw}}()}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00020}00020\ \{}
-\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_container_ac8feb6b3a790483f85aad40a46327f24}{Container::draw}}();}
-\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_interface_a77300df653a7ab735342494bc9285695}{drawNested}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_container_aee9a838a8f651d7d1e195290a2ba1ecb}{isVisible}}())}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_container_ac8feb6b3a790483f85aad40a46327f24}{Container::draw}}();}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{drawContainers}}();}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{class_interface_a77300df653a7ab735342494bc9285695}{drawNested}}();}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{class_interface_a485966ce945f1a7efe691245140a3125}{drawContainers}}();}
 \DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00030}\mbox{\hyperlink{class_interface_a9f68267f5444b13b15fd4b476dd4010a}{00030}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_interface_a9f68267f5444b13b15fd4b476dd4010a}{Interface::setScore}}(\textcolor{keywordtype}{int}\ score)}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00031}00031\ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00032}00032\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00035}\mbox{\hyperlink{class_interface_a84b511ee832ef7716a3958e74556e4a4}{00035}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_interface_a84b511ee832ef7716a3958e74556e4a4}{Interface::getScore}}()}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{interface_2src_2arthmetic_8cpp_source_l00038}00038\ \}}
 
 \end{DoxyCode}

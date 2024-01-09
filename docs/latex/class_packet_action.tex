@@ -71,7 +71,7 @@ Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00044}{44}}
 \index{PacketAction@{PacketAction}!PacketAction@{PacketAction}}
 \index{PacketAction@{PacketAction}!PacketAction@{PacketAction}}
 \doxysubsubsection{\texorpdfstring{PacketAction()}{PacketAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Packet\+Action\+::\+Packet\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*}}]{action }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Packet\+Action\+::\+Packet\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*}}]{other }\end{DoxyParamCaption})}
 
 
 
@@ -79,9 +79,9 @@ Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00049}{49}}
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_action_a4f457ccfc8336b565cadca56b36e0271}{Action}}(action) }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_action_a4f457ccfc8336b565cadca56b36e0271}{Action}}(other) }
 \DoxyCodeLine{00050\ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ action-\/>actions)}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ other-\/>actions)}
 \DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ actions.push\_back(a-\/>\mbox{\hyperlink{class_packet_action_afad82eb9d4666aa8bdcd0461a6589888}{clone}}());}
 \DoxyCodeLine{00053\ \}}
 
@@ -129,7 +129,7 @@ Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00067}{67}}
 \index{PacketAction@{PacketAction}!addAction@{addAction}}
 \index{addAction@{addAction}!PacketAction@{PacketAction}}
 \doxysubsubsection{\texorpdfstring{addAction()}{addAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Packet\+Action\+::add\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*}}]{action }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Packet\+Action\+::add\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_packet_action}{Packet\+Action}} \texorpdfstring{$\ast$}{*}}]{other }\end{DoxyParamCaption})}
 
 
 
@@ -138,10 +138,11 @@ Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00072}{72}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00073\ \{}
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ action-\/>actions)}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ i\ :\ other-\/>actions)}
 \DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ actions.push\_back(i);}
-\DoxyCodeLine{00076\ \ \ \ \ action-\/>actions.clear();}
-\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00076\ \ \ \ \ other-\/>actions.clear();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{delete}\ other;}
+\DoxyCodeLine{00078\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_packet_action_afad82eb9d4666aa8bdcd0461a6589888}\label{class_packet_action_afad82eb9d4666aa8bdcd0461a6589888} 
@@ -156,13 +157,13 @@ Reimplemented from \mbox{\hyperlink{class_action_abfec8e53b222f91614f1d9e1ac9d75
 
 
 
-Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00118}{118}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00117\ \{}
-\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action_a5c0f78024bc39aac9aac97f8be05bd80}{PacketAction}}(\textcolor{keyword}{this});}
-\DoxyCodeLine{00119\ \}}
+\DoxyCodeLine{00119\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_packet_action_a5c0f78024bc39aac9aac97f8be05bd80}{PacketAction}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{00121\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_packet_action_a4408e65a3fd32f65b5c5ce0b6fd25b87}\label{class_packet_action_a4408e65a3fd32f65b5c5ce0b6fd25b87} 
@@ -177,16 +178,16 @@ Reimplemented from \mbox{\hyperlink{class_action_ae6b533b4436ae2634675a483b73ef5
 
 
 
-Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00107}{107}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00109}{109}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00108\ \{}
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ actions)}
-\DoxyCodeLine{00110\ \ \ \ \ \{}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ a-\/>execute();}
-\DoxyCodeLine{00112\ \ \ \ \ \}}
-\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00110\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ actions)}
+\DoxyCodeLine{00112\ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ a-\/>execute();}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \}}
 
 \end{DoxyCode}
 \Hypertarget{class_action_aa8860c08894cce78bf203e26acc56e16}\label{class_action_aa8860c08894cce78bf203e26acc56e16} 
@@ -197,7 +198,7 @@ Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00107}{107}
 
 
 
-Reimplemented in \mbox{\hyperlink{classchange_inf_request_adbd51fe6146c100c463db8499324031f}{change\+Inf\+Request}}.
+Reimplemented in \mbox{\hyperlink{classchange_inf_request_adbd51fe6146c100c463db8499324031f}{change\+Inf\+Request}}, \mbox{\hyperlink{classlose_request_ac33c72169197387eaeb6567718a52abe}{lose\+Request}}, and \mbox{\hyperlink{classpop_then_change_inf_request_a9066d86bce55a375d9d4b1cb86989acf}{pop\+Then\+Change\+Inf\+Request}}.
 
 
 
@@ -239,7 +240,7 @@ Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00062}{62}}
 
 
 
-Reimplemented in \mbox{\hyperlink{class_request_aa1c81e7dd0a737e8eece7f46199af34c}{Request}}, \mbox{\hyperlink{classchange_inf_request_acf1df90c90e0ffec7512ecbda9109a4c}{change\+Inf\+Request}}, and \mbox{\hyperlink{classlose_request_a62f30b392783e1623352f0ae71838579}{lose\+Request}}.
+Reimplemented in \mbox{\hyperlink{class_request_aa1c81e7dd0a737e8eece7f46199af34c}{Request}}, \mbox{\hyperlink{classchange_inf_request_acf1df90c90e0ffec7512ecbda9109a4c}{change\+Inf\+Request}}, \mbox{\hyperlink{classlose_request_a62f30b392783e1623352f0ae71838579}{lose\+Request}}, \mbox{\hyperlink{classpop_inf_request_a7f8030f245e6e324df0b83b083055df4}{pop\+Inf\+Request}}, \mbox{\hyperlink{classsave_request_a0da9bc42212a3078e62711b6f929c330}{save\+Request}}, \mbox{\hyperlink{classpop_then_change_inf_request_abee0eb7a5d627bb1341b44d9358d1299}{pop\+Then\+Change\+Inf\+Request}}, \mbox{\hyperlink{classload_game_request_a7a03852ce2b8ef29d4cddb7e4fcafc9e}{load\+Game\+Request}}, \mbox{\hyperlink{classtoggle_music_request_aae7d7bf1bdf6a6435712c5bca665375d}{toggle\+Music\+Request}}, \mbox{\hyperlink{classclose_inputbox_request_a708ffbe83794abc8b61e591d0b1ee471}{close\+Inputbox\+Request}}, \mbox{\hyperlink{classopen_inputbox_request_a5334a14a10bd14eb46c2ecceed21a613}{open\+Inputbox\+Request}}, and \mbox{\hyperlink{classsave_game_request_a897af93ee0494e91a701c6cb79b99b10}{save\+Game\+Request}}.
 
 
 
@@ -264,36 +265,37 @@ Reimplemented from \mbox{\hyperlink{class_action_ad79568053a276c15c84e3ec09637bc
 
 
 
-Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
+Definition at line \mbox{\hyperlink{action_2src_2action_8cpp_source_l00080}{80}} of file \mbox{\hyperlink{action_2src_2action_8cpp_source}{action.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00080\ \{}
-\DoxyCodeLine{00081\ \ \ \ \ std::vector<Action*>\ unpacked;}
-\DoxyCodeLine{00082\ \ \ \ \ std::queue<PacketAction*>\ q;}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00084\ \ \ \ \ q.push(\textcolor{keyword}{this});}
-\DoxyCodeLine{00085\ }
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{while}(!q.empty())\ }
-\DoxyCodeLine{00087\ \ \ \ \ \{}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ p\ =\ q.front();}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ q.pop();}
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ p-\/>actions)}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(a-\/>isPackage())}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q.push((\mbox{\hyperlink{class_packet_action}{PacketAction}}*)a);}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ unpacked.push\_back(a);}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ p-\/>actions.clear();}
-\DoxyCodeLine{00103\ \ \ \ \ \}}
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{return}\ unpacked;}
-\DoxyCodeLine{00105\ \}}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ std::vector<Action*>\ unpacked;}
+\DoxyCodeLine{00083\ \ \ \ \ std::queue<PacketAction*>\ q;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ q.push(\textcolor{keyword}{this});}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{while}(!q.empty())\ }
+\DoxyCodeLine{00088\ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_packet_action}{PacketAction}}*\ p\ =\ q.front();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ q.pop();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\mbox{\hyperlink{class_action}{Action}}*\ a\ :\ p-\/>actions)}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(a-\/>isPackage())}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ q.push((\mbox{\hyperlink{class_packet_action}{PacketAction}}*)a);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ unpacked.push\_back(a);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ p-\/>actions.clear();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ p;}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordflow}{return}\ unpacked;}
+\DoxyCodeLine{00107\ \}}
 
 \end{DoxyCode}
 
