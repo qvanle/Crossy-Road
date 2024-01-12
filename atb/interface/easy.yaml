@@ -30,49 +30,49 @@
     "w": 3 
     "h": 6
   -
-    "path": "entity/ambulance.yaml" # 1
+    "path": "entity/ambulance.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
     "path": "entity/ambulanceRL.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
-    "path": "entity/bus.yaml" # 3
+    "path": "entity/bus.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
-    "path": "entity/busRL.yaml" # 4
+    "path": "entity/busRL.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
-    "path": "entity/civic.yaml" # 5
+    "path": "entity/civic.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   -
     "path": "entity/civicRL.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   -
-    "path": "entity/cow.yaml" # 7
+    "path": "entity/cow.yaml"
     "x": 40
     "y": 40
     "w": 10
     "h": 10
   -
-    "path": "entity/cowRL.yaml" # 8
+    "path": "entity/cowRL.yaml"
     "x": 40
     "y": 40
     "w": 10
@@ -84,7 +84,7 @@
     "w": 10
     "h": 10 
   -
-    "path": "entity/duckRL.yaml"  # 10
+    "path": "entity/duckRL.yaml"
     "x": 40
     "y": 40
     "w": 10
@@ -96,13 +96,13 @@
     "w": 5
     "h": 5
   - 
-    "path": "entity/frog.yaml"  # 12
+    "path": "entity/frog.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/frogRL.yaml"  # 13
+    "path": "entity/frogRL.yaml"
     "x": 90
     "y": 40
     "w": 10
@@ -111,26 +111,26 @@
     "path": "entity/jeep.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/jeepRL.yaml"  # 15
+    "path": "entity/jeepRL.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
     "path": "entity/police.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/policeRL.yaml"  # 17
+    "path": "entity/policeRL.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
     "path": "entity/rabbit.yaml"
     "x": 90
@@ -138,7 +138,7 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/rabbitRL.yaml"  # 19
+    "path": "entity/rabbitRL.yaml"
     "x": 90
     "y": 40
     "w": 10
@@ -150,7 +150,7 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/squirrelRL.yaml"  # 21
+    "path": "entity/squirrelRL.yaml"
     "x": 90
     "y": 40
     "w": 10
@@ -159,40 +159,40 @@
     "path": "entity/train.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/trainRL.yaml" # 23
+    "path": "entity/trainRL.yaml"
+    "x": 90
+    "y": 40
+    "w": 15
+    "h": 15
+  - 
+    "path": "entity/winter/log.yaml"  # 24
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/spring/log.yaml"  # 24
+    "path": "entity/winter/rock.yaml" #25
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/spring/rock.yaml" #25
+    "path": "entity/winter/tree_1.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/spring/tree_1.yaml"
+    "path": "entity/winter/tree_2.yaml" #27
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/spring/tree_2.yaml" #27
-    "x": 90
-    "y": 40
-    "w": 10
-    "h": 10
-  - 
-    "path": "entity/spring/tree_3.yaml"
+    "path": "entity/winter/tree_3.yaml"
     "x": 90
     "y": 40
     "w": 10

@@ -43,46 +43,46 @@
     "path": "entity/ambulance.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
     "path": "entity/ambulanceRL.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
-    "path": "entity/autumn/bus.yaml"
+    "path": "entity/bus.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
-    "path": "entity/autumn/busRL.yaml"
+    "path": "entity/busRL.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
     "path": "entity/civic.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   -
     "path": "entity/civicRL.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   -
-    "path": "entity/autumn/cow.yaml"
+    "path": "entity/cow.yaml"
     "x": 40
     "y": 40
     "w": 10
     "h": 10
   -
-    "path": "entity/autumn/cowRL.yaml"
+    "path": "entity/cowRL.yaml"
     "x": 40
     "y": 40
     "w": 10
@@ -118,29 +118,29 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/autumn/jeep.yaml"
+    "path": "entity/jeep.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/autumn/jeepRL.yaml"
+    "path": "entity/jeepRL.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/autumn/police.yaml"
+    "path": "entity/police.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/autumn/policeRL.yaml"
+    "path": "entity/policeRL.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
     "path": "entity/rabbit.yaml"
     "x": 90
@@ -169,40 +169,40 @@
     "path": "entity/train.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
     "path": "entity/trainRL.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/autumn/log.yaml"  # 24
+    "path": "entity/winter/log.yaml"  # 24
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/autumn/rock.yaml" #25
+    "path": "entity/winter/rock.yaml" #25
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/autumn/tree_1.yaml"
+    "path": "entity/winter/tree_1.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/autumn/tree_2.yaml" #27
+    "path": "entity/winter/tree_2.yaml" #27
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/autumn/tree_3.yaml"
+    "path": "entity/winter/tree_3.yaml"
     "x": 90
     "y": 40
     "w": 10

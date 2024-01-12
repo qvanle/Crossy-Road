@@ -1,0 +1,14 @@
+# Target labels
+ yamlcpp-populate
+# Source files and their labels
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/CMakeFiles/yamlcpp-populate
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/CMakeFiles/yamlcpp-populate.rule
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/CMakeFiles/yamlcpp-populate-complete.rule
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-build.rule
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-configure.rule
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-download.rule
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-install.rule
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-mkdir.rule
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-patch.rule
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-test.rule
+C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-update.rule

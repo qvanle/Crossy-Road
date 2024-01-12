@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/CMakeFiles/yamlcpp-populate"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/CMakeFiles/yamlcpp-populate.rule"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/CMakeFiles/yamlcpp-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-subbuild/yamlcpp-populate-prefix/src/yamlcpp-populate-stamp/yamlcpp-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"yamlcpp-populate"
+		],
+		"name" : "yamlcpp-populate"
+	}
+}

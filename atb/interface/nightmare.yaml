@@ -54,58 +54,58 @@
     "path": "entity/ambulance.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
     "path": "entity/ambulanceRL.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
-    "path": "entity/nightmare/bus.yaml"
+    "path": "entity/bus.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
-    "path": "entity/nightmare/busRL.yaml"
+    "path": "entity/busRL.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 20
+    "h": 20
   -
     "path": "entity/civic.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   -
     "path": "entity/civicRL.yaml"
     "x": 40
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   -
-    "path": "entity/nightmare/cow.yaml"
+    "path": "entity/cow.yaml"
     "x": 40
     "y": 40
     "w": 10
     "h": 10
   -
-    "path": "entity/nightmare/cowRL.yaml"
+    "path": "entity/cowRL.yaml"
     "x": 40
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/nightmare/duck.yaml" 
+    "path": "entity/duck.yaml" 
     "x": 60
     "y": 40
     "w": 10
     "h": 10 
   -
-    "path": "entity/nightmare/duckRL.yaml"
+    "path": "entity/duckRL.yaml"
     "x": 40
     "y": 40
     "w": 10
@@ -129,29 +129,29 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/nightmare/jeep.yaml"
+    "path": "entity/jeep.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/nightmare/jeepRL.yaml"
+    "path": "entity/jeepRL.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/nightmare/police.yaml"
+    "path": "entity/police.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
-    "path": "entity/nightmare/policeRL.yaml"
+    "path": "entity/policeRL.yaml"
     "x": 90
     "y": 40
-    "w": 10
-    "h": 10
+    "w": 15
+    "h": 15
   - 
     "path": "entity/rabbit.yaml"
     "x": 90
@@ -177,43 +177,43 @@
     "w": 10
     "h": 10
   - 
-    "path": "entity/nightmare/train.yaml"
+    "path": "entity/train.yaml"
+    "x": 90
+    "y": 40
+    "w": 15
+    "h": 15
+  - 
+    "path": "entity/trainRL.yaml"
+    "x": 90
+    "y": 40
+    "w": 15
+    "h": 15
+  - 
+    "path": "entity/winter/log.yaml"  # 24
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/nightmare/trainRL.yaml"
+    "path": "entity/winter/rock.yaml" #25
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/nightmare/log.yaml"  # 24
+    "path": "entity/winter/tree_1.yaml"
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/nightmare/rock.yaml" #25
+    "path": "entity/winter/tree_2.yaml" #27
     "x": 90
     "y": 40
     "w": 10
     "h": 10
   - 
-    "path": "entity/nightmare/tree_1.yaml"
-    "x": 90
-    "y": 40
-    "w": 10
-    "h": 10
-  - 
-    "path": "entity/nightmare/tree_2.yaml" #27
-    "x": 90
-    "y": 40
-    "w": 10
-    "h": 10
-  - 
-    "path": "entity/nightmare/tree_3.yaml"
+    "path": "entity/winter/tree_3.yaml"
     "x": 90
     "y": 40
     "w": 10

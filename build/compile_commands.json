@@ -1,0 +1,776 @@
+[
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o CMakeFiles\\CLM.dir\\main.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\main.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\main.cpp",
+  "output": "CMakeFiles\\CLM.dir\\main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -isystem \"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rcore.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rcore.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rcore.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rcore.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -isystem \"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rmodels.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rmodels.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rmodels.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rmodels.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -isystem \"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rshapes.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rshapes.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rshapes.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rshapes.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -isystem \"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rtext.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rtext.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rtext.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rtext.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -isystem \"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rtextures.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rtextures.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\rtextures.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\rtextures.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -isystem \"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\utils.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\utils.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\utils.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\utils.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -isystem \"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=gnu99 -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\raudio.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\raudio.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\raudio.c",
+  "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\raudio.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\context.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\context.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\context.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\context.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\init.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\init.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\init.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\init.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\input.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\input.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\input.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\input.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\monitor.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\monitor.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\monitor.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\platform.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\platform.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\platform.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\platform.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\vulkan.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\vulkan.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\vulkan.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\window.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\window.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\window.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\window.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\egl_context.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\egl_context.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\egl_context.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\osmesa_context.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\osmesa_context.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\osmesa_context.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_init.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_init.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_init.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_init.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_monitor.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_monitor.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_monitor.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_monitor.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_window.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_window.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_window.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_window.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_joystick.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_joystick.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\null_joystick.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\null_joystick.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_module.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_module.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_module.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_module.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_time.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_time.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_time.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_thread.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_thread.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_thread.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_init.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_init.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_init.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_joystick.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_joystick.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_joystick.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_monitor.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_monitor.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_monitor.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_window.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\win32_window.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\win32_window.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\cc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-build/raylib/external/glfw/src\" -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -std=c99 -Wall -Wdeclaration-after-statement -o _deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\wgl_context.c\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\raylib-src\\src\\external\\glfw\\src\\wgl_context.c",
+  "output": "_deps\\raylib-build\\raylib\\external\\glfw\\src\\CMakeFiles\\glfw.dir\\wgl_context.c.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\contrib\\graphbuilder.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\contrib\\graphbuilder.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\contrib\\graphbuilder.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\contrib\\graphbuilder.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\contrib\\graphbuilderadapter.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\contrib\\graphbuilderadapter.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\contrib\\graphbuilderadapter.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\contrib\\graphbuilderadapter.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\binary.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\binary.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\binary.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\binary.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\convert.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\convert.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\convert.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\convert.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\depthguard.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\depthguard.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\depthguard.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\depthguard.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\directives.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\directives.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\directives.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\directives.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emit.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emit.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emit.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emit.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emitfromevents.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emitfromevents.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emitfromevents.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emitfromevents.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emitter.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emitter.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emitter.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emitter.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emitterstate.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emitterstate.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emitterstate.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emitterstate.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emitterutils.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emitterutils.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\emitterutils.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\emitterutils.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\exceptions.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\exceptions.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\exceptions.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\exceptions.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\exp.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\exp.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\exp.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\exp.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\memory.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\memory.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\memory.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\memory.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\node.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\node.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\node.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\node.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\node_data.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\node_data.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\node_data.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\node_data.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\nodebuilder.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\nodebuilder.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\nodebuilder.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\nodebuilder.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\nodeevents.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\nodeevents.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\nodeevents.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\nodeevents.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\null.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\null.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\null.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\null.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\ostream_wrapper.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\ostream_wrapper.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\ostream_wrapper.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\ostream_wrapper.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\parse.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\parse.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\parse.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\parse.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\parser.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\parser.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\parser.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\parser.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\regex_yaml.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\regex_yaml.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\regex_yaml.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\regex_yaml.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\scanner.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\scanner.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\scanner.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\scanner.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\scanscalar.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\scanscalar.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\scanscalar.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\scanscalar.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\scantag.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\scantag.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\scantag.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\scantag.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\scantoken.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\scantoken.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\scantoken.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\scantoken.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\simplekey.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\simplekey.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\simplekey.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\simplekey.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\singledocparser.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\singledocparser.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\singledocparser.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\singledocparser.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\stream.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\stream.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\stream.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\stream.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/src\" -std=gnu++17 -o _deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\tag.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\tag.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\src\\tag.cpp",
+  "output": "_deps\\yamlcpp-build\\CMakeFiles\\yaml-cpp.dir\\src\\tag.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -std=gnu++17 -o _deps\\yamlcpp-build\\util\\CMakeFiles\\yaml-cpp-sandbox.dir\\sandbox.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\util\\sandbox.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\util\\sandbox.cpp",
+  "output": "_deps\\yamlcpp-build\\util\\CMakeFiles\\yaml-cpp-sandbox.dir\\sandbox.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -std=gnu++17 -o _deps\\yamlcpp-build\\util\\CMakeFiles\\yaml-cpp-parse.dir\\parse.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\util\\parse.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\util\\parse.cpp",
+  "output": "_deps\\yamlcpp-build\\util\\CMakeFiles\\yaml-cpp-parse.dir\\parse.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -std=gnu++17 -o _deps\\yamlcpp-build\\util\\CMakeFiles\\yaml-cpp-read.dir\\read.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\util\\read.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\build\\_deps\\yamlcpp-src\\util\\read.cpp",
+  "output": "_deps\\yamlcpp-build\\util\\CMakeFiles\\yaml-cpp-read.dir\\read.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o utils\\CMakeFiles\\utils.dir\\src\\file.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\file.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\file.cpp",
+  "output": "utils\\CMakeFiles\\utils.dir\\src\\file.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o utils\\CMakeFiles\\utils.dir\\src\\keystroke.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\keystroke.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\keystroke.cpp",
+  "output": "utils\\CMakeFiles\\utils.dir\\src\\keystroke.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o utils\\CMakeFiles\\utils.dir\\src\\constant.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\constant.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\constant.cpp",
+  "output": "utils\\CMakeFiles\\utils.dir\\src\\constant.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o utils\\CMakeFiles\\utils.dir\\src\\countdown.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\countdown.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\countdown.cpp",
+  "output": "utils\\CMakeFiles\\utils.dir\\src\\countdown.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o utils\\CMakeFiles\\utils.dir\\src\\random.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\random.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\random.cpp",
+  "output": "utils\\CMakeFiles\\utils.dir\\src\\random.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o utils\\CMakeFiles\\utils.dir\\src\\request.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\request.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\request.cpp",
+  "output": "utils\\CMakeFiles\\utils.dir\\src\\request.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o utils\\CMakeFiles\\utils.dir\\src\\vector.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\vector.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\utils\\src\\vector.cpp",
+  "output": "utils\\CMakeFiles\\utils.dir\\src\\vector.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\UI.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\UI.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\UI.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\UI.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\musiccontroller.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\musiccontroller.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\musiccontroller.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\musiccontroller.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\wincontent.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\wincontent.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\wincontent.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\wincontent.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\constructor.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\destructor.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\running.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\running.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\running.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\running.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\acting.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\acting.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\acting.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\acting.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\interface.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\interface.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\interface.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\interface.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\action\\close.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\action\\close.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\action\\close.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\action\\close.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/window/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o window\\CMakeFiles\\window.dir\\src\\action\\resize.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\action\\resize.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\window\\src\\action\\resize.cpp",
+  "output": "window\\CMakeFiles\\window.dir\\src\\action\\resize.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o visual\\CMakeFiles\\visual.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\visual\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\visual\\src\\constructor.cpp",
+  "output": "visual\\CMakeFiles\\visual.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o visual\\CMakeFiles\\visual.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\visual\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\visual\\src\\destructor.cpp",
+  "output": "visual\\CMakeFiles\\visual.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o visual\\CMakeFiles\\visual.dir\\src\\arthmetic.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\visual\\src\\arthmetic.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\visual\\src\\arthmetic.cpp",
+  "output": "visual\\CMakeFiles\\visual.dir\\src\\arthmetic.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o frame\\CMakeFiles\\frame.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\frame\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\frame\\src\\constructor.cpp",
+  "output": "frame\\CMakeFiles\\frame.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o frame\\CMakeFiles\\frame.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\frame\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\frame\\src\\destructor.cpp",
+  "output": "frame\\CMakeFiles\\frame.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o frame\\CMakeFiles\\frame.dir\\src\\family.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\frame\\src\\family.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\frame\\src\\family.cpp",
+  "output": "frame\\CMakeFiles\\frame.dir\\src\\family.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -std=gnu++17 -o frame\\CMakeFiles\\frame.dir\\src\\arthmetic.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\frame\\src\\arthmetic.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\frame\\src\\arthmetic.cpp",
+  "output": "frame\\CMakeFiles\\frame.dir\\src\\arthmetic.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -std=gnu++17 -o action\\CMakeFiles\\action.dir\\src\\action.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\action.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\action.cpp",
+  "output": "action\\CMakeFiles\\action.dir\\src\\action.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -std=gnu++17 -o action\\CMakeFiles\\action.dir\\src\\request.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\request.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\request.cpp",
+  "output": "action\\CMakeFiles\\action.dir\\src\\request.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -std=gnu++17 -o action\\CMakeFiles\\action.dir\\src\\args.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\args.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\args.cpp",
+  "output": "action\\CMakeFiles\\action.dir\\src\\args.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -std=gnu++17 -o action\\CMakeFiles\\action.dir\\src\\request\\changeinf.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\request\\changeinf.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\request\\changeinf.cpp",
+  "output": "action\\CMakeFiles\\action.dir\\src\\request\\changeinf.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -std=gnu++17 -o action\\CMakeFiles\\action.dir\\src\\request\\lose.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\request\\lose.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\action\\src\\request\\lose.cpp",
+  "output": "action\\CMakeFiles\\action.dir\\src\\request\\lose.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -std=gnu++17 -o container\\CMakeFiles\\container.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\constructor.cpp",
+  "output": "container\\CMakeFiles\\container.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -std=gnu++17 -o container\\CMakeFiles\\container.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\destructor.cpp",
+  "output": "container\\CMakeFiles\\container.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -std=gnu++17 -o container\\CMakeFiles\\container.dir\\src\\arthmetic.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\arthmetic.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\arthmetic.cpp",
+  "output": "container\\CMakeFiles\\container.dir\\src\\arthmetic.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -std=gnu++17 -o container\\CMakeFiles\\container.dir\\src\\overlap.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\overlap.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\overlap.cpp",
+  "output": "container\\CMakeFiles\\container.dir\\src\\overlap.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -std=gnu++17 -o container\\CMakeFiles\\container.dir\\src\\action\\changesprite.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\action\\changesprite.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\container\\src\\action\\changesprite.cpp",
+  "output": "container\\CMakeFiles\\container.dir\\src\\action\\changesprite.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o interface\\CMakeFiles\\interface.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\constructor.cpp",
+  "output": "interface\\CMakeFiles\\interface.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o interface\\CMakeFiles\\interface.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\destructor.cpp",
+  "output": "interface\\CMakeFiles\\interface.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o interface\\CMakeFiles\\interface.dir\\src\\arthmetic.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\arthmetic.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\arthmetic.cpp",
+  "output": "interface\\CMakeFiles\\interface.dir\\src\\arthmetic.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o interface\\CMakeFiles\\interface.dir\\src\\action.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\action.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\action.cpp",
+  "output": "interface\\CMakeFiles\\interface.dir\\src\\action.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o interface\\CMakeFiles\\interface.dir\\src\\action\\moveobject.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\action\\moveobject.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\action\\moveobject.cpp",
+  "output": "interface\\CMakeFiles\\interface.dir\\src\\action\\moveobject.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o interface\\CMakeFiles\\interface.dir\\src\\action\\movetoobject.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\action\\movetoobject.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\interface\\src\\action\\movetoobject.cpp",
+  "output": "interface\\CMakeFiles\\interface.dir\\src\\action\\movetoobject.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -std=gnu++17 -o button\\CMakeFiles\\button.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\button\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\button\\src\\constructor.cpp",
+  "output": "button\\CMakeFiles\\button.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -std=gnu++17 -o button\\CMakeFiles\\button.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\button\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\button\\src\\destructor.cpp",
+  "output": "button\\CMakeFiles\\button.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -std=gnu++17 -o button\\CMakeFiles\\button.dir\\src\\arthmetic.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\button\\src\\arthmetic.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\button\\src\\arthmetic.cpp",
+  "output": "button\\CMakeFiles\\button.dir\\src\\arthmetic.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o chunk\\CMakeFiles\\chunk.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\constructor.cpp",
+  "output": "chunk\\CMakeFiles\\chunk.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o chunk\\CMakeFiles\\chunk.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\destructor.cpp",
+  "output": "chunk\\CMakeFiles\\chunk.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o chunk\\CMakeFiles\\chunk.dir\\src\\arthmetic.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\arthmetic.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\arthmetic.cpp",
+  "output": "chunk\\CMakeFiles\\chunk.dir\\src\\arthmetic.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o chunk\\CMakeFiles\\chunk.dir\\src\\action.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\action.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\action.cpp",
+  "output": "chunk\\CMakeFiles\\chunk.dir\\src\\action.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o chunk\\CMakeFiles\\chunk.dir\\src\\action\\moveentity.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\action\\moveentity.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\action\\moveentity.cpp",
+  "output": "chunk\\CMakeFiles\\chunk.dir\\src\\action\\moveentity.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o chunk\\CMakeFiles\\chunk.dir\\src\\action\\switchlight.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\action\\switchlight.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\chunk\\src\\action\\switchlight.cpp",
+  "output": "chunk\\CMakeFiles\\chunk.dir\\src\\action\\switchlight.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -std=gnu++17 -o object\\CMakeFiles\\object.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\object\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\object\\src\\constructor.cpp",
+  "output": "object\\CMakeFiles\\object.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -std=gnu++17 -o object\\CMakeFiles\\object.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\object\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\object\\src\\destructor.cpp",
+  "output": "object\\CMakeFiles\\object.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -std=gnu++17 -o object\\CMakeFiles\\object.dir\\src\\arthmetic.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\object\\src\\arthmetic.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\object\\src\\arthmetic.cpp",
+  "output": "object\\CMakeFiles\\object.dir\\src\\arthmetic.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o game\\CMakeFiles\\game.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\constructor.cpp",
+  "output": "game\\CMakeFiles\\game.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o game\\CMakeFiles\\game.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\destructor.cpp",
+  "output": "game\\CMakeFiles\\game.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o game\\CMakeFiles\\game.dir\\src\\arthmetic.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\arthmetic.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\arthmetic.cpp",
+  "output": "game\\CMakeFiles\\game.dir\\src\\arthmetic.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o game\\CMakeFiles\\game.dir\\src\\action.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action.cpp",
+  "output": "game\\CMakeFiles\\game.dir\\src\\action.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o game\\CMakeFiles\\game.dir\\src\\action\\movechunk.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action\\movechunk.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action\\movechunk.cpp",
+  "output": "game\\CMakeFiles\\game.dir\\src\\action\\movechunk.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o game\\CMakeFiles\\game.dir\\src\\action\\startinit.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action\\startinit.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action\\startinit.cpp",
+  "output": "game\\CMakeFiles\\game.dir\\src\\action\\startinit.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o game\\CMakeFiles\\game.dir\\src\\action\\addscore.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action\\addscore.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action\\addscore.cpp",
+  "output": "game\\CMakeFiles\\game.dir\\src\\action\\addscore.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/game/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -std=gnu++17 -o game\\CMakeFiles\\game.dir\\src\\action\\dying.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action\\dying.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\game\\src\\action\\dying.cpp",
+  "output": "game\\CMakeFiles\\game.dir\\src\\action\\dying.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o inputbox\\CMakeFiles\\inputbox.dir\\src\\constructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\constructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\constructor.cpp",
+  "output": "inputbox\\CMakeFiles\\inputbox.dir\\src\\constructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o inputbox\\CMakeFiles\\inputbox.dir\\src\\destructor.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\destructor.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\destructor.cpp",
+  "output": "inputbox\\CMakeFiles\\inputbox.dir\\src\\destructor.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o inputbox\\CMakeFiles\\inputbox.dir\\src\\arthmetic.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\arthmetic.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\arthmetic.cpp",
+  "output": "inputbox\\CMakeFiles\\inputbox.dir\\src\\arthmetic.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o inputbox\\CMakeFiles\\inputbox.dir\\src\\action.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\action.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\action.cpp",
+  "output": "inputbox\\CMakeFiles\\inputbox.dir\\src\\action.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o inputbox\\CMakeFiles\\inputbox.dir\\src\\action\\setactivate.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\action\\setactivate.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\action\\setactivate.cpp",
+  "output": "inputbox\\CMakeFiles\\inputbox.dir\\src\\action\\setactivate.cpp.obj"
+},
+{
+  "directory": "C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DYAML_CPP_STATIC_DEFINE -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/inputbox/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/raylib-src/src/external/glfw/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/utils/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/build/_deps/yamlcpp-src/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/action/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/frame/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/visual/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/container/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/object/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/interface/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/chunk/include\" -I\"C:/Users/Laptop K1/Desktop/CS202/Crossy-Road/src/button/include\" -std=gnu++17 -o inputbox\\CMakeFiles\\inputbox.dir\\src\\action\\setrawtext.cpp.obj -c \"C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\action\\setrawtext.cpp\"",
+  "file": "C:\\Users\\Laptop K1\\Desktop\\CS202\\Crossy-Road\\src\\inputbox\\src\\action\\setrawtext.cpp",
+  "output": "inputbox\\CMakeFiles\\inputbox.dir\\src\\action\\setrawtext.cpp.obj"
+}
+]
